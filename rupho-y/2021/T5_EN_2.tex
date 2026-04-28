@@ -1,0 +1,107 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Polarization of dielectrics}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Constants and some properties of substances}
+
+\begin{itemize}
+    \item Avogadro's constant $N_A = 6.022\,140\,76 \times 10^{23}~\text{mol}^{-1}$.
+    \item Boltzmann's constant $k = 1.380\,649 \times 10^{-23}~\text{J}/\text{K}$.
+    \item Speed of light in vacuum $c = 299\,792\,458~\text{m}/\text{s}$.
+    \item Electron charge $q_e = -1.602\,176\,634 \times 10^{-19}~\text{C}$.
+    \item Electron mass $m_e = 9.109\,383\,701\,5(28) \times 10^{-31}~\text{kg}$.
+    \item Molar mass of Refrigerant-10 $\mu_{R10} = 153.8~\text{g}/\text{mol}$.
+    \item Density of Refrigerant-10 (in liquid state) $\rho_{R10} = 1.59~\text{g}/\text{cm}^3$.
+    \item Molar mass of water $\mu_w = 18.02~\text{g}/\text{mol}$.
+    \item Density of water (in liquid state) $\rho_w = 1.00~\text{g}/\text{cm}^3$.
+    \item Dielectric constant of water (in liquid state) $\varepsilon_w = 81$.
+    \item Density of mercury $\rho_{Hg} = 13.6~\text{g}/\text{cm}^3$.
+    \item Acceleration due to gravity $g = 9.81~\text{m}/\text{s}^2$.
+\end{itemize}
+
+\section*{A. Conductive beads}
+
+\problembox{A1}{One model of dielectrics is as follows: a large number of small conducting spheres of radius $R$ fill a space with a concentration $n$, such that $R^3 n \ll 1$. Determine how much the dielectric constant $\varepsilon$ differs from unity.}{0.30}
+
+\section*{B. Field of a polarized sphere}
+
+\problembox{B1}{A solitary dielectric ball of radius $R$ is polarized so that the electric field strength inside it is uniform and equal to $\vec{E}_{in}$. Determine the electric field strength $ \vec{E}_{out} (\vec{r} )$ that creates the ball outside at point $\vec{r}$. The radius vector $\vec{r}$ is drawn from the center of the ball.}{0.30}
+
+\problembox{B2}{A dielectric ball of radius $R$ was placed in an external uniform electric field $\vec{E}_0$. The electric field strength inside the ball became equal to $\vec{E}_0/n$. Determine the dielectric constant of the ball material $\varepsilon$.}{1.00}
+
+\problembox{B3}{If you place a non-polar particle (for example, an atom of a substance) in an electric field $\vec{E'}$, then it will acquire a dipole moment $\vec{p}$. For small fields this dependence is linear: $$\vec{p} = \beta\varepsilon_0\vec{E'}.$$ The quantity $\beta$ is called the polarizability. Find $\beta$ for a conducting ball.}{0.30}
+
+\section*{C. Dielectric constant of non-polar gaseous substances}
+
+\problembox{C1}{If we place a hydrogen atom (which itself does not have a dipole moment) in an alternating electric field $E(t)=E_0  \cos (\omega t)$, then it is polarized mainly due to the fact that an electron with mass $m_e$ and charge $q_e$ is displaced under the action of the driving force of the external field. That is, the electron oscillates near the equilibrium position (atomic nucleus). Determine how the position of the center of the electron cloud depends on time $x(t)$, if the natural frequency of such electron oscillations is $\omega_0$?}{0.50}
+
+\problembox{C2}{If you place the specified hydrogen atom in a constant electric field $E_0$, then it will be polarized. The magnitude of the polarization will be determined by the natural frequency of vibrations $\omega_0$, which can be estimated from the following considerations: this is the frequency of the electromagnetic wave, which, when absorbed by a hydrogen atom, ionizes it from the ground state. It is known that the wavelength of this radiation is $\lambda=91.1~nm$. Estimate the polarizability $\beta$ of the hydrogen atom.}{0.30}
+
+\problembox{C3}{Determine how much the dielectric constant of hydrogen gas differs from unity at atmospheric pressure and temperature $t=0^{\circ}\mathrm{C}$. Use the polarizability value of the hydrogen atom from the previous paragraph. For rarefied gases, we can assume that the field in the substance $E$ and the field that acts on one molecule $E'$ coincide.}{0.30}
+
+\section*{D. Dielectric constant of non-polar liquids}
+
+In order to determine the dielectric constant of liquids, it is no longer possible to assume that the strengths $\vec{E}$ and $\vec{E}'$ (see C3) coincide. To calculate $\vec{E}'$, we can assume that the molecule is inside a hollow empty (without matter) sphere in the dielectric material. To find the field inside this sphere created by external charges, we assume that these external charges are distributed continuously in the substance.
+
+\problembox{D1}{Inside a continuous homogeneous dielectric, the electric field strength is equal to $\vec{E}$, the polarization vector is equal to $\vec{P}$. A spherical cavity was cut out inside the dielectric. Determine the electric field strength in the substance $\vec{E_h}$.}{0.50}
+
+\problembox{D2}{Using the above model, find how much the dielectric constant of the liquid $\varepsilon$ differs from unity. Concentration of molecules $n$, polarizability $\beta$.}{1.00}
+
+\problembox{D3}{The substance Refrigerant-10 in gaseous form has a dielectric constant $\varepsilon_g=1.0030$ at a temperature $t_g=105^{\circ}\textrm{C}$ and atmospheric pressure. Determine the dielectric constant $\varepsilon_l$ of this substance in liquid form.}{0.50}
+
+\problembox{D4}{For water at temperature $t_1=145^{\circ}\textrm{C}$ and atmospheric pressure, the dielectric constant is $\varepsilon_1=1.00705$. Estimate the dielectric constant of water $\varepsilon_2$ at temperature $t_2=20^{\circ}\textrm{C}$. Compare the result obtained from this model with the real value of the dielectric constant of water. If it does not converge, provide a possible reason.}{0.50}
+
+\section*{E. Dielectric constant of polar substances}
+
+For polar dielectrics the situation is more complicated. The molecules themselves have a dipole moment $p_0$. In the absence of an electric field, these dipole molecules are randomly oriented. When this substance is placed in an electric field, polarization appears due to the uneven orientation of the dipoles. In addition, there remains the effect that in addition to the own dipole moment, an induced one appears. The contribution of these two effects to the dielectric constant adds up linearly.
+
+\problembox{E1}{Determine the difference $\varepsilon-1$ for such a substance with the concentration of molecules $n$ at temperature $T$. We can assume that the temperature is quite high, but the electric field strength is not high. Ignore the induced dipole moment.}{1.00}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{E2}{Using the available data in the table, determine the dipole moment of the molecule $p_0$ and the polarizability $\beta$ for water. The table shows the dependence of the dielectric constant of water on its temperature $T$ and pressure $p$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/240}
+
+\end{document}

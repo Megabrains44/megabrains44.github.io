@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>In the middle of the bridge</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>In the middle of the bridge</h1>
+<p class="camp">W24 (2024) — English translation</p>
+<p>In this problem, we study electrical circuits containing a nonlinear element, the current-voltage characteristic of which is shown in Fig. 1. The current-voltage characteristic of a nonlinear element is described by two sections: $I=I_0\cdot(U/U_0)$ at $U\leq U_0$, where $I_0=10~\text{мА}$ and $U_0=5~\text{В}$. $I=I_0=const$ at $U\geq U_0$.</p>
+<p>In this problem, we study electrical circuits containing a nonlinear element, the current-voltage characteristic of which is shown in Fig. 1.</p>
+<p>The current-voltage characteristic of a nonlinear element is described by two sections:</p>
+<div class="figure"><img src="T2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. DC Circuit (3.0 points)</h2>
+<p>Figure 2 shows a diagram of an electrical circuit consisting of resistors with resistances $R$, $2R$, $4R$, $6R$ and $8R$, an ideal constant voltage source $\mathcal{E}$ and the described nonlinear element. This part of the problem is devoted to studying the dependence of the current through a nonlinear element depending on the source voltage.</p>
+<div class="figure"><img src="T2_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Since without a section of the circuit between nodes $A$ and $B$ the electrical circuit consists entirely of constant voltage sources and resistors, the dependence of the current $I_{AB}$ flowing from node $A$ to node $B$ on the voltage $U_{AB}=\varphi_A-\varphi_B$ in this section of the circuit can be represented in a form that does not depend on the element connected between nodes $A$ and $B$: $$I_{AB}=\cfrac{\mathcal{E}_0-U_{AB}}{r_0}{.} $$Определите $\mathcal{E}_0$ и $r_0$. Ответы выразите через $\mathcal{E}$ и $R$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Obtain the dependence of the current strength $I_{AB}$ on the value $\mathcal{E}$. Express your answer using $\mathcal{E}$, $R$, $U_0$ and $I_0$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Obtain the dependence of the power $P_\text{н.э}$ released on the nonlinear element on the value $\mathcal{E}$. Express your answer using $\mathcal{E}$, $R$, $U_0$ and $I_0$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Construct a high-quality graph of the dependence $P_\text{н.э}(\mathcal{E})$. Indicate all the characteristic points on the graph and indicate their corresponding values.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part B. Electric Circuit Containing a Capacitor (5.0 points)</h2>
+<p>The figure shows an electrical circuit consisting of an ideal voltage source $\mathcal{E}$, a resistor $R = 500~Ом$, a capacitor with a capacitance $C = 100~мкФ$ and a nonlinear element connected in series, as well as a switch $K$. Initially, the key is open and the capacitor is not charged. At the initial time $t = 0$ the key is closed.</p>
+<div class="figure"><img src="T2_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>Let the emf of the source be equal to $\mathcal{E} = 6~\text{В}$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Obtain the dependence of the current $I_C(t)$ through the capacitor on time $t$. Express your answer in terms of $\mathcal{E}$, $R$, $U_0$, $I_0$, $C$ and $t$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">What amount of heat $Q_\text{н.э}$ will be released on the nonlinear element during the establishment of constant current? Express your answer in terms of $\mathcal{E}$, $R$, $U_0$, $I_0$ and $C$. Find the numerical value.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">After what time $\tau$ the amount of heat released on the nonlinear element will reach $80\%$ from the value $Q_\text{н.э}$? Express your answer in terms of $R$, $U_0$, $I_0$, and $C$. Find the numerical value.</div><span class="pb-pts">0.60</span></div>
+<p>Now the emf of the source is $\mathcal{E} =12~\text{В}$.</p>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Obtain the dependence of the current $I_C(t)$ through the capacitor on time $t$. Express your answer in terms of $\mathcal{E}$, $R$, $U_0$, $I_0$, $C$ and $t$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">What amount of heat $Q_\text{н.э}$ will be released on the nonlinear element during the establishment of constant current?  Find the numerical value with an accuracy of at least $1\%$.</div><span class="pb-pts">1.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3553">https://pho.rs/p/3553</a></p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Movement of a metal ball in a wire field</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Movement of a metal ball in a wire field</h1>
+<p class="camp">X23 (2023) — English translation</p>
+<p>As part of this task, you will study the interaction of an uncharged metal homogeneous ball with an infinitely long thin stationary wire charged uniformly along its length. At all points of the problem, the radius $R$ and mass $m$ of the ball, as well as the linear charge density of the wire $\lambda$ are considered known. Parts $\mathrm{A}{,}\mathrm{B}$ and $\mathrm{C}$ are devoted to the study of the interaction of a ball and a wire at larger distances $r$ between them compared to $R$. Parts $\mathrm{D}$ and $\mathrm{E}$ are devoted to accurately describing their interactions.</p>
+<div class="figure"><img src="T6_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Interaction of a ball with a wire over long distances (2.4 points)</h2>
+<p>In this part of the problem you have to obtain the dependences of the force $F$ and potential energy $W_p$ of the interaction between the ball and the wire. Note: At all points of parts $\mathrm{A}$ - $\mathrm{C}$, consider that the distance $r$ between the center of the ball and the wire is large compared to the radius $R$ of the ball.</p>
+<p>Note: At all points of parts $\mathrm{A}$ - $\mathrm{C}$ consider that the distance $r$ between the center of the ball and the wire is large compared to the radius $R$ of the ball.</p>
+<p>Let's solve the following auxiliary problems:</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">A metal ball of radius $R$ is placed in a uniform electric field $\vec{E}_0$. Find the dipole moment $\vec{p}$ acquired by the ball. Express your answer in terms of $\vec{E}_0$, $R$ and the electric constant $\epsilon_0$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Let the ball be located in an electric field directed along the $z$ axis, the intensity of which varies according to the law: $$\vec{E}\approx{\left(E_0+kz\right)\vec{e}_z} $$ где $E_0$ и $k$ — известные величины, причём $kR\ll{E_0}$. Найдите силу $F_z$, действующую на шар. Ответ выразите через $E_0$, $k$, $R$ и электрическую постоянную $\epsilon_0$.</div><span class="pb-pts">0.50</span></div>
+<p>Let's move on to the interaction of the ball with the wire.</p>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the magnitude of the electric field of the wire $E_\text{п}$ at a distance $r$ from it. Express your answer in terms of $\lambda$, $r$ and the electric constant $\varepsilon_0$.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Find the magnitude and direction (attraction or repulsion) of the force $F$ acting on the ball from the side of the wire at a distance $r$ from it. Express your answer in terms of $\lambda$, $R$, $r$ and the electric constant $\varepsilon_0$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Show that the mechanical potential energy $W_p$ of a ball in the field of a wire at a distance $r$ between the wire and the center of the ball is equal to: $$W_p=-\cfrac{A}{r^2} $$ Найдите $A$. Ответ выразите через $\lambda$, $R$ и электрическую постоянную $\varepsilon_0$.</div><span class="pb-pts">0.40</span></div>
+<p>In the future, in all points of parts $\mathrm{B}$ and $\mathrm{C}$, use the expressions for the force and potential energy of interaction between the ball and the wire obtained in points $\mathrm{A4}$ and $\mathrm{A5}$, respectively. Note: You will only need the expression for the value $A$ in point $\bf{C4}$.</p>
+<p>Note: You will only need the expression for the value $A$ in point $\bf{C4}$.</p>
+<h2 class="part">Part B. No contact condition (0.8 points)</h2>
+<p>The ball flies in the direction “to the wire” from infinity with an initial speed $v_0$ and an impact parameter $b$.</p>
+<div class="figure"><img src="T6_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>In this part of the problem, you need to approximately obtain the conditions under which there will be no further contact between the ball and the wire.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the minimum distance $r_{\min}$ between the center of the ball and the wire during motion, assuming that no collision occurs. Express your answer in terms of $A$, $b$, $m$ and $v_0$.</div><span class="pb-pts">0.60</span></div>
+<p>When the initial speed $v_0$ of the ball is less than the critical value $v_{crit}$, the ball collides with the wire.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find $v_{crit}$. Express your answer in terms of $A$, $b$ and $m$.</div><span class="pb-pts">0.20</span></div>
+<h2 class="part">Part C. Trajectory (2.5 points)</h2>
+<p>To describe the trajectory of the center of the ball, we introduce a polar coordinate system $(r,\varphi)$ with the origin on the wire axis. We will count the angle $\varphi$ from the direction to infinity.</p>
+<div class="figure"><img src="T6_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>We also use Binet's substitution: $$u=\cfrac{1}{r} $$ Обозначим $\cfrac{du}{d\varphi}$ за $u'$, а $\cfrac{dr}{dt}$ и $\cfrac{d\varphi}{dt}$ за $\dot{r}$ и $\dot{\varphi}$ respectively.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Express $u'$ in terms of $r$, $\dot{r}$ and $\dot{\varphi}$. Find $u'(0)$ corresponding to the value of $\varphi=0$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Express the mechanical energy $E$ of the ball in terms of $m$, $u$, $u'$, $v_0$, $b$ and $A$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Get addicted $u(\varphi)$.  Express your answer in terms of $m$, $v_0$, $b$, $A$ and $\varphi$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">On the answer sheet, qualitatively construct the trajectory of the center of the ball in coordinates $u{,}\varphi$. The coordinates of all feature points can be expressed in terms of $m$, $v_0$, $b$ and $A$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Using the value of the parameter $A$ found in step $\bf{A4}$, find the initial speed of the ball $v_1$ at which during the interaction between it and the wire the direction of the ball’s speed changes to the opposite. Express your answer in terms of $m$, $b$, $R$, $\lambda$ and the electrical constant $\epsilon_0$.</div><span class="pb-pts">0.50</span></div>
+<p>The equations obtained in the first three parts of the problem are not always applicable, but this problem can be solved exactly. The question of the trajectory will not be studied further, but the conditions for the absence of contact between the ball and the wire will be precisely obtained.</p>
+<h2 class="part">Part D. Finding the force of interaction between a ball and a wire using the image method (3.5 points)</h2>
+<p>Let's solve the auxiliary problem again. Consider a point charge $q_1$ located at a distance $L$ from the center of an uncharged metal ball. As is known, this problem is solved by the image method: in the center of the ball and at a certain distance $S{<}R$ it is necessary to place charges $q_2$ and $-q_2$, respectively, ensuring a constant potential on the surface of the ball.</p>
+<div class="figure"><img src="T6_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<p>Note: You may need the following antiderivative: $$\int\cfrac{dx}{a^2+b^2x^2}=\cfrac{1}{ab}\arctan \left( \cfrac{bx}{a} \right) +C$$</p>
+<p>$$\int\cfrac{dx}{a^2+b^2x^2}=\cfrac{1}{ab}\arctan \left( \cfrac{bx}{a} \right) +C$$</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Find $S$ and $q_2$. Express your answers using $R$, $L$ and $q$.</div><span class="pb-pts">0.60</span></div>
+<p>Let's move on to the interaction of the ball with the wire.  The center of an uncharged metal ball of radius $R$ is at a distance $r$ from the wire.</p>
+<p>Let us draw two lines from the center of the ball, constituting angles $\alpha$ and $\alpha+d\alpha$ with the direction “to the wire”. We denote the charge of the wire element in the area of ​​intersection with the lines as $dq_1$, the charge-images of this element as $dq_2$ and $-dq_2$, and the distances from the charge $-dq_2$ to the center of the ball and to the wire as $S$ and $r_{-}$, respectively.</p>
+<div class="figure"><img src="T6_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">Find $dq_1$, $dq_2$, $S$ and $r_{-}$. Express your answers using $\lambda$, $R$, $r$, $\alpha$ and $d\alpha$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Find the magnitude and direction (attraction or repulsion) of the vector sum of forces $d\vec{F}=d\vec{F}_++d\vec{F}_-$ interaction of charges $dq_2$ and $-dq_2$ with the wire.  Express your answer in terms of $\lambda$, $R$, $r$, $\alpha$, $d\alpha$ and the electrical constant $\epsilon_0$.</div><span class="pb-pts">0.20</span></div>
+<p>To describe the force and potential energy of interaction between the ball and the wire, it is convenient to introduce the angle $\theta$, defined as follows (see figure): $$\theta=\arcsin\left(\cfrac{R}{r}\right)=\arctan \left( \cfrac{R}{\sqrt{r^2-R^2}} \right) $$</p>
+<div class="figure"><img src="T6_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<div class="problem-box"><span class="pb-id">D4</span><div class="pb-text">Find the magnitude and direction of the total force of interaction between the ball and the wire $F_\text{полн}$. Express your answer in terms of $\lambda$, $R$, $\theta$ and the electric constant $\epsilon_0$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">D5</span><div class="pb-text">Find the potential energy $W_p$ of the interaction of the ball with the wire. Express your answer in terms of $\lambda$, $R$, $\theta$ and the electric constant $\varepsilon_0$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">D6</span><div class="pb-text">What speed $v_\text{ст}$ will an uncharged metal ball of radius $R$ and mass $m$ have when colliding with a wire if it is released from infinity without an initial speed? Express your answer in terms of $\lambda$, $R$, $m$ and the electric constant $\varepsilon_0$.</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">Part E: Precise No-Contact Conditions (2.8 points)</h2>
+<p>An uncharged metal ball of radius $R$ and mass $m$ flies from infinity onto a wire with a speed $v_0$ and an impact parameter $b>R$. In this part of the problem, for different relations $b/R$ we will obtain restrictions on the speed $v_0$ at which the ball moves without contacting the wire. The minimum possible speed at which the ball moves without contact with the wire will be denoted by $v_{crit}$. Let us denote the parameter $\theta$ at the moment of maximum approach of the ball to the wire as $\theta_{max}$.</p>
+<div class="problem-box"><span class="pb-id">E1</span><div class="pb-text">For a given value $v_0$, obtain the dependence of the square of the radial velocity component $\dot{r}^2$ on the parameter $\theta$. Express your answer in terms of $m$, $v_0$, $\lambda$, $R$, $b$, electric constant $\varepsilon_0$ and $\theta$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">E2</span><div class="pb-text">Construct high-quality graphs of the dependence $\dot{r}^2(\theta)$ for different values ​​of $v_0$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">E3</span><div class="pb-text">Considering all quantities except $v_0$ constant, you obtain a system of equations that allows you to determine the value $v_{crit}$. The system of equations can include $m$, $R$, $b$, $\lambda$, electric constant $\varepsilon_0$, $\theta_{max}$ and $v_{crit}$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">E4</span><div class="pb-text">Find $v_{crit1}$, $v_{crit2}$ and $v_{crit3}$ corresponding to the following values ​​of $b$ : $$b_1=20R\quad b_2=3R\quad b_3=1{,}1R $$ Ответы выразите через $m, R, \lambda$ и электрическую постоянную $\varepsilon_0$.</div><span class="pb-pts">1.20</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/2902">https://pho.rs/p/2902</a></p>
+</body>
+</html>

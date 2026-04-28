@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Soliton</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Soliton</h1>
+<p class="camp">Y13 (2013) — English translation</p>
+<p>A soliton is a structurally stable solitary wave propagating in a nonlinear medium. In this problem we will obtain some characteristic properties of these objects.</p>
+<h2 class="part">Part A. Mathematical pendulum</h2>
+<p>The solution to the equation of a mathematical pendulum (a load on a weightless rod in a uniform field) is not expressed in elementary functions in the general case. Therefore, small oscillations near the equilibrium position are usually considered. However, there is a special case, namely when at the bottom point the load has a speed $v=\sqrt{4gL}$ with a rod length $L$. In this case, the solution can be represented in the form: \[ \varphi(t)=a \arctan {e^{bt}}, \] where $\varphi$ is the angle between the vertical axis and the rod (at the bottom point $\varphi=\pi$, and the moment $t=0$ corresponds to the passage of the bottom point).</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Express the constants $a$ and $b$ in terms of $g$ and $l$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part B. Soliton dynamics</h2>
+<p>Let us consider a long rigid horizontal string, to which identical spokes arranged vertically are soldered at equal intervals $b$. The mass of the spoke $m$, the distance from the center of mass of the spoke to the string $d$, the moment of inertia relative to the axis passing through the string $I$. When one spoke deviates from its neighbor by an angle $\Delta\varphi$, the string creates a torque $K\Delta\varphi$. If the spokes on one half of the string are turned over a full turn, then a soliton is formed at the interface (Fig. 1). We can assume that the characteristic size of the soliton is $\lambda\gg b$. So consider that the angular coordinate at point $x$ is given by the continuous function $\varphi(x,t)$ (the distant spokes on one half of the string have the coordinate $\varphi(-\infty,t)=2 \pi$, and on the other $\varphi(+\infty,t)=0$).</p>
+<p>Rice. 1. Soliton.</p>
+<div class="figure"><img src="T6_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Write the equation of motion for $\varphi(x,t)$.</div><span class="pb-pts">1.00</span></div>
+<p>The soliton can propagate with a constant speed $v$. In this case, $\varphi(x,t)=f(x\pm vt)$ depending on the direction of propagation.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Construct a qualitative plot of the dependence $\varphi(x)$ for a soliton at rest.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Find the maximum speed $v_{cr}$ with which such a soliton can propagate.</div><span class="pb-pts">2.00</span></div>
+<p>In the future, you can use $v_{cr}$ in your answers.</p>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Let the characteristic size of the soliton at zero speed be $\lambda_0$. Find the size $\lambda$ of a soliton moving with speed $v$.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Let the energy of the soliton at rest be $E_0$. Find the energy of a soliton moving with speed $v$.</div><span class="pb-pts">2.00</span></div>
+<p>Note: For zero potential energy in the gravitational field, take the level of the straight line passing through the centers of mass of the spokes located far enough from the soliton.</p>
+<h2 class="part">Part C. Interaction of solitons</h2>
+<p>The results obtained in the previous part show that the soliton is very similar to a particle. Moreover, we can consider an antisoliton whose spokes are twisted in the other direction. We will say that such a soliton has the opposite charge.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Indicate whether solitons with opposite charges at rest are attracted or repelled.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Let us consider stationary solitons with opposite charges located at a distance $R\gg \lambda$ from each other. Evaluate the nature of the interaction force between solitons.</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3976">https://pho.rs/p/3976</a></p>
+</body>
+</html>

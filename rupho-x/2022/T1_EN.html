@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Two pendulums</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Two pendulums</h1>
+<p class="camp">X22 (2022) — English translation</p>
+<h2 class="part">Part A. One pendulum (2.9 points)</h2>
+<p>In this part we will consider a mathematical pendulum - a mass of mass $m$ suspended on a thread of length $l$. Gravity acceleration $g$. We will denote the angular amplitude of oscillations of the pendulum $\alpha$ and will always consider it small $\alpha \ll 1$.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the average tension force of the pendulum thread $\langle T\rangle$ over the period. Express the answer in terms of the angular amplitude of oscillations $\alpha$ and the parameters of the pendulum.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Now let the length of the pendulum thread be slowly changed, so that the relative change in length during one period of oscillation is small. How much work will be done on the load if the length of the string changes by $\Delta l \ll l$? Express the answer in terms of the angular amplitude of oscillations $\alpha$ (assuming it to be constant) and the parameters of the pendulum.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">At the initial moment of time, the length is $l_0$, and the vibration energy is $W_0$. Find the vibration energy $W_1$ when the length of the thread becomes $l_1$. In this case, the potential energy is always counted from the lower position of the load, that is, with a change in the length of the thread, the zero of the potential energy shifts!</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Under the conditions of the previous paragraph, find the amplitude $\alpha_1$ when the length of the pendulum becomes $l_1$. At the initial moment of time, the length of the thread is $l_0$, the amplitude of oscillations is $\alpha_0$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Let now the pendulum have a charge $q >0$ and be placed in an external electric field $E$, directed vertically ($E>0$ when the field is directed downwards). This electric field changes slowly over time. Let at the initial moment of time the field be equal to zero, and the amplitude of oscillations of the load $\alpha_0$. Consider this system similarly to points A1 - A4. Find the amplitude of oscillations of the load $\alpha_2$ when the electric field becomes equal to $E_1$. Assume that the field changes slowly enough so that the change in the oscillation amplitude over one period is small. The length of the pendulum is constant and equal to $l$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part B. Two pendulums (4.2 points)</h2>
+<p>Let the thread be thrown over two smooth nails of small diameter, and weights of masses $m_1$ and $m_2$ are attached to the ends of the thread, respectively. In this case, the left load 1 always moves strictly vertically, and the right one at the initial moment is deflected by a small angle $\alpha \ll 1$ from the vertical. The thread is long enough so that during movement the left weight does not reach the nail. The initial length of the right section of the thread is $l$. We study the further motion of the system with such initial conditions under different assumptions regarding the masses of the loads.</p>
+<div class="figure"><img src="T1_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Let $m_1 = m + \delta m$, $m_2 = m$, $\delta m \ll m$. The initial speed of the load $m_1$ is zero, the initial amplitude of oscillations of the second weight is $\alpha_0$, the length of the right section of the thread is $l_0$. Find the average acceleration $a_0$ of the left mass at the initial moment of time. Averaging is performed over the period of oscillation of the right weight. Consider that $a_0 >0$ if the acceleration is directed upward.</div><span class="pb-pts">0.90</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">At what value of $\delta m_0$ will the left weight, on average, not move?</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Let $\delta m = \delta m_0$. Find the maximum displacement $z_{max}$ of the weight $m_1$ relative to the initial position.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">If the value $\delta m$ is not very different from $\delta m_0$, then the load $m_1$ will oscillate, the cyclic frequency of oscillations of which is much less than the oscillation frequency of the right load. Find this frequency $\Omega$, as well as the amplitude $B$ of vibrations. At what values ​​of $\Delta m = \delta m - \delta m_0$ can such oscillations be considered harmonic?</div><span class="pb-pts">1.30</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Now let the value $\delta m  \ll m$ be arbitrary. Find the maximum and minimum lengths of the right section of the thread during further movement.</div><span class="pb-pts">0.80</span></div>
+<h2 class="part">Part C. Electric circuit (0.9 points)</h2>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Let us consider an oscillatory circuit consisting of an inductor $L$ and a flat capacitor, between the plates of which there is a vacuum.  The distance between the capacitor plates is slowly changed.  Let the initial capacitance of the capacitor be $C_0$, the initial amplitude of the current in the circuit $I_0$. Consider the system similarly to points A1-A4. Find the amplitude of the current $I_1$ at the moment when the capacitance of the capacitor becomes equal to $C_1$.</div><span class="pb-pts">0.90</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/315">https://pho.rs/p/315</a></p>
+</body>
+</html>

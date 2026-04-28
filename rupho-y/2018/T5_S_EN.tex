@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Authorization --- Solution}}
+\author{\normalsize Y18 (2018) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\end{document}

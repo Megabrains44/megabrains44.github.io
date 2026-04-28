@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Problems of astronomy}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Impact of the Earth and an asteroid (3.5 points)}
+
+This part discusses a possible collision between Earth and an asteroid and ways to prevent it. You may use the data:
+\[
+r_a = 1.5\cdot 10^{11}~\text{m},\quad
+M_E = 6.0\cdot 10^{24}~\text{kg},\quad
+R_E = 6.4\cdot 10^{6}~\text{m}.
+\]
+
+
+Asteroid parameters:
+
+\problembox{A1}{Find the orbital speed $v_0$ of the Earth’s motion around the Sun, assuming the orbit is circular (formula and numerical value). Express your answer in terms of $G$, $M_S$, $r_a$.}{0.30}
+
+\problembox{A2}{Find the speed of the asteroid $v_1$ when it flies at its minimum distance from the Sun. Express your answer in terms of $v_0$, $e$ and give a numerical value.}{0.70}
+
+\problembox{A3}{It is known that at some point the asteroid will collide with the Earth. The collision is central. Find the energy released as a result of the collision (formula and numerical value). Express your answer in terms of the mass of the asteroid $m_A$, $G$, $v_0$, $e$, $R_E$, $M_E$.}{0.60}
+
+Let's look at how to avoid such a collision. To do this, a bomb is delivered to the asteroid, as a result of which the explosion imparts an additional impulse $\Delta p$ to the asteroid.
+
+\problembox{A4}{Let us assume that the asteroid is already at a sufficiently small distance from the Earth $s \ll r_a$, so that the influence of the Sun and other celestial bodies on its motion can be neglected. However, it is still $s \gg R_E$. Its speed in the Earth's reference frame (at a large distance to it) is $v_r$ and is directed towards the center of the Earth. What is the minimum impulse $\Delta p_\text{min}$ that must be imparted to it so that it does not collide with the Earth? Express your answer in terms of $s$, $G$, $M_E$, $R_E$, $v_r$ and the mass of the asteroid $m_A$. For safety, the minimum distance to the center of the Earth must be at least $2 R_E$. Consider that the transmitted momentum is much less than the momentum of the asteroid.}{1.40}
+
+\problembox{A5}{What is the minimum distance $s_\text{min}$ at which the asteroid can still be deflected if the momentum change is $\Delta p =2 \cdot 10^{12}~\text{kg}\cdot\text{m/s}$? Give a formula and a numerical estimate.}{0.50}
+
+\section*{Part B. Bertrand's Theorem (6.5 points)}
+
+In this part, we consider the motion of a particle of mass $m$ in a central field, the potential energy of the particle in which is $U(r)$.  It is well known that in the gravitational field of a point mass $U = - A/r$ bounded trajectories are ellipses and therefore closed. With an arbitrary dependence of potential energy on distance, it is also possible to find closed trajectories, for example circles. However, with a slight change in the initial conditions, the trajectories open up and fill a certain area of space. It turns out that it can be shown that the only potential decreasing at infinity for which all bounded trajectories are closed is the gravitational potential. This statement is called Bertrand's theorem. In all points of this part of the problem, the polar coordinate system $r$, $\theta$ is used.  The mass of the particle $m$ is assumed to be known. By oscillation frequency we mean cyclic frequency throughout.
+
+Consider an arbitrary potential energy $U(r)$.
+
+\problembox{B1}{Find the angular velocity $\omega_0$ of the particle in a circular orbit. Express your answer in terms of $m$, the orbital radius $R$, $U(r)$ and its derivatives.}{0.30}
+
+\problembox{B2}{Next we will consider deviations of orbits from circular ones. Express the angular momentum of the particle $L$ in terms of $r$, $\dot{\theta}$ and $m$.}{0.20}
+
+\problembox{B3}{Express the energy of the system $E$ in terms of $L,~m,~r,~\dot{r}$ and $U(r)$.}{0.20}
+
+\problembox{B4}{Introduce an effective potential $U_\text{eff}(r)$ so that the total energy can be written as
+\[
+E=U_\text{eff}(r)+\frac{m\dot r^2}{2}.
+\]
+Find the explicit expression for $U_\text{eff}(r)$ in terms of $L$, $m$, $r$, and $U(r)$.}{0.40}
+\problembox{B5}{Express the second derivative of the modulus of the radius vector with respect to time $\ddot{r}$ in terms of $m$, $U_\text{eff}(r)$ and its derivatives. Show that when moving in a circle, the effective potential energy $U_\text{eff}$ reaches an extremum.}{0.40}
+
+Let us consider potential energy of the form $U(r) = -\cfrac{A}{r^\alpha}$, where $\alpha > 0$.
+
+Let the particle move in such a potential field in a circular orbit of radius $R$. Let us consider a small deviation $\delta r$ of the particle from the circle in the radial direction, so that $r = R + \delta r$. Consider the value of the angular momentum $L$ of the particle to be the same as when it moves along a circle of radius $R$. A circular trajectory is stable if a sufficiently small deviation from it does not increase indefinitely with time.
+
+\problembox{B6}{At what values of $\alpha$ is a circular orbit stable? Explore edge cases as well.  Construct qualitative plots of the effective potential energy $U_\text{eff}(r)$ for various stable, unstable and boundary cases.  Each graph must correctly reflect the qualitative behavior of the function (increase/decrease/convexity); calculation of the coordinates of characteristic points is not required.}{2.00}
+
+\problembox{B7}{Let us return to the case of arbitrary potential energy $U(r)$. Let the circular trajectory be stable. Similar to the previous point, consider a small deviation from the circular trajectory $r = R + \delta r$. Determine the frequency $\omega_r$ of the radial vibrations of the particle. Express your answer in terms of $m$, $R$,  $U(r)$ and its derivatives.}{0.80}
+
+In order for a trajectory close to a circle to be closed, it is necessary that the ratio of the oscillation frequency to the angular velocity when moving in a circular orbit be a rational number: $\cfrac{\omega_r}{\omega_0} = q$ is a rational number. When the particle makes one oscillation in the radial direction (that is, $r$ increases from the minimum distance to the maximum and decreases back to the minimum), the time $\Delta t = 2\pi/\omega_r$ will pass, and the change in the polar angle will be equal to $\omega_0 \Delta t = 2\pi/q$.  Then, after an integer number of revolutions, the particle will perform an integer number of oscillations in the radial direction, and the trajectory will close.
+
+\problembox{B8}{Using the above relationship between frequencies, obtain the differential equation for $U(r)$. The equation may also contain $r$ and $q$. Show that this equation is satisfied by solutions of the form $U(r) = -\cfrac{A}{r^\alpha}$. We will only consider solutions with $\alpha>0$. Derive an expression for the exponent $\alpha$ in terms of $q$.}{1.00}
+
+The previous relation was obtained in the limit of infinitesimal deviations from a circular orbit. To determine the possible values of the exponent $\alpha$, it is necessary to consider significant deviations of the trajectory from the circular one. The ratio of the frequency of radial vibrations to the angular velocity of rotation around the circle is a continuous function of $E$, $L$ and other parameters of the system. On the other hand, for the trajectory to be closed, it must always remain a rational number. Therefore, this ratio, equal to $q$, is constant.
+
+\problembox{B9}{Determine the change in the polar angle $\Delta \theta$ when moving from the trajectory point with the minimum value $r = r_\text{min}$ to the nearest point with the maximum value $r = r_\text{max}$. Express your answer as an integral over $dr$ from the minimum distance $r_\text{min}$ to the maximum distance $r_\text{max}$. Your answer may also contain $r$, $E$, $L$, $U(r)$, $m$. Clue. Express $\dot{r}$ from the law of conservation of energy and $\dot{\theta}$ from the law of conservation of angular momentum, from here you can find the derivative $d\theta/dr$.}{0.60}
+
+Clue. Express $\dot{r}$ from the law of conservation of energy and $\dot{\theta}$ from the law of conservation of angular momentum, from here you can find the derivative $d\theta/dr$.
+
+\problembox{B10}{Consider the limiting case of infinitesimal energy for $U=-\dfrac{A}{r^\alpha}$. Set $E=0$, $r_{\max}=\infty$ in the integral and use $u=r_{\min}/r$. Express $\Delta\theta$ in terms of $\alpha$. You may use
+\[
+\int_0^1 \frac{du}{\sqrt{u^\alpha-u^2}}=\frac{\pi}{2-\alpha}.
+\]}{0.60}
+
+\problembox{B11}{As stated earlier, the ratio $q$ will remain constant. Therefore, the angle change found above must be equal to half the angle change during radial oscillation: $\Delta \theta  = \dfrac{\pi}{q}$, where the movement from minimum to maximum is considered, and not the full oscillation. Using this fact, obtain an equation for $\alpha$ and find all its solutions.}{0.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4812}
+
+\end{document}

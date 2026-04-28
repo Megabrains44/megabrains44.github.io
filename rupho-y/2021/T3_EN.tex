@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Two-component mixtures}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The saturated vapor pressure above the surface of a mixture of two ideally miscible liquids ($A$) and ($B$) obeys Raoult’s law: $$ P_A=p_A x_A\textbackslash\{\}\textbackslash\{\} P_B=p_B x_B, $$ где $p_A$, $p_B$ – давления насыщенных паров чистых жидкостей $A$ и $B$, $x_A$ и $x_B$ – molрные доли компонент жидкости в cmеси ($x_A+x_B=1$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Given $p_A$, $p_B$, $x_A$, $x_B$. Find the mole fractions of the mixture components in the gaseous fraction ($y_A$ and $y_B$).}{1.00}
+
+The pressure of saturated vapor above the surface of a pure liquid depends on temperature. This dependence can be restored by considering the Carnot cycle, where a two-phase liquid-vapor system is used as a working fluid.
+
+\problembox{A2}{Let the molar heat of vaporization $\lambda$ and the boiling point of the liquid $t$ at atmospheric pressure $P_0$ be known for a liquid. Find the dependence of the saturated vapor pressure of a pure liquid on temperature $P(T)$.}{0.50}
+
+\problembox{A3}{Express $p_A/p_B$ at temperature $T$ in terms of the boiling points of pure liquids $t_A$ and $t_B$ (at atmospheric pressure), their molar heats of vaporization $\lambda_A$ and $\lambda_B$.}{1.00}
+
+\problembox{A4}{Counting $\lambda_A=\lambda_B=\lambda$, find the boiling point of the two-component mixture: $T(\lambda,t_A,t_B,x_B)$.}{2.00}
+
+\problembox{A5}{Assuming the temperature of the two-component system $T$ to be constant, plot the dependences $P(x_B) , P(y_B)$ and $y_B(x_B)$ on the graphs.}{1.50}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+In a two-component system of two liquids with $p_B=2 p_A$, at the initial moment $x_B=0.01$. The vapor above the liquid is collected and condensed isothermally.
+
+\problembox{A6}{What $x_B$ will be reached after the first condensation ($N=1$)?}{0.60}
+
+After the first condensation, the volume of the vessel is isothermally increased slightly so that saturated steam again appears in a small volume, this steam is collected and the procedure is repeated $N$ times.
+
+\problembox{A7}{What $x_B$ will be achieved after the procedure is repeated $N=10$ times, $N= 10^6$?}{1.40}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+In a two-component system of two liquids with $p_B=2 p_A$, at the initial moment $x_B=0.5$.  At the initial moment, the volume of the vessel is only slightly larger than the volume of the liquid, then the vapor above the surface of the liquid is slowly pumped out, and the volume of the vessel is reduced so that the volume of the vapor is always much less than the volume of the liquid. During the entire process, the temperature $T$ remains constant. The molar densities of the mixed liquids are considered equal. After a long time, the mole fraction of liquid $B$ in the mixture reached $x_B=1/3$.
+
+\problembox{A8}{Find how many times the total amount of liquid has decreased by this moment?}{2.00}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/239}
+
+\end{document}

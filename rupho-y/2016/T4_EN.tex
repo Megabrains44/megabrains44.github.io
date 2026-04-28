@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Low Pass Filters}}
+\author{\normalsize Y16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Electric current is characterized by the strength of the current and its frequency. Sometimes in practice, when applying a certain periodic voltage to the input, you want to filter out some frequencies. Circuits that allow you to achieve this result are called filters. In this problem, consider the simplest low-pass filter: $RC$-circuit (see figure).
+
+Electric current is characterized by the strength of the current and its frequency. Sometimes in practice, when applying a certain periodic voltage to the input, you want to filter out some frequencies. Circuits that allow you to achieve this result are called filters. In this problem, consider the simplest low-pass filter: $RC$-circuit (see figure).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Harmonic signal (0.8 points)}
+
+\problembox{A1}{A signal with a voltage amplitude $V_{in}$ and a cyclic frequency $\omega$ is supplied to the input. Determine the voltage amplitude of the output signal $V_C$. Express your answer in terms of $V_{in}$, $\omega$, $R$, $C$.}{0.30}
+
+\problembox{A2}{Draw the amplitude-frequency response of the output signal on a graph.}{0.20}
+
+\problembox{A3}{Let a signal of the form $\sum_i V_{in}\sin\omega_it$ be applied to the input (for any $i$ the following condition is satisfied: $\omega_i<\omega_{i+1}$). Then the output signal will look like $\sum_i V_i\sin\left(\omega_it+\phi_i\right)$. Which value is greater: $V_i$ or $V_{i+1}$?}{0.30}
+
+\section*{Part B. Single square pulse (1.0 points)}
+
+However, the input signal is not always a sine wave (or a finite sum of sines). In the next part of the problem, consider a single rectangular pulse (see Fig. 2) with amplitude $U$ and duration $\tau$, applied to the $RC$ circuit.
+
+However, the input signal is not always a sine wave (or a finite sum of sines). In the next part of the problem, consider a single rectangular pulse (see Fig. 2) with amplitude $U$ and duration $\tau$, applied to the $RC$ circuit.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Consider a short "ballistic" pulse ($\tau\ll{RC}$). What will be the maximum output voltage $U_{CM}$ in such a process? Express your answer in terms of $U$, $\tau$, $R$, $C$.}{0.80}
+
+\problembox{B2}{How will the maximum output voltage $U_{CM}$ change if the pulse amplitude is doubled and the duration is halved? Those. find the relation $U_{CM2}/U_{CM1}$.}{0.20}
+
+\section*{Part C. Periodic rectangular pulses (6.2 points)}
+
+Consider a periodic input signal consisting of successive short rectangular pulses directed in different directions. Signal period $T$, signal amplitude $U$, pulse duration $\tau$. The duty cycle is the quantity $S=2\tau/T$. Let us also introduce the dimensionless quantity $A=T/RC$.
+
+Consider a periodic input signal consisting of successive short rectangular pulses directed in different directions. Signal period $T$, signal amplitude $U$, pulse duration $\tau$. The duty cycle is called the value $S=2\tau/T$. Let us also introduce the dimensionless quantity $A=T/RC$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{Draw a qualitative graph of the output signal versus time in steady state.}{1.00}
+
+\problembox{C2}{Determine the ratio of the output signal amplitude to the input signal amplitude $U_M/U$. Express your answer in terms of $A$ and $S$.}{1.50}
+
+\problembox{C3}{Considering $S\ll{1}$ and $A\gg{1}$, find in a first approximation a $A$ such that $U_M/U=1/2$. Express your answer in terms of $S$.}{0.70}
+
+\problembox{C4}{Using the method of successive iterations, find $A$ such that $U_M/U=1/2$, up to the fourth significant figure for $S_1=1$;  $S_2=0{.}3$;  $S_3=0{.}1$; $S_4=0{.}01$;  $S_5=0{.}001$.}{1.00}
+
+\problembox{C5}{Draw qualitatively graphs of the dependence of $U_M/U$ on $A$ on a logarithmic scale along $A$ at $S_1=1$;  $S_2=0{.}3$;  $S_3=0{.}1$; $S_4=0{.}01$;  $S_5=0{.}001$.}{1.00}
+
+\problembox{C6}{Draw qualitatively graphs of the normalized dependence of $U_M/(US)$ on $A$ on a logarithmic scale in both coordinates for $S_3=0{.}1$; $S_4=0{.}01$.}{1.00}
+
+\section*{Part D. Rectangular pulses in an LC circuit (2.0 points)}
+
+Let us now consider the ideal $LC$ contour.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{D1}{At moment $t=0$, a circuit with a natural frequency $f=100~\text{Hz}$ is excited by a periodic sequence of rectangular pulses of duration $\tau=0{.}02~\text{с}$ (Fig. 4). Pulse amplitude $U_0=5~\text{В}$. Find the pulse repetition period $T$ at which the average voltage across the capacitor $U_\text{ср}=2~\text{В}$. Plot a graph of $U_C(t)$. Show all characteristic values ​​on the graph.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3030}
+
+\end{document}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Thermistor</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Thermistor</h1>
+<p class="camp">Y23 (2023) — English translation</p>
+<p>Introduction Thermistors are resistors that can noticeably change their resistance with temperature. Since almost all resistive materials have this property, thermistors are usually called elements that experience a significant or atypical change in resistance over a specific narrow temperature range. The two main types of thermistors are: Thermistors with a positive temperature coefficient of resistance (TCR) - the so-called. posistors. They are commonly used in electrical circuits as fuses, i.e. limit the total current. For example, how a regular incandescent lamp behaves like a posistor. Thermistors with negative TCS - so-called. NTC thermistors. They are also used as limiters, but for inrush currents, i.e. where high currents at the start can lead to burnout of circuit elements. This can happen in powerful lighting systems or when charging powerful capacitors, which we will consider in the first part of the problem.</p>
+<p>Thermistors are resistors that can noticeably change their resistance with temperature. Since almost all resistive materials have this property, thermistors are usually called elements that experience a significant or atypical change in resistance over a specific narrow temperature range. The two main types of thermistors are:</p>
+<h2 class="part">Part A: Charging a Capacitor (4.2 points)</h2>
+<p>For the correct operation of most power supplies, a mechanism is required that allows you to regularly charge a large capacitor without harm to the contacts and traces of the board, since at the initial moment of time the current through a practically discharged capacitor is so high that it can melt them. NTC thermistors are usually used for this: at the beginning they are at room temperature and have a fairly high resistance, thereby limiting the current. At the same time, during the characteristic charging time of the capacitor, the thermistor heats up, and therefore, by the time there is no need to limit the current, its resistance drops several times, ensuring rapid recharging.</p>
+<p>The thermistor is connected in series with a capacitor of some capacity $C$ to a constant voltage source with some emf $U$. Previously, the thermistor resistance was measured at room temperature $T_0=298~К$. It turned out to be equal to $R_0=37.3~Ом$. To control the operation of the circuit during test charging of the capacitor, the time dependence $t$ of the deviation $\tau$ of the thermistor temperature from room temperature was removed. The graph $\tau(t)$ is shown in good quality on a separate page. To describe the temperature evolution of the thermistor, we introduce its heat capacity $c$ and contact thermal conductivity $\kappa$.</p>
+<p>The thermistor is connected in series with a capacitor of some capacity $C$ to a constant voltage source with some EMF $U$. Thermistor resistance was previously measured at room temperature $T_0=298~К$. It turned out to be equal to $R_0=37.3~Ом$. To control the operation of the circuit during test charging of the capacitor, the time dependence $t$ of the deviation $\tau$ of the thermistor temperature from room temperature was removed. The graph $\tau(t)$ is shown in good quality on a separate page. To describe the temperature evolution of the thermistor, we introduce its heat capacity $c$ and contact thermal conductivity $\kappa$.</p>
+<div class="figure"><img src="PE_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Write an equation for the time derivative $\dot\tau$ of the thermistor temperature. Express your answer in terms of the voltage $U_R$ across the thermistor, the capacitance of the capacitor $C$, and the coefficients $c$ and $\kappa$ introduced above. Rewrite the same equation in terms of $U_R$, $c$, $\kappa$ and thermistor resistance $R(\tau)$.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Let $c=a_1U^2$ and $\kappa=a_2U^2$. Using the asymptotic behavior of the curve $\tau(t)$ for small and large $t$, find the values ​​of the coefficients $a_1$ and $a_2$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Express through $\kappa$ and $\tau$ the amount of heat that will be released on the thermistor over the entire time, and relate it to the change in the energy of the capacitor $W_C$. Find from here the capacitance of the capacitor $C$ and its numerical value.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Write down an expression for the power $P$ released at the thermistor. Express your answer in terms of $U$, $R_0$, $\tau$ and the numerical coefficients entered in A2.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Find from here the expression for the voltage $U_R$ across the resistor. Express your answer in terms of $U$, $\tau$ and the numerical coefficients entered in A2.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">Derive an expression for the thermistor resistance $R$. Express your answer in terms of $R_0$, $\tau$ and the numerical coefficients entered in A2.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A7</span><div class="pb-text">Find the dependence $R(\tau)$ from the graph as accurately as possible.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">A8</span><div class="pb-text">Find $c$ and $\kappa$ if the total applied voltage is $U=220~В$.</div><span class="pb-pts">0.20</span></div>
+<h2 class="part">Part B. Steinhart–Hart coefficients (2.0 points)</h2>
+<p>Since NTC thermistors implement a semiconductor conduction mechanism, the dependence of the NTC thermistor resistance $R$ on the absolute temperature $T$ can be described implicitly using the Steinhart–Hart equation:\[\frac1T=A+B\ln R+C\left[\ln R\right]^3\quad(SI),\]where $A$, $B$ and $C$ – so-called. Steinhart–Hart coefficients. These coefficients depend on the thermistor material. Determining these coefficients for the thermistor used is the goal of this part of the problem.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Considering the values ​​of $\cfrac1{T_0+\tau_i}$ as the experimental points and the right-hand side of the Steinhart–Hart equation as the equation of the model curve, write a system of equations to find the coefficients $A$, $B$ and $C$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Solve this system numerically and obtain the Steinhart–Hart coefficients.</div><span class="pb-pts">1.40</span></div>
+<h2 class="part">Part C. I-V characteristic of NTC thermistor (3.8 points)</h2>
+<p>In Part A we looked at what negative TCR thermistors can be used for, and in Part B we found the coefficients of the Steinhart-Hart equation. In this part, we will try, based on these data, to study the operation of the thermistor in stationary mode and construct its current-voltage characteristic.</p>
+<div class="problem-box"><span class="pb-id">C0</span><div class="pb-text">Attention! If you did not solve parts A and B or do not want to use the obtained values of the coefficients of the Steinhart-Hart equation and the contact thermal conductivity of the thermistor, you can use the following values:\[A=7.3\cdot10^{-4}\qquad B=1.30\cdot10^{-4}\qquad C=5.7\cdot10^{-6}\qquad\kappa=0.37~\cfrac{W}K\]If you choose the given values, write this explicitly on the answer sheet for this item. In this case, your maximum score for points C2 and C4 will be 10% less.</div><span class="pb-pts">0</span></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Write down an equation to find the steady-state resistance value of an NTC thermistor to which a constant voltage $U$ is applied.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">By solving this equation, obtain the dependence $R(U)$ as accurately as possible. Based on the obtained points, plot the current-voltage characteristics of the thermistor at low currents and voltages.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find at what critical voltage $U_\mathrm{cr}$ and current $I_\mathrm{cr}$ the operating mode of the thermistor changes.</div><span class="pb-pts">0.30</span></div>
+<p>As you might have guessed, beyond this limiting point lies an unstable section of the current-voltage characteristic, which continues until the melting point of the thermistor, which is equal to $T_\mathrm{max}=1380~^\circ\mathrm C$.</p>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">As accurately as possible, find the dependence $R(U)$ in the section of the current-voltage characteristic from the critical point found in the previous paragraph to the melting point of the thermistor and plot it on the graph.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Find the coordinates $\left(U_\mathrm m,I_\mathrm m\right)$ of the melting point of the thermistor on the current-voltage characteristic.</div><span class="pb-pts">0.30</span></div>
+<p>The original graph in maximum resolution is given in the materials for the problem</p>
+<div class="figure"><img src="PE_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3021">https://pho.rs/p/3021</a></p>
+</body>
+</html>

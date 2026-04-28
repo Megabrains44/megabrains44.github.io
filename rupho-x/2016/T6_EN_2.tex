@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Composite capacitor}}
+\author{\normalsize X16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Capacitor charge}
+
+Between plates 1 and 3 of a flat capacitor, a thin metal plate 2 with a charge $Q$ was placed parallel to the plates of the capacitor (Fig. 1). A capacitor is connected to a battery with an emf equal to $U_0$. The areas of all three plates are the same and equal to $S$, and the distance between them is much less than $\sqrt{S}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the charges on plates 1 and 3 of the capacitor depending on the distance $x$ between plates 1 and 2.}{1.00}
+
+\problembox{A2}{How much work $A$ must be done to move plate 2 from plate 1 to plate 3?}{1.00}
+
+Plate 2 was discharged, and the volumes between the plates were filled with dielectric liquids (Fig. 2) with the same dielectric constant $\varepsilon$ but with different resistivities $\rho_1$ and $\rho_2$ ($\rho_1 < \rho_2$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A3}{Find the magnitude and direction of the force acting on plate 2 from the electric field.}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4004}
+
+\end{document}

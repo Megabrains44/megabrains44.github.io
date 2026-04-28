@@ -1,0 +1,2370 @@
+[
+  {
+    "file": "rupho-x\\2016\\T1_EN.tex",
+    "ok": false,
+    "cyr": 3,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.78 ...is $9\\cdot{10^{12}~\\text{cm}^{-2}}$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData",
+      "/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadi",
+      "b/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/U",
+      "sers/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.",
+      "pfb>",
+      "Output written on T2_EN_2.pdf (4 pages, 191765 bytes).",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T3_1_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T3_1_EN_2.pdf (2 pages, 111819 bytes).",
+      "Transcript written on T3_1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T3_2_EN.tex",
+    "ok": false,
+    "cyr": 3,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...ime, alternating voltage $U(t)=U_0 \\sin⁡",
+      "                                                   \\omega t$, where $U_0=1~\\...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T3_3_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/A",
+      "ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T3_3_EN_2.pdf (1 page, 117729 bytes).",
+      "Transcript written on T3_3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T3_4_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8",
+      ".pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/",
+      "cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/",
+      "amsfonts/cm/cmtt10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type",
+      "1/public/amsfonts/symbols/msbm10.pfb>",
+      "Output written on T3_4_EN_2.pdf (1 page, 113698 bytes).",
+      "Transcript written on T3_4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T4_EN.tex",
+    "ok": false,
+    "cyr": 3,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.64 ...straight slide of height $h = 30~\\text{м}",
+      "                                                  $. Having driven along the...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T5_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "sers/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pf",
+      "b><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/",
+      "cmsy10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams",
+      "fonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p",
+      "ublic/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T5_EN_2.pdf (1 page, 176027 bytes).",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2016\\T6_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/A",
+      "ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T6_EN_2.pdf (2 pages, 217662 bytes).",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T1_1_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><",
+      "C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr",
+      "8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts",
+      "/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public",
+      "/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T1_1_EN_2.pdf (3 pages, 142351 bytes).",
+      "Transcript written on T1_1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T1_2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aa",
+      "dib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:",
+      "/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti1",
+      "0.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts",
+      "/cm/cmtt10.pfb>",
+      "Output written on T1_2_EN_2.pdf (1 page, 102353 bytes).",
+      "Transcript written on T1_2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Us",
+      "ers/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p",
+      "fb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm",
+      "/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/am",
+      "sfonts/cm/cmtt10.pfb>",
+      "Output written on T2_EN_2.pdf (1 page, 104964 bytes).",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T3_1_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users",
+      "/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><",
+      "C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt",
+      "i10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon",
+      "ts/cm/cmtt10.pfb>",
+      "Output written on T3_1_EN_2.pdf (1 page, 116581 bytes).",
+      "Transcript written on T3_1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T3_2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "dib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:",
+      "/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8",
+      ".pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/",
+      "cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/",
+      "amsfonts/cm/cmtt10.pfb>",
+      "Output written on T3_2_EN_2.pdf (1 page, 112606 bytes).",
+      "Transcript written on T3_2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T4_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...$\\eta_2$, satisfying the condition: $(3−",
+      "                                                  \\eta_1)(1−\\eta_2)=1$.",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T5_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aad",
+      "ib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/",
+      "Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10",
+      ".pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/",
+      "cm/cmtt10.pfb>",
+      "Output written on T5_EN_2.pdf (1 page, 104604 bytes).",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T6_1_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppD",
+      "ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/a",
+      "adib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C",
+      ":/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt",
+      "10.pfb>",
+      "Output written on T6_1_EN_2.pdf (1 page, 98191 bytes).",
+      "Transcript written on T6_1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2017\\T6_2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr",
+      "8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts",
+      "/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/",
+      "amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type",
+      "1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T6_2_EN_2.pdf (1 page, 122522 bytes).",
+      "Transcript written on T6_2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T1_EN.tex",
+    "ok": false,
+    "cyr": 9,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...ext{kg}$ from a height $h=1{,}25~\\text{м}",
+      "                                                  $. The ball hits the exact...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p",
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Pro",
+      "grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T2_EN_2.pdf (1 page, 113571 bytes).",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T3_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/A",
+      "ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User",
+      "s/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb",
+      ">",
+      "Output written on T3_EN_2.pdf (1 page, 106624 bytes).",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T4_EN.tex",
+    "ok": false,
+    "cyr": 3,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.48 ...figure. $R=5~\\text{Ohm}$, $P=8~\\text{Вт}",
+      "                                                  $, diode opening voltage $...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T5_EN.tex",
+    "ok": false,
+    "cyr": 3,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...f incidence $\\alpha_0\\ll{1}~~\\text{рад}",
+      "                                                  $ is launched into the spa...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T6_EN.tex",
+    "ok": false,
+    "cyr": 5,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.44 ...). Gravity acceleration $g=9{,}8~\\text{м}",
+      "                                                  /\\text{с}^2$.",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 11,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...ot{\\varphi}=\\frac{3g}{2l} \\varphi$.}{1.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T7_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      ":/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy",
+      "10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont",
+      "s/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public",
+      "/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/typ",
+      "e1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T7_EN_2.pdf (2 pages, 120718 bytes).",
+      "Transcript written on T7_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T8_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "! File ended while scanning use of \\problembox.",
+      "<inserted text> ",
+      "                \\par ",
+      "<*> ./T8_EN.tex",
+      "               ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T8_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2018\\T8_S_EN.tex",
+    "ok": false,
+    "cyr": 122,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ... Answer: $$e=\\frac{Q-q}{Q+q}=0.64$$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T8_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T1_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T1_EN_2.pdf (2 pages, 131988 bytes).",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T2_EN.tex",
+    "ok": false,
+    "cyr": 50,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...sh\\{\\}beta+\\textbackslash\\{\\}alpha T $$ З",
+      "                                                  десь и далее с...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T3_EN.tex",
+    "ok": false,
+    "cyr": 4,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...peratures of the order of $10000~\\text{К}",
+      "                                                  $ are reached in the cord....",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T4_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p",
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Pro",
+      "grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T4_EN_2.pdf (1 page, 71738 bytes).",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T5_EN.tex",
+    "ok": false,
+    "cyr": 1,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.52 ...\\rho=1{.}23~\\text{kg}/\\text{м}^3$.}{2.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T6_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T6_EN_2.pdf (1 page, 83072 bytes).",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T7_EN.tex",
+    "ok": false,
+    "cyr": 88,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...\\textbackslash\\{\\}omega^2r^2\\}\\{2g\\} $$ г",
+      "                                                  де $z$ – коорди...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T7_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2019\\T8_EN.tex",
+    "ok": false,
+    "cyr": 6,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...light source with power $P=100~\\text{Вт}",
+      "                                                  $. The refractive index of...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T8_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\E1_EN.tex",
+    "ok": false,
+    "cyr": 244,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.64 Water density: $\\rho_0 = 1~\\text{г/cm}",
+      "                                            ^3$; Specific heat of melting of...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\E2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "<C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm",
+      "r10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon",
+      "ts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public",
+      "/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/typ",
+      "e1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on E2_EN_2.pdf (3 pages, 150815 bytes).",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\E3_EN.tex",
+    "ok": false,
+    "cyr": 15,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.48 ...ized by their focal lengths $F_\\text{сф}",
+      "                                                  $ and $F_\\text{ц}$ and op...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\PE_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "! Missing { inserted.",
+      "<to be read again> ",
+      "                   \\mathop ",
+      "l.94 ...alized to the maximum charge value $q_\\max",
+      "                                                   = q (\\lambda_\\max)$.",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T1_EN.tex",
+    "ok": false,
+    "cyr": 67,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.100 ...{\\textbackslash\\{\\}frac\\{3\\}\\{2\\}\\},$$ г",
+      "                                                  де $k$ — числен...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T1_S_EN.tex",
+    "ok": false,
+    "cyr": 579,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...R^{2}}} \\operatorname{tg} \\alpha $$}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Prog",
+      "rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Loc",
+      "al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/Ap",
+      "pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users",
+      "/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T2_EN_2.pdf (3 pages, 252017 bytes).",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T2_S_EN.tex",
+    "ok": false,
+    "cyr": 366,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.40 ...ac\\{dv\\}\\{dx\\}$ proves the required}{0.70}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T3_EN.tex",
+    "ok": false,
+    "cyr": 15,
+    "textbackslash": false,
+    "last": [
+      "<to be read again> ",
+      "                   \\begingroup ",
+      "l.44 An aerodynamic force $F_А",
+      "                               $ acts on a body uniformly moving in a medium...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T4_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Lo",
+      "cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T4_EN_2.pdf (1 page, 132922 bytes).",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T5_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p",
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Pro",
+      "grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T5_EN_2.pdf (1 page, 83591 bytes).",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T6_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Programs/M",
+      "iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/P",
+      "rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aadib/AppData",
+      "/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadi",
+      "b/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T6_EN_2.pdf (5 pages, 673712 bytes).",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 34,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.41 ...c{\\mu_0\\rho t}{D}=0.13 \\text{Тл}$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2020\\T7_EN.tex",
+    "ok": false,
+    "cyr": 17,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.60 ...ticity coefficient of $k=30~\\text{кН/м}",
+      "                                                  $). When the cable is cut,...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T7_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\E1_EN.tex",
+    "ok": false,
+    "cyr": 28,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.66 ..., an induced emf $\\mathcal E_\\text{инд}",
+      "                                                  $ appears in it due to a c...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\E2_EN.tex",
+    "ok": false,
+    "cyr": 60,
+    "textbackslash": true,
+    "last": [
+      "\\MT@orig@add@accent ...gnorespaces \\relax \\accent ",
+      "                                                  #1 #2\\egroup \\ifmmode \\els...",
+      "l.50 ...(\\textbackslash\\{\\}varphi);\\textasciitilde",
+      "                                                  \\{\\}y=R\\textbackslash\\{\\}s...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\PE_EN.tex",
+    "ok": false,
+    "cyr": 273,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.46 ...of dependencies $R(T)$ for some values ​",
+      "                                                  ​$B$ indicated in the ta...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T1_EN.tex",
+    "ok": false,
+    "cyr": 5,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...of finite heat capacity $C=500~\\text{J/К}",
+      "                                                  $. which at the initial mo...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/Pro",
+      "grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/",
+      "Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T2_EN_2.pdf (1 page, 98776 bytes).",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T3_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.44 ...\\sqrt{1-\\frac{x^2}{a^2} }$ (the values ​",
+      "                                                  ​$a$ and $b$ are also kn...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T4_EN.tex",
+    "ok": false,
+    "cyr": 223,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.46 ...ckslash\\{\\}vec\\textbackslash\\{\\}omega_\\{о",
+      "                                                  тн\\}+\\textbackslash\\{\\}v...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T4_S_EN.tex",
+    "ok": false,
+    "cyr": 1027,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.40 ...{\\omega}_{отн}=-2\\vec{\\omega} $$}{0.20}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T5_EN.tex",
+    "ok": false,
+    "cyr": 22,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.112 ...y (measured from the floor level).}{0.60}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T5_S_EN.tex",
+    "ok": false,
+    "cyr": 584,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...=\\textbackslash\\{\\}cfrac\\{g\\}\\{3\\}$}{0.80}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T6_EN.tex",
+    "ok": false,
+    "cyr": 531,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.46 ...ckslash\\{\\}frac\\{dv\\}\\{dx\\}. $$ $S$ – п",
+      "                                                  лощадь соприк...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2021\\T7_EN.tex",
+    "ok": false,
+    "cyr": 12,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ... ambient temperature is $T_0=300~\\text{К}",
+      "                                                  $, the atmospheric pressur...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T7_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\E1_EN.tex",
+    "ok": false,
+    "cyr": 435,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.44 $\\textbf{Внимание!}",
+      "                                $ No error calculations are required in this...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\E2_EN.tex",
+    "ok": false,
+    "cyr": 89,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.54 ...considered known and equal to $m_\\text{ш}",
+      "                                                   = 80~\\text{г}$) 14. cont...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\PE_EN.tex",
+    "ok": false,
+    "cyr": 15,
+    "textbackslash": true,
+    "last": [
+      "<inserted text> ",
+      "                $",
+      "l.46 ...\\{\\}varphi) = a - b \\textbackslash\\{\\}sin^",
+      "                                                  2\\textbackslash\\{\\}varphi ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\PE_S_EN.tex",
+    "ok": false,
+    "cyr": 42,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...\\pm 0.2) \\cdot 10^{-6}~1/\\text{с}$}{2.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T1_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.72 ...scillations be considered harmonic?}{1.30}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T2_EN.tex",
+    "ok": false,
+    "cyr": 265,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...energy is equal to $E=E_0-E_{\\text{деф}",
+      "                                                  }$, where $E_{\\text{деф...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T2_S_EN.tex",
+    "ok": false,
+    "cyr": 889,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...nswer: $$\\dot{v}_x=\\frac{F_x}{m} $$}{0.10}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T3_EN.tex",
+    "ok": false,
+    "cyr": 120,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.76 ...oordinate in the scattering circle.}{1.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T3_S_EN.tex",
+    "ok": false,
+    "cyr": 2962,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ... on opposite sides of the boundary.}{0.45}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T4_EN.tex",
+    "ok": false,
+    "cyr": 9,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...es. The mass of the Earth is $M_{\\text{З}",
+      "                                                  }\\gg{M_2}$, the radius of ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T4_S_EN.tex",
+    "ok": false,
+    "cyr": 599,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...[ v = \\sqrt{\\frac{2GM_З}{R_З}} \\]}{0.40}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T5_EN.tex",
+    "ok": false,
+    "cyr": 776,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ... \\cdot 10^3 ~\\frac{\\text{kg}}{\\text{м}^3}",
+      "                                                  $; liquid surface tension ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T5_S_EN.tex",
+    "ok": false,
+    "cyr": 1590,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...pprox 5.4 \\cdot 10^5~\\text{Па} $$}{0.80}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T6_EN.tex",
+    "ok": false,
+    "cyr": 48,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...xtbackslash\\{\\}sqrt\\{a^2+x^2\\}\\} + C,$$ г",
+      "                                                  де $\\mathrm{arth} \\,y$ ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2022\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 844,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...left( \\sqrt{R^2+y^2}- |y| \\right)$$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\E1_EN.tex",
+    "ok": false,
+    "cyr": 53,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.50 ...y charge $e=1.602\\cdot10^{-19}~\\text{Кл}",
+      "                                                  $ Avogadro's number $N_A=6...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\E1_S_EN.tex",
+    "ok": false,
+    "cyr": 90,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...л}$.\\\\ Answer: $L_0 = 65 \\: мм$}{0.02}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\E2_EN.tex",
+    "ok": false,
+    "cyr": 7,
+    "textbackslash": false,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.60 ...a constant voltage source $U=9.0~\\text{В}",
+      "                                                  $. When the lamp is workin...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\E2_S_EN.tex",
+    "ok": false,
+    "cyr": 6,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...d \\Rightarrow \\quad F = 17.4 \\: cm$}{0.20}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\E3_EN.tex",
+    "ok": false,
+    "cyr": 24,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.52 ...itational acceleration $g = 9.81~\\text{м}",
+      "                                                  /\\text{с}^2$ magnetic con...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\E3_S_EN.tex",
+    "ok": false,
+    "cyr": 532,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...Let's remove the dependence $U(x)$.}{2.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\PE_EN.tex",
+    "ok": false,
+    "cyr": 70,
+    "textbackslash": true,
+    "last": [
+      "\\MT@orig@add@accent ...gnorespaces \\relax \\accent ",
+      "                                                  #1 #2\\egroup \\ifmmode \\els...",
+      "l.52 ...S = \\textbackslash\\{\\}sum_i\\textasciitilde",
+      "                                                  \\{\\}\\textbackslash\\{\\}Delt...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\PE_S_EN.tex",
+    "ok": false,
+    "cyr": 440,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...2}\\cdot\\overline{d^3}}\\end{array}\\]}{0.60}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T1_EN.tex",
+    "ok": false,
+    "cyr": 247,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.62 ...glect the diffusion of the reagent.}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T1_S_EN.tex",
+    "ok": false,
+    "cyr": 2279,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.39 ...}{2\\eta L} \\left(bz -z^2 \\right) $$}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T2_EN.tex",
+    "ok": false,
+    "cyr": 582,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...equirements, and therefore the idea of ​",
+      "                                                  ​binary cycles was propo...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T2_S_EN.tex",
+    "ok": false,
+    "cyr": 1667,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ..._2}{\\gamma-1}\\ln\\cfrac{T_1}{T_4} $$}{0.70}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T3_EN.tex",
+    "ok": false,
+    "cyr": 1417,
+    "textbackslash": true,
+    "last": [
+      "<to be read again> ",
+      "                   \\begingroup ",
+      "l.50 ...$\\textbackslash\\{\\}vec\\{a\\}_\\textbackslash",
+      "                                                  \\{\\}text\\{отн\\}=\\textba...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T3_S_EN.tex",
+    "ok": false,
+    "cyr": 1884,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...omega=\\sqrt{\\cfrac{G(M+m)}{L^3}} $$}{0.70}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T4_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.100 ...the first collision with the ball.}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T4_S_EN.tex",
+    "ok": false,
+    "cyr": 501,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...\\\\ Answer: $$I=\\cfrac{10ml^2}{3} $$}{0.30}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T5_EN.tex",
+    "ok": false,
+    "cyr": 347,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.46 ...\\}pi\\}\\{3\\}\\textbackslash\\{\\}right). $$ В",
+      "                                                   качестве нагр...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T5_S_EN.tex",
+    "ok": false,
+    "cyr": 1760,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...\\Delta \\varphi = \\frac{ 5\\pi}{6} $$}{0.60}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T6_EN.tex",
+    "ok": false,
+    "cyr": 211,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.60 ... постоянную $\\epsilon_0$.}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2023\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 1242,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.40 ...r: $$F_z=4\\pi{R}^3\\epsilon_0E_0k $$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\E1_EN.tex",
+    "ok": false,
+    "cyr": 800,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.50 ...200\\pm1$ Capacitor nominal $(1.0\\pm0.1)~м",
+      "                                                  кФ$ Resistors nominal $(...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\E1_S_EN.tex",
+    "ok": false,
+    "cyr": 1318,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...з}=r_{B,рез}=(0.97\\pm0.04)~Ом$$}{??}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\E2_EN.tex",
+    "ok": false,
+    "cyr": 752,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.44 ...e across the lamp should not exceed $11~В",
+      "                                                  $, otherwise the lamp may ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\PE_EN.tex",
+    "ok": false,
+    "cyr": 34,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ..., etc.) of a substance from an area of ​",
+      "                                                  ​high concentration to a...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on PE_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T1_EN.tex",
+    "ok": false,
+    "cyr": 115,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.44 ...ollowing notation and numerical values ​",
+      "                                                  ​are used in the problem...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T1_S_EN.tex",
+    "ok": false,
+    "cyr": 583,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...ho_L }{3 \\mu}r^3 R T \\ln \\varphi $$}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T2_EN.tex",
+    "ok": false,
+    "cyr": 2191,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.48 ...}sigma\\textbackslash\\{\\}vec\\{E\\}\\{,\\} $$г",
+      "                                                  де $\\vec{j}$ и $\\vec{E}...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T3_EN.tex",
+    "ok": false,
+    "cyr": 512,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.76 ...Express your answer using $\\alpha$.}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T3_S_EN.tex",
+    "ok": false,
+    "cyr": 1779,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...ec{\\omega}\\times\\vec{r}\\bigr]{.} $$}{0.40}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T4_EN.tex",
+    "ok": false,
+    "cyr": 562,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.52 ...rical data known: Oil density $\\rho=800~к",
+      "                                                  г/м^3$; Atmospheric pres...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T4_S_EN.tex",
+    "ok": false,
+    "cyr": 851,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...160\\cdot 10^3~\\text{тонн}{.} $$}{0.30}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T5_EN.tex",
+    "ok": false,
+    "cyr": 590,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.50 ...alues: $G = 6.67 \\times 10^{-11}~\\text{м}",
+      "                                                  ^3 \\cdot \\text{кг}^{-1} ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T5_S_EN.tex",
+    "ok": false,
+    "cyr": 1325,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...quad L= m v a = m \\sqrt{G M_S a} $$}{0.40}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T6_EN.tex",
+    "ok": false,
+    "cyr": 1683,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.50 ...is acted upon by a drag force $\\vec{F}_{с",
+      "                                                  }=-\\beta\\vec{v}$, where $\\...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2024\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 1842,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...{\\omega^2_0-\\gamma^2}t\\right){.} $$}{0.60}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E1_EN.tex",
+    "ok": false,
+    "cyr": 18,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.46 ...t 10^{-11}~\\dfrac{Ohm\\cdot м}{\\mathrm{K}}",
+      "                                                  $. Molar mass of copper $\\...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E1_S_EN.tex",
+    "ok": false,
+    "cyr": 76,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.40 ... 1.61 1.61 1.39 1.10 0.69 0.69 0.00}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E2_EN.tex",
+    "ok": false,
+    "cyr": 464,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...Elementary charge $e=1.602\\cdot10^{-19}~К",
+      "                                                  л$. Electrical constant $...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E2_S_EN.tex",
+    "ok": false,
+    "cyr": 135,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.44 ...0 3 0.121 9.60 4 0.065 6.30 5 0.036}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E3_EN.tex",
+    "ok": false,
+    "cyr": 5,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...le. Gravity acceleration $g=9.81~\\text{м}",
+      "                                                  /\\text{с}^2$. Attention! ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E3_S_EN.tex",
+    "ok": false,
+    "cyr": 11,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ... Н / м^2 = Па \\quad [\\nu] = 1\\]}{0.10}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E4_EN.tex",
+    "ok": false,
+    "cyr": 36,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.50 ... $\\frac{\\mathrm{d}U}{\\mathrm{d}B}=31.25~В",
+      "                                                  /Тл$) with attachment. P...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\E4_S_EN.tex",
+    "ok": false,
+    "cyr": 410,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.41 ... 20.5 20.7 60.0 24.7 25.2 25.4 25.6}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E4_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T1_EN.tex",
+    "ok": false,
+    "cyr": 1168,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.44 ...{2\\} \\textbackslash\\{\\}rho v^2 S C_L, $$г",
+      "                                                  де $\\rho$ – плотн...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T1_S_EN.tex",
+    "ok": false,
+    "cyr": 1958,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.40 ...s{\\gamma}-\\frac{v\\cos{\\gamma}}{r}$$}{1.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T2_EN.tex",
+    "ok": false,
+    "cyr": 1789,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.54 ...ormulas obtained here are not used.}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T2_S_EN.tex",
+    "ok": false,
+    "cyr": 1823,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.41 ... ZY + \\Omega_z(X^2 + Y^2)\\right) $$}{0.30}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T3_EN.tex",
+    "ok": false,
+    "cyr": 1617,
+    "textbackslash": true,
+    "last": [
+      "<inserted text> ",
+      "                $",
+      "l.42 ...nce has the form: \\textbackslash\\{\\}theta_",
+      "                                                  1$ для этих дву...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T3_S_EN.tex",
+    "ok": false,
+    "cyr": 1800,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...t( \\dfrac{2\\pi}{\\Phi_0}V t\\right)$$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T4_EN.tex",
+    "ok": false,
+    "cyr": 1698,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.48 ...\\textbackslash\\{\\}mu v_0^2\\}\\{2\\}.  $$ Е",
+      "                                                  сли шар движет...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T4_S_EN.tex",
+    "ok": false,
+    "cyr": 922,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.39 ... \\rho \\Phi$$\\\\ Answer: $$\\Phi = 0$$}{0.30}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T5_EN.tex",
+    "ok": false,
+    "cyr": 47,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.42 ...: Electron charge $e=1.602\\cdot10^{-19}~К",
+      "                                                  л$ Boltzmann's constant $...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T5_S_EN.tex",
+    "ok": false,
+    "cyr": 124,
+    "textbackslash": false,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.39 ...aystyle\\sum\\limits_in_{i0}q_i^2}}\\]}{1.20}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T5_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T6_EN.tex",
+    "ok": false,
+    "cyr": 76,
+    "textbackslash": true,
+    "last": [
+      " ...                                              ",
+      "                                                  ",
+      "l.60 ...ich is a room of length $L = 10 ~\\text{м}",
+      "                                                  $ with a square hole. The ...",
+      "",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2025\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 596,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...\\ Answer: $$\\beta \\approx 6^\\circ$$}{0.20}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\E1_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.53 ",
+      "     ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\E1_S_EN.tex",
+    "ok": false,
+    "cyr": 896,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...r disqualification from the tour!}{-20.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\E2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ublic/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local/Programs/MiK",
+      "TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Pro",
+      "grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/aadib/AppData/",
+      "Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>",
+      "Output written on E2_EN_2.pdf (6 pages, 4526258 bytes).",
+      "Transcript written on E2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\E2_S_EN.tex",
+    "ok": false,
+    "cyr": 470,
+    "textbackslash": false,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...: $$f_\\text{avg} = (170\\pm2)~мм$$}{0.60}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\E3_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "fb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm",
+      "/cmsy10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/am",
+      "sfonts/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p",
+      "ublic/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font",
+      "s/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on E3_EN_2.pdf (4 pages, 2295982 bytes).",
+      "Transcript written on E3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\E3_S_EN.tex",
+    "ok": false,
+    "cyr": 429,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.40 ...r: \\[f_{\\max} = 1.999860 ~МГц.\\]}{0.20}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on E3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T1_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/",
+      "fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/Program",
+      "s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local",
+      "/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppD",
+      "ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T1_EN_2.pdf (7 pages, 228178 bytes).",
+      "Transcript written on T1_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T1_S_EN.tex",
+    "ok": false,
+    "cyr": 1383,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...: $$x_2 = \\frac{m_1}{m_1 + m_2}l.$$}{0.60}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T1_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T2_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "fonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/pub",
+      "lic/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/",
+      "type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTe",
+      "X/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Progr",
+      "ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T2_EN_2.pdf (5 pages, 155345 bytes).",
+      "Transcript written on T2_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T2_S_EN.tex",
+    "ok": false,
+    "cyr": 408,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...i\\varepsilon_0 }\\ln{\\frac{r}{a}} $$}{0.40}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T2_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T3_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": false,
+    "last": [
+      "r10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon",
+      "ts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public",
+      "/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/typ",
+      "e1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/",
+      "fonts/type1/public/amsfonts/cm/cmtt10.pfb>",
+      "Output written on T3_EN_2.pdf (4 pages, 360752 bytes).",
+      "Transcript written on T3_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T3_S_EN.tex",
+    "ok": false,
+    "cyr": 1015,
+    "textbackslash": true,
+    "last": [
+      "Type  H <return>  for immediate help.",
+      " ...                                              ",
+      "                                                  ",
+      "l.39 ...\\}\\{l-f\\}\\textbackslash\\{\\}right]$.}{2.00}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T3_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T4_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.45 ",
+      "     ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T4_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T5_EN.tex",
+    "ok": true,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "s/cm/cmsy10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/publi",
+      "c/amsfonts/cm/cmsy8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/typ",
+      "e1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/",
+      "fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/aadib/AppData/Local/Program",
+      "s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>",
+      "Output written on T5_EN_2.pdf (5 pages, 165853 bytes).",
+      "Transcript written on T5_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T6_EN.tex",
+    "ok": false,
+    "cyr": 0,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.43 ",
+      "     ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  },
+  {
+    "file": "rupho-x\\2026\\T6_S_EN.tex",
+    "ok": false,
+    "cyr": 564,
+    "textbackslash": true,
+    "last": [
+      "! Missing $ inserted.",
+      "<inserted text> ",
+      "                $",
+      "l.43 ...ight)^2}}{\\omega \\sqrt{L_1 L_2}} $$}{0.50}",
+      "                                                  ",
+      "!  ==> Fatal error occurred, no output PDF file produced!",
+      "Transcript written on T6_S_EN_2.log.",
+      "pdflatex: major issue: So far, you have not checked for MiKTeX updates."
+    ]
+  }
+]

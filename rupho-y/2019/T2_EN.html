@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Gravitational lensing</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Gravitational lensing</h1>
+<p class="camp">Y19 (2019) — English translation</p>
+<h2 class="part">Part A. Deflection angle when flying past a massive body</h2>
+<p>This problem examines one of the effects of the general theory of relativity (hereinafter referred to as GTR), a theory that describes relativistic gravity. It turns out that gravity affects not only ordinary bodies, but also light. A beam of light is deflected as it passes near a massive body. This effect served as one of the first confirmations of general relativity in 1919.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Consider a star of mass $M$. Let a body of low mass fly past it, initially having a high (but non-relativistic) speed $v$, and $v^2\gg{GM/R}$, where $R$ is the smallest distance between the centers of the bodies during the flight. Find the angle by which it will deviate from its original direction.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Now consider a photon traveling at the speed of light $c$. The relation $E=pc$ is true for it, where $E$, $p$ are the energy and momentum of the photon. Consider that the gravitational force acting on a photon is determined by the law of universal gravitation, where the quantity $E/c^2$ is used instead of mass. Find the deflection angle $\delta$ of the photon.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">General Relativity predicts a value exactly $2$ times greater than what you found. Write down the expression for the deflection angle $\delta$ predicted by general relativity. In the future, use this value. Representing $\delta$ as $\delta=r_0/R$, express $r_0$ in terms of $G$, $M$ and $c$.</div><span class="pb-pts">0.20</span></div>
+<h2 class="part">Part B. Theory of gravitational lensing.</h2>
+<p>The observer sees light from a distant star (let's call it the source), which on its way passes by another star, let's call it the “lens”. Consider the distances $a$ and $b$ known.</p>
+<div class="figure"><img src="T2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Assuming first that the Earth, the light source, and the center of the lens are on the same straight line ($\alpha=0$), find the angle $\theta_0$ at which the light arrives at the observer. What does the observer see in this case?  The angle $\theta_0$ is called the Khvolson-Einstein angle after the people who developed the theory of lensing.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the numerical value of $\theta_0$ (in arcseconds), considering the masses of the source and lens stars equal to the mass of the Sun $2\cdot{10^{30}~\text{кг}}$, the radii equal to the radius of the Sun $R=7\cdot{10^8}~\text{м}$, and the distances $a=b=10~\text{кпк}$. One parsec is equal to $1~\text{пк}=3\cdot{10^{16}}~\text{м}$, the speed of light is $c=3\cdot{10^8}~\text{м}/\text{с}$, and the gravitational constant is $G=6{.}67\cdot{10^{-11}}~(\text{Н}\cdot{м}^2)/\text{кг}^2$.</div><span class="pb-pts">0.50</span></div>
+<p>By analogy with the deflection of light rays by a conventional lens, this phenomenon is usually called “gravitational lensing.” However, this is just common jargon. Gravitational lensing has nothing in common with an ordinary thin lens. Analogies with geometric optics are not applicable! In what follows, we consider the general case $\alpha\neq{0}$. The plane perpendicular to the plane of the drawing and passing through the lens star perpendicular to the direct line of the observer-lens will be called the lens plane. Always assume that images are in the plane of the lens.</p>
+<p>In what follows, we consider the general case $\alpha\neq{0}$. The plane perpendicular to the plane of the drawing and passing through the lens star perpendicular to the direct line of the observer-lens will be called the lens plane. Always assume that images are in the plane of the lens.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">How many images will the observer see in the general case $\alpha\neq{0}$? Find the angle for each of them. Express it through the angles $\alpha$, $\theta_0$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Let the radius of the lens star be $R_L$. For the previous point, find the angle $\alpha_\text{max}$ at which all images are still visible. Express $\alpha_\text{max}$ in terms of $a$, $R_L$ and $\theta_0$. Calculate it for the parameters given in point B2.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Find $\Gamma_\perp$ – the linear magnification of the lens in the direction perpendicular to the drawing plane. To do this, move the source slightly in this direction and see how much the image moves in the same direction.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Now find $\Gamma_\parallel$ – linear magnification in the direction lying in the plane of the drawing and perpendicular to the line of sight.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Let the source have small but non-zero dimensions. Knowing $\Gamma_\perp$ and $\Gamma_\parallel$, find the total magnification of the gravitational lens $\Gamma$. By definition, this is the ratio of the area of ​​the image (lying in the plane of the lens) to the area of ​​​​the projection of the source onto a plane perpendicular to the line of sight.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">As you know, a converging lens focuses rays, increasing the flow of energy. A gravitational lens has the same property. Let the observer's telescope receive an energy flow $N_0~\left[\text{Вт}\right]$ from the source in the absence of a lens. Find how many times $\mu$ the lens increases the received energy flow. Consider the luminous flux from the star-lens to be negligible. Consider that the observer sees all possible images ($\alpha\neq{0}$) and sums up the energy flows from them.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">B9</span><div class="pb-text">Find the value of $\mu$ at $\alpha=\theta_0$. Construct a qualitative graph of the dependence $\mu(y)$, where $y=\alpha / \theta_0$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B10</span><div class="pb-text">From the resulting formula it follows $\mu\to{\infty}$ at $\alpha\to{0}$. What is $\mu$ actually limited to? Using the numerical data from B2, estimate the value of $\mu_{max}$.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part C: Microlensing Observation</h2>
+<p>Lensing is usually observed when the source of light and the lens are not stars, but galaxies or clusters of galaxies whose masses are enormous. The resulting angle $\theta_0$ can in such cases be of the order of $1$ arcseconds, which is observable by optical telescopes. But for the case of star-star lensing in our galaxy (also called microlensing), the angle $\theta_0$ is so small that it is not possible to “resolve” the lensing picture, that is, to see the lens and images separately, by optical means. This can only be achieved using a system of several radio telescopes, which is an interferometer with a huge base and can measure very small angles.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">However, microlensing can still be observed with optical telescopes. To do this, we need to measure the energy flow from the stars, which, as we found out, changes during lensing, when one star passes behind another. The lensing process of stars in the Galaxy lasts approximately $\tau=40~\text{дней}$. If during this time we observe the star at least once, then, knowing its standard luminosity, we will understand that we are observing gravitational lensing. Consider that in our Galaxy there are $N=2\cdot{10^{11}}$ stars, their masses are approximately equal to the mass of the Sun, the characteristic size of the Galaxy is $L=10~\text{кпк}$. Estimate how many $N_0$ stars must be observed monthly to detect $k=10$ gravitational lensing events behind $t=1~\text{год}$.</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3048">https://pho.rs/p/3048</a></p>
+</body>
+</html>

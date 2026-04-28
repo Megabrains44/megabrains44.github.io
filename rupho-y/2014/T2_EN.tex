@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Heat capacity of an ideal gas}}
+\author{\normalsize Y14 (2014) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Ideal Gas Polytrope}
+
+A mole of an ideal gas is placed in a sealed container. You can change the volume of the vessel, as well as heat or cool the gas. Thus, any predetermined process can be carried out with gas. All processes are carried out very slowly, so that the gas can be considered to be in equilibrium at any moment. The molar heat capacity of a gas at constant volume is $C_V$.
+
+\problembox{A1}{The state of the gas was changed so that its volume and temperature changed by small values ​​$\Delta V$ and $\Delta T$. How much heat did you have to supply to the gas?}{1.00}
+
+\problembox{A2}{A process with a given dependence $V(T)$ is carried out with gas. Find the heat capacity of the gas in this process at point $(T_0,V(T_0))$.}{1.00}
+
+\problembox{A3}{A small change in volume and a small amount of heat resulted in a small change in the pressure and temperature of the gas. Find the connection between the relative changes $p$, $V$ and $T$, considering them small.}{2.00}
+
+\problembox{A4}{Find the relationship between small relative changes in pressure and volume for a process in which $pV^n=\text{const}$ ($n$ is a known constant).}{1.00}
+
+\problembox{A5}{Find the relationship between small relative changes in volume and temperature in this process.}{1.00}
+
+\problembox{A6}{Find the heat capacity of the gas in this process.}{2.00}
+
+\problembox{A7}{Is it true that by selecting a suitable value of $n$ one can obtain any heat capacity? (Consider that the value $n=\infty$ formally corresponds to the process $V=\text{const}$.)}{1.00}
+
+\problembox{A8}{A process in which the heat capacity $C$ of a gas remains constant is called polytropic (or, in short, polytropic). Find the equation of such a process in the variables $p$, $V$.}{1.00}
+
+\section*{Part B. Non-polytropic process}
+
+A process is carried out with the gas, the graph of which in coordinates $pV$ is a straight line passing through the points $A(2p_0,V_0)$ and $B(p_0,2V_0)$. Hereinafter, assume that $C_V=\frac{3}{2} R$.
+
+\problembox{B1}{Find the heat capacity of the gas at point $A$.}{2.00}
+
+\problembox{B2}{Find the heat capacity of the gas at point $B$}{1.00}
+
+\problembox{B3}{At what point in the process is the heat capacity of the gas maximum?}{1.00}
+
+\problembox{B4}{What is the maximum value of heat capacity?}{2.00}
+
+\problembox{B5}{How much heat does the gas receive with a small change in its volume from V to V+ΔV?}{2.00}
+
+\problembox{B6}{How much total heat did the gas receive in those sections of the AB process where heat was supplied?}{2.00}
+
+\section*{Part C. Cycles}
+
+\problembox{C1}{With an ideal monatomic gas, a cyclic process is carried out, consisting of three polytropes sequentially connecting the points $A(4p_0,V_0)$, $B(p_0,2V_0)$, $C(p_0,V_0)$. Find the efficiency of such a cycle.}{5.00}
+
+\problembox{C2}{The graph of a cyclic process in coordinates $pV$ is a triangle with vertices $A(2p_0,V_0)$, $B(p_0,2V_0)$, $C(p_0,V_0)$. Find the efficiency of such a cycle if it is carried out with an ideal monatomic gas.}{5.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3964}
+
+\end{document}

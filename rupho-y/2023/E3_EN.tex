@@ -1,0 +1,168 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Laser module}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This experiment is devoted to the study of laser radiation, one of the main inventions of the 20th century, used today in almost all areas of life, from physics to medicine. The main feature of the laser is that it emits monochromatic and highly polarized light, which makes it possible to create a very powerful, narrowly directed radiation flux. In our experiment, we study the characteristics of radiation such as power and degree of polarization depending on the current flowing through the laser.
+
+Equipment: Optical bench Movable stands Steel screen Magnetic holders Laser module. Do not exceed 23 mA! Laser holder 1 Ohm resistor Connecting wires Multimeter (can only be used in voltmeter mode) Polarizer holders (2 pieces) Polarizers (2 pieces) DC power source CCD line (linear array of photodiodes) Laptop Masking tape
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Working with the program}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+ mm    ,  on    (CCD ),    s    .   mm:        for       for    mm.  : ""  , ""  , ""  ,   for     mm   mm   mm  for       and      for   s mm:   for     .  on  " " (4) --- COM3.        " ".    ,   and   .  :        on  " ",   in    (11).        (10). ,    in          .     ,   .      s   ,     (5).       50000.  s ,  : V        .   in mm  ,   ""    .   in    (13). !         on  .      in       (7),  (8), and  (9)  .      : "".         .   in " "      and   on  ( in      on ).    for   (  ) in " ":   for   on .     .  s  "".      (6)     cm .     on .   ( for  ). V  h  (6)   ,        .  and  :  ,   and         (12).   in  s  .dat. :  on     .       .   ,      (10).
+
+    ,  on  ,  "". ""      on :     2000     .  ""      .    ""  ,    "".
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+In this problem, the following notation will be used: $J$ - the strength of the current flowing through the laser; $I$ - the total absolute intensity of light incident on the sensor (see the equipment drawing in part A), measured in arbitrary units; $P$ is the power of light emitted by the laser.
+
+In this problem the following notation will be used:
+
+\section*{Part A. Polarizer (2.3 points)}
+
+In the first part of the problem, you are asked to investigate how the intensity of light passing through a polarizer depends on the angle of rotation of the polarizer.
+
+Note: Consider the rotation angle to be 0 if the zero division of the polarizer is at the lowest point.
+
+Build the following setup:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Set the source voltage so that the current $J$ through the laser is $\sim 10~mA$.
+
+\problembox{A1}{Make a note of the $J$ value you use.}{0}
+
+\problembox{A2}{Remove the dependence of the laser light intensity $I$ on the rotation angle $\theta_1$ of the polarizer in the range from $0^{\circ}$ to $180^{\circ}$ (at least 20 points).}{1.20}
+
+\problembox{A3}{Propose a linearization of the obtained dependence.}{0.40}
+
+\problembox{A4}{Plot the linearized relationship.}{0.60}
+
+\problembox{A5}{Determine the angles of rotation of the polarizer $\theta_\mathrm{max}$ and $\theta_\mathrm{min}$ at which the intensity of the light passing through it is maximum and minimum, respectively.}{0.10}
+
+\section*{Part B. Crossed polarizers (1.8 points)}
+
+Install a second polarizer between the already installed one and the screen.
+
+Set the angle $\theta_\mathrm{max}$ on the first polarizer.
+
+\problembox{B1}{Remove the dependence of the intensity of light passing through the crossed polarizers on the angle of rotation of the second polarizer $\theta_2$ in the range from $0^{\circ}$ to $180^{\circ}$ (at least 20 points).}{1.20}
+
+\problembox{B2}{Plot a graph of the resulting relationship.}{0.60}
+
+\section*{Part C. Laser polarization degree (5.0 points)}
+
+As was defined earlier, the light emitted by a laser consists of 2 components: linearly polarized $I_{}$ and natural $I_{}$. The degree of laser polarization $\beta$ is determined by the following formula: $\beta = \frac{I_{}}{I_{}+I_{}}=\frac{I_\mathrm{max}-I_\mathrm{min}}{I_\mathrm{max}+I_\mathrm{min}},$where $I_\mathrm{max}$ and $I_\mathrm{min}$ ---   and min  for  . V  h        from    $J$,    .
+
+!  ,   "",       ,    from      .   in  , ,  for    for    and min      $I_\mathrm{min}$  "".
+
+ ,   "",       ,    from      .   in  , ,  for    for    and min      $I_\mathrm{min}$ without exposure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+For large values of $J$, the detector you are using will go off scale when directly measuring $I_\mathrm{max}$. Therefore, you need to propose a method that does not require measuring the maximum intensity directly.
+
+\problembox{C1}{Propose a method for determining $\beta$ for large $J$.}{0.50}
+
+\problembox{C2}{Take the data necessary to analyze the dependence of $\beta$ on $J$ (at least 25 points).}{2.50}
+
+\problembox{C3}{Calculate $\beta$ for the used values of $J$.}{1.00}
+
+\problembox{C4}{Plot a graph of $\beta$ versus $J$.}{1.00}
+
+\section*{Part D. Quantum efficiency (2.9 points)}
+
+Another important characteristic of a laser is its radiation power. In this part of the problem you are required to investigate how the indicated power $P$ depends on the current $J$ flowing through the laser.
+
+Note: In fact, a real polarizer absorbs some of the light energy even with allowed polarization, but you can ignore this effect for this part of the problem.
+
+Let $I_{full}$ be the intensity of light that would hit the sensor in the absence of a polarizer.
+
+\problembox{D1}{Express $I_{full}$ in terms of $I_\mathrm{min}$ and $\beta$.}{0.60}
+
+The measurements in the previous part allowed for slight changes in the position of the laser spot on the sensor, since only the ratio of $I_\mathrm{max}$ and $I_\mathrm{min}$ was important, but now such changes can lead to significant errors in the results. Therefore, in this part you need to remove the dependence of $I_\mathrm{min}$ on the current $J$, trying to avoid displacement of the installation elements.
+
+Let's define $i(J) = \frac{I_{full}(J)}{I_{full}(10~mA)}$.
+
+In the further part of the problem, you can assume that at $J = 10~mA$ the power of light emitted by the laser is $P(10~mA) = 5~mV$.
+
+\problembox{D2}{Measure $I_\mathrm{min}(10~mA)$ and determine $I_{full}(10~mA)$.}{0.05}
+
+\problembox{D3}{Remove the dependence of $I_\mathrm{min}$ on $J$ (at least 25 points).}{0.75}
+
+\problembox{D4}{Plot a graph of $i$ versus $J$.}{0.50}
+
+Let $n_e$ electrons pass through the laser per unit time, while $n_{\gamma}$ photons are emitted by the laser per unit time. Let a small increase in the value $n_e$, equal to $\mathrm dn_e$, lead to a small increase in the value $n_{\gamma}$, equal to $\mathrm dn_{\gamma}$. The differential quantum efficiency is the quantity $\eta$, determined by the formula: $ \eta = \frac{\mathrm dn_{\gamma}}{\mathrm dn_{e}}. $    :$ E = h \nu, $where $\nu$ --- h  , $h$ ---  .    : $h = 6.626 \cdot 10^{-34} ~J \cdot s$;     $\lambda = 630~nm$;   $c = 3 \cdot 10^8~m/s$;   $e = 1.6 \cdot 10^{-19}~Kl$
+
+       $n_e$ , for       $n_{\gamma}$ .     $n_e$,  $\mathrm dn_e$,      $n_{\gamma}$,  $\mathrm dn_{\gamma}$.      $\eta$,   :$ \eta = \frac{\mathrm dn_{\gamma}}{\mathrm dn_{e}}. $    :$ E = h \nu, $where $\nu$ --- h  , $h$ is Plancks constant.
+
+When making calculations, use the following values:
+
+\problembox{D5}{Derive an expression for the differential quantum efficiency $\eta$. Consider the dependence $P(J)$ of the laser power on the current passing through it, as well as the constants indicated above, to be known.}{0.50}
+
+\problembox{D6}{Numerically determine the maximum value of $\eta$ for the laser you are using.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3494}
+
+\end{document}

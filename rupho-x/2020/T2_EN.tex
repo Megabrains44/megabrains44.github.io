@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Gas quadrangle}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Gas movement along a pipe of variable cross-section (5 points)}
+
+In this part of the problem, a gas of molar mass $\mu$ moves stationarily along a straight horizontal pipe without friction against its walls. Consider the gas input parameters $v_0, T_0, S_0, \rho_0$, as well as $C_p$, as given. Also consider any section to be symmetrical and neglect the velocity components that are perpendicular to the axis of symmetry.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Let the pipe be adiabatically insulated. Obtain the dependence of gas velocity on its temperature.}{0.80}
+
+\problembox{A2}{Show that when gas flows, the relation $$v\frac{dv}{dx}=-\frac{1}{\rho}\frac{dP}{dx}$$ is satisfied.}{0.70}
+
+\problembox{A3}{Now thermal power $N=kL$ is supplied to any section of pipe with length $L$. Derive an expression for the gas velocity as a function of $x$ and $T$.}{0.50}
+
+\problembox{A4}{Now the gas temperature depends linearly on $x$ according to the law $T=T_0+\alpha x$. Show that the gas moves through the pipe with uniform acceleration and find this acceleration $a$.}{0.50}
+
+\problembox{A5}{Obtain an equation for a polytropic process with constant molar heat capacity $C$ in coordinates $(P, \rho)$.}{0.50}
+
+\problembox{A6}{Show that under the conditions of point A4 the gas moves as if it were in a polytropic process.}{1.20}
+
+\problembox{A7}{Derive an expression for the gas density as a function of $x$.}{0.80}
+
+\section*{Part B: Closed Pipe (5 points)}
+
+Let us consider a quadrilateral $abcd$ along which a certain mass of gas moves stationarily. Let us introduce the notation: $ab=L_1, bc=L_2, cd=L_3, da=L_4$. On section $ab$: $\frac{dT}{dx}=A, \frac{dN}{dx}=\alpha$; on section $bc$: $\frac{dT}{dx}=B, \frac{dN}{dx}=\beta$; $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A$ consider given. For section $cd$: $\frac{dT}{dx}=-A, \frac{dN}{dx}=-\alpha$ and for $da$: $\frac{dT}{dx}=-B, \frac{dN}{dx}=-\beta$. Axis $x$ is directed for each pipe from the first point of the section to the second (for example, for $ab$ from $a$ to $b$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Find the gas mass flow rate $\dot{m}$.}{0.10}
+
+\problembox{B2}{Find the heat $\delta Q_{ab}, \delta Q_{bc}, \delta Q_{cd}, \delta Q_{da}$ received by a portion of gas with mass $dm$ in these areas of the quadrilateral. Answers can be expressed in terms of $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, \beta, B, L_1, L_2, L_3, L_4$ and $dm$.}{0.80}
+
+\problembox{B3}{Get $\beta$ and $B$ via $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.}{1.00}
+
+\problembox{B4}{Prove that for such a system to be stationary, it is necessary that the molar heat capacity of the gas be constant throughout the entire cycle.}{1.50}
+
+\problembox{B5}{Find the accelerations $a_{ab}$ and $a_{bc}$ through $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.}{0.70}
+
+\problembox{B6}{Find the velocities $v_b, v_c$ and $v_d$ through $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.}{0.50}
+
+\problembox{B7}{Find the minimum time $t$ after which the gas returns to its initial position. Express your answer in terms of the velocities at the points of intersection of the pipes and the accelerations in the pipes (the item is not assessed unless B5 and B6 are completed).}{0.20}
+
+\problembox{B8}{Find the mass of gas in the pipe. Express your answer in terms of $\dot{m}$ and $t$ (the item is not scored unless B5 and B6 are completed).}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/13}
+
+\end{document}

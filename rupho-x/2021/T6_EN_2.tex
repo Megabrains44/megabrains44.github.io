@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Hydrodynamic focusing}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Some applications require extremely narrow fluid flows.  The narrowness of the flow significantly accelerates the mixing of the substance with the environment, which makes it possible to study fast chemical reactions. Also, the use of narrow flows allows you to reduce the amount of substance used. If you create a narrow flow using a piston that forces fluid through a narrow opening, the resulting flow is extremely turbulent. This makes experiments very difficult. Making fairly narrow channels is also quite labor-intensive. These difficulties can be circumvented by compressing the flow by surrounding it with a flow of another fluid. Depending on the flow parameters, the width of the central part of the flow can significantly decrease. This phenomenon is called hydrodynamic focusing. In this problem we will consider the simplest models of hydrodynamic focusing.
+
+\section*{Part A. Flow of a single fluid (2.7 points)}
+
+It is known that if the fluid velocity depends only on the coordinate $x$ and is directed along the $y$ axis, then the viscous force between adjacent layers is
+$$F=\eta S\frac{dv}{dx},$$
+where $S$ is the contact area between the layers. The force on the slower-moving layer is directed along its motion. Consider flow in a slit between two parallel planes separated by distance $d$, with width $w$ and length $L$. The pressure difference between the ends is $\Delta P$. The fluid viscosity is $\eta$. The $x$ axis is perpendicular to the planes and the $y$ axis is along the flow. Assume $d\ll w$, so boundary effects can be neglected and the velocity depends only on $x$ and is everywhere along $y$. We consider the flow to be stationary everywhere, that is, the velocity distribution does not depend on time.
+
+\problembox{A1}{Let $v(x)$ be the velocity of fluid flow in the slot. The origin of the coordinates of the $Ox$ axis is located in the middle between the planes, and the planes limiting the flow are located at $x  = \pm d/2$. The pressure difference at the opposite edges of the slit is $\Delta P$. Considering the forces acting on an infinitesimal layer of liquid of thickness $dx$, obtain a differential equation for $v(x)$. Find $v(x)$ from it. On the walls of the slit, the speed becomes 0. Find the average speed of fluid flow $\langle v \rangle$ (express it through $\Delta P$, $L$, $\eta$, d). Find the flux (flux is the volume of liquid flowing through the slit per unit time) of the liquid through the slit. Express your answer using $\Delta P$, $L$, $\eta$, $d$, $w$.}{1.00}
+
+\problembox{A2}{Now consider the flow of liquid through a long circular tube of length $L$ and radius $r$. For reasons of symmetry, the speed of flow through a tube depends only on the distance to its axis. At the boundary of the tube, the speed becomes 0. Find the dependence of the speed on the distance to the $\rho$ axis. The pressure difference between the ends of the tube is $\Delta P$, the viscosity of the liquid is $\eta$. Find the volumetric flow rate $q$ as the liquid flows through the tube. Express your answer using $\Delta P$, $L$, $r$, $\eta$.}{0.80}
+
+For both flow through a slit and flow through a tube, the flow is proportional to the pressure difference at the ends. The dependence of flow on pressure can be written in the form $q = \Delta P/ R$, where $R$ is the hydrodynamic resistance of the tube (or slot).
+
+\problembox{A3}{Find the hydrodynamic resistance of the slot $R_s$ and tube $R_t$.  Express your answer in terms of the geometric dimensions given in paragraphs A1 and A2, respectively, and in terms of the fluid viscosity $\eta$.}{0.20}
+
+\problembox{A4}{A liquid of viscosity $\eta$ flows through a tube of radius $r$ and length $L$ under the influence of a pressure difference $\Delta P$ (as in A2). Find the power of viscous friction forces.}{0.70}
+
+\section*{Part B. Two types of liquids (1.4 points)}
+
+Now let two types of liquids flow between the planes. The sample we are interested in flows in the central section (we will denote all quantities related to it with index 1). The width of its flow is $w_1$. The remaining part of the flow (at the edges) is occupied by liquid 2, which compresses the sample (see figure). In subsequent parts of the problem, we will be interested in the ratio of the sample width to the total flow width $w_1/w$. We will assume that the flow width is much larger than the slot thickness $w_1 \gg d$. Then the influence of the area of contact of liquids on the flow can be neglected, and it can be assumed that the speed of the liquid at each point depends only on its properties and the $x$ coordinate (the $Ox$ axis is perpendicular to the planes). At the boundaries of the gap at $x = \pm d/2$ the velocity becomes 0 as in part A.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Let the volumetric flow rates $q_1$ and $q_2$ of liquids 1 and 2, as well as their average velocities $\langle v_1\rangle$ and $\langle v_2\rangle$, be given. Find the relative flow width of sample $w_1/w$.}{0.40}
+
+\problembox{B2}{Let the viscosities of the liquids $\eta_1$ and $\eta_2$ be given, and their average velocities are determined by the results of part $A$. Express $w_1/w$ in terms of $q_1$, $q_2$, $\eta_1$ and $\eta_2$. Effects that occur at the interface between fluids 1 and 2 can be neglected, since they are only important in a region with a width of the order of $d \ll w$.}{0.40}
+
+Liquids 1 and 2 come from two reservoirs located at heights $h_1$ and $h_2$ under the influence of gravity. These tanks are connected to the main part of the installation by a system of pipes. We can assume that the fluid flow through each tube does not depend on time and is proportional to the pressure difference at its ends $$q_i=\Delta P_i/R_i.$$ Here $R_i$ is the (effective) resistance of the connecting tube. This resistance depends on the parameters of the tube and the properties of the liquid. The pressure difference at the ends of the tube is created by gravity.
+
+In order to make the flow independent of the slot parameters, it is necessary that the resistance of the tubes be much greater than the resistance of all other parts of the circuit. To do this, special very narrow cylindrical capillaries - rheostats - are added to the tubes. In what follows, we will assume that the entire resistance of the supply tubes is determined by the resistance of these rheostats. Let us assume that the geometric dimensions of the rheostats (their radii and lengths) for the sources of both liquids are the same.
+
+\problembox{B3}{Find the flow ratio $q_1/q_2$ if the densities of the liquids ($\rho_1$ and $\rho_2$), their viscosities ($\eta_1$ and $\eta_2$) and the heights to which the reservoirs $h_1$ and $h_2$ are raised are given.}{0.30}
+
+\problembox{B4}{Find the corresponding ratio of stream widths $w_1/w$.}{0.30}
+
+\section*{Part C. Considering gravity (2.8 points)}
+
+Experiments show that in the case of different densities of fluids 1 and 2, the focused flow is most stable when the flow direction is vertical. In this case, the width of the flow may change under the influence of gravity.
+
+\problembox{C1}{Let us again consider the flow of one fluid between planes. However, now the speed is created not only due to the pressure difference, but also due to gravity. The geometry is the same as in part A1, the force of gravity is directed along the $y$ axis. The fluid flow is aligned with the force of gravity. Find the average speed of the fluid. Express your answer in terms of $\rho$, $g$, $\eta$, $d$, $\Delta P$, $L$.}{0.40}
+
+\problembox{C2}{Let now two types of fluids flow between the planes, as in part $B$. Having written expressions for the average speeds of liquids 1 and 2, exclude the pressure difference from them (it is the same for both liquids) and find the ratio $\langle v_1 \rangle / \langle v_2 \rangle$. Express your answer using $\langle v_2 \rangle$, $\eta_1$, $\eta_2$, $d$, $g$, $\rho_1$, $\rho_2$.}{0.80}
+
+\problembox{C3}{Substitute the expression for the average velocities into the formula for the relative width of the focused flow from B1. Obtain an equation for determining the width of the form $$\frac{w}{w_1}=\dots$$ The right-hand side may involve the ratio $\frac{w_1}{w}$ and the dimensionless parameters $\alpha = q_2 \eta_2/(q_1 \eta_1)$, $\beta = (\rho_1 - \rho_2)q_G/(\rho_2 q_2)$. Here $q_G=\rho_2 g d^3 w/(12\eta_2)$ is a quantity with the dimensions of volumetric flow rate, characterizing the influence of gravity.}{1.00}
+
+\problembox{C4}{Solve this equation and find the relative width of the focused flow $w_1/w$. Express your answer in terms of dimensionless quantities $\alpha$, $\beta$.}{0.60}
+
+\section*{Part D. Experiment (3.1 points)}
+
+In an experiment, it is possible to directly regulate not the amount of liquid flow, but the height at which the corresponding reservoir is located. Gravity acceleration $g = 9.8~\text{m}/\text{s}^2$. Water is used as liquid 2, which is constantly supplied from height $h_2 = 0.5~\text{m}$. The density of water is $\rho_2 = 10^3~\text{kg}/\text{m}^3$. Water viscosity $\eta = 8.9 \cdot 10^{-4}~\text{kg}/(\text{m}\cdot\text{s})$. The rheostat is a capillary with radius $r= 130~\mu\text{m}$ and length $L=0.5~\text{m}$. A slit with length $l = 43~\text{mm}$, width $w= 3~\text{mm}$, $d = 175~\mu\text{m}$ is used.
+
+\problembox{D1}{Find the hydrodynamic resistance of each of the rheostats if water flows through them. Let a salt solution be used as liquid 1, the density of which is $\rho_1 = 1.15 \cdot 10^3~\text{kg}/\text{m}^3$, and the viscosity coincides with the viscosity of water. Find $q_G$ for such a gap.}{0.60}
+
+\problembox{D2}{Find the relative width of the flow of liquid 1 (salt solution) $w_1/w$ for cases when liquid 1 is supplied from heights $h_1 = 0.25~\text{m},\, 0.5~\text{m},\,1.0~\text{m}$.}{0.30}
+
+\problembox{D3}{How will the value of the flow width change if we neglect the influence of gravity? Calculate the relative flow width for the same parameters $h_1 = 0.25~\text{m},\, 0.5~\text{m},\,1.0~\text{m}$ as in the previous paragraph, without taking into account gravity.}{0.30}
+
+\problembox{D4}{Let now some liquid 1 flow through the center, the density of which is equal to $\rho_1^\prime = 0.8 \cdot 10^3~\text{kg}/\text{m}^3$, and the viscosity coincides with the viscosity of water. Find the ratio $w_1/w$ for the values $h_1 = 0.25~\text{m},\, 0.5~\text{m},\,1.0~\text{m}$.}{0.30}
+
+\problembox{D5}{Plot qualitatively on one graph the dependence of $w_1/w$ on $h_2/h_1$ for three cases: a) there is no gravity, b) a salt solution flows in the center, c) a liquid with density $\rho_1^\prime$ flows in the center. All parameters are the same as in the previous paragraphs, the height $h_2$ is fixed, only $h_1$ changes.}{0.80}
+
+\problembox{D6}{In all calculations we assumed that the flows were independent of time. Let the water tank (liquid 2) be a cylinder of radius $r_r = 20~mm$. Estimate the time it takes for the water level in the tank to decrease by $\delta h_2 = 10~cm$. If the experiment is carried out over a period of this order, a change in the water level in the tank will have virtually no effect on it. The starting level is $h_2 = 0.5~\text{m}$.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/105}
+
+\end{document}

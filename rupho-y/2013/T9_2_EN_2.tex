@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Adiabatic invariant}}
+\author{\normalsize Y13 (2013) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A block of mass $M$ moves along a smooth horizontal plane with a speed $v_0$ towards the wall. A small ball of mass $m$ is at rest at a distance $L$ from the wall. A collision occurs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T9_2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Determine the minimum distance at which the block will approach the wall, and how many collisions between the ball and the block will occur.}{0}
+
+All impacts can be considered absolutely elastic and $M \gg m$.
+
+\problembox{A2}{Find the adiabatic invariant that describes the motion of the ball (after the first collision with the block).}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3997}
+
+\end{document}

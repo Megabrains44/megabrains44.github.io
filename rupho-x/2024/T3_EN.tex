@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Off-center ball movements}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In ordinary life, you have probably encountered such physical situations as a collision of a rolling ball with a vertical wall, or a ball falling from the edge of a horizontal table. You also probably solved problems related to these situations, but you were limited to cases when the ball rolls in a direction perpendicular to the plane of the wall or the edge of the table. As part of this task, you are asked to generalize the results to the case when the speed of the center of the ball is not directed perpendicular to the plane of the wall or the edge of the table.
+
+In all points of the problem, consider the following known: The ball in question with mass $m$ and radius $r$ is homogeneous. Rolling friction and spinning friction can be ignored within the framework of this problem. The acceleration due to gravity is $g$.
+
+For all points of the problem, consider the following known:
+
+\section*{Part A. Collision of a ball with a vertical wall (4.5 points)}
+
+This part of the problem is devoted to the study of the collision of a ball with a vertical wall. The ball rolls on a horizontal table without slipping, and its center moves at a speed of $v$ in a direction forming an angle of $\alpha$ with the normal to the wall. The ball does not rotate around the vertical axis $z$. At some moment the ball elastically collides with the wall. The coefficient of friction between the ball and the wall is $\mu$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let us introduce a rectangular coordinate system $xyz$ with the origin at the center of the ball at the moment of collision as shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+We will use the following notation: $C$ — center of the ball; $\vec{v}_C$ — speed of the ball center; $\vec{\omega}$ is the angular velocity of the ball; $A$ is the point of the ball in contact with the wall (it is variable), and $\vec{v}_A$ is the speed of this point; $\vec{u}_A=v_{Ax}\vec{e}_x+v_{Az}\vec{e}_z$ and $\vec{u}_C=v_{Cx}\vec{e}_x+u_{Cz}\vec{e}_z$ are components of the velocity vectors of points $A$ and $C$, respectively, parallel to the wall; $\vec{r}$ is the radius vector drawn from the center of the ball $C$ to the point $A$.
+
+We will use the following notation:
+
+\problembox{A1}{Express the velocity component $\vec{u}_{A}$ of point $A$ in terms of the velocity component $\vec{u}_C$ of the center of the ball, its angular velocity $\vec{\omega}$, as well as the radius vector $\vec{r}$ at an arbitrary moment. Also obtain the time derivative $\dot{\vec{u}}_A$ of the vector $\vec{u}_A$. Express your answer using $\dot{\vec{u}}_C$, $\dot{\vec{\omega}}$ and $\vec{r}$.}{0.40}
+
+\problembox{A2}{Determine the friction force $\vec{F}_0$ acting on the ball at the initial moment of contact with the wall. Express your answer in terms of $\vec{e}_x$, $\vec{e}_z$, $\alpha$, $\mu$ and the normal reaction force of the wall $N_0$ at the initial moment.}{0.60}
+
+\problembox{A3}{Prove that the time derivative $\dot{\vec{u}}_A$ of the velocity component $\vec{u}_A$ is related to the friction force $\vec{F}$ by the relation: $$\dot\{\vec\{u\}\}_A=\cfrac\{7\vec\{F\}\}\{2m\}. $$This fact can be used further, even if you could not prove it.}{1.00}
+
+\problembox{A4}{Determine the velocity component $\vec{u}_{Aк}$ immediately after the collision, assuming that the ball slides along the wall during the entire time of the collision. Express your answer in terms of $v$, $\alpha$, $\mu$, $\vec{e}_x$ and $\vec{e}_z$. At what maximum value of the friction coefficient $\mu_{max}$ does slippage not stop during the entire impact time? Express your answer using $\alpha$.}{0.50}
+
+\problembox{A5}{At $\mu<\mu_{max}$, determine the speed of the center of the ball $\vec{v}_{Cк}$, as well as at what angle $\beta$ to the horizon it is directed immediately after the collision. Express your answers using $v$, $\alpha$, $\mu$, $\vec{e}_x$, $\vec{e}_y$ and $\vec{e}_z$.}{0.60}
+
+\problembox{A6}{At $\mu<\mu_{max}$, determine the coordinates $x_C$, $y_C$ of the center of the ball at the moment it falls on the table. Express your answers using $v$, $g$, $\mu$ and $\alpha$.}{0.40}
+
+\problembox{A7}{For arbitrary values of $\mu$, determine the amount of heat $Q$ released during the collision of the ball with the wall. Express your answer using $m$, $v$, $\mu$ and $\alpha$. Note: explicit calculation of the work done by the friction force will significantly simplify the solution of the problem.}{1.00}
+
+Note: explicit calculation of the work done by the friction force will significantly simplify the solution of the problem.
+
+Further, as part of this task, you are asked to study the dynamics of a homogeneous ball falling from the straight edge of a horizontal table. Before reaching the edge, the center of the ball moved along the table with a speed of $v$ at an angle of $\alpha$ to the perpendicular drawn to the edge of the table in its plane. Before hitting the edge of the table, the ball did not rotate around a vertical axis. When solving the problem further, assume that the ball never slides across the table.
+
+Further, as part of this task, you are asked to study the dynamics of a homogeneous ball falling from the straight edge of a horizontal table. Before reaching the edge, the center of the ball moved along the table with a speed of $v$ at an angle of $\alpha$ to the perpendicular drawn to the edge of the table in its plane. Before hitting the edge of the table, the ball did not rotate around a vertical axis. When solving the problem further, assume that the ball never slides across the table.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+It is most convenient to solve the problem in the cylindrical coordinate system $(r{,}\varphi{,}z)$. Axis $z$ coincides with the edge of the table. The figure shows the unit vectors $\vec{e}_r$, $\vec{e}_\varphi$ and $\vec{e}_z$ of the cylindrical coordinate system. The radius $r$ of the ball is the distance from its center to the axis $z$, and the angle $\varphi$ is the angle of rotation of the line connecting the center of the ball to the point of its contact with the table and is measured from the position at which this line is vertical.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+An arbitrary vector in a cylindrical coordinate system can be represented in the following form: $$\vec\{A\}=A_r\vec\{e\}_r+A_\varphi\vec\{e\}_\varphi+A_z\vec\{e\}_z. $$При дифференцировании вектора, заданного компонентами в цилиндрической системе координат, необходимо учитывать, что единичные орты цилиндрической системы координат являются переменными. Для их производных по времени можно записать: $$\cfrac\{d\vec\{e\}_i\}\{dt\}=\bigl[\vec\{\Omega\}\times\vec\{e\}_i\bigr], $$где $\vec{\Omega}=\dot{\varphi}\vec{e}_z$ — угловая скорость вращения цилиндрической системы координат. Таким образом, проекции производной по времени вектора $\vec{A}$ записываются следующим образом: $$\bigl(\dot\{\vec\{A\}\}\bigr)_r=\dot\{A\}_r-\dot\{\varphi\}A_\varphi\qquad \bigl(\dot\{\vec\{A\}\}\bigr)_\varphi=\dot\{A\}_\varphi+\dot\{\varphi\}A_r\qquad \bigl(\dot\{\vec\{A\}\}\bigr)_z=\dot\{A\}_z $$These relations may be useful in the process of further solving the problem.
+
+\section*{Part B. Equations of kinematic relations (0.9 points)}
+
+This part is devoted to obtaining the basic kinematic equations that describe the motion of the ball.
+
+\problembox{B1}{Determine the velocity vector components of the ball's center $v_\varphi$ and $v_z$ in a cylindrical coordinate system. Express your answers using $r$, $\dot\varphi$ and $\dot{z}$.}{0.20}
+
+\problembox{B2}{Determine the acceleration vector components of the ball's center $a_r$, $a_\varphi$ and $a_z$ in a cylindrical coordinate system. Express your answers using $r$, $v_\varphi$, $\dot{v}_\varphi$ and $\dot{v}_z$.}{0.30}
+
+\problembox{B3}{From the condition of no slipping, determine the components of the angular velocity of the ball $\omega_\varphi$ and $\omega_z$ in the cylindrical coordinate system. Express your answers using $r$, $v_\varphi$ and $v_z$.}{0.40}
+
+\section*{Part C. Movement in a plane perpendicular to the edge of the table (2.0 points)}
+
+In a plane perpendicular to the edge of the table, the ball moves in a circle, which greatly simplifies the analysis of this part of its movement.
+
+\problembox{C1}{Determine the friction force $F_\varphi(\varphi)$ component acting on the ball, as well as the acceleration component $a_\varphi(\varphi)$ of its center. Express your answers in terms of the mass of the ball $m$, $g$ and $\varphi$.}{0.80}
+
+\problembox{C2}{Get addicted $v_\varphi(\varphi)$. Express your answer in terms of $v$, $g$, $r$, $\alpha$ and $\varphi$.}{0.50}
+
+\problembox{C3}{Under what condition does the ball not come off the table at the moment when the lowest point of the ball reaches its edge? Write this condition using $v$, $g$, $r$ and $\alpha$. In all subsequent paragraphs, assume that this condition is met.}{0.20}
+
+\problembox{C4}{Determine the angle $\varphi_1$ at the moment the ball leaves the table. Express your answer in terms of $v$, $g$, $r$ and $\alpha$.}{0.50}
+
+\section*{Part D. Motion of the ball along the z axis (3.6 points)}
+
+In this part of the problem, you are asked to analyze the dependence of the velocity components of the ball center $v_z$ on the angle $\varphi$, as well as its angular rotation speed $\omega_r$.
+
+\problembox{D1}{Express the kinetic energy of the ball $E_k$ in terms of $m$, $v_\varphi$, $v_z$, $\omega_r$ and $r$.}{0.50}
+
+\problembox{D2}{Write down the law of conservation of mechanical energy for the ball. Combining it with the result of item $\mathrm{C2}$, show that the quantities $\omega_r$ and $v_z$ are related by the relation: $$1=\cfrac\{\omega^2_r\}\{A^2\}+\cfrac\{v^2_z\}\{B^2\}, $$где $A,B>0$ — постоянные коэффициенты. Определите $A$ и $B$. Ответы выразите через $v$, $r$ и $\alpha$.}{0.60}
+
+The solution to this problem is complicated by the fact that the angular velocity component $\omega_r$ cannot be obtained solely from the kinematic coupling equation, but it is possible to obtain an expression for its time derivative $\dot{\omega}_r$.
+
+\problembox{D3}{The angular acceleration vector $\vec{\varepsilon}$ of the ball can be represented as: $$\vec\{\varepsilon\}=\varepsilon_r\vec\{e\}_r+\varepsilon_\varphi\vec\{e\}_\varphi+\varepsilon_z\vec\{e\}_z. $$Используя уравнение динамики вращательного движения относительно центра шара, покажите, что $\varepsilon_r=0$. Используя полученное равенство, выразите $\dot{\omega}_r$ через $\dot{\varphi}$, $v_z$ и $r$.}{0.50}
+
+\problembox{D4}{Combining the results of points $\mathrm{D2}$ and $\mathrm{D3}$, you obtain dependencies $\omega_r(\varphi)$ and $v_z(\varphi)$. Express your answers using $v$, $\alpha$, $r$ and $\varphi$.}{1.20}
+
+\problembox{D5}{Let us consider the passage to the limit when the angle is $\alpha\to\pi/2$, i.e. the movement of the ball until it contacts the edge of the table occurs almost parallel to it. Determine the projection of the velocity $v_z$ of the center of the ball, as well as the projection of its angular velocity $\omega_y$ onto the axis $y$, directed vertically downward, at the moment the ball lifts off the table. Express your answers using $v$ and $r$. All numerical coefficients in the answer must be analytical, not approximate!}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3685}
+
+\end{document}

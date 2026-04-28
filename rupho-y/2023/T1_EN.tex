@@ -1,0 +1,118 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Silicon photomultiplier tube}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+With the development of modern technologies (including unmanned vehicles), LiDAR (Light Detection and Ranging) - devices for measuring the distance to objects in real time - are becoming in demand. The device sends laser pulses to an object and measures the time it takes for the scattered signal to be received by a photodetector. One of the promising types of such photodetectors, capable of quickly detecting short pulses ($<1~\text{}$) in a wide dynamic range, are SSTs (solid-state photomultipliers). TFU is formed by a matrix of parallel-connected cells. Each cell approximately represents a $p\text{-}n$ junction on silicon and a leaky dielectric layer deposited on it (quenching layer). Silicon is a semiconductor, and under normal conditions the electrons in it conduct almost no electrical current. However, when light hits the cell, the electron in the semiconductor can become conductive. Accelerating in a sufficiently strong electric field, this electron “knocks out” other electrons into a conducting state, new electrons are also accelerated, and so on - this process is called avalanche impact ionization. At the same time, a charge accumulates at the boundary of the damping layer, which screens the field in the multiplication region, and the avalanche is damped. Manufacturing a prototype TFC is a complex and expensive technological process, and direct numerical modeling of the electrophysics of a multi-cell device is difficult due to limitations in computing power, so it is useful to evaluate the characteristics of the designed device in advance. To simplify calculations, a model of the equivalent electrical circuit of the TFU has been developed, consisting of linear components (resistors, capacitances, inductances) - approximately describing the components of a real detector. Let's consider the equivalent electrical circuit of a TFU connected to a power source and a measuring device.
+
+Fig. 1: Equivalent circuit of the TFU as part of the reading circuit
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let us describe the components of the equivalent circuit and the allowed approximations: On the left side of the circuit there is a TFU matrix consisting of $N=5\cdot{10^4}$ parallel-connected cells and parasitic (intercell) capacitance $C_0$. Each cell is simply a series connection of a $p\text{-}n$ junction and a blanking layer. The $p\text{-}n$ junction in the range of voltages applied to it in reverse bias $\bigl[V_{br}{,}V_{op}\bigr]$ can be approximated by a constant capacitance $C_2$. The avalanche process causes the voltage at the $p\text{-}n$ junction to instantly drop to the breakdown voltage $V_{br}$. The time of this process is much less than the characteristic times of all other processes in the chain.  From the point of view of our circuit, the avalanche process when light hits cell number $i$ represents a short-term closure of switch $K_i$ and an instantaneous drop in voltage at the $p\text{-}n$ junction to $V_{br}=63~\text{V}$. The rest of the time the keys $K_i$ are open. The quenching layer has a constant capacitance $C_1$ and a leakage resistance $R=100~\text{MOhm}$. The parasitic inductance of the detector legs and connecting elements is $L=1~\text{H}$. The TFU is connected in series with a constant operating voltage source $V_{op}=65~\text{V}$. The measuring device is equivalent to a resistance load $r=50~\text{Ohm}$ and an ideal voltmeter (oscilloscope). For convenience of calculations, we introduce additional notations: $C_{cell}=\cfrac{C_1C_2}{C_1+C_2}$ - the capacitance of one cell $C_{det}=NC_{cell}+C_0=20~\text{pF}$ - the detector capacitance $k=C_1/C_2=5$ - the ratio of the capacitances of the quenching layer and $p-n$ of the transition $p=C_0/C_{det}=0{.}1$ - the ratio of the parasitic capacitance to the detector capacitance $V_{ov}=V_{op}-V_{br}=2~\text{V}$ - the value of the overvoltage on the device.
+
+For convenience of calculations, we introduce additional notation:
+
+\section*{Part A. Avalanche process (2.5 points)}
+
+Let the circuit be in a steady state, that is, no light pulses fell on it for a very long time and the switches $K$ were open.
+
+\problembox{A1}{For steady state, find: voltage $V_r$ on load $r$; voltage $V_0$ on each cell and parasitic capacitance $C_0$; voltage $V_1$ on the damping layers of each cell.}{0.40}
+
+Under steady state conditions, light hits $n$ cells simultaneously. Let us consider the state of the circuit after such a short time after the light hits that the charge flowing through the inductance can be neglected. You can also neglect the flow of charge through the leakage resistances $R$. Let $\Delta{V}$ be the change in voltage on the capacitor $C_0$ and on the cells upon completion of the avalanche process. Take the polarity of the voltage change to be the same as the polarity of the voltage in steady state.
+
+\problembox{A2}{Find: change in charge $\Delta{q}_0$ of capacitor $C_0$. Express your answer in terms of $C_0$ and $\Delta{V}$; changes in charges $\Delta{q}_{1a}$ and $\Delta{q}_{2a}$ of capacitors $C_1$ and $C_2$ respectively for each of the active cells. Express your answers in terms of $C_1$, $C_2$, $V_{ov}$ and $\Delta{V}$; changes in charges $\Delta{q}_{1p}$ and $\Delta{q}_{2p}$ of capacitors $C_1$ and $C_2$ respectively for each of the passive cells. Express your answers using $C_{cell}$ and $\Delta{V}$.}{0.80}
+
+\problembox{A3}{Find the change in voltage $\Delta{V}$ across the cells and capacitor $C_0$ upon completion of the avalanche process. Express your answer in general terms through $V_{ov}$, $n$, $N$, $C_1$, $C_2$, $C_0$.}{0.70}
+
+Due to thermal fluctuations, a noise signal may appear on the load, the amplitude of which can be estimated using the formula $V_{noise}=\sqrt{4k_BTrf}$, where $k_B=1{.}38\cdot{10^{-23}}~\text{J}/\text{K}$ is Boltzmann’s constant, $T$ is the load temperature (in Kelvin), $r$ is the load resistance, $f$ is the frequency bandwidth of the measuring device (oscilloscope).
+
+\problembox{A4}{Estimate the amplitude of thermal noise across the load $r=50~\text{Ohm}$ at room temperature if the oscilloscope bandwidth is $1~\text{Hz}=10^9~\text{Hz}$. Using the data from the problem statement and the formula you obtained from A3, find the numerical value of $\Delta{V}$ when light hits one cell.  Conclude whether the signal from one cell can be distinguished against the background of thermal noise of the load resistance.}{0.60}
+
+\section*{Part B. Multiplication factor (0.8 points)}
+
+One of the important characteristics of TFA is the multiplication coefficient $M$: $$M=\cfrac{Q}{e} ,$$ where $Q$ — ,    $r$    on       ,       in  .     in   .  $e=1{.}6\cdot{10^{-19}}~\text{Cl}$ is the elementary charge.
+
+\problembox{B1}{Find the multiplication coefficient $M$ for the TFU with the parameters from the problem statement. Express your answer in terms of $N$, $C_1$, $C_2$, $C_0$, $e$, $V_{ov}$ and give the numerical value.}{0.80}
+
+\section*{Part C. Photolight pulse (1.2 points)}
+
+\problembox{C1}{Let's consider a pulse recorded by an oscilloscope after light hits one cell. We will assume that the pulse duration is short enough to neglect the current flowing through the leakage resistance $R$, but large enough so that the avalanche process is completed and all switches $K_i$ are open. In this approximation, the circuit can be replaced by an equivalent series $RLC$ circuit. Specify its parameters.}{0.40}
+
+\problembox{C2}{Estimate the quality factor of the resulting $RLC$ circuit. Will oscillations occur in this circuit?}{0.30}
+
+\problembox{C3}{Qualitatively depict a graph of the load voltage versus time after light hits one of the cells. Initially, the circuit was in steady state. It is not necessary to indicate characteristic values.}{0.30}
+
+\problembox{C4}{Compare the maximum absolute value of the voltage on the load $|V_{max}|$ after light hits one of the cells and the value $|\Delta{V}|$ found earlier. Which of these quantities is greater? Circle the correct ratio on your answer sheet.}{0.20}
+
+\section*{Part D: Cell Recovery (1.5 points)}
+
+\problembox{D1}{Find the approximate dependence of the voltage on the cell's damping layer on time after light hits it (under initial steady-state conditions). Take advantage of the fact that in the conditions of this problem $\Delta{V}\ll{V_{ov}}$, $R\gg{r}$. Consider that a lot of time has passed and the voltage on the external load is almost zero. Express your answer in terms of $V_{ov}$, $R$, $C_1$, $C_2$, $t$.}{1.00}
+
+\problembox{D2}{Find the change in voltage $\Delta{V}$ across capacitor $C_0$ when light hits one ($n=1$) of the unrecovered cells, the voltage on the quenching layer of which was equal to $V_1<V_{ov}$. Consider that before light hit this cell, the voltage across all cells and stray capacitance corresponded to the steady state.  Express $\Delta{V}$ in terms of $V_{ov}$, $V_1$, $N$, $C_1$, $C_2$, $C_0$.}{0.50}
+
+\section*{Part E: Photodetector noise (2.0 points)}
+
+The main reason that makes it difficult to reliably register a useful signal in active laser scanning systems is the noise signal from background illumination (sunlight scattered from the object, headlights from oncoming cars, etc.). In this section of the problem, we will analyze the characteristics of the signal under the influence of uniform background illumination of the detector. Let the background illumination have such an intensity that the probability of each cell triggering during the time $dt$ is equal to $dt/ T$ and does not depend on the time before the previous triggering. $T$ is the characteristic time interval between cell activations. Let us take as 1 the amplitude of the photoresponse pulse (that is, the maximum value of the signal on the oscilloscope) when light hits a completely restored cell.  If the cell has not fully recovered, the amplitude of the photoresponse pulse depends on the time $t$ that has passed since the previous actuation of the cell, as ($\tau$ is the characteristic recovery time of the cell) $$ V=1-e^{-t/\tau}.$$
+
+\problembox{E1}{Let $p(t)$ be the probability that during time $t$ the cell did not fire even once. Find $p(t + dt)$, express the answer in terms of $p(t)$, $dt$, $T$. Consider $dt \ll T$.}{0.30}
+
+\problembox{E2}{Find the probability that the cell will not fire even once during time $t$. Express your answer in terms of $t$, $T$.}{0.20}
+
+\problembox{E3}{Let the cell fire at time $t = 0$. Find the probability that the next time it will work in the time interval from $t$ to $t + dt$.}{0.20}
+
+\problembox{E4}{Find the average amplitude of the photoresponse pulses $\mu$. Consider that different cells produce impulses independently of each other.}{0.40}
+
+\problembox{E5}{Find the standard deviation of the photoresponse pulse amplitude $\sigma$. Express your answer in terms of $\tau$, $T$. Note: The standard deviation can be calculated using the formula $\sigma=\sqrt{\mu(V^2)-\mu^2(V)}$, where $\mu(V^2)$ is the mean value of the amplitude squared, $\mu^2(V)$ is the squared mean amplitude value.}{0.60}
+
+Hint: The standard deviation can be calculated using the formula $\sigma=\sqrt{\mu(V^2)-\mu^2(V)}$, where $\mu(V^2)$ is the mean value of the amplitude squared, $\mu^2(V)$ is the squared mean amplitude value.
+
+Let's introduce the concept of signal-to-noise ratio ($SNR$, English signal-to-noise ratio), as the ratio of the average signal value to its standard deviation: $$SNR=\cfrac{\mu}{\sigma} $$  $SNR$       and  :   $SNR$, the better these characteristics are.
+
+\problembox{E6}{Find $SNR$ amplitudes of photoresponse pulses under the influence of uniform background illumination in the following cases: $\tau=0$; $\tau\gg{T}$; $\tau=T$.}{0.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3486}
+
+\end{document}

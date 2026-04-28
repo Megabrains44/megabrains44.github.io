@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Rotating medium</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Rotating medium</h1>
+<p class="camp">W26 (2026) — English translation</p>
+<p>Most physical systems are not conservative due to the presence of dissipative forces. An example of such forces is friction. In this problem we will consider examples of such systems with the simplest case of viscous friction.</p>
+<h2 class="part">Part A. Fixed medium (4 points)</h2>
+<p>Let a particle of mass $m$ move in a stationary medium in which it is acted upon by a viscous friction force $\vec{F}_\text{тр} = -\varepsilon m \vec{v}$, where $\vec v$ is the particle velocity. The free fall acceleration is $\vec g$, initially the particle was at the origin and had a speed of $\vec v_0$.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the trajectory of motion $\vec r (t)$ for this particle. Express the answer in vector form through $\vec{v}_0$, $\vec{g}$, $\varepsilon$ or express the dependences of the components of the vector $\vec{r}(t)$ in the Cartesian coordinate system through the components of the vectors $\vec{v}_0$, $\vec{g}$.</div><span class="pb-pts">1.30</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">How does the power of energy loss $P(t)$, which goes into heat, depend on time? Express your answer in terms of $\vec{v}_0$, $\vec{g}$, $\varepsilon$, $t$, $m$.</div><span class="pb-pts">0.70</span></div>
+<p>Let us now consider the motion of a particle in the absence of gravity, but now it is acted upon by a constant modulus rotating force $F_x = F_0 \cos(\omega t)$, $F_y = F_0 \sin(\omega t)$.</p>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the loss power $P$, which goes into heat, a long time after the power $t\gg1/\varepsilon$ is turned on. Express your answer using $F_0$, $\varepsilon$, $m$, $\omega$.</div><span class="pb-pts">2.00</span></div>
+<h2 class="part">Part B. Rotating medium (7 points)</h2>
+<p>A particle of mass $m$ is in a medium rotating with an angular velocity $\omega$ around a vertical axis $z$, the acceleration of gravity is $\vec g = -g\vec e_z$, the friction force is $\vec{F} = -\varepsilon m \vec v_\text{отн}$, where $\vec v_\text{отн}$ is the velocity of the particle relative to the medium. At the initial moment, the particle is motionless and located at the point with coordinates $(x_0,y_0,z_0) = (r_0,0,0)$.</p>
+<div class="figure"><img src="T2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the dependence $z(t)$. Express your answer in terms of $r_0$, $\varepsilon$, $g$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Express $\ddot{x}$ and $\ddot{y}$ in terms of $x$, $y$, $\dot x$, $\dot y$, $\varepsilon$ and $\omega$.</div><span class="pb-pts">1.00</span></div>
+<p>It is known that the equations you obtained have a solution of the form $$ \left(x(t),y(t)\right)=\left(A e^{at} \cos(\Omega t + \varphi_0), A e^{at} \sin(\Omega t+ \varphi_0)\right). $$Эти функции являются решениями при произвольных значениях $\varphi_0$, в частности при $\varphi_0 = 0$ и $\varphi_0 = \pi/2$ получим $$\left(x_1(t),y_1(t)\right)=\left(A e^{at} \cos(\Omega t), A e^{at} \sin(\Omega t)\right),$$ $$\left(x_2(t),y_2(t)\right)=\left(-A e^{at} \sin(\Omega t), A e^{at} \cos(\Omega t)\right).$$ При этом существует две пары возможных значений параметров $(a, \Omega)$.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Using the solution $(x_1, y_1)$, obtain a system of equations from which the possible values ​​of the constants $a$ and $\Omega$ can be determined.  The answer may also include $\varepsilon$, $\omega$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Solve the resulting system of equations and find suitable pairs of values ​​$(a_1, \Omega_1)$ and $(a_2, \Omega_2)$ if $a_2>a_1$. Express your answer using $\varepsilon$, $\omega$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Find approximate values ​​of these quantities in the cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.</div><span class="pb-pts">0.50</span></div>
+<p>In what follows we will use the notation $$A\vec{r}_{1i}=\left(Ae^{a_it} \cos(\Omega_i t), A e^{a_it} \sin(\Omega_i t)\right), \;A\vec{r}_{2i}=\left(-Ae^{a_it} \sin(\Omega_i t), A e^{a_it} \cos(\Omega_i t)\right).$$ Здесь индекс $i$ может принимать два значения $1, 2$, отвечающие двум возможным значениям $(a, \Omega)$.</p>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">An arbitrary solution to the system of equations has the form $$\left(x(t), y(t)\right) = A\vec r_{11}+B\vec r_{12}+C\vec r_{21}+D\vec r_{22}.$$ Используя начальные условия, приведенные во введении к части,  выразите $A$, $B$, $C$ и $D$ через $r_0$, $a_1$, $a_2$, $\Omega_1$ и $\Omega_2$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Draw qualitatively the trajectory of the particle in the $xy$ plane for cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Find the energy loss power $P$, which goes into heat, at the moment when the particle is at a point with coordinates $\vec r = (x,y,z)$ and moves with a speed $\vec v = (v_x,v_y,v_z)$.</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/4672">https://pho.rs/p/4672</a></p>
+</body>
+</html>

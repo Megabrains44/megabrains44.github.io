@@ -1,0 +1,157 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Maxwell's fisheye}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A stigmatic image is an image in which each point corresponds to exactly one point of the depicted object. The optical system that forms a stigmatic image of a three-dimensional region is called absolute. To form a stigmatic image, it is necessary that the rays emitted by each point of the optical object, after passing through the optical system, intersect exactly at one point. As a consequence, in such systems there are no phenomena of aberration and diffraction of light. An example of an absolute optical system is Maxwell's fisheye, which is an inhomogeneous spherically symmetrical medium. In this task, you will first describe the optical parameters of the Fisheye and then analyze the images obtained using the system.
+
+\section*{Part A: Fisheye Refractive Index (3.5 points)}
+
+First, let us consider a medium with an arbitrary dependence $n(r)$. Let us denote the center of the medium as point $O$, and the point of the ray trajectory as $A$, and $OA=r$. We also introduce the angle $\alpha$ between the wave vector of the beam $\vec{k}$ and the vector $\overrightarrow{OA}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{The curvature of a plane curve $\rho$ is the reciprocal of the radius of curvature of the trajectory. It can be found as follows: $$\rho=\frac{d\theta}{dl}$$ where $dl$ is an element of the curve length, and $d\theta$ is the rotation angle of the tangent to the curve. Express the curvature of the ray trajectory $\rho$ in terms of $r$, $\alpha$ and $\displaystyle\frac{d\alpha}{dr}$.}{0.30}
+
+\problembox{A2}{Consider an arbitrary ray trajectory. Let at ${OA}_0=r_0$ the refractive index $n(r_0)=n_0$ and the angle $\alpha(r_0)=\alpha_0$. Express the curvature of the ray path at $OA=r$ in terms of $n_0$, $r_0$, $\alpha_0$, $r$, $n(r)$ and $\displaystyle\frac{dn(r)}{dr}$.}{1.00}
+
+Maxwell's fisheye has the following property: any ray emitted at some point moves along a line of constant curvature.
+
+\problembox{A3}{Using the result of part $\textbf{A2}$, show that the curvature of the trajectory of any ray is constant provided: $$n(r)=\frac{n_1}{1+\left(\displaystyle\frac{r}{a}\right)^2}$$ where $n_1$ and $a$ are some positive constants. In all other points of part $\textbf{A}$ these constants are considered known. Express the curvature of the ray trajectory $\rho$ in terms of $a$, $r_0$ and $\alpha_0$.}{0.40}
+
+\problembox{A4}{What is the maximum possible curvature of the ray trajectory $\rho_{max}$ for arbitrary values of $r_0$ and $\alpha_0$? Express your answer in terms of $a$.}{0.20}
+
+\problembox{A5}{Show that the trajectories of all rays emitted from a point $A$ located at a distance $r_0$ from a point $O$ do indeed pass through one common point $B$. Also find the value of the distance $AB=L$. Express your answer in terms of $r_0$ and $a$.}{0.80}
+
+\problembox{A6}{From Fermat's principle it follows that the time of movement of all rays from the point $A$ to the point $B$ is the same. Find the time $T$ after the flash of the rays, after which they will be focused. Express your answer in terms of $n_1$, $r_0$, $a$ and the speed of light in vacuum $c$. \textit{Hint:} you may need the following integral: $$\int\frac{dx}{1+k\cos x}=\frac{2}{\sqrt{1-k^2}}\arctan\left(\sqrt{\frac{1-k}{1+k}}\tan\frac{x}{2}\right)+C\quad\text{for}\quad  -1<{k}<1 $$}{0.80}
+
+\section*{Part B: Fisheye Surface Sources (2.5 points)}
+
+In 1905, Robert Wood implemented the idea of a “Fish Eye”, which used a ball of radius $R$, the refractive index $n$ of the substance of which depended on the distance $r$ to the center of the ball according to the law: $$n(r)=\displaystyle\frac{2}{1+\left(\displaystyle\frac{r}{R}\right)^2} $$ In this part of the problem you are asked to examine images of point light sources on the surface of a Fish Eye in a system consisting of it and ideal converging lens.
+
+There are two point light sources located on the surface of the Fisheye. The figure shown on graph paper shows the positions of point light sources $S_1$ and $S_2$, their images in a system consisting of a “Fish-eye” and an ideal converging lens $S'_1$ and $S'_2$ (it is unknown whether the source and image with the same indices correspond to each other), as well as the main optical center of the lens $O$. The figure is shown to some scale, $L=10~\text{cm}$ is the length of the side of a square cell. The fisheye is located entirely behind the focal plane of the lens.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Find the fisheye radius $R$.}{1.20}
+
+\problembox{B2}{Does image $S'_1$ match source $S_1$? Justify your answer.}{0.10}
+
+\problembox{B3}{Find the focal length of the lens $F$.}{1.20}
+
+\section*{Part C: Fisheye Focal Length (2.0 points)}
+
+In this part of the problem you will describe the Fisheye as a lens in an optical system. In all points of this part of the problem, work in paraxial approximation. Consider a ball of radius $R$, the refractive index of the substance $n$ depends on the distance $r$ to its center according to the law: $$n(r)=\displaystyle\frac{n_1}{1+\left(\displaystyle\frac{r}{a}\right)^2}\qquad n_1\geq{1+\left(\displaystyle\frac{R}{a}\right)^2} $$ Recall that the optical center of an optical system (if it exists) is the point $O$ such that any ray passing through it is not refracted and not displaced. For the fisheye, such a point is its center. The focal length $F$ of an optical system is the distance between its optical center $O$ and the focus point $F'$ of a parallel beam of rays passing close to the optical center of the system, i.e.\ $F=OF'$.
+
+Let us consider a ray falling on a fisheye with an angle of incidence $\alpha\ll 1$. Let us denote the angles as shown in the figure:
+\begin{enumerate}
+    \item $\alpha$ -- angle of incidence of the beam;
+    \item $\theta$ -- beam refraction angle;
+    \item $\Delta\varphi$ -- angle of rotation of the beam velocity vector when moving inside the ``fisheye'';
+    \item $\Delta\alpha$ -- total angle of rotation of the beam velocity vector;
+    \item $\beta = \angle NOM$ -- angle characterizing the point at which the beam leaves the fisheye.
+\end{enumerate}
+
+Next, if the focus point $F'$ is to the left of point $O$, we will consider the ``Fisheye'' to be a diverging lens, and if it is to the right -- a converging lens.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{Find $\Delta{\varphi}$. Express your answer in terms of $\alpha$, $n_1$, $a$ and $R$.}{0.50}
+
+\problembox{C2}{$\Delta{\alpha}$ can be represented as $\Delta{\alpha}=k\alpha$. Find the proportionality coefficient $k$. Express your answer in terms of $n_1$, $R$ and $a$.}{0.30}
+
+\problembox{C3}{Express the fisheye focal length $F$ in terms of $R$ and $k$.}{0.20}
+
+\problembox{C4}{For fixed values of $n_1$, indicate whether the lens is converging or diverging for different values of the parameter $a$. Justify your answer. Plot graphs of the focal length $F(x)$ versus the parameter $x=\cfrac{R}{a}$ for all its possible values for $n_1=1.5;2.0;2.5;3.0;4.0$ and $R=5~\text{a.u.}$.}{1.00}
+
+\section*{Part D: Determining Fisheye Parameters (4.0 points)}
+
+In this part of the problem, the following optical system is analyzed: On the main optical axis of an ideal thin lens of a certain radius $r$ there is a center $O$ of a “Fisheye” of radius $R=15~\text{cm}$ at a distance $L=20~\text{cm}$ from the center of the lens $O'$. Behind the lens at the same distance $L$ from it there is a flat screen.  A very narrow laser beam of light located at a height $h$ above the main optical axis of the lens is directed at the fish eye parallel to the main optical axis of the lens, which, after passing through the optical system, hits the screen. We denote the focal lengths of the lens and the fisheye as $F$ and $F_0$, respectively. Recall that the focal length $F$ is an algebraic quantity that is positive for a converging lens and negative for a diverging lens.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+The graph shows two dependences of the coordinate $y$ of the laser beam on the screen on the height $h$ of the laser above the main optical axis. The blue (upper) dependence is obtained when the laser beam passes through the lens, and the red (lower) dependence is obtained if the laser beam falls directly on the screen, bypassing the lens. In the experiment with a lens of radius $r$, a jump in $y$ at $h_1=2.10~\text{cm}$ is observed, as well as a tendency of $y$ to infinity at $h_2=8.66~\text{cm}$. The derivative $\cfrac{dy}{dh}$ at zero in the lens experiment turned out to be equal to $k_1=8.62$. The lens was removed and the experiment was repeated, which is entirely reflected by the lower (red) dependence. The derivative $\displaystyle\frac{dy}{dh}$ at zero in the experiment without a lens turned out to be equal to $k_2=5.80$. In all points of this part of the problem, the designation of angles is the same as that introduced in part $\textbf{C}$, i.e. $\Delta{\alpha}=k\alpha$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+At points $\textbf{D1-D5}$ work in paraxial approximation.
+
+\problembox{D1}{Find the dependence of the coordinate $y$ of the beam on the screen on $h< h_1$ in an experiment with a lens. Express your answer in terms of $h$, $L$, $F_0$, $F$ and $R$.}{0.60}
+
+\problembox{D2}{Find the dependence of the coordinate $y$ of the beam on the screen on $h< h_1$ in the experiment without a lens. Express your answer in terms of $h$, $L$, $F_0$, $F$ and $R$.}{0.40}
+
+\problembox{D3}{Find, to the third significant digit, the values of the fisheye focal length $F_0$ and aspect ratio $k$.}{0.20}
+
+\problembox{D4}{Determine the numerical value of the lens radius $r$.}{0.30}
+
+\problembox{D5}{Find, to the third significant digit, the numerical value of the focal length of the lens $F$. Is this lens converging or diverging?}{0.30}
+
+The proportionality factor $k$ is not sufficient to determine the fisheye parameters $n_1$ and $a$. From the asymptotic tendency of $y$ to infinity at the value of $h=h_2$ we obtain the second equation connecting $n_1$ and $a$. To do this, it is necessary to accurately describe the trajectory of the ray in the Fisheye. The angle of incidence of the beam at the value $h=h_2$ will be denoted by $\alpha_0$.
+
+\problembox{D6}{Obtain an exact expression for $\Delta{\varphi}$. Express your answer in terms of $\alpha$, $n_1$, $a$, $R$.}{0.60}
+
+\problembox{D7}{Derive the equation defining $n_1$. The equation must contain only $n_1$, $\alpha_0$ and $k$.}{0.60}
+
+The equation you received cannot be solved on the calculator provided to you, since it cannot be entered entirely into it. However, angles $\theta$ and $\Delta{\varphi}$ can be found using a calculator.
+
+\problembox{D8}{Enter the values of angles $\theta(n_1)$ and $\Delta{\varphi}(n_1)$ into the table on the answer sheet, accurate to hundredths of a degree for the indicated values of $n_1$. Find, to the second significant digit, the values of $n_1$ and $a$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/504}
+
+\end{document}

@@ -1,0 +1,137 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Waves on the water 2.0}}
+\author{\normalsize Y26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\problembox{A0}{Attention! Damage to equipment may result in your score being canceled for this task!}{-10.00}
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\noindent\textbf{Equipment:}
+\begin{enumerate}
+    \item Container with water (water height is approximately $3.5$~cm)
+    \item Wave source connected to a power supply (plastic plate with a motor)
+    \item Laboratory power supply
+    \item Lamp for visual observation of waves
+    \item Laser module with power supply (2 pcs.)
+    \item Photodiode with a magnet
+    \item Oscilloscope
+    \item BNC-crocodile connection wire
+    \item Wooden ruler, 50~cm
+    \item Metal ruler, 30~cm
+    \item Aluminum screen with a magnetic layer
+    \item 2 tripods connected by a crossbar; a clamp is fixed in the middle of the crossbar
+    \item Tripod (1 pc.)
+    \item Coupling for attaching the tripod clamp (4 pcs.)
+    \item Clamp for a tripod (3 pcs.)
+\end{enumerate}
+
+\noindent\textbf{ATTENTION! Do not apply a voltage greater than 3~V to the motor! This will cause it to burn out!}
+
+
+In this problem, the wave properties of vibrations of the surface $z(x,y,t)$ of water are studied. Plastic strips oscillating at a distance $l$ from each other are used as in-phase monochromatic sources. In all parts of the problem, consider that: each of the stripes creates cylindrical waves around itself: \[ z(r,t)\approx \operatorname{Re} \left[\dfrac{A_0}{\sqrt r}e^{i(\omega t - kr)}\right],\] where $r$ is the distance to the strip, the frequency of oscillations of the strips and the water surface coincides with the speed of rotation of the motor and remains constant at a fixed voltage. At a distance $d$ from the sources, the axis $x$ is located. Let us denote the coordinates of the nodes as $x^{\text{min}}_n$, and the coordinates of the antinodes as $x^{\text{max}}_n$.
+
+For all parts of the problem, consider that:
+
+At a distance $d$ from the sources there is an axis $x$. Let us denote the coordinates of the nodes as $x^{\text{min}}_n$, and the coordinates of the antinodes as $x^{\text{max}}_n$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Assemble the following setup: Place the wave source so that the strips are submerged in water to a depth of about $2.5~cm$ and the line connecting the ends is parallel to the short wall of the container. Turn on the voltage source and set $U=2.0~\text{V}$. Look at the reflection of the lamp in the water and identify the area where the waves from the two sources interfere. Turn off the lamp and aim the first laser beam at that area. The beam must be reflected from the water surface at a distance $d \approx 12.5~cm$ from the wave sources. Lock $d$ and do not change it until the end of the experiment! Place the ruler in the tripod leg so that the beam reflected from the surface of the water falls on it. Direct the second laser beam so that it hits the motor eccentric and periodically closes as it rotates. Position the photodiode on the screen so that it is exposed to the second laser beam. To parallel offset laser 1, you can gently press the tripod with it against the edge of the container. To change the distance between the strips, loosen the wing nuts, move them (do not remove the entire structure from the tab) and tighten it back to avoid loosening during work.
+
+To change the distance between the strips, loosen the wing nuts, move them (do not remove the entire structure from the tab) and tighten it back to avoid loosening during work.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\section*{Part A. Young's interference scheme (4.5 points)}
+
+\problembox{A1}{Write down the formula for the difference in coordinates $\Delta x = x^\text{min}_{n+1} - x^\text{min}_{n} = x^\text{max}_{n+1} - x^\text{max}_{n}$ of nodes/antinodes located on the straight line $OX$, in the approximation $x_n \ll l, d$. Express your answer in terms of $l$, $d$ and $\lambda$.}{1.00}
+
+Further, throughout the problem, the resulting formula can be used in the range $x\in[-l/2, l/2]$.
+
+\problembox{A2}{Measure and record the $d$ value used as accurately as possible.}{0.10}
+
+\problembox{A3}{Write down the voltage $U_0$ on the motor corresponding to the frequency $f_0 = (17.5 \pm 0.5) ~Hz$.}{0.10}
+
+\problembox{A4}{Draw how the amplitude of oscillation of laser beam 1 changes on a ruler when the coordinate $x$ changes. Describe, using diagrams, drawings and formulas, a method that allows you to experimentally determine $\Delta x$ with good accuracy. Circle on your answer sheet what you will measure the distance between (nodes/antinodes).}{1.00}
+
+\problembox{A5}{Measure the dependence of $\Delta x$ on $l$, at a fixed frequency of the motor $f_0$ (at least 5 points).}{1.00}
+
+\problembox{A6}{Plot a linearized graph of $\Delta x(l)$.}{0.80}
+
+\problembox{A7}{Determine the wavelength $\lambda(f_0)$ and estimate its error.}{0.50}
+
+\section*{Part B. Dispersion relation for water waves (5.5 points)}
+
+For waves on the water surface, the dispersion relation holds: \[f=\sqrt{\alpha/\lambda+\beta/\lambda^3} \tag{1},\] where $\alpha>0$ and $\beta > 0$.
+
+\[f=\sqrt{\alpha/\lambda+\beta/\lambda^3} \tag{1},\]
+
+where $\alpha>0$ and $\beta > 0$.
+
+\problembox{B1}{Construct a qualitative graph of the dependence of $f$ on $\lambda$, described by formula (1).}{0.30}
+
+By changing the voltage on the motor, it is possible to determine the wavelength $\lambda$ for different frequencies $f$. Also use $d \approx 12.5~cm$ for this part. Set the distance $l$ between sources to the maximum possible.
+
+\problembox{B2}{Measure and record the value of $l$.}{0.10}
+
+\problembox{B3}{Measure the dependence of $\Delta x$ on $f$ in the range $f\in[6.0, 24.0]~Hz$ (at least 13 points).}{3.00}
+
+\problembox{B4}{Plot a linearized graph of $\Delta x$ versus $f$ .}{1.30}
+
+\problembox{B5}{Determine the coefficients $\alpha$, $\beta$ and estimate their error.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/5011}
+
+\end{document}

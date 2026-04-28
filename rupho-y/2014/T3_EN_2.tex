@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Dove prism}}
+\author{\normalsize Y14 (2014) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In an isosceles rectangular glass prism, the base $$ and side face $$ are smooth, and the face $$ is matte. The base $$ of the prism stands on the newspaper. The refractive index of the prism is $n = 1.6$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{What part of the $\alpha$ text is seen by an observer looking at the text through the edge $$?}{0}
+
+The following questions consider a beam of rays incident on a prism parallel to the face $$. To reverse (invert) an image, a Dove prism is often used, which is a truncated rectangular isosceles prism.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A2}{Determine the height $h$ of the prism if the length of its base is $L = 10~\text{cm}$. The prism should wrap around a beam of maximum cross-section and not contain “non-functioning” glass.}{0}
+
+\problembox{A3}{At what values of the refractive index $n$ will no part of the light escape from the face $$?}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3966}
+
+\end{document}

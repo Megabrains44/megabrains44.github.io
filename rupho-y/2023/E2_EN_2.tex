@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thermal expansion of string}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Guitar string is made from special hardened high carbon steel (sometimes called "music wire") to provide the required high tensile strength. This work is devoted to studying the properties of such a string and their changes associated with changes in its temperature.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Experimental setup components.}
+\end{figure}
+
+\textbf{Equipment:}
+\begin{enumerate}
+    \item Installation with a tensioned string and an electromagnetic sensor (a. string fastenings, b. electromagnetic sensor, c. tensioner cylinder, d. bearings)
+    \item Multimeter --- 2 pcs (red, black)
+    \item Alternating current (AC) generator
+    \item DC power source
+    \item 1 $\Omega$ resistor
+    \item Tape measure
+    \item Micrometer
+    \item BNC-crocodile wire --- 1 pc
+    \item Banana-crocodile wire --- 6 pcs
+    \item Crocodile-crocodile wire --- 1 pc
+    \item Masking tape
+\end{enumerate}
+
+The length of the string, and therefore its tension, can be changed using a metal screw located at the bottom of the installation body. As it rotates, the metal cylinder attached to it moves vertically, further stretching the string. The string is considered to be in its \textit{initial state} if the cylinder does not touch the string. In the initial state, the string is already tensioned. The additional tension created during the work is associated with additional elongation of the string.
+
+The following quantities can be used in all parts of the problem:
+\begin{itemize}
+    \item Length of the string between the attachment points in the initial state $L = (68.0 \pm 0.2)$ cm;
+    \item Pitch of the screw stretching the string: $0.70$ mm/rev;
+    \item Linear density of the string: $\Lambda = 0.778$ g/m;
+    \item Temperature coefficient of resistance: $\beta = 2.0 \cdot 10^{-3}$ K$^{-1}$.
+\end{itemize}
+Unless otherwise stated, "string length" refers to the portion located between the attachment points.
+
+\section*{Part A: Measuring Young's modulus}
+
+The first step to finding Young's modulus is to relate the vertical displacement of the tensioner cylinder to the additional elongation of the string.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Schematic illustration of the installation (side view).}
+\end{figure}
+
+\problembox{A1}{Let the vertical displacement of the point on the string located above the cylinder be $\Delta h$. Using the notation from Figure 2, obtain an approximate expression for the additional elongation of the string $\Delta L$, assuming $\Delta h^2, (h_1 - h_2)^2 \ll a_1^2, a_2^2$.}{0.50}
+
+For calculations, use: $h_1 = 28$ mm, $h_2 = 16$ mm, $a_1 = a_2 = 40$ mm.
+
+\problembox{A2}{Using a micrometer, measure the diameter $d$ of the tensioned string. Estimate the error of the obtained value.}{0.40}
+
+\problembox{A3}{Measure the length $L_w$ of the working part of the string (between the left mount and the left bearing). Estimate the error of the obtained value.}{0.20}
+
+Let $E$ be the Young's modulus, $l$ be the unstretched length of the string between points, and $L'$ be the length in a tense state (in the initial state, $L' = L$).
+
+\problembox{A4}{Obtain an expression for the frequency of the $n$-th harmonic by expressing it in terms of $E, L', l, L_w, d, \Lambda, n$.}{0.50}
+
+Turn on the generator (sine wave). Set the voltage amplitude to 20 V (reduce if needed). Connect the generator to the sensor. Return the string to its initial state.
+
+\problembox{A5}{Find the first harmonic resonance frequency by adjusting the generator. Record the frequency and estimate its error.}{0.30}
+
+Rotate the screw until the cylinder just touches the string without stretching it.
+
+\problembox{A6}{Gradually stretch the string by rotating the screw. Measure the first harmonic frequency at different screw positions (at least 8 points).}{1.20}
+
+\textit{Notes: Do not exceed 10 revolutions to keep the cylinder on the screw axis. Use masking tape for markings if necessary.}
+
+\problembox{A7}{Construct a linearized graph of the first harmonic frequency $f$ versus the additional extension $\Delta L$. Find the Young's modulus $E$ and the relative elongation in the initial state $\varepsilon_0 = (L-l)/l$. Estimate errors.}{1.30}
+
+\section*{Part B: Thermal Expansion}
+
+Let $l, d, R$ be the unstretched length, diameter, and resistance, with $l_0, d_0, R_0$ being values at room temperature $T_0$. For small temperature changes:
+$$ l(T) = l_0 (1+\alpha(T-T_0)), \quad d(T) = d_0 (1+\alpha(T-T_0)), \quad R(T) = R_0 (1+\beta(T-T_0)). $$
+$\alpha$ is the coefficient of linear thermal expansion. In this part, you must determine $\alpha$.
+
+\textit{Notes: Do not exceed 3 V on the string. Source readings may be inaccurate. Do not use multimeters in ammeter mode. The 1 $\Omega$ resistor will heat up significantly at ~1 A.}
+
+Return the string to its initial state.
+
+\problembox{B1}{Design and describe a circuit to measure the string's resistance while passing DC current through it.}{0.70}
+
+\problembox{B2}{Gradually increase the current and record the dependence of the first harmonic frequency $f$ on the resistance $R$ (at least 10 points).}{2.50}
+
+\problembox{B3}{Find $R_0$, the resistance of the string at room temperature. Estimate the error.}{0.50}
+
+\problembox{B4}{Obtain the theoretical dependence $f(R)$.}{0.70}
+
+\problembox{B5}{Plot a linearized graph of $f$ versus $R$. From the graph, determine the value of $\alpha$ and its error.}{1.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3488}
+
+\end{document}

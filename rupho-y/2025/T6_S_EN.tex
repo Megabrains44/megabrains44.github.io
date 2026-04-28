@@ -1,0 +1,242 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Electron tube --- Solution}}
+\author{\normalsize Y25 (2025) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Let the electron begin to move with zero initial speed from the point $C$. Show that in this case $x(t) = 0$.}{0.30}
+
+At the initial moment, the electron acquires speed along the $Oy$ axis, along the electric field. This leads to the emergence of a magnetic force along $Oz$ and the appearance of a velocity component $v_z$. The magnetic force associated with $v_z$ is parallel to the $Oy$ axis. Thus, in the process of further movement, the forces acting on the electron lie in the $Oyz$ plane, from which follows $x(t) = 0$.
+
+\end{solcard}
+
+\begin{solcard}{A2}{For the described case, write down Newton’s second law in projection on the $y$, $z$ axes, from which you will obtain expressions for $\ddot{y}$, $\ddot{z}$. Expressions may contain $\dot{y}$, $\dot{z}$, $y$, $z$, $U$, $I$, as well as geometric characteristics of the system.}{0.50}
+
+In a flat configuration, the electric field is uniform and equal to $$E_y = \frac{\varphi_К - \varphi_А}{h} = -\frac{U}{h}.$$Magnetic field проwater проwater for/at движении electronа в плоскости $Oyz$ vaporаллельно $Ox$ equals (for example, from теоремы о циркуляции) $$B_x = -\frac{\mu_0 I}{2\pi(y+r_0)}.$$ Taking into account отрицательности signа chargeа electronа we get уравнения движения: $$\begin{cases} m \ddot{y} = -eE_y - e\dot{z}B_x \\ m\ddot{z} = e\dot{y}B_x \end{cases}$$Substituting expressions for the fields, we get the answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\begin{cases} \ddot{y} = \dfrac{e U}{m h} + \dfrac{\mu_0 e I}{2\pi m (y+r_0)}\dot{z} \qquad  (1)\\ \ddot{z} = -\dfrac{\mu_0 e I}{2 \pi m (y+r_0)}\dot{y} \qquad \qquad \ \, (2) \end{cases}$$
+\end{solcard}
+
+\begin{solcard}{A3}{Obtain a differential equation for $y$ of the form $$\ddot{y} = \alpha - \beta \frac{\ln \left(1+\frac{y}{r_0}\right)}{1+\frac{y}{r_0}},$$ where $\alpha$, $\beta$ – константы. Find $\alpha$, $\beta$. The answer may contain all previously entered quantities and constants.}{1.00}
+
+Multiplying the second equation by $dt$, we arrive at the relation $$d\dot{z} = -\dfrac{\mu_0 e I}{2 \pi m (y+r_0)}dy.$$Integrating: $$\dot{z} = -\dfrac{\mu_0 e I}{2 \pi m} \int \frac{dy'}{y'+r_0} = -\dfrac{\mu_0 e I}{2 \pi m} \, \ln\left(1+\frac{y}{r_0}\right)+C.$$C учётом начальных условий $\dot{z} = 0$ for/at $y = 0$, then $C = 0$, and $$\dot{z} = -\dfrac{\mu_0 e I}{2 \pi m} \, \ln\left(1+\frac{y}{r_0}\right).$$ Постановка поrayенного выражения в $(1)$ gives $$\ddot{y} = \dfrac{e U}{m h} - \frac{1}{r_0}\left( \dfrac{\mu_0 e I}{2\pi m}\right)^2 \, \dfrac{\ln\left(1+\frac{y}{r_0}\right)}{1+\frac{y}{r_0}}. \tag{3}$$From here we get the answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\alpha = \frac{eU}{mh} \\ \ \\ \beta = \frac{1}{r_0}\left( \dfrac{\mu_0 e I}{2\pi m}\right)^2$$
+\end{solcard}
+
+\begin{solcard}{A4}{Find the maximum value of the heater current $I_{кр}$ at which the electron in question reaches the anode.}{0.80}
+
+After multiplying by $\dot{y}$, the equation $(3)$ is transformed to the form $$\frac{\dot{y}^2}{2} = \int \left(\dfrac{e U}{m h} - \frac{1}{r_0}\left( \dfrac{\mu_0 e I}{2\pi m}\right)^2 \, \dfrac{\ln\left(1+\frac{y}{r_0}\right)}{1+\frac{y}{r_0}}\right) dy.$$ Интеграл во втором слагаемом: $$\int \dfrac{\ln\left(1+\frac{y}{r_0}\right)}{1+\frac{y}{r_0}} dy = r_0 \int \ln\left(1+\frac{y}{r_0}\right)d\left(\ln\left(1+\frac{y}{r_0}\right)\right) = \frac{r_0}{2} \ln^2\left(1+\frac{y}{r_0}\right) + C.$$ Taking into account начальных условий $\dot{y} = 0$ for/at $y = 0$, then $C = 0$ , and $$\frac{\dot{y}^2}{2} = \frac{eUy}{mh} - \frac{1}{2} \left( \dfrac{\mu_0 e I}{2\pi m}\right)^2 \ln^2\left(1+\frac{y}{r_0}\right).$$ Condition достижения electronом анода: $$\dot{y}(h) = 0, \\ 0 = \frac{eU}{m} - \frac{1}{2} \left(\dfrac{\mu_0 e I_{кр}}{2\pi m}\right)^2 \ln^2\left(1+\frac{h}{r_0}\right).$$Hence we get answer for $I_{cr}$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$I_{кр} = \sqrt{\frac{8 U m}{e}} \frac{\pi}{\mu_0} \frac{1}{\ln\left(1+\frac{h}{r_0}\right)}$$
+\end{solcard}
+
+\begin{solcard}{A5}{Let the electron start moving with zero initial speed from the point $C$ in the cylindrical lamp configuration. In this case, find the maximum value of the heater current $I_{кр}$ at which the electron reaches the anode.}{1.20}
+
+Similar to the previous situation, it is shown that the movement will occur in the $Oyz$ plane if the axes are introduced in the same way as in the figure for a plane configuration.
+
+
+Method 1
+
+
+We will consider the movement in coordinates $(r, z)$, where $r$ is the distance from the system axis to the point. Let's calculate the electric field using Gauss's theorem. Due to the absence of volumetric charges $$E_r  \cdot r = \mbox{const}. \quad \Rightarrow \quad E_r= \frac{A}{r}, \\ U = -\int \limits_{r_0}^{R_0} E_r dr = -A \ln\left(\frac{R_0}{r_0}\right), \\ E_r = -\frac{U}{r \ln \left(\frac{R_0}{r_0}\right)}.$$ Magnetic field: $$B_x = -\frac{\mu_0 I}{2 \pi r}.$$ Then уравнения движения выглядят следующим обсом: $$\begin{cases} \ddot{r} = -\dfrac{e U}{m r \ln \left(\frac{R_0}{r_0}\right)} + \dfrac{\mu_0 e I}{2\pi m (y+r_0)}\dot{z} \\ \ddot{z} = -\dfrac{\mu_0 e I}{2 \pi m (y+r_0)}\dot{r} \end{cases}$$ Аналогичным обсом после интегрирования второго уравнения, подстановки в первое and повторного интегрирования we get equation на $I_{cr}$: $$\frac{e U}{m} -  \frac{1}{2} \left(\frac{\mu_0 e I_{кр}}{2 \pi m} \right)^2 \ln^2 \left(\frac{R_0}{r_0}\right).$$ From here we get the answer.
+
+
+Method 2
+
+
+Let's consider the equations of motion from point A2, without substituting the specific values of $E_y$ and $B_x$: $$\begin{cases} \ddot{y} = -\dfrac{e}{m} \left(E_y(y) + \dot{z}B_x(y) \right) \\ \ddot{z} = \dfrac{e}{m} \dot{y}B_x(y) \end{cases}.$$ Taking into account начальных условий from второго уравнения we get: $$\dot{z} = \frac{e}{m} \int \limits_0^y B_x(\xi) d\xi.$$Substituting в первое equation: $$\ddot{y} = -\frac{e}{m}\left(E_y(y) + \frac{e}{m} B_x(y) \int \limits_0^y B_x(\xi) d\xi\right).$$Домножим на $\dot{y}$ and проинтегрируем taking into account начальных условий: $$\frac{\dot{y}^2}{2} = -\frac{e}{m} \int \limits_0^y E_y(\eta) d\eta - \frac{e^2}{m^2} \int \limits_0^y B_x(\eta) d\eta \int \limits_0^\eta B_x(\xi) d\xi = \\ = \frac{e}{m}\left(\varphi(y) - \varphi(0)\right) - \frac{e^2}{m^2} \int \limits_0^y B_x(\eta) d\eta \int \limits_0^\eta B_x(\xi) d\xi.$⟦1 0⟧$\frac{e}{m} \int \limits_0^h B_x(\eta) d\eta \int \limits_0^\eta B_x(\xi) d\xi = \varphi(y) - \varphi(0) = U.$$Thus, condition не зависит от расlimitения поля $E_y$, но только от сности potentialов $U$. Since расlimitение магнитного поля в cylinderandческой and в плоской системе совпадают, то and answer for $I_{cr}$ (с точностью до подстановки $R_0 = r_0 + h$) remains the same.
+
+
+Note. It can be shown that $$\int \limits_0^h B_x(\eta) d\eta \int \limits_0^\eta B_x(\xi) d\xi = \frac{1}{2} \left(\int\limits_0^h B_x(\xi)d\xi)\right)^2.$$ Thus, condition на достижение electronом анода: $$\int\limits_0^h B_x(\xi)d\xi = \sqrt{\frac{2mU}{e}}.$$ Интересный факт заключается в том, что найденное condition зависит только от значений оlimitённых интегралов электрического and магнитного поля по $y$, but not from a specific field distribution.
+
+
+It can be shown that
+
+
+$$\int \limits_0^h B_x(\eta) d\eta \int \limits_0^\eta B_x(\xi) d\xi = \frac{1}{2} \left(\int\limits_0^h B_x(\xi)d\xi)\right)^2.$$
+
+
+Thus, the condition for the electron to reach the anode is:
+
+
+$$\int\limits_0^h B_x(\xi)d\xi = \sqrt{\frac{2mU}{e}}.$$
+
+
+An interesting fact is that the found condition depends only on the values ​​of certain integrals of the electric and magnetic field over $y$, but not on the specific field distribution.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$I_{кр} = \sqrt{\frac{8 U m}{e}} \frac{\pi}{\mu_0} \frac{1}{\ln\left(\frac{R_0}{r_0}\right)}$$
+\end{solcard}
+
+\begin{solcard}{B1}{Derive a differential equation relating $\varphi(y)$ and $\rho(y)$.}{0.30}
+
+Method 1
+
+
+Let's write Gauss's theorem for two planes $y$ and $y + dy$: $$\left(E(y+dy) - E(y)\right)S = \frac{\rho(y)}{\varepsilon_0} S dy, \\ E'(y) = \frac{\rho(y)}{\varepsilon_0}.$$Taking into account связи $$E(y) = -\varphi'(y)$$ we get the answer.
+
+
+Method 2
+
+
+Gauss's theorem in differential form: $$\dfrac{\rho}{\varepsilon_0} = \operatorname{div} \vec{E}.$$Relation $E$ and $\varphi$: $$E =-\operatorname{grad} \varphi.$$Then $$\dfrac{\rho}{\varepsilon_0} = -\operatorname{div} \operatorname{grad} \varphi = -\Delta \varphi,$$here $\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}$ is the Laplace operator (Laplacian), the equation itself is called the Laplace equation. In the one-dimensional case this transforms to the form
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\varphi''(y) = -\frac{\rho(y)}{\varepsilon_0}$$
+\end{solcard}
+
+\begin{solcard}{B2}{Let's assume that $U > 0$. Find the speed of the electron $v(y)$ emitted from the cathode at a distance $y$ from the cathode. Express your answer using $\varphi(y)$.}{0.20}
+
+Let us write down the law of conservation of energy for the electron: $$\frac{mv^2(y)}{2} - e\varphi(y) = 0.$$From this follows the answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[v=\sqrt{\dfrac{2e\varphi(y)}{m}}\]
+\end{solcard}
+
+\begin{solcard}{B3}{Express the total current $I$ flowing through the section $y = \mbox{const}$. Express your answer in terms of $\rho(y)$, $v(y)$ and the geometric characteristics of the system. Consider the direction of current from the anode to the cathode to be positive.}{0.30}
+
+Taking into account the indicated positive direction of current from the anode to the cathode
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$I = -\rho(y)v(y)S$$
+\end{solcard}
+
+\begin{solcard}{B4}{Obtain a differential equation on $\varphi(y)$ containing the function $\varphi(y)$ and its derivatives, as well as $I$ and the geometric characteristics of the system.}{0.40}
+
+Taking into account the previous points: $$\rho(y) = -\frac{I}{S v(y)} = -\frac{I}{S} \sqrt{\frac{m}{2e\varphi(y)}}.$$Постановка $\rho(y)$ into the equation of point B1 leads to the answer
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\varphi''(y) = \dfrac{I}{\varepsilon_0S}\sqrt{\dfrac{m}{2e\varphi(y)}}$$
+\end{solcard}
+
+\begin{solcard}{B5}{Get addicted $\varphi(y)$. Express your answer in terms of $I$ and the geometric characteristics of the system.}{0.80}
+
+Multiplying both sides of the equation of item B4 by $\varphi'(y)$ and integrating taking into account $\varphi'(0) = 0$, we arrive at the equation $$(\varphi')^2 = \dfrac{I}{\varepsilon_0S}\sqrt{\dfrac{8m}{e}} \sqrt{\varphi}.$$ Переменные в нём сделяются: $$\varphi^{-1/4}d\varphi = \left(\dfrac{I}{\varepsilon_0S}\right)^{1/2}\left(\dfrac{8m}{e}\right)^{1/4}dy.$$ For/Atменяя начальное condition $\varphi(0) = 0$, we get $$\dfrac{4}{3}\varphi^{3/4} = \left(\dfrac{I}{\varepsilon_0S}\right)^{1/2}\left(\dfrac{8m}{e}\right)^{1/4}y.$$ Transforming the resulting expression, we arrive at the answer.
+
+
+$$(\varphi')^2 = \dfrac{I}{\varepsilon_0S}\sqrt{\dfrac{8m}{e}} \sqrt{\varphi}.$$
+
+
+The variables in it are separated:
+
+
+$$\varphi^{-1/4}d\varphi = \left(\dfrac{I}{\varepsilon_0S}\right)^{1/2}\left(\dfrac{8m}{e}\right)^{1/4}dy.$$
+
+
+Applying the initial condition $\varphi(0) = 0$, we obtain
+
+
+$$\dfrac{4}{3}\varphi^{3/4} = \left(\dfrac{I}{\varepsilon_0S}\right)^{1/2}\left(\dfrac{8m}{e}\right)^{1/4}y.$$
+
+
+Transforming the resulting expression, we arrive at the answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varphi(y) =\left(\dfrac{3y}{4}\right) ^{4/3} \left(\dfrac{I}{\varepsilon_0S}\right)^{2/3}\left(\dfrac{8m}{e}\right)^{1/3}\]
+\end{solcard}
+
+\begin{solcard}{B6}{The current-voltage characteristic of the lamp at $U > 0$ can be expressed by the function $$I(U) = GU^\gamma.$$ Determine coefficientы $G$, $\gamma$. Answer выtimesandте via/through геометрические характеристики системы. The quantity $G$ is called the perveance of the lamp.}{0.80}
+
+The value $G$ is called the lamp perveance.
+
+
+The voltage across the lamp is equal to the potential at point $y = h$: $$U = \varphi(h) = \left(\dfrac{3h}{4}\right)^{4/3} \left(\dfrac{I}{\varepsilon_0S}\right)^{2/3}\left(\dfrac{8m}{e}\right)^{1/3}.$$Let us express current: $$I(U) =\varepsilon_0 S \left(\dfrac{4}{3h}\right)^{2}\left(\dfrac{e}{8m}\right)^{1/2} U^{3/2}.$$Then
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[G = \varepsilon_0 S  \left(\dfrac{4}{3h}\right)^{2}\left(\dfrac{e}{8m}\right)^{1/2}\]\[\gamma = \dfrac{3}{2}\]
+\end{solcard}
+
+\begin{solcard}{B7}{Get addicted $\rho(y)$. Express your answer in terms of $I$ and the geometric characteristics of the system.}{0.50}
+
+Using the results of points B1 or B4, we express $\rho(y)$ in terms of $\varphi(y)$: $$\rho(y)=-\varepsilon_0\cdot \varphi''(y) = -\frac{I}{S} \sqrt{\frac{m}{2e\varphi(y)}}.$$Substituting найденное $\varphi(y)$, we arrive at the answer
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\rho(y) =- \left(\dfrac{I}{3S}\right)^{2/3}\left(\dfrac{2m\varepsilon_0}{e}\right)^{1/3}\cdot y^{-2/3}$$
+\end{solcard}
+
+\begin{solcard}{B8}{Obtain the current-voltage characteristic of lamp $I(U)$ at $U < 0$.}{0.20}
+
+At $U<0$ the field is directed along the $y$ axis, and the electrons emitted from the cathode do not move towards the anode, which means $I=0$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$I(U) = 0$$
+\end{solcard}
+
+\begin{solcard}{B9}{Obtain a differential equation for $\varphi(r)$ containing the function $\varphi(r)$ and its derivatives, as well as the total current in the lamp $I$ and the geometric characteristics of the system.}{0.60}
+
+The current flowing in a cylindrical configuration is $$I = -2\pi r L \rho(r) v(r).$$Taking into account выражения for скорости we get $$\rho(r) = -\frac{I}{2\pi r L} \sqrt{\frac{m}{2 e \varphi(r)}}$$
+
+
+Method 1
+
+
+Consider cylindrical surfaces of length $L$ and radii $r$ and $r + dr$. Gauss's theorem in this case will be written in the form: $$2\pi L \left(E(r+dr)(r+dr) - E(r)r\right) = \frac{2\pi L r \rho(r) dr}{\varepsilon_0}, \\ \frac{1}{r} \frac{d}{dr}\left(rE(r)\right) = \frac{\rho(r)}{\varepsilon_0} = -\frac{I}{2\pi r L \varepsilon_0} \sqrt{\frac{m}{2 e \varphi(r)}}.$$Using $E(r) = -\varphi(r)$, we arrive at the equation for the potential.
+
+
+Method 2
+
+
+In method 2 of point B1, $$\Delta \varphi = -\frac{\rho}{\varepsilon_0}.$$Оператора Лапласа в cylinderandческих координатах: $$\Delta \varphi = \frac{1}{r} \frac{\partial}{\partial r} \left(r \frac{\partial \varphi}{\partial r}\right) + \frac{1}{r^2} \frac{\partial^2 \varphi}{\partial \theta^2} + \frac{\partial^2 \varphi}{\partial z^2}.$$В силу осевой симметрии системы and $E_z = 0$ последние два слагаемых equal нулю. После подстановки $\rho$ via/through $I$ was obtained, we get the answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$r\varphi''(r)+\varphi'(r) = \frac{I}{2\pi L \varepsilon_0} \sqrt{\frac{m}{2 e \varphi(r)}}$$
+\end{solcard}
+
+\begin{solcard}{C1}{Kirchhoff's law for the RLC circuit leads to a differential equation of the form $$\ddot{U}_С + \zeta(1+\eta U_С^2)\dot{U}_С+\chi U_С = 0.$$Express $\zeta$, $\eta$, $\chi$ via/through $R$, $L$, $C$, $M$, $\lambda$, $\mu$.}{0.90}
+
+The current in the RLC circuit is related to the capacitor voltage: $$I = C\dot{U}_С.$$Then for RLC-контура записывается закон Кирхгофа: $$M \frac{dI_А}{dt} = U_С + RC\dot{U}_С + LC \ddot{U}_С \tag{1}$$(с точностью до signа $M$). Using expression for $I_А(U_С)$, we get $$\frac{dI_А}{dt} = \left(\lambda - 3\mu U_С^2\right)\dot{U}_С. \tag{2}$$После подстановки $(2)$ в $(1)$ and сокращения на $LC$, for/atходим к уравнению $$\ddot{U}_С + \left(\frac{R}{L} - \frac{\lambda M}{LC} +\frac{3\mu M}{LC}U_С^2 \right) \dot{U}_С + \frac{U_С}{LC} = 0.$$Comparing it with the data in the condition, we get the answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\zeta = \frac{R}{L} - \frac{\lambda M}{LC} \\ \ \\ \eta = \frac{3\mu M}{RC - \lambda M} \\ \ \\\chi = \frac{1}{LC}$$
+\end{solcard}
+
+\begin{solcard}{C2}{Let $U_С$ deviate from zero by a small amount. Obtain a condition for the parameters $\zeta$, $\eta$, $\chi$ under which the oscillations build up. Also express the resulting condition in terms of $R$, $L$, $C$, $M$, $\lambda$, $\mu$.}{1.20}
+
+For small $U_С$ we can neglect the $\sim U_С^2$ term in the equation and write it in the form: $$\ddot{U}_С + \zeta\dot{U}_С+\chi U_С = 0.$$
+
+
+Method 1 (mathematical)
+
+
+Let's introduce the notation: $$\zeta = 2\gamma, \qquad \qquad \chi = \omega_0^2.$$ Как известно, solution такого дифференциального уравнения имеет сный вид в зависимости от parameterов $\gamma$, $\omega_0$. $\gamma^2 < \omega_0^2$ $$U_С(t) = e^{-\gamma t}\left(A \cos\left(\sqrt{\omega_0^2 - \gamma^2} \cdot t \right) + B \sin \left(\sqrt{\omega_0^2 - \gamma^2} \cdot t \right)\right).$$ $\gamma^2 = \omega_0^2$ $$U_С(t) = e^{-\gamma t}(A + Bt).$$ $\gamma^2 > \omega_0^2$ $$U_С(t) = e^{-\gamma t}\left(A \exp\left(\sqrt{\gamma^2-\omega_0^2} \cdot t \right) + B \exp\left(-\sqrt{\gamma^2-\omega_0^2} \cdot t \right)\right).$$ Второй сrayай не имеет фfromandческого смысла, since требуется точное выполнение условия $\gamma^2 = \omega_0^2$. В остальных сrayаях, как видно, раскачка возможна только for/at условии $\gamma < 0$, that is $\zeta < 0$.
+
+
+As is known, the solution to such a differential equation has a different form depending on the parameters $\gamma$, $\omega_0$.
+
+
+The second case has no physical meaning, since the exact fulfillment of the condition $\gamma^2 = \omega_0^2$ is required. In other cases, as can be seen, swinging is possible only under the condition $\gamma < 0$, that is, $\zeta < 0$.
+
+
+In the third case, this does not lead to exponential growth of $U_С$, since the resulting linear equation is valid only for small $U_С$. A characteristic phase diagram of the exact solution is shown in the figure.
+
+
+Method 2 (energy)
+
+
+Energy in the RLC circuit: $$W = \frac{CU_С^2}{2} + \frac{LC^2 \dot{U}^2_С}{2}.$$Продифференцируем по времени: $$\dot{W} = CU_С \dot{U}_С + LC^2\dot{U}_С \ddot{U}_С = C\dot{U}_С(U_С + LC \ddot{U}_С).$$Substituting $\ddot{U}_С$ from исходного уравнения, выtimesandв его via/through $\dot{U}_С$, $U_С$. После преобсований for/atходим к выражению $$\dot{W} = С\dot{U}^2_С(M \lambda - RC - 3\mu M U_С^2).$$For small $U_С$: $$\dot{W} \simeq С\dot{U}^2_С(M \lambda - RC).$$For раскачки колебаний необходимо $\dot{W} > 0$, which is equivalent
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\zeta < 0 \\ \ \\ RC < \lambda M$$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\end{document}

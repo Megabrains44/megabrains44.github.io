@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Some strange spinner...}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Consider the mechanical system shown in the figure. Two small spheres $A$ and $B$ of mass $m$ are fixed at the ends of a homogeneous rod of length $2l$ and mass $4m$, attached at the middle perpendicular to the horizontal axis. Above the initial position of the sphere $A$, in which the rod is horizontal and motionless, there is a vertical tunnel from which at specially selected moments of time a ball of mass $m$ flies out, colliding with the spheres and causing the system to rotate around its axis. The speed of the ejected ball just before the collision is $v$. As a result of the first collision, the system acquires a certain angular velocity $\omega_1$. When the sphere $B$ reaches the position in which the sphere $A$ was originally located, $B$ collides with a new ball, and the system acquires some angular velocity $\omega_2$, and so on. In all parts of the problem, consider all collisions to be elastic. Neglect the sizes of balls and spheres.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Central collisions without dissipation (2.0 points)}
+
+In this part of the problem, all collisions are central. There are no dissipations in the system.
+
+\problembox{A1}{Determine the moment of inertia of the system of the rod and spheres relative to the axis of rotation. Express your answer in terms of $m$ and $l$.}{0.30}
+
+\problembox{A2}{Express the angular velocity $\omega_{i+1}$ of the system after the collision with the $i+1$ emitted ball in terms of $\omega_i$, $v$ and $l$.}{0.50}
+
+\problembox{A3}{What is $\omega_1$ equal to? Express your answer in terms of $v$ and $l$.}{0.20}
+
+As can be expected, the angular velocity of such a rotating system tends at $i\to{\infty}$ to a constant value $\omega^*$.
+
+\problembox{A4}{Express $\omega^*$ in terms of $v$ and $l$.}{0.20}
+
+\problembox{A5}{By solving the recurrence equation obtained in step $\bf A1$, you will obtain an explicit expression for $\omega_i$. Express your answer using $i$, $v$ and $l$. Hint: Use the variable $\omega'_i=\omega_i-v/l$.}{0.60}
+
+Hint: Use the variable $\omega'_i=\omega_i-v/l$.
+
+Let now, instead of one pair of spheres, we have two pairs of them, placed on rods perpendicular to each other and the axis.
+
+\problembox{A6}{What would be the limiting value $\omega^*$ for such a system?}{0.20}
+
+\section*{Part B. Off-center collisions without dissipation (3.0 points)}
+
+Let's go back to the system with one pair of spheres. In this part of the problem, non-central collisions of balls with spheres $A$ and $B$ are studied. There are no dissipations in the system (including friction between the escaping ball and the spheres). We will characterize the off-center impact by the parameter $k=b/r$, where $b < r$ is the impact parameter with which the ejected ball hits the sphere, and $r\ll{l}$ is the distance between the centers of the ball and the sphere when they come into contact (see Fig.).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{At what value of the parameter $k_0$ will the speed of the first emitted ball, immediately after colliding with the sphere, be directed horizontally?}{1.00}
+
+Next, an arbitrary value of the parameter $k$ is considered.
+
+\problembox{B2}{Express the angular velocity $\omega_{i+1}$ of the system after the collision with the $i+1$ emitted ball in terms of $\omega_i$, $v$, $l$ and $k$.}{1.00}
+
+\problembox{B3}{What is $\omega_1$ equal to? Express your answer in terms of $v_0$, $l$ and $k$.}{0.20}
+
+\problembox{B4}{By solving the recurrence equation obtained in step $\bf B2$, you will obtain an explicit expression for $\omega_i$. Express your answer using $i$, $v$ and $l$.}{0.80}
+
+\section*{Part C. Based on Kotkin–Serbo (4.0 points)}
+
+In this part of the problem, the motion of the system under the influence of friction is studied. Under the influence of friction, a moment $M$ acts on the system, which is a certain function of the angular velocity $\omega$. Depending on the geometry of the system, the main contribution comes from: Dry friction – moment $M=\alpha I=\operatorname{const}$; Linear viscous friction – moment $M=\beta I\omega$, $\beta=\operatorname{const}$; Quadratic viscous friction – moment $M=\gamma I\omega^2$, $\gamma=\operatorname{const}$. Here $I$ is the moment of inertia of the system. Instead of the moment of inertia of the system and the speed of the ball, we introduce parameters $\varepsilon=\frac{ml^2}I$ and $\omega_0=\cfrac vl$. At all points in part C the impacts are central and elastic. Express all answers in points C1 – C3 using $\varepsilon$ and $\omega_0$.
+
+Here $I$ is the moment of inertia of the system. Instead of the moment of inertia of the system and the speed of the ball, we introduce parameters $\varepsilon=\frac{ml^2}I$ and $\omega_0=\cfrac vl$. At all points in part C the impacts are central and elastic.
+
+Express all answers in points C1 – C3 through $\varepsilon$ and $\omega_0$.
+
+\problembox{C1}{Find at what values of the parameter $\alpha$ the system in the dry friction mode will continue to move indefinitely long after the first collision with the ball.}{0.50}
+
+\problembox{C2}{Find at what values of the parameter $\beta$ the system in the mode of linear viscous friction will continue to move indefinitely long after the first collision with the ball.}{0.50}
+
+\problembox{C3}{Find at what values of the parameter $\gamma$ the system in the mode of quadratic viscous friction will continue to move indefinitely long after the first collision with the ball.}{0.50}
+
+Let us now proceed directly to the exact calculation of the steady-state average angular velocities in each of the three modes. To do this, together with the equation for a collision with a ball, you need to solve the equation of free motion of the system and find stationary points.
+
+\problembox{C4}{Find the steady-state average over the period angular velocity of the system $\overline\omega_1$ in the dry friction mode. Express your answer in terms of $\varepsilon$, $\alpha$ and $\omega_0$.}{0.70}
+
+Express your answers in C5 and C6 using $\varepsilon$, $\beta$ and $\omega_0$.
+
+\problembox{C5}{Find the stationary value of the angular velocity $\omega^\uparrow_2$ of the system immediately after the next collision with the ball in the mode of linear viscous friction.}{0.50}
+
+\problembox{C6}{Find the steady-state average over the period angular velocity of the system $\overline\omega_2$ in the mode of linear viscous friction.}{0.40}
+
+Express your answers in C7 and C8 in terms of $\varepsilon$, $\gamma$ and $\omega_0$.
+
+\problembox{C7}{Find the stationary value of the angular velocity $\omega^\uparrow_3$ of the system immediately after the next collision with the ball in the quadratic viscous friction mode.}{0.50}
+
+\problembox{C8}{Find the steady-state average over the period angular velocity of the system $\overline\omega_3$ in the mode of quadratic viscous friction.}{0.40}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3160}
+
+\end{document}

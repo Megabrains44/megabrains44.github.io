@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Polarization of dielectrics</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Polarization of dielectrics</h1>
+<p class="camp">Y21 (2021) — English translation</p>
+<h2 class="part">Constants and some properties of substances</h2>
+<p>Avogadro's constant $N_A  = 6,022\,140\,76\times 10^{23}~ моль^{-1}$ Boltzmann's constant $k=1,380\,649 \times 10^{-23}~Дж/К$ Speed of light in vacuum $c = 299\,792\,458~ м/с$ Electron charge $q_e = - 1,602\,176\,634 \times 10^{−19}~Кл$ Electron mass $m_e = 9,109\,383\,701\,5(28) \times 10^{-31} ~кг$ Molar mass of Refrigerant-10 $\mu_{R10} = 153,8~г/моль$ Density of Refrigerant-10 (in liquid state) $\rho_{R10} = 1,59~г/см^3$ Molar mass of water $\mu_{w} = 18,02~г/моль$ Density of water (in liquid state) $\rho_{w} = 1.00~г/см^3$ Dielectric constant of water (in liquid state) $\varepsilon_{w} = 81$ Density of mercury $\rho_{Hg} = 13,6~г/см^3$ Acceleration of gravity $g = 9,81~м/с^2$</p>
+<h2 class="part">A. Conductive beads</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">One model of dielectrics is as follows: a large number of small conducting spheres of radius $R$ fill a space with a concentration $n$, such that $R^3 n \ll 1$. Determine how much the dielectric constant $\varepsilon$ differs from unity.</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">B. Field of a polarized sphere</h2>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">A solitary dielectric ball of radius $R$ is polarized so that the electric field strength inside it is uniform and equal to $\vec{E}_{in}$. Determine the electric field strength $ \vec{E}_{out} (\vec{r} )$ that creates the ball outside at point $\vec{r}$. The radius vector $\vec{r}$ is drawn from the center of the ball.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">A dielectric ball of radius $R$ was placed in an external uniform electric field $\vec{E}_0$. The electric field strength inside the ball became equal to $\vec{E}_0/n$. Determine the dielectric constant of the ball material $\varepsilon$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">If you place a non-polar particle (for example, an atom of a substance) in an electric field $\vec{E'}$, then it will acquire a dipole moment $\vec{p}$. For small fields this dependence is linear: $$ \vec{p}= \beta \varepsilon_0 \vec{E'}.$$ Коэффициент $\beta$ называется «поляризуемость». Укажите поляризуемость $\beta$ for a conducting ball.</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">C. Dielectric constant of non-polar gaseous substances</h2>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">If we place a hydrogen atom (which itself does not have a dipole moment) in an alternating electric field $E(t)=E_0  \cos (⁡\omega t)$, then it is polarized mainly due to the fact that an electron with mass $m_e$ and charge $q_e$ is displaced under the action of the driving force of the external field. That is, the electron oscillates near the equilibrium position (atomic nucleus). Determine how the position of the center of the electron cloud depends on time $x(t)$, if the natural frequency of such electron oscillations is $\omega_0$?</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">If you place the specified hydrogen atom in a constant electric field $E_0$, then it will be polarized. The magnitude of the polarization will be determined by the natural frequency of vibrations $\omega_0$, which can be estimated from the following considerations: this is the frequency of the electromagnetic wave, which, when absorbed by a hydrogen atom, ionizes it from the ground state. It is known that the wavelength of this radiation is $\lambda=91.1~нм$. Estimate the polarizability $\beta$ of the hydrogen atom.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Determine how much the dielectric constant of hydrogen gas differs from unity at atmospheric pressure and temperature $t=0^{\circ}\mathrm{C}$. Use the polarizability value of the hydrogen atom from the previous paragraph. For rarefied gases, we can assume that the field in the substance $E$ and the field that acts on one molecule $E'$ coincide.</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">D. Dielectric constant of non-polar liquids</h2>
+<p>In order to determine the dielectric constant of liquids, it is no longer possible to assume that the strengths $\vec{E}$ and $\vec{E}'$ (see C3) coincide. To calculate $\vec{E}'$, we can assume that the molecule is inside a hollow empty (without matter) sphere in the dielectric material. To find the field inside this sphere created by external charges, we assume that these external charges are distributed continuously in the substance.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Inside a continuous homogeneous dielectric, the electric field strength is equal to $\vec{E}$, the polarization vector is equal to $\vec{P}$. A spherical cavity was cut out inside the dielectric. Determine the electric field strength in the substance $\vec{E_h}$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">Using the above model, find how much the dielectric constant of the liquid $\varepsilon$ differs from unity. Concentration of molecules $n$, polarizability $\beta$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">The substance Refrigerant-10 in gaseous form has a dielectric constant $\varepsilon_g=1.0030$ at a temperature $t_g=105^{\circ}\textrm{C}$ and atmospheric pressure. Determine the dielectric constant $\varepsilon_l$ of this substance in liquid form.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">D4</span><div class="pb-text">For water at temperature $t_1=145^{\circ}\textrm{C}$ and atmospheric pressure, the dielectric constant is $\varepsilon_1=1.00705$. Estimate the dielectric constant of water $\varepsilon_2$ at temperature $t_2=20^{\circ}\textrm{C}$. Compare the result obtained from this model with the real value of the dielectric constant of water. If it does not converge, provide a possible reason.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">E. Dielectric constant of polar substances</h2>
+<p>For polar dielectrics the situation is more complicated. The molecules themselves have a dipole moment $p_0$. In the absence of an electric field, these dipole molecules are randomly oriented. When this substance is placed in an electric field, polarization appears due to the uneven orientation of the dipoles. In addition, there remains the effect that in addition to the own dipole moment, an induced one appears. The contribution of these two effects to the dielectric constant adds linearly.</p>
+<div class="problem-box"><span class="pb-id">E1</span><div class="pb-text">Determine the difference $\varepsilon-1$ for such a substance with the concentration of molecules $n$ at temperature $T$. We can assume that the temperature is quite high, but the electric field strength is not high. Ignore the induced dipole moment.</div><span class="pb-pts">1.00</span></div>
+<div class="figure"><img src="T5_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">E2</span><div class="pb-text">Using the available data in the table, determine the dipole moment of the molecule $p_0$ and the polarizability $\beta$ for water. The table shows the dependence of the dielectric constant of water on its temperature $T$ and pressure $p$.</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/240">https://pho.rs/p/240</a></p>
+</body>
+</html>

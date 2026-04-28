@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Two satellites}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In 1973, a method was proposed for launching satellites into hyperbolic orbit using a gravitational maneuver, which you are invited to analyze. Within the framework of this problem, the motion of two satellites 1 and 2, launched from opposite poles of the Earth with the same magnitude and direction velocities $v$ tangential to it, is studied.  Satellite 2 is launched into orbit a short time $\tau$ after the launch of the first. If only one of the satellites is launched into orbit, its trajectory will be a parabola. The mass of satellite 1 is $M_1$, and satellite 2 is $M_2\gg{M_1}$. The resistance of gas in the atmosphere can be neglected, as well as the influence of gravitational attraction from other bodies. The mass of the Earth is $M_{\text{}}\gg{M_2}$, the radius of the Earth is $R_{\text{}}$, the gravitational constant is $G$. Let us denote by $P$ the point of intersection of the elliptical orbits of the satellites, and by $\varphi$ the angle between the directions of their velocities at this point. The movement of satellite 1 consists of three sections: 1) Movement in a parabolic orbit; 2) Interaction with satellite 2 near point $P$; 3) Further movement along a hyperbolic orbit in the Earth's gravity field.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Trajectory of one of the satellites (3.3 points)}
+
+In this part of the problem, you will have to approximately describe the trajectory of the satellites to the intersection point $P$ of their orbits.
+
+\problembox{A1}{What is the speed of the satellites $v$ at the moment of launch? Express your answer in terms of $G$, $_$ and $R_$.}{0.40}
+
+\problembox{A2}{At what distance from the center of the Earth $R_0$ is the point $P$ of intersection of the satellite trajectories? Express your answer using $R_\text{}$.}{0.60}
+
+\problembox{A3}{What is the angle $\varphi$ between the directions of satellite velocities at point $P$?}{0.80}
+
+\problembox{A4}{Find the time $t_0$ after which the satellites reach point $P$. Express your answer using $G$, $R_\text{}$ and $M_\text{}$.}{1.50}
+
+Hereinafter, assume that $\tau\ll{t_0}$. When satellites approach point $P$, their interaction with the Earth can be neglected.
+
+\section*{Part B. Satellite Interaction (4.0 points)}
+
+\problembox{B1}{Assuming that near the point $P$ the satellites moved along straight lines, the directions of which coincided with the directions of their velocities at this point, find the relative speed of the satellites $v_0$, as well as the minimum distance $b$ between them, neglecting their gravitational interaction. Express your answer using $v$ and $\tau$.}{0.70}
+
+Next, consider that in the reference frame of satellite 2, the orbit of satellite 1 is a hyperbola with an impact parameter $b$ at their infinite distance. Also consider that at an infinite distance the relative speed of the satellites is equal to $v_0$ found in the previous paragraph.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+When the interaction of satellites 1 and 2 can again be neglected, the speed of satellite 1 in the Earth's reference frame is equal to $u$ and is directed perpendicular to the line connecting it to the Earth.
+
+\problembox{B2}{Find $u$. Express your answer using $v$.}{1.00}
+
+\problembox{B3}{Find $\tau$. Express your answer in terms of $G$, $M_2$, $M_3$ and $R_\text{}$.}{2.30}
+
+\section*{Part C. Repeated motion in the Earth's gravity field (2.7 points)}
+
+After interaction with satellite 2, the orbit of satellite 1 in the Earth's gravity field is a hyperbola.
+
+\problembox{C1}{Find the speed $v_\infty$ of satellite 1 at an infinite distance from the Earth. Express your answer using $v$.}{1.00}
+
+\problembox{C2}{Find the angle $\varphi_\infty$ between vectors $\vec{u}$ and $\vec{v}_\infty$.}{1.50}
+
+\problembox{C3}{Is it really possible to put a satellite into orbit this way? Justify your answer.}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/277}
+
+\end{document}

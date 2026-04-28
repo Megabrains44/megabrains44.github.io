@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Shower}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The material point of mass $m$ is fixed at the end of a weightless rod, which can freely rotate around the horizontal axis $O$. Initially, the material point is in a position of stable equilibrium under the action of force $F$, directed perpendicular to the rod (see figure). At some moment, the direction of force $F$ instantly changes to the opposite. Subsequently, the force also remains constant in magnitude and directed perpendicular to the rod, rotating it counterclockwise.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{At what values of $F$ can the rod make a full revolution around the axis of rotation?}{10.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/65}
+
+\end{document}

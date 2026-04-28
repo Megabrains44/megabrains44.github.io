@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Electrons in a magnetic field</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Electrons in a magnetic field</h1>
+<p class="camp">Y20 (2020) — English translation</p>
+<p>Recent advances in nanotechnology have made it possible to create “artificial atoms,” so-called quantum dots. These are nanometer structures that, due to their optical and electronic properties, have a variety of applications: from quantum computers, solar cells to imaging of living cells. In this problem, we will consider a model of electron motion in a quantum dot.</p>
+<p>Let us consider the movement of two electrons (mass $m$ and charge $q=-e$) in a plane perpendicular to the lines of a uniform magnetic induction field $\vec B=B\vec k$. Electrons can be considered material points between which there is only a Coulomb interaction. Relativistic effects can be neglected.</p>
+<p>Let the electrons be at a distance $d$ from each other at the initial moment. The electrons are given velocities equal in magnitude but opposite in direction, such that the distance between them does not change with further movement.</p>
+<div class="figure"><img src="T5_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">What could be the minimum distance $d_\min$ between electrons so that the movement described above is possible?</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Find the speed $v_m$ that must be imparted to the electrons so that when they move between them, the distance $d_\min$ found in A1 is maintained.</div><span class="pb-pts">0.50</span></div>
+<p>Let us now consider the case when only one electron is given a speed $v_0$ at the initial moment of time, such that the distance between them does not change and remains equal to $d_1=2\sqrt[3]{\cfrac{m}{4\pi\varepsilon_0 B^2}}$.</p>
+<div class="figure"><img src="T5_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the angular velocity of the center of mass $\omega$ during the electron motion.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the time it takes for both electrons to have the same absolute speed for the first time.</div><span class="pb-pts">1.00</span></div>
+<p>Let's return to the model from part A. The electrons are at a distance $d$ from each other, and they are imparted opposite velocities $v_0$.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Obtain an expression for the kinetic energy of one electron $K=K(m, v_r, \omega, r)$, where $v_r=\cfrac{dr}{dt}, \omega=\cfrac{d\theta}{dt}$, and $r$ and $\theta$ specify the position of the electron in the center of mass system.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find what the derivative of angular momentum with respect to time $\cfrac{dL}{dt}$ is equal to when electrons move.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find the integral of motion for the case under consideration, i.e. find a function $J$ for which $\cfrac{dJ}{dt}=0$ holds.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Express the total energy of the electron as $E=K(v_r)+U(r)$. Express it in terms of $J, e, B, r$ and physical constants.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Schematically depict the graph of the dependence $U(r)$, indicate its characteristic features.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Expand the function $U(r)$ in a Taylor series up to the first nontrivial term near the singular points from C5. Based on the decomposition, sketch the trajectory of electrons that have been given a small radial velocity component $v_{r0}$ in addition to the circular velocity $v_0$.</div><span class="pb-pts">1.00</span></div>
+<div class="figure"><img src="T5_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/43">https://pho.rs/p/43</a></p>
+</body>
+</html>

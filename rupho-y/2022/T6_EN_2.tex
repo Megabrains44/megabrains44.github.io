@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Holography}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Usually, when studying radiation, we record only the intensity of vibrations. However, oscillations are characterized not only by amplitude, but also by phase. If you use information about the phase of oscillations, you can get new opportunities for optical devices. For example, by recording information about the phase on a photographic plate, you can use it to recreate a three-dimensional image. Such images are called holograms and can be found almost everywhere. Unlike regular photography, if you look at a hologram from different angles, the image will change, as if we were viewing the object from different angles. In Part A of the problem, we examine the phase relationships when an image is formed by a lens. In parts B and C we will look at how the simplest hologram models work.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\section*{Part A. Diffraction (4 points)}
+
+Let a monochromatic electromagnetic wave with wave number $k$ propagate in space. We will define the wave in complex form $$E = f(\vec{r}) e^{-i \omega t}.$$ Here the quantity $f$ is a complex function of the coordinates that specifies the distribution of amplitude and phase in the wave. We will call it the complex amplitude of the wave. The physical value of the electric field is equal to the real part of this expression. In what follows, we will not write down the time dependence of the field in the wave. We will be interested in the distribution of the complex amplitude $f(\vec{r})$ in space. We will not take polarization into account anywhere further. The main direction of propagation of waves, from which all angles are measured, is the $z$ axis. The intensity of the electromagnetic wave at a given point is proportional to the square of the modulus of the complex amplitude. Since we will be interested only in relative values of intensities, we will henceforth call the quantity $I = |f(\vec{r})|^2$ the intensity. It turns out that if the complex amplitude of a monochromatic wave of known frequency is given on a certain surface (for example in the plane $z=0$), then it can be used to reconstruct the complex amplitude of the wave in all space. Throughout this part we work with monochromatic radiation and consider the wave number $k$ to be known.
+
+\problembox{A1}{Let a plane wave of amplitude $E_0$ propagate in the plane $x z$ at an angle $\theta$ to the axis $z$. Write down an expression for the complex amplitude $f(\vec{r})$.}{0.20}
+
+\problembox{A2}{Let the complex amplitude in the $z = 0$ plane have the form $f = E_0 e^{i u x}$. Find an expression for the complex amplitude in a plane with an arbitrary coordinate $z$. The answer must include the wavenumber of the $k$ wave. Obtain an approximate expression in the case of $u \ll k$. Look for a solution in the form of a plane wave propagating at an acute angle to the $z$ axis.}{0.50}
+
+\problembox{A3}{Let there be a diffraction grating in the $z = 0$ plane, the transmittance of which (in amplitude) has the form: $$\tau(x) = \alpha + \beta \cos u x.$$ A plane electromagnetic wave with wave number $k$ and amplitude $E_0$ is incident perpendicular to the grating. Find the expression for the complex amplitude of the wave in the plane with $z > 0$. Use the result of the previous paragraph and the principle of superposition.}{0.70}
+
+\problembox{A4}{A lens with focal length $F$ was placed behind the diffraction grating from the previous point. What image will be in the focal plane of such a lens? Indicate its characteristic dimensions.}{0.60}
+
+\problembox{A5}{It turns out that at some distance from the periodic structure the intensity distribution is exactly the same as on it itself. (This phenomenon is called self-reproduction.) At what values of the coordinate $z$ does this occur?}{0.50}
+
+Let now the diffraction grating be made of a transparent substance of thickness $h$, the refractive index of which varies according to the law $$n = n_0 + n_1 \cos u x.$$ However, since such a structure is transparent, we will not be able to see it. To overcome this difficulty, we place it at a distance $2F$ from a lens with focal length $F$. A plane electromagnetic wave with wave number $k$ and amplitude $E_0$ is incident perpendicular to the grating. Then the distribution of the complex amplitude in the image will be the same as in the plane of the grating itself, up to the substitution $x \to -x$. Therefore we still will not see anything. The grating is located in the plane $z = 0$, the lens in the plane $z = 2F$.
+
+\problembox{A6}{Assuming that $k h n_1 \ll 1$, write down an expression for the complex amplitude of the wave between the lens and the diffraction grating. What will the image look like at the focal plane of the lens ($z = 3F$)?}{0.50}
+
+\problembox{A7}{Let us place on the optical axis in the focal plane of the lens ($z = 3F$) a small plate (smaller in size than the size of the image in the focal plane, so that only its central part changes), which introduces an additional phase delay $\pi/2$. What does the image now look like at a distance $2F$ from the lens (in the $z = 4F$ plane)? Write down the intensity as a function of $x$.}{0.50}
+
+\problembox{A8}{Now, instead of a transparent plate introducing a phase shift, an opaque screen of the same size was installed. Write down the dependence of intensity on $x$ in this case.}{0.50}
+
+\section*{Part B. Hologram (4.5 points)}
+
+In order to record a wave, there is little information about the intensity. We also need to record the phase of the wave. This can be done in the following way. You need to illuminate the object with a laser. Then direct the light scattered by the object onto the screen, forcing it to interfere with the light directly from the laser (reference wave). That is, we photograph the interference pattern of light from an object and a reference wave, and then use this photograph to reconstruct the light coming from the object. In this entire part, we can assume that the angles of propagation of waves with the $z$ axis are much less than 1.
+
+\problembox{B1}{Let one plane wave of amplitude $E_1$ come from an object at an angle $\alpha$ to the axis $z$, a reference wave of amplitude $ E_0$ falls at an angle $-\theta$ to the axis $z$ (the sign $-$ means that the angle is measured in the opposite direction, while $\theta > 0$). The photographic plate is located in the $z = 0$ plane. Find the intensity distribution $I(x)$ on the plate.}{0.20}
+
+The transmittance of the plate after processing is related to the intensity of the incident light by the relation $\tau = 1 - \gamma I$. Consider that the intensity values are such that always $\tau > 0$. Thus, the plate turns into a diffraction grating, which is a hologram.
+
+\problembox{B2}{Let only the reference wave fall on the hologram obtained in this way (at the same angle as in the previous paragraph). As a result of diffraction, there will be several plane waves behind the plate. Find at what angles to the $z$ axis they will propagate.}{0.50}
+
+It turns out that one of the reconstructed waves coincides with the incident wave that came from the object when recording the hologram. It is natural to consider it a restored image. However, usually an object emits more than one plane wave.
+
+\problembox{B3}{Let now two plane waves of amplitudes $E_1$ and $E_2$ come from the object at angles $\alpha_1$ and $\alpha_2$ close to each other, respectively. The reference wave still travels at an angle $\theta$ to the normal, its amplitude is $E_0$. Find the intensity distribution in the $z=0$ plane.}{0.80}
+
+\problembox{B4}{Let now the hologram be illuminated only by the reference wave. How many waves will propagate behind the hologram, at what angles and with what amplitudes? Consider $\Delta \alpha = \alpha_1 - \alpha_2  \ll \alpha \ll 1$ and $\theta \ll 1$.}{1.20}
+
+\problembox{B5}{Some of the waves from the previous paragraph can be grouped into images of the object. How many images will the object have and where will they be located?}{0.50}
+
+\problembox{B6}{Let the hologram have a finite width $D$. What is the minimum angular distance $\Delta \alpha$ between the rays that can be distinguished in the image it forms?}{0.30}
+
+\problembox{B7}{We have so far considered only monochromatic radiation. Let now a reconstruction wave with a finite spectrum width $\Delta \lambda$ fall on the hologram from point B4. This will cause the angular width of the image to increase. Estimate at what maximum spectrum width $\Delta \lambda$ it will be possible to reconstruct an object with angular size $\Delta \alpha$. Express your answer in terms of the wavelength $\lambda$ and the angles $\alpha$ and $\theta$.}{1.00}
+
+\section*{Part C. Volumetric hologram (1.5 points)}
+
+The holograms discussed above are inconvenient for practical use, since coherent illumination (laser) is required to form an image. In order to circumvent this complexity, volumetric holograms can be used.
+
+\problembox{C1}{A wave from a source is incident on the plate at an angle $\alpha$, the reference wave is incident on the plate along the normal. Then volumetric interference fringes will appear in the volume of the plate. Find the distance $d$ between the planes in which the intensity is maximum, as well as the angle $\beta$ between these planes and the axis $z$.}{0.80}
+
+\problembox{C2}{The radiation incident on the hologram is reflected specularly from the planes of maximum intensity. Let the plate be illuminated by white light falling on it normally. Under what wavelength condition will the intensity of the reflected light be maximum? At what angle $\alpha^\prime$ is the reflected wave directed?}{0.70}
+
+Thus, in order for a thick hologram to form an image, you do not need to use monochromatic laser light, ordinary lighting is sufficient! Such a hologram is already quite similar to those that can be found, for example, on magnets.
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2844}
+
+\end{document}

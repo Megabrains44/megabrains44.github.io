@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Complex oscillatory system}}
+\author{\normalsize Y13 (2013) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The mass $m_1$ is connected by threads to two identical masses $m_2$. The threads are thrown through small light blocks, the distance between which is $L$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T8_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{At what mass ratio $m_1/m_2$ will the system be in a stable equilibrium position (mass loads $m_2$ do not touch the blocks)?}{0}
+
+\problembox{A2}{Find the period of small oscillations of such a system (the mass $m_1$ oscillates along a vertical straight line).}{0}
+
+\problembox{A3}{Consider the special case of oscillations when $m_1 = m_2$.}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3995}
+
+\end{document}

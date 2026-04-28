@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Collision in a circle}}
+\author{\normalsize Y16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+On the air hockey table there are $N$ identical small pucks, evenly arranged in a semicircle (see picture); the total mass of the washers is $M$. Another small washer, disc $D$, of mass $m$, slides in a direction perpendicular to the diameter of this semicircle and collides with the first of the stationary washers. By some miracle it happened that later it collided with all the other $N-1$ washers in order, after which it continued to move in the direction opposite to the initial one. All collisions are absolutely elastic; friction can be neglected everywhere.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{a}{In the limiting case at $N \rightarrow \infty$, what is the minimum value of the ratio $M/m$ at which the above miracle is possible?}{0}
+
+\problembox{b}{If the mass ratio is equal to the critical value found in part $a)$, what is the ratio of the final and initial speed $D$?}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2220}
+
+\end{document}

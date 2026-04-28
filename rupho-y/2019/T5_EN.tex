@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Superfluid helium in airgel}}
+\author{\normalsize Y19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Superfluidity $^3\rm He$ was discovered in 1972 - since then the phenomenon has been widely studied, and modern theory well describes the properties of pure superfluid $^3\rm He$. Superfluidity of $^3\rm He$ with impurities is an important problem in modern physics, but its solution is complicated by the fact that initially superfluid $^3\rm He$ is a very pure substance. At temperatures on the order of $1~\text{мК}$, when $^3\rm He$ becomes superfluid, all impurities freeze out, and the $^4\rm He$ isotope practically does not dissolve in $^3\rm He$. It became possible to solve this problem experimentally with the help of aerogels - special substances with high porosity ($\sim{98\text{%}}$). In such experiments, airgel particles play the role of impurities on which $^3\rm He$ particles are scattered. Airgel is a solid substance made of intertwined thin threads. The distance between the threads is much greater than their diameter. At the same time, by deforming the airgel, it is possible to ensure that the threads line up along one straight line. This alignment makes the material anisotropic. The anisotropy of the airgel is noticeable to the naked eye (see Fig. 1).
+
+Rice. 1. Appearance of an “ordered” airgel in the direction along (B) and across (A) the threads. Micrographs obtained using electron microscopy show sections of the airgel in a plane parallel to the axis of the threads (C) and perpendicular to it (D)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Consider the two-dimensional motion of $^3\rm He$ atoms in a plane perpendicular to the airgel axis. The airgel sample can be considered infinite, the radius of the threads is $r=1~\text{нм}$, and their “concentration” per unit area is $n=10^{-4}~\text{нм}^{-2}$. We can assume that the threads are motionless and randomly located. The size of the $^3\rm He$ atoms can be neglected; the collisions of atoms with an airgel thread can be considered absolutely elastic - the $^3\rm He$ atoms retain the velocity $v=500~\text{м}/\text{с}$ upon impact, and the change in the direction of motion is given by the geometric law of reflection. The interaction between helium atoms can be neglected. Let us consider $N=10^{10}$ $^3\rm He$, the positions and directions of movement of which at the initial moment are chosen randomly.
+
+\problembox{A1}{How many $F_1(t)$ atoms $^3\rm He$ manage to collide with the airgel threads at least once during the time $t\in{\left[1~\text{фс}; 1~\text{пс}\right]}$? Calculate $F_1(10~\text{фс})$}{1.00}
+
+\problembox{A2}{How many $G(t)$ collisions does an atom $^3\rm He$ experience on average during the time $t$?}{1.00}
+
+\problembox{A3}{How many $F_2(t)$ atoms $^3\rm He$ will never collide with the airgel threads during the time $t\in{\left[1~\text{фс}; 0.1~\text{мкс}\right]}$? Calculate $F_2(10~\text{нс})$.}{1.00}
+
+\problembox{A4}{What number $S(\phi,\Delta\phi)$ of atoms $^3\rm He$ at the first collision will change the direction of velocity by the angle $\alpha\in{\left[\phi; \phi+\Delta{\phi}\right]}$, where $\Delta{\phi}\in{\left[10^{-5}{;}10^{-3}\right]}$, $\phi\in{\left[10^{-1}-\pi;10^{-1}\right]\cup\left[10^{-1}{;}\pi-10^{-1}\right]}$. Consider the angle positive when changing direction counterclockwise. Calculate $S(\pi/2,10^{-4})$.}{2.00}
+
+\problembox{A5}{What average distance $\langle \lambda\rangle$ will the atom $^3\rm He$ travel before the first collision with the airgel filament? Give the formula and numerical answer.}{1.00}
+
+\problembox{A6}{What is the mean square of this distance $\langle\lambda^2\rangle$? Give the formula and numerical answer.}{1.00}
+
+\problembox{A7}{What is the mean squared displacement $\langle r^2\rangle$ of atom $^3\rm He$ during the time $t\in{\left[1~\text{мкс}; 1~\text{мс}\right]}$ since launch? Calculate $\langle{r}^2\rangle(10~\text{мкс})$.}{3.00}
+
+Prefixes: femto - $10^{-15}$, pico - $10^{-12}$, nano - $10^{-9}$, micro - $10^{-6}$, milli - $10^{-3}$.
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3050}
+
+\end{document}

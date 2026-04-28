@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Superconducting films}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In thin films $\rm In-O$ at low temperatures (of the order of $1~\text{K}$), a superconductor-insulator phase transition controlled by an external magnetic field is observed (the transition occurs when the external magnetic field $B$ changes).
+
+\section*{Part A. Critical parameters (6.8 points)}
+
+The table “Experimental data” presents measurements of the dependences $R(T)$, where $R$ is the resistance of the sample, $T$ is the temperature, at different external magnetic fields $B$. Resistance measurement error $\varepsilon(R)=0.5\%$. The graph (see Fig.) shows approximate types of dependencies $R(T)$ for some values $B$ indicated in the table. Let us assume that the dependence of resistance $R(T,B)$ has the following form: $$R(T,B) = R_C - \gamma T + A \left( B - B_C \right) T^{\alpha}, $$ where $A, R_C, B_C$ —  ,    .  on  $R(T)$    (then  $\dfrac{\partial R}{\partial T}=0$), then   ,  $\left(T_\text{n}, R_\text{n}\right)$. :        h   :   , for  h   $x$   $y$ constant and vice versa, for example: \[ f(x,y) = 3x^2 + 2xy,\quad \frac{\partial}{\partial x}f(x,y) = 6x + 2y,\quad \frac{\partial}{\partial y}f(x,y) = 2x \]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Derive the analytical relationship $R_\text{p}$ ($T_\text{p}$).}{1.00}
+
+\problembox{A2}{Define $B_C$.}{0.40}
+
+\problembox{A3}{Define $R_C$ in two ways.}{2.60}
+
+\problembox{A4}{Define the parameters $\gamma$ and $\alpha$.}{2.80}
+
+\section*{Part B. Probability of describing an experiment (3.2 points)}
+
+Estimating the error of a physical quantity $X$ allows one to calculate the probability with which its value lies in the interval $[a,b]$. To assess the probability $p$ that the result of the experiment is described by a mathematical expression, the criterion $\chi^2$ (chi-square) is used, calculated according to the following formula: \[ \chi^2 = \sum\limits_{i=1}^{N} \left( \frac{R_\text{} - R_\text{}}{\Delta R} \right)^2 \] For a number of points $N=150$, a correspondence table $p$ and $\chi^2$:
+
+(Probability table)
+
+\problembox{B1}{Count $\chi^2$ (definition in note) of $R(T)$ dependencies for each $B$.}{2.20}
+
+\problembox{B2}{Using the table from the note, estimate the probability according to which the formula $f={R(T,B)}$ describes the dependence $R(T,B)$ for any (specify which) $150$ points.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/102}
+
+\end{document}

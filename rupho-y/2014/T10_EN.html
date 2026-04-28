@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Oscillations in capacitors</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Oscillations in capacitors</h1>
+<p class="camp">Y14 (2014) — English translation</p>
+<h2 class="part">Part A. Rapid Oscillations</h2>
+<p>A free molecule of hydrochloric acid ($\rm HCl$) is an electric dipole of length $L = 0.0215~\text{нм}$ and with atomic charges $+q$ and $–q$ ($q = 1.6 \cdot 10^{-19}~\text{Кл}$). The molecule was placed in a uniform electric field of strength $E = 30~\text{кВ}/\text{см}$. The masses of hydrogen and chlorine atoms are $m_1 = 1.67 \cdot 10^{-27}~\text{г}$ and $m_2 = 59.2 \cdot 10^{-27}~\text{г}$, respectively.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the period $T_0$ of small oscillations of the dipole.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Estimate (with an accuracy no worse than $5\,\%$) the minimum time $\tau$ during which the dipole will rotate from a position in which its axis is perpendicular to the electric field lines to a position in which this axis is parallel to the field lines.</div><span class="pb-pts">2.00</span></div>
+<p>Note: When the dipole deviates through a large angle $\varphi_\text{max}$, the period of its oscillations will depend on the angle $\varphi_\text{max}$ according to the law: \[ T = T_0 \left[ 1 + \sum\limits_{k=1}^{\infty} \left( \frac{(2k-1)!!}{(2k)!!} \right)^2 \sin^{2k} \left( \frac{\varphi_\text{max}}{2} \right) \right] \] Double factorial is defined as follows: $k!!=k\cdot(k-2)\cdot \dots \cdot a$, where $a=2$ for even $k$ and $a=1$ for odd $k$.</p>
+<p>\[ T = T_0 \left[ 1 + \sum\limits_{k=1}^{\infty} \left( \frac{(2k-1)!!}{(2k)!!} \right)^2 \sin^{2k} \left( \frac{\varphi_\text{max}}{2} \right) \right] \]</p>
+<p>The double factorial is defined as: $k!!=k\cdot(k-2)\cdot \dots \cdot a$, where $a=2$ for even $k$ and $a=1$ for odd $k$.</p>
+<h2 class="part">Part B. Slow Oscillations</h2>
+<p>In the chamber, evacuated to a high vacuum, there is a flat capacitor whose plates are vertical. Distance between plates $D$. In the center of the capacitor there is a small ball (its specific charge is $q_1$). An alternating voltage $U=U_0 \sin \omega t$ is applied to the capacitor plates. At the moment when the voltage went to zero, the ball was released. After some time $\tau$ the ball collided with the capacitor plate. The experiment was repeated, but this time a voltage $U = U_0 \sin^2 \omega t$ was applied to the capacitor. At the moment when the voltage went to zero, the ball was released again and it again hit the same place on the capacitor plate.</p>
+<div class="figure"><img src="T10_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Determine the frequency $\omega$ of the AC voltage source if $T \gg \tau$ is known. Here $T$ is the period of voltage oscillations at the generator.</div><span class="pb-pts">10.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3990">https://pho.rs/p/3990</a></p>
+</body>
+</html>

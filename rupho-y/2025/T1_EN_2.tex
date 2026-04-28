@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Irreversible thermodynamic cycles}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+It is well known that the maximum efficiency of a heat engine operating between two thermal reservoirs (heater and refrigerator) at fixed temperatures corresponds to the Carnot cycle. However, in this cycle, heat transfer occurs at equal temperatures and is therefore infinitely slow. Real engines maintain a finite temperature difference, which decreases efficiency. This problem considers irreversible engines where processes occur at a finite rate.
+
+\section*{Part A. Engine with friction (1.5 points)}
+
+Consider a piston of an engine moving in a cylinder of constant cross-section. During a cycle, the piston moves a distance $D$ and back. Heat $Q_1 > 0$ is supplied and $Q_2 > 0$ is removed. A friction force $F = \gamma v$ acts on the piston, where $v$ is its speed. The cycle duration is $\tau$. Assume the piston moves at a constant speed in one direction for $\tau/2$ and in the other for the remaining $\tau/2$.
+
+\problembox{A1}{Write an expression for the net power $P$ of the engine. Express your answer in terms of $Q_1, Q_2, \gamma, D, \tau$.}{0.70}
+
+\problembox{A2}{Find the optimal cycle duration $\tau$ at which the power is maximum.}{0.30}
+
+\problembox{A3}{Find the expression for efficiency $\eta$ (ratio of useful work to supplied heat $Q_1$) when operating at the optimal cycle duration.}{0.30}
+
+\problembox{A4}{Let $Q_1, Q_2$ be the same as in an ideal Carnot cycle. Express the efficiency of this engine in terms of the Carnot efficiency $\eta_c$.}{0.20}
+
+\section*{Part B. Engine with finite thermal conductivity (5.5 points)}
+
+Let the heater and cooler temperatures be $T_1$ and $T_2$. The working fluid is $\nu$ moles of an ideal monatomic gas. The process consists of two isotherms at temperatures $T_1'$ and $T_2'$ ($T_1 > T_1' > T_2' > T_2$) connected by two adiabats. Heat transfer power is proportional to the temperature difference: 
+$$ P_1 = \alpha_1 \Delta T_1 = \alpha_1 (T_1 - T_1'), \quad P_2 = \alpha_2 \Delta T_2 = \alpha_2 (T_2' - T_2). $$
+On the isotherm $T_1'$, heat $Q_1$ is supplied as volume increases from $V_1$ to $V_2$. On $T_2'$, heat $Q_2$ is removed.
+
+\problembox{B1}{Determine the amounts of heat $Q_1$ and $Q_2$. Express the answer in terms of $\nu, R, T_1', T_2', V_1, V_2$.}{0.80}
+
+\problembox{B2}{Express the cycle time $t_c$ (neglecting adiabatic transitions) in terms of $Q_1, Q_2, \alpha_1, \alpha_2, \Delta T_1, \Delta T_2$.}{0.40}
+
+\problembox{B3}{Express the useful power $P$ of the cycle in terms of $T_1, T_2, \Delta T_1, \Delta T_2, \alpha_1, \alpha_2$.}{0.40}
+
+\problembox{B4}{For a fixed cycle time $t_c$, find the relationship between small increments $d(\Delta T_1)$ and $d(\Delta T_2)$.}{0.40}
+
+\problembox{B5}{For fixed $t_c$, find the ratio $\Delta T_1 / \Delta T_2$ that maximizes power $P$.}{0.50}
+
+\problembox{B6}{Show that the condition $\frac{dP}{d\Delta T_1} = 0$ can be written as $\frac{\Delta T_1}{\Delta T_2} = h \frac{P}{\Delta T_1 \Delta T_2}$. Find the expression for $h$, which should be independent of the $\Delta T$ values.}{0.80}
+
+\problembox{B7}{Determine the values of $\Delta T_1$ and $\Delta T_2$ at which power is maximum. Express your answer in terms of $T_1, T_2, \alpha_1, \alpha_2$.}{1.20}
+
+\problembox{B8}{Find the maximum power $P_{\max}$ and the corresponding efficiency $\eta$ in terms of $T_1, T_2, \alpha_1, \alpha_2$.}{0.70}
+
+\problembox{B9}{For a plant with $T_1 = 560 ^\circ\text{C}$ and $T_2 = 25 ^\circ\text{C}$, calculate the Carnot efficiency and the efficiency found in B8. Which better describes the observed value $\eta = 0.36$?}{0.30}
+
+\section*{Part C. Leaking motor pair (3 points)}
+
+Internal heat leaks can occur where heat flows directly from the heater to the refrigerator. Consider a system of two engines in series: the refrigerator of the first is the heater of the second.
+$Q_{Hi}$ is heat reaching the working fluid of engine $i$; $Q_{Li}$ is heat rejected by fluid $i$; $\eta_i$ is the efficiency of fluid $i$.
+Leakage values are: $Q_{B1} = N_1 Q_H = K_1 (T_H - T_{L1}) Q_H$ and $Q_{B2} = N_2 Q_H = K_2 (T_{L1} - T_L) Q_H$.
+
+\problembox{C1}{Express the total efficiency $\eta$ of the system in terms of $\eta_1, \eta_2, N_1, N_2$.}{0.80}
+
+\problembox{C2}{Express $\eta$ in terms of $T_H, T_L, T_{L1}$ and $K_1, K_2$. Assume the individual cycles are Carnot cycles.}{0.90}
+
+\problembox{C3}{For $T_L/T_H = 0.5, K_1 T_H = 0.3, K_2 T_H = 0.2$, plot $\eta$ as a function of $T_{L1}/T_H$.}{0.40}
+
+\problembox{C4}{Find the intermediate temperature $T_{L1}$ that maximizes efficiency. For $K_1 = K_2$, provide the expression for $\eta_{\max}$.}{0.90}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/4557
+
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Crooked mirrors}}
+\author{\normalsize W25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+As you know, reflections of everyday objects in mirrors and their images in lenses can take on rather bizarre shapes. But even in these cases, it is possible to restore the shape of the original object. This is what this task will focus on.
+
+\section*{Part A. Photo in a bubble (4 points)}
+
+Sometimes in photographs of soap bubbles you can see distorted images of objects behind the camera. The first part of the problem is devoted to the study of such distortions. A bubble of radius $R$ is photographed from a distance $L\gg R$ and reflects an irregularly shaped object drawn on a vertical wall. The line connecting the bubble and the camera is perpendicular to the wall; The camera is placed close to the wall. A point on the wall at a distance of $r$ from the camera is visible in the photograph at a distance of $\rho$ from the center of the bubble image.
+
+A bubble of radius $R$ is photographed from a distance $L\gg R$ and reflects an irregularly shaped object drawn on a vertical wall. The line connecting the bubble and the camera is perpendicular to the wall; The camera is placed close to the wall.
+
+A point on the wall at a distance of $r$ from the camera is visible in the photograph at a distance of $\rho$ from the center of the bubble image.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{Express $r$ in terms of $\rho$, $R$ and $L$.}{0.50}
+
+\problembox{A2}{Express the small object area element $\mathrm dS$ through the parameters of the corresponding image area. The response may include the quantities $\rho$, $R$, $L$, as well as the distance differential $\mathrm d\rho$ and the polar angle differential $\mathrm d\varphi$.}{1.00}
+
+\problembox{A3}{The answer sheet contains a life-size photograph of the bubble. Find the area of ​​the object on the wall as accurately as possible. Numerical value $L=1~м$. Note: It is convenient to represent the answer as the area under some graph. Graph paper for graphing is provided in the answer sheet.}{2.50}
+
+Note: It is convenient to represent the answer as the area under some graph. Graph paper for graphing is provided in the answer sheet.
+
+\section*{Part B. Area of ​​a square (6 points)}
+
+A square with side $a$ is placed on the axis of a collecting lens with focal length $F$. Two sides of the square are parallel to the optical axis, the other two are perpendicular. The position of the center of the square is given by the coordinate $x$ along the optical axis, the center of the lens is at point $x_0$. The image of a square is a trapezoid, the dependence of its area $S(x)$ is studied in this part of the problem. Note: When solving this problem, you can use the thin lens formula, according to which the distance $u$ from the lens to the light source, the distance $v$ from the lens to the image and the focal length of the lens $F$ are related to each other by the ratio: \textbackslash\{\}[\textbackslash\{\}frac\{1\}\{u\}+\textbackslash\{\}frac\{1\}\{v\}=\textbackslash\{\}frac\{1\}\{F\}.\textbackslash\{\}]Also, when solving, consider it known that the image of a segment in a lens is also a segment if it does not intersect the focal plane.
+
+Note: When solving this problem, you can use the thin lens formula, according to which the distance $u$ from the lens to the light source, the distance $v$ from the lens to the image and the focal length of the lens $F$ are related to each other by the ratio: \textbackslash\{\}[\textbackslash\{\}frac\{1\}\{u\}+\textbackslash\{\}frac\{1\}\{v\}=\textbackslash\{\}frac\{1\}\{F\}.\textbackslash\{\}]Also, when solving, consider it known that the image of a segment in a lens is also a segment if it does not intersect the focal plane.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B1}{Obtain a theoretical formula for the area $S(x)$ of the image of a square. Consider that $x-x_0 > F + a/2$.}{1.00}
+
+The answer sheet shows the dependence $S(x)$, and at point $x=16~cm$ the image area becomes immeasurably large. It is much more convenient to analyze this dependence if there is no divergence in it (that is, it always takes finite values).
+
+\problembox{B2}{To ensure that the dependence does not diverge at $x=16~cm$, it is convenient to multiply it by some function $f(x)$, which at this point turns into $0$. Please suggest this feature. Recount the points for $f(x)S(x)$.}{1.00}
+
+For further processing, it is convenient to restore the value of $f(x)S(x)$ at point $x=16~cm$. This can be done by extrapolating (extending) the $f(x)S(x)$ relationship.
+
+\problembox{B3}{Obtain the extrapolated value of $C=f(x)S(x)$ at point $x=16~cm$. Note: Please note that the relationship may not be linear around this point}{1.00}
+
+Note: Please note that the relationship may not be linear around this point
+
+\problembox{B4}{Recount the points for $f(x)S(x)/C$.}{0.50}
+
+Each point of the obtained dependence allows us to find $a$, $F$ and the coordinate $x_0$ of the lens center.
+
+\problembox{B5}{For each point, find $a$, $F$ and $x_0$. Also provide the average results of $\bar a$, $\bar F$ and $\bar x_0$ on your answer sheet.}{2.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3962}
+
+\end{document}

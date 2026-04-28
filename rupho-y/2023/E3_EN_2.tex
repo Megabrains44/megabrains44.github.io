@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Laser module}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This experiment is devoted to the study of laser radiation, one of the main inventions of the 20th century, used today in almost all areas of life, from physics to medicine. The main feature of the laser is that it emits monochromatic and highly polarized light, which makes it possible to create a very powerful, narrowly directed radiation flux. In our experiment, we study radiation characteristics such as power and degree of polarization depending on the current flowing through the laser.
+
+\textbf{Equipment:} 1. Optical bench. 2. Movable stands. 3. Steel screen. 4. Magnetic holders. 5. Laser module (Do not exceed 23 mA!). 6. Holder for laser. 7. 1 $\Omega$ resistor. 8. Connecting wires. 9. Multimeter (use only in voltmeter mode). 10. Holders for polarizers (2 pcs). 11. Polarizers (2 pcs). 12. DC power source. 13. CCD line (linear array of photodiodes). 14. Laptop. 15. Masking tape.
+
+\section*{Working with the program}
+
+The program allows you to read the intensity of light falling on the CCD matrix and process the data.
+\textbf{Main elements:} 1. Graph field. 2. Main axes. 3. Intensity plot. 4. Port selection. 5. Sensor sensitivity. 6. Boundary adjustment widget. 7. Left integration boundary. 8. Right integration boundary. 9. Lower integration boundary. 10. Averaging bar. 11. Data acquisition widget. 12. Save/Load widget. 13. Total intensity.
+
+\textbf{Operation:} Connect the device. Select COM3 in port (4). Press "Get Data" (11). Use averaging (10) to reduce noise. Sensitivity (5) must be a divisor of 50000. To find absolute intensity, divide the relative intensity by the sensitivity value. You can adjust boundaries (7-9) by dragging with the mouse, using sliders (6), or entering text (for the lower boundary).
+
+\textbf{Artifacts:} Vertical bars appear if the signal is too low; use averaging. If intensity is too high, pixels "saturate" at approximately 2000 units. A "correct" peak is sharp, while a saturated one is flat-topped (Fig. 3).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Correct (check) and saturated (cross) peak profiles.}
+\end{figure}
+
+\textbf{Notation:} $J$ --- current through the laser; $I$ --- total absolute intensity; $P$ --- laser radiation power.
+
+\section*{Part A. Polarizer (2.3 points)}
+
+Note: The rotation angle $\theta = 0^{\circ}$ when the zero mark is at the lowest point. Set the laser current $J \approx 10$ mA.
+
+\problembox{A1}{Record the exact value of $J$ you are using.}{0.10}
+\problembox{A2}{Measure the dependence of intensity $I$ on the polarizer angle $\theta_1$ from $0^{\circ}$ to $180^{\circ}$ (at least 20 points).}{1.20}
+\problembox{A3}{Propose a linearization for the obtained dependence.}{0.40}
+\problembox{A4}{Plot the linearized graph.}{0.50}
+\problembox{A5}{Determine the angles $\theta_{\max}$ and $\theta_{\min}$ corresponding to maximum and minimum intensity.}{0.10}
+
+\section*{Part B. Crossed polarizers (1.8 points)}
+
+Install a second polarizer between the first one and the screen. Set the first polarizer to $\theta_{\max}$.
+
+\problembox{B1}{Measure the dependence of intensity on the angle of the second polarizer $\theta_2$ from $0^{\circ}$ to $180^{\circ}$ (at least 20 points).}{1.20}
+\problembox{B2}{Plot the resulting dependence.}{0.60}
+
+\section*{Part C. Laser polarization degree (5.0 points)}
+
+Laser light consists of a linearly polarized component $I_{\text{lin}}$ and a natural component $I_{\text{nat}}$. The degree of polarization is:
+$$\beta = \frac{I_{\text{lin}}}{I_{\text{lin}} + I_{\text{nat}}} = \frac{I_{\max} - I_{\min}}{I_{\max} + I_{\min}}$$
+where $I_{\max}$ and $I_{\min}$ are the extrema recorded while rotating the polarizer.
+
+\textbf{Note:} To avoid saturation at high $J$, align the laser spot center slightly below the pixel line. Check that at max current and min sensitivity, you can measure $I_{\min}$ without saturation.
+
+\problembox{C1}{Propose a method for determining $\beta$ at large $J$ without measuring $I_{\max}$ directly.}{0.50}
+\problembox{C2}{Collect the data necessary to analyze the dependence of $\beta$ on $J$ (at least 25 points).}{2.50}
+\problembox{C3}{Calculate $\beta$ for the chosen values of $J$.}{1.00}
+\problembox{C4}{Plot the graph of $\beta$ versus $J$.}{1.00}
+
+\section*{Part D. Quantum efficiency (2.9 points)}
+
+Let $I_{\text{full}}$ be the intensity that would hit the sensor without a polarizer. Assume $P(10 \text{ mA}) = 5$ mW.
+
+\problembox{D1}{Express $I_{\text{full}}$ in terms of $I_{\min}$ and $\beta$.}{0.40}
+\problembox{D2}{Measure $I_{\min}(10 \text{ mA})$ and determine $I_{\text{full}}(10 \text{ mA})$.}{0.25}
+\problembox{D3}{Measure the dependence of $I_{\min}$ on $J$ (at least 25 points).}{0.75}
+\problembox{D4}{Define $i(J) = I_{\text{full}}(J) / I_{\text{full}}(10 \text{ mA})$ and plot $i$ versus $J$.}{0.50}
+
+Differential quantum efficiency $\eta$ is the ratio of the increase in emitted photons $n_{\gamma}$ to the increase in passing electrons $n_e$ per unit time: $\eta = dn_{\gamma} / dn_e$. The energy of one photon is $E = h\nu = hc/\lambda$. Use: $h = 6.626 \cdot 10^{-34}$ J$\cdot$s, $\lambda = 630$ nm, $c = 3 \cdot 10^8$ m/s, $e = 1.6 \cdot 10^{-19}$ C.
+
+\problembox{D5}{Derive an expression for $\eta$ in terms of the power-current dependence $P(J)$ and given constants.}{0.50}
+\problembox{D6}{Numerically determine the maximum value of $\eta$ for your laser.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3494}
+
+\end{document}

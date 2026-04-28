@@ -1,0 +1,158 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Rocket engine}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem we will study the flow of gas in the nozzle of a rocket engine,
+and then the flight of the rocket in airspace and in vacuum.
+
+To begin with, let us recall several fundamental relationships that describe the
+behavior of flowing liquids or gases.
+
+\section*{Part A. Dynamic relations for gas (1.0 points)}
+
+Let us consider a small cylinder of matter with density $\rho$ (see figure),
+moving under the influence of a pressure difference.
+The movement is stationary and one-dimensional.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Write down the equation of motion of the cylinder.
+Determine the pressure gradient $dp/dx$.
+Express your answer in terms of $\rho$, $v$ and $dv/dx$.}{0.50}
+
+\problembox{A2}{Determine the speed of sound $c$ in the gas.
+Express your answer in terms of $p$, $\rho$ and the adiabatic exponent $\gamma$.}{0.50}
+
+\section*{Part B. Mach numbers and nozzle profile (2.0 points)}
+
+To describe gas flows, it is convenient to introduce the Mach number $M=v/c$,
+which characterizes the ratio of the local gas flow velocity to the speed of sound.
+
+We now move on to a qualitative description of the rocket engine nozzle.
+In a rocket engine, fuel burns in the combustion chamber and enters the nozzle.
+The speed of combustion products increases throughout the nozzle.
+
+Solve the following points of the problem under the following assumptions:
+the gas is considered ideal;
+the gas flow is isentropic (constant entropy, no friction or dissipative losses)
+and adiabatic (no heat exchange);
+the gas flow is stationary and one-dimensional, that is, at any fixed point of the
+nozzle all flow parameters are constant in time and change only along the nozzle axis,
+at all points of a given cross section the flow parameters are the same,
+and the gas velocity vector is everywhere parallel to the symmetry axis of the nozzle;
+the gas mass flow rate is the same in all cross sections of the flow;
+the influence of all external forces and fields (including gravitational) is negligible;
+the symmetry axis of the nozzle is the spatial coordinate $x$.
+
+\problembox{B1}{Let us denote the cross-sectional area of the nozzle as $A$.
+Determine the value of $dA/dx$.
+Express your answer in terms of $A$, $v$, $c$ and $dv/dx$.}{1.00}
+
+\problembox{B2}{Qualitatively construct the profile of the nozzle section $A(x)$
+when the gas velocity at the outlet is $v{<}c$.
+We can assume that at the entrance to the nozzle the gas velocity is negligible.
+Indicate special points (if any).}{0.50}
+
+\problembox{B3}{Qualitatively construct the profile of the nozzle section $A(x)$
+when the gas velocity at the outlet is $v{>}c$.
+We can assume that at the entrance to the nozzle the gas velocity is negligible.
+Indicate special points (if any).}{0.50}
+
+\section*{Part C: Analysis of Nozzle Flow (5.0 points)}
+
+Let us consider in more detail the process of gas flow in the nozzle.
+Let the gas pressure $p_c$, temperature $T_c$ and density $\rho_c$ at the nozzle inlet.
+Gas adiabatic index $\gamma$.
+
+\problembox{C1}{When making a rocket engine, the desired pressure at the nozzle
+exit $p$ is set. Find the gas flow rate $v$ from the nozzle as a function of the
+ratio $p/p_c$. Express your answer in terms of $p_c$, $\rho_c$, $\gamma$ and
+the ratio $p/p_c$.}{2.00}
+
+\problembox{C2}{At what value of $p'$ does the outflow velocity from the nozzle
+reach its maximum value? What is this maximum speed $v_\text{max}$?
+Express your answers in terms of $p_c$, $\rho_c$ and $\gamma$.}{0.40}
+
+\problembox{C3}{How does the nozzle outlet area $A$ depend on the desired pressure
+at the nozzle outlet $p$ (with fixed parameters at the nozzle inlet)?
+Find the function $A(p/p_c)$, assuming that the mass flow rate in each section
+of the nozzle is constant and equal to $\lambda$.
+Express your answer in terms of $\lambda$, $p_c$, $\rho_c$, $\gamma$ and
+the ratio $p/p_c$.}{1.10}
+
+\problembox{C4}{Find the pressure ratio $p_t/p_c$ at the singular points for
+points B2 and B3. Express your answer in terms of the gas adiabatic index $\gamma$.
+Such pressures are called critical.}{1.50}
+
+\problembox{C5}{For the nozzle shape defined in step B3, determine the dependence
+of the value $v/c$ on the value $p/p_c$. Express your answer in terms of $\gamma$
+and $p/p_c$. Construct qualitative graphs of the dependence of the gas flow
+velocity $v/c$ along the nozzle for the cases when the outlet pressure is greater
+than the critical one ($p/p_c>p_t/p_c$) and when the outlet pressure is less than
+the critical one ($p/p_c{<}p_t/p_c$).}{0.70}
+
+\problembox{C6}{For the nozzle shape defined in point B3, the gas mass flow rate
+at the nozzle exit can be represented as
+$\lambda = C(A_\text{out},\gamma,p_c,\rho_c)\cdot f(p/p_c)$,
+where $C$ is a constant that depends only on $A_\text{out}$, $\gamma$, $p_c$,
+and $\rho_c$, and $f(p/p_c)$ is a function that depends only on the ratio $p/p_c$
+and $\gamma$. Determine the function $f(p/p_c)$. Express your answer in terms of
+$p/p_c$ and $\gamma$. Construct a qualitative graph of the mass flow rate $\lambda$
+as a function of the pressure at the nozzle exit ($p/p_c\in[0;1]$). If the graph
+has special points, indicate them on the graph and obtain the corresponding
+analytical expressions for $p/p_c$.}{0.80}
+
+\section*{Part D. Momentum acquired by a rocket (0.5 points)}
+
+Let the rocket now fly in the atmosphere. Atmospheric pressure $p_0$, gas pressure
+at the nozzle outlet $p$, nozzle area $A$, gas mass flow $\lambda$,
+gas flow rate from the nozzle $v$.
+
+\problembox{D1}{Find the specific impulse acquired by the rocket while flying
+in the atmosphere. Express your answer in terms of $p_0$, $p$, $A$ and $v$.
+Specific impulse is the additional impulse acquired by a rocket when releasing
+a unit mass of fuel.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3040}
+
+\end{document}

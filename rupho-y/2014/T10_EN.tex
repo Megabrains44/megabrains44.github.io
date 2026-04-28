@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Oscillations in capacitors}}
+\author{\normalsize Y14 (2014) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Rapid Oscillations}
+
+A free molecule of hydrochloric acid ($\rm HCl$) is an electric dipole of length $L = 0.0215~\text{нм}$ and with atomic charges $+q$ and $–q$ ($q = 1.6 \cdot 10^{-19}~\text{Кл}$). The molecule was placed in a uniform electric field of strength $E = 30~\text{kV}/\text{cm}$. The masses of hydrogen and chlorine atoms are $m_1 = 1.67 \cdot 10^{-27}~\text{г}$ and $m_2 = 59.2 \cdot 10^{-27}~\text{г}$, respectively.
+
+\problembox{A1}{Find the period $T_0$ of small oscillations of the dipole.}{2.00}
+
+\problembox{A2}{Estimate (with an accuracy no worse than $5\,\%$) the minimum time $\tau$ during which the dipole will rotate from a position in which its axis is perpendicular to the electric field lines to a position in which this axis is parallel to the field lines.}{2.00}
+
+Note: When the dipole deviates through a large angle $\varphi_\text{max}$, the period of its oscillations will depend on the angle $\varphi_\text{max}$ according to the law: \textbackslash\{\}[ T = T_0 \textbackslash\{\}left[ 1 + \textbackslash\{\}sum\textbackslash\{\}limits_\{k=1\}^\{\textbackslash\{\}infty\} \textbackslash\{\}left( \textbackslash\{\}frac\{(2k-1)!!\}\{(2k)!!\} \textbackslash\{\}right)^2 \textbackslash\{\}sin^\{2k\} \textbackslash\{\}left( \textbackslash\{\}frac\{\textbackslash\{\}varphi_\textbackslash\{\}text\{max\}\}\{2\} \textbackslash\{\}right) \textbackslash\{\}right] \textbackslash\{\}] Double factorial is defined as follows: $k!!=k\cdot(k-2)\cdot \dots \cdot a$, where $a=2$ for even $k$ and $a=1$ for odd $k$.
+
+\textbackslash\{\}[ T = T_0 \textbackslash\{\}left[ 1 + \textbackslash\{\}sum\textbackslash\{\}limits_\{k=1\}^\{\textbackslash\{\}infty\} \textbackslash\{\}left( \textbackslash\{\}frac\{(2k-1)!!\}\{(2k)!!\} \textbackslash\{\}right)^2 \textbackslash\{\}sin^\{2k\} \textbackslash\{\}left( \textbackslash\{\}frac\{\textbackslash\{\}varphi_\textbackslash\{\}text\{max\}\}\{2\} \textbackslash\{\}right) \textbackslash\{\}right] \textbackslash\{\}]
+
+The double factorial is defined as: $k!!=k\cdot(k-2)\cdot \dots \cdot a$, where $a=2$ for even $k$ and $a=1$ for odd $k$.
+
+\section*{Part B. Slow Oscillations}
+
+In the chamber, evacuated to a high vacuum, there is a flat capacitor whose plates are vertical. Distance between plates $D$. In the center of the capacitor there is a small ball (its specific charge is $q_1$). An alternating voltage $U=U_0 \sin \omega t$ is applied to the capacitor plates. At the moment when the voltage went to zero, the ball was released. After some time $\tau$ the ball collided with the capacitor plate. The experiment was repeated, but this time a voltage $U = U_0 \sin^2 \omega t$ was applied to the capacitor. At the moment when the voltage went to zero, the ball was released again and it again hit the same place on the capacitor plate.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T10_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Determine the frequency $\omega$ of the AC voltage source if $T \gg \tau$ is known. Here $T$ is the period of voltage oscillations at the generator.}{10.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3990}
+
+\end{document}

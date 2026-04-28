@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Physics of flight</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Physics of flight</h1>
+<p class="camp">X20 (2020) — English translation</p>
+<h2 class="part">Part A. Aerodynamic force, gliding, flight</h2>
+<p>An aerodynamic force $F_А$ acts on a body uniformly moving in a medium (for example, an airplane wing in the air). From general considerations it is clear that the magnitude of this force depends on the speed of the medium relative to the body $v$, the density of the medium $\rho$ and the size of the body $L$. That is, $F_А=c\rho^p v^q L^r$, where $c$ is a certain coefficient.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the powers $p, q, r$.</div><span class="pb-pts">0.20</span></div>
+<p>The aerodynamic force $F_А$ is usually decomposed into two components: the lift force $Y=c_y \rho^p v^q L^r$ is directed perpendicular to the velocity vector, the drag force $X=c_x \rho^p v^q L^r$ is directed along the velocity vector (Fig. 1). Here we introduced dimensionless coefficients: $c_y$ – lift coefficient, $c_x$ – drag coefficient, which depend on the shape of the body and the direction of velocity relative to the body.</p>
+<div class="figure"><img src="T3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">For some aircraft during horizontal flight it turned out to be $K=c_y/c_x =15$. Determine what the thrust force $F$, directed horizontally, is equal to in this case, if the mass of the aircraft is $m=15~т$, the acceleration of free fall is $g=9.8~m/s^2$.</div><span class="pb-pts">0.30</span></div>
+<p>Coefficients $c_x$ and $c_y$ depend on the angle of attack - the angle between the wing plane and the direction of speed (Fig. 1). This dependence can be displayed on a parametric graph, where different points of the curve correspond to different angles of attack, and the axes are $c_x$ and $c_y$.</p>
+<div class="figure"><img src="T3_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Using the indicated graph (Fig. 2), determine the maximum horizontal distance $S$ the plane can move during gliding if it descends vertically to a distance $H=1~км$. When gliding, the aircraft's engines are turned off, that is, the thrust force is zero and the aircraft's speed is constant.</div><span class="pb-pts">1.00</span></div>
+<p>At the moment of a straight-line take-off run of an aircraft, its speed is directed horizontally, and a constant thrust force $F_Т$ acts on it.</p>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Knowing that the drag force is $X=c_x \rho^p v^q L^r=\beta v^q$, find how the speed of the plane $v$ depends on the distance traveled $s$. Assume that at the initial moment the speed is zero. Express your answer in terms of thrust $F_Т$, coefficient $\beta$, aircraft mass $m$, distance traveled $s$.</div><span class="pb-pts">1.50</span></div>
+<p>Aircraft engine power $N$, aerodynamic quality $K=c_y/c_x$, fuel mass consumption $\mu$, free fall acceleration $g$, ratio of the final and initial mass of the aircraft $m_1/m_0$.</p>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Determine the flight range $S$.</div><span class="pb-pts">1.50</span></div>
+<h2 class="part">Part B. Flight stability</h2>
+<p>One wing is not enough for stable and controlled flight; another horizontal aerodynamic plane is used: a stabilizer. On a passenger plane, this is a small “wing” at the back. There are 4 basic aerodynamic designs that differ in the position (front/rear) and angle of attack of the stabilizer (Fig. 3). In Fig. Figure 3 shows the equilibrium positions during horizontal flight for various schemes.</p>
+<div class="figure"><img src="T3_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Indicate which of these 4 schemes will be stable (strive to maintain a horizontal position), unstable (spontaneously deviate from a horizontal position), indifferent (neither one nor the other)? Consider that $\left|\alpha_c\right|=\alpha$, and that the forces $Y$ and y depend linearly on $\alpha$. Justify your answer using formulas, diagrams or drawings.</div><span class="pb-pts">1.20</span></div>
+<h2 class="part">Part C. Flight in a rarefied atmosphere</h2>
+<p>Let us assume that the aircraft is moving high (the free path of the molecules is much greater than the size of the vehicle) and its speed of motion $v_1$ is much greater than the thermal speeds of the molecules. Let its wing be a plane with area $S$ and angle of attack $\alpha$. Angle of attack is the angle between the plane of the wing and the speed, which is horizontal.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Determine the lifting force of the wing $Y$ if the density of the surrounding environment is $\rho$. Consider that the collisions of molecules are absolutely elastic.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">At what angle of attack of the wing $\alpha_M$ is the lift force maximum? Determine this maximum lift value.</div><span class="pb-pts">0.50</span></div>
+<p>One of the problems in creating an aerospace aircraft is protecting the device from overheating when descending in dense layers of the atmosphere. To solve the problem, ceramic thermal insulation materials with a thermal conductivity coefficient of $λ=0.01~Вт/(м\cdot К)$, density of $\rho=100~kg/м^3$, and specific heat capacity of $c=10^3~Дж/(kg\cdot К)$ are used. The characteristic time during which the device is in dense layers of the atmosphere $\tau=10^3~с$.</p>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Estimate in order what the thickness of the thermal insulation $h$ should be equal to so that the temperature of the thermal insulation (and the apparatus) does not have time to level out.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part D: The Magnus Effect</h2>
+<p>A rotating cylinder that moves with speed $\vec{v}$ in a liquid or gas with density $\rho$ is acted upon by a force $\vec{F}=2\pi R^2 L\rho[\vec\omega\times\vec{v}]$. Here $R$ is the radius of the cylinder, $L$ is the length of the cylinder, $\vec\omega$ is the angular velocity of rotation of the cylinder. The emergence of this force is called the Magnus effect. In this part of the problem, do not take into account the force of air resistance, and also assume that the angular velocity of rotation of the cylinder is constant.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Find the magnitude and direction of the velocity of the cylinder at which it will move horizontally without acceleration. The mass of the cylinder is $M$. Gravity acceleration $g$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">A rotating cylinder was released into a gravity field without an initial velocity. Indicate the dependences of coordinates $x$ and $y$ on time $t$. Draw a high-quality trajectory of the cylinder.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Determine the maximum speed $v_{max}$ of the center of the cylinder for the motion described in D2.</div><span class="pb-pts">0.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/17">https://pho.rs/p/17</a></p>
+</body>
+</html>

@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Gas with variable heat capacity}}
+\author{\normalsize W26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Usually, when studying ideal gases, it is assumed that their molar heat capacity $C_V$ at constant volume is a constant that does not depend on temperature and is determined by the number of atoms in a gas molecule. However, in reality this heat capacity can change. At very low temperatures, thermal energy is not enough to cause the rotational motion of molecules, and they can be considered monatomic. Therefore, the heat capacity at low temperatures is lower than at high temperatures. In this problem we will consider several cases of varying heat capacity. In this case, the equation of state of an ideal gas (that is, the relationship between pressure, volume and temperature) does not change.
+
+\section*{Part A. Heat capacity linearly dependent on temperature (5.7 points)}
+
+In this part, we will assume that over the entire temperature range of interest to us, the heat capacity of one mole of gas at a constant volume depends on temperature as $C_{V}  = C_0 + a T$ ($C_0, a > 0 $ are known constants that do not depend on temperature). All processes are carried out with one mole of gas. In all answers in this part, you can use the quantities $C_0$, $a$, as well as the universal gas constant $R$.
+
+\problembox{A1}{Determine the dependence of the internal energy of such a gas on temperature. Consider that at $T = 0$ the internal energy is zero.}{0.50}
+
+\problembox{A2}{What is the heat capacity of gas $C_P$ at constant pressure at a given temperature $T$?}{0.30}
+
+\problembox{A3}{Let an isochoric process occur with a gas, in which the pressure increases from $p_1$ to $p_2$, the volume is equal to $V$. Find the amount of heat supplied $Q_V$.}{0.40}
+
+\problembox{A4}{Let an isobaric process be carried out with a gas, the initial volume is $V_1$, the final volume is $V_2$, and the pressure is $p$. Find the amount of heat supplied $Q_P$.}{0.40}
+
+\problembox{A5}{Consider a cycle $123$, consisting of a process $1-2$, in which the pressure is directly proportional to the volume, an isochore $2-3$ and an isobar $3-1$. Moreover, it is known that $V_2 = 2 V_1$, and the heat capacities at constant volumes at points 1 and 2 are related by the relation $C_{V2} = 1.5 C_{V1}$. Determine the efficiency of this cycle. Find the numerical value.  Meaning $C_0 = 3R/2$.}{1.50}
+
+\problembox{A6}{Let us consider an adiabatic process performed with a gas. Derive the relationship between infinitesimal increments of volume $\mathrm dV$ and temperature $\mathrm dT$. Express your answer using $C_0$, $a$, $T$, $V$, $R$.}{0.50}
+
+\problembox{A7}{From the relation in the previous paragraph, obtain an adiabatic equation connecting $T$ and $V$ of the form $$ f(T, V) = \textbackslash\{\}mathrm\{const\}, $$в функцию $f$ могут также входить $C_0$, $a$, $R$.}{0.90}
+
+\problembox{A8}{Consider the Carnot cycle $1234$, consisting of isotherms $12$ and $34$ and adiabats $23$ and $41$. Express the volumes $V_3$, $V_4$ in terms of $V_1$, $V_2$, temperatures on isotherms $T_+ = T_1 = T_2$, $T_- = T_3 = T_4$ and gas parameters $C_0$, $a$, $R$.}{0.40}
+
+\problembox{A9}{By direct calculation (without using a general formula), show that the efficiency of the Carnot cycle is the same as for an ideal gas with constant heat capacity.}{0.80}
+
+\section*{Part B. Piecewise linear heat capacity (3.3 points)}
+
+As a more realistic model of the dependence of the heat capacity of a gas on temperature, the following can be proposed. At $T< T_1$ the heat capacity $C_V$ is constant and equal to the heat capacity of the monatomic gas $C_1 = 3R/2$. In the temperature range $T_1 < T < T_2$, the heat capacity grows according to a linear law, reaching at $T = T_2$ the value $C_2 = 5R/2$, corresponding to a diatomic gas. Further, the heat capacity remains constant. We will consider one mole of such a gas for which $T_2 = 2 T_1$. Let the initial temperature of the gas be $T_A = T_1/2$. We will increase the gas temperature to $T_B = 3 T_1$ in various ways.
+
+\problembox{B1}{Find the amount of heat that needs to be supplied to the gas during isochoric heating $Q_V$. Express your answer in terms of $T_1$, $R$.}{1.00}
+
+\problembox{B2}{Find the amount of heat that must be supplied to the gas during isobaric heating $Q_P$. Express your answer in terms of $T_1$, $R$.}{0.50}
+
+\problembox{B3}{Let the initial volume of gas be $V_0$. What will the final volume be equal to if the temperature was increased adiabatically? Find the work done in this process. Express your answers using $T_1$, $R$, $V_0$.}{1.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4667}
+
+\end{document}

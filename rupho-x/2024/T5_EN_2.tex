@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Precession of Mercury's orbit}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The problem of the motion of a planet in the gravitational field of the Sun is one of the oldest and most famous in mechanics. As a first approximation, we can consider the planets to be pointlike and not take into account the interaction between them. In this case, the movement is described by Kepler's laws, which are fulfilled with good accuracy. However, in reality the planets interact with each other. Over a long period of time, interaction effects accumulate, which leads to changes in orbital parameters. These changes are actually observed with precise astronomical measurements and are described with good accuracy by classical mechanics. This problem examines the change in the orbit of Mercury under the influence of other planets.
+
+Mercury moves in an elliptical orbit with semimajor axis $a$ and eccentricity $e$. The eccentricity is small enough that the orbit is close to circular with radius $a$. Changes in orbital parameters occur extremely slowly, so when taking into account the influence of another planet, it is possible to average over its position in space. Also, unless otherwise stated, we will consider the influence of only one planet. Considering the orbit of the planet to be circular with radius $R$, we replace the planet with a stationary ring of radius $R$, along which the mass of the planet $M$ is uniformly distributed.  Thus, it is necessary to solve the problem of the motion of Mercury in the gravitational field of the Sun and a ring of radius $R$.
+
+Use the following assumptions and definitions: The radius of the planet's orbit is much larger than the radius of Mercury's orbit $R \gg a$. The movement of Mercury and all other planets occurs in the same plane. The $z$ axis is directed perpendicular to the plane of motion. The mass of the Sun is much greater than the masses of all the planets, so it can be considered motionless and placed at the origin of coordinates. The gravitational field at a given point in space is characterized by the acceleration of gravity $\vec{g}$ - the acceleration of an infinitesimal body placed at a given point. The perihelion of Mercury's orbit is the point in its orbit closest to the Sun.
+
+When solving the problem, use the following notation and numerical values: 
+\begin{itemize}
+    \item $G = 6.67 \times 10^{-11}~\text{m}^3 \cdot \text{kg}^{-1} \cdot\text{s}^{-2}$ – gravitational constant;
+    \item $a = 5.79 \times 10^{10}~\text{m}$ – semimajor axis of Mercury’s orbit;
+    \item $e = 0.206$ – eccentricity of Mercury’s orbit;
+    \item $m$ – mass of Mercury;
+    \item $M_S = 2.00 \times 10^{30}~\text{kg}$ – mass of the Sun;
+    \item $M$ – mass of another planet;
+    \item $R$ – radius of the orbit of another planet;
+    \item $\vec{r}$ – radius vector drawn from the Sun to Mercury, $r$ – distance from the Sun to Mercury at a given time;
+    \item $\vec{e}_r = \vec{r}/r$ – unit vector of direction from the Sun to Mercury.
+\end{itemize}
+
+\section*{Part A. Model parameters (1.4 points)}
+
+\problembox{A1}{At this point we will consider the movement of Mercury without taking into account other planets. Consider the orbit to be circular. Find the period of its revolution around the Sun $T$ (formula and numerical value in years) and the magnitude of the angular momentum $L$ (formula only). Express your answer in terms of $G$, $a$, $M_S$, $m$.}{0.40}
+
+Ring simulating a planet
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A2}{Find the projection of the fall acceleration $g_z$ created by the ring on its axis of symmetry at a distance $z \ll R$ from the center. Express your answer in terms of $G$, $M$, $R$, $z$.}{0.20}
+
+\problembox{A3}{Find the radial projection of the gravitational acceleration $g_r$ created by the ring at a point in the plane of the ring at a distance $ r \ll R$ from its center. Use Gauss's theorem for the gravitational field. Write the answer up to terms of order $r$. Express your answer in terms of $G$, $M$, $R$, $r$. The direction from the ring axis is considered positive.}{0.50}
+
+\problembox{A4}{Find the potential energy $V(r)$ of Mercury if it is at a distance $r$ from the Sun. Express your answer in terms of $r$, $R$, $G$, $M_S$, $M$, $m$. The potential energy of interaction with the ring is zero when Mercury is at its center, and the potential energy of interaction with the Sun is zero when Mercury is at infinity.}{0.30}
+
+\section*{Part B. Equations of Motion (1.4 points)}
+
+To determine the shape of the orbit, it is convenient to use the variable $u = 1/r$ and study its dependence on the polar angle $\theta$. Let the radial force acting on Mercury from the Sun and the ring be equal to $F_r$ and the potential energy $V(r)$ corresponds to it.
+
+\problembox{B1}{Let the angular momentum of Mercury be $L$. Express the derivative of the distance to the Sun with respect to time $\dot{r} = dr/dt$ through the derivative $u$ with respect to the angle $u' = du/d\theta$, as well as through $L$, $u$, $m$.}{0.40}
+
+\problembox{B2}{Write down an expression for the total mechanical energy of Mercury. Express your answer in terms of $u$, $u'$, $m$, $L$, $V(r)$.}{0.40}
+
+\problembox{B3}{Having differentiated the conservation law (for example, with respect to the angle), obtain an expression for $u''(\theta)$. Express your answer in terms of $u$, $G$, $m$, $M_S$, $M$, $R$, $L$.}{0.60}
+
+\section*{Part C. Precession of a near-circular orbit (3.4 points)}
+
+We will assume that the orbit is close to circular, $u = u_0 + \delta u$, where $\delta u \ll u_0$, and $u_0 = 1/a$ ($a$ is the radius of the circular orbit). Consider that the angular momentum is equal to the angular momentum of the body in a circular orbit of radius $a$.
+
+\problembox{C1}{Using the equation from $B3$, you get an equation from which you can find the radius of the circular orbit $a$ (you don't need to solve it). The equation may include $m$, $M_s$, $M$, $R$, $G$, $L$, $a$.}{0.30}
+
+\problembox{C2}{Obtain a linearized equation of motion for the deviation $\delta u$ of the orbital shape from circular, that is, an expression for $\delta u''$ to first order in $\delta u$. The answer may include the quantities used in C1.}{0.60}
+
+\problembox{C3}{Let us neglect the terms describing the field of the ring. Write down the solution for $\delta u(\theta)$ in this approximation. Consider that $\theta = 0$ corresponds to the maximum value of $u$. Express your answer in terms of the radius of the circular orbit $a$ and the eccentricity $e \ll 1$. Show that the solution describes a closed orbit.}{0.50}
+
+\problembox{C4}{Find a solution to the equation for $\delta u(\theta)$ from $C2$ with the same initial conditions as in $C3$. Now consider the contribution of the ring. Express your answer in terms of the orbital radius $a$, its eccentricity $e\ll 1$ and $M$, $M_S$, $R$. The angular momentum value is equal to that found in A1.}{0.50}
+
+\problembox{C5}{From the solution found it follows that during one orbital revolution the position of Mercury’s perihelion changes by a certain amount $\delta \theta$. Obtain an exact expression for $\delta  \theta$ following from the solution in $C4$, as well as an approximate expression for $\delta  \theta$ to first order in $M$. Indicate the direction of the perihelion shift (in the direction of Mercury's rotation or against it). Express your answer in terms of $M$, $M_S$, $R$, $a$.}{0.50}
+
+\problembox{C6}{The table shows the orbital radii (we consider them approximately equal to the semimajor axes) and masses for the planets of the Solar System. For each of them, calculate the shift of the perihelion of Mercury per revolution around the Sun. In all cases, you can assume that the radius of the planet’s orbit is much greater than the radius of Mercury’s orbit. Express your answer in arcseconds. Indicate the two planets that make the greatest contribution to precession. Note: An arcsecond is a unit of measurement of angles that is 1/3600 of a degree.}{0.70}
+
+Planet $M$, $10^{24}$ kg $R$, $10^{11}$ m Venus 4.9 1.08 Earth 6.0 1.50 Mars 0.64 2.28 Jupiter 1900 7.78 Saturn 568 14.3 Uranus 87 28.7 Neptune 102 45.0
+
+\problembox{C7}{Find the angle by which Mercury's perihelion shifts in one century, taking into account the contributions of all the planets given in the table. Express your answer in arcseconds.}{0.30}
+
+\section*{Part D. Precession of an arbitrary orbit (3.8 points)}
+
+In this part we will not consider the eccentricity of Mercury's orbit to be small. Let us study the precession of the orbit under the influence of one planet, which, as before, will be replaced by a ring of mass $M$ and radius $R$. It is impossible to solve the equation for the dependence $u(\theta)$ analytically. However, you can still find the change in the perihelion position by considering the Laplace-Runge-Lenz vector (hereinafter referred to as the Laplace vector) \[ \vec{A} = \vec{v} \times \vec{L} - Gm M_S \vec{e}_r. \] Here $\vec{v}$ is the velocity of Mercury, $\vec{L}$ is its angular momentum. This vector is remarkable in that in the case of motion in the field of the Sun (without taking into account other planets), it remains constant. The magnitude of the Laplace vector is equal to \[ A = Gm M_S e, \] where $e$ is the eccentricity of the orbit, the vector is directed from the Sun to the perihelion of Mercury. If we take into account the influence of the ring field, the Laplace vector will change, but the rate of change will be small. Having found the change in the Laplace vector over a period, one can find the corresponding change in the direction to the perihelion. When calculating in coordinates, direct the $x$ axis from the Sun to the perihelion of the orbit, and the $y$ axis perpendicular to it in the plane of Mercury's orbit. The time derivative of the unit vector $\vec{e}_r$ when a particle moves with angular velocity $\vec{\omega}$ is equal to \[ \frac{d}{dt} \vec{e}_r = \vec{\omega} \times \vec{e}_r. \]
+
+\problembox{D1}{Let Mercury move in the central field, the force acting on it is equal to $\vec{F}  = F_r \vec{e}_r$. Show that the derivative is \[ \frac{d}{dt} \left( \vec{v} \times \vec{L}\right) = B \frac{d}{d t} \vec{e}_r. \] Find the coefficient $B$, express it in terms of $r$, $m$, $F_r$.}{0.80}
+
+\problembox{D2}{Find the time derivative of the Laplace vector for Mercury, which moves in the field of the Sun and the ring. Express your answer in terms of $m$, $M$, $R$, $r$, $G$, $\dfrac{d \vec{e}_r}{dt}$.}{0.50}
+
+\problembox{D3}{Let $\theta$ be the polar angle between the radius vector of Mercury $\vec{r}$ and the direction of the axis $x$. The angle $\theta$ increases as Mercury moves. Calculate the derivatives of the Laplace vector components with respect to $\theta$, $A_x'$, and $A_y'$. Express your answer in terms of $m$, $M$, $R$, $r$, $G$, $\theta$.}{1.00}
+
+You may need one of the following integrals: \begin{align*} \int_0^{2\pi} \frac{\cos \theta}{1 + e \cos \theta} d \theta = -\frac{2\pi}{e} \left(\frac{1}{\sqrt{1- e^2}} - 1 \right); \quad \int_0^{2\pi} \frac{\cos \theta}{(1 + e \cos \theta)^2} d \theta = - \frac{2\pi e}{ (1- e^2)^{3/2}};\\\\ \int_0^{2\pi} \frac{\cos \theta}{(1 + e \cos \theta)^3} d \theta = -\frac{3\pi e}{ (1- e^2)^{5/2}}; \quad \int_0^{2\pi} \frac{\cos \theta}{(1 + e \cos \theta)^4} d \theta = -\frac{\pi e (4 + e^2)}{ (1- e^2)^{7/2}}. \end{align*}
+
+\problembox{D4}{Find the change in the Laplace vector $\Delta \vec{A}$ over the period. Indicate the projections of this change on the axes indicated in the previous paragraph. When calculating, assume that Mercury moves in an elliptical orbit. Express the answer in terms of the orbital semimajor axis $a$, eccentricity $e$, $G$, $m$, $M$, $M_S$.}{1.00}
+
+\problembox{D5}{Find the rotation of the direction to the perihelion of Mercury during the period $\Delta \theta$. Express your answer in terms of $G$, $M_S$, $M$, $R$, $a$, $e$. By what percentage will the result of point C7 change for the perihelion shift due to taking into account the eccentricity of Mercury's orbit?}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3686}
+
+\end{document}

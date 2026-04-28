@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{A long time ago in a galaxy far, far away...}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Modification of Newtonian dynamics}
+
+The dependence of the orbital speed of stars and gas in a galaxy on the distance to the center of the galaxy is called the rotation curve of the galaxy. According to Newtonian dynamics, the speed should decrease with distance from the center of the galaxy (Fig. 1A), assuming that most of the galaxy's mass is located at its center. However, it turns out that in fact the speed is an almost constant function of the radius (Fig. 1B). One solution to this discrepancy can be obtained by modifying Newtonian dynamics as follows. Rice. 1.
+
+The dependence of the orbital speed of stars and gas in a galaxy on the distance to the center of the galaxy is called the rotation curve of the galaxy. According to Newtonian dynamics, the speed should decrease with distance from the center of the galaxy (Fig. 1A), assuming that most of the galaxy's mass is located at its center. However, it turns out that in fact the speed is an almost constant function of the radius (Fig. 1B). One solution to this discrepancy can be obtained by modifying Newtonian dynamics as follows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Acceleration due to gravity depends not just on the mass $m$, but on $m\cdot{\mu\left(\frac{a}{a_0}\right)}$, where $\mu(x)$ is a certain function, the value of which tends to unity for large arguments ($x\gg{1}$), and to $x$ for small arguments ( $x$ is slightly less than $1$), $a$ - the acceleration due to gravity, $a_0$, is constant. Thus, $2$ Newton's law takes the form: $F=m\cdot{\mu\left(\frac{a}{a_0}\right)a}$. The centripetal acceleration of stars in gas clouds on the outskirts of spiral galaxies will, as is correct, be less than $a_0$. A graph of the actually measured rotation curve of the Milky Way is shown in Figure 2. $1~kpc=\text{килопарсек}$, $1~\text{парсек}=3\cdot{10^{16}}~\text{м}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{How does the orbital rotation speed depend on the distance to the galactic nucleus in the case of ordinary Newtonian dynamics? Consider that the mass of the galaxy is concentrated in its core.}{0.50}
+
+\problembox{A2}{Let in reality the orbital rotation speed}{1.00}
+
+\problembox{A3}{Using the portion of the curve in the $r<1~\text{парсек}$ plot, estimate the mass of the Milky Way core, assuming that Newtonian dynamics operates near the core at distances from the galactic core $r<1~\text{парсек}$. Assume that the main contribution to gravity is made only by the mass in the core.}{1.00}
+
+\problembox{A4}{Taking into account the modified Newtonian dynamics described above, prove that at large distances from the galactic nucleus, where acceleration due to gravity is small, the orbital speed does not depend on the distance to the center and is equal to a constant. Let this speed in the distance be equal to $v_\infty$. How are the constants $a_0$ and $v_\infty$ related? Using the graph, estimate $v_\infty$.}{1.00}
+
+\problembox{A5}{Estimate the value of the constant $a_0$ based on the data in the graph and assuming that in reality the mass of the entire Milky Way is $k=10^6$ times greater than the mass of the core.}{0.50}
+
+\section*{Part B. Tidal forces}
+
+\problembox{B1}{It is known that the power of tidal frictional forces acting on the Earth, caused by the Moon’s revolution around it, is $N\approx{10^{12}~\text{Вт}}$. Estimate, by order of magnitude, the increment in the duration of the earth's day $\Delta{T}_\text{З}$ and the lunar month $\Delta{T}_\text{л}$ over the time $\tau=100~\text{млн.лет}$. The average radius of the Moon's orbit is $R=4\cdot{10^5}~\text{км}$, the mass of the Moon is $m_\text{Л}=10^{22}~\text{кг}$, the orbital period is $T_\text{Л}=27{,}3~\text{сут}$, the moment of inertia of the Earth is $I=8\cdot{10^{37}}~\text{кг}\cdot{м}^2$. The orbital motion of the Moon is co-directed with the rotation of the Earth around its axis.}{3.00}
+
+\section*{Part C. Relativistic processes}
+
+\problembox{C1}{The relativistic $\pi^0$-meson decayed into two gamma quanta with energies $E_1=81~\text{МэВ}$ and $E_2=450~\text{МэВ}$. Find the angle $\varphi$ between the directions of scattering of gamma quanta. Mass of the $\pi^0$-meson $135~\text{МэВ}$.}{1.00}
+
+\problembox{C2}{A positron with energy ($\gamma=3$) collides with an electron at rest. The resulting gamma rays scatter symmetrically relative to the direction of the positron. Find the angle $\varphi$ between the directions of scattering of gamma quanta.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3041}
+
+\end{document}

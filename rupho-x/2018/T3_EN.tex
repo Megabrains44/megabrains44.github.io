@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Bubble fluctuations}}
+\author{\normalsize X18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Consider an air bubble of radius $R$ immersed in water of density $\rho$. At equilibrium, the pressure inside and outside the bubble is $p_0$, if the surface tension of water is not taken into account. Consider air to be an ideal diatomic gas. After a slight disturbance, the bubble begins to oscillate radially with a certain frequency. The following steps will help you find this frequency. This can be done by representing the potential energy of an oscillating bubble as $Ax^2$, and the kinetic energy as $B\left(dx/dt\right)^2$, where $x$ is a small change in radius. Then the frequency will be $\omega=\sqrt{A/B}$.
+
+\problembox{A1}{Find the restoring pressure force acting on a small area $dS$ of the bubble surface when its radius changes adiabatically from $R$ to $R+x$, ($x\ll{R}$).}{0.70}
+
+\problembox{A2}{Find the energy required to change $x$ from $0$ to some small value $x_0$.}{1.00}
+
+\problembox{A3}{The radial speed of water at the surface of the bubble is $dx/dt$. Given that water is incompressible, find the radial speed of water at a distance $r$ ($r>R$) from the center of the bubble.}{1.00}
+
+\problembox{A4}{Find the total kinetic energy of water.}{1.00}
+
+\problembox{A5}{If we neglect the air mass, the kinetic energy found in the previous paragraph will be the kinetic energy of the oscillating bubble. Find the vibration frequency.}{0.50}
+
+Now let's take into account the influence of surface tension. The surface tension coefficient $\sigma$ is defined as the energy required to create a surface of unit area ($W=\sigma S$).
+
+\problembox{B1}{Find the contribution of surface tension to the energy required to create a bubble of radius $R$ in water.}{0.20}
+
+\problembox{B2}{Find the frequency of bubble oscillations, taking into account the influence of surface tension of water. Consider the pressure outside the bubble equal to $p_0$.}{1.60}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/311}
+
+\end{document}

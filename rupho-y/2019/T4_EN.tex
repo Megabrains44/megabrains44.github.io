@@ -1,0 +1,179 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Patch-clamp}}
+\author{\normalsize Y19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Living cells are covered with a membrane, the structural basis of which is a double layer of lipids, weakly permeable to water and practically impermeable to ions. Each cell must exchange various substances and, in particular, ions with the external environment. The transport of ions across the membrane plays an important role in the processes of cell excitation and signal transmission. Ions penetrate into and out of the cell through proteins built into the membrane - channels. Channels are proteins that function as membrane pores by forming openings through which ions can pass. Membrane channels are selective - permeable only to certain substances. Selectivity is determined by the radius of the pores and the distribution of charged functional groups in them. There are channels that selectively allow sodium ions to pass through (sodium channels), as well as potassium, calcium and chloride channels. (See Figure 1.) Figure 1. A cell with channels permeable to various substances
+
+Living cells are covered with a membrane, the structural basis of which is a double layer of lipids, weakly permeable to water and practically impermeable to ions. Each cell must exchange various substances and, in particular, ions with the external environment. The transport of ions across the membrane plays an important role in the processes of cell excitation and signal transmission. Ions penetrate into and out of the cell through proteins built into the membrane - channels. Channels are proteins that function as membrane pores by forming openings through which ions can pass. Membrane channels are selective - permeable only to certain substances. Selectivity is determined by the radius of the pores and the distribution of charged functional groups in them. There are channels that selectively allow sodium ions to pass through (sodium channels), as well as potassium, calcium and chloride channels. (See Figure 1.)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Single channel \& Whole cell patch clamp}
+
+There are light-sensitive ion channels - channel rhodopsins. These channels transition from a closed state, in which they are impenetrable to ions, to an open state, absorbing photons of a certain wavelength (see Fig. 2). Figure 2. Photocycle of channel rhodopsin,
+three-state
+
+There are light-sensitive ion channels - channel rhodopsins. These channels transition from a closed state, in which they are impenetrable to ions, to an open state, absorbing photons of a certain wavelength (see Fig. 2).
+
+Figure 2. Photocycle of channel rhodopsin,
+three-state
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Next, the protein passes through several intermediate states to return from the open state to the closed state (in what follows we will assume that in intermediate states the channel is also impermeable to any ions). All these states together are called a photocycle (see Fig. 3., which shows a photocycle in which one intermediate state $I$, $C$ and $O$ are closed and open states, respectively). Transitions between these states occur with some probability. The transition from a closed state to an open state is impossible without absorption of light. In the presence of light, this transition also occurs with some probability. Figure 3. Closed and open channel states
+
+Next, the protein passes through several intermediate states to return from the open state to the closed state (in what follows we will assume that in intermediate states the channel is also impermeable to any ions). All these states together are called a photocycle (see Fig. 3., which shows a photocycle in which one intermediate state $I$, $C$ and $O$ are closed and open states, respectively). Transitions between these states occur with some probability. The transition from a closed state to an open state is impossible without absorption of light. In the presence of light, this transition also occurs with some probability.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+The probability of a transition between two states $A$ and $B$ is described by the value $\tau$ – the characteristic time of transition from $A$ to $B$. This time is defined as the inverse derivative of the transition probability with respect to time: $\tau_{AB}=\left(\frac{dp}{dt}\right)^{-1}$ (that is, the transition probability in time $dt$ is equal to $dp$).
+
+\problembox{A1}{Let us consider a protein for which only two states $A$ and $B$ are possible. Let a direct transition from the state $A$ to the state $B$ with a known characteristic time $\tau_{AB}$ be possible, and the reverse transition does not occur (in fact, this means that $\tau_{BA}\to{\infty}$). Consider a sample containing $N$ of such proteins. Let them all be in the $A$ state at the initial moment. Find the dependence of the amount of proteins in each state as a function of time $N_A(t)$ and $N_B(t)$. Express your answers in terms of $\tau_{AB}$ and $N$.}{0.50}
+
+Due to the free passage of charged particles (ions), the channels in the open state effectively increase the electrical conductivity of the cell membrane. To study the electrical properties of the membrane and study the properties of ion channels, there is a method of local potential fixation (Patch-clamp). The method is that a glass pipette forms a contact with a cell membrane with a resistance of several gigaohms - this is the so-called gigaohm contact. An electrode is placed in a pipette filled with electrolyte, the second electrode is placed extracellularly, in the washing fluid
+
+Figure 4. Patch-clamp method. Formation of gigaohm contact
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+To measure the conductances of single channels, the pipette, together with a fragment of the cell membrane that is located inside it, is detached from the rest of the cell. The narrow tip of the pipette leaves such a small portion of the membrane that no more than one channel can be built into it. In the case of light-sensitive proteins, the current flowing through a fragment of the membrane is measured: jumps in current strength when the light is turned on indicate the opening of the light-sensitive channel. This method is called Single Channel Patch Clamp. (see Figure 5. Obtaining a membrane fragment, the right picture is a selected fragment with one channel).
+
+Figure 5. Following steps after Figure 4 to obtain a membrane fragment on a pipette. The left picture is the Whole cell method (a whole cell is attached to a pipette), the right picture is the Single channel method.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+Let's consider measurements using the Single Channel Patch Clamp method for three channels. All three channels have photocycles consisting of three states: $C$ (closed), $O$ (opened) and $I$ (intermediate). The channels have the following characteristic transition times: $\tau_{CO}=10~\text{мс}$, $\tau_{OI}=10~\text{мс}$, $\tau_{IC}=0{,}1~\text{мс}$, $\tau_{CO}=1~\text{мс}$, $\tau_{OI}=10~\text{мс}$, $\tau_{IC}=30~\text{мс}$ $\tau_{CO}=1~\text{мс}$, $\tau_{OI}=10~\text{мс}$, $\tau_{IC}=1000~\text{мс}$. The graphs show $10$ current versus time plots for each channel (the green line shows the time when the light is on).
+
+The graphs show $10$ current versus time plots for each channel (the green line shows the time when the light is on).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{A2}{Please indicate which ones belong to which channel? The height of the step is the same everywhere and is equal to $I=1.4~\text{пА}$.}{0.50}
+
+When measuring the conductivity of single channels, the current strength is very small and difficult to detect. In order to avoid these difficulties, a method is used in which a fragment of the membrane located inside the pipette is broken through by excess pressure, and the cell remains attached to the pipette. Thus, it turns out that the electrode inside the pipette is separated from the electrode in the washing liquid by a complete cell membrane. In this case, the solution inside the cell becomes the same as that which was poured into the pipette. This method is called Whole Cell Patch Clamp (see Figure 5, the left figure shows a Whole Cell contact, see Figure 6, which shows the entire cell) and it allows you to measure the currents caused by the conductivity of all channels located in the cell membrane together. Figure 6. Whole-cell connection.
+
+When measuring the conductivity of single channels, the current strength is very small and difficult to detect. In order to avoid these difficulties, a method is used in which a fragment of the membrane located inside the pipette is broken through by excess pressure, and the cell remains attached to the pipette. Thus, it turns out that the electrode inside the pipette is separated from the electrode in the washing liquid by a complete cell membrane. In this case, the solution inside the cell becomes the same as that which was poured into the pipette. This method is called Whole Cell Patch Clamp (see Figure 5, the left figure shows a Whole Cell contact, see Figure 6, which shows the entire cell) and it allows you to measure the currents caused by the conductivity of all channels located in the cell membrane together.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{A3}{Let's consider 3 cells, the membranes of which have built-in channels described in the previous paragraph. In the membrane of each cell there are many ($\gg{1}$) channels and all of the same type. Measurements are made using the Whole Cell Patch Clamp method. The light turns on and in all three cases they wait until the current readings are established, after which the light turns off. Draw qualitatively the current versus time dependence for all three cells. What is the steady current strength for each of the cells if the voltage applied between the electrodes and the solutions in the pipette and in the washing liquid were left unchanged after the experiment in point A2. Express your answers in terms of the number of channels in the cell $N=1000$, $\tau_{CO}$, $\tau_{OI}$ and $\tau_{IC}$.}{1.00}
+
+\section*{Part B. Nernst-Planck Equation}
+
+When the channel is opened, ions can pass through it both under the influence of an external electric field and as a result of thermal diffusion.
+
+\problembox{B1}{Find the total flux of potassium ions, $J$, through the selective potassium channel. Express your answer through the diffusion coefficient $D$, the molar concentration of potassium outside the cell $c$ and its derivative along the channel $\frac{dc}{dx}$, the mobility of potassium ions $\mu$, the elementary charge $e$ and the electric field strength $E$. Note: mobility is the coefficient of proportionality between the speed of the drift movement of particles and the force acting on them: $\mu F=v$.}{2.00}
+
+Note: mobility is the coefficient of proportionality between the speed of the drift movement of particles and the force acting on them: $\mu F=v$.
+
+The relationship between the diffusion coefficient $D$, mobility $\mu$ and temperature $T$ was discovered when studying Brownian motion of particles independently by Einstein and Smoluchowski. Einstein-Smoluchowski relation: $$D=\textbackslash\{\}mu kT, $$где $k$ – Boltzmann constant.
+
+\problembox{B2}{Find at what voltage $U_\text{rev}$ on the cell membrane (membrane potential) the flux through the open potassium channel becomes zero at temperature $T=20^{\circ}\text{C}$. Express your answer in terms of $T$, $c_\text{out}=4~\text{mmоль}/\text{л}$ and $c_\text{in}=155~\text{mmоль}/\text{л}$ – potassium concentrations outside and inside the cell, and fundamental physical constants. Note: Membrane potential is considered positive if the plus is on the inner surface of the cell membrane.}{2.00}
+
+Note: Membrane potential is considered positive if the plus is on the inner surface of the cell membrane.
+
+\section*{Part C. Normalization and determination of channel selectivity}
+
+When conducting a real electrophysiological experiment, it is necessary to accumulate statistics, so the dependence of the current strength on time is measured for different voltages applied to the cell, and the experiment is also repeated on other cells with the same channels in the membrane. But all cells are different sizes, which is why different numbers of channels enter their membrane. Therefore, the readings taken for the current strength are normalized to a value proportional to the amount of proteins in the cell membrane. In electrophysiology, it is customary to normalize the current strength to the electrical capacitance of the cell (because the capacitance is proportional to the membrane area $C \propto S \propto N$). Figure 7. Whole-cell connection and cell equivalent circuit.
+
+When conducting a real electrophysiological experiment, it is necessary to accumulate statistics, so the dependence of the current strength on time is measured for different voltages applied to the cell, and the experiment is also repeated on other cells with the same channels in the membrane. But all cells are different sizes, which is why different numbers of channels enter their membrane. Therefore, the readings taken for the current strength are normalized to a value proportional to the amount of proteins in the cell membrane. In electrophysiology, it is customary to normalize the current strength to the electrical capacitance of the cell (because the capacitance is proportional to the membrane area $C \propto S \propto N$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig8.jpg}
+    \caption{Figure 8.}
+\end{figure}
+
+Other electrical characteristics of the cell ($R_M$ – the electrical resistance of the cell membrane (when all channels are closed), $R_S$ – the so-called “access” resistance to the cell) also affect the signal that is measured during whole-cell patch clamp measurements. An equivalent cell circuit is shown in Figure 7.
+
+\problembox{C1}{Based on the data shown in the graphs, determine the electrical characteristics of the cell membrane: $R_M$, $R_S$, $C_M$. All three graphs reflect the dependence of the current through the cell membrane on time for the same point (this is all one experiment, different sections are shown in time). Different lines from bottom to top correspond to the voltages applied to the membrane: $\text{−120 mV}$, $\text{−80 mV}$, $\text{ −40 mV}$, $\text{0 mV}$, $\text{40 mV}$, $\text{80 mV}$, $\text{120 mV}$. The green line at the top indicates the time the light is on.}{3.00}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig9.jpg}
+    \caption{Figure 9.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig10.jpg}
+    \caption{Figure 10.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig11.jpg}
+    \caption{Figure 11.}
+\end{figure}
+
+\problembox{C2}{Determine which ion freely passes through the channel built into the membrane of this cell? The concentrations of all ions in the pipette and wash solutions are shown in Figure 7.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3051}
+
+\end{document}

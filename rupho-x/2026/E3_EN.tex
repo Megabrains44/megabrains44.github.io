@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Quartz resonator}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Error estimation is not required in this task.
+
+Equipment: AC generator Oscilloscope Breadboard Set of jumpers 3 wires BNC-BNC Adapter “BNC-board” Package with electronic components, which includes: 9 capacitors; quartz resonator, the resonant frequency of which is about $2~MHz$; resistor $R_0 = 5.1~kOhm$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Capacitor marking Capacity, pF $\underline{6}$ 6.0 $\underline{10}$ 10 $\underline{15}$ 15 27 27 $\underline{33}$ 33 $\underline{47}$ 47 $\underline{56}J$ 56 $\underline{68}$ 68 82 82
+
+\problembox{A0}{Write down the code for the package containing the electronic components on your answer sheets. Check that it is complete.}{0}
+
+A quartz resonator is an electronic component that uses the piezoelectric properties of quartz to generate electrical oscillations with high precision and stability. Based on its behavior in electrical circuits, a quartz resonator can, to a first approximation, be represented in the form of an equivalent electrical circuit shown in the figure. In this problem we will study a quartz resonator as an oscillatory circuit and find its parameters. It is known that the resonant frequency of a quartz resonator is about $2~MHz$.
+
+Note. Do not set the double voltage amplitude on the generator $2U_0 > 500~mV$. Otherwise, the operation of the quartz resonator in the same mode as at lower amplitudes is not guaranteed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+For measurements, use the following scheme:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{A1}{Find the signal frequency $f_{\max}$ at which the voltage amplitude across the quartz resonator is maximum. The difference between $f_{\max}$ and $2~MHz$ is no more than $1~kHz$.}{0.20}
+
+\problembox{A2}{Record the ratio of the voltage amplitudes on the two channels of the oscilloscope $\dfrac{U_{\text{CH}2}}{U_{\text{CH}1}}$ at the signal frequency $f_{\max}$.}{0.05}
+
+\problembox{A3}{Remove the dependence of $2U_{\text{CH}2}$ and $\varphi$ on the frequency $f$ in the range $[f_{\max}-250~Hz; f_{\max}+250~Hz]$, where $\varphi$ is the phase difference between the signals from channels 2 and 1. Measure at least 30 points from the given frequency range.}{2.80}
+
+\problembox{A4}{Plot a graph of the quartz resonator impedance modulus $|Z|$ versus frequency $f$ over the measured range.}{2.50}
+
+\problembox{A5}{From the plotted graph $|Z|(f)$, determine the resonance frequency $f_{\mathrm{res}}$ (where $|Z|$ is maximal), the antiresonance frequency $f_{\mathrm{anti}}$ (where $|Z|$ is minimal), and the frequencies $f_{-}$ and $f_{+}$ at which $|Z|^2$ is equal to the half-sum of the extreme values: $|Z|^2(f_{\pm})=\dfrac{|Z|_{\max}^2+|Z|_{\min}^2}{2}$.}{0.60}
+
+We denote by $f_{\mathrm{res}}$ the resonance frequency and by $f_{\mathrm{anti}}$ the antiresonance frequency.
+
+The impedance of the quartz resonator can be written as
+\[
+Z(\omega)=\frac{\omega_s^2-\omega^2+i\omega\alpha}{i\omega C_0\left(\omega_p^2-\omega^2+i\omega\alpha\right)},
+\]
+where $\omega$ is the angular frequency of the signal, and $\omega_s$, $\omega_p$, $\alpha$ do not depend on $\omega$.
+
+\problembox{A6}{Express $\omega_s, \omega_p, \alpha$ in terms of $R, L, C, C_0$.}{0.30}
+
+Further in this problem, assume that near resonance the following approximations are valid:
+\[
+Z(\omega)\approx\frac{\omega_s^2-\omega^2+i\omega_p\alpha}{i\omega_p C_0\left(\omega_p^2-\omega^2+i\omega_p\alpha\right)},
+\qquad
+\alpha\ll \omega_p-\omega_s.
+\]
+
+\problembox{A7}{Using the approximations described above, express $|Z|^2(\omega)$ in terms of $\alpha, \omega, \omega_s, \omega_p, C_0$.}{0.10}
+
+\problembox{A8}{Using the approximations described above, express $f_{\pm}$ in terms of $f_{\mathrm{res}}$, $f_{\mathrm{anti}}$, and $\alpha$.}{0.30}
+
+In addition, within these approximations the following relation holds:
+\[
+\varphi(f_{\mathrm{anti}})=\varphi(f_{\mathrm{res}})=0,
+\]
+where $\varphi(f)$ is the phase difference between channels 2 and 1 as a function of frequency. If an external capacitor $C_{\text{ext}}$ is connected in parallel with the resonator, the resonance frequency $f_{\mathrm{res}}$ shifts.
+
+\problembox{A9}{Measure the dependence of the shifted resonance frequency $f_{\mathrm{res}}$ on the external capacitance $C_{\text{ext}}$ for all available capacitors.}{0.80}
+
+\problembox{A10}{Plot a linearized graph for the dependence from A9 and determine $C_0$ from this graph.}{1.20}
+
+\problembox{A11}{From the results of points A6, A10, obtain the values of $L,C,C_0$.}{1.30}
+
+\problembox{A12}{From the results of points A4, A6, A10, obtain the value $R$.}{1.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4788}
+
+\end{document}

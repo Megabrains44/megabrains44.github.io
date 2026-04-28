@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+      \textbf{#1}\hfill\textbf{#3}\par\smallskip
+      #2
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thermal degradation of wire}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}
+\maketitle
+\section*{Introduction}
+Thermal oxidation is the process of formation of an oxide film on a metal at elevated temperatures in the presence of oxygen. In this problem, oxidation on the copper surface will be studied.
+Physical constants: Universal gas constant $R=8.31~\dfrac{Дж}{моль\cdot \mathrm{K}}$. Temperature coefficient of resistance of copper $\alpha = 5.80\cdot 10^{-11}~\dfrac{Ом\cdot м}{\mathrm{K}}$. Molar mass of copper $\mu = 63.5~\dfrac{г}{моль}$ Notation used in the problem: $T$ is the temperature of the wire in Kelvin. $T_0=295~\mathrm{K}$—ambient temperature. Copper resistivity: $\rho (T) = \alpha T$. The power of heat loss into the environment: $P_{out} = \beta S (T- T_0)$, where $S$ is the surface area of ​​the wire, $T$ is its temperature, $\beta $ is the heat transfer coefficient. $r_0=0.05~мм$ — radius of the issued wire. $L$ - wire length. $I$ - current strength through the source. $U_0$ is the voltage on the wire at $t=0$. $U_m$ is the steady-state voltage on the wire (in part A, when oxidation makes a minor contribution). $\rho_{м} = 8920~\dfrac{кг}{м^3}$ - copper density. $c_{м}$ is the specific heat capacity of copper. $r$ is the radius of the conductive part of the wire. Note. All temperatures in this problem are expressed in Kelvin. Note. The wire samples you use for measurements will be of different lengths $L$.
+Notation used in the problem:
+Note: All temperatures in this problem are expressed in Kelvin.
+Note. The wire samples you use for measurements will be of different lengths $L$.
+Equipment: DC source Multimeter in voltmeter mode Multimeter in ammeter mode* Measuring stand A piece of copper wire Oscilloscope with oscilloscope wire Container Four banana-crocodile wires Banana-banana wire Scissors *If more current is passed through the ammeter than the mode selected on it suggests, the ammeter may become unusable. NO NEW AMMETERS WILL BE ISSUED. Note. The readings on the screen of the current source are not valid, that is, they cannot be used as experimental data. Use an ammeter to measure the current through the source.
+*If more current is passed through the ammeter than the mode selected on it suggests, the ammeter may become unusable. NO NEW AMMETERS WILL BE ISSUED.
+Note. The readings on the screen of the current source are not valid, that is, they cannot be used as experimental data. Use an ammeter to measure the current through the source.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Fig. 1.}
+\end{figure}
+To measure voltage versus time, use the circuit as in Figure 1a. It is proposed to fasten the wire as shown in photo 1b.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Fig. 2.}
+\end{figure}
+It may be that you get a noisy signal on the oscilloscope. In this case, within the framework of this task, wherever you are asked to take the dependence of voltage on time from an oscilloscope, do this: take two extreme values ​​in the vicinity of a certain point $U_+$ and $U_-$, and take their average value $U_{avg} = (U_+ + U_-)/2$ as $U$. For example, in Figure 2 the point $U = (952+939)/2 = 945.5~мВ$ should be obtained at $t = 9.8~с$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Fig. 3.}
+\end{figure}
+Note. Place the horizontal trigger (the arrow with the letter T circled in a red frame in the photo below) to the very left position, so the signal will appear on the screen faster.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Fig. 4.}
+\end{figure}
+IMPORTANT! If a current $I>1.5~\mathrm{A}$ flows through the wire, then the copper on its surface is replaced by a non-conducting oxide (as in part B). Therefore, if you passed current $I>1.5~\mathrm{A}$ through the wire for a significant time ($>10~\mathrm{c}$), then it WILL NOT be equivalent in properties to a new one. Further, within the framework of this task, wherever it is proposed to measure something with a wire, it is understood that the measurements must be carried out on a new wire. Please consider the amount of wire used in your measurements wisely; new pieces of copper wire will NOT be issued.
+\section*{Part A. Cooling in air (5 points).}
+In this part of the problem, the process of heating the wire at low currents (up to $1.5~\mathrm{A}$) is studied, at which, due to the low temperature of the wire, oxidation will make a small contribution. Therefore, within the framework of this part, consider that the geometric dimensions of the wire do not change, and you can not change it between measurements.
+\problembox{A1}{Set the current through source $1.4~\mathrm{A}$. Blow on the wire and choose the correct option from the answer sheets. Explain why this happened.}{0.20}
+Next, for all measurements, cover the wire with a container so that air currents do not affect your measurements. Moreover, the wire should be placed in the middle of the container in order to move it as far as possible from the cracks under the container.
+\problembox{A2}{Read the dependence of the voltage on the wire on time in the range $0$-$5~\mathrm{c}$ after connecting to the source at a current strength through it $I=1.0 ~\mathrm{A}$. Indicate the characteristic time during which the voltage on the wire is established.}{1.00}
+\problembox{A3}{Remove the dependence of the steady-state voltage $U_m$ through the wire on the current $I< 1.5~\mathrm{A}$ through the wire. Take at least 15 measurements.}{0.60}
+\problembox{A4}{Theoretically, you will get the dependence $T(U)$. Express your answer in terms of $\alpha, I, L, r_0, T, U$.}{0.20}
+\problembox{A5}{Write down the heat balance equation for the wire. Express your answer in terms of $U, I, c_{м}, L, r_0, \rho_{м}, \beta, T, T_0, \dfrac{\text{d}T}{\text{d}t}$.}{0.30}
+\problembox{A6}{Theoretically relate the steady-state voltage $U_m$ and current $I$ through the wire. Write your answer using $\alpha, T_0, r_0, L, \beta, U_m, I$.}{0.30}
+\problembox{A7}{Plot a graph of $U_m$ and $I$ in such axes in which it is linear. From the graph, obtain the value of the heat transfer coefficient $\beta$.}{1.20}
+\problembox{A8}{Using the results of points A4 and A5, obtain the theoretical dependence of the voltage on the wire $U$ on time $t$. Express your answer in terms of $U_0, \alpha, \beta, I, r_0, L, T_0, \rho_м, c_м, U, t$.}{0.60}
+\problembox{A9}{Plot a linearized graph of $U$ versus $t$ measured at A2. From the graph, determine the specific heat capacity of copper $c_{м}$.}{0.50}
+\problembox{A10}{The modern theory of heat capacity of solids states that the molar heat capacity of solids is approximately equal to $3R$. Estimate the specific heat capacity $c_м^{th}$ from this theory.}{0.10}
+Note. If A7 fails, then use the value $\beta= 350~\cfrac{Вт}{м^2\cdot \mathrm{K}}$ and explicitly indicate this in the solution.
+\section*{Part B. Thermal oxidation (7 points).}
+In this part of the problem, the oxidation of copper will be studied. When heated, copper is replaced by a non-conducting oxide, causing the resistance of the wire to increase. However, the thermal properties of the oxide are exactly the same as those of copper, which means the effective area from which heat is transferred to the air does not change.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Fig. 5.}
+\end{figure}
+Carry out measurements in part B according to the following algorithm: Insert a new wire into the measuring stand. Select and indicate the current strength $I_n$ in the range $[2.0;2.6]~\mathrm{A}$ at which you will carry out the measurement. $n$—number of the wire sample being measured. Assemble the circuit as in Figure 1. Set the source to the current $I_n$ selected in step 2 and configure the oscilloscope so that the signal that you will measure in step 7 occupies a significant part of the display. Remove the wire and do not use it for measurements anymore. Insert the new wire into the measuring stand. Measure the resistance of the wire at room temperature $R_n$, using currents less than $100~\mathrm{мA}$ (so that the wire does not heat up). Record the voltage on the wire as a function of time in the range of 0-300 $\mathrm{c}$ or until the wire burns out, with a current through the wire $I_n\in[2.0;2.6]~\mathrm{A}$. Construct a graph of the measured dependence and draw a straight line $U(t) = U_0 +\gamma(I_n) t$ along the initial linear section of the graph. Calculate the numerical value of $\gamma(I_n)$. Remove the wire and do not use it for measurements anymore.
+Carry out measurements in part B according to the following algorithm:
+\problembox{B1}{Carry out measurements according to the algorithm above for 5 different values ​​of $I$ from the specified range.}{4.00}
+The characteristic time obtained in point A2 is short, so consider that the wire at each moment of time is in thermodynamic equilibrium, that is, the process is quasi-static.
+\problembox{B2}{Express the length $L_n$ of wire sample number $n$ in terms of $\alpha, T_0, r_0, R_n$. Using the previously obtained data, recalculate $L_n$.}{0.10}
+\problembox{B3}{Express the temperature of the wire $T$ in terms of $I , \beta, L, U, r_0, T_0$.}{0.10}
+\problembox{B4}{Express the voltage on the wire $U$ in terms of $I , \alpha , L, T(U)$ and the radius of the conductive part of the wire $r(t)$.}{0.10}
+\problembox{B5}{Using the results of steps B3 and B4, obtain the theoretical relationship $r(t)$. Express your answer in terms of $I,L, \alpha, \beta, T_0, r_0, t, \gamma(I), U_0$.}{0.70}
+\problembox{B6}{Expand the resulting $r(t)$ in a Taylor series in powers of $t$ to a linear term: $r(t) = r_0 - \delta t$. Express $\delta$ in terms of $r_0, \gamma(I), \alpha, T_0, L, I, U_0$.}{0.50}
+The Deal-Grove model is a mathematical model that describes the growth of oxide layers on the surface of a heated metal. According to this model: \[\dfrac{\mathrm{d}X_o}{\mathrm{d}t} = B e^{-E_A/R T}\]where $X_o(t) = r_0-r(t)$ is the thickness of the oxide layer at time $t$; $B$ is a certain constant; $E_A$ - molar activation energy (the minimum amount of energy per 1 mole of a substance that must be available to reagents for a chemical reaction to occur); $T$—wire temperature. This equation holds true as long as the oxide layer is very thin, with a thickness on the order of the thickness of the oxide film on copper wire stored at room temperature.
+\problembox{B8}{Specify the dimension $E_A$.}{0.20}
+\problembox{B9}{Find $E_A$.}{1.30}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4181}
+\end{document}

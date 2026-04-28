@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Champagne foam}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+If a bottle is filled with a liquid with a gas dissolved inside, after opening the bottle, the gas will begin to evaporate from the solution and bubbles will form in the liquid. We will study their behavior and estimate the number of bubbles that can form on the surface of a liquid poured into a vessel. You may need the following information:
+\begin{itemize}
+    \item liquid density $\rho = 1.0 \cdot 10^3~\text{kg}/\text{m}^3$;
+    \item liquid surface tension coefficient $\gamma = 0.05~\text{N}/\text{m}$;
+    \item throughout the problem the temperature can be considered constant and equal to $T = 300~\text{K}$;
+    \item fluid viscosity $\eta = 1.63 \cdot 10^{-3}~\text{Pa}\cdot\text{s}$;
+    \item atmospheric pressure $P_0 = 10^5~\text{Pa}$;
+    \item universal gas constant $R_G = 8.3~\text{J}/(\text{mol}\cdot\text{K})$;
+    \item Boltzmann constant $k_B = 1.38 \cdot 10^{-23}~\text{J}/\text{K}$.
+\end{itemize}
+
+\section*{Part A. Gas equilibrium in solution}
+
+The molar concentration of a saturated gas solution $c$ and its partial pressure above the liquid $P$ are related by Henry’s law $c = k_H P$. For carbon dioxide in the conditions of the problem, we can consider
+$$ k_H = 3.64 \cdot 10^{-4}~\frac{\text{mol}}{\text{m}^3\cdot\text{Pa}}. $$
+
+\problembox{A1}{Let the total number of moles of carbon dioxide gas in a closed bottle be $\nu_0 = 0.05$ mol, the volume of liquid $V_L =250$ ml, and the volume of gas $V_G = 5$ ml. Find the pressure $P$ of carbon dioxide in the bottle. Please also provide a numerical value. \textbf{In further paragraphs, assume that the liquid is in an open container.}}{0.80}
+
+\problembox{A2}{A bubble with carbon dioxide can form only if the pressure of carbon dioxide in it can balance the pressure created by surface tension forces. Find the minimum bubble radius $R^*$ that can form. Express the answer in terms of the molar concentration of gas in the liquid $c$, atmospheric pressure $P_0$, as well as physical constants characterizing the liquid. What is the concentration $c$ if the critical radius is $R^* = 1.5 \cdot 10^{-6}$ m?}{0.70}
+
+In the future in the problem, we will need to study the diffusion of gas dissolved in a liquid. The phenomenon of diffusion is that if the concentration $n$ of molecules in one region of the gas is higher than in the neighboring one, a flow of molecules will arise from the region with a higher concentration. Let the concentration depend on one of the coordinates, for example $z$. Then the flow of molecules in the direction of the $z$ axis (the average number of molecules passing per unit time through a unit area perpendicular to the $z$ axis) will be equal to
+$$ j = -B\frac{dn}{dz}, $$
+where $B$ is the diffusion coefficient (in $\text{m}^2/\text{s}$). To estimate $B$, use the following idea. If a constant force $F$ acts on a molecule in a medium, it drifts with mean velocity $v=\beta F$, where the mobility $\beta$ can be estimated by assuming Stokes drag $F=6\pi\eta r v$. Treat the molecule as a sphere of radius $r\approx 10^{-10}~\text{m}$. If the molecules sit in a potential $U=-Fz$ ($z$ is the coordinate) and each feels a force $F$ along $z$, then in equilibrium the concentration varies as
+$$n = n_0\,e^{-U/(k_B T)}.$$
+At equilibrium, the diffusive flux must balance the flux driven by the force $F$.
+
+\problembox{A3}{Using the above considerations, find the diffusion coefficient $B$. Express your answer in terms of $k_B$, $T$, $\beta$. Determine the mobility of molecules $\beta$ in terms of viscosity $\eta$ and the size of the molecules. Find the numerical value of the diffusion coefficient. \textbf{If you fail to solve this item, you may use the value} $B = 5 \cdot 10^{-9}~\text{m}^2/\text{s}$ \textbf{to obtain numerical answers later.}}{1.00}
+
+\section*{Part B: Bubble Growth}
+
+Let a bubble form on a defect on the glass surface, which has the form of a cylindrical depression, the diameter of which is much less than the depth. While the bubble is on the surface, it looks like part of a ball, and the angle between the surface of the ball and the glass at the connection point is $\theta$. We denote the molar concentration of carbon dioxide in a liquid by $c$. In addition, there are two more characteristic molar concentrations:
+\begin{itemize}
+    \item $c_i$ -- the concentration of carbon dioxide at which the solution is in equilibrium with carbon dioxide, the pressure of which is equal to atmospheric pressure;
+    \item $c_n$ -- carbon dioxide concentration at which bubbles stop forming.
+\end{itemize}
+These concentrations are related by the inequalities $c> c_n > c_i$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The radius of the bubble increases due to the diffusion of carbon dioxide, and the rate of increase in the amount of carbon dioxide substance in the bubble has the form
+$$ \frac{d\nu}{dt} = k S(c -c_i). $$
+Here $k = B/(\kappa D)$, where $B$ is the diffusion coefficient, $D$ is the bubble diameter, and $\kappa \approx 0.25$ is a numerical factor. The quantity $\kappa D$ is a characteristic length over which the concentration changes. The surface area of the spherical cap is $S = f_1(\theta)D^2$, and its volume is $V = f_2(\theta) D^3$.
+
+\problembox{B1}{Find how the diameter $D$ of the bubble depends on time. Consider the initial diameter to be approximately equal to zero, express the answer through $f_1$, $f_2$, $c$, $c_i$, $R$, $T$, $P_0$. The pressure in the bubble and temperature can be considered constant; the contribution of surface tension and pressure of the liquid column to the gas pressure in the bubble can be neglected.}{1.00}
+
+\problembox{B2}{Find expressions for $f_1(\theta)$ and $f_2(\theta)$. Construct a (qualitative) graph of the ratio $f_1/f_2$ to $\theta \in (0,\,\pi/2)$.}{0.70}
+
+\problembox{B3}{Find the bubble radius $R$ at which it comes off the surface. Consider that it is attached to the surface along a circle of radius $a_d \ll R$, the angle between the bubble and the surface is $\theta$,}{0.30}
+
+\problembox{B4}{After the bubble breaks away from the surface, a region of liquid with a reduced concentration of dissolved carbon dioxide remains near it. Because of this, some time $t_n$ must pass before the next bubble begins to form in the same place. Consider that the concentration of carbon dioxide is reduced in the area of size $D_m$, and the depth of the defect that needs to be filled with carbon dioxide is $h \ll D_m$. The dependence of concentration on distance to the surface is linear. Find the time $t_n$ during which the bubble that appears at the bottom of the defect grows to the surface of the glass. The concentration near the defect is equal to the minimum concentration $c_n$ at which the existence of a bubble is possible; the dependence of the concentration on distance can be considered linear.}{0.80}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B5}{Let $t_g$ be the time during which the bubble grows from the edge of the defect to its maximum diameter $D_m$. When the concentration of carbon dioxide in the liquid changes, this time, as well as the time of bubble formation $t_n$, can change. In what coordinates will the dependence of $t_g$ on $t_n$ be linear?}{0.70}
+
+\section*{Part C: Bubble Rising}
+
+In this part, we will look at the movement of rising bubbles and estimate the total number of bubbles that can form on the surface of a liquid. The liquid is poured into a cylindrical vessel, the volume of the liquid is $V_L$. The density of the liquid is $\rho_L$. Throughout this part, the influence of surface tension and the liquid column on the pressure inside the bubble can be neglected.
+
+\problembox{C1}{The rate at which a bubble floats up is determined by the force of viscous friction acting on it, which can be calculated using the Stokes formula $F = 6 \pi \eta aU$, where $a$ is the radius of the bubble, $U$ is the velocity of the bubble, $\eta$ is the viscosity of the liquid. Find the rising speed of a bubble of radius $a$.}{0.40}
+
+When the bubble floats, its radius increases due to carbon dioxide entering from the liquid. After lifting off the surface, it looks like a ball. The pressure inside the bubble $P$ and the temperature $T$ can be considered constant. Consider that the number of moles that enter the bubble per unit time is directly proportional to the area $S$ of the surface of the bubble $d\nu/dt =K \Delta c S$. Here $\Delta c$ is the difference in molar concentrations away from the bubble and on its surface, and the concentration on the surface is such that the gas dissolved in the liquid is in equilibrium with the gas in the bubble. The coefficient $K$ can be expressed through the diffusion coefficient $B$ and the bubble parameters
+$$ K = 0.63\frac{B^{2/3} U^{1/3}}{a^{2/3}}. $$
+
+\problembox{C2}{Find the rate of change of the radius of the bubble $da/dt$. Express your answer in terms of $a$, concentration difference $\Delta c$, temperature $T$, atmospheric pressure $P_0$, $\Delta c$ and physical constants.}{0.60}
+
+\problembox{C3}{The bubble floats up from the bottom of the vessel, initial radius $a_0$. Find its radius $a$ and volume $V_b$ near the surface.}{0.80}
+
+\problembox{C4}{Bubbles will form until the concentration of carbon dioxide in the liquid drops from the initial value $c$ to some critical value $c_n$, at which bubbles will no longer form. Find the total number of bubbles $N$ that can appear in the entire time. Express the answer in terms of the volume of the liquid $V_L$, its depth $h$, the initial and final concentrations of carbon dioxide and the constants characterizing the liquid and gas. Find also the numerical value. Use data $c=100~\text{mol}/\text{m}^3$, $c_n = 50~\text{mol}/\text{m}^3$, $V_L = 0.5$ liters, vessel diameter $\xi = 6$ cm. Consider that the concentration near the surface of the bubble is such that the carbon dioxide gas in the bubbles is in equilibrium with that dissolved in the liquid. All bubbles float up from the bottom of the vessel, and their initial radius is zero. The change in concentration during the time from the formation of the bubble until it reaches the surface can be neglected.}{1.50}
+
+\problembox{C5}{Let us assume that all the bubbles formed in the process are not destroyed, and their sizes are equal to the sizes of the bubbles reaching the surface of the liquid at a finite concentration of carbon dioxide. What height of foam $H$ is formed on the surface of the liquid?}{0.70}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/509}
+
+\end{document}

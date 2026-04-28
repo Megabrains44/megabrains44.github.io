@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Patch-clamp</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Patch-clamp</h1>
+<p class="camp">X20 (2020) — English translation</p>
+<h2 class="part">Introduction</h2>
+<h2 class="part">Cellular ion channels</h2>
+<p>Living cells are covered with a membrane, the structural basis of which is a double layer of lipids, weakly permeable to water and practically impermeable to ions. Each cell must exchange various substances and, in particular, ions with the external environment. The transport of ions across the membrane plays an important role in the processes of cell excitation and signal transmission. Ions enter and leave the cell through proteins built into the membrane - channels. Channels are proteins that function as membrane pores by forming openings through which ions can pass. Membrane channels are selective—permeable only to certain substances. Selectivity is determined by the radius of the pores and the distribution of charged functional groups in them. There are channels that selectively allow sodium ions to pass through (sodium channels), as well as potassium, calcium and chloride channels. (see Fig. 1)</p>
+<div class="figure"><img src="PE_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>There are light-sensitive ion channels - channel rhodopsins. These channels move from a closed state, in which they are impermeable to ions, to an open state, absorbing photons of a certain wavelength (see Fig. 2). Next, the protein passes through several intermediate states to return from the open state to the closed state (in what follows we will assume that in intermediate states the channel is also impermeable to any ions).</p>
+<div class="figure"><img src="PE_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<h2 class="part">Biophysical methods for studying channels: Patch-clamp</h2>
+<p>Due to the free passage of charged particles (ions), the channels in the open state effectively increase the electrical conductivity of the cell membrane. To study the electrical properties of the membrane and study the properties of ion channels, there is a method of local potential fixation (Patch-clamp). The method is that a glass pipette forms contact with the cell membrane with a resistance of several gigaohms - this is the so-called gigaohm contact. An electrode is placed in a pipette filled with electrolyte, and a second electrode is placed extracellularly in the washing fluid. In order to measure the current flowing through the entire cell membrane, a piece of it enclosed inside a pipette is pierced by excess pressure. This measurement method is called Whole-cell patch-clamp (literally “full-cell patch clamp”, see Fig. 3). An effective electrical circuit is as follows: one of the electrodes is outside the cell, and the second is inside.</p>
+<div class="figure"><img src="PE_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<h2 class="part">Part A. Current-voltage characteristics of channels</h2>
+<p>One of the characteristics that can be measured for channels is their current-voltage characteristic. The current-voltage characteristic of channel rhodopsin is the dependence of the steady-state current on the voltage applied to the cell membrane through electrodes. The current-voltage characteristic depends on the composition of the solutions in which measurements are made. In this part, you will process experimental data collected for channel rhodopsin, which allows positive monovalent ions: sodium, potassium and hydrogen to pass through. The appendix shows the time dependence of the current passing through membrane channel rhodopsins when the light is turned on for three different solutions washing the measured cell. Ion concentrations in extracellular fluid in three cases:</p>
+<p>1. $\mathrm{[H]}$ = $10^{-7.5}$ mol/l (pH=7.5), $\mathrm{[Na]}$ = 140 mmol/l, $\mathrm{[K]}$ = 0 mmol/l, $\mathrm{[Cl]}$ = 140 mmol/l 2. $\mathrm{[H]}$ = $10^{-7.5}$ mol/l (pH=7.5), $\mathrm{[Na]}$ = 0 mmol/l, $\mathrm{[K]}$ = 140 mmol/l, $\mathrm{[Cl]}$ = 140 mmol/l 3. $\mathrm{[H]}$ = $10^{-6.0}$ mol/l (pH=6.0), $\mathrm{[Na]}$ = 0 mmol/l, $\mathrm{[K]}$ = 0 mmol/l, $\mathrm{[Cl]}$ = 140 mmol/l</p>
+<p>The intracellular solution is set by a solution that is poured into a pipette. It is the same in all three experiments: $\mathrm{[H]}$ = $10^{-7.5}$ mol/l (pH=7.5), $\mathrm{[Na]}$ = 110 mmol/l, $\mathrm{[K]}$ = 0 mmol/l, $\mathrm{[Cl]}$ = 110 mmol/l</p>
+<p>\textbf{The voltage at which the plus is inside the cell is considered positive. The current strength at which positively charged particles flow from inside the cell to the outside is considered positive.}</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Construct the current-voltage curves of channel rhodopsin in three experiments.</div><span class="pb-pts">1.50</span></div>
+<p>Another characteristic that can be measured that describes channel rhodopsins is permeability to different ions. The permeabilities for $\mathrm{Na}, \mathrm{K}$ and protons will be denoted by $P_\mathrm{Na}; P_\mathrm{K}; P_\mathrm{H}$. Permeability is a characteristic of a membrane with channels: it depends on the number of channels, but does not depend on the solutions washing the membrane. The ratio of permeabilities for two different ions does not depend on the number of channels and is the most fundamental characteristic of channel rhodopsins. Permeability is part of the Goldman-Hodgkin-Katz equation, which relates the current through the membrane to the voltage across it:</p>
+<p>$$ J(u)=\cfrac{z^2e^2u}{kT} \cfrac{P_{out}c_{out}-P_{in}c_{in}\,\mathrm{exp}\left(\cfrac{zeu}{kT}\right)}{1-\mathrm{exp}\left(\cfrac{zeu}{kT}\right)} $$</p>
+<p>where $J$ is the current strength, $u$ is the voltage applied to the membrane, $e$ is the elementary charge, $z$ is the charge number of the transmitted ion, $k$ is Boltzmann’s constant, $T = 24~{}^\circ\mathrm{C}$ is the temperature during the experiment, $P_{out}$ and $c_{out}$ are the permeability and concentration for ion that is in the extracellular solution, $P_{in}$ and $c_{in}$ are the permeability and concentration for the ion that is inside the cell. Consider that during the experiment, the compositions of the solutions outside and inside the cell remain unchanged.</p>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Draw graphs and use them to determine the ratios $\cfrac{P_\mathrm{K}}{P_\mathrm{Na}}$ and $\cfrac{P_\mathrm{H}}{P_\mathrm{Na}}$.</div><span class="pb-pts">4.00</span></div>
+<h2 class="part">Part B. Spectrum of action of channel rhodopsins</h2>
+<p>Another fundamental characteristic of channel rhodopsins is their spectrum of action. The action spectrum is the dependence of the charge passing through the cell membrane with channels on the wavelength of the exciting light. To measure the action spectrum of channel rhodopsin, the cell under study is irradiated with ultrashort laser flashes (5 ns duration; pulses contain the same number of photons per flash for different wavelengths) and the current is measured (see Fig. 4). The charge q passing through the membrane is counted as the half-decay time of the current. The resulting dependence $q(\lambda)$ is normalized to the maximum charge value $q_\max = q (\lambda_\max)$.</p>
+<div class="figure"><img src="PE_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Plot the action spectrum of channel rhodopsin. Determine the position of the spectrum maximum $\lambda_\max$.</div><span class="pb-pts">2.50</span></div>
+<h2 class="part">Part C. Photocycle Parameters</h2>
+<p>In the introduction it was said that when a channel absorbs photons, it goes through several intermediate states and returns to the initial closed state. All these states together are called a photocycle (see Fig. 5, which shows a photocycle in which one intermediate state $I, C$ and $O$ are closed and open states, respectively). Transitions between these states occur with some probability. The transition from a closed state to an open state is impossible without absorption of light. In the presence of light, this transition also occurs with some probability. The probability of a transition between two states $A$ and $B$ is described by the value $\tau$ – the characteristic time of transition from $A$ to $B$. This time is defined as the inverse derivative of the transition probability with respect to time: $\tau_{AB}=\left(\cfrac{dp}{dt}\right)^{-1}$ (that is, the probability of transition in time $dt$ is equal to $dp$).</p>
+<div class="figure"><img src="PE_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Using all the experimental data obtained above, determine the channel rhodopsin photocycle parameters $\tau_{OI}$ and $\tau_{IC}$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part D. Selectivity of channel rhodopsin</h2>
+<p>One of the most important characteristics of channel rhodopsins is their selectivity. Selectivity is the ability to allow only certain types of ions to pass through. The selectivity can be different: only positive or only negative ions can pass through the channel, or, for example, only sodium (or potassium, or any other ion) can pass through. Selectivity is determined by the internal structure of the protein. Let's consider an experiment with another channel rhodopsin (see Fig. 6, graphs given in points A-C, not related to it). In this experiment, the compositions of the solutions are as follows: Wash: pH=7.5, $\mathrm{[Na]}$ = 200 mmol/L, $\mathrm{[K]}$ = 0 mmol/L, $\mathrm{[Cl]}$ = 200 mmol/L Intracellular: pH=7.5, $\mathrm{[Na]}$ = 100 mmol/L, $\mathrm{[K]}$ = 0 mmol/L, $\mathrm{[Cl]}$ = 100 mmol/l</p>
+<div class="figure"><img src="PE_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Using the current-voltage characteristic, determine the positive or negative ions that this channel rhodopsin allows through. Using diagrams and drawings, explain how you determined selectivity.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Application</h2>
+<div class="figure"><img src="PE_EN_assets/fig7.jpg" alt="" /><div class="caption">Fig. 7.</div></div>
+<div class="figure"><img src="PE_EN_assets/fig8.jpg" alt="" /><div class="caption">Fig. 8.</div></div>
+<div class="figure"><img src="PE_EN_assets/fig9.jpg" alt="" /><div class="caption">Fig. 9.</div></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/173">https://pho.rs/p/173</a></p>
+</body>
+</html>

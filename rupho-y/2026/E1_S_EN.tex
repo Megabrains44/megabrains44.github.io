@@ -1,0 +1,223 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Topological insulator --- Solution}}
+\author{\normalsize Y26 (2026) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Using Kirchhoff's rules, obtain a system of equations relating $V$, $u$ and $q$. Express your answer using $V$, $u$, $q$, $L$, $C_1$, $C_2$ and $\omega$.}{0.40}
+
+Let us find the currents flowing in the links, knowing that at the point located to the right of the point $C$ the potential is equal to $u e^{iq}$.
+
+
+Now let's write the first Kirchhoff rule for nodes with potentials $u$ and $V e^{iq}$, respectively \textbackslash{}begin{cases} (V-u) \textbackslash{}cdot i \textbackslash{}omega C_1 = (u-Ve^{iq}) \textbackslash{}cdot i \textbackslash{}omega C_2 + \textbackslash{}dfrac{u}{i \textbackslash{}omega L}, \textbackslash{}\textbackslash{} (u-Ve^{iq}) \textbackslash{}cdot i \textbackslash{}omega C_2 = e^{iq}(V-u) \textbackslash{}cdot i \textbackslash{}omega C_1 + \textbackslash{}dfrac{Ve^{iq}}{i \textbackslash{}omega L}. \textbackslash{}end{cases} The resulting system of equations is sufficient to obtain an expression for $\cos q(\omega).$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A2}{From the resulting system, express $\cos q $ in terms of $\omega$, $L$, $C_1$ and $C_2$.}{0.80}
+
+Method 1. From both equations we express $\dfrac{u}{V}$ and equate them. We obtain from equations 1 and 2, respectively: \textbackslash{}begin{cases} \textbackslash{}dfrac{u}{V} = \textbackslash{}dfrac{e^{iq} \textbackslash{}cdot i \textbackslash{}omega C_2+i \textbackslash{}omega C_1}{i \textbackslash{}omega \textbackslash{}cdot \textbackslash{}left(C_1+C_2-\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}, \textbackslash{}right)}, \textbackslash{}\textbackslash{} \textbackslash{}dfrac{u}{V} = \textbackslash{}dfrac{e^{iq} \textbackslash{}cdot i \textbackslash{}omega \textbackslash{}cdot \textbackslash{}left( C_1+C_2-\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} \textbackslash{}right)}{e^{iq}\textbackslash{}cdot i \textbackslash{}omega C_1 + i \textbackslash{}omega C_2}, \textbackslash{}end{cases} from where, equating $\dfrac{u}{V}$ from different equations to each other and reducing by $i \omega$, we obtain an equation containing only the unknown $q$: $$\left( e^{iq}C_2 +C_1 \right)\left( e^{iq}C_1 +C_2 \right) = e^{iq} \left(C_1+C_2-\dfrac{1}{\omega^2L} \right)^2.$$ Теперь раскроем скобки from the left and dividing обе части уравнения на $e^{iq}:$ $$C_1^2+C_2^2 + C_1C_2 \left( e^{iq} + e^{-iq}\right) = \left( C_1+C_2 - \dfrac{1}{\omega^2 L}\right)^2.$$ Taking into account that $e^{iq}+e^{-iq} = 2 \cos(q),$ we get соratio на $\cos q$ $$\cos q = \dfrac{\left( C_1 + C_2 - \dfrac{1}{\omega^2 L} \right)^2-C_1^2-C_2^2}{2 \cdot C_1C_2}.$$ Метод 2. На самом деле, быстрее поступить немного иначе. Let us write систему уравнений как линейную относительно $V$ and $u$, \textbackslash{}begin{cases} V\textbackslash{}left(C_1+C_2 e^{iq}\textbackslash{}right)+u\textbackslash{}left(-C_1-C_2+\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)=0,\textbackslash{}\textbackslash{} V\textbackslash{}left(-C_1-C_2+\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)+u\textbackslash{}left(C_1+C_2 e^{-iq}\textbackslash{}right)=0. \textbackslash{}end{cases} Чтобы system имелnotтривиальное solution (их бесконечное количество), необходимо and достаточно for/atравнять нулю главный оlimitandтель системы. Thus, $$\left(C_1+C_2 e^{iq}\right)\left(C_1+C_2 e^{-iq}\right)=\left(C_1+C_2-\dfrac{1}{\omega^2 L}\right)^2.$$ Finally, $$\cos q = \dfrac{\left( C_1 + C_2 - \dfrac{1}{\omega^2 L} \right)^2-C_1^2-C_2^2}{2 \cdot C_1C_2}.$$
+
+
+We obtain from equations 1 and 2, respectively: \textbackslash{}begin{cases} \textbackslash{}dfrac{u}{V} = \textbackslash{}dfrac{e^{iq} \textbackslash{}cdot i \textbackslash{}omega C_2+i \textbackslash{}omega C_1}{i \textbackslash{}omega \textbackslash{}cdot \textbackslash{}left(C_1+C_2-\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}, \textbackslash{}right)}, \textbackslash{}\textbackslash{} \textbackslash{}dfrac{u}{V} = \textbackslash{}dfrac{e^{iq} \textbackslash{}cdot i \textbackslash{}omega \textbackslash{}cdot \textbackslash{}left( C_1+C_2-\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} \textbackslash{}right)}{e^{iq}\textbackslash{}cdot i \textbackslash{}omega C_1 + i \textbackslash{}omega C_2}, \textbackslash{}end{cases}
+
+
+whence, equating $\dfrac{u}{V}$ from different equations to each other and canceling by $i \omega$, we obtain an equation containing only the unknown $q$: $$\left( e^{iq}C_2 +C_1 \right)\left( e^{iq}C_1 +C_2 \right) = e^{iq} \left(C_1+C_2-\dfrac{1}{\omega^2L} \right)^2.$$
+
+
+Now let's open the parentheses on the left and divide both sides of the equation by $e^{iq}:$ $$C_1^2+C_2^2 + C_1C_2 \left( e^{iq} + e^{-iq}\right) = \left( C_1+C_2 - \dfrac{1}{\omega^2 L}\right)^2.$$
+
+
+Considering that $e^{iq}+e^{-iq} = 2 \cos(q),$ we obtain the relation for $\cos q$ $$\cos q = \dfrac{\left( C_1 + C_2 - \dfrac{1}{\omega^2 L} \right)^2-C_1^2-C_2^2}{2 \cdot C_1C_2}.$$
+
+
+Method 2. In fact, it's faster to do things a little differently. Let us write the system of equations as linear with respect to $V$ and $u$,
+
+
+\textbackslash{}begin{cases} V\textbackslash{}left(C_1+C_2 e^{iq}\textbackslash{}right)+u\textbackslash{}left(-C_1-C_2+\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)=0,\textbackslash{}\textbackslash{} V\textbackslash{}left(-C_1-C_2+\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)+u\textbackslash{}left(C_1+C_2 e^{-iq}\textbackslash{}right)=0. \textbackslash{}end{cases}
+
+
+For a system to have a nontrivial solution (there are an infinite number of them), it is necessary and sufficient to set the main determinant of the system equal to zero. Thus,
+
+
+$$\left(C_1+C_2 e^{iq}\right)\left(C_1+C_2 e^{-iq}\right)=\left(C_1+C_2-\dfrac{1}{\omega^2 L}\right)^2.$$
+
+
+Finally, $$\cos q = \dfrac{\left( C_1 + C_2 - \dfrac{1}{\omega^2 L} \right)^2-C_1^2-C_2^2}{2 \cdot C_1C_2}.$$
+
+\end{solcard}
+
+\begin{solcard}{A3}{Determine at what frequencies the wave vector $q$ will have an imaginary part. Express your answer in terms of $L$, $C_1$ and $C_2$.}{0.60}
+
+First way. Let us give an expression for $\cos{q}$ $$\cos{q}=1-\dfrac{C_1+C_2}{C_1C_2}\cdot \dfrac{1}{\omega^2 L}+\dfrac{1}{2C_1 C_2}\cdot \left(\dfrac{1}{\omega^2L}\right)^2$$ Решим два квадратных неequalsства $\\$ \textbackslash{}begin{align*}\textbackslash{}cos{q}>1;\textbackslash{}\textbackslash{} -\textbackslash{}dfrac{C_1+C_2}{C_1C_2}\textbackslash{}cdot \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}+\textbackslash{}dfrac{1}{2C_1 C_2}\textbackslash{}cdot \textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2L}\textbackslash{}right)^2>0;\textbackslash{}\textbackslash{} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}-2\textbackslash{}left(C_1+C_2\textbackslash{}right)\textbackslash{}right)>0; \textbackslash{}\textbackslash{} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} \textbackslash{}in \textbackslash{}left(-\textbackslash{}infty;0\textbackslash{}right) \textbackslash{}cup \textbackslash{}left(2\textbackslash{}left(C_1+C_2\textbackslash{}right);+\textbackslash{}infty\textbackslash{}right); \textbackslash{}\textbackslash{} \textbackslash{}omega^2 L \textbackslash{}in \textbackslash{}left(0;\textbackslash{}dfrac{1}{2\textbackslash{}left(C_1+C_2\textbackslash{}right)}\textbackslash{}right)\textbackslash{}end{align*} $\\$ \textbackslash{}begin{align*}\textbackslash{}cos{q}<-1;\textbackslash{}\textbackslash{} 2-\textbackslash{}dfrac{C_1+C_2}{C_1 C_2} \textbackslash{}cdot \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}+\textbackslash{}dfrac{1}{2C_1C_2}\textbackslash{}cdot\textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)^2<0;\textbackslash{}\textbackslash{} \textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)^2-2\textbackslash{}left(C_1 + C_2\textbackslash{}right)\textbackslash{}cdot\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}+4C_1C_2<0;\textbackslash{}\textbackslash{} \textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}-2C_1\textbackslash{}right)\textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}-2C_2\textbackslash{}right)<0;\textbackslash{}\textbackslash{} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} \textbackslash{}in \textbackslash{}left(2C_1;2C_2\textbackslash{}right);\textbackslash{}\textbackslash{} \textbackslash{}omega^2 L \textbackslash{}in \textbackslash{}left(\textbackslash{}dfrac{1}{2C_1};\textbackslash{}dfrac{1}{2C_2}\textbackslash{}right)\textbackslash{}end{align*} From объединения системы неequalsств we get final answer $$\omega\in\left[0;\dfrac{1}{\sqrt{2\left(C_1+C_2\right)L}}\right)\cup\left(\dfrac{1}{\sqrt{2C_2L}};\dfrac{1}{\sqrt{2C_1L}}\right).$$
+
+
+$$\cos{q}=1-\dfrac{C_1+C_2}{C_1C_2}\cdot \dfrac{1}{\omega^2 L}+\dfrac{1}{2C_1 C_2}\cdot \left(\dfrac{1}{\omega^2L}\right)^2$$
+
+
+Let's solve two quadratic inequalities
+
+
+From combining the system of inequalities we obtain the final answer
+
+
+$$\omega\in\left[0;\dfrac{1}{\sqrt{2\left(C_1+C_2\right)L}}\right)\cup\left(\dfrac{1}{\sqrt{2C_2L}};\dfrac{1}{\sqrt{2C_1L}}\right).$$
+
+
+Second way. Let's write down the expression for $x=\cos q$ $$x=1-\dfrac{C_1+C_2}{C_1C_2}\cdot \dfrac{1}{\omega^2L}+\dfrac{1}{2C_1C_2}\cdot \dfrac{1}{\omega^4L^2}.$$ We get, что зависимость $x(\dfrac{1}{\omega^2L})$ квадратичная, построим ее график качественный график, на котором отметим точки пересечения с прямыми $\cos{q}=1$ and $\cos{q}=-1$.
+
+
+The resulting graph can be qualitatively reconstructed in the $y=\cos{q}$ $x=\omega^2L$ axes, preserving all extrema and transforming the $x$ axis.
+
+
+Let us introduce the notation corresponding to the coordinates $x$ at the point of intersection of the constructed graph with the lines $\cos{q}=1$, $\cos{q}=1$. At the point of intersection of the graph with $\cos{q}=1$, $\omega=\omega_1$. At the intersection point of the graph with $\cos{q}=-1$, $\omega=\omega_2$ and $\omega=\omega_3$. Let's compose and solve quadratic equations for $\dfrac{1}{\omega^2L}$ $\\$ \textbackslash{}begin{align*}\textbackslash{}cos{q}=1;\textbackslash{}\textbackslash{} -\textbackslash{}dfrac{C_1+C_2}{C_1C_2}\textbackslash{}cdot \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}+\textbackslash{}dfrac{1}{2C_1 C_2}\textbackslash{}cdot \textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2L}\textbackslash{}right)^2=0;\textbackslash{}\textbackslash{} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}-2\textbackslash{}left(C_1+C_2\textbackslash{}right)\textbackslash{}right)=0; \textbackslash{}\textbackslash{} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} = 2\textbackslash{}left(C_1+C_2\textbackslash{}right) \textbackslash{}text{or} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} = 0\textbackslash{}end{align*} $\\$ \textbackslash{}begin{align*}\textbackslash{}cos{q}=-1;\textbackslash{}\textbackslash{} 2-\textbackslash{}dfrac{C_1+C_2}{C_1 C_2} \textbackslash{}cdot \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}+\textbackslash{}dfrac{1}{2C_1C_2}\textbackslash{}cdot\textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)^2=0;\textbackslash{}\textbackslash{} \textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}\textbackslash{}right)^2-2\textbackslash{}left(C_1 + C_2\textbackslash{}right)\textbackslash{}cdot\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}+4C_1C_2=0;\textbackslash{}\textbackslash{} \textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}-2C_1\textbackslash{}right)\textbackslash{}left(\textbackslash{}dfrac{1}{\textbackslash{}omega^2 L}-2C_2\textbackslash{}right)=0;\textbackslash{}\textbackslash{} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} = 2C_1 \textbackslash{}text{or} \textbackslash{}dfrac{1}{\textbackslash{}omega^2 L} = 2C_2\textbackslash{}end{align*} Comparing the solutions of the equations with the graph, we get the answer $$\omega\in\left[0;\dfrac{1}{\sqrt{2\left(C_1+C_2\right)L}}\right)\cup\left(\dfrac{1}{\sqrt{2C_2L}};\dfrac{1}{\sqrt{2C_1L}}\right).$$
+
+
+Comparing the solutions of the equations with the graph, we get the answer
+
+
+$$\omega\in\left[0;\dfrac{1}{\sqrt{2\left(C_1+C_2\right)L}}\right)\cup\left(\dfrac{1}{\sqrt{2C_2L}};\dfrac{1}{\sqrt{2C_1L}}\right).$$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig2.jpg}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig3.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A4}{Measure the dependence of the real and imaginary components of the wave vector $\Re(q)$ and $\Im(q)$ on the frequency $f$. Describe the measurement technique. Take measurements in the frequency range from $650~\text{kHz}$ to $1300~\text{kHz}$ in steps of $50~\text{kHz}$. For each frequency $f$, the value of both $\Re(q)$ and $\Im(q)$ must be obtained.}{1.50}
+
+Let's connect the generator to the circuit according to the instructions in the condition. Using two oscilloscope channels, we will measure the doubled voltage amplitude on the generator $U_0$ and the doubled voltage amplitude on the first link $U_1$. Using the phase shift of the signals on an oscilloscope we will measure $\Re{(q)}$ $$\Re{(q)}=2\pi f\Delta T$$ По отношению амплитуд на сигналах будем измерять $\Im{(q)}$ $$\Im{(q)}=\ln{\dfrac{U_0}{U_1}}$$ For/Atмечание. For/At проведении измерений в диапазоне частот $f\in\left[770;890\right]~\text{kHz}$ circuit находится в проводящем состоянии (соответствует диапазону частот $f\in\left(\ dfrac{1}{\sqrt{2\left(C_1+C_2\right)L}};\dfrac{1}{\sqrt{2C_2L}}\right)$), therefore, during measurements, the influence of the reflected wave can be noticed. When linearized, these points will produce outliers.
+
+
+Using the phase shift of the signals on an oscilloscope we will measure $\Re{(q)}$
+
+
+$$\Re{(q)}=2\pi f\Delta T$$
+
+
+Based on the ratio of the amplitudes on the signals, we will measure $\Im{(q)}$
+
+
+$$\Im{(q)}=\ln{\dfrac{U_0}{U_1}}$$
+
+
+Note. When making measurements in the frequency range $f\in\left[770;890\right]~\text{kHz}$, the circuit is in a conducting state (corresponding to the frequency range $f\in\left(\dfrac{1}{\sqrt{2\left(C_1+C_2\right)L}};\dfrac{1}{\sqrt{2C_2L}}\right)$), so during measurements you can notice the influence of the reflected wave. When linearized, these points will produce outliers.
+
+
+$f,~\text{kHz}$ $\Delta T,~\text{ns}$ $U_0,~\text{mV}$ $U_1,~\text{mV}$ $\Re{(q)}$ $\Im{(q)}$ $f^{-2}$, $10^{-12}~\mathrm{s}^2$ $\Re(\cos q)$ $(1-\cos{q})\cdot f^2,~10^{12}\text{ Hz}^2$ 650 0 57.6 8 0.00 -1.97 2.37 3.67 -1.13 700 32 128 34.4 0.14 -1.31 2.04 1.98 -0.48 750 216 284 408 1.02 0.36 1.78 0.56 0.25 800 452 616 416 2.27 -0.39 1.56 -0.70 1.09 850 396 328 172 2.11 -0.65 1.38 -0.63 1.18 900 480 304 212 2.71 -0.36 1.23 -0.97 1.60 950 516 252 134 3.08 -0.63 1.11 -1.21 1.99 1000 496 232 112 3.12 -0.73 1.00 -1.28 2.28 1050 484 232 110 3.19 -0.75 0.91 -1.29 2.53 1100 460 244 120 3.18 -0.71 0.83 -1.26 2.74 1150 436 268 142 3.15 -0.64 0.76 -1.21 2.92 1200 416 304 182 3.14 -0.51 0.69 -1.13 3.07 1250 396 368 264 3.11 -0.33 0.64 -1.06 3.21 1300 388 520 464 3.17 -0.11 0.59 -1.01 3.39
+
+\end{solcard}
+
+\begin{solcard}{A5}{Linearize the dependence of $\Re(\cos{q})$ on the frequency of the generator $f$ and determine the coefficients of the linear dependence.}{1.00}
+
+Using the result of the previous points $$\cos{q}=1-\dfrac{C_1+C_2}{C_1C_2}\cdot \dfrac{1}{\omega^2L}+\dfrac{1}{2C_1C_2}\cdot \dfrac{1}{\omega^4L^2}.$$Преобсуя expression we get линеаризацию $(1-\cos{q})\cdot\omega^2L$ от $\dfrac{1}{\omega^2L}$ $$(1-\cos{q})\cdot\omega^2L=\dfrac{C_1+C_2}{C_1C_2}-\dfrac{1}{2C_1C_2}\cdot \dfrac{1}{\omega^2L}.$$We linearize the dependence and construct a graph.
+
+
+Linear dependence parameters (slope coefficient and shift index, respectively)$$k=-2.58\cdot10^{24}~\text{Hz}^4,\quad b=4.86\cdot10^{12}~\text{Hz}^2.$$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig4.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A6}{Using the coefficients found in A5, determine the capacitances of capacitors $C_1$ and $C_2$ ($C_1 < C_2$).}{0.70}
+
+According to the theory,\textbackslash{}begin{align*}k=-\textbackslash{}dfrac{(2\textbackslash{}pi)^2}{2L^2}\textbackslash{}cdot\textbackslash{}dfrac{1}{C_1C_2},\textbackslash{}quad b=\textbackslash{}dfrac{(2\textbackslash{}pi)^2}{L}\textbackslash{}cdot\textbackslash{}dfrac{C_1+C_2}{C_1C_2}. \textbackslash{}end{align*} From where we get (using, for example, Vieta’s theorem for a quadratic equation whose roots are inverse capacitances) \textbackslash{}begin{align*}C_1=0.43 \textbackslash{}text{nF},\textbackslash{}\textbackslash{} C_2=0.89 \textbackslash{}text{nF}. \textbackslash{}end{align*}
+
+
+\textbackslash{}begin{align*}k=-\textbackslash{}dfrac{(2\textbackslash{}pi)^2}{2L^2}\textbackslash{}cdot\textbackslash{}dfrac{1}{C_1C_2},\textbackslash{}quad b=\textbackslash{}dfrac{(2\textbackslash{}pi)^2}{L}\textbackslash{}cdot\textbackslash{}dfrac{C_1+C_2}{C_1C_2}. \textbackslash{}end{align*} Where do we get it from (using, for example, Vieta’s theorem for a quadratic equation whose roots are inverse capacities)
+
+
+\textbackslash{}begin{align*}C_1=0.43 \textbackslash{}text{nF},\textbackslash{}\textbackslash{} C_2=0.89 \textbackslash{}text{nF}. \textbackslash{}end{align*}
+
+\end{solcard}
+
+\begin{solcard}{B1}{Express the impedances $z_{r}$ and $z_{l}$ for waves traveling to the right and left. Express your answer in terms of $C_1$, $C_2$, $L$, $q$ and $\omega$.}{0.80}
+
+Let's arrange the currents and potentials in the circuit similarly to part A
+
+
+Then we write down the wave impedance $z_r$ for a wave traveling to the right $$z_r=\dfrac{V}{I}=\dfrac{V}{V-u}\cdot\dfrac{1}{i\omega C_1}.$$Substituting соratio for $\dfrac{u}{V}$, поrayенное в части A $$z_r=\dfrac{1}{1-\dfrac{C_1+C_2 e^{iq}}{C_1+C_2-\dfrac{1}{\omega^2L}}}\cdot\dfrac{1}{i\omega C_1}=\dfrac{C_1+C_2-\dfrac{1}{\omega^2L}}{C_2(1-e^{iq})-\dfrac{1}{\omega^2L}}\cdot\dfrac{1}{i\omega C_1}.$$Expression for $z_l$ можно поrayandть using замену $q \rightarrow -q$ $$z_l=\dfrac{C_1+C_2-\dfrac{1}{\omega^2L}}{C_2(1-e^{-iq})-\dfrac{1}{\omega^2L}}\cdot\dfrac{1}{i\omega C_1}.$$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig5.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B2}{Write down the boundary condition connecting the complex stress amplitudes $V_r(0,t)$ and $V_l(0,t)$. The answer will be an equation containing $V_r(0,t)$, $V_l(0,t)$, $z_{r}$, $z_{l}$, $q$ and $N$.}{0.60}
+
+Let's write the boundary condition for the current flowing from a link in the circuit with number $N$ $$I_r(N,t)+I_l(N,t)=0.$$ Let's express the currents of each of the waves through the corresponding voltages on the zero link \textbackslash{}begin{align*}\textbackslash{}dfrac{V_r(0,t)e^{iqN}}{z_r}+\textbackslash{}dfrac{V_l(0,t)e^{-iqN}}{z_l}=0,\textbackslash{}\textbackslash{} V_l(0,t)=-\textbackslash{}dfrac{z_l}{z_r}V_r(0,t)e^{2iqN}.\textbackslash{}end{align*}
+
+\end{solcard}
+
+\begin{solcard}{B3}{Obtain an expression for the total impedance modulus of a circuit $|z|$ consisting of $N$ links. Express your answer using $N$, $q$ and $|z_r|$.}{1.20}
+
+Let's write an expression for the total impedance of the circuit by substituting the amplitude of voltage and current as the sum of the amplitudes of voltage and current of two waves $$z=\dfrac{V_r(0,t)+V_l(0,t)}{I_r(0,t)+I_l(0,t)}=\dfrac{V_r(0,t)+V_l(0,t)}{\dfrac{V_r(0,t)}{z_r}+\dfrac{V_l(0,t)}{z_l}}.$$Substituting поrayенные соотношения на амплитуды напряжений волн $$z=\dfrac{1-\dfrac{z_l}{z_r}e^{2iqN}}{\dfrac{1}{z_r}+\dfrac{1}{z_l}\left(-\dfrac{z_l}{z_r}e^{2iqN}\right)}=\dfrac{z_r-z_le^{2iqN}}{1-e^{2iqN}}.$$Substituting соratio на импедансы and we neglect $\dfrac{1}{\omega^2L}$ $$z=z_r\dfrac{1-\dfrac{C_2\left(1-e^{iq}\right)-\dfrac{1}{\omega^2L}}{C_2\left(1-e^{-iq}\right)-\dfrac{1}{\omega^2L}}\cdot e^{2iqN}}{1-e^{2iqN}}=z_r\dfrac{1-\dfrac{1-e^{iq}}{1-e^{-iq}}\cdot e^{2iqN}}{1-e^{2iqN}}=z_r\dfrac{1+e^{2iq\left(N+\frac{1}{2}\right)}}{1-e^{2iqN}}.$$Возьмем magnitude от поrayенного выражения $$|z|=|z_r|\dfrac{\cos{\left(q\left(N+\frac{1}{2}\right)\right)}}{\sin{\left(qN\right)}}.$$
+
+\end{solcard}
+
+\begin{solcard}{B4}{Using the results obtained in Part A, write an equation for the frequencies at which the maximum impedance is achieved. Express your answer in terms of $N$, $C_1$, $C_2$, $L$, $\omega$ and the integer parameter $m$.}{0.60}
+
+The maximum modulus is reached at $qN=\pi \Delta n$. Let us obtain an expression for the frequencies at which the impedance extrema $$\arccos{\left(\dfrac{1}{2C_1C_2}\left(\dfrac{1}{\omega^2L}-\left(C_1+C_2\right)\right)^2-\left(C_1^2+C_2^2\right)\right)}=\dfrac{\pi \Delta n}{N}.$$ are reached
+
+\end{solcard}
+
+\begin{solcard}{B5}{Measure the frequencies at which the maximum impedance modulus is realized. Measurements should be carried out at frequencies $1400 ~\text{kHz} < f < 6000~\text{kHz}$, at which the LC circuit passes into the conduction band.}{1.00}
+
+Let's connect to the board according to the condition, we will measure the frequencies at which the minimum amplitude of the voltage across the resistor is achieved. We obtain the signal on the resistor using the math oscilloscope mode, subtracting from the signal taken from the generator the signal taken on the J2 - GND contacts.
+
+
+$n$ $f_{rez},~\text{kHz}$ $q$ 1 1466 3.49 2 1590 3.70 3 1717 3.88 4 1920 4.10 5 2137 4.29 6 2489 4.52 7 2899 4.70 8 3579 4.90 9 4549 5.06
+
+\end{solcard}
+
+\begin{solcard}{B6}{Linearize the relationship measured in step B5 and construct a linearized graph from which determine the number of links in the chain $N$.}{0.80}
+
+Let us construct the dependence of $q=2\pi-\arccos{\left(\dfrac{1}{2C_1C_2}\left(\dfrac{1}{\omega^2L}-\left(C_1+C_2\right)\right)^2-\left(C_1^2+C_2^2\right)\right)}$ on $n$.
+
+
+The slope is equal to $k=0.198$, hence $N=15.9\approx 16$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig6.jpg}
+\end{figure}
+\end{solcard}
+
+\end{document}

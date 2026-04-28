@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Inverse Compton scattering}}
+\author{\normalsize Y14 (2014) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+When a photon collides with a fast electron, it can gain energy from it. This process is called inverse Compton scattering. This phenomenon is of great importance in astrophysics, for example, it provides a mechanism for the appearance of X-rays and gamma rays in space. An electron with total energy $E$ (its kinetic energy is greater than the rest energy) and a low-energy photon (its energy is less than the rest energy of the electron) with a frequency $\nu$ move in opposite directions and collide with each other. The photon is scattered at an angle $\theta$ to the initial direction.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Express the energy of the scattered photon in terms of $E$, $\nu$, $\theta$ and the rest energy of the electron $E_0$. Find the value of $\theta$ at which the energy of the scattered photon is maximum and the value of this energy.}{4.80}
+
+\problembox{B2}{Let us assume that the energy of the electron $E$ before the collision is much greater than its rest energy $E_0$, i.e. $E=\gamma E_0$, $\gamma \gg 1$, and the initial photon energy is much less than $\frac{E_0}{\gamma}$, find an approximate expression for the maximum energy of the scattered photon. Assuming $\gamma=200$ and the initial wavelength of the visible light photon $\lambda=500~\text{nm}$, find the maximum energy and corresponding wavelength of the scattered photon.
+\begin{itemize}
+    \item Electron rest energy $E_0=0.511~\text{MeV}$;
+    \item Planck's constant $h = 6.63 \cdot 10^{-34}~\text{J}\cdot\text{s}$;
+    \item speed of light in vacuum $c = 3 \cdot 10^8~\text{m}/\text{s}$.
+\end{itemize}}{2.40}
+
+\problembox{B3}{An electron with energy $E$ and a photon move in opposite directions and collide with each other. Find the initial energy of the photon at which it will receive maximum energy from a collision with an electron. Find the energy of the scattered photon in this case.}{1.40}
+
+\problembox{B4}{An electron with energy $E$ and a photon collide, moving in a direction perpendicular to each other. In this case, find the initial energy of the photon at which it will receive maximum energy when colliding with an electron. Find the energy of the scattered photon in this case.}{1.40}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3968}
+
+\end{document}

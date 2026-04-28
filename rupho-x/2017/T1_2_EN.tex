@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Double star}}
+\author{\normalsize X17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A binary star is a system of two gravitationally bound stars revolving around their center of mass in circular orbits. Cosmonaut-researcher Gluck wants to find such orbits that, when circling, his spacecraft would be on a straight line connecting these stars, and so that fuel consumption would be minimal. Use the following notations: $L$ – distance between stars, $L_x=xL$ – distance from the spacecraft to the star $M_1$, star mass ratio $k=M_1/M_2$.
+
+\problembox{A1}{Express the parameter $k=k(x)$.}{4.50}
+
+\problembox{A2}{Estimate numerically at what distances from the Moon Gluck’s ship must be in order for it to move in the Earth-Moon system as described in the problem statement. Consider the ratio of the masses of the Moon and the Earth to be $k=1/81$, and the distance from the Earth to the Moon to be $L=3{.}8\cdot{10^5~\text{km}}$.}{3.00}
+
+\problembox{A3}{Schematically depict the possible positions of the satellite in the Earth-Moon system.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/302}
+
+\end{document}

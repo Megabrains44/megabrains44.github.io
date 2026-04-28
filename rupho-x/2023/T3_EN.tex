@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Tidal locking phenomenon}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+If an isolated spherical planet is covered with a thin layer of liquid, the shape of the liquid surface will tend to be spherical due to the principle of minimum potential energy. If there are other bodies near the planet, they will distort the shape of the surface of the liquid. This is due to tidal forces, which arise due to the fact that different parts of the liquid are attracted to this body with different forces. Such forces cause ebbs and flows on the surfaces of planets, which is why they got their name. The problem considers the following system. Two homogeneous spherical bodies (planets) with masses $m$ (small body) and $M$ (large body, $M>m$) move in circular orbits around a common center of mass. The distance between the centers of the bodies is $L$, the radius of the large body is $R$ ($L\gg{R}$), and the small body can be considered a point body. The surface of a large body is covered with a thin layer of liquid of density $\rho$, the surface shape of which is the object of study. You have to determine the shape of the surface of a large body during synchronous rotation, when the angular velocity of the orbital rotation of the bodies coincides with the angular velocity of rotation of the large body around its own axis. Next, you need to describe the dynamics of tidal capture, that is, the process of transition to synchronous rotation.
+
+\section*{Part A. Synchronized rotation (2.7 points).}
+
+This part of the problem deals with synchronous rotation. A large body rotates around its axis with an angular velocity equal to the angular velocity of the orbital rotation of the bodies $\omega$.
+
+\problembox{A1}{Obtain an exact expression for the angular velocity of orbital rotation $\omega$. Express your answer in terms of $G, m, M$ and $L$.}{0.70}
+
+Let us move to a non-inertial reference system associated with the center of the large body and rotating so that the center of the small body is stationary in it. Let us recall the expression for acceleration in a non-inertial reference system with a origin at point $O$, moving with acceleration $\vec{a}_0$, the coordinate axes of which rotate with angular velocity $\vec{\omega}$ and angular acceleration $\vec{\varepsilon}$: $$\vec\{a\}_\text\{отн\}=\vec\{a\}-\vec\{a\}_0+\omega^2\vec\{r\}_\perp-\big[\vec\{\varepsilon\}\times\vec\{r\}\big]-2\big[\vec\{\omega\}\times\vec\{v\}_\text\{отн\}\big]. $$ Здесь $\vec{a}$ – ускорение в инерциальной системе отсчёта, $\vec{r}_\perp$  – компонента радиус-вектора частицы, перпендикулярная оси вращения, а $\vec{v}_\text{rel}$ – скорость частицы относительно неинерциальной системы отсчёта. Во всех пунктах задачи ограничивайтесь только первыми тремя слагаемыми: $$\vec\{a\}_\text\{отн\}\approx\{\vec\{a\}-\vec\{a\}_0+\omega^2\vec\{r\}_\perp\}. $$ Задача является плоской, поэтому считайте, что $\vec{r}_\perp=\vec{r}$, unless otherwise stated.
+
+Let us denote the center of the large body as $O$. Further, in all points of the problem, unless otherwise stated, the shape of the surface of a large body is studied in a section perpendicular to the angular velocity of orbital rotation, containing a small body and point $O$. Consider the point $P$ on the surface of a large body lying on a line passing through the point $O$ and forming an angle $\theta$ with the line connecting the smaller body to the point $O$. Let's denote the distance between points $O$ and $P$ as $r(\theta)$.
+
+Let us denote the center of the large body as $O$. Further, in all points of the problem, unless otherwise stated, the shape of the surface of a large body is studied in a section perpendicular to the angular velocity of orbital rotation, containing a small body and point $O$. Consider the point $P$ on the surface of a large body lying on a line passing through the point $O$ and forming an angle $\theta$ with the line connecting the smaller body to the point $O$. Let's denote the distance between points $O$ and $P$ as $r(\theta)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A2}{Obtain an exact expression for the potential difference of the gravitational field of a small body $\Delta{\varphi}_\text{гр}=\varphi_{\text{гр}P}-\varphi_{\text{гр}O}$ at points $P$ and $O$. Express your answer using $G$, $m$, $L$, $\theta$ and $r(\theta)$.}{0.20}
+
+\problembox{A3}{Obtain an exact expression for the potential difference of inertial forces $\Delta{\varphi}_\text{ин}=\varphi_{\text{ин}P}-\varphi_{\text{ин}O}$ at points $P$ and $O$. Express your answer using $G$, $m$, $M$, $L$, $\theta$ and $r(\theta)$.}{0.50}
+
+Let us represent the shape of the surface in the form $r(\theta)=R+h(\theta)$, where $h(\theta)\ll{R}$ and $h(\pi/2)=0$.
+
+\problembox{A4}{Get addicted $h(\theta)$. Express your answer in terms of $m$, $M$, $R$, $L$ and $\theta$. Keep your answer as simple as possible. Qualitatively depict the shape of the surface in the section under consideration. In the same figure, depict the unperturbed shape of the surface. Note: Use the following approximation: $$\cfrac\{1\}\{\sqrt\{1+a^2-2a\cos\theta\}\}\approx\{1+a\cos\theta+\cfrac\{a^2(3\cos^2\theta-1)\}\{2\}\} $$}{1.30}
+
+Note: Use the following approximation: $$\cfrac\{1\}\{\sqrt\{1+a^2-2a\cos\theta\}\}\approx\{1+a\cos\theta+\cfrac\{a^2(3\cos^2\theta-1)\}\{2\}\} $$
+
+\section*{Part B. Oscillating surface (3.8 points).}
+
+We examined the behavior of the system in steady state. Next, we will study transient processes that lead to the equalization of angular velocities of orbital motion and rotation of a large body around its axis.
+
+In this part of the problem, the angular velocity of rotation of the large body is $\Omega$ and is considered constant. Let's move to a non-inertial reference system associated with point $O$ and rotating with angular velocity $\Omega$. We will consider the same section of a large body as in part $\mathrm{A}$. Let us introduce the following notation for this part of the problem: $$\omega_1=\omega-\Omega $$ Для решения задачи нам понадобится компонента силы $F_\tau$, направленная вдоль вектора $\vec{e}_\theta$. Она определяется силами инерции и гравитационной силой малого тела, и зависит от угла $\theta$  и от времени $t$. Будем отсчитывать время $t$ from the moment shown in the figure.
+
+In this part of the problem, the angular velocity of rotation of the large body is $\Omega$ and is considered constant. Let's move to a non-inertial reference system associated with point $O$ and rotating with angular velocity $\Omega$. We will consider the same section of a large body as in part $\mathrm{A}$. Let us introduce the following notation for this part of the problem: $$\omega_1=\omega-\Omega $$ Для решения задачи нам понадобится компонента силы $F_\tau$, направленная вдоль вектора $\vec{e}_\theta$. Она определяется силами инерции и гравитационной силой малого тела, и зависит от угла $\theta$  и от времени $t$. Будем отсчитывать время $t$ from the moment shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Show that the tangential component of the force $F_\tau(t,\, \theta)$ acting on a particle of mass $\Delta{m}$ located on the surface of a larger body at an angle $\theta$ can be represented as: $$F_\tau(t,\\,\theta)=\Delta\{m\}\alpha\sin(2\omega_1t-2\theta) $$ Найдите $\alpha$. Ответ выразите через $G$, $m$, $L$ и $r(\theta)$. Примечание: воспользуйтесь результатами, полученными при решении пункта $\mathrm{A4}$.}{0.50}
+
+Note: Use the results obtained when solving item $\mathrm{A4}$.
+
+From the law of change in angular momentum for an element of a liquid surface, it can be obtained that its equation of motion is equivalent to the equation of forced oscillations: $$\Delta\{m\} R^2 \left(\ddot\{\theta\}+2\gamma\dot\{\theta\}+\omega^2_0(\theta-\theta_0)\right)=F_\tau(t,\\,\theta)R, $$ где $\gamma$ и $\omega_0$ – постоянные величины, $\theta_0$ – положение элемента жидкости в равновесии. Считайте, что $\omega_0\gg{\sqrt{Gm/L^3}}$. Во всех пунктах считайте, что $\theta - \theta_0 \ll 1$, поэтому справедливо приближение $F(t,\,\theta) \approx F(t,\, \theta_0)$.
+
+\problembox{B2}{Show that the dependence $\theta(t{,}\theta_0)$ has the following form: $$\theta(t)=\theta_0+A\sin(2\omega_1t-2\theta_0-\varphi_0) $$ Найдите $A$ и $\varphi_0$.  Ответы выразите через $G$, $m$, $L$, $\gamma$,  $\omega_0$, $\omega$, $\Omega$ и $\theta_0$.}{0.80}
+
+Further, for convenience, we will use the angle $\varphi_1 = 2 \theta_0 + \varphi_0$ and write the expression for $\theta(t)$ in the following form: $$\theta(t,\theta_0)=\theta_0+A\sin(2\omega_1t-\varphi_1) $$
+
+To determine the dependence $h(t{,}\theta)$, we present it in the following form: $$h(t,\\,\theta)=h_0+h'(t,\\,\theta)\qquad h'(t,\\,\theta)\ll\{h_0\} $$ Расcmотрим прямоугольный параллелепипед со сторонами $h$, $Rd\theta_0$ и $dz$, соответствующий углу $\theta_0$, где $dz$, $\thet a_0$ и $d\theta_0$ - постоянные величины. Объём воды в этом параллелепипеде равен: $$dV=hRd\theta_0 dz. $$ Этот объем меняется, поскольку жидкость втекает и вытекает через грани $hdz$ параллелепипеда с разными скоростями, что приводит к изменению высоты $h$. Считайте, что через грани $hRd\theta_0$ liquid does not flow. The liquid is incompressible.
+
+To determine the dependence $h(t{,}\theta)$, we present it in the following form: $$h(t,\\,\theta)=h_0+h'(t,\\,\theta)\qquad h'(t,\\,\theta)\ll\{h_0\} $$ Расcmотрим прямоугольный параллелепипед со сторонами $h$, $Rd\theta_0$ и $dz$, соответствующий углу $\theta_0$, где $dz$, $\thet a_0$ и $d\theta_0$ - постоянные величины. Объём воды в этом параллелепипеде равен: $$dV=hRd\theta_0 dz. $$ Этот объем меняется, поскольку жидкость втекает и вытекает через грани $hdz$ параллелепипеда с разными скоростями, что приводит к изменению высоты $h$. Считайте, что через грани $hRd\theta_0$ liquid does not flow. The liquid is incompressible.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B3}{Obtain an expression for the rate of growth of height $\dot{h'}(t{,}\,\theta_0)$ at time $t$ at angle $\theta_0$. Express your answer using $h_0$ and $\frac{d\dot{\theta}}{d\theta _0}$}{0.40}
+
+\problembox{B4}{Assuming that the amplitude of oscillations $h'$ is the same for all values of $\theta_0$, you obtain the dependence $h(t)$. Express your answer using $h_0$, $A$, $\omega_1$, $\varphi_1$ and $t$.}{0.30}
+
+\problembox{B5}{For the moment of time $t$, determine the values of the angles $\theta_0$ corresponding to the maximum value $h(t{,}\,\theta_0)$. Express your answers using $\omega_1$, $t$ and $\varphi_0$.}{0.40}
+
+To find the moment of forces acting on a large body, you will need to consider an arbitrary section of the larger body. We will measure the angle $\beta$ from the axis of rotation of the larger body. Then the cross-sectional radius of the larger body in the perpendicular plane is equal to $r=R\sin\beta$. Consider that to describe the dependence of $\theta(t{,}\,\theta_0{,}\,\beta)$ and $h'(t{,}\,\theta_0{,}\,\beta)$ it is sufficient to replace the radius $R$ with the distance to the axis of rotation $R\sin\beta$ everywhere.
+
+\problembox{B6}{Find the moment of force $M_z$ acting from the small body on the surface of the large body relative to the axis $z$. Express your answer using $G$, $m$, $\rho$, $R$, $h_0$, $L$, $A$ and $\varphi_0$.}{1.40}
+
+\section*{Part C. Tidal locking in the Earth-Moon system (3.5 points).}
+
+Tidal locking is the equalization of the angular velocities of orbital rotation and rotation around its own axis. In this part of the problem, you will determine the parameters $\omega_0$ and $\gamma$ for the model discussed in Part B, and also estimate the time during which tidal locking occurs in the Earth-Moon system.
+
+Consider the following information known:
+
+Earth mass $M = 5.97 \cdot 10^{24}~\text{kg}$; Moon mass $m = 7.36 \cdot 10^{22}~\text{kg}$; radius of the Earth $R = 6.38 \cdot 10^6~\text{м}$; water density $\rho = 1.00 \cdot 10^3~\text{kg}/\text{м}^3$; gravitational constant $G =6.67 \cdot 10^{-11}~ \text{Н} \cdot \text{м}^2/\text{kg}^2 $; now the distance between the Earth and the Moon is $L_0 = 3.84\cdot 10^8~\text{м}$; Now the Earth rotates around its own axis with an angular velocity of $\Omega_0 = 7.27 \cdot 10^{-5}~\text{с}^{-1}$.
+
+\problembox{C1}{Find the orbital angular velocity $\omega_\text{синх}$ and the distance $L_\text{синх}$ between the Earth and the Moon during synchronous rotation. Express the answers in terms of $m$, $M$, $R$, $G$, $L_0$, $\Omega_0$ and find their numerical values. Note: with synchronous rotation, the angular momentum of the Earth associated with rotation around its axis can be neglected.}{0.80}
+
+Note: with synchronous rotation, the angular momentum of the Earth associated with rotation around its axis can be neglected.
+
+\problembox{C2}{The distance between the Earth and the Moon is increasing at a rate of $\dot{L}_{0}=1~\text{cm}/\text{год}$. Find the value of the average angular acceleration of the Earth $\dot{\Omega}_0$. Express the answer in terms of $m$, $M$, $R$, $G$, $L_0$, $\Omega_0$, $\dot{L}_0$ and find its numerical value.}{0.70}
+
+To describe the transient process, numerical values of the parameters $\omega_0$ and $\gamma$ are required. To determine them, consider the following known:
+
+Now the tide position lags behind the Moon by an angle $\beta=3^\circ$ in the direction of its rotation relative to the Earth. Lag means that $\omega_0>2|\omega_1|$; now the difference between high and low tide heights is $0.24~\text{м}$; The average depth of the world's oceans is $h_0=3.74~\text{км}$.
+
+\problembox{C3}{Find the numerical values of $\omega_0$ and $\gamma$.}{0.80}
+
+\problembox{C4}{Within the framework of the described model, find the angular acceleration of the Earth $\dot{\Omega}_{0\text{(мод)}}$, which is obtained from the results of point $\mathrm{B6}$. Compare it with the value $\dot{\Omega}_0$ obtained in point $\mathrm{C2}$ and draw a conclusion about the applicability of the model under consideration (consider the model applicable if $\Omega_0$ and $\Omega_{0\text{(мод)}}$ differ by no more than 10 times).}{0.50}
+
+Tidal capture in the Earth-Moon system can be divided into two stages: a relatively rapid transition to orbital rotation with an angular velocity of $\omega_{\text{синх}}$, at which the distance from the Earth to the Moon practically coincides with the steady state $L = L_{\text{синх}}$; a long process of equalizing the angular velocities of orbital rotation and the rotation of the Earth around its axis. The characteristic time of the second process $\tau_2$ can be considered the time of the transition process to tidal capture.
+
+Tidal locking in the Earth-Moon system can be divided into two stages:
+
+\problembox{C5}{Estimate the numerical value of $\tau_2$. Express your answer in years.}{0.70}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3134}
+
+\end{document}

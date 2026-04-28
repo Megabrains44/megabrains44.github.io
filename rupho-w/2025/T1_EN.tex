@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Unwinding tape}}
+\author{\normalsize W25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem, you are asked to analyze the dynamics of the following system: a homogeneous flexible inextensible tape with linear density $\lambda$ is wound on a solid homogeneous thin-walled cylinder. One end of the tape is fixed to the surface of the cylinder, and the other is attached to a vertical wall. The total mass of this system is $M$. The tape wraps the cylinder a very large number of times, while the thickness of the tape winding layer is negligible compared to the radius of the cylinder. At the initial moment, the cylinder touches the wall at the point where the tape is attached. The cylinder is released without initial speed, and the tape begins to unwind. Assume that the straight section of tape never comes off the wall. During movement, the tape does not slip along the cylinder. The acceleration due to gravity is $g$. Sliding friction and any other energy losses in this system can be neglected. In all points of the problem, consider that the axis of the cylinder is lowered by an amount many times greater than the radius of the cylinder. Also, in all points of the problem, unless otherwise specified, assume that the layers of the tape are tightly pressed against each other, and the tape does not unwind completely.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Movement without break (6.7 points)}
+
+Let at some moment the mass of the cylinder with the tape remaining on its surface decrease to $m$.
+
+\problembox{A1}{Let us take the potential energy of the system in the Earth’s gravitational field $W_p$ to be zero in the initial position. Determine the dependence of potential energy $W_p$ on mass $m$. Express your answer using $M$, $\lambda$, $g$ and $m$.}{1.20}
+
+Let $v$ be the speed of movement of the cylinder axis.
+
+\problembox{A2}{Express the kinetic energy $E_k$ of this system in terms of $m$ and $v$ at $m \gg \lambda R$ (here $R$ is the unknown radius of the cylinder).}{0.80}
+
+\problembox{A3}{Obtain the dependence of the speed $v$ of the movement of the cylinder axis on the mass $m$. Express your answer using $M$, $\lambda$, $g$ and $m$.}{0.40}
+
+\problembox{A4}{Determine the dependence of the momentum $p$ of this system on the mass $m$. Express your answer using $M$, $\lambda$, $g$ and $m$.}{0.40}
+
+Let $a$ be the acceleration of the cylinder axis, $T_1$ be the tension force of the tape at the point of its attachment to the wall, and $T_O$ be the tension force of the tape at the point at which the vertical section of the tape touches the cylinder.
+
+\problembox{A5}{Determine the dependence of the acceleration $a$ of the cylinder axis on the mass $m$. Express your answer using $g$, $M$ and $m$.}{1.50}
+
+\problembox{A6}{Determine the dependence of the tension force $T_1$ of the tape at the point of its attachment to the vertical wall on the mass $m$. Express your answer using $g$, $ M$ and $m$.}{1.60}
+
+\problembox{A7}{Determine the dependence of the tension force of the tape $T_O$ at the point at which the vertical section of the tape touches the cylinder on the mass $m$. Express your answer using $g$, $M$ and $m$.}{0.80}
+
+\section*{Part B. Separation condition (5.3 points)}
+
+The results you obtained in part $\mathrm{A}$ are applicable until the tape begins to lift off the surface of the cylinder. This part of the problem is devoted to finding the position at which the tape begins to tear away from the surface of the cylinder. Unless otherwise noted, assume that the tape does not unwind completely.
+
+\problembox{B1}{Write down the condition connecting the tension force $T_O$, speed $v$ and linear density $\lambda$, under which the tape does not come off the surface of the cylinder. Consider the tension force of the tape constant along the entire length of the first turn of the cylinder tape. Also consider the relation $v^2 \gg gR$ satisfied.}{1.70}
+
+\problembox{B2}{At what value of $m_c$ does the tape begin to come off the surface of the cylinder? Express your answer using $M$.}{0.40}
+
+\problembox{B3}{Determine the values ​​of $T_1(m_c)$, $ T_O(m_c)$ and $a(m_c)$. Express your answers using $M$ and $g$.}{1.20}
+
+\problembox{B4}{Determine the value of $v(m_c)$. Express your answer in terms of $M$, $g$ and $\lambda$.}{0.40}
+
+\problembox{B5}{What values ​​can $v(m_c)$ take at a fixed length of tape $L$, if by the specified moment it does not have time to completely unwind? Express your answer using $g$ and $L$.}{1.60}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3970}
+
+\end{document}

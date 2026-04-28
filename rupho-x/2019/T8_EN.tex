@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Crooked cylinder}}
+\author{\normalsize X19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A cylindrical vessel of height $H=50~\text{cm}$ with mirror walls is filled with a transparent liquid, the refractive index of which decreases with height according to a linear law. Near the bottom of the cylinder there is a point light source with power $P=100~\text{Вт}$. The refractive index of the liquid near the bottom is $n_1=1.50$, and at the surface $n_2=1.44$. The bottom of the vessel and its lid are covered with a substance that absorbs all radiation that hits it
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T8_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{What radiation power $P_\text{д}$ is absorbed by the bottom of the cylinder?}{0}
+
+\problembox{A2}{Suppose a certain beam passes near the cylinder cover. What is the radius of curvature $R_\text{кр}$ of this ray?}{0}
+
+\problembox{A3}{What is the radius of curvature $R_\text{д}$ of the same ray directly near the source?}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3059}
+
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{The fall of a radiating particle on the Sun}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A spherical particle of radius $r$ and density $\rho$ moves in the gravitational field of the Sun. The particle completely absorbs the radiation from the Sun, emitting it isotropically in its own frame of reference. At some point, the particle found itself in a circular orbit of radius $R$, much larger than the radius of the Sun. The radiation intensity at a given distance $R$ is equal to $I_0$. Consider the radius of the particle $r$ to be such that the force of the gravitational interaction of the particle with the Sun is much greater than the force of its interaction with solar radiation. Neglect the influence of other bodies. The speed of light in vacuum is $c$.
+
+\problembox{A1}{Find the time of fall of the $T$ particle on the Sun.}{5.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/29}
+
+\end{document}

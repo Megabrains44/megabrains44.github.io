@@ -1,0 +1,96 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+      \textbf{#1}\hfill\textbf{#3}\par\smallskip
+      #2
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Dynamics of membrane potential}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}
+\maketitle
+A cell is a living object bounded by a cell membrane, which is a double layer of phospholipids. In the cells of the human body, a voltage exists between the inner and outer surfaces of the membrane, which is called the membrane potential. At steady state, the potential inside the cell is approximately $60-80~mV$ lower, this is called the resting potential. Membrane potential plays an important role in the process of communication between nerve cells. In this problem, the causes of the membrane potential and the transport of signals in nerve cells are studied. You may need the following values for the physical constants: Electron charge $e=1.602\cdot10^{-19}~C$ Boltzmann's constant $k_B=1.381\cdot10^{-23}~J/K$ Avogadro's constant $N_A=6.022\cdot10^{23}~mol^{-1}$ Vacuum dielectric constant $\varepsilon_0=8.85\cdot10^{-12}~/m$ The concentration labeled $n$ is measured in $m^{-3}$, and the concentration labeled $c$ is in $mm/l$.
+You may need the following values for physical constants:
+The concentration indicated by $n$ is measured in $m^{-3}$, and the concentration indicated by $c$ is measured in $mm/l$.
+\section*{Part A. Debye shielding length (1.7 points)}
+Some substances, when dissolved in water, tend to dissociate, that is, break up into positive and negative ions (for example, $\mathrm{NaCl}$ breaks down into $\mathrm{Na^+}$ and $\mathrm{Cl^-}$). Such a solution is called ionized. Before considering the membrane potential, let's study the electrostatic properties of an ionized solution. In such a solution, the force of interaction between two charges does not obey Coulomb’s law, since the ions under the influence of charges are redistributed, causing a screening effect. The force of interaction between charges decreases exponentially with distance. Let us consider a small section of the cell membrane as a non-conducting plate of thickness $d$ (Fig. 1). Let us introduce the $x$ axis perpendicular to the membrane so that it starts on the outer surface and is directed away from the cell. The system is in equilibrium at temperature $T$. The electric field inside the membrane is $\vec E=E_0\hat x$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Fig. 1.}
+\end{figure}
+Without loss of generality, consider the solution outside the cell. The solution contains several types of ions, which are numbered with the index $i$ from $1$ to $I$. Let the concentration of ions of the $i$ type far from the cell be $n_{i0}$, and the charge be $q_{i}$. At a great distance from the cell, the solution is electrically neutral, that is, $\sum\limits_i n_{i0}q_{i}=0$). Let also be the magnitude of the potential difference between the point $x=0$ and the solution far from the cell $| V|\ll k_BT/|q_i|$ ($k_B$ is the Boltzmann constant). The relative dielectric constant of the solution is $\varepsilon$.
+\problembox{A1}{Show that the electric field strength can be written as:\[\vec E(x)=E_0\hat xe^{-x/\lambda}.\]The quantity $\lambda$ is called the Debye screening length. Express $\lambda$ in terms of $n_i$, $q_i$, $\varepsilon$, $\varepsilon_0$ and $k_BT$. Hint: according to the Boltzmann distribution, at thermodynamic equilibrium, the concentration of each type of ions $n_i$ depends on their potential energy of these ions $U_i$ according to the law:\[n_i =n_{i0}\exp\left[-\dfrac{Vq_i}{k_BT}\right].\]}{1.20}
+Hint: according to the Boltzmann distribution, at thermodynamic equilibrium, the concentration of each type of ions $n_i$ depends on their potential energy of these ions $U_i$ according to the law:\[n_i =n_{i0}\exp\left[-\dfrac{Vq_i}{k_BT}\right].\]
+\problembox{A2}{Assume that the extracellular solution is $\mathrm{NaCl}$ with a concentration of $440~mm/l$. Relative dielectric constant of water $\varepsilon= 81$, $T = 310~K$. Calculate $\lambda$ in nm and compare your answer with the cell membrane thickness $d\approx 5~ nm$.}{0.30}
+\problembox{A3}{Find the charge of solution ions per unit area of the cell membrane.}{0.20}
+If you did everything correctly, you should have found that the Debye shielding length is much less than the thickness of the cell membrane. This allows us to consider the membrane as a flat capacitor, while considering the solution electrically neutral. The membrane potential $V$ is equal to the voltage across the capacitor.
+\section*{Part B. Resting membrane potential (2.6 points)}
+In fact, the cell membrane does not completely isolate the inside and outside of the cell, but has many ion channels, each of which can only allow certain types of ions to pass through. For example, sodium ions pass freely through sodium channels. This is called passive transport. The membrane potential at which equilibrium is achieved for a particular type of ion $i$ is called the Nernst potential $V_i^\mathrm{Nernst}$.
+The membrane potential at which equilibrium is achieved for a particular type of ion $i$ is called the Nernst potential $V_i^\mathrm{Nernst}$.
+\problembox{B1}{Let the equilibrium concentration of sodium ions inside the cell be $c_{\mathrm{Na}^+}$, and outside – $c_{\mathrm{Na}^+}^0$. Using the Boltzmann distribution, find the Nernst potential $V^\mathrm{Nernst}_{\mathrm{Na}^+}$. At this point, consider $|eV|$ to be of the same order of magnitude as $k_BT$.}{0.40}
+If for some type of ions the membrane potential is not equal to the Nernst potential, but passive transport channels exist, a flow of these ions will occur through the membrane. The resting membrane potential occurs when not all ions can pass through the membrane (for example, charged protein molecules). Let the protein molecules be uniformly distributed in the cell with a volumetric charge density $\rho_\mathrm{macro}$, and the membrane has channels for the transport of potassium, sodium and chlorine ions. The concentrations of these ions outside the cell are $c_\mathrm{K^+}^0=20~mm/l$, $c_\mathrm{Na^+}^0=440~mm/l$ and $c_\mathrm{Cl^-}^0=560~mm/l$, respectively; $\rho_\mathrm{macro}/N_Ae=-400~mm/l$. The solution inside the cell is electrically neutral (that is, the total charge density of protein molecules and ions is zero), the system is in thermodynamic equilibrium at a temperature $T=310~K$.
+\problembox{B2}{Calculate the resting membrane potential $V$ in mV and the intracellular ion concentrations $c_\mathrm{K^+}$, $c_\mathrm{Na^+}$ and $c_\mathrm{Cl^-}$.}{0.80}
+In addition to passive transport channels, there are also active transport channels in the cell membrane, such as sodium-potassium pumps. An example of the operation of a sodium-potassium pump is shown in Fig. 2. In one cycle, this pump removes three sodium ions from the cell and introduces two potassium ions into the cell.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig2.jpg}
+    \caption{Fig. 2.}
+\end{figure}
+Sodium-potassium pumps provide a current $J_\mathrm{pump}=0.5~/cm^2$ per unit membrane area. The current per unit area through passive transport channels is given by the expression:\[J_i=g_i(V-V_i^\mathrm{Nernst}),\]where “conductivity” $g_{\mathrm K^+}\approx 25 g_{\mathrm{Na}^+}\approx 2g_{\mathrm{Cl}^-}\approx 4~\Omega^{-1}\cdot m^{-2}$. The positive direction of the current is outward from the cell.
+\problembox{B3}{Calculate the resting membrane potential $V$ in mV and the concentrations of ions inside the cell $c_\mathrm{K^+}$, $c_\mathrm{Na^+}$ and $c_\mathrm{Cl^-}$, taking into account the operation of sodium-potassium pumps.}{1.00}
+\problembox{B4}{The operation of active transport channels requires energy expenditure from the cell. The standard mechanism of hydrolysis of the ATP (adenosine triphosphoric acid) molecule produces about $19k_BT$. How many ATP molecules are needed to complete the cycle in Fig. 2?}{0.40}
+\section*{Part C. Dynamic membrane potential (3.7 points)}
+The assumption of cellular equilibrium does not hold for signaling in neurons. In Fig. Figure 3 shows a diagram of a nerve cell. A nerve cell consists of three parts - dendrites, nucleus and axon. Dendrites are used to receive signals from other cells, and axons are used to transmit signals to neurons or muscles. This part examines the process of signal transmission along dendrites and axons.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig3.jpg}
+    \caption{Fig. 3.}
+\end{figure}
+For simplicity, we will consider dendrites and axon as a long straight thin homogeneous conductor with radius $a$ and conductivity $\sigma$. Let's direct the $x$ axis along the conductor in the direction of signal propagation (see Fig. 4). We can assume that the current inside the conductor flows uniformly over the cross section. The thickness of the neuron cell membrane is $\ll a$, and its capacity per unit length is $C$. We will denote the difference between the membrane potential at point $x$ at time $t$ and the resting membrane potential as $v(x,t)$ (hereinafter we will call this value the dynamic membrane potential).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig4.jpg}
+    \caption{Fig. 4.}
+\end{figure}
+The total “conductance” of passive transport channels is equal to $g_\mathrm{tot}$, and the operating speed of active transport channels does not depend on the membrane potential.
+\problembox{C1}{Let a current $I_0$ be supplied to the cell at point $x=0$. Find the equilibrium distribution of the dynamic membrane potential $v(x)$.}{1.00}
+\problembox{C2}{In the nonequilibrium case, the dependence $v(x,t)$ satisfies the equation:\[\dfrac{\partial v}{\partial t}=\alpha\dfrac{\partial^2v}{\partial x^2}-\beta v.\]Write down expressions for the coefficients $\alpha$ and $\beta$.}{0.40}
+\problembox{C3}{Let, as a result of excitation of the neuron, the distribution of the dynamic membrane potential be equal to\[v(x,0)=v_0\exp\left[-\dfrac{x^2}{b^2}\right].\]Find an expression for $v(x,t)$ at $t > 0$. Note: it is convenient to look for the solution in the form\[v(x,t)=\dfrac{v_0b}{\sqrt{f(t)}}\exp\left[-\dfrac{x^2}{f(t)}\right]\exp\left[-\dfrac{t}{\tau}\right],\]where $f(t)$ is a function linear in $t$, $\tau$ – some constant.}{1.00}
+Note: it is convenient to look for the solution in the form\[v(x,t)=\dfrac{v_0b}{\sqrt{f(t)}}\exp\left[-\dfrac{x^2}{f(t)}\right]\exp\left[-\dfrac{t}{\tau}\right],\]where $f(t)$ is a function linear in $t$, $\tau$ is some constant.
+\problembox{C4}{For the neuron under consideration, $a=20~\mu m$, $g_\mathrm{tot}=5~\Omega^{-1}\cdot m^{-2}$, thickness and dielectric constant of the cell membrane $d=5~nm$ and $\varepsilon=7$, conductance $\sigma=3~\Omega^{-1}\cdot m^{-1}$. Estimate the distance and time scales over which a neural signal propagates.}{0.40}
+As you can see, within the simplest model, the neural signal quickly fades and does not spread very far. In reality, more complex processes occur during the propagation of a neural signal. It was discovered experimentally that sodium channel conductance actually depends on membrane potential; this dependence $g_{\mathrm{Na}^+}(v)$ is shown by a dotted line in Fig. 5a. For convenience of calculations, we approximate this dependence in the form:\[g_{\mathrm{Na}^+}(v)=g_{\mathrm{Na}^+}^0+Bv^2,\]where $B > 0$ is a known constant. Since the zero-potential conductance $g_{\mathrm{Na}^+}^0$ is already included in $g_\mathrm{tot}$, only the influence of $Bv^2$ needs to be considered. Let the difference between the Nernst potential of sodium ions $V_{\mathrm{Na^+}}^\mathrm{Nernst}$ and the resting membrane potential $V_0$ be equal to $H > 0$ and practically do not change with time.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig5.jpg}
+    \caption{Fig. 5.}
+\end{figure}
+\problembox{C5}{A plot of current density through the cell membrane versus membrane potential, $J(v)$, is shown in Fig. 5b. This graph intersects the x-axis at three points: $0$, $v_1$ and $v_2$. Find $v_1$ and $v_2$.}{0.60}
+\problembox{C6}{If the dynamic membrane potential is increased to a certain threshold value $v_\mathrm c$, then the cell membrane in this region will no longer return to the resting membrane potential. Find $v_\mathrm c$.}{0.30}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4191}
+\end{document}

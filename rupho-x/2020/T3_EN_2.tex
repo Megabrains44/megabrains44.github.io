@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Physics of flight}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Aerodynamic force, gliding, flight}
+
+An aerodynamic force $F_$ acts on a body uniformly moving in a medium (for example, an airplane wing in the air). From general considerations it is clear that the magnitude of this force depends on the speed of the average relative to the body $v$, the density of the average $\rho$ and the size of the body $L$. That is, $F_=c\rho^p v^q L^r$, where $c$ is a certain coefficient.
+
+\problembox{A1}{Find the powers $p, q, r$.}{0.20}
+
+The aerodynamic force $F_$ is usually decomposed into two components: the lift force $Y=c_y \rho^p v^q L^r$ is directed perpendicular to the velocity vector, the drag force $X=c_x \rho^p v^q L^r$ is directed along the velocity vector (Fig. 1). Here we introduced dimensionless coefficients: $c_y$ – lift coefficient, $c_x$ – drag coefficient, which depends on the shape of the body and the direction of velocity relative to the body.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A2}{For some aircraft during horizontal flight it turned out to be $K=c_y/c_x =15$. Determine what the thrust force $F$, directed horizontally, is equal to in this case, if the mass of the aircraft is $m=15~t$, the acceleration of free fall is $g=9.8~m/s^2$.}{0.30}
+
+Coefficients $c_x$ and $c_y$ depend on the angle of attack - the angle between the wing plane and the direction of speed (Fig. 1). This dependence can be displayed on a parametric graph, where different points of the curve correspond to different angles of attack, and the axes are $c_x$ and $c_y$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A3}{Using the indicated graph (Fig. 2), determine the maximum horizontal distance $S$ the plane can move during gliding if it descends vertically to a distance $H=1~$. When gliding, the aircraft's engines are turned off, that is, the thrust force is zero and the aircraft's speed is constant.}{1.00}
+
+At the moment of a straight-line take-off run of an aircraft, its speed is directed horizontally, and a constant thrust force $F_$ acts on it.
+
+\problembox{A4}{Knowing that the drag force is $X=c_x \rho^p v^q L^r=\beta v^q$, find how the speed of the plane $v$ depends on the distance traveled $s$. Assume that at the initial moment the speed is zero. Express your answer in terms of thrust $F_$, coefficient $\beta$, aircraft mass $m$, distance traveled $s$.}{1.50}
+
+Aircraft engine power $N$, aerodynamic quality $K=c_y/c_x$, fuel mass consumption $\mu$, free fall acceleration $g$, ratio of the final and initial mass of the aircraft $m_1/m_0$.
+
+\problembox{A5}{Determine the flight range $S$.}{1.50}
+
+\section*{Part B. Flight stability}
+
+One wing is not enough for stable and controlled flight; another horizontal aerodynamic plane is used: a stabilizer. On a passenger plane, this is a small “wing” at the back. There are 4 basic aerodynamic designs that differ in the position (front/rear) and angle of attack of the stabilizer (Fig. 3). In Fig. Figure 3 shows the equilibrium positions during horizontal flight for various schemes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B1}{Indicate which of these 4 schemes will be stable (strive to maintain a horizontal position), unstable (spontaneously deviate from a horizontal position), indifferent (neither one nor the other)? Consider that $\left|\alpha_c\right|=\alpha$, and that the forces $Y$ and y depend linearly on $\alpha$. Justify your answer using formulas, diagrams or drawings.}{1.20}
+
+\section*{Part C. Flight in a rarefied atmosphere}
+
+Let us assume that the aircraft is moving high (the free path of the molecules is much greater than the size of the vehicle) and its speed of motion $v_1$ is much greater than the thermal speeds of the molecules. Let its wing be a plane with area $S$ and angle of attack $\alpha$. Angle of attack is the angle between the plane of the wing and the speed, which is horizontal.
+
+\problembox{C1}{Determine the lifting force of the wing $Y$ if the density of the surrounding environment is $\rho$. Consider that the collisions of molecules are absolutely elastic.}{1.00}
+
+\problembox{C2}{At what angle of attack of the wing $\alpha_M$ is the lift force maximum? Determine this maximum lift value.}{0.50}
+
+One of the problems in creating an aerospace aircraft is protecting the device from overheating when descending in dense layers of the atmosphere. Ceramic thermal insulation materials are used with thermal conductivity $\lambda = 0.01~\mathrm{W/(m\cdot K)}$, density $\rho = 100~\mathrm{kg/m^3}$, and specific heat capacity $c = 10^3~\mathrm{J/(kg\cdot K)}$. The characteristic time the device spends in these dense layers is $\tau = 10^3~\mathrm{s}$.
+
+\problembox{C3}{Estimate in order what the thickness of the thermal insulation $h$ should be equal to so that the temperature of the thermal insulation (and the apparatus) does not have time to level out.}{0.50}
+
+\section*{Part D: The Magnus Effect}
+
+A rotating cylinder that moves with speed $\vec{v}$ in a liquid or gas with density $\rho$ is acted upon by a force $\vec{F}=2\pi R^2 L\rho[\vec\omega\times\vec{v}]$. Here $R$ is the radius of the cylinder, $L$ is the length of the cylinder, $\vec\omega$ is the angular velocity of rotation of the cylinder. The emergence of this force is called the Magnus effect. In this part of the problem, do not take into account the force of air resistance, and also assume that the angular velocity of rotation of the cylinder is constant.
+
+\problembox{D1}{Find the magnitude and direction of the velocity of the cylinder at which it will move horizontally without acceleration. The mass of the cylinder is $M$. Gravity acceleration $g$.}{0.30}
+
+\problembox{D2}{A rotating cylinder was released into a gravity field without an initial velocity. Indicate the dependences of coordinates $x$ and $y$ on time $t$. Draw a high-quality trajectory of the cylinder.}{1.50}
+
+\problembox{D3}{Determine the maximum speed $v_{max}$ of the center of the cylinder for the motion described in D2.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/17}
+
+\end{document}

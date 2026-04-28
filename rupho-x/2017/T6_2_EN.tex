@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Mirage}}
+\author{\normalsize X17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+On a hot summer day, when the air warmed up to $t_1=35~^{\circ}\mathrm C$, the temperature of the asphalt in the sun and the thin layer of air above it was $t_2=65~^{\circ}\mathrm C$. When walking along the highway in such dry weather, “puddles” are often visible on the road. The refractive index of air depends linearly on air density: $n=1+k\rho$. At $t_0=0~^{\circ}\mathrm C$, $n_0=1{.}000292$. Consider that a person's height is $H=1{.}8~\text{m}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{At what minimum distance $L_{min}$ can a “puddle” be seen? Express the answer in terms of $H$, $n_0$, $T_0$, $T_1$, $T_2$ and calculate the resulting value.}{5.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3942}
+
+\end{document}

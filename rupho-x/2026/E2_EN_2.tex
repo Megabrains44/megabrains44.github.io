@@ -1,0 +1,157 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Optics became clearer}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Equipment: Optical bench; Constant voltage source; Carriages for the optical bench (5 pcs.); Magnetic holders for diaphragms (2 pcs.); Diaphragms of different shapes (2 pcs.); Magnetic holders (3 pcs.); Screen; Lens; LED in holder; Banana-banana wire (2 pcs.); Roulette; Ruler; Sheet A4; Masking tape.
+
+The light source in this problem is an LED with a diameter of $d_s=(4.0\pm0.2)~mm$ (see photo). The A4 sheet is designed to be attached to the screen.
+
+Photo of the LED.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+**Note.** Do not apply voltage greater than $8~\text{V}$ to the LED; otherwise it may burn out. The LED is very bright, so do not look directly at it when it is on. Use the desk lamp to illuminate the workspace. The LED is polarized: it emits only with correct polarity (red socket is plus, black socket is minus). Use a constant-voltage source with $U=8~\text{V}$. In normal operation the LED should glow brightly and should not overheat. After connecting banana plugs to the LED sockets, do not repeatedly unplug them, because this can damage the housing.
+
+\section*{Part A. Introduction. (0.6 points)}
+
+Assemble the setup from the source, lens and screen as shown in the figure. Let us introduce the axis $x$ and denote the lens coordinate $a$ and the screen coordinate $h$. We denote the focal length of the lens as $f$.
+
+Installation diagram A1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{A1}{For 5 different values of $a$, obtain 5 corresponding values of $h$ at which the LED image $S'$ is focused on the screen. For each measurement, calculate the value of the focal length $f$. Average the resulting values $f$ and write down the average value $f_\text{avg}$ on the answer sheet.}{0.60}
+
+\section*{Part B. One diaphragm. (2.6 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Let us introduce the diaphragm dimensions shown in the figure: size $c$ for aperture $D_1$, and sizes $m$, $n$ for aperture $D_2$. In all subsequent parts, orient the diaphragms exactly as shown so that the screen displays a square (horizontal/vertical sides) and a cross (diagonal sides, about $45^\circ$ to the horizon). For this and all subsequent parts, use
+\[
+h=h_{\max}=1.15~\text{m}.
+\]
+
+When $h$ is fixed, there are two lens positions at which a clear image can be seen on the screen. You need to choose the one in which the required measurements will have the greatest accuracy.
+
+First, let's study how one aperture affects the image obtained on the screen. Assemble the following setup: source, aperture $D_2$ (cross), lens and screen (see figure). Place the lens at such a distance $a_0$ from the source that its image $S'$ is focused on the screen. Place the diaphragm at a distance of $d=a_0/2$ from the source.
+
+Attention! At this point and further, accurate alignment of the installation is extremely important! It is necessary that the centers of all optical elements located on the optical bench lie on the same straight line. Any deviations from precise adjustment can lead to significant distortions in the experimental result.
+
+Installation diagram B1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{B0}{Measure and write down the distance $a_0$ on your answer sheets.}{0.10}
+
+\problembox{B1}{By changing the position of the $d$ aperture, observe the changes in the image on the screen. Mark ($\checkmark$) all correct statements on your answer sheets.}{0.40}
+
+Now position the lens at a distance $a_0 + f$ from the source.
+
+Installation diagram B2.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{B2}{For 8 different distances $d$ between the source and the diaphragm $D_2$, measure the dimensions $m_1',~m_2'$ of both diagonals of the cross image on the screen. Change $d$ as wide as possible. Calculate for each $d$ the average image size $m'$.}{0.60}
+
+\problembox{B3}{Obtain the theoretical dependence $m^\prime(d)$ via $m,~d,~f,~a_0$. Plot a linearized graph and obtain the size $m$ of the cross.}{1.50}
+
+\section*{Part C. Two diaphragms. (6.8 points)}
+
+Assemble the circuit shown in the figure on the optical bench. The distance between the source and the first diaphragm $D_1$ (square) is $d_1=f/2$, the distance between the source and the second diaphragm $D_2$ (cross) is $d_2=f$. Place the lens at a distance $a=a_0$ from the source. We will call this position of the diaphragms and lenses the initial position.
+
+Installation diagram part C.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{C1}{As you move the lens, the appearance of the image on the screen will change. Vary the position of the lens (that is, the value of $a$) and for each $a$ sketch the appearance of the image on the answer sheets. Your image should clearly indicate (by shading or otherwise) highlight, shadow, and penumbra (if any).}{1.80}
+
+Position the lens at such a distance $a_1$ that the screen produces a focused image of the aperture $D_1$ (square).
+
+\problembox{C2}{Measure and record $a_1$. Changing only the position of the aperture $D_2$ (cross), take 8 points of the minimum horizontal width $v_2$ of the image (width at the narrowest point) on the distance $d_2$ between the source and the diaphragm $D_2$. Change $d_2$ as wide as possible.}{0.90}
+
+Return the installation to its original position. Position the lens at such a distance $a_2$ from the source that a focused image of the aperture $D_2$ (cross) appears on the screen.
+
+\problembox{C3}{Measure and record $a_2$. Changing only the position of the aperture $D_1$ (square), take 8 points depending on the maximum diagonal width $v_1$ (along the straight line $AB$ shown in the figure to point B2) of the image on the distance $d_1$ between the source and the diaphragm $D_1$. Change $d_1$ as wide as possible.}{0.90}
+
+Let's move on to a theoretical description of the image on the screen. Let diaphragms $D_1'$ and $D_2'$ be parallel narrow slits of dimensions $p_1$ and $p_2$, located at distances $d_1$ and $d_2$ from the source, respectively. The centers of the slots lie on the optical axis of the system.
+
+\problembox{C4}{Let the distance $a$ between the lens and the source be such that a focused image of the diaphragm $D_1'$ is obtained on the screen. Find the dependence of the image size $l_2$ on the screen on the distance $d_2$ between the source and the second aperture $D_2'$. Find $d_{2}'$, at which the nature of the dependence changes. Express your answers using $h,~a,~d_1,~d_2,~p_1,~p_2$.}{0.80}
+
+\problembox{C5}{Let now the distance $a$ between the lens and the source be such that a focused image of the diaphragm $D_2'$ is obtained on the screen. Find the dependence of the image size $l_1$ on the screen on the distance $d_1$ between the source and the second aperture $D_1'$. Find $d_{1}'$, at which the nature of the dependence changes. Express your answers using $h,~a,~d_1,~d_2,~p_1,~p_2$.}{0.40}
+
+\problembox{C6}{Derive expressions for $v_1(d_1)$ and $v_2(d_2)$. Express your answers using $h,~a,~d_1,~d_2,~m,~n,~c$.}{0.60}
+
+\problembox{C7}{Plot a linearized graph of the relationship taken in point C2 and obtain the sizes of $c$ and $n$ apertures. An error estimate for the final response $c$ and $n$ is not required.}{0.70}
+
+\problembox{C8}{Plot a linearized graph of the relationship taken in step C3 and obtain the sizes of $c$ and $m$ apertures. An error estimate for the final response $c$ and $m$ is not required.}{0.70}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4787}
+
+\end{document}

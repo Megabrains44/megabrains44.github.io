@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Coil with closure}}
+\author{\normalsize Y16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A single-layer coil in the form of a long solenoid with a large number of turns and a capacitor with some fixed capacitance form an oscillatory circuit. The quality factor of this circuit is $Q=100$. When one of the coil turns is short-circuited, the quality factor of the circuit decreases by $3$ times.
+
+\problembox{A1}{Neglecting the change in the inductance of the coil and the self-inductance of the short-circuited turn, determine the number of turns $N$ of the coil.}{6.00}
+
+Note: The quality factor of a circuit is the ratio of the energy stored in the circuit at an arbitrary moment in time to the energy loss in the circuit, equal to the product of the average loss power over the period and the time $\Delta{t}$ change in the oscillation phase in the circuit by one radian ($\Delta{t}=T/2\pi$, where $T$ is the oscillation period).
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3033}
+
+\end{document}

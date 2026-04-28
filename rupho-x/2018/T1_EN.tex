@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Ball and cart}}
+\author{\normalsize X18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A ball of mass $m=80~\text{kg}$ and radius $R=20~\text{cm}$ is twisted around a horizontal axis with an angular velocity $\omega$ and released without initial velocity over a stationary cart of mass $M=200~\text{kg}$ from a height $h=1.25~\text{m}$. The ball hits the exact center of the cart. Its longitudinal axis lies in the plane of rotation of the ball. The impact occurs in a very short time. The deformation of the cart upon impact is absolutely elastic. Sliding between the ball and the surface of the cart continues throughout the entire impact time. Sliding friction coefficient $\mu=0.1$. The rolling friction between the cart wheels and the table can be neglected. The ball bounces off the cart and falls back on it. Gravity acceleration $g=10~\text{m}/\text{s}^2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{What is the minimum possible length $L_{min}$ of the trolley?}{1.50}
+
+\problembox{A2}{What is the minimum possible initial angular velocity $\omega_{min}$ of the ball?}{1.50}
+
+Further, at all points, consider that the ball begins to move with the minimum possible angular velocity $\omega_{min}$ (from point $\mathrm{A2}$).
+
+\problembox{A3}{Determine the mechanical energy losses during the first and second collisions $\Delta{E}_1$ and $\Delta{E}_2$, respectively.}{1.50}
+
+\problembox{A4}{Find the work done by friction forces acting from the ball on the cart $A_{\text{bc}}$ and from the cart on the ball $A_{\text{cb}}$.}{1.50}
+
+\problembox{A5}{What translational kinetic energies $K_\text{ball}$ and $K_\text{cart}$ did each body acquire during the collision?}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/309}
+
+\end{document}

@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Polarization}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This experiment is a large-scale study of polarization and its applications.
+
+$\textbf{Внимание!}$ Error estimation is NOT required in all parts of the experiment! $\textbf{Внимание!}$ It is prohibited to put inscriptions/marks on protractors and other elements of equipment! Having previously glued the masking tape, you can write on it.
+
+\section*{Equipment (common to all parts)}
+
+Polarizers (2 pcs.) with known transmission planes (allowed direction: $0^{\circ}-180^{\circ} (\pm5^{\circ})$). The polarizers are enclosed in round black frames with a wide inner window: its diameter is $2~cm$ Lenses (2 pcs.) Mirror Incandescent lamp Constant voltage source $\textbf{(не подавать на лампу напряжение выше 12 В!)}$ (it is easy to select the required pair of plugs by testing the connection of each pair to the source) Light sensor: magnetic photodiode, multimeter, Krona battery, terminal block, Wago clamps (3 pcs.), 10 kOhm resistor Screen with magnetic surface, with fastening for a sheet of paper Tripod with couplings (3 pcs.) and claws (3+1 pcs.) Optical bench with 2 raters Lifting tables (2 pcs.) Magnetic holder (3 pcs.) of polarizers and plates Laser holder (2 pcs.) (with screwdriver) Ruler Cardboard Masking tape Scissors and paper (on request)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The light sensor should be assembled according to the given diagram, turning on the 10 kOhm resistance given to you as a resistor. Pay attention to the polarity of the connections!
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\section*{Part A. Stoletov's foot (7.0 points)}
+
+\section*{Equipment (optional for Part A)}
+
+Plates (10 pcs.) Stationery clip
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Often there is a need to obtain high-power polarized light. Unfortunately, conventional polarizers cannot perform this task, since they burn out at such a high light intensity, so a “Stoletov stop” is used: a set of glass plates pressed together, located at a Brewster angle to the incident beam. It is known from theory that if a beam is incident on a plate at the Brewster angle, then the reflected light is completely polarized, and the transmitted light is partially polarized.
+
+\problembox{A1}{Calculate the Brewster angle theoretically (assuming $n = 1.5$ is known).}{1.00}
+
+\problembox{A2}{Determine Brewster's angle experimentally. Draw a diagram of your experimental setup, provide the measurement results and your answer.}{1.50}
+
+Next, you have to determine the degree of polarization of the light passing through Stoletov’s foot, depending on the number of glass plates in its composition. When assembling the experimental setup, you can use any equipment provided to you to adjust the heights.
+
+\problembox{A3}{Draw a diagram of your experimental setup.}{1.00}
+
+\problembox{A4}{As you may have noticed, if partially polarized light is viewed through a polarizer, the observed intensity of the light will depend on the orientation of the polarizer. The degree of polarization is the quantity $P=\cfrac{I_{max}-I_{min}}{I_{max}+I_{min}}$, where the minimum and maximum intensity values ​​correspond to certain positions of the polarizer. For each size of Stoletov’s foot (from 1 to 10 glasses), determine the degree of polarization of the light passing through it.}{2.00}
+
+\problembox{A5}{What number of plates must be used to obtain the degree of polarization $95\%$?}{1.50}
+
+\section*{Part B. Saccharimeter (4.0 points)}
+
+\section*{Equipment (optional for Part B)}
+
+Red and green lasers with clip 2 AAA batteries (for lasers) Glass bottom tube Sugar syrup (2 jars) Container (for draining) Paper napkins (as required)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Some chemical compounds have optical properties. In particular, in this part of the problem we will study the rotation of the plane of polarization when linearly polarized light passes through sugar syrup.
+
+\problembox{B1}{Measure the dependence of the rotation of the plane of polarization on the thickness of the syrup layer. Draw a schematic diagram of your installation and provide the results of all measurements. Measurements should be carried out while illuminating the solution with both red and green lasers (separately). Plot the points of both dependencies on one graph.}{3.00}
+
+\problembox{B2}{Determine the parameters of the dependences obtained for different lasers.}{1.00}
+
+\section*{Part C: Waveplates (9.0 points)}
+
+\section*{Equipment (optional for Part C)}
+
+Wave plates No. 1, No. 2. The plates are enclosed in round black frames with a narrow inner window: its diameter is $1~cm$ 3D glasses No. 1, No. 2 Lens with diffraction grating Green laser with clip 2 AAA batteries (for laser)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+A wave plate is a plate made of a uniaxial crystal, the optical axis (the direction of which is set by the unit vector $\vec{y}$) lies in its plane. In the wave plate, between the ordinary beam ($\vec{E} \perp \vec{y}$) and the extraordinary one ($\vec{E} \parallel \vec{y}$), a path difference $\Delta n l$ arises, where $\Delta n$ is the difference between the refractive index for the ordinary beam and the extraordinary one, and $l$ is the thickness of the plate. Usually this path difference is formulated in terms of a certain wavelength: 1. Half-wave ($\lambda/2$) plates $\Delta n \cdot l = \left( m + \dfrac{1}{2} \right) \lambda$; 2. Quarter-wave ($\lambda/4$) plates $\Delta n \cdot l = \left(m + \dfrac{1}{4} \right) \lambda$ or $\Delta n \cdot l = \left(m + \dfrac{3}{4} \right) \lambda$. Let's take the green laser wavelength as a reference: $\lambda_\text{g}=532~\text{нм}$.
+
+\problembox{C1}{Schematically sketch and describe an experiment to distinguish plates $\lambda/2$ and $\lambda/4$ from each other.}{0.50}
+
+\problembox{C2}{Schematically sketch and describe an experiment to distinguish a single-mode half-wave plate $\left(\Delta n \cdot l = \dfrac{1}{2} \lambda\right)$ from a multimode $\left(\Delta n \cdot l = \left( m + \dfrac{1}{2} \right) \lambda\right)$.}{1.00}
+
+\problembox{C3}{In the table on the answer sheet, mark which types of plates correspond to plates No. 1, No. 2. For each plate, determine and record in the table the direction of the optical axis (up to rotation by an angle that is a multiple of $90^{\circ}$). If among the plates there are multimode ones, calculate the numbers $m$ for them. Describe all your actions and observations, provide the results of all measurements and the rationale for all answers.}{5.00}
+
+\problembox{C4}{Using the table below, indicate the substance from which, in your opinion, the plates are made, if their thickness is $l \approx 1~\text{mm}$.}{0.50}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+The opportunities that wave optics gives us have been used in everyday life for a long time. In the following paragraphs you will have to make assumptions about how 3D glasses work. Make explanatory drawings and, if possible, measure their characteristics for some elements. If your circuit includes a plane-parallel plate, then indicate its optical thickness $nl$. If your diagram includes a lens, then indicate its focal length $f$. \textbackslash\{\}item If your circuit includes a color filter, then indicate the characteristic wavelengths of the transmission and absorption bands. If your circuit includes a polarizer, then indicate the angle between the transmission plane and the vertical. If your design includes a waveplate, then specify its “optical thickness” $\Delta n \cdot l$ in terms of the wavelength of the green laser. For example, $\Delta n \cdot l = 20.21 \lambda_\text{g}$.
+
+The opportunities that wave optics gives us have been used in everyday life for a long time. In the following paragraphs you will have to make assumptions about how 3D glasses work. Make explanatory drawings and, if possible, measure their characteristics for some elements.
+
+\problembox{C5}{Guess the simplest device for 3D glasses \#1. Propose a technology for creating a stereoscopic (apparently three-dimensional) image on a flat screen using these glasses.}{1.00}
+
+\problembox{C6}{Assume the simplest device for 3D glasses No. 2. Propose a technology for creating a stereoscopic (apparently three-dimensional) image on a flat screen using these glasses.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/241}
+
+\end{document}

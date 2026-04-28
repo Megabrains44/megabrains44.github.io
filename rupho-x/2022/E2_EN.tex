@@ -1,0 +1,179 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Trifilar suspension and ellipsoid of inertia}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+A trifilar suspension (see figure below) is used to study torsional vibrations. The introductory parts of this experimental problem are devoted to assembling a torsion pendulum and carrying out simple measurements with it; it will also be necessary to theoretically obtain an expression for the period of oscillation. The assembled setup will then be used to study the structure of more complex objects. In the part devoted to the ellipsoid of inertia, the vibrations of the block will be studied at its different orientations in space. The last two parts of the experiment will allow us to evaluate the influence of viscous friction or magnetic interaction on the damping of oscillations.
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+1. tripod with coupling and foot 2. upper disk (thicker) 3. lower disk (thinner and with circles, its weight is indicated everywhere $m_0$) 4. ruler $50~\text{cm}$ 5. thread 6. scissors 7. office clip 8. stopwatch 9. nail for securing the loops under the lower disk 10. nuts in clamps A and B 11. block with plates 12. clamp for orienting the rotating body in space 13. washer (in parts F and G its mass can be considered known and equal to $m_\text{ш} = 80~\text{г}$) 14. container, water on demand (for part F) 15. cardboard protractor 16. paper napkins to keep the workplace clean 17. board with magnets
+
+\section*{Notes}
+
+An error estimate is not required for any part of this work! There are small parts in the equipment, do not lose them. Be careful with plexiglass products. Broken or cracked items will not be replaced! It is prohibited to open the black triangular clamps with nuts!
+
+There are small parts in the equipment, do not lose them.
+
+Be careful with plexiglass products. Broken or cracked items will not be replaced!
+
+It is prohibited to open the black triangular clamps with nuts!
+
+\section*{Part A: Assembling the torsion pendulum (2 points)}
+
+Assemble the installation. Three threads should pass through the holes in the upper (thick) disk, clamped horizontally in the tripod foot. At their lower ends you need to tie loops that will be threaded into the holes in the lower (thin, with circles drawn) disk. Insert a nail into the center of the lower disk, onto which you can attach loops for fixation. Once, by pulling the threads up one at a time, you can achieve the horizontal position of the lower disk, wind three threads around the foot screw and secure them with a clip.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Let the upper and lower ends of the trifilar suspension threads be fixed at distances $R$ and $r$ from the axis, respectively. With the remaining installation parameters unchanged, the period of torsional oscillations of such a pendulum depends on $R$ and $r$ as follows: $T=C \cdot R^\alpha r^\beta$.
+
+\problembox{A1}{With $R$ fixed, make accurate measurements of period $T(r)$. Write down what values of $r$ and $z_0$ you choose when assembling the installation for this item, and what the value of $R$ you measured is equal to. Plot a linearized graph and determine $\beta$.}{1.70}
+
+\par\smallskip\noindent\textit{Note.}\ It is convenient to change $r$ in the following way. The loops at the lower ends of the disk are removed from the nail, taken out of the “old” holes and passed through the “new” ones, after which they are fixed back onto the nail. Since the length of the suspension changes, it is necessary to loosen the clip and adjust the winding of the three upper ends of the threads.
+
+\problembox{A2}{What is $\alpha$ equal to? Explain your answer.}{0.30}
+
+\section*{Part B. Theory (2 points)}
+
+The period $T$ also depends on other installation parameters. Let's proceed to the theoretical derivation of the general formula. Let $z_0$ be the distance between the planes of the disks in the equilibrium position. Let's say that a certain load placed on it rotates together with the lower disk, and $m$ is their total mass, and $I$ is their total moment of inertia. The length $L$ of each thread, if necessary, can be expressed through the listed quantities. Let the lower disk rotate through a small angle $\varphi$ from the equilibrium position and at the same time rise $h$ vertically.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B1}{Enter the Cartesian coordinate system and write down the coordinates of the upper and lower ends of one of the threads. Express the distance $L$ between them in terms of $R$, $r$, $z_0$, $h$, $\varphi$.}{0.60}
+
+\problembox{B2}{The threads are inextensible and are always taut when oscillating. Using this, express $h$ in terms of $R$, $r$, $z_0$, $\varphi$. We remind you that the angle $\varphi$ is small.}{0.60}
+
+\problembox{B3}{Using the law of conservation of energy during torsional vibrations, obtain an expression for $T$ in terms of $R$, $r$, $z_0$, $I$, $m$, $g$.}{0.80}
+
+\section*{Part C. Nuts (4 points)}
+
+You are given two different nuts in triangular clamps A and B. The total masses of the nuts in the clamps are $m_A$ and $m_B$. Each nut contains an empty cylindrical cavity (the axis of the cylinder coincides with the axis of the nut). Assume that all the faces of the nut are flat (ignore roundings), and the surface of the internal cylindrical cavity is smooth (ignore threads). Your goal is to determine the radii $a$ and $b$ of the cylindrical cavities in nuts A and B, respectively. To measure the oscillation period, place the nut on the lower disk of the assembled trifilar suspension (the plane of the triangular bases must be parallel to the plane of the disk).
+
+\par\smallskip\noindent\textbf{Attention!}\ In this part, as well as in part D, for ease of use of the installation, you should take $r$ as much as possible.
+
+\problembox{C1}{Use the lever to determine the ratios $m_A/m_0$ and $m_B/m_0$ as accurately as possible.}{0.20}
+
+\problembox{C2}{Take accurate measurements of the vibration periods of the nuts. Identify $a$ and $b$. Describe the measurements you take. Give their results, incl. geometric parameters of the nuts, and also provide all the theoretical calculations and calculations you used. Write down which values $r$ and $z_0$ you select when assembling the installation for this item.}{3.80}
+
+\section*{Part D. Bar (3 points)}
+
+There are 2 steel plates attached to two sides of the wooden block. The mass of the block is $M_\text{бр}$, the mass of each of the four plates is $M_\text{пл}$. The mass and moment of inertia of the fastening screws should be neglected.\par\smallskip\noindent\textbf{Attention!}\ In this part, as in part C, for ease of use of the installation, you should take $r$ as much as possible.
+
+\problembox{D1}{Take accurate measurements of the vibration periods when installing the block with plates on the face with plates ($T_y$), as well as when installing it on one of the other faces ($T_x$ or $T_z$). Record which values $r$ and $z_0$ you select when assembling the installation for this item.}{0.40}
+
+\problembox{D2}{Express theoretically the moments of inertia $I_x$, $I_y$, $I_z$ (see figure above) of the block with plates through its sides $a$ and $b=с$, the thickness of the metal plate $d=1.8~\text{mm}$, as well as $M_\text{пл}$, $M_\text{бр}$. Obtain a system of equations from which the ratio $M_\text{пл}/M_\text{бр}$ can be found.}{2.40}
+
+\problembox{D3}{Calculate the value of $M_\text{пл}/M_\text{бр}$ numerically. Do this in two ways: a) neglecting the mass and moment of inertia of the disk and considering only the block with the plates; b) given the disk. Compare the results of these calculations. Is the loss of accuracy significant when neglecting the disk?}{0.20}
+
+\section*{Part E. Ellipsoid of Inertia (4 points)}
+
+Instead of the bottom disk, hang a bar clamp on a trifilar hanger. It consists of two disks (each mass $m_0$) and three wooden spacers (each mass $m_\text{р}$). The mass and moment of inertia of the fastening screws and clamping screws should be neglected.
+
+\problembox{E1}{Take accurate measurements of the torsional vibration period of the clamp. Calculate the ratio $\cfrac{I}{m}$. Find the ratio $m_\text{р}/m_0$.}{1.00}
+
+\par\smallskip\noindent\textbf{Attention!}\ In the remainder of this section, neglect the mass and moment of inertia of the clamp. The block has holes marked into which the clamping screws can be placed. By fixing the block in different spatial orientations, it is possible to take measurements and calculate the moments of inertia of the block $I$ relative to many different axes passing through its center. In the photograph above, three planes are marked with the letters $\alpha$, $\beta$, $\gamma$, cutting the block and passing through its center.
+
+\problembox{E2}{For each of the 6 axes in section $\alpha$, take accurate measurements of the oscillation period and calculate the value $\cfrac{1}{\sqrt{I/m}}$. For each of the axes on the diagram given in the answer sheet (coinciding with the section $\alpha$ and drawn in compliance with the proportions of the sides), plot a segment equal to $\cfrac{1}{\sqrt{I/m}}$ from the center in both directions along the direction of the corresponding axis. Circle the resulting 12 “outer” ends of the segments of a single closed curve.}{1.00}
+
+\problembox{E3}{Repeat similar steps for the axes lying in the $\beta$ plane. Provide all measurement results and calculations. Draw the appropriate diagram on your answer sheet.}{1.00}
+
+\problembox{E4}{Repeat similar steps for the axes lying in the $\gamma$ plane. Provide all measurement results and calculations. Draw the appropriate diagram on your answer sheet.}{1.00}
+
+Hypothetically, the value $\cfrac{1}{\sqrt{I/m}}$ (more precisely, they usually simply use $1/\sqrt{I}$) can be calculated and plotted on a 3-dimensional diagram for absolutely any direction of the axis passing through the center of the block. All “outer” ends of the segments will form the surface of some spatial figure. The beautiful theoretical fact is that this surface is an ellipsoid. If the original figure has axes of symmetry, then they will be the main axes of the ellipsoid. For example, in the case of our block with plates, all three axes passing through the centers of the faces and partially measured at point D1 are the main axes of the ellipsoid.
+
+\section*{Part F. Viscous friction (3.3 points)}
+
+Hang the washer from the upper disk on three threads, as shown in the figure, and immerse it in water to about half the depth of the water. Make sure that the plane of the washer is strictly horizontal. In this part of the problem, it is important that the oscillations have a small amplitude, i.e. so that the disk turns no more than $\pi/2$ in each direction. (Otherwise, in addition to the horizontal forces of viscous friction, it will be necessary to take into account the vertical forces of raising and mixing water). Place the protractor on the table under the container and center the system.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{F1}{Make a note of which value of $z_0$ you select when assembling the installation. Measure and write down $r_1$ and $r_2$—the outer and inner radii of the washer, respectively. Calculate the theoretical numerical value of $\cfrac{I}{m}$ for the washer.}{0.30}
+
+\problembox{F2}{Take accurate measurements of the period of torsional vibration of the puck in water. Calculate the effective acceleration due to gravity $g_{\text{eff}}$.}{0.40}
+
+\problembox{F3}{Solve a theoretical problem. Let a thin washer with inner and outer radii $r_1$ and $r_2$ oscillate in the water column. Due to viscous friction it sets in motion layers of water at depths from $(H-h)$ to $(H+h)$, where $H$ is the immersion depth of the washer and $h$ is the nominal total thickness of the moving layers. Take water viscosity $\eta = 8.9\times 10^{-4}~\mathrm{Pa\cdot s}$ and gravitational acceleration $g = 9.81~\mathrm{m/s^2}$. What torque $M$ from viscous friction acts on the washer when it rotates with angular velocity $\dot{\varphi}$? Express $M$ in terms of $\dot{\varphi}$, $\eta$, $h$, $r_1$, $r_2$. Express the logarithmic damping decrement $d$ for these viscously damped oscillations in terms of $\eta$, $h$, $r_1$, $r_2$, $m$, $T$.}{1.30}
+
+\par\smallskip\noindent\textit{Note.}\ The logarithmic damping decrement is the logarithm of the ratio of the amplitudes of successive oscillations: $d=\ln\cfrac{\varphi_i}{\varphi_{i+1}}$.
+
+\problembox{F4}{As you noticed, the vibrations die out quite quickly. Let $\varphi(i)$ be the amplitude of the $i$ oscillation. Remove dependency $\varphi(i)$. This may require running the oscillations several times with the same initial conditions. Construct a linearized graph and use it to calculate the logarithmic damping decrement $d$.}{1.00}
+
+\problembox{F5}{Using $d$, estimate the thickness $h$ of the moving layers of water.}{0.30}
+
+\section*{Part G. Magnetic friction (1.7 points)}
+
+Place the washer on the trifilar suspension assembled in the previous part above the center of the board with magnets. There should be an air gap of thickness $0.5~\text{cm}$ between the washer and the board. Make sure that the plane of the washer is strictly horizontal. In this part of the problem, it is important that the oscillations have a small amplitude, i.e. so that the disk turns no more than $\pi/4$ in each direction. (Otherwise, the oscillations will cease to be harmonic due to the strong inhomogeneity of the magnetic field along the vertical axis). Place the protractor on the surface of the board with magnets and center the system.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{G0}{Make a note of which value of $z_0$ you select when assembling the installation. If you haven't done F1, do it now.}{0}
+
+\problembox{G1}{Take accurate measurements of the period of torsional vibration of the puck over a board with magnets. Calculate the effective acceleration due to gravity $g_{\text{eff}}$.}{0.40}
+
+\problembox{G2}{As in the previous part, the oscillations are damped. Remove dependency $\varphi(i)$. This may require running the oscillations several times with the same initial conditions. Construct a linearized graph and use it to calculate the logarithmic damping decrement $d$.}{1.00}
+
+\problembox{G3}{Calculate numerically the coefficient of proportionality $k$ in the relation $M_{\mathrm{mag}} = k\,\omega$ between the torque $M_{\mathrm{mag}}$ from magnetic friction and the angular velocity $\omega$.}{0.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/508}
+
+\end{document}

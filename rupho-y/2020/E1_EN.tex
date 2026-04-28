@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Gradient optics}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Gradient optics is a branch of optics that studies the optical properties of materials whose refractive index varies depending on coordinates. An example of gradient optics is the mirage of a puddle on the road on a hot day. In reality, the puddle is an image of the sky on the road, since the rays of light are refracted (bent) from their normal straight path. This occurs due to a change in refractive index between the warm, less dense air near the road surface and the denser, colder air above it. Another well-known example is optical fiber, in which light propagates according to a harmonic law depending on the longitudinal coordinate. The experimental problem we present to you consists of three independent parts, which, however, have common equipment. In each part you will need to create gradients of refractive index in a substance and examine them.
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+1. Power supply 2. Screen 3. 4 holders 4. Tape measure 5. “Sandwich” 6. Red laser (dot) 7. Screwdriver (to adjust the fastening of the holders) 8. Ruler 9. Knife blade 10. Syringes with jelly 11. Adhesive mass 12. Transparent plates 13. Cover on which to cut jelly 14. Flashlight 15. Vessel with water 16. Pair of mirrors 17. Test tubes with salt solutions 18. Test tube with distilled water 19. Red laser (line) 20. Pipette 21. Stopwatch 22. Cuvette 23. Stand for cuvette
+
+\section*{Part A. Temperature gradient in plexiglass (5 points)}
+
+\textbackslash\{\}emph\{Equipment used in this part:\} power supply (1), screen (2), laser holder (3), tape measure (4), sandwich (5), laser (6), screwdriver (7), ruler (8), pair of mirrors (16).
+
+The refractive index of a material depends on temperature as follows: $$ n(T)=n_0 + \textbackslash\{\}alpha (T-T_0), $$ где будем считать $T_0$ — комнатной температурой, $n_0$ — показателем преломления при комнатной температуре, а $\alpha$ — температурным коэффициентом показателя преломления. Оргстекло (плексиглас) обладает сравнительно большим температурным коэффициентом показателя преломления, поэтому на имеющемся оборудовании можно наблюдать эффекты, связанные с измерением показателя преломления вдоль одной из осей.
+
+Нагревая оргстекло с двух сторон, можно создать градиент температуры внутри оргстекла. В установившемся режиме можно с хорошей точностью считать, что температура линейно изменяется вдоль оси $y$. The beam path is shown in the figure below. When solving a problem, use the notation shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Plexiglas for the experiment is placed between two pairs of Peltier elements. The Peltier element creates a temperature difference between its two flat surfaces. In the assembled “sandwich”, when the voltage source is correctly connected, the side with the radiator cools the surface of the plexiglass to which it is glued. The opposite side (without a radiator) heats the surface of the plexiglass accordingly. When plexiglass is heated above $70~{}^\circ\mathrm{C}$, irreversible changes occur in its structure. Therefore, fuses with a rating of $0.75~\mathrm{А}$ are built into the wires going to the Peltier elements. Do not exceed $0.75~\mathrm{А}$ current through Peltier elements. When connecting the upper and lower pairs of Peltier elements in parallel, the source readings should not exceed $1.5~\mathrm{А}$, respectively. \textbackslash\{\}emph\{If you blow a fuse, your points for this item will be cancelled.\} For the assembled “sandwiches”, below is a graph of the temperature difference between the plexiglass surfaces versus the current flowing through each pair of Peltier elements. The characteristic time for establishing a stationary temperature distribution for “sandwiches” is about 3 minutes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Pay attention to the side surface of the plexiglass. The short sides are much better polished than the long sides. Therefore, use the short sides to study the effect. If necessary, you can use a pair of mirrors to increase the distances at which you observe the effect.
+
+\problembox{A1}{Draw a setup diagram for determining the refractive index gradient corresponding to the diagram above. Indicate on it all the necessary measured quantities.}{0.50}
+
+\problembox{A2}{Connect two pairs of Peltier elements in parallel to a voltage source. Remove the dependence of the vertical displacement $h$ of the laser beam on the current $I$ flowing through the source.}{2.00}
+
+To process the data, you may need an equation for the trajectory of the ray in the volume of plexiglass. Assuming that the refractive index depends on $y$ as follows $n(y)=n(0)-ky$, the trajectory coordinates are related as follows: $$ x=\textbackslash\{\}cfrac\{n(0)\}\{k\}\textbackslash\{\}ln\textbackslash\{\}left(1-\textbackslash\{\}cfrac\{ky\}\{n(0)\}+\textbackslash\{\}sqrt\{\textbackslash\{\}left(1-\textbackslash\{\}cfrac\{ky\}\{n(0)\}\textbackslash\{\}right)^2-1\}\textbackslash\{\}right). $$ The directions of the axes are shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{A3}{Plot the vertical displacement of the beam as a function of the temperature difference between the plexiglass surfaces $h(\Delta T)$. Determine the parameters of the fitting line.}{1.00}
+
+\problembox{A4}{Give a formula connecting the parameters defined in paragraph A4 and the temperature coefficient of the refractive index $\alpha$ of plexiglass. Find the numerical value of $\alpha$ and estimate its error.}{1.50}
+
+\section*{Part B: Salt Diffusion (10 points)}
+
+In this part of the problem, we will study the gradient formed at the boundary of two solutions - a concentrated salt solution and distilled water. The refractive index of a liquid depends on the salt concentration. Thus, it is possible to study the diffusion process by the optical method by measuring the deviation of the laser beam from linear propagation. This part of the problem does not require error estimation.
+
+\textbackslash\{\}emph\{Equipment used in this part of the task:\} screen (2), laser holder (3), tape measure (4), screwdriver (7), ruler (8), test tubes with salt solutions (17), test tube with water (18), red laser line (19), pipette (20), stopwatch (21), cuvette (22), cuvette stand (23), bucket (24).
+
+The installation diagram for this part of the problem is shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+To determine the function of the dependence of the refractive index gradient on the coordinate (vertical), you need to obtain a correspondence between the coordinate on the screen $\xi_i$ and the coordinate $Y_i$ in the cuvette, and you also need to obtain a correspondence between the vertical deviation $\delta$ and the local gradient of the refractive index $dn/dY$. From the installation geometry, $Y_i=\cfrac{\xi_i Z_0}{Z_0+d+Z}$ can be obtained. It can also be shown that $\left(\cfrac{dn}{dY}\right)_i=\cfrac{\delta_i}{Zd}$ is true.
+
+Assemble the installation according to the diagram above. For this part of the task, you need to use a red laser, which produces an image in the form of a straight line. Depending on the distances you are working at, you may need to focus the laser beam. This is done by rotating the front lens. Achieve the minimum line thickness for your installation. Place an empty cuvette in the path of the laser beam. You should get an image of a slanted line on the screen. Pour the salt solution into the cuvette. Pour it up to the level of the first divider. Pour the salt solution into the wide part of the cuvette carefully, along the side wall. Then pour in distilled water. Pour water drop by drop into the narrow part of the cuvette. The laser beam should deflect on the screen after passing the interface. Record the time during which the diffusion process takes place. The dip needs to be observed on the screen in the center in order to sketch the picture in the future.
+
+After 30 minutes, trace the laser beam on graph paper that is attached to the screen. The experiment must be performed for three salt concentrations. Label what concentration each leaf corresponds to. Conical test tubes contain salt solutions of the following concentrations: $C_1=153~\text{г/л}$, $С_2=187~\text{г/л}$, $C_3=220~\text{г/л}$.
+
+\problembox{B1}{Draw on graph paper the image of the laser beam described above 30 minutes after the start of the diffusion process for all three salt concentrations.}{1.20}
+
+\problembox{B2}{Make a note of the setting parameters $Z, d, Z_0$. Take off the graph paper for $\xi_i$ and $\delta_i$ (where $i=1,...20$ is the horizontal numbering of the points) for all three salt concentrations. The values ​​must be expressed in millimeters.}{1.50}
+
+\problembox{B3}{Calculate the values ​​of $Y_i$ and $\left(\cfrac{dn}{dY}\right)_i$ for all $i$. Plot graphs of $\left(\cfrac{dn}{dY}\right)_i$ versus $Y_i$.}{1.50}
+
+\problembox{B4}{For each salt concentration, determine $Y_i$ for which $\left(\cfrac{dn}{dY}\right)_i$ is maximum. Label this value as $h$.}{0.30}
+
+The curves obtained in B3 can be described by the following equations: $$ \textbackslash\{\}left(\textbackslash\{\}cfrac\{dn\}\{dY\}\textbackslash\{\}right)_i=\textbackslash\{\}left(\textbackslash\{\}cfrac\{dn\}\{dC\}\textbackslash\{\}right)\textasciitilde\{\}\textbackslash\{\}left(\textbackslash\{\}cfrac\{dC\}\{dY\}\textbackslash\{\}right)_i\textbackslash\{\}quad\textbackslash\{\}quad\textbackslash\{\}quad\textbackslash\{\}quad \textbackslash\{\}left(\textbackslash\{\}cfrac\{dC\}\{dY\}\textbackslash\{\}right)_i=\textbackslash\{\}cfrac\{C_0\}\{2\textbackslash\{\}sqrt\{\textbackslash\{\}pi Dt\}\}\textasciitilde\{\}\textbackslash\{\}exp\textbackslash\{\}left(-\textbackslash\{\}cfrac\{(h-Y_i)^2\}\{4Dt\}\textbackslash\{\}right), $$ где $C$ — концентрация соли в растворе, $C_0$ — начальная концентрация соли в растворе, $D$ — коэффициент диффузии, $t$ — время диффузии, $h$ — значение $Y_i$ для максимального значения градиента показателя преломления $dn/dY$. Заметим, что $dn/dC$ - constant.
+
+\problembox{B5}{Using the above equations, find the functions $f(\cfrac{dn}{dY})$ and $g(Y)$ for which the dependence of $f(\cfrac{dn}{dY})$ on $g(Y)$ is linear.}{0.90}
+
+\problembox{B6}{Recalculate the data from point B3 to construct a linearized relationship. Construct graphs of linearized dependencies.}{1.80}
+
+\problembox{B7}{Determine the diffusion coefficients from the linear sections of the graphs constructed in point B6.}{1.50}
+
+\problembox{B8}{Based on the measurement results for three concentrations, determine $dD/dC$.}{1.30}
+
+\section*{Part C. Robert Wood's Pseudo Lens (5 points)}
+
+Equipment used in this part of the task: screen (2), flashlight holder (3), tape measure (4), screwdriver (7), ruler (8), knife blade (9), syringes with jelly (10), adhesive mass (11), transparent plates (12), jelly cutting lid (13), flashlight (14), vessel with water (15).
+
+Lenses with variable refractive index are currently used in centimeter radio wave technology. For the optical range of electromagnetic waves, it is quite difficult to produce such a lens that could withstand competition with conventional ones. However, the outstanding American experimental physicist Robert Wood, many years before the first radar stations appeared and, therefore, the widespread use of centimeter radio waves began, proposed a simple model of an optical lens with a variable refractive index, which he called a pseudolens. Today you will make this pseudo lens from gelatin. The main idea is as follows. The syringes are filled with jelly prepared on the basis of gelatin and glycerin. By placing a gelatin cylinder in clean water, the process of water diffusion into the cylinder and glycerin out begins. Because The refractive indices of glycerin and water are different, after soaking in the cylinder, a variable refractive index is formed.
+
+The sequence of actions for making a pseudolens is as follows: 1. Squeeze part of the gelatin cylinder out of the syringe and cut a piece of the length you need. 2. Place the cylinder between two transparent plates. Be careful not to deform the cylinder. If necessary, you can place adhesive in the corners of the plates to prevent the plates from moving apart. In the picture below: 1 - adhesive mass, 2 - gelatin cylinder, 3 - plates. 3. Place the cylinder with plates in a vessel with water at $t=(13.0\pm0.5)~\text{мин}$. 4. Remove the cylinder from the water. He is ready for measurements.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{C1}{Schematically depict the setup with which you will determine the focal length of the manufactured pseudolens. Indicate in letters the parameters you will measure. They must match the columns in the dimension table.}{0.50}
+
+\problembox{C2}{Obtain focal length values ​​$F$ for at least 5 cylinder lengths $l$ (remember to provide direct measurements). The length of the cylinder should be from 2 to 6 mm. For each length, take at least three measurements. Average the focal lengths, indicate the statistical spread, and estimate the error in determining the focal length.}{2.50}
+
+We can assume that for a pseudolens of radius $R$ the optical paths from the source at infinity to the focus are equal for rays passing through the center and through the edge of the lens.
+
+\problembox{C3}{Express $\Delta n$, the difference between the refractive index $n(0)$ at the center and the refractive index $n(R)$ at the edge of the lens, in terms of the lens thickness $l$, the focal length $F$, and the lens radius $R$. Consider $\Delta n \ll n$ and the inner diameter of the syringe from which the barrels are extruded is $D=8.8~\text{mm}$.}{1.00}
+
+\problembox{C4}{Plot the linearized dependence of $F$ on $d$ using the result from C3. Find $\Delta n$. Estimate the error.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/41}
+
+\end{document}

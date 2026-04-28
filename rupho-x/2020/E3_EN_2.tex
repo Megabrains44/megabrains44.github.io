@@ -1,0 +1,114 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Astigmatic lenses}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Error estimation is not required in this work!}
+
+\section*{Introduction}
+
+There is a vision defect - astigmatism - in which the lens is curved differently in different directions, and therefore cannot focus a wide beam of rays to one point. To correct such deviations when selecting glasses and contact lenses, so-called astigmatic lenses are used.
+
+The technology for their manufacture is complex and usually implies that one of the surfaces of the lens is given the shape of a section of the surface of a torus, and the other surface is made spherical, as when grinding conventional lenses. However, within the framework of this task, we will not study the actual shape of the surface of such lenses, but will focus on studying the effect of lenses on light beams incident on them. From this point of view, the astigmatic thin lens is equivalent to the combination of a back-to-back conventional spherical thin lens and a cylindrical thin lens. They are characterized by their focal lengths $F_\text{}$ and $F_\text{}$ and optical powers $D_\text{}$ and $D_\text{}$ respectively.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The plane of a thin cylindrical lens contains two selected directions. And two corresponding segments passing through the center of the lens - let's call them “selected diameters”. The cylinder has no curvature in one of the selected directions, and therefore the rays, when refracted in the lens, maintain an angle with this direction. The second direction is perpendicular to the first, and a narrow beam of parallel rays, perpendicular to the lens and falling at different points of the corresponding selected diameter, is collected by the lens at a point at a distance $F_\text{}$ from the lens.
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Three different astigmatic lenses in tabletop frames Flashlight in holder Cardboard slit diaphragm (and 2 office clips to attach it to the lens?) Cardboard with graph paper attached to it for use as a screen Measuring tape Ruler
+
+\emph{Attention!} Do not stain the glass surfaces of the lenses by touching them with your fingers! \emph{Attention!} It is prohibited to put marks on lenses, their frames and protractors attached to them. \emph{Attention! When drawing a lens on a mounting diagram, always mark the side on which the protractor is mounted!}
+
+\section*{Part A. Lens parameters}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+The presence of selected directions in a cylindrical lens explains the presence of selected directions in an astigmatic lens. Let the rays of one of the narrow parallel beams fall at different points of one selected diameter of an astigmatic lens, and the rays of another beam - at points of another selected diameter. The focal lengths of the lens for these two beams of rays are different - let's denote the smaller and larger of them as $F_{\min}$ and $F_{\max}$, respectively.
+
+\problembox{A1}{Express theoretically $F_{\min}$ and $F_{\max}$ in terms of $D_\text{}$ and $D_\text{}$.}{0.20}
+
+\problembox{A2}{For each lens, experimentally determine the positions of its two selected directions. Use pictures and diagrams to explain how you do this.}{0.40}
+
+\problembox{A3}{Determine which of the three lenses is equivalent to a cylindrical lens (i.e. has $D_\text{}=0$). Write down the number of this lens on your answer sheet and provide reasons for your choice.}{0.40}
+
+\problembox{A4}{For each lens, experimentally determine the focal lengths for its two selected directions: $F_{\min}$ and $F_{\max}$. The answer sheet must describe in detail the sequence of actions and measurements, providing diagrams of the installations used and indicating all the elements used. Calculate value pairs $D_\text{}$ and $D_\text{}$. Enter all the numbers received in the table on the answer sheet.}{2.00}
+
+\section*{Part B. Spot Shape}
+
+\problembox{B1}{Assemble a setup in which light is incident on lens No. 1 in a parallel beam with a circular cross-section. On your answer sheet, draw a diagram of the installation and label all the elements used. Describe how you control beam parallelism.}{0.30}
+
+\problembox{B2}{Place the screen behind lens No. 1 and, moving only the screen, observe how the shape of the light spot on it depends on the position of the screen. On the answer sheet, sketch out several characteristic figures and write down the distances $d$ from lens No. 1 to the screen at the moment they are obtained.}{1.60}
+
+\problembox{B3}{Determine at what $d=d_{exp}~(d_{exp} > 10~\text{cm})$ the light spot on the screen has the same dimensions $h_{exp}$ along the two selected directions of lens No. 1. Write the quantities $d_{exp}$ and $h_{exp}$ on your answer sheet. The shape of the light spot corresponding to the distance $d_{exp}$ should be present among the figures you depicted in the answer sheet for the previous paragraph.}{0.30}
+
+\problembox{B4}{Measure the diameter of the lens $2R$ and write the result on your answer sheet. Calculate theoretically (using geometric constructions) the value $d_{th}$, equal to the distance between lens No. 1 and the screen to obtain a light spot on it that has the same dimensions $h_{th}$ along two selected directions of lens No. 1. You can use the information given in the introduction about the path of rays incident on the lens at points of its selected diameters. Write down the calculated values of $d_{th}$ and $h_{th}$ on your answer sheet.}{0.80}
+
+\section*{Part C: Rotating a Line}
+
+At this point, as in the previous one, it is required to illuminate lens No. 1 with a parallel light beam of circular cross-section. Insert a cardboard slit diaphragm into the frame of lens No. 1, using the grooves of its frame that are free from the lens. The slot should be horizontal. Rotate the lens so that the iris side faces the source.
+
+emmph{Attention!} New diaphragms will not be issued!
+
+\problembox{C1}{Place the screen behind lens No. 1 and, moving only the screen, observe how the tilt of the illuminated segment on the screen depends on the position of the screen. On the answer sheet, sketch out several characteristic pictures and write down the distances $d$ from lens No. 1 to the screen at the moment of their receipt. On a separate drawing, depict how you think the segment will be located on a screen at infinity.}{1.00}
+
+\problembox{C2}{Measure two distances ($d_{\min}$ and $d_{\max}$) at which the direction of the segment on the screen coincides with one or the other of the selected directions of lens No. 1. Do these measured values coincide with those previously determined $F_{\min}$ and $F_{\max}$?}{0.40}
+
+\problembox{C3}{For the experimental setup you have assembled (with a parallel beam of light incident on an astigmatic lens with a slit diaphragm), theoretically describe the observed dependence of the slope of a segment on the screen on the position of the screen. Obtain the theoretical value of the angle $\beta_{inf}$ by which the segment on the screen at infinity is rotated relative to the horizon. At what angle $\beta_{total}$ should the segment rotate during the entire movement of the screen from $d = 0$ to $d = +\infty$ with such a relative arrangement of the slit and the selected directions of the lens, as in our installation?}{2.00}
+
+\problembox{C4}{Prove theoretically that the image of a segment is a segment, i.e. that all intermediate rays, after refraction, arrive at the screen at points lying on the same straight line with the points from the outer rays.}{0.60}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/22}
+
+\end{document}

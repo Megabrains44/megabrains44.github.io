@@ -1,0 +1,175 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Optics coating}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Optics coating is a technology for treating the surface of lenses, prisms and other optical parts to reduce the reflection of light from optical surfaces bordering air. This allows you to increase the light transmission of the optical system and increase the contrast of the image by reducing interfering parasitic reflections in the optical system. Most optical systems used, for example, camera and video camera lenses, consist of many lenses, and reflection from each glass-air interface reduces the transmitted useful light flux. Without the use of clearing methods, the drop in the intensity of transmitted light in a multi-lens system can reach several tens of percent. Therefore, all modern lenses use coated optics. This problem is devoted to the theoretical foundations of optical bleaching.
+
+\section*{Part A. Fresnel formulas (3.2 points)}
+
+Let a plane electromagnetic wave with wave vector $\vec{k}$ and electric field strength $\vec{E}_0$ fall from the medium $1$ onto the interface between the media $1$ and $2$ at an angle $\theta$ in the direction to the normal. The refractive indices of the media $1$ and $2$ are equal to $n_1$ and $n_2$, respectively. When hitting the interface between the media, the electromagnetic wave is partially reflected from the medium $2$ and partially passes into it. In the entire problem, the index $r$ corresponds to the reflected wave, and the index $t$ to the wave transmitted into medium 2, therefore the electric field strengths in the reflected and transmitted waves are designated $\vec{E}_r$ and $\vec{E}_t$, respectively, the wave vectors of the reflected and transmitted waves are designated $\vec{k}_r$ and $\vec{k}_t$, respectively, and the reflection and refraction angles are designated $\theta_r$ and $\theta_t$, respectively. An electromagnetic wave can be represented as a superposition of two: $s$-polarized and $p$-polarized. In the case of a $s$-polarized wave, the directions of the electric field strength vectors are perpendicular to the plane containing the normal vector to the surface and the wave vector of the incident wave. In the case of a $p$-polarized wave, the directions of the electric field strength vectors lie in the plane containing the normal vector to the surface and the wave vector of the incident wave. The positive directions of the vectors $\vec{E}_0$, $\vec{E}_r$ and $\vec{E}_t$ at point $O$, corresponding to the incident, reflected and transmitted waves, respectively, are shown in Fig. 1. for the $s$-polarized wave and in Fig. 2. for the $p$-polarized wave.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Within the framework of the problem, consider all media to be nonmagnetic ($\mu\approx 1$), and all waves to be monochromatic. Also consider that there are no external currents or free charges at the interface. To describe the electric field strengths, let's move on to complex amplitudes. Next, take all directions of electric field strengths as those shown in the figure, and write down the magnitudes of electric field strengths in the following form: $$E_\{пад\}=\textbackslash\{\}operatorname\{Re\}\textbackslash\{\}left(E_0e^\{i(\textbackslash\{\}omega t-\textbackslash\{\}vec\{k\}\textbackslash\{\}vec\{r\})\}\textbackslash\{\}right)\textbackslash\{\}qquad E_\{отр\}=\textbackslash\{\}operatorname\{Re\}\textbackslash\{\}left(E_re^\{i(\textbackslash\{\}omega t-\textbackslash\{\}vec\{k\}_r\textbackslash\{\}vec\{r\})\}\textbackslash\{\}right)\textbackslash\{\}qquad E_\{прош\}=\textbackslash\{\}operatorname\{Re\}\textbackslash\{\}left(E_te^\{i(\textbackslash\{\}omega t-\textbackslash\{\}vec\{k\}_t\textbackslash\{\}vec\{r\})\}\textbackslash\{\}right)\{.\} $$Здесь $E_0$, $E_r$ и $E_t$ – комплексные амплитуды напряжённостей электрический полей падающей, отражённой и прошедшей волн соответственно в точке $O$, от которой отсчитывается радиус-вектор $\vec{r}$. Введём также комплексные коэффициенты отражения и прохождения по амплитуде $r$ и $t$ соответственно. Они определяются следующими выражениями: $$r=\textbackslash\{\}cfrac\{E_r\}\{E_0\}\textbackslash\{\}qquad t=\textbackslash\{\}cfrac\{E_t\}\{E_0\}\{.\} $$
+
+\problembox{A1}{Let a plane electromagnetic wave propagate in a substance with a refractive index $n$ with an oscillation amplitude $E$ of the electric field strength. Express the amplitude of fluctuations in the magnetic field strength $H$ in this wave in terms of $E$, $n$, as well as the magnetic and electric constants $\mu_0$ and $\varepsilon_0$, respectively.}{0.30}
+
+Let us return to the consideration of the waves reflected and transmitted through the interface between the media $1$ and $2$.
+
+\problembox{A2}{What 4 boundary conditions for the electric and magnetic fields are satisfied at the interface? Write them down on the answer sheets in a form convenient for you.}{0.40}
+
+\problembox{A3}{All boundary conditions that are met at the interface between two media must be satisfied at each point at an arbitrary point in time. Based on this, prove the following equalities: $$\textbackslash\{\}omega_r=\textbackslash\{\}omega_t=\textbackslash\{\}omega\textbackslash\{\}qquad \textbackslash\{\}theta_r=\textbackslash\{\}theta\textbackslash\{\}qquad n_2\textbackslash\{\}sin\textbackslash\{\}theta_t=n_1\textbackslash\{\}sin\textbackslash\{\}theta\{.\} $$}{0.40}
+
+\problembox{A4}{Derive an expression for the complex reflection and transmission coefficients $r_s$ and $t_s$, respectively, in the case of a $s$-polarized wave. Express your answers in terms of $n_1$, $n_2$, $\theta$ and $\theta_t$. The expressions for $r_s$ and $t_s$ are called Fresnel formulas for the $s$-polarized wave.}{0.50}
+
+\problembox{A5}{Derive an expression for the coefficients $r_p$ and $t_p$ in the case of a $p$-polarized wave. Express your answers in terms of $n_1$, $n_2$, $\theta$ and $\theta_t$. The expressions for $r_p$ and $t_p$ are called Fresnel formulas for the $p$-polarized wave.}{0.50}
+
+Let the value $\theta$ exceed the angle $\theta_{crit}$ corresponding to the angle of total internal reflection (hereinafter referred to as TIR). In this case, the value of the angle $\theta_t$ is complex, while the Fresnel formulas retain their form. There are two angles $\theta_t$ that satisfy the condition $n_1\sin\theta=n_2\sin\theta_t$, but it can be uniquely chosen taking into account the fact that the amplitude of the transmitted wave attenuates with distance from the interface.
+
+\problembox{A6}{Determine the value of $\cos\theta_t$. Express your answer in terms of $n_1$, $n_2$ and $\theta$.}{0.30}
+
+\problembox{A7}{The expressions for $r_s$ and $r_p$ can be represented as follows: $$r_s=A_se^\{i\textbackslash\{\}delta_p\}\textbackslash\{\}qquad r_p=A_pe^\{i\textbackslash\{\}delta_p\}\{.\} $$Определите $A_s$, $A_p$, $\delta_s$ и $\delta_p$. Ответы выразите через $n_1$, $n_2$ и $\theta$.}{0.40}
+
+Let $\delta=\delta_p-\delta_s$.
+
+\problembox{A8}{Define $\delta$. Express your answer as one inverse trigonometric function in terms of $\theta$ and $n_{21}=n_2/n_1$.}{0.40}
+
+\section*{Part B. Fresnel and Mooney rhombuses (1.5 points)}
+
+To obtain circular polarization from linear polarization, so-called quarter-wave plates are used in polarizing devices. As a rule, these plates are made of quartz and their action is based on the birefringence effect. However, such plates can only be used in a narrow range of wavelengths. Analogues of quarter-wave plates can be devices based on the air defense effect. These devices make it possible to study a much wider range of wavelengths, and therefore have found wide practical application. In this part of the task you are invited to familiarize yourself with two types of such devices.
+
+One of the devices based on the air defense effect is a Fresnel rhombus, the cross section of which is a parallelogram (see Fig. 3). A linearly polarized electromagnetic wave is incident on the face $AB$ of the Fresnel rhombus, perpendicular to the plane of the figure, the wave vector $\vec{k}$ of which is perpendicular to $AB$. The angle $\alpha=\angle BAD$ is chosen in such a way that the wave experiences two total reflections from the faces $AD$ and $BC$ of the Fresnel rhombus, due to which a phase shift equal to $\pi/2$ occurs between the $p$ and $s$ polarizations. Let a Fresnel rhombus be in air with a refractive index equal to one and made of a material with a refractive index $n=1{.}510$. Rice. 3. Fresnel rhombus
+
+One of the devices based on the air defense effect is a Fresnel rhombus, the cross section of which is a parallelogram (see Fig. 3). A linearly polarized electromagnetic wave is incident on the face $AB$ of the Fresnel rhombus, perpendicular to the plane of the figure, the wave vector $\vec{k}$ of which is perpendicular to $AB$. The angle $\alpha=\angle BAD$ is chosen in such a way that the wave experiences two total reflections from the faces $AD$ and $BC$ of the Fresnel rhombus, due to which a phase shift equal to $\pi/2$ occurs between the $p$ and $s$ polarizations. Let a Fresnel rhombus be in air with a refractive index equal to one and made of a material with a refractive index $n=1{.}510$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{At what values ​​of the acute angle $\alpha$ of the Fresnel rhombus will the electromagnetic wave experience total reflection from the faces of the Fresnel rhombus $BC$ and $AD$? Express your answer in terms of $n$ and calculate it in degrees to four significant figures.}{0.10}
+
+\problembox{B2}{At what values ​​of the angle $\alpha=\alpha'$ can we obtain circular polarization from linear polarization using the Fresnel rhombus? Express your answers in terms of $n$ and calculate them in degrees to four significant figures.}{0.40}
+
+\problembox{B3}{Let a beam of light fall on the Fresnel rhombus over the entire area of ​​the face $AB$. Angle $\alpha=\alpha'$. At what values ​​of $BC/AB$ does the Fresnel rhombus reverse the entire beam of rays (all rays entering the Fresnel rhombus through the face $AB$ experience two total reflections)? Calculate your answer to three significant figures.}{0.30}
+
+Another type of quarter-wave plate is the Mooney diamond (see Fig. 4). A linearly polarized electromagnetic wave, the wave vector $\vec{k}$ of which is perpendicular to $AB$, falls on the face $AB$ of the Mooney rhombus, perpendicular to the plane of the figure. The angle $\alpha=\angle ABC$ is chosen in such a way that the wave experiences two total reflections from the faces $BC$ and $CD$ of the Mooney rhombus, due to which a phase shift equal to $\pi/2$ occurs between the $p$ and $s$ polarizations. Let a Mooney diamond be in air with a refractive index of one and made of a material with a refractive index of $n=1{.}510$. Rice. 4. Diamond Mooney
+
+Another type of quarter-wave plate is the Mooney diamond (see Fig. 4). A linearly polarized electromagnetic wave is incident on the face $AB$ of the Mooney rhombus, perpendicular to the plane of the figure, the wave vector $\vec{k}$ of which is perpendicular to $AB$. The angle $\alpha=\angle ABC$ is chosen in such a way that the wave experiences two total reflections from the faces $BC$ and $CD$ of the Mooney rhombus, due to which a phase shift equal to $\pi/2$ occurs between the $p$ and $s$ polarizations. Let a Mooney diamond be in air with a refractive index of one and made of a material with a refractive index of $n=1{.}510$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B4}{At what values ​​of the angle $\alpha$ of the Mooney rhombus will the electromagnetic wave experience total reflection from the faces of the Fresnel rhombus $BC$ and $CD$? Express your answer in terms of $n$ and calculate it in degrees to four significant figures.}{0.10}
+
+\problembox{B5}{At what values ​​of the angle $\alpha=\alpha'$ can we obtain circular polarization from linear polarization using the Mooney rhombus? Express your answers in terms of $n$ and calculate them in degrees to four significant figures.}{0.30}
+
+\problembox{B6}{Let the angle $\alpha=\alpha'$. Determine the maximum possible value $\gamma$ of the ratio of the cross-sectional area of ​​the beam incident on the face $AB$ to the area of ​​the face $AB$, if the Mooney rhombus reverses the entire beam of rays (all rays entering the Mooney rhombus through the face $AB$ experience two total reflections). Calculate your answer to three significant figures.}{0.30}
+
+Note: In all subsequent paragraphs, consider all angles of incidence such that electromagnetic waves do not experience complete reflection at the interface.
+
+\section*{Part C. Anti-reflective coating (3.6 points)}
+
+As you can see in the previous parts of the problem, the amplitude of the electric field strength in the reflected wave is quite comparable to the amplitude of the electric field strength in the incident wave. This causes, for example, glass plates to cast reflections. When glass is used to make glasses, the glare effect is undesirable and it turns out that it can be eliminated by applying a thin layer of a substance of another material to the surface of the lens. The layer material and its thickness are selected in such a way that the total amplitude of the wave reflected from the surface of the lens becomes zero. This technology is called antireflection coating of optics, and the applied layer is called antireflection coating. In this part of the problem, you have to determine the possible values ​​of the refractive index and thickness of the substance at which the total amplitude of the reflected wave becomes zero.
+
+Let us consider the media $1$ and $2$ with refractive indices $n_1$ and $n_2$, respectively, separated by a plane-parallel plate of thickness $d$ with refractive index $n$. Let a plane electromagnetic wave fall from the medium $1$ onto the plate at an angle $\theta$ to the normal. As a result of multiple reflections and refractions, a superposition of 5 electromagnetic waves is formed, shown in Fig. 5, which correspond to 5 wave vectors. Wave vector $\vec{k}_1$ corresponds to an electromagnetic wave incident on the interface between media with refractive indices $n_1$ and $n$ from medium $1$, wave vectors $\vec{k}_r$ and $\vec{k}_t$ correspond to electromagnetic waves reflected from the plate and transmitted through it, and wave vectors $\vec{k}$ and $\vec{k}'$ correspond to electromagnetic waves propagating in the plate. The radius vector $\vec{r}$ of each of the five waves under consideration is measured from the point $O$, which belongs to the interface between media with refractive indices $n_1$ and $n$ (see the form of representation of electric field strengths in part $A$). Let us denote the complex amplitudes of the electric field strengths at the point $O$ corresponding to the wave vectors $\vec{k}_1$, $\vec{k}$, $\vec{k'}$, $\vec{k}_r$ and $\vec{k}_t$ as $E_1$, $E$, $E'$, $E_r$ and $E_t$.
+
+Rice. 5. Superposition of waves
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Let us introduce the following notation: $r_1$ – reflection coefficient of a wave with wave vector $\vec{k}_1$ from the interface between media with refractive indices $n_1$ and $n$; $t_1$ – coefficient of transmission of a wave with wave vector $\vec{k}_1$ through the interface between media with refractive indices $n_1$ and $n$; $r_2$ – reflection coefficient of a wave with wave vector $\vec{k}$ from the interface between media with refractive indices $n_2$ and $n$; $t_2$ – coefficient of transmission of a wave with wave vector $\vec{k}$ through the interface between media with refractive indices $n_2$ and $n$; $r'_1$ – reflection coefficient of a wave with wave vector $\vec{k'}$ from the interface between media with refractive indices $n_1$ and $n$; $t'_1$ is the coefficient of transmission of a wave with wave vector $\vec{k'}$ through the interface between media with refractive indices $n_1$ and $n$.
+
+Let us introduce the following notation:
+
+\problembox{C1}{Show the validity of the following relations: $$r'_1=-r_1\textbackslash\{\}qquad 1-r^2_1=t_1t'_1\{.\} $$}{0.30}
+
+Let us consider the point $O$ of the interface between media with refractive indices $n$ and $n_1$. Electromagnetic waves with electric field strengths $\vec{k}_1$ and $\vec{k'}$ converge on it, and electromagnetic waves with field strengths $\vec{k}_r$ and $\vec{k}$ diverge (see Fig. 5). In this case, each of the diverging waves can be represented as a superposition of transmitted and reflected converging waves.
+
+\problembox{C2}{Express $E_r$ and $E$ in terms of $E_1$, $E'$, $r_1$, $r'_1$, $t_1$ and $t'_1$.}{0.60}
+
+Now consider the point $O'$ of the interface between media with refractive indices $n_2$ and $n$. The segment $OO'$ is perpendicular to both interfaces. A wave with wave vector $\vec{k}$ converges to the boundary, and waves with wave vectors $\vec{k}_t$ and $\vec{k'}$ diverge (see Fig. 5).
+
+\problembox{C3}{Reasoning similarly to point C2, express $E'$ and $E_t$ in terms of $E$, $r_2$ and $t'_2$, $n_1$, $n_2$, $n$, $k$, $d$ and $\theta$. Note that the complex amplitudes of the electric fields at point $O'$ are out of phase with respect to the corresponding complex amplitudes at point $O$.}{0.60}
+
+\problembox{C4}{Using the results from steps C1-C3, determine the reflectance $r=E_r/E_1$. Express your answer in terms of $r_1$, $r_2$, $n_1$, $n$, $k$, $d$ and $\theta$.}{0.60}
+
+Next, we consider the case of only normal incidence, for which the $s$ and $p$ polarizations are virtually equivalent to each other. As a rule, the refractive index $n$ and the thickness $d$ of the antireflection coating are determined for the case of normal incidence.
+
+Let the wavelength of light incident on the interface between media with refractive indices $n_1$ and $n$ from medium $1$ be equal to $\lambda_1$.
+
+\problembox{C5}{At what value of the plate thickness $d$ is it possible for the reflection coefficient to vanish? Express your answer in terms of $\lambda_1$, $n_1$ and $n$.}{0.70}
+
+\problembox{C6}{At what values ​​of the refractive index of the plate $n$ is it possible for the reflection coefficient to vanish? Express your answer in terms of $n_1$ and $n_2$.}{0.80}
+
+\section*{Part D. Optical tweezers (1.7 points)}
+
+Let us consider a biconvex lens made of a substance with refractive index $n$ and located in air. The radius of curvature of each of the lens surfaces is $R$, and the radius of the lens is $r\ll R$.  A parallel beam of light with intensity $I_0$ falls on the lens parallel to its main optical axis. The speed of light in vacuum is $c$. As a rule, the equality of the illumination amplitudes of the light field in front of the lens and immediately behind it is taken for granted, but this is absolutely not the case. To make the light field of the reflected wave reflected from the spherical surface equal to zero, the lens is covered with an antireflective coating on both sides. The thickness of the antireflective coating can be neglected compared to the thickness of the lens.
+
+Consider a biconvex lens made of a substance with refractive index $n$ and located in air. The radius of curvature of each of the lens surfaces is $R$, and the radius of the lens is $r\ll R$.  A parallel beam of light with intensity $I_0$ falls on the lens parallel to its main optical axis. The speed of light in vacuum is $c$. As a rule, the equality of the illumination amplitudes of the light field in front of the lens and immediately behind it is taken for granted, but this is absolutely not the case. To make the light field of the reflected wave reflected from the spherical surface equal to zero, the lens is covered with an antireflective coating on both sides. The thickness of the antireflective coating can be neglected compared to the thickness of the lens.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{D1}{What is the refractive index $n'$ of the antireflection coating? Express your answer in terms of $n$.}{0.20}
+
+\problembox{D2}{What is the focal length of the lens $f$? Express your answer in terms of $R$ and $n$}{0.50}
+
+\problembox{D3}{Determine the force $F$ acting on the lens. Express your answer in terms of $I_0$, $r$, $R$, $n$ and $c$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3868}
+
+\end{document}

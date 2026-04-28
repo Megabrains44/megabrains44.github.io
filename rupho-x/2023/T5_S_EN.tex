@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Three phase current --- Solution}}
+\author{\normalsize X23 (2023) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{The line voltage between terminals $a$ and $b$ can be represented as $\mathcal{E}_{ab} = \mathcal{E'_0}  \cos \left(\omega t - \Delta \varphi \right)$, $\mathcal{E'_0} > 0$. Find $\mathcal{E'_0}$ and $ \Delta \varphi$. Express your answer using $\mathcal{E}_0$.}{0.60}
+
+$$ \mathcal{E}_{ab} = \mathcal{E}_{a} -  \mathcal{E}_{b} =\mathcal{E}_{0} \left( \cos \left(\omega t\right) - \cos \left(\omega t - \frac{2\pi}{3}\right)\right). $$ For/Atменив формулу сности косинусов, we get: $$ \mathcal{E}_{ab} = 2 \mathcal{E}_{0}\left(\sin\left(\omega t - \frac{\pi}{3}\right) \sin\left(- \frac{\pi}{3}\right)\right) = -\sqrt{3} \mathcal{E}_{0} \sin\left(\omega t - \frac{\pi}{3}\right). $$ Заменяем синус на требуемый косинус: $$ \mathcal{E}_{ab} = \sqrt{3} \mathcal{E}_{0}\cos \left(\omega t + \frac{\pi}{6}\right). $$ $\textit{Note.}$ В условии не была указана полярность $\mathcal{E}_{ab}$, therefore возможен вариант $\mathcal{E}_{ab} = \mathcal{E}_{b} - \mathcal{E}_{a}$. В этом сrayае sign косинуса в finally выражении поменяется, что соответствует сдвигу фазы косинуса на $\pi$: $$ \mathcal{E}_{ab} = \sqrt{3} \mathcal{E}_{0}\cos \left(\omega t - \frac{ 5\pi}{6}\right). $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \mathcal{E'_0} = \sqrt{3} \mathcal{E}_{0} \\ \Delta \varphi = -\frac{ \pi}{6} \quad либо \quad \Delta \varphi = \frac{ 5\pi}{6} $$
+\end{solcard}
+
+\begin{solcard}{A2}{Let each of the load elements ($Z_a$, $Z_b$, $Z_c$) be a resistor $R = 9~\text{k\Omega}$ and a capacitor $C= 2 \cdot 10^{-7}~\text{F}$ connected in series.   Find the current amplitudes through the line wire $I_a$ and the neutral wire $I_0$ (formula and numerical value).}{1.00}
+
+Let's use the method of complex amplitudes.  We will denote complex amplitudes by a line over the corresponding quantities. Let's write Kirchhoff's 2nd law for a circuit with current $I_a$: $$ \mathcal{E}_{a} = \overline{I_a}(R + r) - \overline{I_a}\frac{i}{\omega C} + \overline{I_0}r\tag{1}; $$ Similarly for $I_b$, $I_c$: $$ \mathcal{E}_{b} = \overline{I_a}(R + r) - \overline{I_b}\frac{i}{\omega C} + \overline{I_0}r\tag{2}; $$ $$ \mathcal{E}_{c} = \overline{I_a}(R + r) - \overline{I_c}\frac{i}{\omega C} + \overline{I_0}r\tag{3}. $$ Also let us write 1-й закон Кирхгофа: $$ \overline{I_0} = \overline{I_a} + \overline{I_b} + \overline{I_c}\tag{4}. $$ Let us express $\overline{I_a}$, $\overline{I_b}$, $\overline {I_c}$ from $(1)$, $(2)$, $(3)$ соответственно and substituting в $(4)$: $$ \overline{I_0} = \frac{\mathcal{E}_{a} - \overline{I_0}r}{R+r - \frac{i}{\omega C}} + \frac{\mathcal{E}_{b} - \overline{I_0}r}{R+r - \frac{i}{\omega C}} + \frac{\mathcal{E}_{c} - \overline{I_0}r}{R+r - \frac{i}{\omega C}}. $⟦ 19⟧$ \mathcal{E}_{a}+ \mathcal{E}_{b} +\mathcal{E}_{c} = 0, $$ we get $$ \overline{I_0} = 0. $$ Taking into account этого we have answer for $\overline{I_a}$: $$ \overline{I_a} = \frac{\mathcal{E}_{0}}{\left(R + r \right) - \frac{i}{\omega C}}, \\ |\overline{I_a}| = I_a =  \frac{\mathcal{E}_{0}}{\sqrt{\left(R + r \right)^2 + \frac{1}{(\omega C)^2}}}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I_a =  \frac{\mathcal{E}_{0}}{\sqrt{\left(R + r \right)^2 + \frac{1}{(\omega C)^2}}} \approx14{,}6мА; $$ $$ I_0 = 0. $$
+\end{solcard}
+
+\begin{solcard}{A3}{Find the efficiency of the circuit from point $\mathrm{A}2$ $\eta$ (formula and numerical value). Consider the efficiency factor to be the ratio of the average power released at the load to the average power released in the entire circuit.}{0.40}
+
+The power in the circuit is allocated only through resistors. Useful power is released on resistors $R$. Let the phase shift for this resistor be $\Delta\varphi_1$. Power across resistor $a$: $$ P_a = |\overline{I_a}|^2\cos^2(\omega t - \Delta \varphi_1)R = \frac{1}{2}|\overline{I_a}|^2R(1 + \cos(2(\omega t -  \Delta \varphi_1)). $$ Since среднее $\cos(2(\omega t - \Delta \varphi_1))$ за period equals $0$, средняя за period power: $$ \langle P_a \rangle = \frac{1}{2}|\overline{I_a}|^2R. $$ It can be seen that сдвиг фаз $\Delta \varphi_1$ не влияет на $\langle P_a \rangle$, and therefore: $$ \langle P_a \rangle = \langle P_b \rangle = \langle P_c \rangle. $$ In total полезная power: $$ P_{пол} = \frac{3}{2}|\overline{I_a}|^2R. $$ Similarly we find общую power в circuit: $$ P_{вся} = \frac{3}{2}|\overline{I_a}|^2(R + r). $$ По оlimitению, данному в условии: $$ \eta = \frac{P_{пол}}{P_{вся}} =  \frac{R}{R + r} \approx 64{,}3 \text%. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \eta = \frac{R}{R + r}\approx 64{,}3 \text%. $$
+\end{solcard}
+
+\begin{solcard}{A4}{Now let the load be asymmetrical: elements $Z_b$ and $Z_c$ are resistors with resistance $R$, and element $Z_a$ is a capacitor with capacitance $С_1 = 10^{-9}~\text{F}$. Find the numerical value of the efficiency of circuit $\eta_1$ in this case. It is not necessary to obtain an analytical expression for $\eta_1$. Use the numerical data from point $A2$.}{1.00}
+
+Capacitor impedance module: $$ |Z_a| = \frac{1}{\omega C} =  \frac{1}{2\pi f C} \approx 3183кОм. $$ Note that $|Z_a|\gg R$, therefore for/at расчете currentов currentом via/through capacitor можно пренебречь. Similarly partу $A2$ напишем законы Кирхгофа for circuit: $$ \overline{I_0} = \overline{I_b} + \overline{I_c}\tag{1}; $$ $$ \mathcal{E}_{0}\left(-\frac{\sqrt{3}}{2}i - \frac{1}{2}\right) = \overline{I_b}(R + r) + \overline{I_0}r\tag{2}; $$ $$ \mathcal{E}_{0}\left(\frac{\sqrt{3}}{2}i - \frac{1}{2}\right) = \overline{I_c}(R + r) + \overline{I_0}r\tag{3}. $$ Adding $(2)$ and $(3)⟦11 ⟧(1)$. Thus let us find $\overline{I_0}$: $$ \overline{I_0} = -\frac{\mathcal{E_0}}{R + 3r}. $$ Substituting найденное $\overli ne{I_0}$ в $(2)$ and $(3)$, we find $\overline{I_b}$ and $\overline{I_c}$: $$ \overline{I_b} = \frac{\mathcal{E_0}}{R + r}\left(-\frac{\sqrt{3}}{2}i + \left(\frac{r}{R + 3r} - \frac{1}{2} \right)\right); I \\ \overline{I_c} = \frac{\mathcal{E_0}}{R + r}\left(\frac{\sqrt{3}}{2}i + \left(\frac{r}{R + 3r} - \frac{1}{2} \right)\right); $$ Выражения for модулей: $$ |\overline{I_0}| = \frac{\mathcal{E_0}}{R + 3r} \approx 12{,}92мА; \\ |\overline{I_b}|= |\overline{I_с}| = \frac{\mathcal{E_0}}{R + r}\sqrt{\frac{3}{4} + \left(\frac{r}{R + 3r} - \frac{1}{2}\right)^2} \approx 20{,}23мА; $$ We find средние полезную and общую мощности: $$ P_{пол} = 2\frac{1}{2}|\overline{I_b}|^2R; \\ P_{вся} = 2\frac{1}{2}|\overline{I_b}|^2(R+r) + \frac{1}{2}|\overline{I_0}|^2r; \\ \eta_1 = \frac{2|\overline{I_b}|^2R}{2|\overline{I_b}|^2(R+r) +|\overline{I_0}|^2r } \approx 59{,}9\text%. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \eta_1 \approx 59{,}9\text%. $$
+\end{solcard}
+
+\begin{solcard}{B1}{Let a current $I_0$ flow in one of the square frames with side $a$ at a given moment of time. Find the magnetic field $B_0$ at the center of the square created only by this frame.}{0.60}
+
+First, consider a segment with current $I$. Let us find the field at a point located at a distance $h$ from the line containing it. Biot-Savart-Laplace law: $$ \vec{dB} = \frac{\mu_0I_0}{4\pi}\frac{[\vec{dl}\times\vec{r}]}{|\vec{r}|^3}. $$ Поле от любого малого фрагмента отрезка поле будет направлено одинаково – по $Oz$. Taking into account этого let us write expression for проекции поля $\vec{dB}$ на $Oz$: $$ dB_z = \frac{\mu_0I_0}{4\pi}\frac{dl\cos(\alpha)}{r^2}. $$ Substituting $dl = \frac{h d\alpha}{\cos^2(\alpha)}$, $r = \frac{h}{\cos(\alpha)}$: $$ dB_z = \frac{\mu_0I_0}{4\pi h}\cos(\alpha)d\alpha; \\ B_z =  \frac{\mu_0I_0}{4\pi h}\int\limits_{\alpha_1}^{\alpha_2}\cos(\alpha)d\alpha; \\ B_z = \frac{\mu_0I_0}{4\pi h}(\sin(\alpha_2) - \sin(\alpha_1)). $$
+
+
+For one side of the square frame $h = a/2$, $\alpha_2 = -\alpha_1 = \pi/4$. Then the margin in the center of the frame: $$ B_0 = 4\frac{\mu_0 I_0}{4\pi \frac{a}{2}}\left(2\frac{\sqrt{2}}{2}\right) = 2\sqrt{2}\frac{\mu_0I_0}{\pi a}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ B_0 = 2\sqrt{2}\frac{\mu_0I_0}{\pi a}. $$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T5_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B2}{We will now consider the field that is created by all three frames, the currents through which are indicated in the introduction. Prove that in this case the magnetic field rotates with a constant angular velocity in the plane $xy$, that is, its modulus is constant and equal to $B_1$, and the angle with the axis $x$ $\psi = \omega t + \psi_0$ (then $B_x = B_ 1 \cos \psi$, $B_y = B_1 \sin \psi$). Find $B_1$ and $\psi_0$. Express your answer using $B_0$.}{1.50}
+
+We obtain the projection of the field from the three frames onto $Ox$: $$ B_x = B_0\cos(\omega t) + B_0\cos\left(\omega t - \frac{2\pi}{3}\right)\cos\left(\frac{2\pi}{3}\right) + B_0\cos\left(\omega t - \frac{4\pi}{3}\right)\cos\left(\frac{4\pi}{3}\right) = \\ = B_0\left( \cos(\omega t) - \frac{1}{2}\left(cos\left(\omega t - \frac{2\pi}{3}\right)\ + \cos\left(\omega t - \frac{4\pi}{3}\right)\right)\right). $$ For/Atменим формулу суммы косинусов: $$ B_0\left( \cos(\omega t) - \cos\left(\omega t -\pi\right) \cos\left(\frac{\pi}{3}\right)\right) = \frac{3}{2}B_0\cos(\omega t). $$ Similarly можно рассчитать проекцию суммарного поля на $Oy$: $$ B_y = B_0\cos\left(\omega t - \frac{2\pi}{3}\right)\sin\left(\frac{\pi}{3}\right) - B_0\cos\left(\omega t - \frac{4\pi}{3}\right)\sin\left(\frac{\pi}{3}\right), \\ B_y = \frac{\sqrt{3}}{2}2\sin(\omega t - \pi)\sin\left(-\frac{\pi}{3}\right) = \frac{3}{2}B_0\sin(\omega t). $$ Оба выражения for/atводят к answerу: $$ B_1 = \frac{3}{2}B_0; \qquad \psi_0 = 0. $$
+
+
+$\textit{Альтернативное решение.}$ Let $\vec{e_x}$, $\vec{e_y}$ be the unit vectors of the $x$, $y$ axes, respectively. Let us use them to write down vector expressions for fields from three frames: $$ \vec{B_a} = B_0\vec{e_x}\cos(\omega t); \\ \vec{B_b} = B_0\left(-\frac{1}{2}\vec{e_x} + \frac{\sqrt{3}}{2}\vec{e_y}\right)\cos\left(\omega t - \frac{2\pi}{3}\right); \\ \vec{B_c} = B_0\left(-\frac{1}{2}\vec{e_x} - \frac{\sqrt{3}}{2}\vec{e_y}\right)\cos\left(\omega t - \frac{4\pi}{3}\right). $$ Перейдем к комплексным amplitudeм: $$ \vec{B_a} = B_0\vec{e_x}e^{i\omega t}; \\ \vec{B_b} = B_0\left(-\frac{1}{2}\vec{e_x} + \frac{\sqrt{3}}{2}\vec{e_y}\right)e^{i\omega t}e^{-i\frac{2\pi}{3}}; \\ \vec{B_c} = B_0\left(-\frac{1}{2}\vec{e_x} - \frac{\sqrt{3}}{2}\vec{e_y}\right)e^{i\omega t}e^{-i\frac{4\pi}{3}} = B_0\left(-\frac{1}{2}\vec{e_x} - \frac{\sqrt{3}}{2}\vec{e_y}\right)e^{i\omega t}e^{i\frac{2\pi}{3}}. $$ $$ \vec{B_1} = \vec{B_a}+\vec{B_b}+\vec{B_c} = B_0e^{i \omega t}\left(\vec{e_x}\left(1 - \frac{e^{i\frac{2\pi}{3}}+e^{-i\frac{2\pi}{3}}}{2}\right) - \sqrt{3}i\vec{e_y}\frac{e^{i\frac{2\pi}{3}} - e^{-i\frac{2\pi}{3}}}{2i}\right) = \\ = B_0e^{i \omega t}\left(\vec{e_x}\left(1 - \cos \left(\frac{2\pi}{3}\right)\right) - \sqrt{3} i\vec{e_y}\sin\left(\frac{2\pi}{3}\right)\right) = \\ =B_0e^{i \omega t}\left(\frac{3}{2}\vec{e_x} - \frac{3}{2}i\vec{e_y}\right). $$ Взяв действительную часть от выражения выше, we get: $$ \vec{B_1} = \frac{3}{2}B_0\left(\vec{e_x}\cos (\omega t) + \vec{e_y}\sin (\omega t)\right). $$ This implies the answer obtained earlier.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ B_1 = \frac{3}{2}B_0; \qquad \psi_0 = 0. $$
+\end{solcard}
+
+\begin{solcard}{B3}{The small box in the center is rotated so that its normal makes an angle $\alpha$ with the axis $x$. Find the magnetic flux through it at time $t$. Express your answer using $B_1$, $S$, $\alpha$, $\omega$.}{0.40}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Phi =B_1S\cos\left(\alpha - \omega t\right). $$
+\end{solcard}
+
+\begin{solcard}{B4}{Let the inductance of the frame be $L_2$ and the resistance $R_2$. The frame rotates at a constant angular velocity $\omega_1$, so $\alpha = \omega_1 t$ ($0<\omega_1 < \omega$). In the steady state, the current in the loop depends on time as $$ I(t) = A \cos \left( \omega_2 t  - \varphi_2\right). $$ Find $A$, $\omega_2$ and $\varphi_2$. Express answer via/through parameterы рамки, $B_1$, $\omega$, $\omega_1$.}{1.00}
+
+The total magnetic field flux through the frame is created by the rotating field and current in the frame $I$ $$ \Phi_t = \Phi + L_2 I $$ Суммарная induced EMF в рамке с currentом $I$: $$ \mathcal{E}= \dot{\Phi}_t = -\dot{\Phi}-L_2\dot{I}. $$ From the law Ома for рамки $I R_2 = \mathcal{E}$ we get $$ -\dot{\Phi} = L_2\dot{I}+IR_2 $$ Это equation формально эквивалентно уравнению for $RL$-цепи с sourceом переменного напряжения $- \dot{\Phi}$. Будем записывать колебания в комплексном виде: $$ \Phi = B_1Se^{i (\omega - \omega_1) t}. $$ Since поcurrent меняется с частотой $\omega_2 = \omega - \omega_1$, с той же частотой будет меняться and current. induced EMF в рамке: $$ \mathcal{E} (t)= -\dot {\Phi} =- i \omega_2B_1Se^{i \omega_2 t}. $$ Substituting зависимость currentа от времени в виде $I = \overline{I} e^{i \omega_2 t}$, we get $$ (i \omega_2 L_2 + R_2) \overline{I} = - i \omega_2 B_1 S; $$ $$ \overline{I} = -\frac{i(\omega - \omega_1)B_1S}{i(\omega - \omega_1)L_2 + R_2}. $$ Hence we get answerы $$ \omega_2 = \omega - \omega_1 \\ A = |\overline{I}| = \frac{B_1S(\omega - \omega_1)}{\sqrt{R_2^2 + (\omega - \omega_1)^2L_2^2}} ; \\ \varphi_2 =\pi- \arctan\left(\frac{R_2}{(\omega - \omega_1) L_2}\right). $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \omega_2 = \omega - \omega_1; \\ A = \frac{B_1S(\omega - \omega_1)}{\sqrt{R_2^2 + (\omega - \omega_1)^2L_2^2}}; \\ \varphi_2 =\pi - \arctan\left(\frac{R_2}{(\omega - \omega_1) L_2}\right). $$
+\end{solcard}
+
+\begin{solcard}{B5}{In order to ensure more uniform rotation of the rotor, instead of one frame we will use three frames, rotated relative to each other by $120^\circ$ around the $z$ axis (that is, if the position of one frame is specified by the angle $\alpha$, the positions of the remaining frames are specified by the angles $\alpha_2 = \alpha + 2\pi/3$, $\alpha_3 = \alpha + 4\pi/3$). The frames are isolated from each other; their mutual induction can be neglected. Prove that the projection onto the $z$ axis of the moment of forces acting on the structure of three frames is constant. Find its value $M_z$. Express your answer in terms of the frame parameters, $B_1$, $\omega$, $\omega_1$.}{1.50}
+
+The magnetic flux of the rotating magnetic field through the $i$th frame ($i = 1,\, 2,\, 3$) is equal to $\Phi_i = B_1 S \cos (\omega_2 t - \alpha_{0i})$ ($\alpha _{01} = 0$, $\alpha_{02} = 2\pi/3 = \Delta \alpha$, $\alpha_{03} = 4\pi/3 = 2 \Delta \alpha$). Thus, the magnetic flux through the second and third frames is delayed by $2\pi/3$ and $4 \pi/3$. Then the currents through these frames are delayed by the same phase. Magnetic moment of a frame with current $I$ area $S$ $$ m = IS, $$ на $i$-тую рамку действует torque $$ \vec {M_i} = [\vec{m_i} \times \vec {B}]. $$ В проекции на $Oz$: $$ M_{iz} = m_iB_1\sin(\psi - \alpha_i). $$ Thus (обозначения for currentа взяты from предыдущего partа): $$ M_z =B_1AS(\sin(\omega_2 t)\cos(\omega_2 t - \varphi_2) + \sin(\omega_2 t-\Delta\alpha)\cos(\omega_2 t - \varphi_2-\Delta\alpha) + \\ + \sin(\omega_2 t-2\Delta\alpha)\cos(\omega_2 t - \varphi_2 - 2\Delta\alpha)). $⟦ 19⟧$ M_z = \frac{1}{2}B_1AS\left(\sin \varphi_2 + \sin(2\omega_2 t - \varphi_2)+\sin \varphi_2  + \sin(2\omega_2 t - \varphi_2 - 2\Delta\alpha) )+\\ + \sin \varphi_2 + \sin(2\omega_2 t - \varphi_2 - 4\Delta\alpha \right) $$ Сумма трех синусов, зависящих от времени, обращается в 0, therefore $$ M_z= \frac{3}{2}B_1AS\sin \varphi_2. $$ Substituting $\varphi_2$, $A$, we get $$ \sin \varphi_2 = \sin \left( \arctan \frac{R_2}{(\omega - \omega_1)L_2}\right) = \frac{R_2}{\sqrt{R_2^2 + (\omega- \omega_1)^2 R_2^2}}. $$
+
+
+$\textit{Альтернативное решение.}$ Let's find the total moment of three frames with current. This problem is mathematically equivalent to the problem of finding the total magnetic field from three external current-carrying loops. Indeed, the magnetic moment of each subsequent frame is rotated by $120^\circ$ degrees relative to the magnetic moment of the previous frame, and is delayed in phase by $2\pi/3$. Let us first consider the problem in the reference frame of a rotating frame. Then if $m_0 = AS$ is the amplitude of the magnetic moment from one frame, then the value of the total magnetic moment is $m_1 = \dfrac{3}{2} m_0$, and the magnetic moment rotates with an angular velocity $\omega_2$. In this case, the initial phase of the magnetic moment is equal to $- \varphi_2$, since all currents lag relative to the magnetic field by this phase. Since the frames themselves rotate with an angular velocity of $\omega_1$, relative to the laboratory frame of reference, the magnetic moment rotates with an angular velocity of $\omega_1 + \omega_2 = \omega$. The angular velocities of the magnetic moment and the magnetic field coincide, so the angle between them remains constant. It follows that the moment of forces is also constant and equal to $$ M_z = \frac{3}{2} m_0 B_1 \sin \varphi_2 =\frac{3}{2} AS B_1 \sin \varphi_2. $$ Thus, we obtain the same answer.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ M_z = \frac{3}{2}B_1^2S^2\frac{(\omega - \omega_1)R_2}{(\omega - \omega_1)^2L_2^2 + R_2^2}. $$
+\end{solcard}
+
+\begin{solcard}{B6}{Construct a qualitative graph of the dependence $M _z(\omega_1)$ in the frequency range $0 < \omega_1 < \omega$. Specify the coordinates of the characteristic points. Consider that $R_2/L_2 < \omega$.}{1.00}
+
+Let's rewrite the expression for the moment of forces in the form $$ M =  \frac{3}{2}B_1^2S^2\frac{R_2}{L_2^2}\frac{1}{(\omega - \omega_1)+ \frac{R_2^2}{L_2^2}\frac{1}{(\omega - \omega_1)}}. $$ Максимуму momentа отвечает минимум знаменателя $$ (\omega - \omega_1)+ \frac{R_2^2}{L_2^2}\frac{1}{(\omega - \omega_1)}. $$ Взяв производную по $\omega - \omega_1$, we get, что экстремуму соответствует $$ \omega - \omega_{1max} = \frac{R_2}{L_2}; \\ \omega_{1max} = \omega - \frac{R_2}{L_2}. $$ Максимальное value momentа $M_{max} = \frac{3}{4}\frac{B_1^2 S^2}{L_2}$. Любопытно отметить, что $M_{max}$ не зависит от $R_2$. For/At $\omega_1$ = 0 $$ M_0 = \frac{3}{2}B_1^2S^2\frac{\omega R_2}{\omega^2L_2^2 + R_2^2}. $$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T5_S_EN_assets/fig2.jpg}
+\end{figure}
+\end{solcard}
+
+\end{document}

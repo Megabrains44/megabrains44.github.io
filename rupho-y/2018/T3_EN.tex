@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Gravitational waves}}
+\author{\normalsize Y18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Constant electric and gravitational fields are described by a similar set of equations (as long as we consider fields far from black holes). However, if we consider changes in fields over time, the equations change. Therefore, one cannot simply transfer the equations of electromagnetic waves to gravitational ones. However, for the expressions below, the difference will only be in the numerical coefficient.
+
+\section*{Part A. Dipole radiation}
+
+Charges that move with acceleration lose kinetic energy, emitting electromagnetic waves. This radiation is called dipole. The dipole radiation power is expressed as follows: $$P_\{ed\}=\textbackslash\{\}cfrac\{\textbackslash\{\}ddot\{\textbackslash\{\}vec\{d\}\}^2\}\{6\textbackslash\{\}pi\textbackslash\{\}varepsilon_0c^3\} $$ где $\ddot{\vec{d}}$ – вторая производная дипольного момента, $c$ – скорость света, $\varepsilon_0$ – электрическая постоянная. Дипольный момент системы зарядов определяется как $\vec{d}=\sum_i\vec{r}_iq_i$, где $\vec{r}_i$ – радиус вектор заряда $q_i$. If the dipole oscillates harmoniously, then the frequency of the emitted wave will be equal to the frequency of the oscillations.
+
+\problembox{A1}{Let an electron with charge $-e$ and mass $m$ rotate around an atomic nucleus with charge $+Ze$ at a distance $r$ from it. Consider this system non-quantum. Find the total radiation power and the wavelength of the emitted waves. Express your answer in terms of $e$, $Z$, $m$, $r$ and fundamental constants.}{1.40}
+
+\problembox{A2}{You can try to calculate the dipole radiation power for gravitational waves. The charge $q_i$ will correspond to the mass $m_i$, and the gravitational dipole moment will be $\vec{d}_g=\sum_i\vec{r}_im_i$. Show that $P_{gd}=0$.}{1.00}
+
+\section*{Part B. Quadrupole radiation}
+
+Let a double star consist of two identical stars of mass $M$, which rotate in a circular orbit of radius $R$ with angular frequency $\omega$.
+
+\problembox{B1}{Express $\omega$ in terms of $M$, $R$ and fundamental constants.}{1.00}
+
+\problembox{B2}{In point A2 it was necessary to show that there is no dipole gravitational radiation. But there is a quadrupole. By analogy with dipole radiation, its power should be proportional to the second derivative (with respect to time) of the quadrupole moment. The gravitational quadrupole moment is proportional to the value $MR^2$. Thus, the quadrupole radiation power will be $P_{gd}=AM^2R^4$, where the parameter $A$ depends on $\omega$ and fundamental constants. (Treat $\omega$ as an independent quantity, although for a binary star it will be a function of $M$ and $R$.) Find an expression for $P_{gd}$ by the dimensional method.}{0.50}
+
+\problembox{B3}{Gravitational waves are characterized by the following dimensionless quantity $h=\Delta{l}/l$, where $l$ is the distance between two points in space, and $\Delta{l}$ is the change in this distance due to the wave. The energy flux density $S$ is proportional to the square of the amplitude $S=Kh^2_0$. Using the dimensional method, find $K$ as a function of $\omega$ and fundamental constants.}{0.50}
+
+\problembox{B4}{The propagation of quadrupole radiation is, generally speaking, anisotropic. In a very rough model, assuming the radiation is isotropic, find the amplitude $h_0$ of the gravitational wave at a distance $L$. Express your answer in terms of $M$, $R$ and physical constants.}{1.00}
+
+\section*{Part C. LIGO Experiment}
+
+The energy of the binary star decreases due to the emission of gravitational waves. Thus, the distance between the two stars decreases. The process will continue until the stars collide with each other. The LIGO experiment (February 11, 2016) observed gravitational waves that were emitted just before two black holes merged. The Schwarzschild radius $R_s$ can be taken as the radius of the black hole. Due to gravitational attraction, light propagating in a sphere of this radius cannot leave its limits. To correctly calculate the value of $R_s$, knowledge from the general theory of relativity is needed.
+
+\problembox{C1}{Express $R_s$ in terms of the black hole mass $M$ and fundamental constants. Note: If you make calculations using only knowledge of the special theory of relativity and the law of universal gravitation, then the correct answer will be twice as large as the one found.}{1.00}
+
+In the LIGO experiment, the time dependence of the parameter $h$ of gravitational waves was measured using a laser interferometer (Fig. 1).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{C2}{Using the graph shown in Fig. 1, estimate the mass $M$ of the black holes that merged, assuming their masses are the same. Gravitational constant $G=6.67\cdot{10^{-11}}~\text{м}^3/(\text{кг}\cdot{с}^2)$, speed of light $c=3\cdot{10^8}~\text{м}/\text{с}$.}{1.50}
+
+\problembox{C3}{Estimate the distance $L$ to these black holes.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3043}
+
+\end{document}

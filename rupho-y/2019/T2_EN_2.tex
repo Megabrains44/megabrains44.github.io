@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Gravitational lensing}}
+\author{\normalsize Y19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Deflection angle when flying past a massive body}
+
+This problem examines one of the effects of the general theory of relativity (hereinafter referred to as GTR), a theory that describes relativistic gravity. It turns out that gravity affects not only ordinary bodies, but also light. A beam of light is deflected as it passes near a massive body. This effect served as one of the first confirmations of general relativity in 1919.
+
+\problembox{A1}{Consider a star of mass $M$. Let a body of low mass fly past it, initially having a high (but non-relativistic) speed $v$, and $v^2\gg{GM/R}$, where $R$ is the smallest distance between the centers of the bodies during the flight. Find the angle by which it will deviate from its original direction.}{1.00}
+
+\problembox{A2}{Now consider a photon traveling at the speed of light $c$. The relation $E=pc$ is true for it, where $E$, $p$ are the energy and momentum of the photon. Consider that the gravitational force acting on a photon is determined by the law of universal gravitation, where the quantity $E/c^2$ is used instead of mass. Find the deflection angle $\delta$ of the photon.}{0.30}
+
+\problembox{A3}{General Relativity predicts a value exactly $2$ times greater than what you found. Write down the expression for the deflection angle $\delta$ predicted by general relativity. In the future, use this value. Representing $\delta$ as $\delta=r_0/R$, express $r_0$ in terms of $G$, $M$ and $c$.}{0.20}
+
+\section*{Part B. Theory of gravitational lensing.}
+
+The observer sees light from a distant star (let's call it the source), which on its way passes by another star, let's call it the “lens”. Consider the distances $a$ and $b$ known.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Assuming first that the Earth, the light source, and the center of the lens are on the same straight line ($\alpha=0$), find the angle $\theta_0$ at which the light arrives at the observer. What does the observer see in this case?  The angle $\theta_0$ is called the Khvolson-Einstein angle after the people who developed the theory of lensing.}{1.00}
+
+\problembox{B2}{Find the numerical value of $\theta_0$ (in arcseconds), considering the masses of the source and lens stars equal to the mass of the Sun $2\cdot{10^{30}~\text{kg}}$, the radii equal to the radius of the Sun $R=7\cdot{10^8}~\text{m}$, and the distances $a=b=10~\text{kpc}$. One parsec equals $1~\text{pc}=3\cdot 10^{16}~\text{m}$, the speed of light is $c=3\cdot{10^8}~\text{m}/\text{s}$, and the gravitational constant is $G=6{.}67\cdot{10^{-11}}~(\text{N}\cdot{m}^2)/\text{kg}^2$.}{0.50}
+
+By analogy with the deflection of light rays by a conventional lens, this phenomenon is usually called “gravitational lensing.” However, this is just common jargon. Gravitational lensing has nothing in common with an ordinary thin lens. Analogies with geometric optics are not applicable! In what follows, we consider the general case $\alpha\neq{0}$. The plane perpendicular to the plane of the drawing and passing through the lens star perpendicular to the direct line of the observer-lens will be called the lens plane. Always assume that images are in the plane of the lens.
+
+\problembox{B3}{How many images will the observer see in the general case $\alpha\neq{0}$? Find the angle for each of them. Express it through the angles $\alpha$, $\theta_0$.}{1.00}
+
+\problembox{B4}{Let the radius of the lens star be $R_L$. For the previous point, find the angle $\alpha_\text{max}$ at which all images are still visible. Express $\alpha_\text{max}$ in terms of $a$, $R_L$ and $\theta_0$. Calculate it for the parameters given in point B2.}{1.00}
+
+\problembox{B5}{Find $\Gamma_\perp$ – the linear magnification of the lens in the direction perpendicular to the drawing plane. To do this, move the source slightly in this direction and see how much the image moves in the same direction.}{1.00}
+
+\problembox{B6}{Now find $\Gamma_\parallel$ – linear magnification in the direction lying in the plane of the drawing and perpendicular to the line of sight.}{1.00}
+
+\problembox{B7}{Let the source have small but non-zero dimensions. Knowing $\Gamma_\perp$ and $\Gamma_\parallel$, find the total magnification of the gravitational lens $\Gamma$. By definition, this is the ratio of the area of the image (lying in the plane of the lens) to the area of the projection of the source onto a plane perpendicular to the line of sight.}{0.50}
+
+\problembox{B8}{As you know, a converging lens focuses rays, increasing the flow of energy. A gravitational lens has the same property. Let the observer's telescope receive an energy flow $N_0~\left[\text{W}\right]$ from the source in the absence of a lens. Find how many times $\mu$ the lens increases the received energy flow. Consider the luminous flux from the star-lens to be negligible. Consider that the observer sees all possible images ($\alpha\neq{0}$) and sums up the energy flows from them.}{1.50}
+
+\problembox{B9}{Find the value of $\mu$ at $\alpha=\theta_0$. Construct a qualitative graph of the dependence $\mu(y)$, where $y=\alpha / \theta_0$.}{0.50}
+
+\problembox{B10}{From the resulting formula it follows $\mu\to{\infty}$ at $\alpha\to{0}$. What is $\mu$ actually limited to? Using the numerical data from B2, estimate the value of $\mu_{max}$.}{0.50}
+
+\section*{Part C: Microlensing Observation}
+
+Lensing is usually observed when the source of light and the lens are not stars, but galaxies or clusters of galaxies whose masses are enormous. The resulting angle $\theta_0$ can in such cases be of the order of $1$ arcseconds, which is observable by optical telescopes. But for the case of star-star lensing in our galaxy (also called microlensing), the angle $\theta_0$ is so small that it is not possible to “resolve” the lensing picture, that is, to see the lens and images separately, by optical means. This can only be achieved using a system of several radio telescopes, which is an interferometer with a huge base and can measure very small angles.
+
+\problembox{C1}{However, microlensing can still be observed with optical telescopes. To do this, we need to measure the energy flow from the stars, which, as we found out, changes during lensing, when one star passes behind another. The lensing process of stars in the Galaxy lasts approximately $\tau = 40~\text{days}$. If during this time we observe the star at least once, then, knowing its standard luminosity, we will understand that we are observing gravitational lensing. Consider that in our Galaxy there are $N=2\cdot{10^{11}}$ stars, their masses are approximately equal to the mass of the Sun, the characteristic size of the Galaxy is $L = 10~\text{kpc}$. Estimate how many $N_0$ stars must be observed monthly to detect $k = 10$ gravitational lensing events in $t = 1~\text{year}$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3048}
+
+\end{document}

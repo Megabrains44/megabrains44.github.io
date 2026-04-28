@@ -1,0 +1,215 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Hertz-Quincke effect --- Solution}}
+\author{\normalsize X26 (2026) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{An infinite uniformly charged thin thread is in a vacuum. The thread is located along the $z$ axis, the linear charge density is $\kappa$.  Determine the dependence of the electrostatic potential of this thread $\varphi(r)$ in the entire space up to a constant. Express your answer using $\varepsilon_0$, $\kappa$, $r$.}{0.40}
+
+From symmetry, the electric field is directed radially. Then its value can be found from Gauss’s theorem: $$ E(r)=\dfrac{\kappa}{2\pi\varepsilon_0 r}. $$Integrating, we get expression for potentialа: $$ \varphi(r)=-\int\limits_{a}^{r} E(r) dr =-\dfrac{\kappa}{2\pi\varepsilon_0 }\ln{\frac{r}{a}}. $$Here $a$ is the distance from which the potential is measured.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \varphi(r)=-\dfrac{\kappa}{2\pi\varepsilon_0 }\ln{\frac{r}{a}} $$
+\end{solcard}
+
+\begin{solcard}{A2}{Now let's add a second thread with the opposite linear charge density $-\kappa$, parallel to the original one, at a very small distance from it. The dipole moment per unit length of this structure is constant and equal to $\vec p$. Determine the dependence of the electrostatic potential of this dipole line $\varphi(\vec r)$ throughout space. The potential at a large distance from the dipole line tends to zero. Express your answer using $\varepsilon_0$, $\vec p$, $\vec r$.}{0.40}
+
+Let $\vec a$ be a vector perpendicular to the threads, drawn from a point of a negatively charged thread to a point of a positively charged one. For definiteness, we assume that the positively charged thread is located on the straight line $\vec r=0$. If $r_+$ and $r_-$ are the distances to positively and negatively charged threads, respectively, their total potential is: $$ \varphi(\vec{r})= \dfrac{\kappa}{2\pi\varepsilon_0 }\ln{\dfrac{r_-}{r_+}}+C= \dfrac{\kappa}{2\pi\varepsilon_0 }\ln\frac{|\vec{r} + \vec{a}|}{r}+ C. $$To first order по $\vec{a}$ distance $$ r_- = |\vec{r} + \vec{a}| \simeq r + \frac{\vec{a}\vec{r}}{r}, $$then potential $$ \varphi(\vec{r}) = \frac{\kappa}{2 \pi \varepsilon_0} \ln \left(1 + \frac{\vec{a}\vec{r}}{r^2} \right) \simeq \frac{\kappa (\vec{a}\vec{r}) }{2 \pi \varepsilon_0 r^2}=\frac{\vec{p} \vec{r} }{2 \pi \varepsilon_0 r^2} $$Here использовано  $\vec p=\kappa\vec a$, and the constant is equal to 0, since at infinity this expression tends to 0.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varphi(\vec{r})=\dfrac{ \vec r \vec p}{2\pi\varepsilon_0 r^2}\]
+\end{solcard}
+
+\begin{solcard}{A3}{Differentiating the expression obtained in the previous paragraph, find the electric field $\vec{E}(\vec{r})$ in the entire space. Express your answer using $\varepsilon_0$, $\vec p$, $\vec{r}$.}{0.60}
+
+Let us make the substitution $\vec{r} \to \vec{r} + \vec{\delta}$ in the expression for the potential and find the change in the potential to first order in $\vec{\delta}$. We use the relations for the distance $$ \Delta \varphi = (\vec{r} + \vec{\delta})^2 \simeq r^2 + 2 (\vec{r} \vec{\delta}), \quad \frac{1}{(\vec{r} + \vec{\delta})^2}\simeq \frac{1}{r^2} - \frac{2 \vec{r} \vec{\delta}}{r^4}. $$Then for сности potentialа we get $$ \varphi(\vec{r} + \vec{\delta}) - \varphi(\vec{r}) \simeq \frac{\vec{p} (\vec{r} + \vec{\delta})}{2 \pi \varepsilon_0 (\vec{r}  + \vec{\delta})^2} - \dfrac{ \vec r \vec p}{2\pi\varepsilon_0 r^2} = \frac{\vec{p}}{2\pi \varepsilon_0} \cdot\left( (\vec{r} + \vec{\delta} )\left(\frac{1}{r^2}  - \frac{2 \vec{r} \vec{\delta}}{r^4}\right) - \vec{r}{r^2} \right)=$$$$ = \frac{\vec{p}}{2 \pi \varepsilon_0}\left(\frac{\vec{\delta}}{r^2} - \frac{2(\vec{r} \vec{\delta})\vec{r}}{r^4} \right) = - \frac{2(\vec{p} \vec{r})(\vec{r} \vec{\delta}) - (\vec{p}{\vec{\delta}})}{2 \pi \varepsilon r^4}. $$Taking into account оlimitения градиента $$ \Delta \varphi = \vec{\nabla} \varphi \cdot \vec{\delta}, \quad \vec{\nabla} \varphi = - \frac{2(\vec{p} \vec{r})\vec{r}  -\vec{p} }{2 \pi \varepsilon_0 r^4}. $$Then electric field $$ \vec{E}(\vec{r}) = - \vec{\nabla} \varphi (\vec{r}) =   \frac{2(\vec{p} \vec{r})\vec{r}  -\vec{p} }{2 \pi \varepsilon_0 r^4}. $$ Производную можно найти and напрямую. Введем единичные vectorы: $\vec e_r$ – сонаправленный с radius-vectorом $\vec r$, $\vec e_{\theta}$ – перпендикулярный ему and дипольным нитям, сонаправлен с положительным направлением отсчета $\theta$. Let us write expression for электрического поля: ⟦0⟧Let us express $\vec e_{\theta}$: \[\dfrac{\vec p}{p}=\vec e_r\dfrac{(\vec p,\vec r)}{pr}-\vec e_{\theta}\sin\theta\]Write down the answer:
+
+
+This answer can also be obtained by considering the fields of two charged threads. To do this, let’s find the field of 1 thread in vector form: \[\vec{E} = \cfrac{\kappa}{2\pi \varepsilon_0}\cfrac{\vec{r}}{r^2}\]And imagine the dipole field as a superposition of the fields of two threads: \[\vec{E}(\vec{r}) = \cfrac{\kappa}{2\pi\varepsilon_0}\left(\cfrac{\vec{r}_+}{r_+^2} - \cfrac{\vec{r}_-}{r_-^2}\right) = \cfrac{\kappa}{2\pi\varepsilon_0}\left(\cfrac{\vec{r}}{r^2} - \cfrac{\vec{r} + \vec{a}}{(\vec{r} + \vec{a})^2}\right)=\cfrac{\kappa}{2\pi\varepsilon_0}\left(\cfrac{\vec{r}}{r^2} - \cfrac{\vec{r} + \vec{a}}{r^2 + a^2+2(\vec{r}, \vec{a})}\right)\approx\\ \approx\cfrac{\kappa}{2\pi\varepsilon_0r^2}\left(\vec{r} - (\vec{r} + \vec{a})\left(1 - 2\cfrac{(\vec{r},\vec{a})}{r^2}\right)\right) \approx \cfrac{\kappa}{2\pi\varepsilon_0r^2}\left( 2\cfrac{\vec{r}(\vec{r},\vec{a})}{r^2} - \vec{a}\right) = \\ = \cfrac{1}{2\pi\varepsilon_0r^2}\left( 2\cfrac{\vec{r}(\vec{r},\vec{p})}{r^2} - \vec{p}\right)\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\vec E(r)=\cfrac{1}{2\pi\varepsilon_0r^2}\left( 2\cfrac{\vec{r}(\vec{r}\vec{p})}{r^2} - \vec{p}\right)\]
+\end{solcard}
+
+\begin{solcard}{A4}{Show that the field distribution in space outside the cylinder is equal to the superposition of a uniform external field $\vec E_0$ and a dipole line field with a linear dipole moment density $\vec p$. Use the expression for the dipole line field in vacuum. Identify $\vec p$. Express your answer using $\varepsilon_1$, $\varepsilon_2$, $\vec{E}_0$, $\varepsilon_0$, $R$. The value $\vec{p}$ you found includes both the dipole moment of the cylinder and the dipole moment of the polarization charges of the medium.}{0.60}
+
+Let us write down the conditions for the components of the electric field at the medium-cylinder boundary: \[\begin{cases}E_{\tau2}=E_{\tau2}\\ \varepsilon_1E_{n1}=\varepsilon_2E_{n2}\end{cases}\] Assuming that the field outside is a superposition of the external homogeneous field and the dipole field, and inside it is homogeneous and codirectional with $\vec E_0$, we rewrite the previous system of equations: \[\begin{cases}E_{in}\sin\theta=E_0\sin\theta-\dfrac{p\sin\theta}{2\pi \varepsilon_0R^2}\\\varepsilon _1E_{in}\cos\theta=\varepsilon _2\left(E_0\cos\theta+\dfrac{p\cos\theta}{2\pi \varepsilon_0R^2}\right),\end{cases}\]For $\vec p=2\pi\varepsilon_0\vec E_0R^2\cfrac{\varepsilon_1-\varepsilon_2}{\varepsilon_1+\varepsilon_2}$ the conditions written above are satisfied at each point of the cylinder, which means that according to the theorem uniqueness, this solution is correct.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\vec p=2\pi\varepsilon_0\vec E_0R^2\cfrac{\varepsilon_1-\varepsilon_2}{\varepsilon_1+\varepsilon_2}\]
+\end{solcard}
+
+\begin{solcard}{A5}{Determine the dependence of the electric field $\vec{E}(\vec{r})$ throughout space. Express your answer using $\varepsilon_1$, $\varepsilon_2$, $\vec{E}_0$, $\vec{r}$.}{0.30}
+
+Let us substitute the found value $\vec p$ and obtain the field distribution throughout the entire space.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Inside the cylinder ($r \leq R$): $$\vec{E}_1 = \frac{2\varepsilon_2}{\varepsilon_1 + \varepsilon_2} \vec{E}_0;$$снаружи cylinderа ($r > R$): \[\vec{E} = \vec{E}_0 + \frac{\varepsilon_1 - \varepsilon_2}{\varepsilon_1 + \varepsilon_2} R^2\left(\frac{2(\vec{r}\vec{E}_0) \vec{r}}{r^4}-\dfrac{ \vec{E}_0}{r^2}\right).\]
+\end{solcard}
+
+\begin{solcard}{A6}{Let the conductivity and permittivity of the cylinder be $\lambda_1$, $\varepsilon_1$, and that of the environment $\lambda_2$, $\varepsilon_2$. Electric field at a large distance from the cylinder $\vec{E}_0$. The current distribution is completely established. It is known that the field outside the cylinder is still equal to the superposition of the external field and the dipole field, and the field inside the cylinder is uniform. However, now a distribution of free (not associated with polarization) charges with a density of $\sigma_f(\theta)$ appears on the surface of the cylinder. Determine the volume current density $\vec{j_1}$ inside the cylinder and the surface charge density $\sigma_f (\theta)$ as a function of the angle $\theta$. Direction $\vec{E}_0$ corresponds to $\theta = 0$. Note: in a conducting medium, the volumetric current density is related to the electric field by the relation $\vec{j} =\lambda \vec{E}$, where $\lambda$ is the conductivity of the medium. Note: boundary conditions for the normal components of the electric field can be obtained by considering the normal components of the current density at the boundary of the cylinder and the medium. There are no surface currents flowing through the cylinder.}{1.00}
+
+Note: in a conducting medium, the volumetric current density is related to the electric field by the relation $\vec{j} =\lambda \vec{E}$, where $\lambda$ is the conductivity of the medium.
+
+
+Note: boundary conditions for the normal components of the electric field can be obtained by considering the normal components of the current density at the boundary of the cylinder and the medium. There are no surface currents flowing through the cylinder.
+
+
+Let's write down new boundary conditions taking into account currents and charges Condition for currents: \[\lambda_1 E_{n1} = j_{n1} = j_{n2} = \lambda_2 E_{n2}\]Condition for tangential field components: \[E_{\tau1} = E_{\tau2}\]Upon closer examination, the boundary section can be considered flat, and the charge on the boundary is constant, then writing the Gauss theorem for the electrostatic induction vector we obtain: \[-\varepsilon_0\varepsilon_1E_{n1} + \varepsilon_0\varepsilon_2E_{n2} = \sigma_f\]Substituting the field shape into the first two conditions, we obtain the system: \[\begin{cases}E_{in}\sin\theta=E_0\sin\theta-\dfrac{p\sin\theta}{2\pi \varepsilon_0R^2}\\\varepsilon _1E_{in}\cos\theta=\varepsilon _2\left(E_0\cos\theta+\dfrac{p\cos\theta}{2\pi \varepsilon_0R^2}\right),\end{cases}\]which is similar to A4: \[\vec p=2\pi\varepsilon_0\vec E_0R^2\cfrac{\lambda_1-\lambda_2}{\lambda_1+\lambda_2}\]\[\vec{E}_{\text{in}} = \frac{2\lambda_2}{\lambda_1 + \lambda_2} \vec{E}_0\]Substitute the expressions into the boundary condition at $\sigma_f$: \[\sigma_f = -\varepsilon_0\varepsilon _1\frac{2\lambda_2}{\lambda_1 + \lambda_2} E_0\cos\theta+\varepsilon_0\varepsilon _2\left(E_0+E_0\cfrac{\lambda_1-\lambda_2}{\lambda_1+\lambda_2}\right)\cos\theta\]We get the answer:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\sigma_f = 2\varepsilon_0E_0\cfrac{\varepsilon_2\lambda_1 - \varepsilon_1\lambda_2}{\lambda_1 + \lambda_2}\cos\theta\]\[\vec{j_1} = \frac{2\lambda_1\lambda_2}{\lambda_1 + \lambda_2} \vec{E}_0\]
+\end{solcard}
+
+\begin{solcard}{A7}{Now let the cylinder be ideally conducting, and the conductivity of the surrounding medium is $\lambda_2$, its dielectric constant $\varepsilon_2$. There is no external electric field. The initial charge of the cylinder is $q_0$. Find the dependence of the charge of the cylinder $q(t)$ on time. Obtain an expression for the time $\tau_2$ during which the charge of the cylinder is reduced by a factor of 2. Express your answers using $\lambda_2$, $\varepsilon_0$, $\varepsilon_2$.}{0.70}
+
+Because $\vec{j} = \lambda_2\vec{E}$, the total current flowing from the cylinder is $I = \lambda_2\Phi$. We get: \[-\dot{q} = \lambda_2\cfrac{q}{\varepsilon_0\varepsilon_2} \Rightarrow q = q_0e^{-\frac{\lambda_2t}{\varepsilon_0\varepsilon_2}}\]We get the answer:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\tau_2 = \cfrac{\varepsilon_0\varepsilon_2}{\lambda_2}\ln(2)$$
+\end{solcard}
+
+\begin{solcard}{B1}{Write down the relationship between the tangential components of the electric fields at the interface between the medium and the cylinder.}{0.10}
+
+From the condition of electric field potential:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[E_{\tau1} = E_{\tau2}\]
+\end{solcard}
+
+\begin{solcard}{B2}{When the cylinder moves, free charges on the surface of the cylinder rotate with it. Therefore, a surface current density $i (\theta)$ appears on the surface of the cylinder. Express it in terms of $\omega$, $R$ and the density of free charges.  The value $i(\theta)$ is considered positive if the current is directed in the direction of increasing $\theta$.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[i(\theta) = R\omega\sigma_f(\theta)\]
+\end{solcard}
+
+\begin{solcard}{B3}{Let us consider a small section of the cylinder surface corresponding to the interval of angles $(\theta_0, \theta_0 + d\theta)$ of area $dS = RL d\theta$. Charge flows into it through the boundaries $\theta = \theta_0$ due to $i(\theta_0)$, and current flows through the boundary at $\theta = \theta_0 + d\theta$ due to $i(\theta_0 + d\theta)$. Also, a normal current with density $j_{1n}$ flows into it and a normal current with density $j_{2n}$ flows out. In steady state, the total charge of the region under consideration does not change. Write down the following relationship between the currents $i(\theta_0)$, $i(\theta_0 + d\theta)$, $j_{1n}$, $j_{2n}$ from the law of conservation of charge. The answer may also include $R$ and $d\theta$.}{0.70}
+
+From the law of conservation of charge we obtain the relation: \[Li(\theta_0) - Li(\theta_0 + d\theta) + dSj_{1n} -dSj_{2n} = 0\]By opening $dS$, we obtain:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[i(\theta_0) - i(\theta_0 + d\theta) + R(j_{1n} -j_{2n})d\theta = 0\]
+\end{solcard}
+
+\begin{solcard}{B4}{In the relation from the previous paragraph, substitute expressions for normal currents through the normal components of the electric field and surface currents through the charge density. Get the relationship between $E_{1n}$, $E_{2n}$, $\omega$, $\lambda_1$, $\lambda_2$, $\partial \sigma_f/\partial \theta$.}{0.50}
+
+Directing $d\theta$ to zero, we get: \[-L\dfrac{\partial i}{\partial \theta}(\theta_0) + RL(j_{1n} -j_{2n}) = 0\] We derive the answer by expanding $i$ and taking into account that $\vec j=\lambda \vec E$, we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[-\omega\dfrac{\partial \sigma_f}{\partial \theta}+ \lambda_1E_{1n} - \lambda_2E_{2n} = 0\]
+\end{solcard}
+
+\begin{solcard}{B5}{Express the density of free charges $\sigma_f$ in terms of the electric field components near the boundary. Using the results of point B4, obtain from here the relationship only between the electric field components $E_{1n}$, $E_{2n}$ and their derivatives with respect to $\theta$. The answer may also include $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$, $\omega$.}{0.40}
+
+From the previous paragraph: \[-\omega\dfrac{\partial \sigma_f}{\partial \theta}+ \lambda_1E_{1n} - \lambda_2E_{2n} = 0\]Let's write the boundary condition on the electrostatic induction vector: \[-\varepsilon_0\varepsilon_1E_{n1} + \varepsilon_0\varepsilon_2E_{n2} = \sigma_f\]differentiate it and substitute $\dfrac{\partial \sigma_f}{\partial \theta}$:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\left(\lambda_1+\omega\varepsilon_1\varepsilon_0\dfrac{\partial}{\partial \theta}\right)E_{1n}=\left(\lambda_2+\omega\varepsilon_2\varepsilon_0\dfrac{\partial}{\partial \theta}\right)E_{2n}\]
+\end{solcard}
+
+\begin{solcard}{B6}{Show that expressions for complex permeabilities can be written in the form \[ \varepsilon_1^* = \varepsilon_1 + \frac{i \lambda_1}{\varepsilon_0 \omega}, \quad  \varepsilon_2^* = \varepsilon_2 + \frac{i \lambda_2}{\varepsilon_0 \omega}.\] These formulas can then be used without proof. Note: Since the cylinder rotates with angular velocity $\omega$, $d\theta/dt = + \omega$ and the angular derivative $\theta$ can be expressed in terms of the time derivative in the rotating frame.}{0.50}
+
+\[ \varepsilon_1^* = \varepsilon_1 + \frac{i \lambda_1}{\varepsilon_0 \omega}, \quad  \varepsilon_2^* = \varepsilon_2 + \frac{i \lambda_2}{\varepsilon_0 \omega}.\]
+
+
+Further, these formulas can be used without proof.
+
+
+Note: Since the cylinder rotates with angular velocity $\omega$, $d\theta/dt = + \omega$ and the angular derivative $\theta$ can be expressed in terms of the time derivative in the rotating frame.
+
+
+The field in the reference frame of the cylinder rotates with angular velocity $-\omega$. Therefore $\dfrac{\partial}{\partial \theta}=\dfrac{1}{\omega}\dfrac{\partial}{\partial t}=\dfrac{-i\omega}{\omega}=-i$. Boundary condition: \[\left(\lambda_1-i\omega\varepsilon_1\varepsilon_0\right)E_{1n}=\left(\lambda_2-i\omega\varepsilon_2\varepsilon_0\right)E_{2n}\]From here:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varepsilon_1^*=\varepsilon_1+\dfrac{i\lambda_1}{\omega\varepsilon_0}\]\[\varepsilon_2^*=\varepsilon_2+\dfrac{i\lambda_2}{\omega\varepsilon_0}\]
+\end{solcard}
+
+\begin{solcard}{B7}{Determine the complex amplitude of the linear density of the dipole moment of the cylinder $\vec p ^*$. Express your answer using $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$, $\omega$, $\varepsilon_0$, $R$, $\vec E_0^*$.}{0.50}
+
+Similar to the electrostatic case from Part A, we can write the answer by substituting complex dielectric constants. Hence we have: \[\vec p^*=2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\varepsilon_1^*-\varepsilon_2^*}{\varepsilon_1^*+\varepsilon_2^*}=2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\varepsilon_1-\varepsilon_2+\dfrac{i(\lambda_1-\lambda_2)}{\omega\varepsilon_0}}{\varepsilon_1+\varepsilon_2+\dfrac{i(\lambda_1+\lambda_2)}{\omega\varepsilon_0}}\]
+
+
+\[\vec p^*=2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\varepsilon_1^*-\varepsilon_2^*}{\varepsilon_1^*+\varepsilon_2^*}=2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\varepsilon_1-\varepsilon_2+\dfrac{i(\lambda_1-\lambda_2)}{\omega\varepsilon_0}}{\varepsilon_1+\varepsilon_2+\dfrac{i(\lambda_1+\lambda_2)}{\omega\varepsilon_0}}\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\vec p^*=2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\varepsilon_1-\varepsilon_2+\dfrac{i(\lambda_1-\lambda_2)}{\omega\varepsilon_0}}{\varepsilon_1+\varepsilon_2+\dfrac{i(\lambda_1+\lambda_2)}{\omega\varepsilon_0}}\]
+\end{solcard}
+
+\begin{solcard}{B8}{Determine the projections on the $x$ and $y$ axes of the $\vec p$ vector in the laboratory frame.}{0.80}
+
+Let's express $p_x$: \[p_x=\operatorname{Re}{(\vec p^*,\vec e_x)}\]The expression for $p_y$ is similar: \[p_y=\operatorname{Re}{(\vec p^*,\vec e_y)}\]We use that $\vec{E}_0^* =E_0(\vec e_x-i\vec e_y)$. Let's transform the expression from the previous paragraph: \[\vec p^*=2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\left(\varepsilon_1-\varepsilon_2+\dfrac{i(\lambda_1-\lambda_2)}{\omega\varepsilon_0}\right)\left(\varepsilon_1+\varepsilon_2-\dfrac{i(\lambda_1+\lambda_2)}{\omega\varepsilon_0}\right)}{(\varepsilon_1+\varepsilon_2)^2+\dfrac{(\lambda_1+\lambda_2)^2 }{\omega^2\varepsilon_0^2}} =\\= 2\pi\varepsilon_0\vec{E}_0^*R^2\dfrac{\varepsilon_1^2 - \varepsilon_2^2 + \dfrac{(\lambda_1^2-\lambda_2^2)}{\omega^2\varepsilon_0^2} + 2i\dfrac{\lambda_1\varepsilon_2 -\lambda_2\varepsilon_1}{\omega\varepsilon_0}}{(\varepsilon_1+\varepsilon_2)^2+\dfrac{(\lambda_1+\lambda_2)^2}{\omega^2\varepsilon_0^2}}\] and get the answers:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[p_x=2\pi R^2\varepsilon_0E_0\dfrac{\omega^2\varepsilon_0^2(\varepsilon_1^2-\varepsilon_2^2)+\lambda_1^2-\lambda_2^2 }{(\sigma_1 + \sigma_2)^2 + (\omega \varepsilon_0)^2 (\varepsilon_1 + \varepsilon_2)^2},\]\[p_y=-4\pi\omega R^2\varepsilon_0^2E_0\dfrac{(\varepsilon_1\lambda_2-\varepsilon_2\lambda_1) }{(\lambda_1 + \lambda_2)^2 + (\omega \varepsilon_0)^2 (\varepsilon_1 + \varepsilon_2)^2}\]
+\end{solcard}
+
+\begin{solcard}{B9}{Determine the projection of the moment of force $M_{E}$ acting on the cylinder (with the polarization charges of the medium surrounding it) from the external electric field onto the axis $z$. Express your answer using $E_0$, $\varepsilon_0$, $\omega$, $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$, $R$, $L$.}{0.60}
+
+The total effective dipole moment of the cylinder is $\vec pL$, then: \[\vec M=[\vec p,\vec E_0]L\] Let us express $M_z$: \[M_z=-p_yE_0L=4\pi\omega LR^2\varepsilon_0^2E_0^2\dfrac{(\varepsilon_1\lambda_2-\varepsilon_2\lambda_1) }{(\lambda_1 + \lambda_2)^2 + (\omega \varepsilon_0)^2 (\varepsilon_1 + \varepsilon_2)^2}\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[M_z=4\pi\omega LR^2\varepsilon_0^2E_0^2\dfrac{(\varepsilon_1\lambda_2-\varepsilon_2\lambda_1) }{(\lambda_1 + \lambda_2)^2 + (\omega \varepsilon_0)^2 (\varepsilon_1 + \varepsilon_2)^2}\]
+\end{solcard}
+
+\begin{solcard}{B10}{At a certain relationship between the system parameters, the torque obtained above causes a further increase in the angular velocity of the cylinder. Indicate the relationship between the parameters at which this is possible.}{0.40}
+
+Rotation is possible at $M_z>0$, this corresponds to the relation: \[\varepsilon_2/\lambda_2<\varepsilon_1/\lambda_1\]We note that this expression is not accidental: its physical meaning: the characteristic discharge time of the medium is less than the characteristic discharge time of the cylinder, therefore the phenomenon of delayed repolarization may occur, which is the cause of rotation.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varepsilon_2/\lambda_2<\varepsilon_1/\lambda_1\]
+\end{solcard}
+
+\begin{solcard}{C1}{The moment of forces can be written in the form $M_\eta = -\alpha \eta^a \omega^b R^c L^d$, where $\alpha$ is a dimensionless constant. Using the dimensional method and physical considerations, determine the exponents $a$, $b$, $c$, $d$.}{0.70}
+
+There is no movement of the liquid along the $z$ axis, which means the movement of the fluid elements does not depend in any way on $z$ from symmetry. The area of ​​the lateral surface of the cylinder is proportional to $L$, the distance from the point of application of force to the axis does not depend on $L$, therefore:
+
+
+To find the remaining powers, we use the method of dimensions: \[Н\cdot м=(Н\cdot м^{-2}\cdot с)^a\cdot c^{-b}\cdot м^{c}\cdot м\]Equating the coefficients before Newtons, we obtain:
+
+
+Equating the coefficients before seconds, we get:
+
+
+Equating the coefficients in front of meters, we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[d=1\]
+\end{solcard}
+
+\begin{solcard}{C2}{Find the moment of viscous friction forces $M$ acting on the outer side of a cylindrical layer of liquid of radius $r$, where $r> R$. Express your answer using $\eta$, $r$, $L$, $\frac{\partial \omega}{\partial r}$.}{0.30}
+
+Moment of force acting on a small cylindrical layer of liquid: \[M =\tau_{\theta z}\cdot S\cdot r= 2\pi \eta r^3L \frac{\partial \omega}{\partial r}\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[M =\tau_{\theta z}\cdot S\cdot r= 2\pi \eta r^3L \frac{\partial \omega}{\partial r}\]
+\end{solcard}
+
+\begin{solcard}{C3}{Determine the coefficient $\alpha$ in the formula for the moment of force $M_{\eta}$.}{1.20}
+
+Since each fluid element rotates uniformly, the moment acting on the outer side of the fluid layer will be equal to the moment with which this fluid layer acts on the layer below it. That is, $M = M_\eta = \operatorname{const}$. Let's separate the variables and integrate this equation: \[\cfrac{M_\eta}{2\pi \eta L} \cfrac{dr}{r^3}=  d\omega\]Since $\omega(r\to\infty)=0$, and $\omega(R) = \omega_0$, then: \[\cfrac{M_\eta}{2\pi \eta L} \int^{R}_{\infty}\cfrac{dr}{r^3}=  \omega_0\]Write the final expression:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[M_{\eta}=-4\pi\omega_0\eta LR^2\]
+\end{solcard}
+
+\begin{solcard}{C4}{Let us give the cylinder a small angular velocity $\delta \omega$. If the external electric field is greater than a certain critical value $E_0 > E_{cr}$, the angular velocity will increase. Express the critical field $E_{cr}$ in terms of $\varepsilon_1$, $\varepsilon_2$, $\varepsilon_0$, $\eta$, $\lambda_1$, $\lambda_2$, $\alpha$.}{0.30}
+
+The minimum condition is $\omega_0=0$. Neglecting the term with $\omega^2$ in the denominator, we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[E_{cr}=\sqrt{\dfrac{\alpha\eta}{4\pi\varepsilon_0^2}\dfrac{(\lambda_1+\lambda_2)^2}{(\varepsilon_1\lambda_2-\varepsilon_2\lambda_1)}}\]
+\end{solcard}
+
+\begin{solcard}{C5}{Let $E_0 > E_{cr}$. Determine the steady-state angular velocity of the cylinder $\omega_0$. Express your answer using $E_0$, $E_{cr}$, $\varepsilon_0$, $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$.}{0.50}
+
+Condition for setting the speed: \[M_z+M_{\eta}=0\]From here we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\omega_0=\dfrac{\sqrt{\dfrac{(\varepsilon_1\lambda_2-\varepsilon_2\lambda_1)\varepsilon_0^2E_0^2}{\eta}-(\lambda_1+\lambda_2)^2}}{\varepsilon_0(\varepsilon_1+\varepsilon_2)}\]
+\end{solcard}
+
+\end{document}

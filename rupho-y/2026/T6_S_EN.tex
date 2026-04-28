@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Fiber accelerometer --- Solution}}
+\author{\normalsize Y26 (2026) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Express the change in diameter of the winding region $\delta D$ in terms of $D$, $h$ and $\delta h$.}{0.20}
+
+Let's express the volume of rubber: \[V=\pi D^2 h\]Let's differentiate the expression: \[2D \, \delta D \,h+D^2 \, \delta h=0\]From here:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\delta D=-\dfrac{D}{2h}\delta h\]
+\end{solcard}
+
+\begin{solcard}{A2}{The change in total length of wire $\delta L$ is proportional to $\delta h$ \[\delta L = \Lambda \delta h.\] Express $\Lambda$ in terms of $N$, $D$, $h$. The number of revolutions $N$ is strictly fixed.}{0.10}
+
+\[\delta L=\pi N\delta D=-\dfrac{\pi N D}{2h}\delta h\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\Lambda=-\dfrac{\pi N D}{2h}\]
+\end{solcard}
+
+\begin{solcard}{A3}{Find the strain energy of the wire $W$. Express your answer using $N$, $D$, $h$, $d$, $E$ and $\delta h$}{0.60}
+
+The volumetric strain energy density is expressed as: \[w=\dfrac{E\delta L^2}{2 L^2}\]Wire volume: \[V=\dfrac{\pi^2 d^2 ND}{4}\]Let us express the answer in terms of the quantities specified in the condition:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[W=\dfrac{E\pi^2 ND d^2\delta h^2}{32h^2}\]
+\end{solcard}
+
+\begin{solcard}{A4}{Let at some moment of time the body is displaced ($y \neq 0$) and the load is not in equilibrium $(x \neq y)$. Obtain the equation of motion of the load as \[\ddot{x} + \omega_0^2 x = A y.\] Express $\omega_0$ and $A$ in terms of $M$, $h$, $N$, $D$, $d$ and $E$.}{0.50}
+
+The total energy is equal to: \[2W=\dfrac{E\pi^2 ND d^2(x-y)^2}{16h^2}\]Let us express the force acting on the load: \[F=\dfrac{\partial (2W)}{\partial(\delta h)}=M\ddot x\]The final equation: \[\ddot x+\dfrac{E\pi^2 ND d^2 x}{8Mh^2}=\dfrac{E\pi^2 ND d^2 y}{8Mh^2}\]From here:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\omega_0=\sqrt{\dfrac{E\pi^2 ND d^2 }{8Mh^2}}\]\[A={\dfrac{E\pi^2 ND d^2 }{8Mh^2}}\]
+\end{solcard}
+
+\begin{solcard}{A5}{Express $L_0$ in terms of $y_0$, $\omega/\omega_0$, $\Lambda$ and $\zeta$.}{0.50}
+
+Let's use the method of complex amplitudes: \[x_0(-\omega^2+2\zeta i\omega\omega_0 + \omega_0^2)=\omega_0^2 y_0\]We express $h_0=x_0-y_0$: \[h_0=y_0\left(-1+\dfrac{\omega_0^2}{\omega_0^2-\omega^2+2\zeta i\omega\omega_0}\right)\]Taking into account that $L_0=\Lambda h_0$, we write the answer:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[L_0=\Lambda y_0\left(-1+\dfrac{1}{1-\frac{\omega^2}{\omega_0^2}+2i\zeta i\frac{\omega}{\omega_0}}\right) = \Lambda y_0 \frac{-\frac{\omega^2}{\omega_0^2} + 2 i \zeta \frac{\omega}{\omega_0}}{1-\frac{\omega^2}{\omega_0^2}+2i\zeta \frac{\omega}{\omega_0}}\]
+\end{solcard}
+
+\begin{solcard}{A6}{Indicate the correspondence between frequency ranges and sensor operating modes. Express $K_s$ and $K_a$ in terms of $M$, $h$, $N$, $D$, $d$ and $E$.}{1.00}
+
+Let us consider the behavior of the load in the low-frequency limit. Let us consider one harmonic of oscillations $y$. Let us simplify the expression for $L_0$ in the limit $\zeta\omega_0\ll\omega\ll\omega_0$: \[L_0\approx \dfrac{\Lambda\omega^2 y_0}{\omega_0^2},\] which corresponds to $L=-\dfrac{\Lambda\ddot y}{\omega_0^2}$. When adding several low-frequency harmonics, this relationship still holds. Let us express $K_a$: \[K_a=-\dfrac{\omega_0^2}{\Lambda}={\dfrac{E\pi d^2 }{4Mh}}\]Now consider the behavior of the load in the high-frequency limit. Let us similarly consider one harmonic of oscillations $y$. Let us simplify the expression for $L_0$ in the limit $\omega\gg\omega_0$: \[L_0\approx-\Lambda y_0\]When adding several high-frequency harmonics, this relation is still satisfied. In this case $K_s=-\dfrac{1}{\Lambda}=\dfrac{2h}{N\pi D}$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} With $\zeta\omega_0\ll\omega\ll\omega_0$ the sensor works as an accelerometer, and with $\omega\gg\omega_0$ – as a seismograph. \[K_s=\dfrac{2h}{N\pi D}\]\[K_a={\dfrac{E\pi d^2 }{4Mh}}\]
+\end{solcard}
+
+\begin{solcard}{A7}{Calculate the values ​​of $K_a$ and $\omega_0$.}{0.40}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[K_a=3.44\cdot 10^4~\mathrm{s}^{-2}\]\[\omega_0=2750~\mathrm{rad}/с\]
+\end{solcard}
+
+\begin{solcard}{B1}{Express the intensity of light $I$ incident on the photodiode in terms of $\delta L$, $I_0$, $\lambda$, $n$, $r$ and $\varphi_0$. Here, $\varphi_0$ is the incident phase difference between the light passing through the fiber wound on the right and left supports, respectively, at $\delta L=0$. Note: You don't have to follow the $\varphi_0$ sign. In other words, solutions differing by the change $\varphi_0 \to -\varphi_0$ are considered equivalent.}{1.00}
+
+Here, $\varphi_0$ is the incident phase difference between the light passing through the fiber wound on the right and left supports, respectively, at $\delta L=0$.
+
+
+Note. You don't have to watch the $\varphi_0$ sign. In other words, solutions differing by the change $\varphi_0 \to -\varphi_0$ are considered equivalent.
+
+
+After passing through the interferometer, waves with complex amplitudes \[\frac{ri}{\sqrt{2}} E_0 e^{2ikn \, \delta L + i \varphi_0}\quad\text{и} \quad \frac{r}{\sqrt{2}} E_0 e^{-2ikn \, \delta L},\] arrive at the splitter, so the total is \[ \begin{split} E = \frac{ri}{2} E_0e^{2ikn \, \delta L + i \varphi_0} - \frac{ri}{2}E_0 e^{-2ikn \, \delta L} = -\frac{riE_0}{2}\left( e^{2 i k n \, \delta L+ i \varphi_0 + i \pi} + e^{-2ikn \, \delta L}\right) = \\ =  -\frac{riE_0}{2}\left( e^{2 i k n \, \delta L+ i \varphi_0/2 + i \pi/2} + e^{-2ikn \, \delta L - i \varphi_0/2 - i \pi/2}\right) e^{i \varphi_0/2 + i \pi/2} = -ri E_0 \cos\left(  \frac{4 \pi}{\lambda}n \delta L + \frac{\varphi_0}{2} + \frac{\pi}{2} \right) \end{split} \] \[I = EE^* = r^2 I_0 \sin^2 \left( \frac{4 \pi}{\lambda} n \delta L + \frac{\varphi_0}{2} \right)\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[I = r^2 I_0 \sin^2 \left( \frac{4 \pi}{\lambda} n \delta L + \frac{\varphi_0}{2} \right)\]
+\end{solcard}
+
+\begin{solcard}{B2}{Determine the numerical values ​​of $Y$ and $f$.}{1.50}
+
+The oscillation period of the picture is $T=63~\mathrm{ms}-13~\mathrm{ms}=50~\mathrm{ms}$, hence:
+
+
+Half of the oscillation period corresponds to a change in $\ddot{y}$ from $-(2\pi f)^2 Y$ to $(2\pi f)^2 Y$.
+
+
+Let us assume that the argument $x$ of the function $\sin^2 (x)$, which describes the light intensity at point $A$, is in the interval $(0, \pi/2)$. Then at the point with practically zero current to the left of $B$ it is equal to $7 \pi$. The amplitude of current fluctuations is $I_o = 14.2~\mathrm{\mu{}A}$. Current values ​​at points $A$ and $B$: $I_A=9.7~\mathrm{\mu{}A}$, $I_B=3.2~\mathrm{\mu{}A}$. That means $x_B - x_A = 7 \pi +  \arcsin(\sqrt{I_B/I_o})  - \arcsin(\sqrt{I_A/I_o})=21.5$. As a result, \[ x_B - x_A  =\frac{4\pi}{\lambda}(\delta L_B - \delta L_A) = \frac{4 \pi n}{\lambda} \cdot 2 \frac{(2\pi f)^2 Y}{K_a}  \quad \Rightarrow \quad Y = (x_B - x_A) \frac{\lambda K_a }{32 \pi^3 n f^2}=1.46~\mathrm{\mu{}m}\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[f=20~\mathrm{Hz}\]
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B3}{Using the theorem about the uniform distribution of energy over degrees of freedom, write down an expression for $\langle \delta L^2 \rangle$—fluctuations $\delta L$ at room temperature. Express your answer in terms of Boltzmann's constant $k_B$, $T$, $E$, $D$, $N$ and $d$.}{0.30}
+
+The described system has one degree of freedom, but the deformation energy at the two supports adds up, therefore \[2 \langle W \rangle = \frac{1}{2} k_B T \quad \Rightarrow \quad \langle \delta h^2 \rangle = k_B T \frac{8h^2}{E \pi^2 N Dd^2} \]Taking into account that $\langle \delta L^2 \rangle = \Lambda^2 \langle \delta h^2 \rangle$, we obtain \[\langle \delta L^2 \rangle = 2k_B T \frac{ND}{E  d^2}  \]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\langle \delta L^2 \rangle = 2k_B T \frac{ND}{E  d^2}  \]
+\end{solcard}
+
+\begin{solcard}{B4}{If the temperature of this section of the optical fiber differs from room temperature by a small amount $\Delta T_i$, then when light passes through it, phase $\varphi_i \neq \varphi_{i,0}$ occurs. Express $\Delta \varphi_i = \varphi_i - \varphi_{i,0}$ in terms of $\Delta T_i$, $\Delta L_i$, $\alpha$, $\beta$, $n$ and $\lambda$.}{0.60}
+
+\[ \Delta \varphi_i = \frac{2\pi}{\lambda} (n+\beta \Delta T_i) \Delta L_i (1 + \alpha \Delta T_i) - \frac{2\pi}{\lambda}n \Delta L = \frac{2\pi}{\lambda}(n \alpha + \beta) \Delta L_i \Delta T_i\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ \Delta \varphi_i = \frac{2\pi}{\lambda}(n \alpha + \beta) \Delta L_i \Delta T_i\]
+\end{solcard}
+
+\begin{solcard}{B5}{Express $\langle \Delta \Phi^2 \rangle$ in terms of $\langle \Delta T^2 \rangle$, $\Delta L$, $L$, $n$, $\alpha$, $\beta$ and $\lambda$.}{0.70}
+
+Let's calculate $\langle \Delta \Phi^2 \rangle$ directly: \[ \langle \Delta \Phi^2 \rangle = \left\langle \left( \sum\Delta \varphi_i \right)^2 \right\rangle = \left(\frac{2 \pi}{\lambda} (n \alpha + \beta) \Delta L \right)^2 \left\langle \left(\sum \Delta T_i\right)^2 \right\rangle \]Using the properties $\Delta T_i$, \[ \left\langle \left(\sum \Delta T_i\right)^2 \right\rangle = \left\langle \sum \Delta T_i^2 \right\rangle + \left\langle \sum \Delta T_i \Delta T_j \right\rangle = p \langle \Delta T^2 \rangle = \frac{L}{\Delta L} \langle \Delta T^2 \rangle.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ \langle \Delta \Phi^2 \rangle = \left( \frac{2\pi}{\lambda}(n \alpha + \beta) \right)^2 L \Delta L \langle \Delta T^2 \rangle\]
+\end{solcard}
+
+\begin{solcard}{B6}{Express $\langle \Delta \Psi^2 \rangle$ in terms of $\langle \Delta \Phi ^2 \rangle$.}{1.00}
+
+The temperature fluctuations described earlier are a much slower process than the propagation of light, so for any $\Delta \Phi$ it holds that \[ \Delta \Psi = 2 \Delta \Phi \quad \Rightarrow \quad \langle \Delta \Psi^2 \rangle = 4 \langle \Delta \Phi^2 \rangle\]Note that the answer differs by a factor of 2 from propagation along a fiber of length $2L$!
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ \langle \Delta \Psi^2 \rangle = 4 \langle \Delta \Phi^2 \rangle\]
+\end{solcard}
+
+\begin{solcard}{B7}{Find the root-mean-square difference in the changes in the phase shift on the two arms of the interferometer $\langle (\Delta \Psi_1 - \Delta \Psi_2)^2 \rangle$. Express your answer using $\langle \Delta \Psi^2 \rangle$.}{0.60}
+
+The phase shift on both interferometers is independent, therefore \[\langle (\Delta \Psi_1 - \Delta \Psi_2)^2 \rangle = \langle \Delta \Psi_1^2 \rangle + \langle \Delta \Psi_2^2 \rangle = 2 \langle \Delta \Psi^2 \rangle \]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\langle (\Delta \Psi_1 - \Delta \Psi_2)^2 \rangle = 2\langle \Delta \Psi^2 \rangle \]
+\end{solcard}
+
+\begin{solcard}{B8}{Consider that the sensor operates at $T=305~\mathrm{K}$ and the magnitude of temperature fluctuations $\langle \Delta T^2 \rangle$ is $1.0 \cdot 10^{-6}~\mathrm{K}^2$. What is the minimum acceleration $a_\mathrm{min}$ that can be measured using the proposed sensor?}{1.00}
+
+Due to thermal fluctuations in the mechanical system, the length of the interferometer arms has a noise of \[ \sqrt{\langle \delta L ^2 \rangle} = \sqrt{2k_B T  \frac{ND}{Ed^2}}=7.1 \cdot 10^{-12}~\mathrm{m}\]. Due to thermal fluctuations in the fiber, the phase difference has a noise of \[\sqrt{\langle (\Delta \Psi_1 - \Delta \Psi_2)^2 \rangle} = \frac{4 \pi \sqrt{2} }{\lambda}  (n \alpha + \beta) \sqrt{ \pi D N \Delta L} \cdot \sqrt{\langle \Delta T^2 \rangle}=2 \cdot 10^{-3},\], which leads to noise in the calculated $\delta L$ equal to $\frac{\lambda}{8 \pi n} \cdot 2 \cdot 10^{-3} = 0.6 \cdot 10^{-10}~\mathrm{m}$. Thus, the contribution from the second effect is an order of magnitude greater, and the minimum possible acceleration is:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[a_\mathrm{min} \approx K_a \cdot 0.6 \cdot 10^{-10}~\mathrm{m} = 2 \cdot 10^{-6}~m/s^2\]
+\end{solcard}
+
+\end{document}

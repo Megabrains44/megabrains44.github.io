@@ -1,0 +1,137 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Halbach magnetic assembly}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The Halbach magnetic assembly is a special configuration of permanent magnets, characterized by the fact that the magnetic field on one of its sides is almost completely absent due to the special arrangement of the assembly elements. In this problem we explore this phenomenon.
+
+\section*{Magnetic dipoles}
+
+A dipole is a point magnetic element (for example, a small current loop). Its dipole moment is $I\vec S$, where $I$ is current and $\vec S$ is oriented area. The magnetic field of a dipole is
+\[
+\vec B(\vec r)=\frac{\mu_0}{4\pi}\left(\frac{3\vec r(\vec m\cdot\vec r)}{r^5}-\frac{\vec m}{r^3}\right),
+\]
+where $\vec m$ is the dipole moment, $\vec r$ is the position vector relative to the dipole, and $\mu_0=4\pi\cdot10^{-7}~\text{H/m}$. The figure shows the dipole, vector $\vec r$, and the angle between them.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{The magnetic field weakens with increasing distance; for a given angle $\theta$, find the dependence of the magnetic field $B$ at a distance $r$ from the dipole.}{0.50}
+
+\section*{Magnetic washer}
+
+Let us consider a light magnet, which is a flat cylinder of radius $R$ and thickness $h \ll R$ with a surface magnetic moment density $\vec\sigma$. The surface density vector is oriented along the disk axis.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Express the magnetic field $B(y)$ along an axis perpendicular to the magnet at a distance $y$ from the center.}{1.50}
+
+If you bring a small round magnet close to a metal refrigerator door, the magnet will be attracted to it with a force that depends on the size and type of material of the magnet, as well as the thickness of the door. At this point, consider the thickness of the door to be much larger than the linear dimensions of the magnet. Consider a cylindrical magnet with a volumetric magnetic dipole moment density $\rho = 1.05 \cdot 10^6~\text{A}/\text{m}$ of thickness $t=2~\text{mm}$ and diameter $D=20~\text{mm}$.
+
+\problembox{B2}{Estimate the magnitude of the magnetic field near the surface of the magnet. Express your answer in terms of quantities $t,~D,~\rho,~\mu_0$.}{0.50}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+To determine the force of interaction between the magnet and the refrigerator door, it is necessary to use the law of conservation of energy. When a magnet is pulled away from a door, a field is created between them that is approximately equal to the field on the other side of the magnet. The rest of the field (including what's inside the door) remains almost unchanged.  The expression for the volumetric magnetic field energy density in air is: $w=\frac{B^2}{2\mu_0}$.
+
+\problembox{B3}{Obtain the expression and numerical value of the interaction force $F_0$ between the door and the magnet pressed to it, and also calculate the pressure $P_0$ of the magnet on the door.}{0.50}
+
+\section*{Halbach magnetic assembly}
+
+In order to obtain the expression of the magnetic field in the Halbach assembly, we find the field of a long row of magnets, as shown in the figure. Linear density of the dipole moment of the series $\rho_L$, direction - along the axis $y$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{Write down an expression for the field $\vec B(\vec r_0, y)$ that is created by a series of magnets. (For convenience, the field is expressed as both $\vec r_0$ and $y$, although technically it is $y = (\vec r_0)_y$.)}{2.00}
+
+In a planar Halbach assembly, the polarization direction of a small area element rotates continuously:
+\[
+\beta(x,z)=\beta_0+kx,\qquad k=\frac{2\pi}{\lambda},\qquad t\ll\lambda.
+\]
+Here $\beta$ is the angle between dipole direction and the normal to the plane; rotation occurs in the $xy$ plane. The length $\lambda$ is the assembly period, and $t$ is the assembly thickness.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{C2}{Find the magnetic field on both sides of the assembly. Give the answer in the form of some integral.}{1.00}
+
+One of these integrals is needed to solve this point:
+$$\int_{-\pi/2}^{\pi/2} dx\,\cos(2x)\cos(c\tan x)=\frac{c\pi}{e^c}=\int_{-\pi/2}^{\pi/2} dx\,\sin(2x)\sin(c\tan x)$$
+$$\frac{\pi}{e^d} = \int_{-\infty}^{\infty} dx\,\frac{\cos x}{d^2+x^2}$$
+$$\frac{\pi}{a e^a}= \int_{-\infty}^{\infty} dx\,\frac{2x\sin(2x)}{(a^2+x^2)^2}$$
+$$\frac{(b+1)\pi}{e^b}= \int_{-\infty}^{\infty} dx\,\frac{2b^3 x\cos x}{(b^2+x^2)^2}$$
+
+\problembox{C3}{Show that on one side of an ideal assembly the magnetic field tends to zero.}{1.00}
+
+\problembox{C4}{Write down the expression for the field on the other side.}{1.00}
+
+\problembox{C5}{Based on the field expression, find the average pressure $P$ of such a magnet on the refrigerator door. Take the following parameters: thickness $t=0.5~\text{mm}$, volumetric density of magnetic dipole moment $\rho = 2 \cdot 10^5~\text{A}/\text{m}$, assembly step $\lambda=5~\text{mm}$.}{1.50}
+
+\problembox{C6}{Find the ratio between the pressure created by a Halbach magnetic assembly and the pressure created by a conventional magnet of the same material, with the same radius and thickness. Here, too, we should neglect the effects on the perimeter of the circle and the thickness of the magnet.}{0.50}
+
+You might think that nothing more innovative than refrigerator magnets would use Halbach assembly. However, the Hendo company has developed an entire hoverboard based on it (the same one that was in the movie “Back to the Future”).  Using Halbach's ring assembly of electromagnets, Hendo achieved enough lift to lift an average-sized person off the ground! But only over copper.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/19}
+
+\end{document}

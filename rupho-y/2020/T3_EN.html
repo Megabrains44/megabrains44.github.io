@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Kapitsa pendulum</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Kapitsa pendulum</h1>
+<p class="camp">Y20 (2020) — English translation</p>
+<p>The study of the equilibrium of various mechanical systems is an important technological problem. For example, the process of “walking” (extremely complex!) is completely natural. However, when developing humanoid robots, the main difficulty arises in the process of maintaining the balance of the structure when walking. You are invited to consider one of the simplest models that demonstrates a dynamic state of equilibrium - the Kapitsa pendulum.</p>
+<p>The model consists of a physical pendulum consisting of a body, a material point, a mass $m$, connected to the fulcrum by a rigid weightless rod of length $l$, which rotates freely around an axis. In turn, the axis can oscillate in the vertical direction with amplitude $a\ll l$ and very high frequency $\omega$, i.e. $y_0(t)=a\cos\omega t$. A possible practical implementation of this is presented in the figure on the left, the designations are given in the figure on the right (the angle that the rod makes with the vertical is denoted by $\varphi$). The acceleration due to gravity is $\vec g=-g\vec j$.</p>
+<div class="figure"><img src="T3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">The system has one degree of freedom, angle $\varphi$, and the position of the pendulum can be described by a function of this angle. Express the body's Cartesian coordinates $x(t)$ and $y(t)$ as functions of angle $\varphi(t)$ and time.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Find the velocity components $v_x$ and $v_y$ of the body. Express your answer in terms of angular velocity $\frac{d\varphi}{dt}$ and time.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the kinetic and energy of the body. Express your answer in terms of angle $\varphi$, angular velocity $\frac{d\varphi}{dt}$ and time.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Derive an expression for the instantaneous power $N$ of the force applied to the suspension point of the pendulum. Express your answer in terms of $m, g, l, a, \omega, \varphi, \frac{d\varphi}{dt}, \frac{d^2\varphi}{dt^2}$ and time.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Show that the equation of motion is as follows: $$ \cfrac{d^2\varphi}{dt^2}=-\cfrac{1}{l}(g-a~\omega^2\cos \omega t)\sin \varphi. $$</div><span class="pb-pts">1.00</span></div>
+<p>Under certain conditions, for small values ​​of the amplitude $a$ and large values ​​of the oscillation frequency of the axis $\omega$, the solution to the equation from point A5 exhibits a special behavior: the motion behaves as a superposition of two components: $\gamma$, which varies slowly with time and has a large amplitude, and a second component $\beta$, which changes quickly with time and has a small amplitude.</p>
+<div class="figure"><img src="T3_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>In this way, $\varphi=\gamma+\beta$ can be expanded, where $\gamma\gg\beta$ and the value of the slow component $\gamma$ can be considered constant for a sufficient number of periods of the fast component $\beta$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Show that the expression for the fast component - $\beta=-\frac{a}{l}~\sin\gamma \cos\omega t$ (for an arbitrary value of $\gamma$) is an approximate solution to the equation of motion from A5 under the above conditions. Consider an oscillation mode in which $g$ is negligible compared to $a\omega^2$, i.e. $a\omega^2\gg g$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Combining the equation of motion from A5 with the expansion $\varphi=\gamma+\beta$ and with the expression from the previous paragraph, find an expression for $\frac{d^2\gamma}{dt^2}$ that describes the dynamics of the slow component $\gamma$ averaging over a large number of fast oscillations with frequency $\omega$, neglecting only terms of order $a^n$, where $n>2$. Express $\frac{d^2\gamma}{dt^2}$ in terms of $g, a, \omega, l$ and $\gamma$. Simplify the final expression by counting $l\omega^2\gg a\omega^2\gg g$.</div><span class="pb-pts">2.50</span></div>
+<p>Now let's move on to the reference system associated with the pendulum's suspension point. In all subsequent paragraphs, all quantities must be found in this reference system. The neglects from paragraph B2 are valid here and in subsequent paragraphs of the problem.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Obtain an expression for the time-averaged moment of all forces $M_O$ acting on the pendulum relative to the suspension point. Express your answer in terms of $m, g, l, a, \omega$ and $\gamma$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Let us call the effective potential the scalar function $V(\gamma)$, the derivative of which with respect to the angle $\gamma$ is equal to the averaged moment of forces from the previous paragraph, taken with a minus sign. Derive an expression for the effective potential $V(\gamma)$ up to an arbitrary constant. Express your answer in terms of $m, g, l, a, \omega$ and $\gamma$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Show that for $(a\omega)^2>2gl$ this potential has several minima: a minimum at $\gamma=0$, which appears in the case of free oscillations of the pendulum; additional minimum $\gamma=\pi$. Show that both positions satisfy the conditions for stable equilibrium.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Find the oscillation periods $T_0$ and $T_\pi$ of the quantity $\gamma$ corresponding to the provisions from point B5.</div><span class="pb-pts">0.60</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/40">https://pho.rs/p/40</a></p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>In the footsteps of van der Waals</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>In the footsteps of van der Waals</h1>
+<p class="camp">W22 (2022) — English translation</p>
+<p>As industry developed, the need arose to work with gases. They needed to be extracted, transported, stored, and any of these stages required calculations of the state of the gases. Already in the middle of the 19th century, the formulated model of an ideal gas ceased to satisfy industrialists who worked with gases under high pressures and low temperatures. Accordingly, attempts have been made to propose refined models describing the states of gases. The interactions between gas molecules are quite complex, so a simple model is unlikely to be possible. But industrialists, to a large extent, did not require a perfectly verified physical model; they were quite satisfied with the empirical equations of state that were proposed by scientists. In this problem, you will try to determine the parameters of dependencies in a number of models using the least squares method. Then, having plotted the initial data and the modeled dependence on one graph, visually assess the satisfactoriness of the model.</p>
+<h2 class="part">About the least squares method (LSM)</h2>
+<p>The practical basis of least squares is the minimization of the sum of squared deviations of experimental points from some modeling (fitting) curve. Let a set of some points $(x_i, y_i)$ be given, the number of pairs of points is equal to $n$. Let's set some modeling function $f=f(x, a_1, a_2, \dots)$, where $a_1, a_2, \dots$ are the function parameters that can be varied. The variation of the parameters should result in the following sum being the minimum: $$ S = \sum_n~\Delta y_i^2 = \sum_n~\left(y_i-f(x_i, a_1, a_2, \dots)\right)^2 \rightarrow \min_{a_1, a_2, \dots} $$ Задача минимизации этой суммы сводится к решению системы уравнений: \begin{equation} \begin{cases} \cfrac{\partial S}{\partial a_1}=0\\ \cfrac{\partial S}{\partial a_2}=0\\ \dots \end{cases} \end{equation} где значок $\partial$ denotes differentiation with respect to the variable specified in the denominator when the other variables are fixed.</p>
+<div class="figure"><img src="PE_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>Let's look at how this works using the example of a well-known linear relationship. The fitting function is $f(x)=kx+b$. We minimize the following amount: $S= \sum_n~(y_i-kx_i-b)^2$. According to what is written above, we obtain the system \end{cases} \end{equation}</p>
+<p>Both equations can be divided by 2 and nothing will change. Thus, we get: \begin{equation} \begin{cases} \sum_n~(-x_iy_i)+\sum_n~kx_i^2+\sum_n~bx_i=0\\ \sum_n~(-y_i)+\sum_n~kx_i+\sum_n~b=0 \end{cases} \end{equation} and further, taking out from under the sum sign the quantities $k$ and $b$, \begin{equation} \begin{cases} \sum_n~x_iy_i=k\sum_n~x_i^2+b\sum_n~x_i\\ \sum_n~y_i=k\sum_n~x_i+b\sum_n~1 \end{cases} \end{equation} it is clear that we have obtained a system of linear equations for the parameters $k$ and $b$, having solved it, we will find those parameters $k$ and $b$ that minimize the original sum. The coefficients in the system of equations are simply sums over the entire data set of the following quantities $(x_iy_i), (x_i)^2, x_i, y_i$. The last coefficient $\sum_n~1$ before $b$ is simply the number of data points, i.e.  $\sum_n~1=n$. Having solved the system of equations for $k$ and $b$, we obtain: $$ k=\cfrac{-n\sum_n~x_iy_i+\sum_n~x_i\sum_n~y_i}{-n\sum_n~x_i^2+\left(\sum_n~x_i\right)^2} $$ $$ b=\cfrac{-\sum_n~x_i\sum_n~x_iy_i+\sum_n~x_i^2\sum_n~y_i}{-\left(\sum_n~x_i\right)^2+n\sum_n~x_i^2} $$ Если числитель и знаменатель каждого выражения поделить на $n^2$, то получатся более изящные формулы: $$ k=\cfrac{-\overline{xy}+\overline x\,\overline y}{-\overline{x^2}+\overline x^2} $$ $$ b=\cfrac{-\overline x\,\overline{xy}+\overline{x^2}\,\overline y}{-\overline x^2+\overline{x^2}} $$ where the bar means averaging the value over the entire data set. Using these formulas, your calculators and computers calculate the parameters of the modeling relationship. In some cases where you can linearize the relationship, what's described above also applies, of course. In cases where the dependence cannot be linearized, it is necessary to optimize the coefficients from scratch (and, generally speaking, this is not always possible, it depends on the function).</p>
+<p>Attention! In the scoring, very narrow gates will be set for the range of determined values. The expressions by which you will calculate the optimal values ​​of quantities should be written in the form of sums or average values ​​of quantities. It is assumed that you will do all calculations numerically, counting amounts similar to those described above. Probably, graphical methods for solving some points will not provide the necessary accuracy. There is no need to estimate errors.</p>
+<h2 class="part">Exercise</h2>
+<p>For one mole of some nonideal gas, the dependence $T(V)$ on the isobar $p=2~МПа$ was removed. The data table is provided in the answer sheet. The relationship is slightly non-linear, and your task will be to find a suitable model to describe it.</p>
+<h2 class="part">Part A. Pressure with constant addition</h2>
+<p>Let us model the state of the gas using the equation $(p+a_0)V=RT$. It is necessary to select a value of $a_0$ that would minimize the sum of squared deviations of the experimental points from the model curve.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Write down an expression for finding the optimal value $a_0$ through the sums (or averages) of values ​​$T, V$ and their combinations.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Calculate the sums (or averages) you need for the entire data set.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Calculate the value of $a_0$. Specify it to three significant figures.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.</div><span class="pb-pts">0.40</span></div>
+<h2 class="part">Part B. Let&#x27;s try to take into account the attraction of molecules</h2>
+<p>Let us model the state of the gas using the equation $(p+\cfrac{a_1}{V})V=RT$. It is necessary to select a value of $a_1$ that would minimize the sum of squared deviations of the experimental points from the model curve.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Write down an expression for finding the optimal value $a_1$ through the sums (or averages) of values ​​$T, V$ and their combinations.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Calculate the sums (or averages) you need for the entire data set.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Calculate the value of $a_1$. Specify it to three significant figures.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.</div><span class="pb-pts">0.40</span></div>
+<h2 class="part">Part C. Improving the pressure correction</h2>
+<p>Let us model the state of the gas using the equation $(p+\cfrac{a_2}{V^2})V=RT$. It is necessary to select a value of $a_2$ that would minimize the sum of squared deviations of the experimental points from the model curve.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Write down an expression for finding the optimal value $a_2$ through the sums (or averages) of values ​​$T, V$ and their combinations.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Calculate the sums (or averages) you need for the entire data set.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Calculate the value of $a_2$. Specify it to three significant figures.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.</div><span class="pb-pts">0.40</span></div>
+<h2 class="part">Part D. Advanced model</h2>
+<p>Let us model the state of the gas using the equation $(p+\cfrac{c}{V^2}+\cfrac{d}{V^3})V=RT$. It is necessary to select such values ​​of $c$ and $d$ that would minimize the sum of squared deviations of the experimental points from the model curve.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Write down expressions for finding the optimal values ​​of $c$ and $d$ through the sums (or averages) of values ​​$T, V$ and their combinations.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">Calculate the sums (or averages) you need for the entire data set.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Calculate the values ​​of $c$ and $d$. Please provide them to three significant figures.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">D4</span><div class="pb-text">For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part E. Van der Waals equation of state (0 points)</h2>
+<p>Let us model the state of the gas using the equation $(p+\cfrac{a}{V^2})(V-b)=RT$. It is necessary to select such values ​​of $a$ and $b$ that would minimize the sum of squared deviations of the experimental points from the model curve.</p>
+<div class="problem-box"><span class="pb-id">E1</span><div class="pb-text">Calculate the values ​​of $a$ and $b$. Please provide them to three significant figures. Consider the scale of work carried out by Van der Waals.</div><span class="pb-pts">0</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/273">https://pho.rs/p/273</a></p>
+</body>
+</html>

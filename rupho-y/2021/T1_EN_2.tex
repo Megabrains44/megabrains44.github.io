@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Relativistic motion in a gravitational field}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem we will consider the motion of a particle in a gravitational field taking into account relativistic corrections. In general, to describe relativistic effects in gravity, it is necessary to use the general theory of relativity (GTR).  However, if the gravitational field is spherically symmetric, the problem can only be solved using conservation laws.
+
+In all parts of the problem, we will consider the motion of a light body of mass $m$ in the gravitational field of a much more massive body of mass $M$ – a star, which we consider stationary. The star is characterized by a gravitational radius $r_g = 2GM/c^2$. At distances $r \gg r_g$ the gravitational field is described by Newton’s theory; at smaller distances, relativistic corrections must be taken into account. The position of the particle at some point in time $t$ is given by three spherical coordinates $r$, $\theta$, $\varphi$.  Without loss of generality, we will assume that the motion occurs in the equatorial plane $\theta = \pi/2$. The time $t$ is measured by the watch of an observer located at a great distance from the star. Due to the effects of general relativity, the distance and time values measured by stationary observers near the star differ from the standard ones. Distance between two close points (taking into account $\theta = \pi/2 = const$) $$dl^2 = \frac{1}{1-r_g/r}\,dr^2 + r^2\,d\varphi^2.$$ The time interval measured by the clock of an observer at the point with coordinate $r$ is $$dT^2 = \left(1 - \frac{r_g}{r}\right) dt^2.$$ The proper time for a particle is given by the standard expression $d\tau^2 = dT^2 - dl^2/c^2$. It equals the readings of the particle's clock as it moves in the gravitational field.
+
+The conservation laws of energy and angular momentum have the form $$E = mc^2\left(1 - \frac{r_g}{r}\right)\frac{dt}{d\tau} = \text{const};$$ $$L = m r^2 \frac{d\varphi}{d\tau} = \text{const}.$$ Here the derivatives are taken with respect to the proper time of the particle.
+
+All expressions here are applicable only for $r > r_g$. The radius of normal stars is greater than $r_g$. If, however, matter is compressed to a size smaller than the gravitational radius corresponding to its mass, a black hole is formed. Any body that reaches $r = r_g$ inevitably falls into the black hole.
+
+\section*{Part A. Warm-up}
+
+Let us consider the nonrelativistic motion of a body of mass $m$ in the gravitational field of a star of mass $M \gg m$. The movement occurs in a plane, the position of the body is specified by polar coordinates $r$, $\varphi$, the star is located at the origin. No relativistic effects need to be taken into account in this part!
+
+\problembox{A1}{Express the body's energy $E$ in terms of $r$, radial velocity $v_r=dr/dt$, angular momentum $L$ and system parameters ($G$, $M$, $m$).}{0.50}
+
+\problembox{A2}{Let us introduce the variable $w = 1/r$. Express the radial velocity $v_r$ in terms of the derivative of this variable with respect to the angle $dw/ d\varphi$, as well as $L$, $m$, $w$ and substitute this expression into the law of conservation of energy.}{0.50}
+
+\problembox{A3}{By differentiating the law of conservation of energy with respect to $\varphi$, we obtain a second-order equation for $w(\varphi)$. Get from here that $$r(\varphi) = \frac{p}{1 - e\cos(\varphi - \varphi_0)}$$ for some constants $p$, $e$, $\varphi_0$.}{0.50}
+
+\section*{Part B. Derivation of equations of motion}
+
+Starting from this part we deal with the relativistic problem. You need to use the formulas for energy and angular momentum from the introduction.
+
+\problembox{B1}{Using the relationship between the proper time of the particle $d \tau$ and the change in its coordinates, obtain an equation relating the squares of the derivatives $dr/d\tau$, $dt/d\tau$, $d\varphi/d\tau$.}{0.50}
+
+\problembox{B2}{Using the laws of conservation of energy and angular momentum, as well as the relationship found in the previous paragraph, obtain an expression of the form $$\left(\frac{dr}{d\tau}\right)^2 = \frac{E^2}{m^2 c^2} - c^2 V(r).$$ Here $V(r)$ is a function expressed in terms of $L$, $r_g$ and fundamental constants.}{0.50}
+
+\problembox{B3}{Show that in the non-relativistic case, that is, for $r \gg r_g$ and $v \ll c$, the relation from the previous paragraph goes into the standard law of conservation of energy for motion in the central potential.}{1.00}
+
+\problembox{B4}{Let us introduce the dimensionless variable $u = r_g/ r$, as well as the dimensionless angular momentum $l = L/ m c r_g$. Using the definition of angular momentum, express $dr/d\tau$ in terms of $d u/d \varphi$, as well as $l$, $m$, $r$, $r_g$. Substitute the resulting expression into the result of B2. As a result, you should have an equation containing $u'^2$, $u$ and the integrals of motion ($l$, $E$).}{0.50}
+
+\problembox{B5}{Differentiating the result of B4 with respect to $\varphi$, you obtain a second order equation on $u(\varphi)$. It is similar to the equation from A3 and contains relativistic corrections to the orbital shape.}{0.50}
+
+\section*{Part C. Orbital precession}
+
+\problembox{C1}{Let the body move with angular momentum $l$ in a circular orbit. Find possible values for the orbital radius $a$. Express your answer in terms of $r_g$ and $l$.}{0.80}
+
+Let us assume that the motion of the particle is nonrelativistic, that is, it is at a distance $r \gg r_g$ from the star. The shape of the orbit is close to circular. The effects of general relativity will cause the position of the perihelion (the point closest to the star) of the orbit to slowly change over time.  Let $u = u_0 + \delta u$, where $u_0 = r_g/a \ll 1$ ($a$ is the radius of the circular orbit), and $\delta u (\varphi) \ll u_0$ represents the small deviation from the circular orbit.
+
+\problembox{C2}{Using the equation from B5, obtain a linear equation for the deviation of the orbit from circularity and find the angular distance $\Delta \varphi$ between two adjacent maxima $u(\varphi)$.  By what angle $\delta \varphi$ does the perihelion position shift in one period? Express your answer in terms of $G$, $M$, $c$, $a$.}{1.00}
+
+\problembox{C3}{By what angle does Mercury's perihelion shift in one century? The orbit of Mercury can be considered circular, its radius is $a = 57.9 \cdot 10^9 ~m$, the period of Mercury's revolution around the Sun is $T = 88$ days, the mass of the Sun is $M = 1.99\cdot 10^{30}~kg$, the gravitational constant is $G = 6.67\cdot 10^{-11}~m^3/(kg \cdot  s^2)$, the speed of light is $c = 2.998\cdot 10^8~m/s$.}{0.50}
+
+\problembox{C4}{Find the minimum radius of a stable circular orbit for a particle moving in the field of a black hole. Express your answer in terms of $r_g$.}{1.00}
+
+\section*{Part D: Light Deflection}
+
+Now let an ultrarelativistic particle fly past the star, the energy of which is much greater than the rest energy $E \gg mc^2$. If we do not take into account the gravitational field, the particle would move in a straight line and would fly at a minimum distance $b \gg r_g$ to the star. Then its angular momentum is $L = p b \approx E b/ c$, and therefore $l  \approx Eb/ mc^2 r_g \gg 1$.
+
+\problembox{D1}{Write down an equation that describes the type of trajectory $u(\varphi)$ of an ultrarelativistic particle, taking into account the condition $l \gg 1$. Use result B5.}{0.20}
+
+If the particle flies far enough from the star, the value $u(\varphi)$ is small all the time. Therefore, the nonlinear terms in the resulting equation can be considered as a small correction. Therefore, we will first solve the linear equation and then study the deviation caused by the nonlinearity.
+
+\problembox{D2}{Let us neglect terms nonlinear in $u(\varphi)$ in the equation from D1. Find the solution $u = u_0(\varphi)$, which describes a particle flying at a minimum distance $b$ from the star, with the angle $\varphi = 0$ corresponding to the minimum.}{0.40}
+
+\problembox{D3}{Considering the nonlinear term in D1 as a small correction, we replace $u(\varphi)$ in it with $u_0(\varphi)$. Thus obtain the correction $u_1(\varphi)$ to the solution from D1. Thus, the approximate solution of the nonlinear equation will have the form $u(\varphi) =u_0(\varphi)+u_1(\varphi)$.}{0.60}
+
+\problembox{D4}{The particle moves away to infinity when $u(\varphi) =0$. Using the approximate solution from the previous paragraph, find the angle of deviation of the particle from rectilinear propagation. Express your answer in terms of $G$, $M$, $c$, $b$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/222}
+
+\end{document}

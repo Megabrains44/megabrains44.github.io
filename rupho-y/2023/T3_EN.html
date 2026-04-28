@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Gyroscopic forces and parasitic friction</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Gyroscopic forces and parasitic friction</h1>
+<p class="camp">Y23 (2023) — English translation</p>
+<p>Gyroscopic forces are responsible for a number of interesting phenomena. For example, the Coriolis force leads to the erosion of river banks, the Lorentz force leads to the curvature of particle trajectories, the precession of atoms in a magnetic field, etc. In addition to gyroscopic forces, parasitic types of friction are interesting to study - rolling friction and spinning friction, which arise when bodies roll and spin on a surface. This problem also studies the influence of the magnetic field and parasitic types of friction on mechanical motion.</p>
+<h2 class="part">Part A. Interaction of a rotating ball with a magnetic field (1.5 points)</h2>
+<p>As is known, the moment of forces acting on a coil with current from a uniform magnetic field is not equal to zero. Let us consider a ball of radius $r$ with a fixed center, charged uniformly throughout the volume with charge $q$ and rotating with angular velocity $\vec{\omega}$ in a uniform magnetic field with induction $\vec{B}$. A rotating ball is equivalent to a set of circular currents.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Let us consider a ring charged uniformly along its perimeter with charge $Q$ and rotating around its axis with angular velocity $\Omega$. Find the equivalent current $i$ in the ring.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Determine the magnetic moment of the ball $\vec{m}$. Express your answer in terms of $\vec{\omega}$, $q$ and $r$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the moment of forces $\vec{M}$ acting on the ball relative to its center. Express your answer in terms of $\vec{\omega}$, $\vec{B}$, $q$ and $r$.</div><span class="pb-pts">0.20</span></div>
+<p>Next, at all points of the problem, the motion of a homogeneous ball of radius $r$ and mass $m$, charged uniformly throughout the volume with a positive charge $q$, is studied. The ball moves without slipping along a plane forming an angle $\alpha$ with the horizon, along which a uniform magnetic field of induction $\vec{B}$ is directed. The acceleration due to gravity is $\vec{g}$.</p>
+<p>Next, at all points of the problem, the motion of a homogeneous ball of radius $r$ and mass $m$, charged uniformly throughout the volume with a positive charge $q$, is studied. The ball moves without slipping along a plane forming an angle $\alpha$ with the horizon, along which a uniform magnetic field of induction $\vec{B}$ is directed. The acceleration due to gravity is $\vec{g}$.</p>
+<div class="figure"><img src="T3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>The above figure shows the coordinate system $xyz$ with unit unit vectors $\vec{e}_x$, $\vec{e}_y$ and $\vec{e}_z$ such that the unit vector $\vec{e}_y$ is directed horizontally, and the magnetic field induction vector is written as $\vec{B}=\vec{e}_x\cdot{B}$.</p>
+<h2 class="part">Part B. Idealized Movement (5.0 points)</h2>
+<p>Let us introduce the following notation: $\vec{r}$ is the radius vector drawn from the center of the ball to its point of contact with the plane; $\vec{v}_C$ — speed of the ball center; $\vec{a}_C$ — acceleration of the center of the ball; $\vec{\omega}$ is the angular velocity of the ball; $\dot{\vec{\omega}}$ is the angular acceleration of the ball; $I$ is the moment of inertia of the ball relative to the axis passing through the diameter; $\vec{L}_C$ is the angular momentum of the ball relative to the center of mass; $\vec{F}$ and $\vec{N}$ are the friction and normal reaction forces, respectively, acting on the ball from the side of the plane.</p>
+<p>Let's introduce the following notation:</p>
+<p>At time $t=0$ the ball is motionless and its center is located at the origin.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Write down the condition for the ball not to slip on the plane in terms of $\vec{v}_C$, $\vec{\omega}$ and $\vec{r}$. Using the resulting expression, express the angular velocity components $\omega_x$ and $\omega_y$ in terms of $v_{Cx}$, $v_{Cy}$ and $r$. Differentiating the no-slip condition with respect to time, express $\vec{a}_C$ in terms of $\dot{\vec{\omega}}$ and $\vec{r}$.</div><span class="pb-pts">0.50</span></div>
+<p>Since the moment of inertia $I$ of the ball is the same for any axis passing through the center, the vector of its angular momentum relative to the center of mass is written as: $$\vec{L}_C=I\vec{\omega} $$</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Using the equation for the dynamics of rotational motion about the center of mass, express the angular acceleration of the ball $\dot{\vec{\omega}}$ in terms of $q$, $m$, $r$, $\vec{\omega}$, $\vec{r}$, $\vec{B}$ and $\vec{F}$.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Express the friction force $\vec{F}$ in terms of $m$, $q$, $\vec{B}$, $\vec{\omega}$, $\vec{r}$ and $\vec{a}_C$. Note: Use the double cross product property: $$\bigl[\vec{a}\times\bigl[\vec{b}\times\vec{c}\bigr]\bigr]=\vec{b}\bigl({~}\vec{a}\cdot\vec{c}{~}\bigr)-\vec{c}\bigl({~}\vec{a}\cdot\vec{b}{~}\bigr)$$</div><span class="pb-pts">0.20</span></div>
+<p>Note: Take advantage of the double cross product property:</p>
+<p>$$\bigl[\vec{a}\times\bigl[\vec{b}\times\vec{c}\bigr]\bigr]=\vec{b}\bigl({~}\vec{a}\cdot\vec{c}{~}\bigr)-\vec{c}\bigl({~}\vec{a}\cdot\vec{b}{~}\bigr)$$</p>
+<p>Из уравнения динамики вращательного движения видно, что при движении шар начинает вертеться (вращаться относительно оси $z$, perpendicular to the plane).</p>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Find the angular velocity component of the ball $\omega_z$ at the point with coordinate $x_C$ of its center. Express your answer in terms of $q$, $m$, $B$, $r$ and $x_C$.</div><span class="pb-pts">0.80</span></div>
+<p>Let's move on to analyzing the trajectory of the ball's center.  Further, at all points, the ball is initially motionless, and its center is located at the origin of coordinates.</p>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Prove that the trajectory of the center of the ball is rectilinear.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Find the projection of the acceleration of the center $a_{Cx}$ of the ball onto the axis $x$ depending on the position of its center $x_C$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Determine the dependence of the coordinate $x_C$ of the center of the ball on time $t$. Express your answer in terms of $g$, $\alpha$, $q$, $m$, $B$ and $t$.</div><span class="pb-pts">0.70</span></div>
+<p>Let's analyze the kinematics of this movement.</p>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Describe the evolution of the angular velocity of the ball $\vec{\omega}$. As an answer, indicate the hodograph of the angular velocity vector (in the coordinate system $xyz$), i.e. the curve describing the position of the end of the vector with its fixed beginning. Indicate all characteristic values ​​in the figure. Express them in terms of $m$, $g$, $q$, $B$, $\alpha$ and $r$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B9</span><div class="pb-text">Find the maximum speed $v_{max}$ among all the elements of the ball at the moment when the center speed reaches its maximum. Express your answer in terms of $m$, $g$, $q$, $B$ and $\alpha$.</div><span class="pb-pts">0.60</span></div>
+<p>Let's move on to the necessary conditions for the ball to move without slipping.</p>
+<div class="problem-box"><span class="pb-id">B10</span><div class="pb-text">At what minimum friction coefficient $\mu_{min}$ of a ball on a plane is motion possible without slipping? Express your answer in terms of $g$, $\alpha$, $q$, $m$ and $B$.</div><span class="pb-pts">0.60</span></div>
+<p>In fact, the movement of the ball is affected by two types of parasitic friction at once - rolling friction and spinning friction. The next two parts independently study the influence of these effects on the movement of the ball.</p>
+<h2 class="part">Part C. Rolling friction (2.5 points)</h2>
+<p>The cause of ball rolling resistance is surface roughness.  The effect of rolling friction can be modeled as follows: the ball also moves along the surface without slipping, and the effective point of application of the normal reaction force acquires a shoulder $k$ relative to the point of contact of the ball with the plane (see Fig.). In this case, the redistributed normal reaction force gives zero moment relative to the center of the ball and, due to its nature, does not in any way affect the force of static or sliding friction. The shoulder $k$ is always assumed to be small compared to $r$, therefore for the rolling friction force $\vec{F}_\text{кач}$ we can write: $$\vec{F}_\text{кач}=-\vec{e}_{v_C}\cdot\cfrac{kN}{r} $$где $\vec{e}_{v_C}$ — единичный вектор, направленный вдоль скорости центра шара. Будем считать коэффициент $k$ постоянным и не зависящим от направления скорости центра.</p>
+<p>Причиной возникновения сопротивления качению шара является неровность поверхности.  Смоделировать эффект трения качения можно следующим образом: шар также движется по поверхности без проскальзывания, а эффективная точка приложения силы нормальной реакции приобретает плечо $k$ относительно точки касания шара с плоскостью (см.рис). При этом перераспределённая сила нормальной реакции даёт нулевой момент относительно центра шара и в силу своей природы никак не влияет на силу трения покоя или скольжения. Плечо $k$ всегда предполагается малым по сравнению с $r$, поэтому для силы трения качения $\ve c{F}_\text{quality}$ можно написать: $$\vec{F}_\text{кач}=-\vec{e}_{v_C}\cdot\cfrac{kN}{r} $$где $\vec{e}_{v_C}$ — единичный вектор, направленный вдоль скорости центра шара. Будем считать коэффициент $k$ constant and independent of the direction of the center velocity.</p>
+<div class="figure"><img src="T3_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>At time $t=0$ the ball is motionless, and its center is located at the origin.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Determine the distance $S_{i{,}i+1}$ between the positions of the center of the ball at the moments $i$th and $(i+1)$th stops. Express your answer in terms of $i$, $g$, $k$, $\alpha$, $q$, $m$ and $B$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Determine the range of possible positions $x_{C\text{к}}$ of the last stop of the ball's center. Express your answer in terms of $g$, $k$, $\alpha$, $q$, $m$ and $B$.</div><span class="pb-pts">0.20</span></div>
+<p>Next, assume that $\operatorname{tg}\alpha\gg{k/r}$.</p>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find the time $\tau$ of the ball's motion. Express your answer in terms of $g$, $k$, $\alpha$, $q$, $m$ and $B$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">What amount of heat $Q$ was released during the motion of the ball? Express your answer in terms of $g$, $k$, $\alpha$, $q$, $m$ and $B$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part D. Spinning friction (3.0 points)</h2>
+<p>Spinning friction occurs due to non-point contact of the ball with the plane. We will assume that the ball is in contact with a plane in the region of a circle of radius $r_0\ll{r}$, over the area of ​​which the normal reaction force $N$ is uniformly distributed. The sliding friction coefficient of the ball on the surface is equal to $\mu$.</p>
+<p>Spinning friction occurs due to non-point contact of the ball with the plane. We will assume that the ball is in contact with a plane in the region of a circle of radius $r_0\ll{r}$, over the area of ​​which the normal reaction force $N$ is uniformly distributed. The sliding friction coefficient of the ball on the surface is $\mu$.</p>
+<div class="figure"><img src="T3_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>Note 1: Generally speaking, the value of $r_0$ is determined by the strength of the normal reaction $N$, but when solving the problem, it is not necessary to find the connection between $r_0$ and $N$. Note 2: In this part of the problem, the absence of slipping means that the center of the circle of contact between the ball and the plane is always motionless. Consider that the static friction force is applied to the center of the circle of contact.</p>
+<p>Note 2: In this part of the problem, the absence of slipping means that the center of the circle of contact between the ball and the plane is always motionless. Consider that the static friction force is applied to the center of the circle of contact.</p>
+<p>At time $t=0$ the ball is motionless and its center is located at the origin.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Determine the modulus of the torque of the rotational friction force $M'$. Express your answer in terms of $\mu$, $m$, $g$, $\alpha$ and $r_0$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">At what point in time $t_1$ will the ball start spinning? Express your answer in terms of $\mu$, $r_0$, $m$, $q$, $B$, $r$ and $\alpha$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Construct a high-quality graph $\omega_z(t)$. On the graph, indicate all the characteristic values, features and asymptotes. Express the characteristic values ​​in terms of $m$, $g$, $\alpha$, $q$, $B$ and $r$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">D4</span><div class="pb-text">Construct a high-quality graph $x_C(t)$. On the graph, indicate all the characteristic values, features and asymptotes. Characteristic values ​​can be expressed through the variables you enter.</div><span class="pb-pts">0.60</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3233">https://pho.rs/p/3233</a></p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Neon lamp}}
+\author{\normalsize Y13 (2013) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The electrical circuit (Fig. 1) consists of an ideal inductor $L $ capacitor $C$, a battery with EMF $U_0$ and a nonlinear NE element, the current-voltage characteristic of which is shown in Fig. 2 (gas-filled lamps have a similar characteristic). It is known that the hysteresis zone $\Delta U \ll U_\text{Э}$; in addition current $I_0 \gg U_0 \sqrt{\frac{C}{L}}$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Rice. 2. Current-voltage characteristic of a nonlinear element
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{Determine how many times the lamp will flash after closing the key $K$, if $U_0 < U_\text{Э} < 2U_0$. Draw (qualitatively) the process on the graph $U_C(t)$.}{0}
+
+\problembox{A2}{Determine the steady-state flash frequency $f$ and the average power $W$ dissipated in the lamp if $U_0=U_\text{Э}$}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3975}
+
+\end{document}

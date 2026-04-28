@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Super-resolution microscopy</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Super-resolution microscopy</h1>
+<p class="camp">Y19 (2019) — English translation</p>
+<p>In 2004, physicists Eric Betzig, William Moerner and Stefan Hehl were awarded the Nobel Prize for “the development of high-resolution fluorescence microscopy.” The techniques they developed made it possible to improve the resolution of modern optical microscopes by an order of magnitude, although for a long time it was believed that optical microscopy had reached its fundamental limit of resolution (the Abbe limit). This task consists of 3 parts. Part A asks you to derive an expression for the Abbe resolution limit. In Part B you will be introduced to the phenomenon of fluorescence and shown how it can be used to overcome the Abbe limit. In Part C you will be able to describe a method for improving resolution through interference.</p>
+<p>Rice. 1. Microphotographs of proteins in a cell obtained using traditional methods (left corners of both pictures, confocal, widefield) and using fluorescent nanoscopy (right corners of both pictures, STED, GSD).</p>
+<div class="figure"><img src="T1_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Abbe limit</h2>
+<p>The microscope lens produces a magnified real image of the sample. The resolution of a microscope is determined primarily by the properties of the lens. When deriving the expression for the Abbe limit and further, consider an optical system consisting of a single thin lens (objective).</p>
+<p>Rice. 2. Scheme for expressing the Abbe limit. The accuracy of the image $A'B'$ of sample $AB$ obtained with the lens is limited due to diffraction by the lens $D$.</p>
+<div class="figure"><img src="T1_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>As shown in Fig. 2., a thin lens with a diameter $D$ is placed between two media with different refractive indices: $n$ – on the left, on the sample side, and $n'$ – on the right, on the image side. The resolution limit is the distance $\Delta_0=AB$ between two such point sources $A$ and $B$ such that the maximum image intensity $B$ (point $B'$) coincides with the minimum image intensity $A$ (point $A'$). In vacuum, the direction to the minimum intensity of the image $A'$ of the source $A$ is determined from the Fraunhofer diffraction equations on the lens $D\sin\varphi=1.22\lambda$. When calculating, do not forget to take into account the corrections associated with the presence of matter to the left and right of the lens.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Express the resolution limit $\Delta_0=AB$ in terms of $\lambda$ (the wavelength of light in vacuum), $D$, $n$, $n'$ and $\sin{u}$ (the angle $u$ is marked in Fig. 2). When drawing, use paraxial approximation.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Initially, the system is in vacuum $n=n'=1$. The experimenter can fill the space to the left or right of the lens (Fig. 2) with oil. Where should oil be added to improve resolution? a) from the sample side; b) from the image side</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">Part B: Understanding Fluorescence</h2>
+<p>Fluorescent molecules and substances are able to absorb photons of a certain wavelength $\lambda_1$, and then emit photons with a longer wavelength $\lambda_2>\lambda_1$ for a short time (see Fig. 3). The probability of a molecule absorbing a photon per unit time is proportional to the intensity of the radiation incident on it $I_1$ and is equal to $\sigma_1I_1$. Energy in this process goes into the external environment</p>
+<p>Fig. 3. A fluorescent molecule in the $S$ state can absorb a $\lambda_1$ photon, transition to the $S^*$ state, and then emit a $\lambda_2$ photon.</p>
+<div class="figure"><img src="T1_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>Fluorescence obeys the laws of quantum mechanics and can be simplistically described by the following diagram of quantum states (Fig. 4).</p>
+<p>Rice. 4. A fluorescent molecule has three states $S$, $S^*$ and $T$ and transitions between them by absorbing or emitting photons.</p>
+<div class="figure"><img src="T1_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<p>To begin with, we will assume that the fluorescent molecule has $2$ states: ground $S$ and excited $S^*$ (transitions to the third $T$ state are very rare). When a photon $\lambda_1$ is absorbed, the molecule moves from $S$ to $S^*$. With probability $1/\tau_{fl}$ per unit time, a molecule in state $S^*$ emits a photon $\lambda_2$ and returns to $S$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Let the ensemble of $N_0\gg{1}$, initially in the $S$ state, begin to fall on radiation with intensity $I_1$ and wavelength $\lambda_1$. On average, how many molecules $N^*$ will be in the state $S^*$ when the system reaches dynamic equilibrium?</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Plot the dependence $N^*(I_1)$ obtained in step B1 and obtain an approximation for small $I_1$.</div><span class="pb-pts">0.50</span></div>
+<p>In the future, use the approximation obtained in step B2.</p>
+<p>Let us now consider the structure of a fluorescence microscope (Fig. 5). Radiation with wavelength $\lambda_1$ is focused by the lens in the sample plane. The sample, having absorbed photons $\lambda_1$, emits photons $\lambda_2$. The emitted photons $\lambda_2$ pass back through the lens and form an image. A special mirror, reflective for $\lambda_1$ but transparent for $\lambda_2$, is used to separate the two types of photons by wavelength.</p>
+<p>Rice. 5. Diagram of a fluorescence microscope. The $\lambda_1$ radiation is reflected from the mirror and focused onto the sample by the lens. The emitted learning $\lambda_2$ passes through the lens and mirror and forms an image.</p>
+<div class="figure"><img src="T1_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<p>Resolution in fluorescence microscopy is determined by the intensity distribution of the radiation $\lambda_1$ incident on the sample. Due to diffraction, its intensity in the sample plane is distributed according to the law \[I_1(y)=I_1(0)\exp\left(-\cfrac{y^2}{\Delta^2_0}\right),\tag{1}\]where $\Delta_0$ is the Abbe resolution limit obtained in part A.</p>
+<h2 class="part">STED (STimulated Emission Depletion)</h2>
+<p>Consider the phenomenon of stimulated emission of radiation (STED): if a photon $\lambda_3>\lambda_2, \lambda_1$ is incident on a molecule in the $S^*$ state, the molecule can return to the $S$ state by emitting a $\lambda'_3=\lambda_3$ photon. The probability of such a transition per unit time is $\sigma_3I_3$ (Fig. 4). $\lambda'_3$ photons emitted during stimulated emission of radiation (STED) do not participate in image formation. In those areas of the sample where such transitions occur, the number of molecules in the $S^*$ state decreases, and hence the number of emitted $\lambda_2$ photons decreases. If the maximum radiation intensity $\lambda_1$ on the sample coincides with the minimum radiation intensity $\lambda_3$ on the sample, then this will narrow the region on it where molecules can emit photons $\lambda_2$. The size of this region was initially limited by the resolution limit $\Delta_0$ (see formula (1)), so such an improvement would, in fact, overcome the Abbe limit. In practice, this can be done as follows. The radiation beam $\lambda_3$ is passed through a diaphragm with a diameter $d$. A phase plate of a certain radius is installed in the center of this diaphragm. This plate adds the $\pi$ phase to the rays passing through it.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">At what plate radius $r_0$ is the minimum intensity $\lambda_3$ on the sample equal to zero?</div><span class="pb-pts">0.50</span></div>
+<p>In practice, phase plates with a more complex profile are often used, which give the intensity distribution $\lambda_3$ on the sample $$ I_3(y)=I_{3,\text{max}}\cdot{\left(\cfrac{1}{2}-\cfrac{1}{2}\cos\cfrac{\pi y}{\Delta_0}\right)} $$Такое распределение также имеет характерную ширину $\Delta_0$. Поскольку мы будем говорить о преодолении предела Аббе, то уместно приближение $y\ll{\Delta_0}$.</p>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Rearrange the formula above using the $y\ll{\Delta_0}$ approximation.</div><span class="pb-pts">0.50</span></div>
+<p>There are two methods for using the STED method: cwSTED (continuous wave STED, STED with constant irradiation) and ptgSTED (pulsed time gated STED, STED with pulsed excitation and recording).</p>
+<h2 class="part">Continuous exposure STED (cwSTED)</h2>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Let the sample be irradiated simultaneously by two lasers $I_1$ (intensity distribution (1)), and $I_3$ (intensity distribution from point B4). The fraction of $N^*/N_0$ molecules in the $S^*$ state can be written as $$\cfrac{N^*}{N_0}=A\exp\left(-\cfrac{y^2}{\Delta^2_\text{cwSTED}}\right) $$ На практике мощность $I_{3,\text{max}}$ велика, и $\sigma_3I_{3,\text{max}}\gg{\sigma_1I_1(0)}$. Найдите параметры $A⟦M 8⟧\Delta_\text{cwSTED}$. Примечание: Используйте приближение $\cfrac{1}{1+x}\approx{1-x}\approx{e^{-x}}{,}x\ll{1}$.</div><span class="pb-pts">1.00</span></div>
+<p>Note: Use the $\cfrac{1}{1+x}\approx{1-x}\approx{e^{-x}}{,}x\ll{1}$ approximation.</p>
+<p>Note that the value $\Delta_\text{cwSTED}$ is the resolution limit, which is defined in the same way as the Abbe resolution limit $\Delta_0$ was previously defined.</p>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Draw the qualitative dependences $I_1(y)$, $I_3(y)$ and $N^*(y)/N_0$ on one graph.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Determine at what $I_{3,\text{max}}$ a tenfold gain in resolution is achieved, i.e. $\Delta_\text{cwSTED}=\Delta_0/10$.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Pulsed excitation and shooting STED (pgtSTED)</h2>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Let the sample now be irradiated for time $\tau_1\ll{\tau_{fl}}$ by laser $I_1$ (intensity distribution $(1)$), and then for time $\tau_3$ with laser $I_3$ (intensity distribution from point B4). The fraction of $N^*/N_0$ molecules that are in the $S^*$ state can be written as $$\cfrac{N^*}{N_0}=A\exp\left(-\cfrac{y^2}{\Delta^2_\text{pgtSTED}}\right) $$На практике мощность $I_{3,\text{max}}$ велика, и $\sigma_3I_{3,\text{max}}\gg{\sigma_1I_1(0)}$. Найдите параметры $A$ и $\Delta_\text{pgtSTED}$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Ground state depletion (GSD)</h2>
+<p>In addition to the $S$ and $S^*$ states, the fluorescent molecule also has a third state $T$. The transition $S^*\to{T}$ has a characteristic time $\tau_{ISC}$, the transition $T\to{S}$ has a characteristic time $\tau_{ph}$, and $\tau_{ph}\gg{\tau_{ISC}\gg{\tau_{fl}}}, 1/(\sigma_1I_1)$. (Assume that the molecule does not return from state $T$ to state $S$ during the experiment.) Let laser radiation $\lambda_1$ fall on the sample during time $\tau_1'$ with distribution \[I_1' = I_{1,\text{max}}'\left( \frac{1}{2} - \frac{1}{2} \cos \frac{\pi y}{\Delta_0} \right).\]Then, for some time $\tau_1$ fluorescence is excited by the same laser $\lambda_1$, but with intensity distribution (1). Moreover, $\tau_{fl} \ll \tau_1 \ll \tau_{ph}$. Here, as before, the approximations of points B2 and B4 are valid.</p>
+<div class="problem-box"><span class="pb-id">B9</span><div class="pb-text">The fraction of $N^*/N_0$ molecules in the $S^*$ state can be written as $$\cfrac{N^*}{N_0}=A\exp\left(-\cfrac{y^2}{\Delta^2_\text{GSD}}\right). $$Найдите параметры $A$ и $\Delta_\text{GSD}$.</div><span class="pb-pts">2.00</span></div>
+<h2 class="part">Part C. Interference $4\pi$-microscopy and improvement of axial resolution</h2>
+<p>Part B examined techniques to improve the resolution of a fluorescence microscope in the sample plane. The problem of resolution along the optical axis is more acute - it is initially worse. To solve this problem, interference microscopy is used.</p>
+<p>Rice. 6. An interference circuit that allows you to increase the resolution of the microscope along the optical axis. The signals received by the two lenses are combined using 50:50 reflective elements and phase plates.</p>
+<div class="figure"><img src="T1_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<p>In this setup, the image is obtained by two lenses adjusted to the same sample plane. The signals received by the lenses are divided into prisms $50:50$, and the reflected beam gains an additional phase $\pi/2$. The optical path also contains two phase plates $\varphi_a=3\pi/2$, $\varphi_b=3\pi/2$. With the help of these optical elements, the signal emitted by the sample is divided into several beams with different phases and interferes, being collected at the detectors $1$, $2$, $3$ and $4$. We will assume that there is a single point source in the field of view, shifted from the plane to which the lenses are adjusted by $z<\lambda$.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Let the signal intensities collected by each lens be equal to $I_0$. Find the intensities of the beams resulting from interference at detectors 1, 2, 3 and 4.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Draw graphs of the dependencies found in C1.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Express $z$ through the relations $I_1/I_3$ and $I_2/I_4$, indicate at what shift $z\to{z+\Delta{z}}$ these relations remain unchanged?</div><span class="pb-pts">0.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3047">https://pho.rs/p/3047</a></p>
+</body>
+</html>

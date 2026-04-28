@@ -1,0 +1,1504 @@
+window.ruphoData = {
+  "rupho-x": {
+    "2016": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2016/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2016/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_1_EN_2",
+        "label": "T3_1",
+        "problem": "rupho-x/2016/T3_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_2_EN_2",
+        "label": "T3_2",
+        "problem": "rupho-x/2016/T3_2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_3_EN_2",
+        "label": "T3_3",
+        "problem": "rupho-x/2016/T3_3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_4_EN_2",
+        "label": "T3_4",
+        "problem": "rupho-x/2016/T3_4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2016/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2016/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2016/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2017": [
+      {
+        "key": "T1_1_EN_2",
+        "label": "T1_1",
+        "problem": "rupho-x/2017/T1_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_2_EN_2",
+        "label": "T1_2",
+        "problem": "rupho-x/2017/T1_2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2017/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_1_EN_2",
+        "label": "T3_1",
+        "problem": "rupho-x/2017/T3_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_2_EN_2",
+        "label": "T3_2",
+        "problem": "rupho-x/2017/T3_2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2017/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2017/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_1_EN_2",
+        "label": "T6_1",
+        "problem": "rupho-x/2017/T6_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_2_EN_2",
+        "label": "T6_2",
+        "problem": "rupho-x/2017/T6_2_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2018": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2018/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2018/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2018/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2018/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2018/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2018/T6_EN_2.pdf",
+        "solution": "rupho-x/2018/T6_S_EN_2.pdf"
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-x/2018/T7_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T8_EN_2",
+        "label": "T8",
+        "problem": "rupho-x/2018/T8_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2019": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2019/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2019/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2019/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2019/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2019/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2019/T6_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-x/2019/T7_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T8_EN_2",
+        "label": "T8",
+        "problem": "rupho-x/2019/T8_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2020": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-x/2020/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-x/2020/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-x/2020/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-x/2020/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2020/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2020/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2020/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2020/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2020/T6_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-x/2020/T7_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2021": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-x/2021/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-x/2021/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-x/2021/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2021/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2021/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2021/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2021/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2021/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2021/T6_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-x/2021/T7_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2022": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-x/2022/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-x/2022/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-x/2022/PE_EN_2.pdf",
+        "solution": "rupho-x/2022/PE_S_EN_2.pdf"
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2022/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2022/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2022/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2022/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2022/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2023": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-x/2023/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-x/2023/E2_EN_2.pdf",
+        "solution": "rupho-x/2023/E2_S_EN_2.pdf"
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-x/2023/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-x/2023/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2023/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2023/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2023/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2023/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2023/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2023/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2024": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-x/2024/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-x/2024/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-x/2024/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2024/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2024/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2024/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2024/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2024/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2024/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2025": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": null,
+        "solution": "rupho-x/2025/E1_S_EN_2.pdf"
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": null,
+        "solution": "rupho-x/2025/E2_S_EN_2.pdf"
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-x/2025/E3_EN_2.pdf",
+        "solution": "rupho-x/2025/E3_S_EN_2.pdf"
+      },
+      {
+        "key": "E4_EN_2",
+        "label": "E4",
+        "problem": "rupho-x/2025/E4_EN_2.pdf",
+        "solution": "rupho-x/2025/E4_S_EN_2.pdf"
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2025/T1_EN_2.pdf",
+        "solution": "rupho-x/2025/T1_S_EN_2.pdf"
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2025/T2_EN_2.pdf",
+        "solution": "rupho-x/2025/T2_S_EN_2.pdf"
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2025/T3_EN_2.pdf",
+        "solution": "rupho-x/2025/T3_S_EN_2.pdf"
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2025/T4_EN_2.pdf",
+        "solution": "rupho-x/2025/T4_S_EN_2.pdf"
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2025/T5_EN_2.pdf",
+        "solution": "rupho-x/2025/T5_S_EN_2.pdf"
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2025/T6_EN_2.pdf",
+        "solution": "rupho-x/2025/T6_S_EN_2.pdf"
+      }
+    ],
+    "2026": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-x/2026/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-x/2026/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-x/2026/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-x/2026/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-x/2026/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-x/2026/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-x/2026/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-x/2026/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-x/2026/T6_EN_2.pdf",
+        "solution": null
+      }
+    ]
+  },
+  "rupho-y": {
+    "2012": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2012/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2012/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2012/T3_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2013": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2013/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2013/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2013/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2013/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2013/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2013/T6_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-y/2013/T7_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T8_EN_2",
+        "label": "T8",
+        "problem": "rupho-y/2013/T8_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T9_1_EN_2",
+        "label": "T9_1",
+        "problem": "rupho-y/2013/T9_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T9_2_EN_2",
+        "label": "T9_2",
+        "problem": "rupho-y/2013/T9_2_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2014": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2014/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2014/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2014/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2014/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-y/2014/T7_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T8_1_EN_2",
+        "label": "T8_1",
+        "problem": "rupho-y/2014/T8_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T8_2_EN_2",
+        "label": "T8_2",
+        "problem": "rupho-y/2014/T8_2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T8_3_EN_2",
+        "label": "T8_3",
+        "problem": "rupho-y/2014/T8_3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T10_EN_2",
+        "label": "T10",
+        "problem": "rupho-y/2014/T10_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T11_EN_2",
+        "label": "T11",
+        "problem": "rupho-y/2014/T11_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T12_1_EN_2",
+        "label": "T12_1",
+        "problem": "rupho-y/2014/T12_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T12_2_EN_2",
+        "label": "T12_2",
+        "problem": "rupho-y/2014/T12_2_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2016": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2016/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2016/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2016/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_1_EN_2",
+        "label": "T5_1",
+        "problem": "rupho-y/2016/T5_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_2_EN_2",
+        "label": "T5_2",
+        "problem": "rupho-y/2016/T5_2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_1_EN_2",
+        "label": "T6_1",
+        "problem": "rupho-y/2016/T6_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_2_EN_2",
+        "label": "T6_2",
+        "problem": "rupho-y/2016/T6_2_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2017": [
+      {
+        "key": "T1_1_EN_2",
+        "label": "T1_1",
+        "problem": "rupho-y/2017/T1_1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_2_EN_2",
+        "label": "T1_2",
+        "problem": "rupho-y/2017/T1_2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_3_EN_2",
+        "label": "T1_3",
+        "problem": "rupho-y/2017/T1_3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2017/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2017/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2017/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2017/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2017/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2018": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2018/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2018/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2018/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2018/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2018/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2018/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2019": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2019/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2019/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2019/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2019/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2019/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2019/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2020": [
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-y/2020/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-y/2020/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2020/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2020/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2020/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2020/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2020/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2021": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-y/2021/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE1_EN_2",
+        "label": "PE1",
+        "problem": "rupho-y/2021/PE1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE2_EN_2",
+        "label": "PE2",
+        "problem": "rupho-y/2021/PE2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE3_EN_2",
+        "label": "PE3",
+        "problem": "rupho-y/2021/PE3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2021/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2021/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2021/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2021/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2021/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2021/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2022": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-y/2022/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE1_EN_2",
+        "label": "PE1",
+        "problem": "rupho-y/2022/PE1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE2_EN_2",
+        "label": "PE2",
+        "problem": "rupho-y/2022/PE2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE3_EN_2",
+        "label": "PE3",
+        "problem": "rupho-y/2022/PE3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2022/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2022/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2022/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2022/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2022/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2022/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2023": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-y/2023/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-y/2023/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-y/2023/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E4_EN_2",
+        "label": "E4",
+        "problem": "rupho-y/2023/E4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-y/2023/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2023/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2023/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2023/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2023/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2023/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2023/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2024": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-y/2024/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-y/2024/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-y/2024/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2024/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2024/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2024/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2024/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2024/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2024/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2025": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-y/2025/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-y/2025/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-y/2025/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2025/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2025/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2025/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2025/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2025/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2025/T6_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2026": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-y/2026/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-y/2026/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E3_EN_2",
+        "label": "E3",
+        "problem": "rupho-y/2026/E3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-y/2026/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-y/2026/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-y/2026/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-y/2026/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-y/2026/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-y/2026/T6_EN_2.pdf",
+        "solution": null
+      }
+    ]
+  },
+  "rupho-w": {
+    "2021": [
+      {
+        "key": "E1_EN_2",
+        "label": "E1",
+        "problem": "rupho-w/2021/E1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "E2_EN_2",
+        "label": "E2",
+        "problem": "rupho-w/2021/E2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-w/2021/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-w/2021/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-w/2021/T2_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T3_EN_2",
+        "label": "T3",
+        "problem": "rupho-w/2021/T3_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": "rupho-w/2021/T4_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": "rupho-w/2021/T5_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T6_EN_2",
+        "label": "T6",
+        "problem": "rupho-w/2021/T6_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T7_EN_2",
+        "label": "T7",
+        "problem": "rupho-w/2021/T7_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2022": [
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-w/2022/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-w/2022/T2_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2023": [
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-w/2023/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-w/2023/T1_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2024": [
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-w/2024/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-w/2024/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-w/2024/T2_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2025": [
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-w/2025/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-w/2025/T1_EN_2.pdf",
+        "solution": null
+      }
+    ],
+    "2026": [
+      {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-w/2026/PE_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T1_EN_2",
+        "label": "T1",
+        "problem": "rupho-w/2026/T1_EN_2.pdf",
+        "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-w/2026/T2_EN_2.pdf",
+        "solution": null
+      }
+    ]
+  }
+};

@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Elevator}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In 1854, at the World's Fair in New York, Elisha Otis first demonstrated the safety mechanism for his elevator to the applause of the public. Elisha took the elevator to the height of the fourth floor, and his assistant, meanwhile, cut off the cable that was holding the elevator - all this while Elisha himself was inside the elevator! Fortunately, the safety mechanism worked and the elevator stopped after a short fall. The insurance mechanism thus saved the life of its inventor several times in a row. In this problem we will consider two elevator insurance mechanisms.
+
+\section*{Part A. Emergency brake}
+
+The part that was so dramatically demonstrated at the exhibition was the emergency brake.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+The principle of operation of the mechanism: In the normal state, the cable that holds the elevator is highly tensioned and compresses two springs (each with an elasticity coefficient of $k=30~\text{kN}/\text{m}$). When the cable is cut, the springs are released and the beam, weighing $m = 10~\text{kg}$, falls down relative to the elevator. This, in turn, causes the fuses to rotate so that their ends fit into recesses in the rails on either side of the elevator. The recesses are located at the same distance $h_p=0.15~\text{m}$ along the entire height of the rails. The moment of inertia of each fuse (relative to the axis of rotation) is $I_p=3~\text{kg}\cdot\text{m}^2$. The distance from the axis to the pressure point on the fuses on the side of the beam is $r=0.3~\text{m}$. In order for the fuse to fit into the recess opposite, it must rotate at an angle $\theta=6^{\circ}$ from its original state. If the fuse were turned at an angle $12^{\circ}=2\theta~\ll~90^{\circ}$, then the springs would be completely unstretched. The mass of the empty elevator is $M=300~\text{kg}$, and the mass of Otis along with his belongings is $m_1=200~\text{kg}$. Gravitational acceleration is $g=10~\text{m}/\text{s}^2$.
+
+\problembox{A1}{The elevator is at rest, Otis is inside. At some point the cable is cut. To what maximum height $\Delta y$ will the elevator fall until the safety mechanism operates and stops the elevator?}{2.00}
+
+\problembox{A2}{Let's consider another situation: the cable is not cut, but the transmission from it to the engine breaks. This results in a tension force that is less than the force holding the elevator at rest. What is the maximum acceleration $a_1$ with which the elevator will fall down in this situation? (Otis is still inside).}{1.50}
+
+\problembox{A3}{What is the maximum acceleration $a_2$ with which the elevator will move if the elevator is empty?}{0.50}
+
+\section*{Part B. Speed Controller}
+
+From the previous paragraphs it is clear that the elevator should be equipped with additional means of protection against falling at high speed. The speed controller is the mechanism that will provide appropriate protection. Below are the data for the parameters shown in the figure: $R_T=1.1~\text{m},~R_G=0.4~\text{m},~\mu_G=0.3,~L=0.5~\text{m},~m=12~\text{kg},~\eta=6.$ The speed controller consists of several parts: – A rotating drum on which the cable is wound. An elevator is suspended on a cable on one side, and a balancing weight on the other. The drum is very rough so there is no slipping between it and the cable. – Gear with gear ratio $\eta$, which connects the rotating drum with the rapidly rotating axle. – A rapidly rotating axis, two pins (rods) with weights at the lower ends are hinged on it. The pins can swing away from the axis depending on the angular speed at which they move. – A hollow drum inside which the pins rotate. The transmission creates a situation in which the loads move at a greater angular velocity than the rotational speed of the rotating drum. The speed is high enough for the weights to open up and touch the inner walls of the drum, and the friction between the weights and the drum is able to regulate the speed of the elevator so that it is not too high.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{B1}{Write down the expression and calculate the critical speed of the elevator $\upsilon_0$ at which the speed controller loads will touch the drum.}{1.00}
+
+\problembox{B2}{Calculate the highest speed $\upsilon_{max}$ at which the elevator can move against the governor when the elevator is fully loaded, the balancing weights are turned off, and the motor is also turned off.}{1.00}
+
+\section*{Part C. Energy Consumption}
+
+Modern elevators are designed to operate with as little energy consumption as possible. We study the energy consumption of an elevator in a modern office building. Building height $H=43~\text{m}$. The empty mass of the elevator is $M_E=800~\text{kg}$, in addition the elevator can carry a maximum of $M_{max}=1200~\text{kg}$. Rated speed of the elevator $\upsilon=1.25~\text{m}/\text{s}$, rated acceleration of the elevator $a=1.0~\text{m}/\text{s}^2$. Mass of the balancing load $M_c=1300~\text{kg}$. The efficiency of the electric elevator motor is $\eta=0.83$.
+
+\problembox{C1}{What is the maximum power consumption of the motor $P_{max}$ that drives the elevator?}{1.00}
+
+The portion of time the elevator moves during the day $D=10\%$. For simplicity, we will assume that half the time the elevator travels fully loaded, and half the time it is empty. During each trip, the elevator travels the entire height of the building, the number of ascents is equal to the number of descents. In this model, the elevator operates exclusively as an energy consumer, that is, it brakes using brakes, which convert all the kinetic energy from the movement of the elevator into heat. Also, when the elevator descends full, the motor does not supply electricity, but the brakes must work during the descent.
+
+\problembox{C2}{What is the average power consumption $P_{avg}$ of an elevator motor per day?}{1.00}
+
+Average electricity tariff: $\frac{C}{E}=6~\frac{\text{rub}}{\text{kW}\cdot\text{h}}$.
+
+\problembox{C3}{What amount of $C_{mon}$ for elevator operation will appear on the monthly electricity bill for this building?}{1.00}
+
+In order to reduce these costs, you can purchase an elevator with an energy storage system (for example, with a battery, flywheel, supercapacitors), which will allow you to waste less energy. In such a system, the electric motor that drives the elevator will act as a generator in a situation where the mechanical energy of the elevator is reduced (for example, when the elevator is descending when fully loaded). The efficiency of the generator is equal to the efficiency of the electric motor: $\eta_{gen}=\eta=0.83$.
+
+\problembox{C4}{Get an optimistic estimate of the monthly cost $C_1$ of operating an economical elevator model.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/21}
+
+\end{document}

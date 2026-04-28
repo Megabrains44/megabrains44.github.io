@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Polytropic hat-trick}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Once Lord Kelvin carried out a cycle of a heat engine, the working fluid of which was one mole of an ideal gas with adiabatic index $\gamma$. The cycle consists of three polytropic processes, one of which is isobaric, and the product of the exponents of the other two polytropes $13$ and $23$ was equal to $n_{13}n_{23}=-1$, where $1$ and $2$ are the isobar points with minimum and maximum temperatures, respectively, and $3$ is the intersection point of the polytrope $13$ and $23$. The temperature at point $3$ satisfies the relation $T_3^2=T_1T_2$. $T_1=100~\text{К}$, $T_2=400~\text{К}$, $\gamma=1.5$.
+
+\problembox{A1}{Find the work $A$ of the gas in the cycle.}{3.50}
+
+\problembox{A2}{Find the efficiency $\eta$ of the cycle.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/28}
+
+\end{document}

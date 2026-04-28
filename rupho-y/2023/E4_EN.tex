@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Intensities in diffraction}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+There is no need to estimate errors in this problem! Equipment: Optical bench Movable stands (6 pcs.) Magnetic holders (3 pcs.) Platform for smooth horizontal movements Diffraction grating holder Laser holder Steel screen Lens Laser module (laser wavelength $630~\text{nm}$). Do not apply voltage more than 5 V to it! Slide with diffraction gratings, plastic holder with clips Power supply CCD array (linear array of photodiodes, photodiode size is 10 microns, they are located closely) Slot (blades fixed in the slide frame) Tape measure Wires for connecting the laser Laptop
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Working with the program}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+ mm    ,  on    (-),    s    . -   mm:         .  for         for    ,       for       and      for   s mm :   for     .  on  " " (5) --- COM3.        " ".    ,   and   .   :        on  " "(4).        (10). ,    in          .      ,   .  ,     s,  ,      (6).       50000.  s ,    :   (2)   : "  ".   (3)   ,  on  . " ".     .    (8)      .    in h C , in      .  and   :  ,    and ,   ,     (12).   in  s  .dat.  :  on     .       .   ,      (10).        s   .  in   in    ,     .      in  on   s   in .     for  ,    .
+
+V       on   and on .      s  , then      and min,      .        cm     .
+
+\section*{Part A. Diffraction grating (2.8 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+In this part of the problem, you are asked to study the diffraction pattern behind a diffraction grating, onto which laser radiation with wavelength $\lambda$ is incident normally. The diffraction grating is a periodic structure with a period $d$, each period is a slit of width $b$ and an opaque section.
+
+\problembox{A1}{Express the direction angle $\varphi$ to the maximum number $m$ in terms of the laser wavelength $\lambda$, $m$ and the grating period $d$.}{0.20}
+
+\problembox{A2}{Express the intensity $I_m$ of maximum number $m$ in terms of the amplitude $I_0$ of the zero maximum, $d$ and the size of the grating opening $b$.}{0.70}
+
+In this part of the problem it will be necessary to study the diffraction pattern of the DG3 diffraction grating. Assemble the setup and obtain the diffraction pattern. Next, using a spectroscopic sensor and a program on a laptop, obtain the intensity distribution on the given grating.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{A3}{Obtain a diffraction pattern. Save the file with the measured data in a folder with your last name. Enter the name of the file on your answer sheet. Name the file "A3".}{0.20}
+
+\problembox{A4}{Determine the lattice period $d$ as accurately as possible.}{0.80}
+
+\problembox{A5}{Determine the slit width ratio $b$ as accurately as possible.}{0.90}
+
+\section*{Part B. Fraunhofer diffraction by a slit (1.4 points)}
+
+When a parallel beam of rays falls on the slit, and the screen is far enough from the slit, Fraunhofer diffraction can be observed on the screen. We can consider that a laser beam is a parallel beam of rays. This part uses the following installation diagram. Light from the laser module falls on the slit; behind the slit at a distance $l$ there is a screen with a sensor that records the intensity distribution in the diffraction pattern. Make sure that the laser beam hits the center of the slit at a right angle.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{B1}{Assemble the suggested installation. Obtain a diffraction pattern. Record the distance $l$. Save the file with the measured data in a folder with your last name. Enter the name of the file on your answer sheet. Name the file "B1".}{0.40}
+
+\problembox{B2}{Using the data obtained, determine the slot width $b$. Give the theoretical formulas necessary for the calculation.}{1.00}
+
+\section*{Part C. Fresnel diffraction (3.8 points)}
+
+In this part of the problem you will examine the diffraction pattern from slit diffraction. As a gap in your equipment, you have blades secured in a holder. Please indicate the number written on the holder body.
+
+According to the Huygens-Fresnel principle, the intensity in the plane of the screen can be obtained as a result of the interference of secondary sources located in the plane of the slit. For simplicity, we will assume that the slit is illuminated uniformly and the radiation intensities from all parts of the slit are the same. We need to find the intensity at an arbitrary point $B$ of the detector plane with coordinate $y$. A point light source $S$ is located at a distance $a$ from the slit, opposite its center. Let us introduce the coordinate axis $x$ in the slit plane (the origin of coordinates is the center of the slit) and the coordinate axis $y$ in the plane of the detector (the origin of coordinates is opposite the center of the slit). Let us consider a secondary wave that is emitted by some point $A$ of the slit and hits the point $B$. Then the phase of the wave $\delta(x, y)$ arriving at point $B$ is determined by the path length $SAB$. The amplitude of the wave at point $B$ is equal to the integral $$ f = \int dx e^{i \delta(x, y)}, $$ and the intensity is proportional to the squared modulus of the resulting value.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{C1}{Write down the exact expression for the phase difference $\delta(x, y)$. Express your answer in terms of $x$, $y$, $a$, $l$, $\lambda$.}{0.20}
+
+\problembox{C2}{We can assume that $x, y \ll a, l$ and in all expressions limit ourselves to the second order in $x, y$. Show that the phase difference can be represented as $$ \delta = \delta_0 + \frac{(x- x_1)^2}{L_0^2}, $$where $$ x_1 = x_{10 } + \alpha y, \; \alpha = \frac{a}{a+l}, \; L_0^2 = \frac{ a l \lambda}{\pi (a + l)}. $$  $\delta_0$, $x_{10}$ we don’t need them, we don’t need to find them.}{0.60}
+
+Under the assumptions made, the intensity distribution on the screen is expressed through the so-called Fresnel integrals. The final expression is quite cumbersome, but the program provided to you can plot the theoretical relationship according to the given parameters. To construct a theoretical graph, you need to specify 5 parameters: amplitude $A$, which specifies the overall scale of the graph along the vertical axis (for typical measurements its characteristic order is $100-1000$); slot width $d$ (in meters); displacement -- the total horizontal displacement of the graph $y_0$ (in meters); coefficient $\alpha$; length $L_0$.
+
+Under the assumptions made, the intensity distribution on the screen is expressed through the so-called Fresnel integrals. The final expression is quite cumbersome, but the program provided to you can plot the theoretical relationship according to the given parameters. To build a theoretical graph, you need to specify 5 parameters:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+When the source is far away from the slit, a Fraunhofer diffraction pattern is observed. If you move the source closer to the slit, at some point a minimum will appear in the center of the central maximum. With further approximation, it is possible to obtain pictures with a large number of minima.
+
+\problembox{C3}{Determine the focal length of the lens $F$ given to you.}{0.30}
+
+Assemble the installation shown in the figure. The laser beam hits the lens and forms an image at the focal plane of the lens. This image serves as the source from which diffraction at the slit is observed. Thus, the distance $a$ means the distance from the lens focus to the slit plane.
+
+\problembox{C4}{As the slit successively approaches a point source, you will obtain three diffraction patterns at this position of the slit: When a minimum begins to form in the center When there is a deep dip in intensity in the center ($I_{min}/I_{max}$ minimum) When a central maximum and two minima on the sides are visible. Record the geometric parameters of the setup under which these images were obtained. Save the file with the measured data in a folder with your last name. Provide file names on your answer sheets. Name the files “C4.1”, “C4.2” and “C4.3” respectively.}{1.20}
+
+\problembox{C5}{Using the program, select the parameters of the theoretical dependence so that it coincides as accurately as possible with the central part of the experimental graph (at large distances from the central region, deviations from the theory are possible due to the inhomogeneity of the intensity distribution along the slit and experimental errors). Indicate the received parameters in the answer sheets. Due to measurement errors in $L_0$ and $\alpha$, you may need to adjust their values. Note that the value of the function will not change if $\alpha$, $L_0 $ and $d$ are changed simultaneously by the same number of times.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3496}
+
+\end{document}

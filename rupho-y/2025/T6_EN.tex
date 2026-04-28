@@ -1,0 +1,197 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Electron tube}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem is about a device called a vacuum tube. Electronic tubes are different in their shape and design, but the principle of operation is the same for all: two electrodes are located in an evacuated flask: a cathode and an anode. The cathode is heated by the flow of electric current through it (or through a nearby heater), which leads to thermionic emission - the emission of electrons from its surface. There is a potential difference between the cathode and anode, leading to further movement of electrons in a vacuum. In addition to the cathode and anode, the volume of the lamp may contain other elements (for example, so-called grids) that affect the movement of electrons in the lamp. In all answers to this problem, in addition to the quantities indicated in each paragraph, you can use: magnetic constant $\mu_0 = 4\pi \cdot 10^{-7}~Н/А^2$; electrical constant $\varepsilon_0 = 8.85 \cdot 10^{-12}~Ф/м$; Boltzmann constant $k = 1.38\cdot10^{-23}~J/К$; electron mass $m = 9.1 \cdot 10^{-31}~кг$; electron charge module $e = 1.6 \cdot 10^{-19}~Кл$. Note. The problem will require solving an equation of the form $$\textbackslash\{\}psi''(z) = f(\textbackslash\{\}psi(z)),$$ которое после домножения обеих частей на $\psi'(z)$ и интегрирования преобразуется к виду $$\textbackslash\{\}int \textbackslash\{\}psi'(z) \textbackslash\{\}psi''(z) dz = \textbackslash\{\}int f(\textbackslash\{\}psi(z)) \textbackslash\{\}psi'(z) dz.$$ Интегрирование даёт $$\textbackslash\{\}frac\{\textbackslash\{\}psi'(z)^2\}\{2\} = \textbackslash\{\}int f(\textbackslash\{\}psi(z)) d\textbackslash\{\}psi(z) + C,$$ где $C$ – константа, определяемая из начальных условий. После вычисления интеграла в правой части уравнения для заданной функции $f$ переменные разделяются.
+
+Кроме катода и анода в объёме лампы могут находится другие элементы (например, так называемые сетки), влияющие на движение электронов в лампе.
+
+Во всех ответах этой задачи кроме указанных в каждом пункте величин вы можете использовать:
+
+Примечание. В задаче потребуется решать уравнение вида
+
+$ $\textbackslash\{\}psi''(z) = f(\textbackslash\{\}psi(z)),$$
+
+которое после домножения обеих частей на $\psi'(z)$ и интегрирования преобразуется к виду
+
+$$\textbackslash\{\}int \textbackslash\{\}psi'(z) \textbackslash\{\}psi''(z) dz = \textbackslash\{\}int f(\textbackslash\{\}psi(z)) \textbackslash\{\}psi'(z) dz.$$
+
+Интегрирование даёт
+
+$$\textbackslash\{\}frac\{\textbackslash\{\}psi'(z)^2\}\{2\} = \textbackslash\{\}int f(\textbackslash\{\}psi(z)) d\textbackslash\{\}psi(z) + C,$$
+
+где $C$ – константа, определяемая из начальных условий. После вычисления интеграла в правой части уравнения для заданной функции $f$ variables are separated.
+
+\section*{Part A. Motion of an electron in an electromagnetic field (3.8 points)}
+
+Let's consider a vacuum diode - a lamp in the volume of which the cathode and anode are located. Let the cathode and anode be thin parallel plates of area $S$. The distance between the plates is $h$, and $h \ll \sqrt{S}$. The cathode is heated by means of a straight long wire of radius $r_0$ pressed closely to it. A current $I$ uniformly distributed over the cross-section flows through the wire. Let's direct the $x$ axis in the figure to the right, parallel to the plates, and the $y$ axis upward, perpendicular to the plates. For the origin of coordinates, we select the point $C$, located above the wire. The $z$ axis will be directed perpendicular to the drawing towards us.
+
+Let's consider a vacuum diode - a lamp in the volume of which the cathode and anode are located. Let the cathode and anode be thin parallel plates of area $S$. The distance between the plates is $h$, and $h \ll \sqrt{S}$. The cathode is heated by means of a straight long wire of radius $r_0$ pressed closely to it. A current $I$ flows through the wire, uniformly distributed over the cross-section. Let's direct the $x$ axis in the figure to the right, parallel to the plates, and the $y$ axis upward, perpendicular to the plates. For the origin of coordinates, we select the point $C$, located above the wire. The axis $z$ will be directed perpendicular to the drawing towards us.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+First, let's consider the movement of the first emitted electron after the current is turned on, that is, while there is no space charge in the space between the electrodes. In this case, the electron moves in the electric field of the cathode and anode, as well as in the magnetic field created by the heater current. The potential difference between the cathode and anode is constant and equal to $U= \varphi_А - \varphi_К > 0$.
+
+\problembox{A1}{Let the electron begin to move with zero initial speed from the point $C$. Show that in this case $x(t) = 0$.}{0.30}
+
+\problembox{A2}{For the described case, write down Newton’s second law in projection on the $y$, $z$ axes, from them obtain expressions for $\ddot{y}$, $\ddot{z}$. The expressions may contain $\dot{y}$, $\dot{z}$, $y$, $z$, $U$, $I$, as well as geometric characteristics of the system.}{0.50}
+
+\problembox{A3}{Obtain a differential equation for $y$ of the form $$\textbackslash\{\}ddot\{y\} = \textbackslash\{\}alpha - \textbackslash\{\}beta \textbackslash\{\}frac\{\textbackslash\{\}ln \textbackslash\{\}left(1+\textbackslash\{\}frac\{y\}\{r_0\}\textbackslash\{\}right)\}\{1+\textbackslash\{\}frac\{y\}\{r_0\}\},$$ где $\alpha$, $\beta$ – константы. Найдите $\alpha$, $\beta$. The answer may contain all previously entered quantities and constants.}{1.00}
+
+\problembox{A4}{Find the maximum value of the heater current $I_{кр}$ at which the electron in question reaches the anode.}{0.80}
+
+Let's look at another commonly used anode and cathode configuration. Let the cathode be a metal wire of radius $r_0$, length $L$, through which a uniformly distributed current $I$ flows; the flow of current heats the wire, which leads to the emission of electrons. The anode is the surface of a cylinder of radius $R_0$, length $L$ ($L \gg R_0$). As before, the potential difference between the anode and cathode is $U= \varphi_А - \varphi_К > 0$.
+
+Let's look at another commonly used anode and cathode configuration. Let the cathode be a metal wire of radius $r_0$, length $L$, through which a uniformly distributed current $I$ flows; the flow of current heats the wire, which leads to the emission of electrons. The anode is the surface of a cylinder of radius $R_0$, length $L$ ($L \gg R_0$). As before, the potential difference between the anode and cathode is $U= \varphi_А - \varphi_К > 0$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A5}{Let the electron start moving with zero initial speed from the point $C$ in the cylindrical lamp configuration. In this case, find the maximum value of the heater current $I_{кр}$ at which the electron reaches the anode.}{1.20}
+
+\section*{Part B. I-V characteristics of a vacuum diode (4.1 points)}
+
+In steady state, electrons move from the cathode to the anode, creating a current depending on the voltage $U$ applied to the lamp. The presence of electrons in the interelectrode space leads to a certain steady distribution of charge density and potential in it. This part is devoted to finding the diode’s current-voltage characteristics, spatial distributions of potential and charges. In reality, in lamps there is always $I \ll I_{кр}$, so in the future we will consider movement only in an electric field. Also, in what follows we will neglect the initial velocity of the electrons. This assumption works well for $kT \ll e U$, where $T$ is the cathode temperature. Let's consider a flat configuration. We will assume that each electron moves in the average potential created by all other electrons. Let $\rho(y)$, $\varphi(y)$ be the dependences of the charge density and potential on the coordinate $y$. For definiteness, we will assume the cathode potential to be zero ($\varphi(0) = 0$).
+
+This part is devoted to finding the diode’s current-voltage characteristics, spatial distributions of potential and charges.
+
+In reality, in lamps there is always $I \ll I_{кр}$, so in the future we will consider movement only in an electric field. Also, in what follows we will neglect the initial velocity of the electrons. This assumption works well for $kT \ll e U$, where $T$ is the cathode temperature.
+
+Let's consider a flat configuration.
+
+We will assume that each electron moves in the average potential created by all other electrons. Let $\rho(y)$, $\varphi(y)$ be the dependences of the charge density and potential on the coordinate $y$. For definiteness, we will assume the cathode potential to be zero ($\varphi(0) = 0$).
+
+\problembox{B1}{Derive a differential equation relating $\varphi(y)$ and $\rho(y)$.}{0.30}
+
+\problembox{B2}{Let us assume that $U > 0$. Find the speed of the electron $v(y)$ emitted from the cathode at a distance $y$ from the cathode. Express your answer in terms of $\varphi(y)$.}{0.20}
+
+\problembox{B3}{Express the total current $I$ flowing through the section $y = \mbox{const}$. Express your answer in terms of $\rho(y)$, $v(y)$ and the geometric characteristics of the system. Consider the direction of current from the anode to the cathode to be positive.}{0.30}
+
+We will assume that there is no electric field directly at the cathode, which gives another initial condition: $\varphi'(0) = 0$.
+
+\problembox{B4}{Obtain a differential equation on $\varphi(y)$ containing the function $\varphi(y)$ and its derivatives, as well as $I$ and the geometric characteristics of the system.}{0.40}
+
+\problembox{B5}{Get dependency $\varphi(y)$. Express your answer in terms of $I$ and the geometric characteristics of the system.}{0.80}
+
+\problembox{B6}{The current-voltage characteristic of the lamp at $U > 0$ can be expressed by the function $$I(U) = GU^\textbackslash\{\}gamma.$$ Определите коэффициенты $G$, $\gamma$. Ответ выразите через геометрические характеристики системы. Величина $G$ is called the perveance of the lamp.}{0.80}
+
+The quantity $G$ is called the lamp perveance.
+
+\problembox{B7}{Get dependency $\rho(y)$. Express your answer in terms of $I$ and the geometric characteristics of the system.}{0.50}
+
+\problembox{B8}{Obtain the current-voltage characteristic of lamp $I(U)$ at $U < 0$.}{0.20}
+
+Let's consider a cylindrical configuration. Let us denote $r$ – the distance from the wire axis to the electron. The potential distribution in such a system is a function of $r$ only.
+
+Let us denote $r$ – the distance from the wire axis to the electron. The potential distribution in such a system is a function of $r$ only.
+
+\problembox{B9}{Obtain a differential equation on $\varphi(r)$ containing the function $\varphi(r)$ and its derivatives, as well as the total current in the lamp $I$ and the geometric characteristics of the system.}{0.60}
+
+The resulting equation cannot be solved analytically, but it can be shown that for a cylindrical configuration the current-voltage characteristic has the same form with the same exponent $\gamma$.
+
+The power-law form of the current-voltage characteristic predicts an unlimited increase in $I$ with increasing $U$. In reality this does not happen, since the current $I$ is limited by the rate of electron emission from the cathode. At high voltages, the current is equal to the saturation current $I_{нас}$. The characteristic empirical dependence of the lamp current on voltage is presented in the graph.
+
+The power-law form of the current-voltage characteristic predicts an unlimited increase in $I$ with increasing $U$. In reality this does not happen, since the current $I$ is limited by the rate of electron emission from the cathode. At high voltages, the current is equal to the saturation current $I_{нас}$. The characteristic empirical dependence of the lamp current on voltage is presented in the graph.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\section*{Part C. Triode and Van der Pol Oscillator (2.1 points)}
+
+Let now a conducting grid having a potential $\varphi_С$ be introduced into the space between the plates parallel to them. Voltage $U_С = \varphi_С - \varphi_К$ is called grid voltage, $U_А = \varphi_А - \varphi_К$ anode. Such a system is called a triode. We will assume that the grid is large enough so that all electrons moving in the space of the lamp pass through it, i.e., no current drains from the grid. The presence of a grid changes the potential distribution in space and thus makes it possible to control the electron current. The current flowing between the anode and cathode $I_А$ depends on both $U_C$ and $U_А$. Dependences of $I_А$ on $U_С$ at $U_А = \mbox{const}$. for different values ​​of $U_А$ are presented in the figure below.
+
+Let us now assume that a conducting grid having a potential $\varphi_С$ is introduced into the space between the plates parallel to them. Voltage $U_С = \varphi_С - \varphi_К$ is called grid voltage, $U_А = \varphi_А - \varphi_К$ anode. Such a system is called a triode. We will assume that the grid is large enough so that all electrons moving in the space of the lamp pass through it, i.e., no current drains from the grid. The presence of a grid changes the potential distribution in space and thus makes it possible to control the electron current. The current flowing between the anode and cathode $I_А$ depends on both $U_C$ and $U_А$. Dependences of $I_А$ on $U_С$ at $U_А = \mbox{const}$. for different values ​​of $U_А$ are presented in the figure below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Dependences $I_А(U_С)$ for various fixed $U_А$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+Now consider an electrical circuit with a triode called a van der Pol oscillator. Such a generator allows you to excite periodic oscillations in the presence of only a direct current source. Let us consider in more detail the mechanism of excitation of oscillations. The necessary designations of elements, currents and voltages are indicated in the figure. In the absence of voltage on the capacitor, which, as can be seen in the diagram, coincides with the grid voltage $U_С$, it is possible to select the anode voltage $U_А$ so that the dependence $I_А(U_С)$ at $U_А = \mbox{const}$. near $U_С = 0$ could be represented as $$I_А(U_С) \textbackslash\{\}simeq I_0 + \textbackslash\{\}lambda U_С - \textbackslash\{\}mu U_С^3, \textbackslash\{\}tag\{1\}$$ где $\lambda$, $\mu$ – положительные константы. Сделаем следующие приближения: Для расcmатриваемых далее значений $U_С$ формула $(1)$ выполнена в точности. Будем считать ЭДС, наводимую катушкой $L$ в катушке $L_А$, пренебрежимо малой по сравнению с напряжением анода, поэтому анодное напряжение $U_А$ остаётся константой, совпадающей с напряжением батарейки. Катушка $L_A$, создает в катушке $L⟦M15 ⟧$\textbackslash\{\}mathcal\{E\} = M \textbackslash\{\}frac\{dI_А\}\{dt\},$$ где $M$ – коэффициент взаимной индукции катушек. Знак $M$ зависит от взаимной ориентации катушек, а также от выбранного направления обхода RLC-контура. В связи с этим далее неважны знаки $\mathcal{E}$ и $M$, вы можете выбрать их произвольно .
+
+Теперь расcmотрим электрическую схему с триодом, называемую генератором Ван-дер-Поля . Такой генератор позволяет возбуждать периодические колебания при наличии только источника постоянного тока. Расcmотрим подробнее механизм возбуждения колебаний. Необходимые обозначения элементов, токов и напряжений обозначены на рисунке. В отсутствие напряжения на конденсаторе, которое, как видно на схеме, совпадает с сеточным напряжением $U_С$, можно так подобрать анодное напряжение $U_А$, чтобы зависимость $I_А(U_С)$ при $U_А = \mbox{const}$. вблизи $U_С = 0$ была представима в виде $$I_А(U_С) \textbackslash\{\}simeq I_0 + \textbackslash\{\}lambda U_С - \textbackslash\{\}mu U_С^3, \textbackslash\{\}tag\{1\}$$ где $\lambda$, $\mu$ – положительные константы. Сделаем следующие приближения: Для расcmатриваемых далее значений $U_С⟦M 31⟧(1)$ выполнена в точности. Будем считать ЭДС, наводимую катушкой $L$ в катушке $L_А$, пренебрежимо малой по сравнению с напряжением анода, поэтому анодное напряжение $U_А$ остаётся константой, совпадающей с напряжением батарейки. Катушка $L_A$, создает в катушке $ L$ ЭДС индукции $$\textbackslash\{\}mathcal\{E\} = M \textbackslash\{\}frac\{dI_А\}\{dt\},$$ где $M$ – коэффициент взаимной индукции катушек. Знак $M$ зависит от взаимной ориентации катушек, а также от выбранного направления обхода RLC-контура. В связи с этим далее неважны знаки $\mathcal{E}⟦M 42⟧M$, вы можете выбрать их произвольно .
+
+Теперь расcmотрим электрическую схему с триодом, называемую генератором Ван-дер-Поля . Такой генератор позволяет возбуждать периодические колебания при наличии только источника постоянного тока. Расcmотрим подробнее механизм возбуждения колебаний.
+
+Необходимые обозначения элементов, токов и напряжений обозначены на рисунке.
+
+В отсутствие напряжения на конденсаторе, которое, как видно на схеме, совпадает с сеточным напряжением $U_С$, можно так подобрать анодное напряжение $U_А$, чтобы зависимость $I_А(U_С)$ при $U_А = \mbox{const}$. вблизи $U_С = 0$ была представима в виде
+
+$$I_А(U_С) \textbackslash\{\}simeq I_0 + \textbackslash\{\}lambda U_С - \textbackslash\{\}mu U_С^3, \textbackslash\{\}tag\{1\}$$
+
+где $\lambda$, $\mu$ are positive constants.
+
+Let's make the following approximations:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{C1}{Kirchhoff's law for an RLC circuit leads to a differential equation of the form $$\textbackslash\{\}ddot\{U\}_С + \textbackslash\{\}zeta(1+\textbackslash\{\}eta U_С^2)\textbackslash\{\}dot\{U\}_С+\textbackslash\{\}chi U_С = 0.$$Выразите $\zeta$, $\eta$, $\chi$ через $R$, $L$, $C$, $M$, $\lambda$, $\mu$.}{0.90}
+
+Let at the initial moment $U_С = 0$. It turns out that with a certain ratio of the circuit parameters, automatic buildup of oscillations (increase in amplitude with time) is possible, followed by a gradual approach to the periodic regime with an arbitrarily small deviation of $U_С$ from zero.
+
+\problembox{C2}{Let $U_С$ deviate from zero by a small amount. Obtain a condition for the parameters $\zeta$, $\eta$, $\chi$, under which the oscillations build up. Also express the resulting condition in terms of $R$, $L$, $C$, $M$, $\lambda$, $\mu$.}{1.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4223}
+
+\end{document}

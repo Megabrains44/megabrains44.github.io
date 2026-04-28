@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Kapitsa pendulum --- Solution}}
+\author{\normalsize Y20 (2020) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{The system has one degree of freedom, angle $\varphi$, and the position of the pendulum can be described by a function of this angle. Express the body's Cartesian coordinates $x(t)$ and $y(t)$ as functions of angle $\varphi(t)$ and time.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x(t)=l\sin\varphi $$ $$y(t)=a\cos{\omega}t-l\cos\varphi $$
+\end{solcard}
+
+\begin{solcard}{A2}{Find the velocity components $v_x$ and $v_y$ of the body. Express your answer in terms of angular velocity $\frac{d\varphi}{dt}$ and time.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_x=\frac{dx}{dt}=l\cos{\varphi}\frac{d\varphi}{dt} $$ $$v_y=\frac{dy}{dt}=l\sin{\varphi}\frac{d\varphi}{dt}-{\omega}a\sin{\omega}t $$
+\end{solcard}
+
+\begin{solcard}{A3}{Find the kinetic and energy of the body. Express your answer in terms of angle $\varphi$, angular velocity $\frac{d\varphi}{dt}$ and time.}{0.50}
+
+$$E_k=\frac{m}{2}\Bigr(\Bigr(\frac{dx}{dt}\Bigl)^2+\Bigr(\frac{dy}{dt}\Bigl)^2\Bigl) $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$E_k=\frac{m}{2}\Bigr(\Bigr(l\frac{d\varphi}{dt}\Bigl)^2+\Bigr({\omega}a  \sin{\omega}t\Bigl)^2-2{\omega}al \sin{\omega}t \sin{\varphi}\frac{d\varphi}{dt}\Bigl) $$
+\end{solcard}
+
+\begin{solcard}{A4}{Derive an expression for the instantaneous power $N$ force applied to the pendulum's suspension point. Express your answer in terms of $m, g, l, a, \omega, \varphi, \frac{d\varphi}{dt}, \frac{d^2\varphi}{dt^2}$ and time.}{1.00}
+
+Let us denote the suspension point of the pendulum as $o$. Then the expression for power becomes $$N=\vec{F_o}\vec{v_o}=F_{oy}\frac{dy_o}{dt} $$From the law изменения momentumа for тела $$F_{oy}=mg+m\frac{d^2y}{dt^2} $$$$\frac{dy_o}{dt}=-{\omega}a\sin{\omega}t $$$$\frac{d^2y}{dt^2}=- {\omega}^2 a \cos{\omega}t + l\Bigr(\sin{\varphi} \frac{d^2{\varphi}}{dt^2}+\cos{\varphi}\Bigr(\frac{d\varphi}{dt}\Bigl)^{2}\Bigl) $$Final answer
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$N=-m{\omega}a\sin{\omega}t\Bigr(g - {\omega}^2 a \cos{\omega}t + l\Bigr(\sin{\varphi} \frac{d^2{\varphi}}{dt^2}+\cos{\varphi}\Bigr(\frac{d\varphi}{dt}\Bigl)^{2}\Bigl)\Bigl) $$
+\end{solcard}
+
+\begin{solcard}{A5}{Show that the equation of motion is: $$ \cfrac{d^2\varphi}{dt^2}=-\cfrac{1}{l}(g-a~\omega^2\cos \omega t)\sin \varphi. $$}{1.00}
+
+The simplest way to show the validity of this relationship is associated with the transition to a non-inertial reference system associated with the suspension point. In it, in addition to the reaction force of the rod and the force of gravity, a vertical inertial force equal to $F_{иy}=-m\frac{d^2y_o}{dt^2}=m{\omega}^2 a \cos{\omega}t$ acts on the body. $$ $$ From the law изменения momentа momentumа относительно точки подвеса we have $$m{l}^2\frac{d^2{\varphi}}{dt^2}=(F_{иy}-mg) l \sin{\varphi} $$ From записанных уравнений поrayается требуемое соratio $$ \cfrac{d^2\varphi}{dt^2}=-\cfrac{1}{l}(g-a~\omega^2\cos \omega t)\sin \varphi. $$ Answerandть на вопрос можно and более формально,продифференцировав закон изменения механической энергии тела в неподвижной системе отсчёта $$N=\frac{dE}{dt}=mgl\sin{\varphi}\frac{d\varphi}{dt}+m\frac{dy}{dt}\frac{d^2y}{dt^2}+m\frac{dx}{dt}\frac{d^2x}{dt^2} $$ $$\frac{d^2x}{dt^2}=l\Bigr(\cos{\varphi}\frac{d^2{\varphi}}{dt^2}-\sin{\varphi}\Bigr(\frac{d\varphi}{dt}\Bigl)^{2}\Bigl) $$ After setting all the quantities obtained earlier, we obtain the required ratio.
+
+\end{solcard}
+
+\begin{solcard}{B1}{Show that the expression for the fast component is $\beta=-\frac{a}{l}~\sin\gamma \cos\omega t$ (for an arbitrary value $\gamma$) is an approximate solution to the equation of motion from A5 under the above conditions. Consider an oscillation mode in which $g$ is negligible compared to $a\omega^2$, i.e. $a\omega^2\gg g$.}{1.00}
+
+Since $\beta$ is the fast component of $$\frac{d^2{\beta}}{dt^2}=\frac{d^2{\varphi}}{dt^2} $$ $$\frac{d^2{\beta}}{dt^2}=-\frac{1}{l}(g-a~\omega^2\cos \omega t)\sin (\gamma +\beta) $$ Since ${\beta} \ll {\gamma}$ and $g \ll a{\omega}^2$, equation for/atобретает следующий вид: $$\frac{d^2{\beta}}{dt^2}=\frac{{\omega}^2 a}{l} \sin{\gamma} \cos {\omega}t=-{\omega}^2Acos({\omega}t)$$ where $$A=-\frac{a}{l}\sin{\gamma}$$ From этого выражения for второй производной $\frac{d^2{\beta}}{dt^2}$ интегрированием we get expression for ${\beta}$: $${\beta}(t)=A\cos({\omega}t)=-\frac{a}{l}\sin{\gamma} \cos {\omega}t$$
+
+\end{solcard}
+
+\begin{solcard}{B2}{Combining the equation of motion from Item A5 s expansion of $\varphi=\gamma+\beta$ and with the expression from the previous paragraph, find an expression for $\frac{d^2\gamma}{dt^2}$ that describes the dynamics of the slow component $\gamma$ averaging over a large number of fast oscillations with frequency $\omega$, neglecting only terms of order $a^n$, where $n>2$. Express $\frac{d^2\gamma}{dt^2}$ in terms of $g, a, \omega, l$ and $\gamma$. Simplify the final expression by counting $l\omega^2\gg a\omega^2\gg g$.}{2.50}
+
+To average over a large number of fast oscillations $$\frac{d^2{\varphi}}{dt^2}=\frac{d^2{\gamma}}{dt^2} $$$$\frac{d^2{\gamma}}{dt^2}=-\frac{1}{lt}\int\limits_0^{t} (g-a\omega^2\cos \omega t)\sin \varphi\Bigr(\sin{\gamma}\cos{\beta}+\cos{\gamma}\sin{\beta}\Bigl)dt $$For пренебрежения всеми членами порядка выше $a^2$ достаточно следующих сложений $$sin{\beta}=\beta~и~cos{\beta}=1-\frac{{\beta}^2}{2} $$Expression после сложений and раскрытия скобок for/atнимает вид $$\frac{d^2{\gamma}}{dt^2}=-\frac{1}{lt}\int\limits_0^{t} \Bigr(g~\sin{\gamma}\Bigr(1-\frac{a^2\sin{\gamma}}{l^2}~{\cos^2{\omega}t}\Bigl)~+~a{\omega}^2\Bigr(  \frac{a^2\sin^2{\gamma}}{2l^2}~\cos^3{\omega}t +\frac{a\sin{2\gamma}}{2l}\cos^2{\omega}t\Bigl)dt $$For/At интегрировании учтём малось $\frac{a^2}{l^2}$,а also что for/at большом времени усреднения средние значения тригонометрических функций в нечётных степенях equal нулю,это позволяет ссу отбросить большинство слагаемых. $$\frac{d^2{\gamma}}{dt^2}=-\frac{1}{lt}\int\limits_0^{t} \Bigr(g~\sin{\gamma}+\frac{a^2{\omega}^2\sin{2\gamma}}{4l}(1+\cos{2\omega}t)\Bigl)\Bigl)dt $$We get the answer
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\frac{d^2{\gamma}}{dt^2}=-\frac{1}{l}\Bigr(g~\sin{\gamma}+\frac{a^2{\omega}^2\sin{2\gamma}}{4l}\Bigl) $$
+\end{solcard}
+
+\begin{solcard}{B3}{Obtain an expression for the time-averaged moment of all forces $M_O$ acting on the pendulum relative to the suspension point. Express your answer in terms of $m, g, l, a, \omega$ and $\gamma$.}{0.70}
+
+Returning to point $A5$ $$ml^2\frac{d^2{\varphi}}{dt^2}=M $$Taking into account,что for/at усреднении за большой промежуcurrent времени $$\frac{d^2{\varphi}}{dt^2}=\frac{d^2{\gamma}}{dt^2} $$time-average value of the moment of all forces
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$M_o=-ml\Bigr(g~sin{\gamma}+\frac{a^2{\omega}^2sin{2\gamma}}{4l}\Bigl) $$
+\end{solcard}
+
+\begin{solcard}{B4}{Let us call the effective potential the scalar function $V(\gamma)$, the derivative of which with respect to the angle $\gamma$ is equal to the averaged moment of forces from the previous paragraph, taken with a minus sign. Derive an expression for the effective potential $V(\gamma)$ up to an arbitrary constant. Express your answer using $m, g, l, a, \omega$ and $\gamma$.}{0.70}
+
+Let's integrate the average moment $M_o$ over the angle $\gamma$ $$V(\gamma)=ml\int \Bigr(g~\sin{\gamma}+\frac{a^2{\omega}^2\sin{2\gamma}}{4l}\Bigl)d{\gamma} $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$V(\gamma)=-mgl\cos{\gamma}-\frac{ma^2{\omega}^2\cos^2{\gamma}}{4}+C $$
+\end{solcard}
+
+\begin{solcard}{B5}{Show that for $(a\omega)^2>2gl$ this potential has several minima: a minimum at $\gamma=0$, which appears in the case of free oscillations of the pendulum; additional minimum $\gamma=\pi$. Show that both positions satisfy the conditions for stable equilibrium.}{1.00}
+
+The resulting dependence is a parabola with respect to $\cos{\gamma}$, the maximum of which is achieved at $$\cos{\gamma}=-\frac{b}{2a}=-\frac{2gl}{({a\omega})^2} $$ Существование двух корней возможно лишь in the case of,if $\cos{\gamma} > -1$ в вершине vaporаболы,hence ссу вытекает требуемое неequality $$(a{\omega})^2>2gl $$ Условиями устойчивого equalsвесия являются $$1)~\frac{dV}{d{\gamma}}=M_o=0 $$ $$2)~\frac{d^2V}{d{\gamma}^2}>0 $$ Let us find первую производную $$\frac{dV}{d{\gamma}}=ml\Bigr(g~\sin{\gamma}+\frac{a^2{\omega}^2\sin{2\gamma}}{4l}\Bigl) $$ For/At $\gamma=0;\pi~~\frac{dV}{d\gamm a}$ equals нулю $$ $$ Let us find вторую производную $$\frac{d^2V}{d{\gamma}^2}=ml\Bigr(g\cos{\gamma}+\frac{a^2{\omega}^2\cos{2\gamma}}{2l}\Bigl) $$ For/At $\gamma=0$ $$\frac{d^2V}{d{\gamma}^2}=ml\Bigr(g+\frac{a^2{\omega}^2}{2l}\Bigl) $$ For/At $\gamma=\pi$ $$\frac{d^2V}{d{\gamma}^2}=ml\Bigr(-g+\frac{a^2{\omega}^2}{2l}\Bigl) $$ The last expression is positive under the condition that we proved at the beginning of the paragraph. Thus, both positions satisfy the conditions of stable equilibrium.
+
+\end{solcard}
+
+\begin{solcard}{B6}{Find the periods of oscillations $T_0$ and $T_\pi$ of magnitude $\gamma$ corresponding to the provisions from point B5.}{0.60}
+
+Oscillation equation for $\gamma=0$ $$\frac{d^2{\gamma}}{dt^2}=-\frac{\gamma}{l}\Bigr(g+\frac{a^2{\omega}^2}{2l}\Bigl) $$Equation колебаний for $\gamma=\pi$ $$\frac{d^2{\gamma}}{dt^2}=-\frac{(\gamma-\pi)}{l}\Bigr(-g+\frac{a^2{\omega}^2}{2l}\Bigl) $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T_o=\frac{2\pi}{\sqrt{\frac{g}{l}+\frac{a^2{\omega}^2}{2l^2}}} $$ $$T_{\pi}=\frac{2\pi}{\sqrt{-\frac{g}{l}+\frac{a^2{\omega}^2}{2l^2}}} $$
+\end{solcard}
+
+\end{document}

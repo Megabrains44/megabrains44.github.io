@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Multilayer optical systems</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Multilayer optical systems</h1>
+<p class="camp">Y16 (2016) — English translation</p>
+<h2 class="part">Part A. Quartz plate and polarizer</h2>
+<p>Many substances have optical anisotropy, in which the refractive index depends on the direction of propagation and polarization of light. The direction in which light travels without birefringence is called the optical axis of the crystal.</p>
+<p>Let there be a quartz plate cut parallel to the optical axis between two parallel-oriented polarizers (Fig. 1). The transmission plane of the polarizers makes an angle $45^{\circ}$ with the optical axis of the plate. The thickness of the plate is $d$. A plane monochromatic wave with wavelength $\lambda$ is incident on this system. After passing through the polarizer $1$, the light becomes linearly polarized, and its electric field strength vector oscillates only in the plane of transmission of the polarizer $1$. Next, this light falls on an anisotropic quartz plate. Two light waves are excited in the plate: $\vec{E}_o$, polarized perpendicular to the optical axis (called an ordinary wave), and $\vec{E}_e$, polarized along the optical axis (called an extraordinary wave). The refractive index of a quartz plate for an ordinary wave is $n_o$, and for an extraordinary wave it is $n_e$. Let's denote it by $\Delta{n}=n_o-n_e$. Rice. 1. Birefringence</p>
+<p>Let there be a quartz plate cut parallel to the optical axis between two parallel-oriented polarizers (Fig. 1). The transmission plane of the polarizers makes an angle $45^{\circ}$ with the optical axis of the plate. The thickness of the plate is $d$. A plane monochromatic wave with wavelength $\lambda$ is incident on this system. After passing through the polarizer $1$, the light becomes linearly polarized, and its electric field strength vector oscillates only in the plane of transmission of the polarizer $1$. Next, this light falls on an anisotropic quartz plate. Two light waves are excited in the plate: $\vec{E}_o$, polarized perpendicular to the optical axis (called an ordinary wave), and $\vec{E}_e$, polarized along the optical axis (called an extraordinary wave). The refractive index of a quartz plate for an ordinary wave is $n_o$, and for an extraordinary wave it is $n_e$. Let's denote it by $\Delta{n}=n_o-n_e$.</p>
+<div class="figure"><img src="T1_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">When these waves pass through the plate, a phase difference $\varphi=\alpha kd$ arises between them, where $k=2\pi/\lambda$. Find the coefficient $\alpha$.</div><span class="pb-pts">0.50</span></div>
+<p>Let the amplitude of the wave after passing through the first polarizer be equal to $A_0$. The amplitude of the light wave after the second polarizer is equal to the sum of the projections of the ordinary and extraordinary waves onto the direction of transmission of the second polarizer.</p>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Find the amplitude of the wave $A_1$ after the second polarizer.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part B. Lyot filter</h2>
+<p>The Lyot interference polarization filter is an optical system consisting of $N+1$ polarizers and $N$ quartz plates (Fig. 2), cut parallel to the optical axis (the case discussed above). A plane monochromatic wave with wavelength $\lambda$ is incident on the filter. The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The thicknesses of the plates are $d$, $2d$, $4d$, $8d$, ... $2^{N-1}d$. The refractive indices of quartz are $n_o$ and $n_e$. Neglect the reflection of light at the boundaries of the plates and polarizers. Rice. 2. Lyo filter</p>
+<p>The Lyot interference polarization filter is an optical system consisting of $N+1$ polarizers and $N$ quartz plates (Fig. 2), cut parallel to the optical axis (the case discussed above). A plane monochromatic wave with wavelength $\lambda$ is incident on the filter. The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The thicknesses of the plates are $d$, $2d$, $4d$, $8d$, ... $2^{N-1}d$. The refractive indices of quartz are $n_o$ and $n_e$. Neglect the reflection of light at the boundaries of the plates and polarizers.</p>
+<div class="figure"><img src="T1_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Let the amplitude of the wave after passing through the first polarizer be equal to $A_0$. Find the amplitude of the wave $A_{out}$ at the output of the system. Note: Your answer must not contain missing integrals, uncalculated sums or products.</div><span class="pb-pts">3.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the possible wavelengths $\lambda$ at which the output amplitude is maximum (main maxima).</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Find the spectral width of the first main maximum $\Delta{\lambda}$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Find the spectral resolution $\lambda/\Delta{\lambda}$ for the $m$th main maximum.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part C. Wood&#x27;s monochromator</h2>
+<p>Wood's monochromator consists of alternating $N+1$ polarizers and $N$ quartz plates of equal thickness $d$ (Fig. 3). The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The refractive indices of quartz are $n_o$ and $n_e$. Rice. 3. Wood's monochromator</p>
+<p>Wood's monochromator consists of alternating $N+1$ polarizers and $N$ quartz plates of equal thickness $d$ (Fig. 3). The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The refractive indices of quartz are $n_o$ and $n_e$.</p>
+<div class="figure"><img src="T1_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Find how the intensity of light passing through the monochromator depends on the phase difference $\varphi$ between the ordinary and extraordinary waves incident on one quartz plate. Draw a qualitative graph of this relationship for $N=5$ and $N=50$. $\textit{Примечание:}$ Your answer should not contain unused integrals, uncalculated sums or products.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find the spectral resolution of the Wood monochromator $\lambda/\Delta{\lambda}$.</div><span class="pb-pts">1.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3027">https://pho.rs/p/3027</a></p>
+</body>
+</html>

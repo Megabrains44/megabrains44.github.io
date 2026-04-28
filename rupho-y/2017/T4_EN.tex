@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Elasticity theory}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Determination of elastic moduli}
+
+With various types of deformations, stresses arise in a solid. Let, during deformation, some point of the body, which had the coordinate $x$, shift by the amount $s$. If the displacement were the same for all points of the body, we would simply get a parallel transfer of the rigid body. Let us therefore assume that at the neighboring point with coordinate $x+ dx$ the displacement is slightly different from $s$ and is equal to $s+ds$. The deformation at a point, by definition, is equal to: \textbackslash\{\}[\textbackslash\{\}varepsilon = \textbackslash\{\}frac\{ds\}\{dx\}.\textbackslash\{\}]Forces that produce tensile (compressive) deformations are called tensile (compressive) forces. The stresses corresponding to these types of forces are defined as the force per unit of the corresponding area: \textbackslash\{\}[\textbackslash\{\}sigma = \textbackslash\{\}frac\{F\}\{S\}\textbackslash\{\}]The concept of stress has the advantage over the concept of force that it can be established locally at each point. It is defined as the local vector of force acting per unit area of ​​some imaginary plane inside the body. The deformations and stresses of a solid body are related by the relation: \textbackslash\{\}[\textbackslash\{\}sigma = E\textbackslash\{\}varepsilon,\textbackslash\{\}]where the value $E$ is called Young’s modulus. Let's consider the deformations and stresses in the bar. Let a homogeneous and isotropic body have the shape of a parallelepiped. Forces $F_x$, $F_y$ and $F_z$ are applied perpendicular to its opposite faces. Let us denote the corresponding stresses as $\sigma_x$, $\sigma_y$ and $\sigma_z$. Let us determine the deformations that arise under the influence of these forces. Assuming the deformations to be small, we will use the principle of superposition of small deformations. Let's direct the coordinate axes parallel to the edges of the parallelepiped. Let $l_x$, $l_y$ and $l_z$ be the lengths of these edges. If only the force $F_x$ acted, then the edge $l_x$ would receive an increment $\Delta_1 l_x$, determined by the relation \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}Delta_1 l_x\}\{l_x\} =\textbackslash\{\}frac\{\textbackslash\{\}sigma_x\}\{E\}.\textbackslash\{\}]If only the force $F_y$ acted, then the dimensions of the block, perpendicular to the $y$ axis would shrink. In particular, the edge $l_x$ would receive a negative increment $\Delta_2 l_x$, which can be calculated by the formula \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}Delta_2 l_x\}\{l_x\} = - \textbackslash\{\}frac\{\textbackslash\{\}mu \textbackslash\{\}sigma_y\}\{E\},\textbackslash\{\}]where $\mu$ is called Poisson's ratio. Young's modulus and Poisson's ratio fully characterize the elastic properties of an isotropic material. All other elastic constants can be expressed in terms of $E$ and $\mu$. The relative increment of the rib $l_x$ under the action of only one force $F_z$ would be equal to \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}Delta_3 l_x\}\{l_x\} =-\textbackslash\{\}frac\{\textbackslash\{\}mu \textbackslash\{\}sigma_z\}\{E\}.\textbackslash\{\}]If all forces act simultaneously, then according to the principle of superposition of small deformations, the resulting elongation of the rib $l_x$ will be equal \textbackslash\{\}[\textbackslash\{\}Delta l_x=\textbackslash\{\}Delta_1 l_x+\textbackslash\{\}Delta_2 l_x+\textbackslash\{\}Delta_3 l_x.\textbackslash\{\}] The elongations of the edges $l_y$ and $l_z$ are calculated similarly. As a result, we find \textbackslash\{\}[ \textbackslash\{\}begin\{cases\} \textbackslash\{\}varepsilon_x = \textbackslash\{\}dfrac\{\textbackslash\{\}sigma_x\}\{E\} - \textbackslash\{\}dfrac\{\textbackslash\{\}mu \}\{E\} (\textbackslash\{\}sigma_y + \textbackslash\{\}sigma_z)\textbackslash\{\}\textbackslash\{\}[2pt] \textbackslash\{\}varepsilon_y = \textbackslash\{\}dfrac\{\textbackslash\{\}sigma_y\}\{E\} - \textbackslash\{\}dfrac\{\textbackslash\{\}mu \}\{E\} (\textbackslash\{\}sigma_x + \textbackslash\{\}sigma_z)\textbackslash\{\}\textbackslash\{\}[2pt] \textbackslash\{\}varepsilon_z = \textbackslash\{\}dfrac\{\textbackslash\{\}sigma_z\}\{E\} - \textbackslash\{\}dfrac\{\textbackslash\{\}mu \}\{E\} (\textbackslash\{\}sigma_x + \textbackslash\{\}sigma_y) \textbackslash\{\}end\{cases\} \textbackslash\{\}] These equations are called generalized Hooke's law. In this part of the problem, you are asked to consider special cases of deformations of elastic bodies and find the elasticity coefficients in such cases.
+
+\problembox{A1}{Consider the case of uniform compression deformation, when all stresses $\sigma_x$, $\sigma_y$, $\sigma_z$ are equal and negative (the block is subject to constant pressure from all sides $P= -\sigma_x=-\sigma_y=-\sigma_z$). The modulus of all-round compression is the value $K$, which is determined from the relation: \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}Delta V\}\{V\}= - \textbackslash\{\}frac\{P\}\{K\},\textbackslash\{\}]where $V$ is the volume of the bar. Determine the bulk modulus $K$ through $E$ and $\mu$.}{1.00}
+
+\problembox{A2}{Consider the case of uniaxial tensile deformation. In this case, a homogeneous rod can be stretched or compressed only in one direction, in the direction of the axis, which is taken to be the coordinate axis $x$. The transverse dimensions of the rod do not change! (the environment interferes with this). The unilateral tensile modulus is the value $E'$, which is determined from the relation: \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}Delta l_x\}\{l_x\} =\textbackslash\{\}frac\{\textbackslash\{\}sigma_x\}\{E'\} .\textbackslash\{\}]Determine the unilateral tensile modulus $E'$ through $E$ and $\mu$.}{1.00}
+
+\section*{Part B. Determination of the moment of elastic forces during bending deformation}
+
+In this part of the problem, it is required to determine the moment that occurs in a homogeneous beam of arbitrary cross-section during bending. The cross-section of the beam is the same throughout the entire length of the beam. Let the beam have a rectilinear shape before deformation. Having drawn sections $AB$ and $A'B'$, normal to the axis of the beam, we mentally cut out from it an infinitesimal element $AA'B'B$ (see figure), the length of which we denote $l_0$. In view of the infinite smallness of the selected element, we will assume that as a result of bending, straight lines $AA'$, $NN'$, $BB'$ and all straight lines parallel to them will turn into circles with centers lying on the axis $O$, perpendicular to the plane of the drawing. The outer fibers lying above the line $NN'$ lengthen when bending, the fibers lying below the line $NN'$ are shortened. The length of line $NN'$ remains unchanged. This line is called the neutral line. The section of the (undeformed) beam passing through it with a plane perpendicular to the plane of the drawing is called a neutral section. Let $R$ be the radius of curvature of the neutral line $NN'$. Then $l_0=R \alpha$, where $\alpha$ is the central angle subtended by the arc $NN'$.
+
+In this part of the problem, it is required to determine the moment that occurs in a homogeneous beam of arbitrary cross-section during bending. The cross-section of the beam is the same throughout the entire length of the beam. Let the beam have a rectilinear shape before deformation. Having drawn sections $AB$ and $A'B'$, normal to the axis of the beam, we mentally cut out from it an infinitesimal element $AA'B'B$ (see figure), the length of which we denote $l_0$. In view of the infinite smallness of the selected element, we will assume that as a result of bending, straight lines $AA'$, $NN'$, $BB'$ and all straight lines parallel to them will turn into circles with centers lying on the axis $O$, perpendicular to the plane of the drawing. The outer fibers lying above the line $NN'$ lengthen when bending, the fibers lying below the line $NN'$ are shortened. The length of line $NN'$ remains unchanged. This line is called the neutral line. The section of the (undeformed) beam passing through it with a plane perpendicular to the plane of the drawing is called a neutral section. Let $R$ be the radius of curvature of the neutral line $NN'$. Then $l_0=R \alpha$, where $\alpha$ is the central angle subtended by the arc $NN'$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Consider a grain of timber located at a distance $\xi$ from the neutral section (the value $\xi$ is positive if the grain is above the neutral section and negative if below). Find the elongation of this fiber $\Delta l(\xi)$. Express your answer in terms of $l_0$, $\alpha$, $\xi$.}{0.50}
+
+\problembox{B2}{Determine the tension $\tau$ acting along the fiber in question. Express the answer in terms of Young's modulus $E$, $\xi$, $\alpha$, $R$, $l_0$.}{0.50}
+
+\problembox{B3}{Let the neutral line and the neutral section pass through the center of gravity of the cross section of the beam. Then the sum of forces in one section is equal to zero. Express in integral form (the integral over the cross-sectional area, $dS$ is the area element for integration) form the moment of the tension forces acting on the section $AB$. Express your answer in terms of $E$, $\xi$, $\alpha$, $R$, $l_0$.}{2.00}
+
+\problembox{B3}{Pay attention to the integral obtained in the previous paragraph. Let us introduce the notation $I=\int \xi^2 dS$. The quantity $I$ is called the moment of inertia of the cross section of the beam by analogy with the corresponding quantity introduced when considering the rotation of a body around a fixed axis. However, in contrast to the latter quantity, which has the dimension of mass multiplied by the square of the length, $I$ is a purely geometric quantity with the dimension of the fourth power of length. Determine $I$ for different shapes of beam cross sections: Rectangular section with width $w$ and height $h$. Circular section of radius $r$. Section of a cylindrical pipe with an internal diameter of $r_1$ and an outer diameter of $r_2$.}{0.90}
+
+Pay attention to the integral obtained in the previous paragraph. Let us introduce the notation $I=\int \xi^2 dS$. The quantity $I$ is called the moment of inertia of the cross section of the beam by analogy with the corresponding quantity introduced when considering the rotation of a body around a fixed axis. However, in contrast to the latter quantity, which has the dimension of mass multiplied by the square of the length, $I$ is a purely geometric quantity with the dimension of the fourth power of length. Determine $I$ for different beam cross-section shapes:
+
+\section*{Part C. Determination of beam deflection parameters}
+
+\problembox{C1}{Consider a homogeneous rod with Young's modulus $E$ with a circular section of radius $r$ and length $l_0$, which lies on two symmetrically located supports $C$ and $D$. Identically directed forces $F$ are applied to the ends of the rod $A$ and $B$. Find the radius of curvature $R(x)$ of the curved beam at each point along its length (coordinate $x$ is measured along the uncurved rod from its center). Express your answer in terms of $E$, $F$, $a$, $r$, $l_0$. Gravity should be neglected compared to $F$. Consider also that $R \gg l_0$.}{1.50}
+
+Consider a homogeneous rod with Young's modulus $E$ with a circular section of radius $r$ and length $l_0$, which lies on two symmetrically located supports $C$ and $D$. Identically directed forces $F$ are applied to the ends of the rod $A$ and $B$. Find the radius of curvature $R(x)$ of the curved beam at each point along its length (coordinate $x$ is measured along the uncurved rod from its center). Express your answer in terms of $E$, $F$, $a$, $r$, $l_0$. Gravity should be neglected compared to $F$. Consider also that $R \gg l_0$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{C2}{Consider a beam with a rectangular cross-section with a width $w$ and a height $h$ and a length $l_0$, rigidly fixed to the wall at one end (perpendicular to the wall at the attachment point). A concentrated force $F$ acts on the other end of the beam. Let $x$ be the coordinate along the length of the unbent beam, measured from the wall, $y(x)$ be the height deviation from the unbent position of the beam. Define the function $y(x)$. Express your answer in terms of $E$, $F$, $l_0$, $w$, $h$. Gravity should be neglected compared to $F$. Consider also that for any $x$ the following holds: $y(x) \ll l_0$. When solving, you may need a formula for the radius of curvature of the line given by the equation $y(x)$: $R=\frac{\left(1+y'(x)^2\right)^{3/2}}{y'' (x)}$.}{2.00}
+
+Consider a beam with a rectangular cross-section with a width $w$ and a height $h$ and a length $l_0$, rigidly fixed to the wall at one end (perpendicular to the wall at the attachment point). A concentrated force $F$ acts on the other end of the beam. Let $x$ be the coordinate along the length of the unbent beam, measured from the wall, $y(x)$ be the height deviation from the unbent position of the beam. Define the function $y(x)$. Express your answer in terms of $E$, $F$, $l_0$, $w$, $h$. Gravity should be neglected compared to $F$. Consider also that for any $x$ the following holds: $y(x) \ll l_0$. When solving, you may need a formula for the radius of curvature of the line given by the equation $y(x)$: $R=\frac{\left(1+y'(x)^2\right)^{3/2}}{y'' (x)}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C3}{Determine the beam deflection from point C2. The deflection arrow is the displacement $\lambda$ of the free end of the beam under the action of the applied force $F$. Express your answer in terms of $E$, $F$, $l_0$, $w$, $h$.}{0.60}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3961}
+
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{The first days of the solar system}}
+\author{\normalsize Y13 (2013) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+According to one of the models, in the first “days” of our solar system, the Sun with mass $М$ and diameter $D$ was surrounded by a large resting spherical gas cloud. For simplicity, we will assume that the gas was monatomic, ideal (molecular mass of the gas $\mu$), and the total mass of the entire gas is much less than $М$. This problem asks you to determine the distribution of gas as a function of the distance $r$ from the Sun. We will assume that $r \gg D$.
+
+\problembox{A1}{At this stage, consider the temperature in the cloud constant everywhere and equal to $T_0$, and the gas density distribution in the cloud $\rho=\rho_0 e^{\alpha/r}$. Determine the value of parameter $\alpha$.}{0}
+
+\problembox{A2}{There is a significant drawback in the specified distribution of gas density in the cloud. Please indicate it.}{0}
+
+\problembox{A3}{In an improved model, assume that the Sun emits $J_0$ thermal energy per second. We also assume that there are no heat losses, i.e. all solar radiation energy is transferred to the gas and the temperature distribution is stationary. Determine the thermal energy flux density at a distance $r$ from the Sun.}{0}
+
+\problembox{A4}{The thermal energy flux density $I(r)$ at point A3 is proportional to the temperature gradient, i.e. \textbackslash\{\}[ I(r) = -\textbackslash\{\}sigma \textbackslash\{\}frac\{dT\}\{dr\} ,\textbackslash\{\}]where $\sigma$ is a positive constant called thermal conductivity. The minus sign occurs because heat is transferred from an area with a higher temperature to an area with a lower temperature. Determine the temperature $T$ at a distance $r$ from the Sun.}{0}
+
+\problembox{A5}{Now we will assume that the pressure in the cloud changes according to the law: \textbackslash\{\}[p = p_0 \textbackslash\{\}left( \textbackslash\{\}frac\{r\}\{r_0\} \textbackslash\{\}right)^\{-\textbackslash\{\}beta\}.\textbackslash\{\}]Determine the parameter $\beta$ and the gas density distribution.}{0}
+
+\problembox{A6}{From point A4 it follows that at some distance $r_1$ from the Sun the temperature of the cloud will become less than the melting temperature of ice on Earth under normal conditions. Rate $r_1$. The average orbital radius of which planet in the Solar System is closest to $r_1$? Solar luminosity $J_0=8.846 \cdot 10^{26}~\text{Вт}$, $\sigma =5 \cdot 10^{11}~\text{Вт}/(\text{м} \cdot \text{К})$. The average distance from the Sun to the planets is given in the table.}{0}
+
+Planet Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune $r, 10^6~\text{км}$ 58 108 150 228 778 1430 2870 4500
+
+The following formulas may be useful to you: \textbackslash\{\}[\textbackslash\{\}int x^n dx = \textbackslash\{\}frac\{x^\{n+1\}\}\{n+1\} + C, \textbackslash\{\}quad \textbackslash\{\}text\{where \} n \textbackslash\{\}neq -1\textbackslash\{\}]\textbackslash\{\}[ \textbackslash\{\}int x^\{-1\} dx = \textbackslash\{\}ln |x| +C\textbackslash\{\}]
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3973}
+
+\end{document}

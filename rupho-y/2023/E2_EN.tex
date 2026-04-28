@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thermal expansion of string}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Guitar string is made from special hardened high carbon steel (sometimes called "music wire") to provide the required high tensile strength. This work is devoted to studying the properties of such a string and their changes associated with changes in its temperature.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Equipment: Installation with a tensioned string and an electromagnetic sensor (a. string fastenings, b. electromagnetic sensor, c. tensioner cylinder, d. bearings) Multimeter - 2 pcs (red, black) Alternating current generator DC power source 1 Ohm resistor Tape measure Micrometer BNC crocodile wire - 1 pc Banana crocodile wire - 6 pcs Wire crocodile crocodile - 1 piece Masking tape
+
+The length of the string, and therefore its tension, can be changed using a metal screw located at the bottom of the installation body. As it rotates, the metal cylinder attached to it moves vertically, further stretching the string. Further, the string is considered to be in its original state if the cylinder does not touch the string. In the initial state, the string is already tensioned. The additional tension that will be created when performing work is associated with additional elongation of the string.
+
+The following quantities can be used in all parts of the problem: Length of the string between the attachment points in the initial state $L = (68.0 \pm 0.2) \ cm$; The pitch of the screw stretching the string is $0.70 \ mm/$; Linear density of string $\Lambda =  0.778 \ g/m$; Temperature coefficient of resistance $\beta = 2.0 \cdot 10^{-3} \ K^{-1}$. Further, unless otherwise stated, when referring to string length, we mean the portion of the string located between the attachment points.
+
+\section*{Part A: Measuring Young's modulus}
+
+The first step to finding Young's modulus is to relate the height of the tensioner cylinder to the additional elongation of the string.
+
+Rice. 1. Schematic illustration of the installation (side view)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{Let the vertical displacement of a point on the string located above the cylinder be $\Delta h$. Using the notation from the figure above, obtain an approximate expression for the additional elongation of the string $\Delta L$, counting $$ \Delta h^2, \ (h_1 - h_2)^2 \ll a_1^2, \ a_2^2. $$}{0.50}
+
+Further, the following values can be used for calculations: $$ h_1 = 28 \ mm; \\ h_2 = 16 \ mm; \\ a_1 = a_2 = 40 \ mm. \\ $$
+
+\problembox{A2}{Using a micrometer, measure the diameter $d$ of the tensioned string. Estimate the error of the obtained value.}{0.40}
+
+\problembox{A3}{Measure the length $L_$ of the working part of the string (between the left mount and the left bearing, according to the drawing with the equipment). Estimate the error of the obtained value.}{0.20}
+
+Let $E$ be the Young’s modulus of the string material, $l$ be the length of the part of the string located between the attachment points in an unstretched state, $L'$ be the length of the same part in a tense state (for example, in the initial state $L' = L$).
+
+\problembox{A4}{Obtain an expression for the frequency of harmonic number $n$ for the string by expressing it in terms of $E$, $L'$, $l$, $L_$, $d$, $\Lambda$, $n$.}{0.50}
+
+Turn on the sound generator. Set the voltage amplitude $20 \ V$ on it. Then, if necessary, the amplitude can be reduced. Make sure the generator is set to sine wave. Connect the leads generator to the sensor leads on the installation. Return the string to its original state.
+
+\problembox{A5}{By changing the frequency of the generator signals, achieve string resonance at the first harmonic. Record the frequency you find on your answer sheet. Estimate the error of the obtained value.}{0.30}
+
+By rotating the screw, ensure that the cylinder touches the string, but does not stretch it.
+
+\problembox{A6}{By rotating the screw, gradually stretch the string. Take measurements of the first harmonic frequency at different screw positions (at least 8 points).}{1.20}
+
+Notes: Be careful not to dislodge the cylinder from the screw axis. To do this, it is recommended to make no more than 10 revolutions. If necessary, you can apply masking tape to the installation and mark it.
+
+\problembox{A7}{Using the results from step A4, construct a linearized graph of the first harmonic frequency $f$ versus the additional string extension $\Delta L$. Find the Young's modulus of the string material $E$ and the relative elongation of the string in the initial state $\varepsilon_0 = \frac{L - l}{l}$. Estimate the errors of the obtained values.}{1.30}
+
+\section*{Part B: Thermal Expansion}
+
+It is known that metals tend to change their resistance and dimensions with changes in temperature. Let $l$ be the length of the string in an unstretched state, $d$ its diameter, $R$ the resistance, $l_0$, $d_0$, $R_0$ the corresponding values at room temperature $T_0$. For relatively small temperature changes (which are considered in this problem), the dependences $l(T)$, $d(T)$, $R(T)$ can be given by the formulas: $$ l(T) = l_0 (1+\alpha(T-T_0)); \\ d(T) = d_0 (1+\alpha(T-T_0)); \\ R(T) = R_0 (1+\beta(T-T_0)). $$ $\alpha$     , $\beta$ —   .  $\beta$  and  in  . V  h    $\alpha$. To heat the string, you will need to pass a direct current through it. The string should be connected to the circuit using vertical metal rods on which it is attached. With this connection, no current will pass through the metal housing.
+
+Notes: During the entire experiment, the voltage on the string should not exceed $3 \V$. Source readings may be inaccurate, which could significantly affect the results obtained. Multimeters are not permitted to be used in ammeter mode. Resistor at currents $\sim 1 \A$ heats up significantly. Be careful when measuring.
+
+Return the string to its original state.
+
+\problembox{B1}{Design and describe a circuit that will allow you to measure the resistance of a string when current is passed through it.}{0.70}
+
+\problembox{B2}{Gradually increasing the current through the string, remove the dependence of the frequency of the first harmonic $f$ on the resistance of the string $R$ (at least 10 points). Note: To avoid too “wide” resonance, you can try changing the amplitude of the oscillator.}{2.50}
+
+\problembox{B3}{Find $R_0$ - the resistance of the string at room temperature. Estimate the error of the obtained value.}{0.50}
+
+\problembox{B4}{Obtain the theoretical dependence $f(R)$.}{0.70}
+
+\problembox{B5}{Plot a linearized graph of $f$ versus $R$. Using the graph, determine the value of $\alpha$. Estimate the error of the obtained value.}{1.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3488}
+
+\end{document}

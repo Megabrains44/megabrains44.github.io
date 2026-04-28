@@ -1,0 +1,188 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Spectroscopy}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Spectroscopic measurements are an important research method that is used in physics, chemistry, biology, medicine and at the intersection of these sciences. Spectral structure of emission, re-emission, absorption, etc. can be studied in different wavelength ranges. For example, using infrared (IR) spectroscopy, one can study the vibrational motion of molecules or their individual fragments or functional groups. Thus, we can talk about the chemical structure of a substance, and, in particular, check the results of chemical synthesis. Visible and near-infrared spectroscopy will be discussed in this problem. You will need to construct a spectrometer and use it to determine the properties of various objects.
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Optical bench Movable stands Steel screen Magnetic holders (for lenses and sample holders) Lens with grating Lens without grating RGB LED (three in one housing). Do not exceed 4.5V! Incandescent lamp. Do not exceed 12V! A container for draining used solutions (you can ask to empty them) A container with clean water (for washing the pipette, cuvettes; you can ask to fill it) Magnetic photonic crystal holder Pipette Set of spectrometric cuvettes with lids (12 pcs.), cuvette volume approximately 4 ml Magnetic holder for spectrometric cuvettes Tripod for spectrometric cuvettes (place filled cuvettes in it) Spectroscopic sensor Laptop Power supply Cardboard for making diaphragms Scissors Masking tape (for marks, attaching homemade objects to the installation) Ruler Samples to be tested: S1. Photonic crystal in a Petri dish S2. In 15 ml test tubes: a solution of aniline orange, copper sulfate, solutions with different pH values. In a 2 ml test tube - a solution of thymol blue. S3. A diluted solution of brilliant green. S4. Concentrated solution of brilliant green. Wrapped in film. DO NOT open! Equipment for your convenience: Napkins Table lamp Box for covering the installation if your measurements are disturbed by the light of neighbors
+
+Samples studied:
+
+\section*{Spectrometer construction}
+
+The spectrometer will consist of an incandescent lamp (providing a continuous spectrum of radiation), a pair of lenses, a diffraction grating and a one-dimensional array of photodiodes, the data from which is collected into a computer. Attention! When assembling and adjusting the installation, make sure that there are no vertical or horizontal lens shifts: both lenses, the light source and its image (0th maximum) must be on the same axis. Assemble the installation (follow the diagram in Fig. 2): on the voltage source (18), unscrew the current and voltage adjustment knobs to 0; install the incandescent lamp (8) in the tripod (2), apply voltage $12~V$ to the lamp (this is important! the emission spectrum depends on the temperature of the filament = voltage); position the lens without a diffraction grating (6) so that the lamp is in the focus of the lens (the optical power of each lens is +6 diopters); make sure there is a parallel beam of light behind the lens; place one additional stand (2) between the lamp and the lens (it will be used as a sample holder); place the second lens with a diffraction grating (5) at a short distance from the first lens, the diffraction grating should face the first lens; the lines of the diffraction grating must be located vertically; place the screen (3) at the focus of the second lens.
+
+Assemble the installation (refer to the diagram in Fig. 2):
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+On the screen at zero maximum you should observe an image of the lamp filament. At the first maximum you should observe the decomposition of the lamp radiation into a spectrum. The vertical size of the spectrum should not be more than 3-4 mm. If the spectrum is not thin, check the installation assembly. Attach the sensor (16) to the screen. The sensor is attached to the screen with magnets. Place the sensitive elements of the sensor (in the middle of the chip) so that all the radiation decomposed into a spectrum (first order) falls on them. The sensor is attached to the screen so that the wires face down. With this configuration, make the red light fall on the right side of the sensor. Because The sensor is quite thick, change the position of the screen slightly so that the sensor (and not the plane of the screen) is in focus of the second lens. In the program running on the computer (17), click the “Get data” button. You should get a graph similar to the one shown below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\section*{Working with the program}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+This program allows you to read the intensity of light falling on the sensitive elements of the sensor (CCD matrix), as well as perform certain actions with the received data. - Main elements of the program: intensity graph, main axes, auxiliary axis for the ratio graph, first graph, second graph, ratio graph, plotting widget, averaging bar, sensor sensitivity, smart cursor, widget for setting up the smart cursor, buttons for plotting the ratio of the first and second graphs, wavelength display mode setting block, wavelength display mode on/off button, save and load block, field for defining the port used - Algorithm of actions to start working with the program: connect the reader to the computer via a cable. Select “Port Used” (16) – COM3 in the panel. Below it, the green inscription “Port active” should light up. If this does not happen, call a supervisor and report the problem. - Reading data: To read new data you need to click on the “Get data” button, which is located in the data acquisition widget (7). There are two slots for storing data: first and second. In (7) you can choose which one to place new dimensions in, and the old data that was stored in this slot will disappear forever (if you have not saved it before, more on this in the section below). You have the option to select the degree of averaging (8). The number you select in this widget indicates how many measurements will be taken before averaging them. Averaging allows you to avoid the appearance of artifacts and noise. In order to read signals of different intensities, you can change the sensitivity (9). In this case, the entered number must be a divisor of the number 50000. - Working with a graph, Ratio graph, “Smart” cursor: From 0 to 3 graphs (4, 5, 6) can be displayed simultaneously on the coordinate grid (1). 2 graphs from data slots (4, 5) and the third (6) - a ratio graph, which is a function of the first two: each point of this graph is obtained by dividing the value from the first data set by the second or vice versa. Since the characteristic values of the ratio graph diverge by several orders of magnitude from the main ones, an additional ordinate axis (3) was added. You can build such a graph using the buttons “Divide the first graph by the second” and “Divide the second graph by the first” (12). When new data is taken, the ratio graph disappears. For your convenience, a “smart” cursor (10) has been added to this program. This cursor “crawls” along the selected graph and displays the coordinates of the current point. The smart cursor is configured in the widget (11). There you can turn the cursor on/off using the button of the same name, and also choose whether the “smart” cursor will work with the first or second chart. When a relationship graph is active, the cursor automatically hovers over it. - Wavelength display mode: in the main mode, the X-axis will display the matrix pixel numbers. However, using the Build Wavelength Dependency button (14) you can rebuild your data based on the calibrated wavelengths. To rearrange the X axis, you need to enter 3 pairs “pixel number - wavelength” into the corresponding widget (13). The construction occurs using the least squares method. If you need to rebuild the graph using only two reference wavelengths, then instead of the third point you can specify the values of one of the first two or any linear combination of them. The data of the obtained calibration dependence is displayed at the bottom of the widget. - Saving and loading data: In order to save and load previously saved data, you need to use the widget (15). In this case, using the “First” and “Second” buttons, you can select which slot you will load data into or which one you will save into. Saving occurs in a file with .dat resolution. You cannot save the relationship graph. - Artifacts: sometimes you can see vertical stripes on the graphs. This happens when your signal is very low. This can be fixed by increasing the sensitivity (9) and turning on averaging (8).
+
+\section*{Part A: Wavelength Calibration}
+
+In order to be able to work with quantitative wavelength values in the future, the assembled spectrometer must be calibrated. Those. Each pixel of the sensor must be assigned a wavelength. In this problem, the known reference values will be the wavelengths at which the intensity of the LED radiation is maximum.
+
+The general idea of the calibration procedure is as follows: install the lamp and sensor in the working position, replace the lamp with an LED and record where the first diffraction order of the LED radiation is located. Thus, a certain wavelength can be assigned to a certain pixel. Procedure for calibration: install and turn on the lamp (8), place the sensor in the first diffraction order; the zero maximum should also be visible on the screen (3); stick masking tape (21) to the zero maximum and mark its position, this will be important for the further calibration procedure; turn off and remove the lamp, install in its place the holder with an LED (7) (the LED is located relative to the stand in the same way as the filament of the lamp); on the voltage source (18), turn the current and voltage adjustment knobs to 0; connect the LED (7) to the power supply: the red plug in “$+$”, any of the black ones in “$-$” (there are three emitting elements in one LED housing); Apply a voltage of 3-4 V to the LED, it should light up (do not exceed the voltage on the LED of 4.5 V, burnt-out LEDs cannot be replaced); adjust the position of the LED in height and rotation angle so that the zero maximum coincides with the mark on the masking tape corresponding to the zero maximum from the lamp; a spot of the first diffraction order should be visible on the sensor (16); in the program running on the computer (17), click the “Get data” button; you should see an LED emission spectrum similar to the one shown in Fig. 5; if the signal is too weak, increase the voltage on the LED (not exceeding 4.5 V) or increase the sensitivity in the program; if the signal is too strong (goes off scale), reduce the voltage on the LED or reduce the sensitivity in the program; determine the position of the maximum (in pixels) and write down this number, next to it indicate the wavelength of the corresponding LED (Fig. 5); without changing the position of the equipment, switch the LED to a different color (replace the black plug with another), determine the position of the maximum; radiation of different colors in an LED is generated in slightly different places in height, and the first diffraction order may shift slightly, this is normal, you don’t have to move the sensor if at least part of each color spot falls on it; repeat the procedure for the third LED; in the appropriate fields in the program, you can enter “pixel number-wavelength” pairs, and the graph will be automatically rebuilt in “intensity (wavelength)” coordinates; You can return the lamp to its place by checking its setting to the zero maximum.
+
+Spectra of LEDs in accordance with technical documentation. Radiation maxima: blue --- $\lambda_B = 470~nm$, green --- $\lambda_G = 528~nm$, red --- $\lambda_R = 627~nm$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{A1}{Calibrate the spectrometer. Set the lamp voltage to 12 V. Determine the wavelengths corresponding to the minimums shown in Figure 3.}{2.00}
+
+If the positions of key installation parameters (lamp, lenses, screen, sensor) change, the spectrometer, of course, needs to be recalibrated.
+
+Important! In all further work, the samples under study should be placed directly behind the lamp (the gap between the lamp body and the sample is 5-7 mm). It is important that all the light from the lamp that subsequently hits the diffraction grating goes through the sample. Otherwise, the spectrum on the sensor will be a superposition of the spectrum of the object under study and the spectrum of the lamp itself. To further limit the path of unnecessary rays, you can make diaphragms. You are only allowed to attach your own diaphragms to lens bodies. They cannot be attached to cuvettes, sample holders, photonic crystal, etc.
+
+\section*{Radiation transmission study}
+
+In further parts of the problem, the absorption of various objects/solutions/substances at different parameters will be studied. For these objects, the concept of transmittance $t$ can be introduced. It is a function of the wavelength $\lambda$. The analysis of the function $t(\lambda)$ is the basis for the study of the properties and structure of substances. If radiation of wavelength $\lambda$ and intensity $I_0$ is incident on a certain sample, and the intensity of the transmitted radiation at the same wavelength is $I_t$ (Fig.~6), then the transmittance coefficient is defined as $$t(\lambda)=\cfrac{I_t}{I_0}.$$ To compute $t(\lambda)$ using the program, you must first record the spectrum $I_0(\lambda)$ (the ``background'') in the absence of the sample, and then the spectrum $I_t(\lambda)$ with the sample in place. The ratio of these two spectra gives the transmittance. For thin samples (films), one can speak of the transmittance of the sample itself; for solutions, the transmittance is determined by the cuvette together with the solution (or just the solvent, if relevant). For dilute solutions, the transmittance $t$ depends on three quantities: the concentration $n$ of absorbing particles, the path length $b$ that light travels through the solution, and the so-called extinction coefficient (molar absorption) $\varepsilon(\lambda)$: $$t=\exp\bigl(-n\,\varepsilon\,b\bigr).$$ Remember that the spectrum of the lamp is not flat. Remember that the cuvette also has optical properties. Therefore, if you are only interested in the absorption of a solution/substance, the reference signal should be the light passing through an empty cuvette (or cuvettes).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\section*{Part B: Photonic Crystal (or APhO-17 in 20 minutes)}
+
+In this part of the task we will examine the photonic crystal given to you. A photonic crystal is a structure in which the refractive index of a material changes periodically on scales on the order of the wavelength of light. Because of this structure, photonic crystals at certain wavelengths practically stop transmitting light and only reflect it. It is known from wave optics that if the structure of such a crystal in the direction of incidence of light (angle of incidence $\theta = 0$) has a spatial period $D$, then a noticeable change in transmission can be observed only at wavelengths $\lambda$, determined by the equality:\[2Dn=m\lambda\] - the so-called Bragg-Snell law, where $m$ is the natural number, and $n$ is the refractive index of the material (dispersion can be neglected).
+
+\problembox{B0}{The photonic crystal you were given (see equipment (S1)) is very fragile. Insert the magnetic holder (4) into the stand (2). Install the photonic crystal holder (11) onto the magnetic holder (4). Remove the photonic crystal (S1) from the Petri dish and place it on the holder (11). Do not drop or poke the crystal. Damage to the crystal will result in disqualification for this round.}{-20.00}
+
+The photonic crystal given to you is manufactured in such a way that it has 4 deep transmission minima in the visible range. (Kirill S. Napolskii, Alexey A. Noyan, Sergey E. Kushnir. Control of high-order photonic band gaps in one-dimensional anodic aluminum photonic crystals // Optical Materials 109 (2020) 110317)
+
+\problembox{B1}{Take the spectrum of the original radiation. Place the photonic crystal in the holder along the beam path in the system (Fig. 2). Take the spectrum of transmitted radiation. Observe four deep transmittance minima. Determine at what wavelengths $\lambda$ the transmission minima are observed. Determine which values of $m$ they correspond to. Determine the corresponding values of $t$.}{1.60}
+
+It follows from the Bragg-Snell law that intensity minima should also exist at larger values of $m$.
+
+\problembox{B2}{Find another minimum of photonic crystal transmission. Which $\lambda$, $m$ and $t$ correspond to it? Save the graph used to solve this item in the folder Plots. “Last name” with the name “B2”. The chart must contain the found minimum and at least one other one obtained earlier. If there is no file, the item will not be evaluated!}{0.40}
+
+Similarly, transmission minima should also be observed at lower $m$. It turns out that a total of 7 transmission minima can be detected in the region of wavelengths emitted by the lamp.
+
+\problembox{B3}{Find the sixth minimum. Describe how you do this. Which $\lambda$, $m$ and $t$ correspond to it? Save the graph used to solve this item in the Plots\_“Last Name” folder with the name “B3”. The chart must contain the found minimum and at least one other one obtained earlier. If the file is missing, the item will not be evaluated.}{0.50}
+
+\problembox{B4}{Find the seventh minimum. Describe how you do this. Find the corresponding $\lambda$ and $m$. Find the transmittance $t$. Save the graph used to solve this item in the Plots\_“Last Name” folder with the name “B4”. The chart must contain the found minimum and at least one other one obtained earlier. If the file is missing, the item will not be evaluated.}{1.00}
+
+\problembox{B5}{Use the Bragg-Snell law to find the value of $Dn$ for the photonic crystal given to you.}{0.50}
+
+\section*{Part C. Band-pass optical filter (or how much IPhO-05 lies)}
+
+When studying various samples, the need arises to create narrow-spectrum radiation. Wavelength tunable lasers are very expensive, and when there is no need for monochromatic and coherent radiation, a combination of filters can be used. Filters will highlight a narrow range from a continuous spectrum. In this part of the problem, two substances (solutions of aniline orange and copper sulfate) will act as a short-wave and long-wave filter. And their mixture is stripe.
+
+For this part of the work you will need solutions of aniline orange and copper sulfate (S2). They will need to be poured into cuvettes (13) using a pipette (12). If you need to pipette another solution, rinse it with water before doing so (10). Cover the cuvettes with lids to prevent liquid from spilling. For spectroscopic examination of solutions, insert the cuvette(s) into the holder (14) and attach to the magnetic holder (4) in the rack (2) (Fig. 7). If there is little solution in the cuvette or the source light affects the measurements, consider creating limiting diaphragms from cardboard (19). The cuvettes can also be washed. Drain dirty water into container (9). Similar steps must be performed in parts D and E.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{C1}{Fill the spectrometric cuvette with aniline orange solution (approximately 3 ml). Remove the dependence of the transmittance of aniline orange $t_a(\lambda)$. Plot the spectroscopic template < > on your answer sheet. The wavelength and transmittance scales are plotted for you. Indicate whether aniline orange is a short-wave filter (passes short waves) or long-wave (passes long waves).}{0.50}
+
+\problembox{C2}{Fill the spectrometric cuvette with copper sulfate solution (approximately 3 ml). Remove the dependence of the transmittance of copper sulfate $t_{Cu}(\lambda)$. Plot the same spectroscopic template < > on the answer sheet. The wavelength and transmittance scales are plotted for you. Indicate what type of filter the copper sulfate solution is: short-wave (passes short waves) or long-wave (passes long waves).}{0.50}
+
+\problembox{C3}{Fill the spectrometric cuvette with a mixture of solutions of aniline orange and copper sulfate in a 1:1 ratio (i.e., 1.5 ml of each). Remove the dependence of the mixture transmittance $t_f(\lambda)$. Plot the spectroscopic pattern "SpC3" on the answer sheet. The wavelength and transmittance scales are plotted for you. Save the graph used to solve this item in the folder Plots\_“Last Name” with the name “C3”. If there is no file, the item will not be evaluated!}{0.50}
+
+\problembox{C4}{Find theoretically how $t_a, t_{Cu}$ and $t_f$ are related.}{1.00}
+
+\problembox{C5}{Calculate the values of $t_f^{}(\lambda)$ using the formula you suggested from point C4.  Plot $t_f^{}(\lambda)$ on the same spectroscopic template < > on the answer sheet. Draw a conclusion about the validity of your formula from point C4. Draw a conclusion: is it possible to obtain a bandpass filter using short- and long-wave filters?}{1.50}
+
+\section*{Part D. What color is the green stuff? (or button accordion from Kvant)}
+
+Read carefully again how to handle solutions and cuvettes at the beginning of Part C.
+
+\problembox{D1}{Take a test tube $Z$ (see equipment S4, film-wrapped tube) containing a solution of tetraethyl 4,4-diaminotriphenylmethane oxalate. Depending on the tilt, a layer of liquid of varying thickness can be created. Remove the lamp from the tripod (carefully! the lamp is hot!) and place it horizontally on the bench. Look at the burning lamp through a layer of liquid of maximum thickness. Specify the observed color. Look at the burning lamp through a thin layer of liquid. Specify color. How does color change depending on thickness?}{0.50}
+
+\problembox{D2}{Using a diluted solution of brilliant green (see equipment S3), record the transmission spectra of brilliant green depending on the thickness of the liquid layer. The concentration of the diluted solution is 10 mg/l, which is 1000 times less than in test tube $Z$. Plot these transmittance spectra on one graph. Save the graphs used to solve this item in the folder Plots\_“Last Name” with the name “D3\_N”, where N is the thickness of the liquid layer in millimeters. If there are no files, the item will not be evaluated!}{2.00}
+
+\problembox{D3}{For two wavelengths ($\lambda_1=480~nm$ and $\lambda_2=790~nm$), write in the table the dependence of the transmittance on the path traveled by the light. Determine the extinction coefficients $\varepsilon_1$ and $\varepsilon_2$ for these two wavelengths.}{2.00}
+
+\problembox{D4}{Explain the effect you observed in D1.}{0.50}
+
+\section*{Part E. pH indicator (we’ll give this to IJSO students later)}
+
+The pH value (pH, minus the logarithm of the proton concentration in solution) is the most important parameter of various chemical and biological fluids. To determine it, special indicator substances are used, the transmission spectrum of which is sensitive to the concentration of protons. One such indicator is thymol blue.
+
+In this part of the problem, it is necessary to remove the dependence of transmission spectra on the pH of solutions. Fill a cuvette with 3 ml of a solution with a certain pH value (see equipment S2). Using a pipette, add two (2) drops of thymol blue (S2) to the cuvette. Pour excess thymol back into the test tube or waste container. Rinse the pipette with water (10). Immerse the pipette in the cuvette with a mixture of solution and thymol. Pipette the liquid in and out and stir the solution. The solution is ready for spectroscopic measurements. When moving to another solution, try to take the same amount and drop the same drops of thymol in the same volume, i.e. try to maintain a constant concentration of thymol. Otherwise, some normalization will be required (if necessary, this can be done based on data in the IR range). Read carefully again how to handle solutions and cuvettes at the beginning of Part C.
+
+\problembox{E1}{Take transmission spectra for 8 pH values of solutions. Plot all these spectra on one spectroscopic template < >.}{1.60}
+
+\problembox{E2}{Indicate the wavelength $\lambda_{ch}$ in the visible range at which thymol blue is most sensitive to pH. Indicate the wavelength $\lambda_{iso}$ in the visible range at which thymol blue is least sensitive to pH.}{0.60}
+
+\problembox{E3}{For the wavelength at which thymol blue is most sensitive to pH, plot the extinction coefficient versus pH. Express the extinction coefficient in conventional units.}{2.00}
+
+\problembox{E4}{Suggest a way to spectrally determine the pH value of a solution to which a certain amount of thymol blue has been added. What is the minimum set of data you might need?}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2847}
+
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+      \textbf{#1}\hfill\textbf{#3}\par\smallskip
+      #2
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Friction in elastic contact}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}
+\maketitle
+This problem is devoted to the physics of dry friction that occurs at the point of contact between an elastic ball and a surface. We will study how the angular velocity of rotation of a ball lying on a surface decreases over time. Angular velocity measurements will be taken optically using a large round ball cap with 4 black stripes. The mass of the load will change with the help of weights screwed into the nozzle. Gravity acceleration $g=9.81~\text{m}/\text{s}^2$. Attention! This problem does not require error estimation.
+Gravity acceleration $g=9.81~\text{m}/\text{s}^2$.
+Attention! This problem does not require error estimation.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{Fig. 1.}
+\end{figure}
+Equipment: Round nozzle with holes 8 M10 bolts 16 M10 nuts Polybutadiene rubber ball Photodiode Masking tape Oscilloscope Rotation stand
+Nozzle drawing. Dimensions are indicated in millimeters. The hole for the ball in the center is specially made so that its size is slightly smaller than the ball.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig2.jpg}
+    \caption{Fig. 2.}
+\end{figure}
+The masses of the installation elements are presented in the table below. Object $m,g$ Ball 18.9 Nozzle 200.3 Bolt M10 24.0 Nut M10 10.0
+The masses of the installation elements are presented in the table below.
+\section*{Part A. Contact interaction (1.5 points)}
+Elastic forces arising at the point of contact of two spherical bodies were first considered by Hertz in 1882, and the theory he constructed perfectly describes many contact phenomena. Let us consider a homogeneous elastic ball of radius $R$, which is weakly pressed into an absolutely solid surface by a force $F$ (its Young’s modulus $E\to \infty$).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Fig. 3.}
+\end{figure}
+The elastic properties of the ball are fully characterized by Young's modulus $E$ and Poisson's ratio $\nu$. Under these conditions, at the point of contact, the surface of the ball ceases to be spherical and becomes a flat circle of radius $a \ll R$. The above quantities are related to each other by the Hertz equation: \[F = \frac{4}{3} \frac{E}{1-\nu^2} \frac{a^3}{R}\]
+\problembox{A1}{Give the dimensions of Young's modulus $E$ and Poisson's ratio $\nu$.}{0.10}
+The pressure on the surface from the side of the ball at the points of contact is proportional to the movement of these points associated with deformation, therefore \[p(r) = p_0 \sqrt{ 1 - \frac{r^2}{a^2} },\]where $r$ is the distance to the center of the circle of contact.
+\problembox{A2}{Express the value of $p_0$ in terms of $F$ and $a$.}{0.50}
+Let the coefficient of dry friction between the surface and the ball be equal to $\mu$ and the ball rotates around a vertical axis.
+\problembox{A3}{Find the moment of dry friction force $M$ about the axis of rotation. Express the answer in terms of $F$, $R$, $\mu$, $E$, $\nu$ and the numerical constant $J$ given by \[J=\int\limits_0^1 u^2 \sqrt{1-u^2} du\]}{0.40}
+\problembox{A4}{Obtain an explicit form of the function $J(x)$ given by \[J(x) = \int\limits_0^x u^2 \sqrt{1-u^2} du.\] Note: if you are unable to find an explicit form of $J(x)$, then you can use $J(1)=\pi/16$.}{0.50}
+Note: If you are unable to find the explicit form $J(x)$, then you can use $J(1)=\pi/16$.
+\section*{Part B. Optical measurements (5.5 points)}
+Strips of black electrical tape transmit light much weaker than a round plastic nozzle. Therefore, if you place a photodiode under the rotating nozzle, the voltage on it will drop every time the photodiode is under the black strip. Launch the ball with the nozzle so that it is always on the spinning stand. You can glue the spinning stand to the table (the ball should not spin on the tape!). Most of the ball should be at the bottom. For measurements, it is convenient to use the Run/Stop button on the oscilloscope. When you press Run/Stop once, the oscilloscope finishes measurements (and saves them) when the signal reaches the end of the screen; when you press Run/Stop twice, it finishes measurements right now (and also saves them). After securing the ball in the hole of the nozzle, do not pull it out again so that the point around which the rotation occurs does not change.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig4.jpg}
+    \caption{Fig. 4.}
+\end{figure}
+Using your hand, start the rotation of the ball with the nozzle around its axis. The reverse voltage across the photodiode will drop every time there is a black cap strip above it.
+A characteristic form of the dependence of the voltage on the photodiode on time
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig5.jpg}
+    \caption{Fig. 5.}
+\end{figure}
+\problembox{B1}{Using an oscilloscope, measure the sequence of times $t_i$ passing the black stripe over the photodiode. There must be at least $15$ times in the sequence!}{0.50}
+\problembox{B2}{Construct a graph of $t_i$ versus $i$ in such coordinates that it is linear. Find the parameters of the line.}{0.50}
+By screwing nuts and bolts onto the nozzle, you can change the mass of the system. The table below suggests different combinations of nuts and bolts. In the pictures, the hole containing the bolt and $n$ of the nuts screwed onto it is shaded, and $n$ is indicated next to it.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig6.jpg}
+    \caption{Fig. 6.}
+\end{figure}
+\problembox{B3}{On the answer sheet, indicate by ticking which of the indicated combinations will cause the rotation of the top to be stable.}{0.30}
+\problembox{B4}{For 6 different stable combinations of nuts and bolts bolted to the attachment, take measurements similar to step B1. Draw the combinations used in the way suggested in the condition. Note: measurements are completely similar to part B1, i.e. an attachment without bolts and nuts does NOT count as a combination. Combinations that do not differ in terms of dynamics are considered one.}{3.00}
+Note: measurements are completely similar to part B1, i.e. an attachment without bolts and nuts does NOT count as a combination. Combinations that do not differ in terms of dynamics are considered one.
+\problembox{B5}{Using the least squares method, conduct an analysis of the dependencies obtained in the previous paragraph, similar to your solution to paragraph B2.}{0.30}
+The ball given to you is made of polybutadiene rubber, which has a Poisson's ratio of $\nu=0.50$. The coefficient of friction of polybutadiene rubber with the surface for rotation is $\mu = 0.90$.
+\problembox{B6}{Based on the results from B2 and B5, construct a linearized graph to find the Young's modulus $E$ of polybutadiene rubber.}{0.40}
+\problembox{B7}{Find the Young's modulus $E$ of polybutadiene rubber.}{0.50}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4190}
+\end{document}

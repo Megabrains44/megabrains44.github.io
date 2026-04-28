@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topological insulator</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Topological insulator</h1>
+<p class="camp">Y26 (2026) — English translation</p>
+<p>In this problem, error estimation is not required!</p>
+<h2 class="part">Introduction</h2>
+<p>At the end of the twentieth century, the Su-Schiffer-Heeger (SSH-chain) model was proposed to describe the electrical conductivity properties of polyacetylene, which laid the foundation for topological physics. Topologically protected edge states arise at the ends of topologically nontrivial systems. In this problem we will consider an LC circuit, the simplest system that models a polyacetylene molecule and has topological properties.</p>
+<p>In this problem we will consider an LC circuit, the simplest system that models a polyacetylene molecule and has topological properties.</p>
+<p>Rice. 1. Polyacetylene molecule</p>
+<div class="figure"><img src="E1_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Equipment</h2>
+<div class="figure"><img src="E1_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>Board with an LC circuit consisting of capacitors of unknown capacity $C_1$ and $C_2$ ($C_1 < C_2$) and inductors $L=18~\text{мкГн}$ Resistor $R=200~\text{Ом}$ Oscilloscope Generator (supply voltage with an amplitude of no more than $2$ V) Mother-banana wires (5 pcs.) Wires BNC crocodile (3 pcs.)</p>
+<p>Note: Remove the mother-banana wire from the board strictly vertically so as not to damage the contacts!</p>
+<p>Rice. 2. Board with LC circuit</p>
+<div class="figure"><img src="E1_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>For measurements on the board, contacts J5, J2 and GND are available (see Fig. 1): each of the J5 contacts is responsible for connecting to the circuit link with the number $n$; J2 is responsible for connecting to the circuit input; The grounding of the generator and oscilloscope must be connected to GND.</p>
+<p>Pins J5, J2 and GND are available for on-board measurements (see Fig. 1):</p>
+<h2 class="part">Part A: Chain Dispersion Relationship (5 points)</h2>
+<p>Consider a chain consisting of capacitors $C_1$ and $C_2$ ($C_1 < C_2$) and inductors $L$. A generator is connected to the leftmost link of the circuit, which excites voltage waves in the circuit. We will assume that there is no reflected wave, the traveling wave propagates from left to right. The circuit is shown in Fig. 3. One link is indicated by a red rectangle. Let us denote the potential of the node $A$ at the input to the link $V$, and the potential of the node $B$ by $u$. The lower branch of the chain is grounded.</p>
+<p>The circuit is shown in Fig. 3. One link is indicated by a red rectangle. Let us denote the potential of the node $A$ at the input to the link $V$, and the potential of the node $B$ by $u$. The lower branch of the chain is grounded.</p>
+<div class="figure"><img src="E1_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<p>Let's imagine the voltage wave in complex form $$V(n,t) = Ve^{-i\omega t+iqn},$$ $$u(n,t) = ue^{-i\omega t+iqn},$$ где $n$ — номер звена цепочки, $\omega$ — круговая частота сигнала, $q$ — волновой вектор. Дисперсионным соотношением называется зависимость $q(\omega)$.</p>
+<p>$⟦ M8⟧$ $$u(n,t) = ue^{-i\omega t+iqn},$$</p>
+<p>где $n$ — номер звена цепочки, $\omega$ — круговая частота сигнала, $q$ — волновой вектор. Дисперсионным соотношением называется зависимость $q(\omega)$.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Using Kirchhoff's rules, obtain a system of equations relating $V$, $u$ and $q$. Express your answer in terms of $V$, $u$, $q$, $L$, $C_1$, $C_2$ and $\omega$.</div><span class="pb-pts">0.40</span></div>
+<p>Note that the resulting equations hold for both finite and infinite chains.</p>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">From the resulting system, express $\cos q $ in terms of $\omega$, $L$, $C_1$ and $C_2$.</div><span class="pb-pts">0.80</span></div>
+<p>Depending on the value of the argument, the real and imaginary part of the arccosine of a real number is expressed as follows: \Im\bigl(\arccos x\bigr)= \begin{cases} 0, & |x|\le 1,\\[4pt] \mathrm{arcosh} x, & x>1,\\[6pt] \mathrm{arcosh} x, & x<-1. \end{cases}\]</p>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Determine at what frequencies the wave vector $q$ will have an imaginary part. Express your answer in terms of $L$, $C_1$ and $C_2$.</div><span class="pb-pts">0.60</span></div>
+<p>If you failed to complete step A2, in the future consider that the dependence of $\cos{q}$ on $\omega$ has the form $$\cos q = 1-\dfrac{A}{\omega^2}+\dfrac{B}{\omega^4}.$$ Положительная мнимая часть волнового вектора отвечает за экспоненциальное затухание амплитуды напряжения от звена к звену, а действительная — за сдвиг фаз амплитуд напряжений звеньев: \[ V_{n+1} = V_n e^{-\mathfrak{I} (q)} e^{i \mathfrak{R} (q)}. \]</p>
+<p>Подключите генератор к J2 , соединив его землю с контактом GND . С помощью контактов, обозначенных J5 , измеряйте напряжение на соответствующих звеньях цепи для определения волнового вектора $q$.</p>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Measure the dependence of the real and imaginary components of the wave vector $\Re(q)$ and $\Im(q)$ on the frequency $f$. Describe the measurement technique. Take measurements in the frequency range from $650~\text{кГц}$ to $1300~\text{кГц}$ with steps $50~\text{кГц}$. For each frequency $f$ it is necessary to obtain the value of both $\Re(q)$ and $\Im(q)$.</div><span class="pb-pts">1.50</span></div>
+<p>The obtained dependences make it possible to obtain the dispersion relation for a given chain. Using the imaginary $\Im(q)$ and real $\Re(q)$ parts of $q$, we can determine $\cos{q}$, which will be a complex number determined by the system parameters and the cyclic frequency $\omega$. \[\cos{q}=\cos{\Re(q)} \cosh{\Im(q)}-i\sin{\Re(q)}\sinh{\Im(q)}.\]Since either the imaginary or the real part $q$ are equal to zero over almost the entire measurement range, we will further neglect the imaginary part $\cos{q}$.</p>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Linearize the dependence of $\Re(\cos{q})$ on the frequency of the generator $f$ and determine the coefficients of the linear dependence.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">Using the coefficients found in A5, determine the capacitances of the capacitors $C_1$ and $C_2$ ($C_1 < C_2$).</div><span class="pb-pts">0.70</span></div>
+<h2 class="part">Part B: Conduction Band Study (5 points)</h2>
+<p>In Part A of the problem, we did not take into account the reflected wave, which can also propagate in the circuit. However, at high frequencies, the wave traveling from the generator practically does not attenuate, so the reflected wave cannot be neglected. Let's consider a circuit that is connected to the generator on the left and has $N$ links (see Fig. 5). Let us denote the wave traveling to the right by the index $r$ (it was the one that was studied in part A), and to the left by the index $l$, then the voltage in these waves depends on the link number $n$ and time $t$, as $$V_r(n,t) = V_{0r}e^{-i\omega t+iqn},$$ $$V_l(n,t) = V_{0l}e^{-i\omega t-iqn}.$$ Таким образом, все уравнения, записанные для бегущей вправо волны, аналогичны уравнениям для бегущей влево волны с заменой $q \rightarrow -q$. Токи в каждой из волн (см. рис. 4) связаны с напряжением через импеданс $$z_r = \frac{V_r(n,t)}{I_r(n,t)},\quad z_l = \frac{V_l(n,t)}{I_l(n,t)}.$$ Полным импедансом цепи называется величина $$z = \frac{V(0,t)}{I(0,t)}.$$</p>
+<p>Рассмотрим цепь, которая слева подключена к генератору и имеет $N$ звеньев (см. рис. 5). Обозначим волну, бегущую вправо, индексом $r$ (именно она исследовалась в части A), влево — индексом $ l$, тогда напряжения в этих волнах зависит от номера звена $n$ и времени $t$, как</p>
+<p>$$V_r(n,t) = V_{0r}e^{-i\omega t+iqn},$$ $$V_l(n,t) = V_{0l}e^{-i\omega t-iqn}.$$ Таким образом, все уравнения, записанные для бегущей вправо волны, аналогичны уравнениям для бегущей влево волны с заменой $q \rightarrow -q$. Токи в каждой из волн (см. рис. 4) связаны с напряжением через импеданс</p>
+<p>$$z_r = \frac{V_r(n,t)}{I_r(n,t)},\quad z_l = \frac{V_l(n,t)}{I_l(n,t)}.$$</p>
+<p>Полным импедансом цепи называется величина $$z = \frac{V(0,t)}{I(0,t)}.$$</p>
+<p>Fig. 4. Waves in an LC circuit</p>
+<div class="figure"><img src="E1_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<p>Rice. 5. Final LC circuit</p>
+<div class="figure"><img src="E1_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Express the impedances $z_{r}$ and $z_{l}$ for waves traveling to the right and left. Express your answer in terms of $C_1$, $C_2$, $L$, $q$ and $\omega$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Write down the boundary condition relating the complex stress amplitudes $V_r(0,t)$ and $V_l(0,t)$. The answer will be an equation containing $V_r(0,t)$, $V_l(0,t)$, $z_{r}$, $z_{l}$, $q$ and $N$.</div><span class="pb-pts">0.60</span></div>
+<p>Next, assume that $\omega \gg \dfrac{1}{\sqrt{LC_1}}, \dfrac{1}{\sqrt{LC_2}}$.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Obtain an expression for the total impedance modulus of a circuit $|z|$ consisting of $N$ links. Express your answer in terms of $N$, $q$ and $|z_r|$.</div><span class="pb-pts">1.20</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Using the results obtained in Part A, write an equation for the frequencies at which the maximum impedance is achieved. Express your answer in terms of $N$, $C_1$, $C_2$, $L$, $\omega$ and the integer parameter $m$.</div><span class="pb-pts">0.60</span></div>
+<p>Connect the ground of the generator to the GND pin, connect the “plus” of the generator through a resistor to pin J2. On the board you will receive a circuit consisting of $N$ links, shown in Fig. 4. By measuring the voltage across the resistor, you can get the current in the circuit by measuring the voltage at the J2-GND pins - the voltage in the circuit. In this way, the impedance of the circuit can be determined. Note: You may notice that in a real circuit there is another coil connected parallel to the links. However, its existence does not affect the position of the impedance modulus maxima, so it can be ignored when solving the problem.</p>
+<p>Note: You may notice that in a real circuit there is another coil connected parallel to the links. However, its existence does not affect the position of the impedance modulus maxima, so it can be ignored when solving the problem.</p>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Measure the frequencies at which the maximum impedance modulus is realized. Measurements should be carried out at frequencies $1400 ~\text{кГц} < f < 6000~\text{кГц}$, at which the LC circuit passes into the conduction band.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Linearize the relationship measured in step B5 and construct a linearized graph from which you can determine the number of links in the chain $N$.</div><span class="pb-pts">0.80</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/5013">https://pho.rs/p/5013</a></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Ship waves</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Ship waves</h1>
+<p class="camp">Y19 (2019) — English translation</p>
+<h2 class="part">Part A. Phase and group velocity</h2>
+<p>Oscillations and waves are one of the most interesting and widespread branches of physics. Wave processes are found in all areas of mechanics, thermodynamics, and electrodynamics, and optics is entirely the science of waves. In this problem we will look at the familiar ship waves, which have some very interesting and non-obvious features. However, first we will consider the general properties of waves. The simplest type of waves propagating in a linear medium are plane monochromatic waves - that is, waves with a specific frequency and wavelength. The dependence of their amplitude on time and coordinates (we are currently considering the one-dimensional case) is described as follows: $$A(t{,}x)=A_0\cos\theta=A_0\cos(kx-\omega t+\varphi_0) $$</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the speed of propagation of a constant phase of a monochromatic wave (phase speed).</div><span class="pb-pts">1.00</span></div>
+<p>However, in reality, pure monochromatic waves never exist. In fact, waves propagate in wave packets - a superposition of many waves of similar frequencies. A wave packet, unlike a monochromatic wave, is localized in a certain region of space and propagates not with phase velocity, but with the so-called group velocity. The group velocity is usually interpreted as the speed at which the maximum amplitude envelope of a quasi-monochromatic wave packet moves. For example, consider a wave packet of two monochromatic waves close in frequency and wave vector: $$A(t{,}x)=A_0\cos(k_1x-\omega_1t-\varphi_1)+A_0\cos(k_2x-\omega_2t-\varphi_2) $$</p>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Assuming that there is some functional dependence $\omega(k)$, find the group velocity through this function at point $k\approx{k_1}\approx{k_2}$.</div><span class="pb-pts">1.00</span></div>
+<p>The above-mentioned function $\omega(k)$ is called the dispersion relation for waves of a certain type and it is it that completely determines their behavior. That is why the study of any linear waves begins with finding this dependence.</p>
+<h2 class="part">Part B. Dispersion relation for water waves</h2>
+<p>The propagation of waves on water is determined by two physical effects: surface tension and the gravitational field of the earth. The first effect causes so-called capillary waves with a short wavelength, which we will not consider. Gravity leads to the existence of so-called gravitational waves. So, let's consider a wave propagating as in the figure. Consider that in the undisturbed region the water is stagnant, and in the disturbed region all the water moves at a certain speed.</p>
+<p>The propagation of waves on water is determined by two physical effects: surface tension and the gravitational field of the earth. The first effect causes so-called capillary waves with a short wavelength, which we will not consider. Gravity leads to the existence of so-called gravitational waves. So, let's consider a wave propagating as in the figure. Consider that in the undisturbed region the water is stagnant, and in the disturbed region all the water moves at a certain speed.</p>
+<div class="figure"><img src="T6_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the speed of wave propagation $v_{ph}$ if the water depth is $h$.</div><span class="pb-pts">1.00</span></div>
+<p>If the water depth is much greater than the wavelength $\lambda$, then water effectively moves only in a layer of thickness $\lambda/2\pi$.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the speed of wave propagation in deep water. The speed found is the phase speed of the wave.</div><span class="pb-pts">1.00</span></div>
+<p>Now, knowing the phase velocity of the wave depending on the wavelength, we can easily find the dispersion relation $\omega(k)$, and from it, using result B2, the group velocity of the waves.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Find the dispersion relation and group velocity of shallow water waves $v_g(k)$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Find the dispersion relation and group velocity of deep water waves $v_g(k)$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part C. Angle of divergence of ship waves</h2>
+<p>It is easy to see that for deep water waves the remarkable relation $v_g=v_{ph}/2$ is observed for waves of any wavelength. This leads to interesting effects. Let's consider ordinary ship waves that everyone could observe. It is known that they form a cone along the boundaries of which waves run. For emitters moving at a speed higher than the speed of wave propagation in a medium with linear dispersion, the formation of a Mach cone with an opening angle $\arcsin(c/v)$ is widely known.</p>
+<p>However, with a nonlinear dispersion law, finding the angle becomes more difficult; its value is determined by the constructive interference of monochromatic waves. So, let us consider a plane monochromatic wave propagating at an angle $\psi$ to the source velocity. The water is standing.</p>
+<p>However, with a nonlinear dispersion law, finding the angle becomes more difficult; its value is determined by the constructive interference of monochromatic waves. So, consider a plane monochromatic wave propagating at an angle $\psi$ to the source velocity. The water is standing.</p>
+<div class="figure"><img src="T6_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Find the relationship between the phase speed and the speed of the source if it must remain at a point of constant phase of the wave.</div><span class="pb-pts">1.00</span></div>
+<p>Imagine that at some point in time a source emitted a wide range of waves. Let us consider a train with a narrow spectrum, such that its phase velocity corresponds to propagation at an angle $\psi$.</p>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find the point at which the train will be located after time $dt$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find the locus of points for trains emitted at all possible angles.</div><span class="pb-pts">1.00</span></div>
+<p>Now imagine that such “elementary waves” from point C3 are emitted at every moment of time.</p>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Find the angle of the cone that limits all propagating waves</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3052">https://pho.rs/p/3052</a></p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Bridge of Wine}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Fig. 1 --- Equipment
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Equipment: 
+\begin{itemize}
+\item sound generator
+\item oscilloscope 
+\item multimeter in ohmmeter mode 
+\item four resistors 
+\item capacitor of known capacity $C_0=100~nF$ 
+\item 7 capacitors of unknown capacity, numbered in ascending order
+\item rheostat
+\item diode
+\item transformer; BNC-BNC cable $\times2$
+\item BNC to board adapter; development board $\times2$.
+\end{itemize}
+
+
+\section*{Bridge of Wine}
+
+A Wien bridge is a four-terminal linear element whose behavior depends significantly on the frequency $f$ of the input signal. The Wien Bridge diagram is shown in the figure below. The two most common applications of the Wien bridge are capacitance measurement and frequency filtering of signals. Each of them will be discussed in this task.
+
+Fig. 2 --- Bridge of Wine
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\section*{Part A. Yin and Yang (6.0 points)}
+
+Let us assume that the capacitance of one of the capacitors (for example, $C_2$) and the resistance of all resistors are known; You can also adjust the resistance $R_4$ and frequency $f$ of the input signal. Then, for some values of $f$ and $R_4$, the amplitude of the output signal $U_{\rm{out}}$ becomes equal to zero (the bridge is balanced). This can be used to determine the capacity $C_1$.
+
+\problembox{A1}{Express the bridge balancing condition as a ratio only between the values of its elements. At what frequency $f_\mathrm{bal}$ does balancing occur?}{2.00}
+
+\problembox{A2}{Using the Wien bridge, find the capacitances of the capacitors given to you as accurately as possible. Estimate the error of the received answers. Note: Since the “ground” of the generator and the oscilloscope are common, when connecting devices directly to the circuit, one of the Wien bridge components will actually be excluded from the circuit (its two terminals will have the same potential). To solve this problem you need to use a transformer. One of its windings must be connected to the Wien bridge, and data must be taken from the second winding on an oscilloscope. Note: Only plug the transformer into a small breadboard, since its legs can damage the contacts of a large one!}{4.00}
+
+\section*{Part B. Frequency filter (4.0 points)}
+
+Next, we will consider a Wien bridge in which $C_1=C_2$, $R_1=R_2$ and $R_4=2R_3$. Let us first examine such an important characteristic as the transfer function of the bridge $H(f)\equiv\left|\dfrac{U_\text{out}}{U_\text{in}}\right|$, where $U_\text{out}$ and $U_\text{in}$ are the complex amplitudes of the input and output signals, and $f$ is the frequency of the input signal.
+
+\problembox{B1}{Find the transfer function of the Wien bridge $H(f)$. At what frequency $f_0$ does this function have a singularity? To what value $H_\infty$ does the transfer function reach in the limit of high and low frequencies?}{2.00}
+
+\problembox{B2}{Build a frequency filter from existing equipment. By applying a sinusoidal signal to the input, find the minimum experimentally achievable value of the transfer function $H_{\text{exp}\,\text{min}}$.}{1.00}
+
+If a sinusoidal voltage with frequency $f$ is applied to an arbitrary nonlinear element, the output is a signal that is the sum of sinusoidal signals with frequencies $nf$, $n\in\mathbb N$ (and, perhaps, a constant component). The component with $n=1$ is called the carrier, and the components with $n\ge2$ are called higher harmonics. To take into account nonlinear effects, knowledge of the total amplitude of higher harmonics can be useful. To measure it, you can use the characteristic feature of the Wien bridge transfer function. As a nonlinear element, it is proposed to use a series-connected diode and a resistor with the lowest value (the voltage is proposed to be applied to both elements and removed from the diode).
+
+\problembox{B3}{Propose a method to filter out the DC component and the carrier harmonic of the diode signal and find the relative amplitude $\dfrac{U_\text{high}}{U_\text{in}}$ of the higher harmonics. Estimate the error using the result of the previous paragraph. Hint: You can assume that the transfer function of the Wien bridge reaches a constant fairly quickly. Please note that the transformer transfer function is not necessarily equal to $1$!}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3471}
+
+\end{document}

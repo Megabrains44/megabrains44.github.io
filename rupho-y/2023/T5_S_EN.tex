@@ -1,0 +1,168 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Thomson jumping ring --- Solution}}
+\author{\normalsize Y23 (2023) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Write down an equation relating the current in the ring $I(t)$ and the magnetic field in the core $B_z(t)$.}{0.30}
+
+Let's write Faraday's law of electromagnetic induction: $$\mathcal{E}_{ind}=-\cfrac{d\Phi}{dt} $$For выбранного направления currentа в кольце (против часовой стрелки for/at виде from above) induced EMF equals: $$\mathcal{E}_{ind}=-\cfrac{\pi{d}^2}{4}\dot{B}_z $$Apply Kirchhoff's second rule to the selected circuit and get:
+
+
+$$L\dot{I}+IR=-\cfrac{\pi{d}^2}{4}\dot{B}_z $$
+
+\end{solcard}
+
+\begin{solcard}{A2}{Obtain the dependence of the eddy current strength $I(t)$ on time at $B_z(t)=B_\mathrm m\cos\omega t$.}{0.50}
+
+Let's imagine the magnetic field induction in complex form: $$B_z(t)=B_\mathrm me^{i\omega t} $$Then: $$I(i\omega L+R)=-\cfrac{\pi{d}^2B_\mathrm m}{4}\cfrac{de^{i\omega t}}{dt}=\cfrac{\pi{d}^2\omega B_\mathrm me^{i(\omega t-\pi/2)}}{4} $$Since $R+i\omega L=\sqrt{R^2+\omega^2L^2}\cdot e^{i\arctan(\omega L/R)}$, for $I(t)$ we find: $$I(t)=I_0\cos(\omega t-\phi)=\cfrac{\pi{d}^2\omega B_\mathrm m}{4\sqrt{R^2+\omega^2L^2}}Re\left(e^{i(\omega t-\pi/2-\arctan(\omega L/R))}\right) $$From:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$I(t)=\cfrac{\pi{d}^2\omega B_\mathrm m}{4\sqrt{R^2+\omega^2L^2}}\cos\left(\omega t-\cfrac{\pi}{2}-\arctan\cfrac{\omega L}{R}\right) $$
+\end{solcard}
+
+\begin{solcard}{A3}{From Gauss's theorem, find the radial component of the field $B_{0\rho}(z)$. Further, in all points, use the result obtained.}{0.30}
+
+Let us apply the Gauss theorem on the flux of magnetic field induction to a cylindrical surface coaxial with the $z$ axis: $$\cfrac{\partial \Phi_\text{оsн}}{\partial z}+\cfrac{\partial \Phi_\text{бок}}{\partial z}=0 $$Since зависимостью $B_z(\rho)$ внутри сердечника можно пренебречь, последнее equation можно записать в следующем виде: $$\cfrac{\pi{d}^2}{4}\cfrac{\partial B_{0z}(z)}{\partial z}+\pi d\cdot B_{o\rho}(z)=0 $$From here:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$B_{0\rho}=-\cfrac{d}{4}\cfrac{\partial B_{0z}(z)}{\partial z} $$
+\end{solcard}
+
+\begin{solcard}{A4}{Find the dependence of the axial component of the force $F_z(z,t)$ acting on the ring on the coordinate $z$ and time $t$.}{0.20}
+
+Let us determine the projection of the Ampere force on the axis $z$: $$F_z=-\pi{d}IB_\rho $$Then we have:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$F_z=\cfrac{\pi^2d^4\omega B_{0z}(z)}{16\sqrt{R^2+\omega^2L^2}}\cfrac{\partial{B_{0z}(z)}}{\partial{z}}\cdot \cos(\omega t)\cos(\omega t-\phi),\quad\phi=\operatorname{arctg}\frac R{L\omega} $$
+\end{solcard}
+
+\begin{solcard}{A5}{Find $F_z(z)$.}{0.60}
+
+Let's use the formula for the product of cosines: $$\cos\alpha\cos\beta=\cfrac{\cos(\alpha-\beta)+\cos(\alpha+\beta)}{2}\Rightarrow \cos(\omega t)\cos(\omega t-\phi)=\cfrac{\cos(\phi)+\cos(2\omega t-\phi)}{2} $$Усреднение по времени for/atводит к выражению: $$\langle\cos(\omega t)\cos(\omega t-\phi)\rangle=\cfrac{\cos\phi}{2}=-\cfrac{\sin\left(\arctan\cfrac{\omega L}{R}\right)}{2}=-\cfrac{\omega L}{\sqrt{R^2+\omega^2L^2}} $$from where we find for the time-averaged force:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$F_z(z)=-\cfrac{\pi^2d^4B_{0z}(z)}{32}\cfrac{\partial{B_{0z}(z)}}{\partial{z}}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2} $$
+\end{solcard}
+
+\begin{solcard}{B1}{Find an expression for $F_z(z)$ in the geometry under consideration and the potential of this force $U_F(z)$ (assume it is zero at the top of the core).}{0.50}
+
+For the model described in the condition: $$\cfrac{\partial B_{0z}(z)}{\partial z}=-\cfrac{B_0}{H}=const $$Hence we get expression for силы $F_z(z)$:
+
+
+For the potential taking into account $U_F(H)=0$ we have: $$U_F(z)=-\displaystyle\int\limits_H^zF_z(z)dz=-\cfrac{\pi^2d^4B^2_0}{32H}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}\displaystyle\int\limits_H^z\left(1-\cfrac{z}{H}\right)dz=\cfrac{\pi^2d^4B^2_0}{32}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}\displaystyle\int\limits_0^{1-z/H}tdt $$from where:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$F_z(z)=\cfrac{\pi^2d^4B^2_0}{32H}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}\left(1-\cfrac{z}{H}\right) $$
+\end{solcard}
+
+\begin{solcard}{B2}{At what height $h$ will the ring float in a state of equilibrium if the field is “turned on” slowly? Express your answer in terms of $m$, $g$, $R$, $L$, $\omega$, $d$, $B_0$, $H$.}{0.50}
+
+With a slow change in the current strength in the solenoid, the ring will always be located near the equilibrium position, therefore the height of its levitation is determined by the condition of its equilibrium: $$F_z=mg $$Substituting expression for $F_z(z)$ and taking into account that в equalsвесии $z=h$, we find: $$h=H\left(1-\cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\right) $$Данный answer for/atменим, if quantity в скобках положительна, иначе $h=0$, therefore finally:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$h=\begin{cases} H\left(1-\cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\right)\quad\text{при}\quad \cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2}<1\\ 0\quad\text{при}\quad \cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2}>1 \end{cases} $$
+\end{solcard}
+
+\begin{solcard}{B3}{To what height $h_\mathrm m$ will the ring jump if the field is “turned on” quickly? Express your answer in terms of $m$, $g$, $R$, $L$, $\omega$, $d$, $B_0$, $H$.}{0.50}
+
+Let us obtain the dependence of the resultant Ampere forces and gravity acting on the ring on its coordinate $z$: $$R_z=F_z-mg=\cfrac{\pi^2d^4B^2_0}{32H}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}-mg-\cfrac{\pi^2d^4B^2_0z}{32H^2}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}=A-kz $$Это линейная function, положение которой соответствует значению $z_0=h=A/k$, найденному в предыдущем partе, moreover if $A<0$ – кольцо так же не подпрыгнет, т.е $h_m=0$. If в положении equalsвесия potentialьную энергию кольца в поле всех сил for/atнять equalsй нулю – её зависимость от $z$ имеет следующий вид: $$U(z)=\cfrac{k(z-z_0)^2}{2} $$Кольцо останавливается at the point, в которой его potential energy та же, что and в начальном положении, hence: $$z_\text{оsт}=2z_0\Rightarrow h_m=2h=2H\left(1-\cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\right) $$Поrayенный answer for/atменим только в том сrayае, if $h_m{<}H⟦1 1⟧z~{>}H$ индукция магнитного поля $B_z(z)=0$, and, как следствие, $F_z=0$. For/Atнимая за ноль potentialьную энергию в вершине сердечника, for начальной and конечной potentialьной энергии кольца we get: $$U_0=\cfrac{\pi^2d^4B^2_0}{64}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}-mgH\qquad U_\text{к}=mg(h_m-H) $$For/Atравнивая, we find: $$h_m=\cfrac{\pi^2d^4B^2_0}{64mg}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2} $$Final the answer will be written as follows:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$h_\mathrm m=\begin{cases} 0\quad \text{при}\quad \cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\geq 1\\ 2H\left(1-\cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\right)\quad \text{при}\quad \cfrac{1}{2}\leq \cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\leq 1\\ \cfrac{\pi^2d^4B^2_0}{64mg}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}\quad\text{при}\quad \cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}\leq\cfrac{1}{2} \end{cases} $$
+\end{solcard}
+
+\begin{solcard}{B4}{Find to what height $h_\mathrm m$ in the general case the ring will jump when the field is turned on quickly, if when it is turned on slowly it levitates at a height $h$. Compute $h_\mathrm m$ if $h=18~\text{cm};8~\text{cm}$. Give your answers to two significant figures.}{0.80}
+
+Let us obtain the connection between $h_\mathrm m$ and $h$: At $h=0$ the value $h_\mathrm m$ is also equal to zero. At $0We get the connection between $h_\textbackslash{}mathrm m$ and $h$:Since $H=20~\textbackslash{}text{cm}$ is $h=18~\textbackslash{}text{cm}{>}H/2$, and $h_2=8~\textbackslash{}text{cm}{<}H/2$. Then from the resulting connection $h_\textbackslash{}mathrm m$ and $h$ we find:\textbf{Answer:} The final dependency $h_\textbackslash{}mathrm m(h)$ is as follows: $$h_\mathrm m=\begin{cases} 2h\quad\text{при}\quad 0\geq h\leq \cfrac{H}{2}\\ \cfrac{H^2}{2(H-h)}\quad\text{при}\quad h\geq\cfrac{H}{2} \end{cases} $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The final dependency $h_\mathrm m(h)$ is as follows: $$h_\mathrm m=\begin{cases} 2h\quad\text{при}\quad 0\geq h\leq \cfrac{H}{2}\\ \cfrac{H^2}{2(H-h)}\quad\text{при}\quad h\geq\cfrac{H}{2} \end{cases} $$
+\end{solcard}
+
+\begin{solcard}{C1}{Find the additional average Ampere force $F_z(v_z,z)$ resulting from the motion of the ring.}{0.50}
+
+We express the additional increment of the derivative $\Delta \dot{\Phi}$ associated with the motion of the ring as $$ \Delta \dot{\Phi} = \frac{\pi d^2}{4}\frac{\partial B}{\partial z}\frac{dz}{dt} =  \frac{\pi d^2}{4}\frac{\partial B}{\partial z} \dot{z}. $$Это вызывает дополнительный current $$ \Delta I = \frac{\pi d^2}{4R}\frac{\partial B}{\partial z} \dot{z}. $$Дополнительная force: $$ \Delta F = B_{\rho} \Delta I \pi d = -\frac{\pi^2 d^4}{16R}\left(\frac{\partial B}{\partial z}\right)^2 \dot{z}. $$Averaging $\frac{\partial B}{\partial z}$ in time, we obtain an expression for the force.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F_z(v_z,z)=-\frac{\pi^2d^4B_0^2v_z}{32 RH^2}\]
+\end{solcard}
+
+\begin{solcard}{C2}{Find the damping decrement $\delta$. Express your answer in terms of $R$, $L$, $\omega$, $g$, $H$, $h_\mathrm m$. Calculate $\delta$ to two significant figures.}{1.00}
+
+Since the additional force is directly proportional to the speed, the motion of the ring will be a simple oscillation of a damped oscillator. The damping decrement of such oscillations is equal to:\[\delta=\pi\frac{2\gamma}{\omega_0}.\]In terms of the quantities given in the condition, we can write:\[2\gamma=\frac{\pi^2d^4B_0^2}{32m RH^2},\quad\omega_0^2=\cfrac{\pi^2d^4B^2_0}{32mH^2}\cdot\cfrac{\omega^2L}{R^2+\omega^2L^2}\]Thus, the damping decrement:\[\delta=\frac{\pi^2 d^2B_0}{HR\omega}\sqrt{\frac{R^2+\omega^2L^2}{32mL}}.\]Taking into account the results of the previous part, we express the answer in terms of the required quantities:\[\delta=\pi\frac{R^2+L^2\omega^2}{LR\omega^2}\sqrt\frac{2g}{2H-h_\mathrm m}=0.32\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Note: As you can see, it actually turned out to be $\delta\sim1$, i.e. In a good way, it is impossible to neglect this EMF. However, this would greatly complicate the calculations without changing the qualitative result.
+\end{solcard}
+
+\begin{solcard}{D1}{Find the resistance $R_n$ of a stack of $n$ contact rings. Find the specific force $F_n/nmg$ acting on each of the rings in the stack at $z=0$. At what height $h_n$ does the stack levitate? The rings can be considered very thin, so the inductance of a stack of rings is equal to the inductance of a single ring. Express your answers using $n$, $H$, $R$, $L$, $\omega$.}{0.80}
+
+Since the current strength in the ring is such that it is just beginning to break away from the support: $$\cfrac{32mgH(R^2+\omega^2L^2)}{\pi^2d^4B^2_0\omega^2L}=1 $$Since $R\sim S^{-1}$, а for/at контакте $n$ колец общая area поперечного сечения увеличивается в $n$ times: $$R_n=\cfrac{R}{n} $$Then for силы $F_n(z)$ we have: $$F_n(z)=\cfrac{\pi^2d^4B^2_0}{32H}\cdot\cfrac{\omega^2L}{(R/n)^2+\omega^2L^2}\left(1-\cfrac{z}{H}\right) $$From here:
+
+
+The expression for $h_n$ is obtained from the equation: $$\cfrac{F_n}{nmg}\left(1-\cfrac{h_n}{H}\right)=1 $$from:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\cfrac{F_n}{nmg}=\cfrac{R^2+\omega^2L^2}{R^2/n+n\omega^2L^2}\left(1-\cfrac{z}{H}\right) $$
+\end{solcard}
+
+\begin{solcard}{D2}{At what number of rings $n_\mathrm{opt}$ will the specific force be greatest? Calculate it for the ring considered in the problem.}{0.50}
+
+For any values ​​of $z$, the specific force will be greatest at the lowest value of the denominator. Its minimum possible value is determined by the equality: $$\cfrac{R^2}{n}=n\omega^2L^2\Rightarrow n=\cfrac{R}{\omega L}\approx 3{.}18 $$Целое value $n$, дающее наиболее близкий к минимальному значению знаменатель, равняется or $\bigl[R/(\omega L)\bigr]$, or $\bigl[R/(\omega L)\bigr]+1$. Сравним эти два значения: $$\cfrac{1}{3}+3\cdot\cfrac{\omega^2L^2}{R^2}=0{.}629\qquad \cfrac{1}{4}+4\cdot\cfrac{\omega^2L^2}{R^2}=0{.}645 $$Thus:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$n_{opt}=\biggl[\cfrac{R}{\omega L}\biggr]=3 $$
+\end{solcard}
+
+\begin{solcard}{D3}{At what maximum number of rings $n_\mathrm{max}$ will the stack of rings still levitate? Calculate it for the ring considered in the problem.}{0.50}
+
+The condition for possible levitation can be written as follows: $$\cfrac{F_n}{nmg}\geq 1 $$Максимально возможной величине $n$ соответствует $z=0$, therefore: $$\cfrac{F_n(0)}{nmg}=\cfrac{R^2+\omega^2L^2}{R^2/n+n\omega^2L^2}\geq 1\Rightarrow n^2-n\left(1+\cfrac{R^2}{\omega^2L^2}\right)+\cfrac{R^2}{\omega^2L^2}\leq 0 $$Максимальное value $n$ оlimitяется целой частью большего from корней: $$n_{max}=\Biggl[\cfrac{1+R^2/(\omega^2L^2)+\left|1-R^2/(\omega^2L^2)\right|}{2}\Biggr] $$Since $R>\omega L$, we finally have:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$n_{max}=\biggl[\cfrac{R^2}{\omega^2L^2}\biggr]=10 $$
+\end{solcard}
+
+\begin{solcard}{E1}{Find how the average power $R\overline{i^2}$ of the Foucault currents arising in the coil depends on the coordinate $z$. Express your answer in terms of $z$, $H$, $R$, $L$, $\omega$, $g$ and $h$.}{0.70}
+
+For average power we have: $$\langle P\rangle=R\langle I^2\rangle. $$ Expression for $\langle I^2\rangle$ поrayается усреднением квадрата косинуса: $$\langle I^2\rangle=\cfrac{\pi^2d^4\omega^2B^2_z(z)}{32(R^2+\omega^2L^2)}. $$ Using expression for $h$ from point B2, we get the answer:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$R\overline{i^2}= \frac{gH^2mR}{L(H-h)}\left(1-\cfrac{z}{H}\right)^2 $$
+\end{solcard}
+
+\begin{solcard}{E2}{Find numerically the total Joule loss $Q$ in the ring during its acceleration. Give your answer to two significant figures.}{1.30}
+
+The force acting on the ring depends linearly on $z$: $$ F(z) = F_0 \left(1-\frac{z}{H}\right). $$From the condition $F(h) = mg$ we get $F_0 = 10 mg$. Equation гармонических колебаний запишется в виде: $$ m \ddot{z} =  F_0 \left(1-\frac{z}{H}\right)-mg = -\frac{F_0}{H} z + const. $$Angular frequency гармонических колебаний: $$ \omega_0 = \sqrt{10\frac{g}{H}} \approx 22.14~\mathrm{s}^{-1}. $$Using начальные условия, we get зависимость $z(t)$: $$ z(t) = h(1-\cos(\omega_0 t)). $$Let кольцо вылетает с сердечника at the moment времени $t_0⟦ 12⟧$ z(t_0) = h(1-\textbackslash{}cos(\textbackslash{}omega_0 t_0)) = H; \textbackslash{}\textbackslash{} t_0 = \textbackslash{}frac{1}{\textbackslash{}omega_0} \textbackslash{}arccos \textbackslash{}left(\textbackslash{}frac{h}{H}-1 \textbackslash{}right) \textbackslash{}approx 75.5~мс. $$Мощность потерь можно выразить в зависимости от времени, подставив $z(t)$: $$ P(t) = \textbackslash{}frac{gH^2mR}{L(H-h)}\textbackslash{}left(1-\textbackslash{}frac{h}{H}\textbackslash{}left(1-\textbackslash{}cos(\textbackslash{}omega_0 t)\textbackslash{}right)\textbackslash{}right)^2. $$Отсюда получаем выражение для $Q$: $$ Q = \textbackslash{}frac{gH^2mR}{L(H-h)} \textbackslash{}int\textbackslash{}limits_0^{t_0} \textbackslash{}left(1-\textbackslash{}frac{h}{H}\textbackslash{}left(1-\textbackslash{}cos(\textbackslash{}omega_0 t)\textbackslash{}right)\textbackslash{}right)^2 dt \textbackslash{}approx 22.1~Дж $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q \approx 22~\mathrm{J} $$
+\end{solcard}
+
+\begin{solcard}{E3}{Find numerically the mechanical energy $E$ transferred to the ring during its acceleration. Give your answer to two significant figures.}{0.30}
+
+Using the results obtained when solving item B3 for the case $h>H/2$, we obtain: $$E=mgh_m= \cfrac{mgH^2}{2(H-h)}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ E=\cfrac{mgH^2}{2(H-h)} \approx 0.29~\mathrm{J} $$
+\end{solcard}
+
+\begin{solcard}{E4}{Find numerically the efficiency $\eta$ of the Thomson induction accelerator. Give your answer to two significant figures.}{0.20}
+
+Expression for efficiency: $$ \eta=\frac{E}{E+Q}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \eta \approx 1.3 \text{%} $$
+\end{solcard}
+
+\end{document}

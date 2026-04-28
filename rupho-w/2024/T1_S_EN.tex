@@ -1,0 +1,177 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Slipping rope --- Solution}}
+\author{\normalsize W24 (2024) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Determine the speed $v$ and acceleration $a$ of the left end of the rope at the moment when the left end is lowered by the amount $x$. Express your answer using $g$, $L_1$, $L$, $\alpha$ and $x$.}{1.50}
+
+First solution: The length of the part of the rope hanging on the right is $L_2=L_1+L\sin\alpha$, and the total length of the rope is: $$l=2L_1+L(1+\sin\alpha){.} $$ Let us use законом сохранения механической энергии: $$\cfrac{mv^2}{2}=-\Delta{W}_p{,}$$ where $m=\lambda l$ – mass верёвки, а $\Delta{W}_p$ – изменение её potentialьной энергии в поле тяжести. Fromменение potentialьной энергии верёвки в поле тяжести equals изменению potentialьной энергии участка верёвки длиной $x$, координата $x_C$ центра масс которого изменилась от значения $x_{C_1}=-x/2$ до $ x_{C_2}=x/2$. Hence we have: $$\Delta{W}_p=-\lambda x\cdot g\cdot(x_{C_2}-x_{C_1})=-\lambda gx^2{.} $$ Substituting $\Delta{W}_p$ в conservation of mechanical energy, we get: $$\cfrac{mv^2}{2}=\cfrac{\lambda lv^2}{2}=\lambda gx^2\Rightarrow v=x\sqrt{\cfrac{2g}{l}}{,} $$ from:
+
+
+$$l=2L_1+L(1+\sin\alpha){.} $$
+
+
+Let's use the law of conservation of mechanical energy:
+
+
+$$\cfrac{mv^2}{2}=-\Delta{W}_p{,}$$
+
+
+where $m=\lambda l$ is the mass of the rope, and $\Delta{W}_p$ is the change in its potential energy in the gravitational field.
+
+
+The change in the potential energy of the rope in the gravitational field is equal to the change in the potential energy of a section of the rope of length $x$, the coordinate $x_C$ of the center of mass of which has changed from the value $x_{C_1}=-x/2$ to $x_{C_2}=x/2$. From here we have:
+
+
+$$\Delta{W}_p=-\lambda x\cdot g\cdot(x_{C_2}-x_{C_1})=-\lambda gx^2{.} $$
+
+
+Substituting $\Delta{W}_p$ into the law of conservation of mechanical energy, we obtain:
+
+
+$$\cfrac{mv^2}{2}=\cfrac{\lambda lv^2}{2}=\lambda gx^2\Rightarrow v=x\sqrt{\cfrac{2g}{l}}{,} $$
+
+
+where:
+
+
+Since the speed $v(x)$ and the displacement $x$ are related by direct proportionality: $$a=v\sqrt{\cfrac{2g}{l}}=\cfrac{2gx}{l}{,} $$from where:
+
+
+Second solution: Let's write down the equation of motion for each section of the rope: $$\lambda(L_1+x)a=\lambda(L_1+x)g-T_1\qquad \lambda La=T_1-T_2+\lambda gL\sin\alpha\qquad \lambda (L_2-x)a=T_2-\lambda (L_2-x)g{,} $$ where $T_1$ and $T_2$ – силы натяжения верёвки вблfromand pulleyов $1$ and $2$ соответственно. Складывая уравнения, we get: $$\lambda(L_1+L_2+L)a=\lambda g(L_1+L\sin\alpha-L_2+2x){,} $$ from where
+
+
+$$\lambda(L_1+x)a=\lambda(L_1+x)g-T_1\qquad \lambda La=T_1-T_2+\lambda gL\sin\alpha\qquad \lambda (L_2-x)a=T_2-\lambda (L_2-x)g{,} $$
+
+
+where $T_1$ and $T_2$ are the rope tension forces near blocks $1$ and $2$, respectively.
+
+
+Adding the equations, we get:
+
+
+$$\lambda(L_1+L_2+L)a=\lambda g(L_1+L\sin\alpha-L_2+2x){,} $$
+
+
+where
+
+
+Multiplying the expression for acceleration by speed, we get: $$av=\cfrac{d(v^2/2)}{dt}=\cfrac{2gxv}{2L_1+L(1+\sin\alpha)}=\cfrac{g}{2L_1+L(1+\sin\alpha)}\cfrac{d(x^2)}{dt} $$Integrating, we get: $$\cfrac{v^2}{2}=\cfrac{gx^2}{2L_1+L(1+\sin\alpha)}{,} $$from:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v=x\sqrt{\cfrac{2g}{2L_1+L(1+\sin\alpha)}}{.} $$
+\end{solcard}
+
+\begin{solcard}{A2}{Determine the amount of displacement of the left end of the rope $x_1$ at the moment in time when the tension of the section of the rope lying on the inclined plane is constant along the length of this section. Express your answer in terms of $L_1$, $L$ and $\alpha$.  At what ratios $L_1$, $L$ and $\alpha$ is the value $x_1$ less than the initial length of the right section of the rope?}{0.80}
+
+Let us introduce the axis $y$, directed along the inclined plane from block $1$ to block $2$. Let us write in projection onto the axis $y$ Newton’s second law for a section of rope of length $dy$ lying on an inclined plane: $$dT+\lambda g\sin\alpha dy=\lambda ady{.} $$The quantity $dT=0$ for/at $a(x_1)=g\sin\alpha$. Hence: $$\cfrac{2gx_1}{l}=g\sin\alpha\Rightarrow x_1=\cfrac{l\sin\alpha}{2}{,} $$from where:
+
+
+Let's compare the value $x_1$ with the value $L_2$: $$x_1=L_1\sin\alpha+\cfrac{L\sin\alpha(1+\sin\alpha)}{2}\qquad L_2=L_1+L\sin\alpha{.} $$Coefficientы перед $L_1$ and $L$ в выражении for $L_2$ больше соответствующих coefficientов в выражении for $x_1$, therefore:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x_1=L_1\sin\alpha+\cfrac{L\sin\alpha(1+\sin\alpha)}{2}{.} $$
+\end{solcard}
+
+\begin{solcard}{A3}{Determine the maximum tension force of the rope at the moment of time when its left end has shifted by a distance $x$. Express your answer in terms of $\lambda$, $g$, $L_1$, $L$, $\alpha$ and $x$.}{1.50}
+
+On vertical sections of the rope, the greatest tension force is achieved at the points of contact of the blocks, since the acceleration $a(x)$ is always less than $g$. Let us denote by $T_1$ and $T_2$ the tension force of the rope at the points of contact of blocks $1$ and $2$, respectively. From Newton's second law for the left vertical section of the rope we obtain: $$\lambda(L_1+x)g-T_1=\lambda(L_1+x)a\qquad T_2-\lambda(L_2-x)g=\lambda(L_2-x)a{,} $$hence: $$T_1=\lambda(L_1+x)(g-a)\qquad T_2=\lambda(L_2-x)(g+a){.} $$Проаналfromandруем наклонный учасcurrent верёвки. From решения partа $\mathrm{A2}$ it follows: $$\cfrac{dT}{dy}=\lambda(a-g\sin\alpha) {.} $$For/At $x\leq x_1$ quantity $dT/dy$ не положительна, а for/at $x\geq x_1$ – неотрицательна, hence it follows, что: $$T_{max}=\begin{cases} T_1\quad\text{при}\quad x\geq x_1\\ T_2\quad\text{при}\quad x\leq x_1 \end{cases} $$Substituting выражения for $a$, $L_2$ and $x_1$, we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T_{max}=\begin{cases} \cfrac{\lambda g(L_1+x)(2L_1+L(1+\sin\alpha)-2x)}{2L_1+L(1+\sin\alpha)}\quad \text{при}\quad x\geq L_1\sin\alpha+\cfrac{L\sin\alpha(1+\sin\alpha)}{2}\\ \cfrac{\lambda g(L_1+L\sin\alpha-x)(2L_1+L(1+\sin\alpha)+2x)}{2L_1+L(1+\sin\alpha)}\quad \text{при}\quad x\leq L_1\sin\alpha+\cfrac{L\sin\alpha(1+\sin\alpha)}{2} \end{cases} $$
+\end{solcard}
+
+\begin{solcard}{A4}{Determine the displacement values ​​$x_{{max}(1)}$ and $x_{{max}(2)}$ of the left end of the rope, at which it begins to lose contact with blocks $1$ and $2$, respectively, assuming that contact with the other block is maintained. Express your answers using $L_1$, $L$ and $\alpha$.}{2.50}
+
+Let us write down Newton’s second law for a section of rope with mass $dm=\lambda dl$: $$dm\vec{a}=d\vec{T}+dm\vec{g}+d\vec{N}{.} $$At the moment of detachment $d\vec{N}=0$, therefore: $$dm\vec{a}=d\vec{T}+dm\vec{g}{.} $$Let $\rho$ – radius кривизны рассматриваемой поверхности, then $dl=\rho d\varphi$, where $d\varphi$ – angle поворота касательной к верёвке на рассматриваемом участке $dl$. Спроецируем equation движения на направление нормали, направленное к центру кривизны: $$dma_n=\lambda\rho d\varphi\cdot\cfrac{v^2}{\rho}=\lambda v^2d\varphi=Td\varphi+\lambda\rho d\varphi\cdot g_n{.} $$where $g_n$ – проекция ускорения свободного падения на направление нормали. Since radius pulleyов мал – condition отрыва the following: $$T=\lambda v^2{.} $$Временно переdenote величины $x_{max (1)}$ and $x_{max(2)}$  за $x_1$ and $x_2$ соответственно. Equation for $x_1$ the following: $$\cfrac{\lambda g(L_1+x_1)(2L_1+L(1+\sin\alpha)-2x_1)}{2L_1+L(1+\sin\alpha)}=\cfrac{2\lambda gx^2_1}{2L_1+L(1+\sin\alpha)}{.} $$hence: $$4x^2_1-x_1L(1+\sin\alpha)-L_1(2L_1+L(1+\sin\alpha))=0{.} $$У This quadratic equation has one positive root, therefore:
+
+
+The equation for $x_2$ is: $$\cfrac{\lambda g(L_1+L\sin\alpha-x_2)(2L_1+L(1+\sin\alpha)+2x_2)}{2L_1+L(1+\sin\alpha)}=\cfrac{2\lambda gx^2_2}{2L_1+L(1+\sin\alpha)}{,} $$hence: $$4x^2_2+x_2L(1-\sin\alpha)-(L_1+L\sin\alpha)(2L_1+L(1+\sin\alpha))=0{.} $$This quadratic equation has one positive root, so:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x_{max(1)}=\cfrac{L(1+\sin\alpha)}{8}+\sqrt{\left(\cfrac{L(1+\sin\alpha)}{8}\right)^2+\cfrac{L_1(2L_1+L(1+\sin\alpha))}{4}}{.} $$
+\end{solcard}
+
+\begin{solcard}{A5}{Calculate the speed of the rope at the moment of its separation from one of the blocks if the inclined plane forms angles $\alpha_1=30^{\circ}$, $\alpha_2=45^{\circ}$ and $\alpha_3=60^{\circ}$ with the horizon.}{1.20}
+
+For each of the angles, separation is achieved at $x$, equal to the smaller of the values ​​$x_{max(1)}$ and $x_{max(2)}$ corresponding to a given angle. Let's calculate them:
+
+
+$\alpha,^{\circ}$ $x_{max(1)},\text{m}$ $x_{max(2)},\text{m}$ $30$ $0{.}777$ $0{.}731$ $45$ $0{.}833$ $0{.}868$ $60$ $0{.}876$ $0{.}973$
+
+
+Thus, at angle $\alpha_1$ the rope first loses contact with the second block, and at angles $\alpha_2$ and $\alpha_3$ – with the first. From here we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_1=2{.}068~\text{m}/\text{s}\qquad v_2=2{.}264~\text{m}/\text{s}\qquad v_3=2{.}314~\text{m}/\text{s}{.} $$
+\end{solcard}
+
+\begin{solcard}{B1}{Determine the displacement value $x_0$ of the left end of the rope corresponding to the equilibrium position of the system. Express your answer in terms of $m$, $\lambda$, $L_1$, $L$, $\alpha$, $g$, $k$ and $F_0$.}{0.80}
+
+Let's write down the equilibrium conditions for three sections of the rope: $$T_1=\lambda g(L_1+x_0)+mg\qquad T_2-T_1=\lambda gL\sin\alpha\qquad T_2=\lambda g(L_2-x_0)+F_\text{упр}{,} $$hence: $$F_\text{упр}=\lambda g(L\sin\alpha+L_1+x_0+x_0-L_1-L\sin\alpha)+mg=mg+2\lambda gx_0{.} $$Since $F_\text{control}=F_0+kx_0$, we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x_0=\cfrac{mg-F_0}{k-2\lambda g}{.} $$
+\end{solcard}
+
+\begin{solcard}{B2}{The equilibrium position from the previous paragraph exists if the spring stiffness exceeds some minimum value $k_{min}$. Identify $k_{min}$. Express your answer using $m$, $\lambda$, $L_1$, $L$, $\alpha$, $g$, $k$ and $F_0$. Further, assume everywhere that $k > k_{min}$.}{0.70}
+
+The denominator of the result obtained in point $\mathrm{B1}$ must be positive, so we have the limitation: $$k>2\lambda g{.} $$The quantity $x_0$ also ограничена длиной $L_2$ правого вертикального участка верёвки, therefore: $$x_0=\cfrac{mg-F_0}{k-2\lambda g}\leq L_1+L\sin\alpha\Rightarrow k\geq 2\lambda g+\cfrac{mg-F_0}{L_1+L\sin\alpha}{.} $$The last limitation is more significant, so we have:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$k_{min}=2\lambda g+\cfrac{mg-F_0}{L_1+L\sin\alpha}{.} $$
+\end{solcard}
+
+\begin{solcard}{B3}{Find the change in the potential energy of the system $\Delta{W}_p$ when the left end of the rope is displaced by the amount $x$. Express your answer in terms of $m$, $\lambda$, $L_1$, $L$, $\alpha$, $g$, $k$, $F_0$ and $x$.}{0.80}
+
+For quantities $\Delta{W}_{p(\text{g})}$ and $\Delta{W}_{p(\text{в})}$ we have: $$\Delta{W}_{p(\text{g})}=-mgx\qquad \Delta{W}_{p(\text{g})}=-\lambda gx^2{.} $$Fromменение potentialьной энергии деформации пружины $\Delta{W}_{p(\text{def})}$ equals площади под графиком $F_\text{control}(\Delta{l})$ and составляет: $$\Delta{W}_{p(\text{деф})}=F_0x+\cfrac{kx^2}{2}{.} $$Finally:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\Delta{W}_p=\cfrac{(k-2\lambda g)x^2}{2}-(mg-F_0)x{.} $$
+\end{solcard}
+
+\begin{solcard}{B4}{If we take the potential energy $W_p$ at the equilibrium position equal to zero, then it can be represented in the form $$W_p=\cfrac{A(x-B)^2}{2}. $$Determine $A$ and $B$. Answerы выtimesandте via/through $m$, $\lambda$, $L_1$, $L$, $\alpha$, $g$, $k$ and $F_0$.}{0.70}
+
+From the expression for $\Delta{W}_p$ we have: $$W_p=\cfrac{(k-2\lambda g)x^2}{2}-(mg-F_0)x+C=\cfrac{k-2\lambda g}{2}\left(x-\cfrac{mg-F_0}{k-2\lambda g}\right)^2-\cfrac{(mg-F_0)^2}{2(k-2\lambda g)}+C{.} $$Оlimitяя potentialьную энергию в положении equalsвесия equalsй нулю: $$W_p=\cfrac{k-2\lambda g}{2}\left(x-\cfrac{mg-F_0}{k-2\lambda g}\right)^2{.} $$Thus:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$A=k-2\lambda g\qquad B=\cfrac{mg-F_0}{k-2\lambda g}{.} $$
+\end{solcard}
+
+\begin{solcard}{B5}{Determine the maximum speed of the load $v_{max}$ and its displacement from the initial position $x_{max}$ if the system is released without an initial speed.  Express your answers using $m$, $\lambda$, $L_1$, $L$, $\alpha$, $g$, $k$ and $F_0$.}{0.50}
+
+The maximum speed of the load is achieved at the point with coordinate $x_0$ and is determined from the law of conservation of mechanical energy: $$\cfrac{(m+\lambda(2L_1+L(1+\sin\alpha))v^2_{max}}{2}=\cfrac{Ax^2_0}{2}{,} $$from where:
+
+
+The value $x_{max}$ is achieved at the moment the load stops, i.e. is determined from the condition: $$\cfrac{A(x_{max}-x_0)^2}{2}=\cfrac{Ax^2_0}{2}\Rightarrow x_{max}=2x_0{,} $$from where:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{max}=\cfrac{mg-F_0}{k-2\lambda g}\sqrt{\cfrac{k-2\lambda g}{m+\lambda(2L_1+L(1+\sin\alpha)}}{.} $$
+\end{solcard}
+
+\begin{solcard}{B6}{What minimum speed $v_{min}$ must the weight have in the initial position for the right end of the thread to reach the level of block $2$? Express your answer using $m$, $\lambda$, $L_1$, $L$, $\alpha$, $g$, $k$ and $F_0$.}{1.00}
+
+The load must stop at the moment when it drops by the amount $L_2$. From the law of conservation of mechanical energy: $$\cfrac{A(L_2-x_0)^2}{2}=\cfrac{Ax^2_0}{2}+\cfrac{(m+\lambda(2L_1+L(1+\sin\alpha))v^2_{min}}{2}{,} $$from:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{min}=\sqrt{\cfrac{k-2\lambda g}{m+\lambda(2L_1+L(1+\sin\alpha)}(L_1+L\sin\alpha)\left(L_1+L\sin\alpha-\cfrac{2(mg-F_0)}{k-2\lambda g}\right)} $$
+\end{solcard}
+
+\end{document}

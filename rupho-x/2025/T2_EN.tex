@@ -1,0 +1,145 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+      \textbf{#1}\hfill\textbf{#3}\par\smallskip
+      #2
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Spinning top research}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}
+\maketitle
+This problem is devoted to the study of the movements of symmetrical tops - rigid bodies with an axis of symmetry. In Part A, the general equations of motion of a rigid body will be obtained; in subsequent parts, the Euler top (which is not affected by external forces) and Lagrange top (moving in a constant gravitational field) will be considered. Let the bottom point of the top $O$, lying on the axis of symmetry, be fixed, and the top can freely rotate around the point $O$ in all directions. The mass of the top is $m$, the distance from $O$ to the center of mass of the top is $l$. To describe the motion, we introduce a fixed coordinate system $OXYZ$.
+\section*{Part A. Euler's equations (2.2 points)}
+It is known from mechanics that the motion of an arbitrary rigid body with a fixed point is completely determined by a single vector - angular velocity, which means that the angular momentum and kinetic energy of a rigid body are uniquely expressed through its angular velocity and its geometric characteristics. Let us consider a small fragment of a solid body having a mass $dm$ and a radius vector $\vec{r} = (X, Y, Z)$ relative to the point $O$ in the coordinate system $OXYZ$. Let at the moment under consideration the body rotate with angular velocity $\vec{\Omega} = (\Omega_x, \Omega_y, \Omega_z)$.
+\problembox{A1}{Write down in vector form the expression for the instantaneous speed $\vec{v}$ of the fragment $dm$ at the moment under consideration. Express your answer in terms of $\vec{\Omega}$, $\vec{r}$.}{0.20}
+\problembox{A2}{Write down in vector form the expression for the angular momentum $d\vec{L}$ of the fragment $dm$ at the moment under consideration. Express your answer in terms of $\vec{\Omega}$, $\vec{r}$, $dm$.}{0.20}
+\problembox{A3}{Obtain expressions for the components of the vector $d \vec{L} = (dL_x, dL_y, dL_z)$ in the coordinate system $OXYZ$. Express your answer in terms of $X$, $Y$, $Z$, $\Omega_x$, $\Omega_y$, $\Omega_z$, $dm$.}{0.30}
+\problembox{A4}{For arbitrary motion of a rigid body, the angular momentum components can be written as
+\[
+\begin{aligned}
+L_x &= I_{xx}\Omega_x + I_{xy}\Omega_y + I_{xz}\Omega_z,\\
+L_y &= I_{yx}\Omega_x + I_{yy}\Omega_y + I_{yz}\Omega_z,\\
+L_z &= I_{zx}\Omega_x + I_{zy}\Omega_y + I_{zz}\Omega_z.
+\end{aligned}
+\]
+Obtain expressions for the coefficients $I_{xx}$, $I_{xy}$, $I_{xz}$, $I_{yx}$, $I_{yy}$, $I_{yz}$, $I_{zx}$, $I_{zy}$, $I_{zz}$ in the form of integrals over $dm$. The integral over $dm$ is the sum over infinitesimal regions of a solid body of mass $dm$. For example, the coordinates of the center of mass can be written as
+\[
+X_c=\frac{1}{m}\int X\,dm,\qquad
+Y_c=\frac{1}{m}\int Y\,dm,\qquad
+Z_c=\frac{1}{m}\int Z\,dm.
+\]
+In further paragraphs, the formulas obtained here are not used.}{0.50}
+
+One can show that the kinetic energy of a rigid body can be written as
+\[
+T=\frac{1}{2}\,\vec{L}\cdot\vec{\Omega}.
+\]
+It is also known that for any rigid body one can choose axes so that $I_{xy}=I_{yz}=I_{zx}=0$ (principal axes). In that case the expressions for $\vec{L}$ and $T$ simplify, and the diagonal elements are called principal moments of inertia:
+\[
+I_{xx}=I_x,\qquad I_{yy}=I_y,\qquad I_{zz}=I_z.
+\]
+However, in this case the axes are fixed in the body and therefore rotate with it. Direct the axis $Oz$ along the symmetry axis of the top. Choose $Ox$ and $Oy$ so that together with $Oz$ they form a right-handed triad. By symmetry, these axes are principal for the top. Let $\vec{e}_x$, $\vec{e}_y$, $\vec{e}_z$ be the unit vectors of the axes $Oxyz$. In the body-fixed frame,
+\[
+\vec{\omega}=\omega_x\vec{e}_x+\omega_y\vec{e}_y+\omega_z\vec{e}_z.
+\]
+\problembox{A5}{Derive expressions for $\vec{L}$ and $T$ in the principal axes. Express your answer in terms of $I_x$, $I_y$, $I_z$, $\omega_x$, $\omega_y$, $\omega_z$, $\vec{e}_x$, $\vec{e}_y$, $\vec{e}_z$.}{0.50}
+To study rotations, the basic equation of rotational motion is used:
+\[
+\dot{\vec{L}}=\vec{M},
+\]
+where $\vec{L}$ is the angular momentum of the system with respect to the chosen fixed point and $\vec{M}$ is the total external torque about that point. Since the axes of the coordinate system $Oxyz$ rotate with angular velocity $\vec{\omega}$, the time derivatives of the unit vectors of the moving coordinate system have the form
+\[
+\dot{\vec{e}}_x = \vec{\omega} \times \vec{e}_x,\quad
+\dot{\vec{e}}_y = \vec{\omega} \times \vec{e}_y,\quad
+\dot{\vec{e}}_z = \vec{\omega} \times \vec{e}_z.
+\]
+\problembox{A6}{Obtain expressions for the components of the vector $\dot{\vec{L}}$ in the moving coordinate system $\left(\dot{\vec{L}}\right)_x$, $\left(\dot{\vec{L}}\right)_y$, $\left(\dot{\vec{L}}\right)_z$. Express your answer in terms of $I_x$, $I_y$, $I_z$, $\omega_x$, $\omega_y$, $\omega_z$, $\dot{\omega}_x$, $\dot{\omega}_y$, $\dot{\omega}_z$.}{0.50}
+From point A6 it follows that the basic equation of dynamics in the moving axes $Oxyz$ has the form
+\[
+\begin{cases}
+I_x\dot{\omega}_x + (I_z-I_y)\omega_y \omega_z = M_x,\\
+I_y\dot{\omega}_y + (I_x-I_z)\omega_z \omega_x = M_y,\\
+I_z\dot{\omega}_z + (I_y-I_x)\omega_x \omega_y = M_z,
+\end{cases}
+\]
+where $M_x$, $M_y$, $M_z$ are the components of the external torque $\vec{M}$ in the coordinate system $Oxyz$. These equations are called the (dynamic) Euler equations and are a very convenient tool for studying the rotation of a rigid body.
+\section*{Part B. Equations of dynamics of a symmetrical top (2.1 points)}
+In the future, we will be interested in the movement of the center of mass of the top. The position of the top in space can be specified by two angles, similar to the angles in the spherical coordinate system. The angle between the axis $OZ$ and the axis of symmetry of the top $Oz$ will be denoted $\theta$, the angle of rotation of the axis of symmetry of the top around $OZ$ – $\varphi$. In addition, the top can rotate around its own axis of symmetry, which does not affect the position of its center of mass. Thus, the overall motion of the top is a superposition of three rotations: rotation about the axis of symmetry with a certain angular velocity $\vec{\omega}_s$; rotation in which the angle $\theta$ changes, with angular velocity $\vec{\omega}_\theta$ perpendicular to the axes $OZ$ and $Oz$; and rotation in which the angle $\varphi$ changes, with angular velocity $\vec{\omega}_\varphi$ directed along $OZ$. Then the total angular velocity of the top is the sum of these three angular velocities
+$$
+\vec{\omega} = \vec{\omega}_s + \vec{\omega}_\theta + \vec{\omega}_\varphi .
+$$
+By symmetry, we may choose the axes $Ox$ and $Oy$ in the plane perpendicular to the symmetry axis arbitrarily. Use this freedom and, at a given moment, direct the axis $Ox$ in the plane $OZz$ (see Fig.~1).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Fig. 1.}
+\end{figure}
+\problembox{B1}{Find the projections of angular velocity $\omega_x$, $\omega_y$, $\omega_z$. Express your answer in terms of $\omega_s$, $\dot{\theta}$, $\dot{\varphi}$, $\theta$.}{0.40}
+Let us consider the equations of the dynamics of a top in the case when it moves under the influence of gravity. Let the free fall acceleration be equal to $g$ and directed against the axis $OZ$. Due to symmetry for the top under consideration $I_x = I_y$. We denote $I_x = I_y = A$, $I_z = C$ and will use these notations throughout.
+\problembox{B2}{Show that the projection $L_1$ of the angular momentum $\vec{L}$ onto the fixed vertical axis $OZ$ is constant. Show that the projection $L_2$ of the angular momentum $\vec{L}$ onto the moving axis $Oz$ is constant.}{0.40}
+If you were unable to prove the constancy of $L_1$, $L_2$, you can then use this fact without proof.
+\problembox{B3}{Using the results of step A5, express the values ​​of the projections $L_1$ and $L_2$ in terms of $\omega_s$, $\dot{\theta}$, $\dot{\varphi}$, $\theta$, $A$, $C$.}{0.60}
+\problembox{B4}{At this point we will assume that $l = 0$, and the moment of gravity can be ignored. Let the angular momentum of the top be equal to $L_0$ and directed along the axis $OZ$. At time $t = 0$ the values ​​of angles $\theta = \theta_0$, $\varphi  = \varphi_0$. Find the dependence of angles $\theta$, $\varphi$ on time. This movement is called regular precession.}{0.70}
+\section*{Part C. Effective Lagrange top potential (1.5 points)}
+In this part we will study the movement of the top taking into account the moment of gravity.
+\problembox{C1}{For an arbitrary position of the top, express the total energy $E$ of the motion of the top (sum of kinetic and potential) in terms of $\omega_s$, $\dot{\theta}$, $\dot{\varphi}$, $A$, $C$, $m$, $g$, $l$, $\theta$.}{0.60}
+\problembox{C2}{Express $\omega_s$ and $\dot{\varphi}$ in terms of $L_1$, $L_2$, $A$, $C$, $ \theta$ using the results from step B3.}{0.30}
+\problembox{C3}{Using the constancy of $L_1$, $L_2$, reduce the expression for the total energy $E$ to the form $$E = \frac{\mu}{2} \dot{\theta}^2 + U(\theta).$$ Получите выражения для $\mu$, $U(\theta)$ через $A$, $C$, $L_1$, $L_2$, $m$,$g$, $l$. Note. As is known, the total energy is determined up to a constant, which for convenience can be set equal to zero.}{0.60}
+Note. As is known, the total energy is determined up to a constant, which for convenience can be set equal to zero.
+From the above it follows that the study of the time dependence of $\theta$ reduces to the study of a one-dimensional problem with energy $E$, and $\frac{\mu}{2} \dot{\theta}^2$ can be considered as kinetic energy, and $U(\theta)$ as potential. Therefore, in this case, $U(\theta)$ is called the effective potential.
+\section*{Part D. Various movements of the Lagrange top (6.2 points)}
+In this part we will look at several main possible modes of motion of a Lagrange top.
+Physical pendulum Let at the initial moment $\theta = \theta_0 >0$, and the top is motionless. The top is released without initial speed.
+Let at the initial moment $\theta = \theta_0 >0$, and the top is motionless. The top is released without initial speed.
+\problembox{D1}{Find the period of oscillation of the top. You will receive the answer in the form of a definite integral containing $A$, $C$, $l$, $\theta_0$, $g$. Also obtain a simplified expression for the case $\pi - \theta_0 \ll 1$.}{0.80}
+“Sleeping” top Another obvious movement of the top is the situation when $\theta = 0$ is during the entire movement. Such a top is called “sleeping” due to the lack of movement of its center of mass. Let the “sleeping” top rotate with angular velocity $\omega_0$ around its axis.
+Another obvious movement of the top is the situation when $\theta = 0$ is in the process of the entire movement. Such a top is called “sleeping” due to the lack of movement of its center of mass.
+Let the “sleeping” top rotate with angular velocity $\omega_0$ around its axis.
+\problembox{D2}{Express $L_1$ and $L_2$ in terms of $A$, $C$, $\omega_0$.}{0.20}
+Let now the “sleeping” top be slightly deflected from the vertical position, while the rotation parameters are selected so that $L_1$ and $L_2$ remain equal to those found in the previous paragraph.
+\problembox{D3}{Find a condition relating $A$, $C$, $m$, $g$, $l$, $\omega_0$ such that the position $\theta = 0$ is stable for the deviations described above. This condition is called Maievsky's condition. It turns out that if the found condition is satisfied, the equilibrium position is stable even if the conservation condition $L_1$ and $L_2$ is abandoned.}{0.50}
+Regular precession It can be shown that for the potential $U(\theta)$ for any $L_1$, $L_2$ there is a single angle $\theta_1$, which is the equilibrium position for the equivalent one-dimensional system.
+It can be shown that for the potential $U(\theta)$ for any $L_1$, $L_2$ there is a unique angle $\theta_1$, which is the equilibrium position for the equivalent one-dimensional system.
+\problembox{D4}{Obtain an equation for $\theta$ that is satisfied by the angle $\theta_1$. The equation may contain $A$, $C$, $L_1$, $L_2$, $m$, $g$, $l$. Clue. $U(\theta)$ can be represented as a function of the new variable $s = \cos \theta$, which greatly simplifies the solution.}{0.70}
+Clue. $U(\theta)$ can be represented as a function of the new variable $s = \cos \theta$, which greatly simplifies the solution.
+From point C2 it follows that at $\theta = \theta_1 = const$ the motion is a regular precession: $\dot{\varphi} = \omega_p = const$ is the angular velocity of precession, $\omega_s = const$ is the angular velocity of its own rotation.
+\problembox{D5}{Find the possible precession rates of the top $\omega_p$ at $\theta = \theta_1$. Express your answer in terms of $A$, $C$, $m$, $g$, $l$, $\omega_s$, $\theta_1$. One of the solutions can be to substitute expressions for $L_1$, $L_2$ into the equation from D4 through the angular velocities $\omega_s$, $\omega_p$.}{0.80}
+\problembox{D6}{Obtain approximate expressions for the frequencies in the case of $mgl \ll C \omega_s^2$. Consider that $A$ and $C$ are quantities of the same order.}{0.30}
+Nutation and irregular precession In general, the angle $\theta$ does not remain constant. It can be shown that for the potential $U(\theta)$ for any $L_1$, $L_2$ during the motion $\theta$ periodically changes from some $\theta_{min}$ to some $\theta_{max}$. This change in angle $\theta$ is called nutation. In this case, the angle $\varphi$ may change unevenly, so the precession is called irregular. Let's consider the following situation: at the initial moment of time, the axis of the top is horizontal ($\theta = \pi/2$), the center of mass of the top is motionless, the top is twisted around the symmetry axis with an angular velocity $\omega_0$. The top is released without a push.
+In general, the angle $\theta$ does not remain constant. It can be shown that for the potential $U(\theta)$ for any $L_1$, $L_2$ during the motion $\theta$ periodically changes from some $\theta_{min}$ to some $\theta_{max}$. This change in angle $\theta$ is called nutation. In this case, the angle $\varphi$ may change unevenly, so the precession is called irregular.
+Let's consider the following situation: at the initial moment of time, the axis of the top is horizontal ($\theta = \pi/2$), the center of mass of the top is motionless, the top is twisted around the symmetry axis with an angular velocity $\omega_0$. The top is released without a push.
+\problembox{D7}{Determine the angle $\alpha_{max}$ of the maximum deviation of the top axis from the horizontal during the subsequent movement. Express your answer in terms of $A$, $C$, $m$, $g$, $l$, $\omega_0$.}{0.70}
+Now let the top be quickly spun, i.e. $C \omega_0^2 \gg mgl$. Consider that $A$ and $C$ are quantities of the same order.
+\problembox{D8}{Find the dependence of the angle of deviation of the top axis from the horizontal on time $\alpha(t)$. Express your answer in terms of $A$, $C$, $m$, $g$, $l$, $\omega_0$.}{0.70}
+\problembox{D9}{Find the dependence of the precession angle on time $\varphi(t)$. At the initial moment $\varphi(0) = \varphi_0$. Express your answer in terms of $A$, $C$, $m$, $g$, $l$, $\omega_0$, $\varphi_0$.}{0.50}
+\problembox{D10}{Draw a characteristic graph of the dependence $\alpha(\varphi)$. Determine the angle $\Delta \varphi$ by which the top axis rotates between two successive returns of the top axis to a horizontal position. Express your answer in terms of $A$, $C$, $m$, $g$, $l$, $\omega_0$.}{0.50}
+Let the top be a thin rod of mass $m$, length $R$, to the end of which a thin homogeneous disk of mass $2m$ and radius $R$ is attached. The attachment point coincides with the center of the disk, the rod is perpendicular to the plane of the disk. As before, the top is released from a horizontal position without a push, spinning around its axis to an angular velocity $\omega_0 = \sqrt{100 \frac{g}{R}}$.
+\problembox{D11}{Calculate $\Delta \varphi$ for the described system.}{0.50}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4199}
+\end{document}

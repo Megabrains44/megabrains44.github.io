@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Dimensions}}
+\author{\normalsize X16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Let's assume that we have changed the system of units, and in the new system the units of measurement are chosen:
+
+Plank constant $\hbar=\frac{h}{2\pi} = 1.05 \cdot 10^{-34}~\text{J} \cdot \text{s}$ Electron mass $m=9.11 \cdot 10^{-31}~\text{kg}$ Elementary charge $e=1.60 \cdot 10^{19}~\text{C}$ Electric constant $\varepsilon_0 = 8.85 \cdot 10^{-12}~\text{C}^2 \cdot \text{m}^{-2} \cdot \text{N}^{-1}$
+
+\problembox{A1}{Determine the length of one meter in the new system of units. Define the speed of light in the new system of units. Find how many electron volts the new unit of energy is equal to.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4001}
+
+\end{document}

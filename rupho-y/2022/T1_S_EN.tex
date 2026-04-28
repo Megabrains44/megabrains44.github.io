@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Cell membranes --- Solution}}
+\author{\normalsize Y22 (2022) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Write down the differential equation that the electric field potential $\varphi$ must satisfy. $\textit{Подсказка:}$ according to the Boltzmann distribution, the concentration $n$ of particles with energy $E$ is proportional to $\exp\left(-\frac E{kT}\right)$, where $T$ is the absolute temperature of the medium.}{1.00}
+
+Let us consider a section of the solution outside the membrane, which has a unit area and is enclosed between the coordinates $x$ and $x+\mathrm dx$. For it, by the Gauss theorem\[E(x+\mathrm dx)-E(x)=\frac1{\varepsilon\varepsilon_0}en(x)\mathrm dx.\]Since\[E(x)=-\frac{\mathrm d\varphi}{\mathrm dx},\]we obtain\[\frac{\mathrm d^2\varphi}{\mathrm dx^2}=-\frac e{\varepsilon\varepsilon_0}n(x).\]The potential energy of a positive ion in this field is equal to $e\varphi(x)$, therefore for the concentration of ions from the Boltzmann distribution we obtain\[n(x)=n_0e^{-\frac{e\varphi(x)}{kT}}.\] Finally,\[\frac{\mathrm d^2\varphi}{\mathrm dx^2}=-\frac{en_0}{\varepsilon\varepsilon_0}\exp\left(-\frac{e\varphi}{kT}\right).\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\frac{\mathrm d^2\varphi}{\mathrm dx^2}=-\frac{en_0}{\varepsilon\varepsilon_0}\exp\left(-\frac{e\varphi}{kT}\right)\]
+\end{solcard}
+
+\begin{solcard}{A2}{Write down the boundary conditions that are satisfied by the potential $\varphi$ on the surface of the membrane, i.e. find $\varphi(0)$, $\displaystyle\frac{d\varphi}{dx}(0)$.}{0.30}
+
+By condition $\varphi(0)=0$. Since the cell membrane is a uniformly charged sphere, the field outside at its surface is \[E(0)=\frac{-\sigma}{\varepsilon\varepsilon_0},\]from\[\frac{\mathrm d\varphi}{\mathrm dx}(0)=-E(0)=\frac\sigma{\varepsilon\varepsilon_0}.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varphi(0)=0,\quad\frac{\mathrm d\varphi}{\mathrm dx}(0)=\frac\sigma{\varepsilon\varepsilon_0}\]
+\end{solcard}
+
+\begin{solcard}{A3}{Identify $n_0$, $A_1$ and $B_1$. Express $\varphi(x)$ and $n(x)$ (the concentration of positive ions at point $x$) in terms of $\sigma$, $\varepsilon$, $\varepsilon_0$, $T$, $e$ and $k$.}{0.80}
+
+Let's substitute the function $\varphi(x)=A_1\ln(1+B_1x)$ into the equation obtained in $\bf A1$: \[-\frac{A_1B_1^2}{(1+B_1x)^2}=-\frac{en_0}{\varepsilon\varepsilon_0}(1+B_1x)^{-\frac{eA_1}{kT}}\]From here we get\[A_1=\frac{2kT}e,\quad B_1=\sqrt{\frac{n_0e^2}{2\varepsilon\varepsilon_0kT}}.\]Substituting $\varphi(x)=A_1\ln(1+B_1x)$ with the found $A_1$ and $B_1$ into the equation $\frac{\mathrm d\varphi}{\mathrm dx}(0)=\frac\sigma{\varepsilon\varepsilon_0}$ obtained in point $\bf A2$, we have\[A_1B_1=\frac{\sigma}{\varepsilon\varepsilon_0},\]from which we directly it turns out\[B_1=\frac{\sigma e}{2\varepsilon\varepsilon_0kT},\quad n_0=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}.\]Then the expression for the potential takes the form\[\varphi(x)=\frac{2kT}e\ln\left(1+\frac{\sigma ex}{2\varepsilon\varepsilon_0kT}\right).\]From the equation\[n(x)=n_0e^{-\frac{e\varphi(x)}{kT}}\]we finally obtain\[n(x)=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}\frac1{\left(1+\frac{\sigma ex}{2\varepsilon\varepsilon_0kT}\right)^2}.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[A_1=\frac{2kT}e,\quad B_1=\frac{\sigma e}{2\varepsilon\varepsilon_0kT},\quad n_0=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT},\\\varphi(x)=\frac{2kT}e\ln\left(1+\frac{\sigma ex}{2\varepsilon\varepsilon_0kT}\right),\\n(x)=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}\frac1{\left(1+\frac{\sigma ex}{2\varepsilon\varepsilon_0kT}\right)^2}\]
+\end{solcard}
+
+\begin{solcard}{A4}{Show that the resulting $n(x)$ guarantees the electrical neutrality of the system.}{0.40}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Indeed, the charge of positive ions per unit area of ​​the membrane is equal to: \[e\int_0^{+\infty}n(x)\mathrm{~d}x=\frac{\sigma^2e}{2\varepsilon\varepsilon_0kT}\int_0^{+\infty}\frac1{\left(1+\frac{\sigma ex}{2\varepsilon\varepsilon_0kT}\right)^2}\mathrm{~d}x=\sigma\int_0^{+\infty}\frac1{(1+y)^2}\mathrm{~d}y=\sigma\]
+\end{solcard}
+
+\begin{solcard}{A5}{Per unit area of ​​the membrane, find the energy of the electric field $U_f$ and the sum of the potential energies of positive ions $U_e$ in this field.}{1.50}
+
+Electric field energy density\[u_f=\frac12\varepsilon\varepsilon_0E^2=\frac12\varepsilon\varepsilon_0\left(\frac{\mathrm d\varphi}{\mathrm dx}\right)^2.\]From the formulas obtained in the previous paragraphs we have\[\frac{\mathrm d\varphi}{\mathrm dx}=\frac{2kT}e\frac{\frac{\sigma e}{2\varepsilon\varepsilon_0kT}}{1+\frac{\sigma e}{2\varepsilon\varepsilon_0kT}x}.\]From here we find the field energy:\[U_f=\frac12\varepsilon\varepsilon_0\int_0^{\infty}\left(\frac{\mathrm d\varphi}{\mathrm dx}\right)^2\mathrm dx=\frac{\sigma kT}e\int_0^{\infty}\frac{\frac{\sigma e}{2\varepsilon\varepsilon_0kT}}{\left[1+\frac{\sigma e}{2\varepsilon\varepsilon_0kT}x\right]^{2}}\mathrm dx=\\=\frac{\sigma kT}e\int_0^{\infty}\frac1{(1+y)^2}\mathrm dy=\frac{\sigma kT}e.\]The sum of the potential energies of positive ions in this field is\[U_e=\int_{0}^{\infty} e n(x) \varphi(x) \mathrm{d} x=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}2kT\int_0^{\infty}\frac{\ln\left(1+\frac{\sigma e}{2\varepsilon\varepsilon_0kT}x\right)}{\left(1+\frac{\sigma e}{2\varepsilon\varepsilon_0kT} x\right)^2}\mathrm dx=\\=\frac{2\sigma kT}e\int_0^{\infty}\frac{\ln(1+y)}{(1+y)^2}\mathrm dy=-\frac{2\sigma kT}e\int_0^{\infty}\ln(1+y)\mathrm d\frac1{1+y}=\\=\frac{2\sigma kT}e\int_0^{\infty}\frac1{(1+y)^2}\mathrm dy=\frac{2\sigma kT}e.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[U_f=\frac{\sigma kT}e,\quad U_e=\frac{2\sigma kT}e\]
+\end{solcard}
+
+\begin{solcard}{B1}{Identify $A_2$ and $B_2$. Express your answer in terms of $T$, $\varepsilon$, $\varepsilon_0$, $e$, $k$ and $n_0$.}{0.80}
+
+Similar to $\bf A1$, the potential satisfies the differential equation\[\frac{\mathrm d^2\varphi}{\mathrm dx^2}=-\frac{en_0}{\varepsilon\varepsilon_0}\exp\left(-\frac{e\varphi}{kT}\right)\quad\Big[-D < x < D,\ \varphi(0)=0\Big].\]Substituting the function $\varphi(x)=A_2\ln[\cos(B_2x)]$ into it, we have\[\frac{A_2B_2^2}{\cos^2(Bx)}=\frac{en_0}{\varepsilon\varepsilon_0}\big[\cos(Bx)\big]^{-\frac{eA}{kT}}.\]From here we immediately obtain\[A_2=\frac{2kT}e,\quad B_2=\sqrt{\frac{n_0e^2}{2\varepsilon\varepsilon_0kT}}.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[A_2=\frac{2kT}e,\quad B_2=\sqrt{\frac{n_0e^2}{2\varepsilon\varepsilon_0kT}}\]
+\end{solcard}
+
+\begin{solcard}{B2}{Let's introduce the value $\theta=B_2D$. From the boundary conditions on the membrane surface, obtain an equation relating $\theta$ and $e$, $\sigma$, $D$, $\varepsilon$, $\varepsilon_0$, $k$ and $T$.}{0.50}
+
+Similar to $\bf A2$, the boundary condition has the form\[\frac{\mathrm d\varphi}{\mathrm dx}(-D)=\frac{\sigma}{\varepsilon\varepsilon_0}.\]For the function $\varphi(x)=A_2\ln[\cos(B_2x)]$ we have\[\frac{\mathrm d\varphi}{\mathrm dx}=-A_2B_2\operatorname{tg}(B_2x),\]from where\[A_2B_2\operatorname{tg}(B_2D)=\frac{\sigma}{\varepsilon\varepsilon_0}.\]Substituting the expression for $A_2$ from $\bf B1$, we obtain\[B_2D\operatorname{tg}(B_2D)=\frac{\sigma eD}{2\varepsilon\varepsilon_0kT},\]which can be rewritten through $\theta\equiv B_2D$ in the form\[\theta\operatorname{tg}\theta=\frac{\sigma eD}{2\varepsilon\varepsilon_0kT}\quad\Big[0 < \theta < \frac\pi2\Big].\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\theta\operatorname{tg}\theta=\frac{e\sigma D}{2\varepsilon\varepsilon_0kT}\quad\Big[0 < \theta < \frac\pi2\Big]\]
+\end{solcard}
+
+\begin{solcard}{B3}{Express $n_0$ in terms of $D$, $\sigma$, $\varepsilon$, $\varepsilon_0$, $T$, $e$, $k$ and $\theta$.}{0.40}
+
+Since $B_2=\frac\theta D$, then \[n_0=\frac{2\varepsilon\varepsilon_0kT}{e^2}B_2^2=\frac{2\varepsilon\varepsilon_0kT\theta^2}{e^2D^2}.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[n_0=\frac{2\varepsilon\varepsilon_0kT\theta^2}{e^2D^2}\]
+\end{solcard}
+
+\begin{solcard}{B4}{Find the difference $\Delta n\equiv n(\pm D)-n_0$ between the concentrations of positive ions at the surface of the two membranes and in the middle between them. Express your answer in terms of $\sigma$, $\varepsilon$, $T$ and $k$.}{0.50}
+
+From the Boltzmann distribution, when substituting the function $\varphi(x)=A_2\ln[\cos(B_2x)]$, we obtain an expression for concentration in the following form:\[n(x)=n_0e^{-\frac{e\varphi(x)}{kT}}=n_0[\cos(B_2x)]^{-\frac{eA_2}{kT}}=n_0\frac1{\cos^2B_2x},\]from\[n(\pm D)=n_0\frac1{\cos^2(B_2D)}=n_0\left(1+\operatorname{tg}^2B_2D\right)=n_0+n_0\operatorname{tg}^2\theta.\]Note that\[n_0\operatorname{tg}^2\theta=\frac{2\varepsilon\varepsilon_0kT}{D^2e^2}\Big(\theta\operatorname{tg}\theta\Big)^2=\frac{2\varepsilon\varepsilon_0kT}{D^2e^2}\left(\frac{\sigma eD}{2\varepsilon\varepsilon_0kT}\right)^2=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}.\]Thus,\[\Delta n=n(\pm D)-n_0=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\Delta n=\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}\]
+\end{solcard}
+
+\begin{solcard}{B5}{Show that the resulting $n(x)$ guarantees the electrical neutrality of the system.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Similar to $\bf A4$, the charge of positive ions per unit area of ​​the system is equal to: \[\int_{-D}^Den(x)\mathrm{~d}x=en_0\int_{-D}^D\frac{\mathrm{~d}x}{\cos^2(B_2x)}=\frac{2e}{B_2}\frac{2\varepsilon\varepsilon_0kT\theta^2}{e^2D^2}\tan\theta=\frac{2e}{B_2}\frac{2\varepsilon\varepsilon_0kT\theta}{e^2D^2}\frac{\sigma eD}{2\varepsilon\varepsilon_0kT}=2\sigma\]
+\end{solcard}
+
+\begin{solcard}{B6}{Find the total force $f$ acting per unit area of ​​the membrane. Hydrostatic pressure can be neglected. Express your answer in terms of $e$, $D$, $\theta$, $\varepsilon$, $\varepsilon_0$, $k$ and $T$ $\textit{Подсказка:}$ positive ions in water behave like an ideal gas and are locally in thermal equilibrium.}{1.50}
+
+Each membrane is subject to the charges of positive ions and the other membrane. Since the system as a whole is electrically neutral, the total charge of the ions and one of the membranes is equal to the charge of the membrane, taken with the opposite sign. Thus, the system is in some sense equivalent to a flat capacitor, for which, as is known, \[f_e=\frac{\sigma^2}{2\varepsilon\varepsilon_0},\]and $f_e$ is directed from one membrane to the other. The pressure created by positive ions as an ideal gas is \[f_h=n(\pm D)kT=\left(n_0+\frac{\sigma^2}{2\varepsilon\varepsilon_0kT}\right)kT=\frac{2\varepsilon\varepsilon_0k^2T^2\theta^2}{e^2D^2}+\frac{\sigma^2}{2\varepsilon\varepsilon_0}.\]The resulting force will push the membranes apart and is equal to \[f=f_h-f_e=n_0kT=\frac{2\varepsilon\varepsilon_0k^2T^2\theta^2}{e^2D^2}.\] $\textbf{Второй способ}$ The $x=0$ plane divides the system into two parts. Due to the symmetry and electrical neutrality of the system as a whole, each of these parts will also be electrically neutral, and therefore these parts will not interact with each other electrostatically. Thus, the interaction of the parts is reduced only to the pressure of an ideal gas of positive ions, equal to \[f_{h0}=n_0kT.\]Since each of the parts is in equilibrium, then\[f=f_{h0}=n_0kT=\frac{2\varepsilon\varepsilon_0k^2T^2\theta^2}{e^2D^2}.\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[f=\frac{2\varepsilon\varepsilon_0k^2T^2\theta^2}{e^2D^2}\]
+\end{solcard}
+
+\begin{solcard}{B7}{For relatively small distances $D$ the dependence $f(D)$ has the form: $f=k_1D^\alpha$, and for large ones: $f=k_2D^\beta$. Find $\alpha$ and $\beta$.}{1.80}
+
+As was obtained in $\bf B6$,\[f\propto\left(\frac\theta D\right)^2,\]where $\theta$, according to $\bf B2$, satisfies the equation \[\theta\operatorname{tg}\theta=\frac{e\sigma D}{2\varepsilon\varepsilon_0kT},\]i.e. $\theta$ also depends on $D$. Consider the case $\frac{e\sigma D}{2\varepsilon\varepsilon_0kT}\ll1$. For him $\operatorname{tg}\theta\approx\theta$, therefore\[\theta\approx\sqrt{\frac{e\sigma D}{2\varepsilon\varepsilon_0kT}}\propto\sqrt D,\]because\[f\propto\left(\frac{\sqrt D}D\right)^2=\frac1D,\]i.e. $\alpha=-1$. Let us now consider the case $\frac{e\sigma D}{2\varepsilon\varepsilon_0kT}\gg1$. For him $\theta\approx\frac\pi2=\operatorname{const}$, therefore \[f\propto\frac1{D^2},\]i.e. $\beta=-2$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\alpha=-1,\quad\beta=-2\]
+\end{solcard}
+
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Spring, block and board}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Block on a smooth surface}
+
+A block of mass $m$ rests on a smooth horizontal surface, connected to the wall by a weightless horizontal spring with a stiffness coefficient $k$, the deformation of which at the initial moment is zero. At the moment of time $t=0$ the block begins to be acted upon by a constant force $F$ directed from the wall.
+
+\problembox{A1}{Find the maximum deformation of the spring $\Delta{L}_1$ and the time $t_1$ after which it is reached.}{0.80}
+
+\problembox{A2}{Find the maximum speed of the block ${v_{max}}_1$ and the time $t_2$ after which it is achieved.}{0.80}
+
+\problembox{A3}{Find the maximum acceleration of the block ${a_{max}}_1$ and the minimum time $t_3$ after which it is achieved.}{0.40}
+
+\section*{Part B. Block on board}
+
+A board of mass $M$ rests on a smooth horizontal surface, a block of mass $m$ rests on the board, the coefficient of friction between the block and the board is $\mu$. The block is connected to the wall by a horizontal spring with a stiffness coefficient $k$, the deformation of which at the initial moment is zero. At time $t=0$, a constant force $F$, directed from the wall, begins to act on $$. The acceleration due to gravity is $g$. Consider the board to be infinitely long.
+
+\problembox{B1}{Find the maximum deformation of the spring $\Delta{L}_2$ and the time $t_4$ after which it is reached.}{3.00}
+
+\problembox{B2}{Find the maximum speed of the block ${v_{max}}_2$ and the time $t_5$ after which it is achieved.}{2.50}
+
+\problembox{B3}{Find the maximum acceleration of the block ${a_{max}}_2$ and the minimum time $t_6$ after which it is achieved.}{1.50}
+
+\section*{Part C. Cylinder on board}
+
+A board rests on a smooth horizontal surface, a solid homogeneous cylinder rests on the board, the coefficient of friction between the cylinder and the board is $\mu$. The cylinder is connected to the wall by two horizontal springs with a stiffness coefficient $k$, the deformation of which at the initial moment is zero. The attachment points for the springs to the cylinder are located on its axis. At time $t=0$ the board begins to move with constant acceleration $a$ directed from the wall. The acceleration due to gravity is $g$. Consider the board to be infinitely long.
+
+\problembox{C1}{Find the maximum deformation of the spring $\Delta{L}_3$ and the time $t_7$ after which it is reached.}{1.50}
+
+\problembox{C2}{Find the maximum speed of the center of the cylinder ${v_{max}}_c$ and the time $t_8$ after which it is reached.}{1.00}
+
+\problembox{C3}{Find the maximum acceleration of the center of the cylinder ${a_{max}}_c$ and the minimum time $t_9$ after which it is achieved.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/45}
+
+\end{document}

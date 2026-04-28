@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{About TVs}}
+\author{\normalsize X17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In a village with one street, a two-wire line is installed made of aluminum wire with a resistivity of $\rho=2.8\cdot{10^{-2}~(\Omega\cdot{\text{mm}^2})/\text{m}}$ and a cross-sectional area of $S=4.0~\text{cm}^2$. Voltage at the input of line $U_0=220~\text{V}$. Houses in the village stand every $l=20~\text{m}$;  All houses have the same televisions with a nominal power $P_{\text{nom}}=200~\text{W}$ and voltage $U_{\text{nom}}=220~\text{V}$, each of which is connected to the network. The TV works normally if the voltage on it is not less than $U_{min}=200~\text{V}$.
+
+\problembox{A1}{In how many houses $N_0$ can residents enjoy watching the news on TV at the same time? Assume that the resistance of the TV does not depend on the applied voltage, and the total number of houses in the village is $N\gg{N_0}$.}{3.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/305}
+
+\end{document}

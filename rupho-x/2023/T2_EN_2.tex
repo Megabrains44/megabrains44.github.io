@@ -1,0 +1,235 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Binary thermodynamic cycles}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Working to increase the efficiency of steam power plants is an important part of reducing the economic costs of maintaining power plants. The development of this industry has always been limited by the complexity of the technical implementation of installations, as well as the transition of real gas into the liquid phase. Engineers formulated the following requirements for substances used in cycles: The specific heat capacity of the substance in the liquid phase must be the smallest; The critical point of a substance must be reached at high temperature and relatively low pressure; The saturated vapor pressure at the lowest temperature should not be too low; The substance must be readily available. Limitations on the heat capacity in the liquid phase and the temperature of the substance at the critical point are understandable from theoretical considerations, but the creation of a chamber that can withstand high pressure and a vacuum condenser that maintains low pressure are complex tasks from a technical point of view. Currently, there are no known substances that satisfy all of the above requirements, and therefore the idea of binary cycles was proposed - to take advantage of one coolant at high temperatures and the other at low temperatures. Binary cycles have greater efficiency than cycles with one of the substances under consideration. The idea of binary cycles is that heat exchange occurs between two substances located in different vessels. This makes it possible to implement two cycles simultaneously, while avoiding the forced supply of heat to one of the working fluids during the heat exchange process. The Rankine cycle $1-2-3-4-1$ is one of the most used in binary cycles. It consists of the following processes:
+\begin{enumerate}
+    \item $1-2$ - adiabatic expansion;
+    \item $2-3$ - isothermal cooling (heat removal);
+    \item $3-4$ - adiabatic compression;
+    \item $4-1$ - isobaric heating;
+\end{enumerate}
+Further, unless otherwise specified, for Rankine cycles adhere to the introduced notation. In parts $\mathrm{A}$ and $\mathrm{B}$, Rankine cycles with working fluids in the form of an ideal gas and water are analyzed, respectively, and in parts $\mathrm{C}$ and $\mathrm{D}$, respectively, a binary gas-steam-water cycle (will be described separately) and a binary Rankine cycle with working fluids in the form of water and mercury in both cases.
+
+\section*{Part A. Rankine cycle with an ideal gas (2.0 points).}
+
+Consider the Rankine cycle with an ideal polyatomic gas. We denote the absolute temperatures at points $1$, $2$ and $4$ as $T_1$, $T_2$ and $T_4$, respectively. Let us introduce the quantities $\alpha$ and $\beta$, which determine the relationship between temperatures and pressures at points $2$ and $4$:
+$$\alpha=\frac{T_4}{T_2},\qquad \beta=\frac{p_4}{p_2}.$$
+
+\problembox{A1}{Express the amount of heat $Q_-$ removed from the gas per cycle through $T_1$, $T_2$, $T_4$, $R$, the amount of gas substance $\nu$ and the adiabatic exponent $\gamma$.}{0.70}
+
+\problembox{A2}{Express the relation $T_1/T_4$ in terms of $\alpha$, $\beta$ and $\gamma$.}{0.80}
+
+\problembox{A3}{Obtain an expression for the cycle efficiency $\eta_1$. Express your answer in terms of $\alpha$, $\beta$ and $\gamma$. Find the numerical value of $\eta_1$ for $p_2=15~\mathrm{kPa}$, $p_4=60~\mathrm{kPa}$, $T_2=340~\mathrm{K}$, and $T_4=400~\mathrm{K}$.}{0.50}
+
+As mentioned earlier, real gases are characterized by a transition to the liquid phase. In accordance with the requirements of engineers for the working substances of binary cycles, it was experimentally found that water and mercury compensate for each other’s shortcomings. Water does not satisfy the condition of low heat capacity in the liquid phase and has a low critical temperature, but it does satisfy the condition that the pressure in the condenser is not too low. Mercury has a low saturated vapor pressure at high temperatures and a high critical temperature at relatively low pressure, but a very low saturated vapor pressure in the condenser. In the process of heat exchange, water at temperatures close to critical exchanges heat with mercury at relatively low temperatures for mercury (about $200-300^\circ\mathrm{C}$). All subsequent parts of the problem consider cycles with water and mercury. The indices $\text{''(m)''}$ and $\text{''(w)''}$ will characterize the mercury and water cycles, respectively.
+
+Use the notation, numerical data, and approximations described below:
+\begin{enumerate}
+    \item universal gas constant $R=8.31~\mathrm{J/(mol\cdot K)}$;
+    \item adiabatic exponent $C_p/C_V=\gamma$;
+    \item specific heat capacity of liquid water $c_\text{w}=4190~\mathrm{J/(kg\cdot K)}$ (constant);
+    \item molar mass of water $\mu_\text{w}=18.02~\mathrm{g/mol}$;
+    \item specific heat capacity of liquid mercury $c_\text{m}=140~\mathrm{J/(kg\cdot K)}$ (constant);
+    \item molar mass of mercury $\mu_\text{m}=200.59~\mathrm{g/mol}$;
+    \item Always consider the vapor (both saturated and unsaturated) of mercury to be an ideal monatomic gas.;
+\end{enumerate}
+Below are the dependences of the specific heat of vaporization of mercury and water on temperature, as well as (on two graphs, in areas of relatively low and high pressures) the dependences of the pressures of saturated vapors of mercury and water on temperature:
+
+Dependence of the specific heat of vaporization of water on temperature
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Dependence of the specific heat of vaporization of mercury on temperature
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Dependence of saturated vapor pressure of water at low temperatures
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Dependence of saturated vapor pressure of water at high temperatures
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Dependence of saturated vapor pressure of mercury at low temperatures
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+Dependence of saturated vapor pressure of mercury at high temperatures
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\section*{Part B. Binary gas-steam-water cycle (2.5 points).}
+
+This part of the problem considers a binary cycle, which is a combination of gas and steam-water cycles. Note: in this part of the problem, both mercury and water are entirely in the gaseous phase at all times. 
+    
+The gas cycle $a_\text{(m)}-b_\text{(m)}-c_\text{(m)}-d_\text{(m)}-a_\text{(m)}$ for mercury vapor consists of the following processes:
+\begin{enumerate}
+    \item $a_\text{(m)}-b_\text{(m)}$ -- adiabatic expansion of mercury vapor;
+    \item $b_\text{(m)}-c_\text{(m)}$ -- isobaric compression of mercury vapor to a state of saturation;
+    \item $c_\text{(m)}-d_\text{(m)}$ -- adiabatic compression of mercury vapor;
+    \item $d_\text{(m)}-a_\text{(m)}$ -- isothermal expansion of mercury vapor.
+\end{enumerate}
+
+The steam-water cycle $a_\text{(w)}-b_\text{(w)}-c_\text{(w)}-d_\text{(w)}-a_\text{(w)}$ consists of the following processes:
+\begin{enumerate}
+    \item $a_\text{(w)}-b_\text{(w)}$ -- adiabatic expansion of superheated (to a temperature above the critical) water vapor;
+    \item $b_\text{(w)}-c_\text{(w)}$ -- isothermal compression of water vapor to a state of saturation;
+    \item $c_\text{(w)}-d_\text{(w)}$ -- adiabatic compression of water vapor;
+    \item $d_\text{(w)}-a_\text{(w)}$ -- isobaric heating of water vapor.
+\end{enumerate}
+
+Note: for this part of the problem, consider water vapor to be an ideal polyatomic gas whose heat capacity $C_V$ does not depend on temperature. The cycle is carried out so that the corresponding temperatures are related as follows:
+\[t_{a(\text{m})}=t_{d(\text{m})}=t_1,\quad t_{b(\text{w})}=t_{c(\text{w})}=t_2,\quad t_{b(\text{m})}=t_{a(\text{w})}=t_3,\quad t_{c(\text{m})}=t_{d(\text{w})}=t_4.\]
+
+Note: in this part of the problem, both mercury and water are entirely in the gaseous phase at all times.
+
+The gas cycle $a_\text{(m)}-b_\text{(m)}-c_\text{(m)}-d_\text{(m)}-a_\text{(m)}$ for mercury vapor consists of the following processes:
+
+The steam-water cycle $a_\text{(w)}-b_\text{(w)}-c_\text{(w)}-d_\text{(w)}-a_\text{(w)}$ consists of the following processes:
+
+Note: for this part of the problem, consider water vapor to be an ideal polyatomic gas whose heat capacity $C_V$ does not depend on temperature. The cycle is carried out so that the corresponding temperatures are related as follows: $$t_{a(\text{m})}=t_{d(\text{m})}=t_1,\quad t_{b(\text{w})}=t_{c(\text{w})}=t_2,\quad t_{b(\text{m})}=t_{a(\text{w})}=t_3,\quad t_{c(\text{m})}=t_{d(\text{w})}=t_4.$$
+
+Consider the following data known:
+$$t_1=640^\circ\mathrm{C},\quad t_2=40^\circ\mathrm{C},\quad t_3=470^\circ\mathrm{C},\quad t_4=230^\circ\mathrm{C}.$$
+
+In isobaric processes, heat exchange occurs between mercury and water vapor, so that the amount of heat removed from mercury vapor in section $b_\text{(m)}-c_\text{(m)}$ is equal to the amount of heat supplied to water vapor in section $d_\text{(w)}-a_\text{(w)}$:
+$$-Q_{bc(\text{m})}=Q_{da(\text{w})}.$$
+
+\problembox{B1}{Find the ratio of the masses of mercury and water $m_\text{(m)}/m_\text{(w)}$ participating in the cycle.}{0.50}
+
+\problembox{B2}{Using graphs of the pressure of saturated vapors of mercury and water versus temperature, estimate the pressure values $p_{c\text{(m)}}$ and $p_{c\text{(w)}}$.}{0.40}
+
+\problembox{B3}{Find the mercury and water cycle efficiencies $\eta_\text{(m)}$ and $\eta_\text{(w)}$ respectively.}{0.80}
+
+\problembox{B4}{Find the efficiency $\eta_\text{gw}$ of the binary gas-steam-water cycle. Compare it with $\eta_\text{(m)}$ and $\eta_\text{(w)}$.}{0.80}
+
+In fact, the binary cycle discussed in part $\mathrm{B}$ works somewhat differently, since the heat capacity of water vapor depends on temperature even at constant pressure. This is due both to the fact that saturated water vapor is not actually an ideal gas, and to the fact that as the temperature of the gas increases, the contribution of the vibrational motion of molecules to their kinetic energy ceases to be negligible, therefore, in all subsequent points of the problem, it is no longer possible to consider water vapor to be an ideal gas. In fact, the molar heat capacity of water vapor $C_V$ depends on both temperature and pressure, however, within the framework of the problem when searching for the elementary amount of heat $\delta{Q}$, the dependence $C_V$ on pressure can be considered weak, and we can also use the approximation of a jump in the heat capacity:
+$$C_V=\begin{cases}
+3R, & t \leq 180^\circ\mathrm{C}, \\[6pt]
+\dfrac{7R}{2}, & t > 180^\circ\mathrm{C}.
+\end{cases}$$
+\textit{Note.} Because $C_V$ depends continuously on both temperature and pressure, any integral equation of state in $pT$ coordinates (for example, Poisson’s relation for an adiabatic process), applied at temperatures above $t_{\mathrm{crit}}\approx 200^\circ\mathrm{C}$, can give large errors and paradoxical results. Below $t_{\mathrm{crit}}$, equations of state in $pT$ coordinates may still be used with good accuracy.
+
+\section*{Part C. Rankine cycle with reheated steam (2.0 points).}
+
+In this part of the problem, the steam-water Rankine cycle $1-2-3-4-5-6-1$ is considered. The complete sequence of processes in the cycle is as follows:
+\begin{enumerate}
+    \item $1-2$ -- adiabatic expansion of water vapor;
+    \item $2-3$ -- isothermal compression of water vapor to saturation and subsequent complete condensation;
+    \item $3-4$ -- adiabatic compression of water (temperature changes can be neglected);
+    \item $4-5$ -- isobaric heating of water to boiling point;
+    \item $5-6$ -- isobaric evaporation of water;
+    \item $6-1$ -- isobaric heating of water vapor.
+\end{enumerate} $1-2$ – adiabatic expansion of water vapor; $2-3$ – isothermal compression of water vapor to saturation and subsequent complete condensation; $3-4$ – adiabatic compression of water (temperature changes can be neglected); $4-5$ – isobaric heating of water to boiling point; $5-6$ – isobaric evaporation of water; $6-1$ – isobaric heating of water vapor.
+
+In this part of the problem, the steam-water Rankine cycle $1-2-3-4-5-6-1$ is considered. The complete sequence of processes in the cycle is as follows:
+\begin{enumerate}
+    \item $1-2$ -- adiabatic expansion of water vapor;
+    \item $2-3$ -- isothermal compression of water vapor to saturation and subsequent complete condensation;
+    \item $3-4$ -- adiabatic compression of water (temperature changes can be neglected);
+    \item $4-5$ -- isobaric heating of water to boiling point;
+    \item $5-6$ -- isobaric evaporation of water;
+    \item $6-1$ -- isobaric heating of water vapor.
+\end{enumerate}
+
+The temperature at point $1$ is equal to $t_1=630^{\circ}\mathrm{C}$. At point $3$ the pressure in the system is $p_3=16~\mathrm{kPa}$, and at point $4$ the pressure is $p_4=2.8~\mathrm{MPa}$. The cycle is carried out with mass $m_\text{w}=17~\mathrm{kg}$.
+
+\problembox{C1}{Find the temperatures of the system at points $2$, $3$, $4$, $5$ and $6$.}{0.40}
+
+\problembox{C2}{Find the amount of heat $Q_+$ supplied to the system per cycle.}{0.60}
+
+\problembox{C3}{Find the amount of heat $Q_-$ removed from the system per cycle.}{0.80}
+
+\problembox{C4}{Find the gas work $A$ per cycle and its efficiency $\eta_2$.}{0.20}
+
+\section*{Part D. Binary Rankine cycle (3.5 points)}
+
+In this part of the problem we will consider the binary Rankine cycle for mercury and water. Processes of the mercury cycle $a_\text{m}-b_\text{m}-c_\text{m}-d_\text{m}-e_\text{m}-a_\text{m}$: $a_\text{m}-b_\text{m}$ – adiabatic expansion of mercury vapor; $b_\text{m}-c_\text{m}$ – isothermal compression of mercury vapor followed by complete condensation; $c_\text{m}-d_\text{m}$ – adiabatic compression of the liquid phase of mercury (temperature changes can be neglected); $d_\text{m}-e_\text{m}$ – isobaric heating of the liquid phase of mercury; $e_\text{m}-a_\text{m}$ – complete evaporation of the liquid phase of mercury. Water cycle processes $a_\text{w}-b_\text{w}-c_\text{w}-d_\text{w}-e_\text{w}-f_\text{w}-a_\text{w}$: $a_\text{w}-b_\text{w}$ – adiabatic expansion of water vapor; $b_\text{w}-c_\text{w}$ – isothermal compression of water vapor to saturation and subsequent complete condensation; $c_\text{w}-d_\text{w}$ – adiabatic compression of water (temperature changes can be neglected); $d_\text{w}-e_\text{w}$ – isobaric heating of water to boiling point; $e_\text{w}-f_\text{w}$ – isobaric evaporation of water; $f_\text{w}-a_\text{w}$ – isobaric heating of water vapor.
+
+In this part of the problem we will consider the binary Rankine cycle for mercury and water. Processes of the mercury cycle $a_\text{m}-b_\text{m}-c_\text{m}-d_\text{m}-e_\text{m}-a_\text{m}$:
+
+Water cycle processes $a_\text{w}-b_\text{w}-c_\text{w}-d_\text{w}-e_\text{w}-f_\text{w}-a_\text{w}$:
+
+The cycles are carried out consistently and in such a way that the amount of heat removed from mercury in section $b_\text{m}-c_\text{m}$ is equal to the amount of heat supplied to water vapor in section $e_\text{w}-f_\text{w}$:
+$$-Q_{bc(\text{m})}=Q_{ef(\text{w})}.$$
+The processes $b_\text{m}-c_\text{m}$ and $e_\text{w}-f_\text{w}$ are carried out at the same temperature.
+
+The pressures at points $b_\text{w}$, $c_\text{w}$ and $e_\text{w}$ of the water cycle are equal, respectively:
+$$p_{b(\text{w})}=25~\mathrm{kPa},\qquad p_{c(\text{w})}=88~\mathrm{kPa},\qquad p_{e(\text{w})}=1.2~\mathrm{MPa}.$$
+The ratio of mercury mass to water mass is $m_\text{m}/m_\text{w}=10.3$.
+
+\problembox{D1}{Find the temperatures at points $b_\text{w}$, $c_\text{w}$, $d_\text{w}$, $e_\text{w}$, $f_\text{w}$ of the water cycle.}{0.20}
+
+\problembox{D2}{Find the temperature at point $a_\text{w}$ of the water cycle.}{1.00}
+
+\problembox{D3}{Find the mercury pressure at section $d_\text{m}-e_\text{m}-a_\text{m}$.}{1.30}
+
+\problembox{D4}{Find the efficiency of the binary Rankine cycle with mercury and water $\eta_3$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3157}
+
+\end{document}

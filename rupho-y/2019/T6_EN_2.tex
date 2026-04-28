@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Ship waves}}
+\author{\normalsize Y19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Phase and group velocity}
+
+Oscillations and waves are one of the most interesting and widespread branches of physics. Wave processes are found in all areas of mechanics, thermodynamics, and electrodynamics, and optics is entirely the science of waves. In this problem we will look at the familiar ship waves, which have some very interesting and non-obvious features. However, first we will consider the general properties of waves. The simplest type of waves propagating in a linear medium are plane monochromatic waves - that is, waves with a specific frequency and wavelength. The dependence of their amplitude on time and coordinates (we are currently considering the one-dimensional case) is described as follows: $$A(t,x)=A_0\cos\theta=A_0\cos(kx-\omega t+\varphi_0) $$
+
+\problembox{A1}{Find the speed of propagation of a constant phase of a monochromatic wave (phase speed).}{1.00}
+
+However, in reality, pure monochromatic waves never exist. In fact, waves propagate in wave packets - a superposition of many waves of similar frequencies. A wave packet, unlike a monochromatic wave, is localized in a certain region of space and propagates not with phase velocity, but with the so-called group velocity. The group velocity is usually interpreted as the speed at which the maximum amplitude envelope of a quasi-monochromatic wave packet moves. For example, consider a wave packet of two monochromatic waves close in frequency and wave vector: $$A(t,x)=A_0\cos(k_1x-\omega_1t-\varphi_1)+A_0\cos(k_2x-\omega_2t-\varphi_2) $$
+
+\problembox{A2}{Assuming that there is some functional dependence $\omega(k)$, find the group velocity through this function at point $k\approx{k_1}\approx{k_2}$.}{1.00}
+
+The above-mentioned function $\omega(k)$ is called the dispersion relation for waves of a certain type and it is it that completely determines their behavior. That is why the study of any linear waves begins with finding this dependence.
+
+\section*{Part B. Dispersion relation for water waves}
+
+The propagation of waves on water is determined by two physical effects: surface tension and the gravitational field of the earth. The first effect causes so-called capillary waves with a short wavelength, which we will not consider. Gravity leads to the existence of so-called gravitational waves. So, let us consider a wave propagating as in the figure. Consider that in the undisturbed region the water is stagnant, and in the disturbed region all the water moves at a certain speed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Find the speed of wave propagation $v_{ph}$ if the water depth is $h$.}{1.00}
+
+If the water depth is much greater than the wavelength $\lambda$, then water effectively moves only in a layer of thickness $\lambda/2\pi$.
+
+\problembox{B2}{Find the speed of wave propagation in deep water. The speed found is the phase speed of the wave.}{1.00}
+
+Now, knowing the phase velocity of the wave depending on the wavelength, we can easily find the dispersion relation $\omega(k)$, and from it, using result B2, the group velocity of the waves.
+
+\problembox{B3}{Find the dispersion relation and group velocity of shallow water waves $v_g(k)$.}{1.00}
+
+\problembox{B4}{Find the dispersion relation and group velocity of deep water waves $v_g(k)$.}{1.00}
+
+\section*{Part C. Angle of divergence of ship waves}
+
+It is easy to see that for deep water waves the remarkable relation $v_g=v_{ph}/2$ is observed for waves of any wavelength. This leads to interesting effects. Let's consider ordinary ship waves that everyone could observe. It is known that they form a cone along the boundaries of which waves run. For emitters moving at a speed higher than the speed of wave propagation in a medium with linear dispersion, the formation of a Mach cone with an opening angle $\arcsin(c/v)$ is widely known.
+
+However, with a nonlinear dispersion law, finding the angle becomes more difficult; its value is determined by the constructive interference of monochromatic waves. So, let us consider a plane monochromatic wave propagating at an angle $\psi$ to the source velocity. The water is at rest.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{C1}{Find the relationship between the phase speed and the speed of the source if it must remain at a point of constant phase of the wave.}{1.00}
+
+Imagine that at some point in time a source emitted a wide range of waves. Let us consider a train with a narrow spectrum, such that its phase velocity corresponds to propagation at an angle $\psi$.
+
+\problembox{C2}{Find the point at which the train will be located after time $dt$.}{1.00}
+
+\problembox{C3}{Find the locus of points for trains emitted at all possible angles.}{1.00}
+
+Now imagine that such “elementary waves” from point C3 are emitted at every moment of time.
+
+\problembox{C4}{Find the angle of the cone that limits all propagating waves}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3052}
+
+\end{document}

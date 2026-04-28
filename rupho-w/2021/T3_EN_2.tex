@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Cylinder with heater}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A horizontally located cylindrical vessel of volume $2V_0$ is divided into two equal parts by a movable piston and filled with a monatomic ideal gas. The piston moves without friction. The left wall, the side surface of the entire vessel and the piston do not conduct heat. The temperature of the right wall is maintained constant and equal to the initial gas temperature $T_0$ in both parts of the vessel. The initial gas pressure in both parts is $p_0$. After turning on the heater on the left side of the vessel, the piston begins to move slowly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Determine the dependence of gas pressure $p$ on temperature $T$ in the left part of the vessel.}{3.00}
+
+\problembox{A2}{For this process, determine how the heat capacity of the gas on the left side of the vessel depends on its volume $V$.}{7.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/67}
+
+\end{document}

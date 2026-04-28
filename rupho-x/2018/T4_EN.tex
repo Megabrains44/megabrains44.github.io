@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Constant power source}}
+\author{\normalsize X18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The “cunning” source provides constant power $P$ in the external circuit.
+
+\problembox{A1}{Find the current through the source and the voltage across it as a function of time, if it is connected to a resistor with resistance $R$.}{0.50}
+
+\problembox{A2}{Find the current through the source and the voltage across it depending on time, if it is connected to a capacitor of capacity $C$.}{0.50}
+
+Now a circuit is connected to the “cunning” source, the diagram of which is shown in the figure. $R=5~\Omega$, $P=8~\text{W}$, diode opening voltage $U_0=2~\text{V}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Find the current and voltage on each element of the circuit at the moment the diode opens.}{3.00}
+
+\problembox{B2}{Will steady state be achieved? If so, calculate the current and voltage across each element of the circuit at steady state.}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/312}
+
+\end{document}

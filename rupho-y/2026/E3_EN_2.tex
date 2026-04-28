@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Mechanical Black Box 2.0}}
+\author{\normalsize Y26 (2026) --- English translation}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{General view of the laboratory equipment.}
+\end{figure}
+
+\noindent\textbf{Equipment:} 
+
+\begin{enumerate}
+
+\item Mechanical black box
+\item Photogate (6 pcs.)
+\item Board for photogates
+\item Female-female wires for photogates
+\item Power supply for photogates
+\item Oscilloscope
+\item BNC-banana wire
+\item Tripod 
+\item Clamp (7 pcs.)
+\item Bosshead for mounting clamps (7 pcs.)
+\item  Fixed pulley with mount (2 pcs.)
+\item  Table on an anti-vibration rubber mat
+\item  Level; 
+\item  Cylindrical stand for the black box
+\item  Thread
+\item Scissors
+\item  40~g anchor
+\item 100~g anchor
+\item 100~g disc weight
+\item  Masking tape
+\item  50~cm ruler
+\item Vernier calipers
+\item Tape measure
+\item Scales;
+\item Nut with loop (2 pcs.)
+\item Axis for oscillations
+\item G-clamp
+\item  Stopwatch.
+\end{enumerate}
+
+\section*{Photogate and Board Setup}
+
+The photogate consists of an LED and a photodiode and has three pairs of output pins. Connect the photogate pins to the corresponding pins on the board using female-female wires. Connect the oscilloscope to the "banana" outputs of the board and the power supply to the remaining output. When correctly connected, the LED will glow red, and the oscilloscope will record a signal proportional to light intensity. For the experiment, connect the outputs of all photogates in parallel, with one connected to the board. 
+
+\textbf{Attention!} Ensure the oscilloscope signal changes by at least 15~mV when each photogate is blocked. If not, contact the supervisor.
+
+\section*{Black Box Description}
+
+The mechanical black box (MBB) is a homogeneous cylindrical tube containing a small weight attached to two springs. Neglect the spring masses and unstretched lengths. There is friction between the weight and the internal walls. 
+
+\textbf{Notations:} $m$ — mass of the weight; $M$ — mass of the tube; $L$ — length of the tube; $x$ — coordinate of the weight relative to the center; $x_0$ — equilibrium position (horizontal, zero friction); $k_1, k_2$ — spring stiffness ($k_1 > k_2$); $g = 9.8~\text{m/s}^2$.
+
+\textbf{Attention!} Do not shake, drop, or attempt to open the MBB. Tampering will result in disqualification.
+
+\problembox{01}{Safety warning: Tampering with the MBB will result in disqualification.}{-20.00}
+\problembox{02}{Equipment reliability: Breakdowns lead to penalties; repairs take up to 30 min.}{-1.00}
+
+\section*{Part A. Mass and Position Relationship (1.7 points)}
+
+\problembox{A0}{Record the ID number of your mechanical black box.}{0.10}
+\problembox{A1}{Measure and record the total mass $(M+m)$ and length $L$ of the MBB.}{0.10}
+\problembox{A2}{Describe a measurement method using diagrams to obtain the product $m \cdot x_0$.}{0.90}
+\problembox{A3}{Experimentally determine $m \cdot x_0$ and estimate the uncertainty.}{0.60}
+
+\section*{Part B. Weight of the Internal Load (13.3 points)}
+
+Secure the MBB to the stand with its center aligned with the stand axis. Wrap thread around the stand groove so it does not slip. Pass the thread through the pulleys and attach a 100~g anchor. Mount 6 photogates parallel to each other along the tripod. 
+
+\textbf{Safety Warning!} Handle the rotating MBB with care as it reaches high speeds. Ensure the MBB and stand are securely taped together.
+
+\problembox{B0}{Measure the exact masses of the anchors and disc weight.}{0.10}
+\problembox{B1}{Sketch the oscilloscope signal when the anchor passes a photogate and indicate timing points.}{0.60}
+\problembox{B2}{Measure velocity $v$ for downward displacements $h \in [5, 90]~\text{cm}$ in 5~cm steps. Measure 3 times per $h$.}{2.00}
+
+\noindent Let $\delta = 60~\text{mm}$ be the distance from the tube edge to the weight's center of mass when it is at either limit. Friction in pulleys follows a dry friction model with coefficient $\alpha = 0.8$. 
+
+\problembox{B3}{Show that $v^2 = \gamma_1 h$ during slow rotation and $v^2 = \gamma_2 h + b$ during fast rotation.}{0.60}
+\problembox{B4}{Express $\gamma_1$ and $\gamma_2$ in terms of $m, m_0, x_0, L, \delta, g, \alpha, R, I_B, I_1$.}{0.80}
+\problembox{B5}{Construct a linearized graph and identify the rotation ranges.}{1.20}
+\problembox{B6}{Repeat measurements for a 40~g anchor ($m_{01}$).}{2.00}
+\problembox{B7}{Plot the linearized graph and indicate the preferred rotation type for analysis.}{1.00}
+\problembox{B8}{Repeat measurements for a 200~g anchor ($m_{02}$).}{2.00}
+\problembox{B9}{Plot the linearized graph for the final anchor.}{1.00}
+\problembox{B10}{Derive an expression for the mass $m$ using results from B4, B7, and B9.}{0.80}
+\problembox{B11}{Calculate $m$ and $x_0$ with uncertainties.}{1.20}
+
+\section*{Part C. Spring Stiffness Coefficients (5.0 points)}
+
+Attach nut-loops to both ends of the MBB. Suspend it as a rigid pendulum in two positions. Let $D$ be the distance from the axis to the tube edge and $I_0$ be the tube's moment of inertia.
+
+\problembox{C0}{Measure and record the distance $D$.}{0.10}
+\problembox{C1}{Write the expression for effective stiffness $k$ in terms of $k_1$ and $k_2$.}{0.50}
+\problembox{C2}{Measure oscillation periods $T_1$ (Position 1) and $T_2$ (Position 2).}{1.20}
+\problembox{C3}{Express $T_1$ and $T_2$ in terms of $M, m, L, D, x_0, \Delta x, g, I_0, I_1$.}{0.80}
+\problembox{C4}{Derive an expression for $\Delta x = |x - x_0|$ and calculate its value.}{1.40}
+\problembox{C5}{Express $k$ in terms of $m, g, \Delta x$ and calculate its value.}{0.20}
+\problembox{C6}{Calculate $k_1$ and $k_2$ with uncertainties.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/5019}
+
+\end{document}

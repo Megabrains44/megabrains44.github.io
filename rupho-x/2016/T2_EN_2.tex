@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Cooling of non-ideal gases}}
+\author{\normalsize X16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+For real gases, the Mendeleev-Clapeyron equation $pV=\nu RT$ is only approximate; it is more accurate at lower gas density and higher temperature. In real gases, intermolecular forces are repulsive at short distances and attractive at larger distances. One simple equation that accounts for these interactions is the van der Waals equation of state:
+\[
+\left(p+\frac{a\nu^2}{V^2}\right)\left(V-\nu b\right)=RT.
+\]
+Here $a$ and $b$ are positive van der Waals coefficients, which can be treated as constants in this problem. The term $\frac{a\nu^2}{V^2}$ describes the pressure reduction due to mutual molecular attraction, while $\nu b$ accounts for the finite size of molecules. Note that the van der Waals equation can qualitatively describe both gas and liquid behavior.
+
+The van der Waals equation of state is a cubic relation in $(p,V)$ coordinates. Figure 1 shows a family of isotherms for one mole of van der Waals gas. A real isotherm differs from the van der Waals one by a horizontal segment $AB$ at constant pressure $p_{LG}$ between $V_L$ and $V_G$, where liquid (index $L$) and gas (index $G$) coexist in equilibrium. Using the second law of thermodynamics, J. Maxwell showed that $p_{LG}$ must be chosen so that regions I and II in Figure 2 are equal. The internal energy of a van der Waals gas depends not only on temperature but also on volume:
+\[
+U=\nu C_V T-\frac{a\nu^2}{V}.
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\textit{Note:} one mole of substance is used in all parts of the problem.
+
+\problembox{A1}{One of the industrial methods of cooling (and subsequent liquefaction) is the adiabatic and quasi-static expansion of gases. Let the gas expand from the initial volume $V_1$ to the final volume $V_2$. For a gas that obeys the van der Waals equation of state, in this process the temperature drops by $\Delta{T}_W$, and for an ideal gas - $\Delta{T}_I.$ The heat capacity $C_V$ of a van der Waals gas is taken equal to the heat capacity of an ideal gas $C_V$ at constant volume. Find the ratio $\Delta{T}_W/\Delta{T}_I$. Express your answer in terms of $V_1$, $V_2$, $a$, $b$, $C_V$ and $R$. In which case is there more cooling?}{0.70}
+
+\problembox{A2}{The gas can also be cooled by allowing it to expand adiabatically into a vacuum. Let the gas be in the vessel at the initial moment, occupying volume $V_1$ in it. After removing the partition, the gas is able to freely expand to volume $V_2$. Assuming the vessel is thermally insulated, find the temperature change for the cases of van der Waals gas $\Delta{T}_W$ and ideal gas $\Delta{T}_I$. Express your answer in terms of $V_1$, $V_2$, $a$, $b$, $C_V$ and $R$. In which case is there more cooling?}{0.40}
+
+\problembox{A3}{Gas can be converted into a liquid state by compressing it isothermally. However, to do this, the gas must first be cooled below a certain temperature $T_C$. Above this temperature, gas cannot be converted into liquid. Using the van der Waals equation of state, find this temperature $T_C$. Express your answer in terms of $a$, $b$ and $R$.}{0.90}
+
+In 1852, the effect was discovered, which was subsequently widely used in industry for cooling and liquefying gases. The Joule-Thompson effect is the change in gas temperature during adiabatic throttling - the slow flow of gas under the influence of a constant pressure difference through a porous partition (throttle), as shown in Fig. 3. To the left of the throttle there is gas at pressure $p_1$ (it is maintained constant), after gas flows through the throttle the gas pressure becomes equal to $p_2<p_1$ (it is also maintained constant).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Let us consider a portion of gas with volume $V_1$ located to the left of the throttle. Having passed through the throttle, this portion of gas occupies volume $V_2$. Using the first law of thermodynamics, show that the function $W=U+pV$ (enthalpy) is conserved in the process under consideration, that is, its values are the same for the same portion of gas to the right and left of the partition. Assume that there is no heat exchange with the environment.}{0.70}
+
+\problembox{B2}{Let the Joule-Thompson process use an ideal gas. Find the decrease in its temperature $\Delta{T}_I$. The heat capacity of gas is $C_V$.}{0.30}
+
+In paragraphs $\mathrm C$ of the problem the so-called integral Joule-Thompson effect is considered. This is an effect that occurs with large pressure differences on different sides of the throttle. As a model of the integral effect, you can use the following: to the left of the throttle, the gas is at high pressure and is described by the van der Waals equation of state, and after passing through the throttle, the gas can be considered ideal.
+
+\problembox{C1}{Find the decrease in gas temperature $\Delta{T}_W$ in such a process. The heat capacity of gas is $C_V$. Express your answer in terms of $a$, $b$, $R$, $C_V$, $T_1$ and $V_1$.}{1.00}
+
+\problembox{C2}{If the initial state of the gas is depicted on a diagram ($T_1$,$V_1$), then a curve can be drawn on it that divides the plane into two regions: the points of one region correspond to $\Delta{T}_W<0$ (the gas is cooled), and the other $\Delta{T}_W>0$ (the gas is heated). This curve is called the inversion curve of the integral Joule-Thompson effect. Find the equation of this curve, i.e. express $T^l_{inv}$ through $a$, $b$, $R$, $C_V$ and $V_1$. Draw the curve on a graph and indicate the characteristic features of the curve. On the graph, indicate the areas where the gas cools and warms up.}{0.80}
+
+\problembox{C3}{However, it is more convenient to draw the inversion curve of the Joule-Thompson effect in coordinates ($p_1$, $T_1$), because It is these gas parameters that can be directly measured. Find the equation of this curve, i.e. express $T^l_{inv}$ in terms of $a$, $b$, $R$, $C_V$ and $p_1$ (or $p_1$ in terms of $a$, $b$, $R$, $C_V$ and $T^l_{inv}$). Draw the curve on a graph and indicate the characteristic features of the curve. On the graph, indicate the areas where the gas cools and warms up.}{1.00}
+
+Part $\mathrm D$ of the problem considers the Joule-Thompson effect in the general case. In this case, the gas on both sides of the partition is described by the van der Waals equation of state. If the gas to the left of the partition is at an inversion temperature, then during throttling the gas temperature does not change.
+
+\problembox{D1}{Derive an expression for the inversion temperature $T_{inv}$ of the Joule-Thompson effect in the general case. Express it using $a$, $b$, $R$, $C_V$, $V_1$ and $V_2$.}{1.00}
+
+\problembox{D2}{The differential Joule-Thompson effect is realized at small pressure drops. For it we can assume that $V_1\approx{V_2}$. Under this condition, obtain an expression for the inversion temperature $T^D_{inv}$ of the differential Joule-Thompson effect. Express it using $a$, $b$, $R$, $C_V$ and $V_1$.}{0.20}
+
+\problembox{D3}{Find the equation of the inversion curve of the differential Joule-Thompson effect, i.e. express $T^D_{inv}$ in terms of $a$, $b$, $R$, $C_V$ and $p_1$ (or $p_1$ in terms of $a$, $b$, $R$, $C_V$ and $T^D_{inv}$). Draw a schematic diagram of the curve on the graph ($p_1$, $T_1$), indicate the characteristic features of the curve. On the graph, indicate the areas where the gas cools and warms up.}{1.50}
+
+Part $\mathrm E$ examines the relationship between the integral and differential Joule-Thompson effects.
+
+\problembox{E1}{Sketch the inversion curves for both effects on the same graph in coordinates ($p_1$, $T_1$). Identify the areas where the gas is cooled and heated for both effects. Explain the existence of regions where the temperature change has a different sign for the integral and differential effect.}{0.50}
+
+\problembox{E2}{For the industrial use of the integral Joule-Thompson effect for a certain temperature $T_1$, it is important to select such a pressure $p_1$ so that the cooling of the gas in the process is maximum. These relationships can also be represented on a graph ($p_1$, $T_1$). Draw this relationship diagrammatically. On the same graph, schematically depict the inversion curves for the differential and integral effects on the same graph.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/300}
+
+\end{document}

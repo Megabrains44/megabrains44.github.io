@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Microfluidics}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In the 90s of the last century, technology was developed that makes it possible to create and control extremely small fluid flows contained in a limited space (characteristic dimensions less than a millimeter). This technology is called microfluidics. With its help, in particular, it is possible to build a laboratory-on-chip, where in capillary systems you can mix and separate reagents, influence different parts of the chip with temperature, current and other parameters. As a result, this allows the use of reagents in very small quantities, which significantly reduces the cost of development processes, especially in the chemistry of modern drugs.
+
+\section*{Part A. Flow in a capillary under the influence of a pressure difference (2 points)}
+
+Real capillaries have a round or square/rectangular cross-section. However, in this problem, for simplicity of calculations, we will consider a rectangular capillary with transverse dimensions $a$ and $b$ ($a \gg b$) and length $L$ ($L \gg  a$). Such a capillary is filled with water, and a pressure difference of $\Delta P$ is applied to its ends.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Let there be a steady laminar flow of water in the capillary. Find the dependence of the liquid flow velocity $v(z)$ in the capillary on the coordinate $z$ for steady laminar flow of water in the capillary. Axis $z$ is directed along side $b$, the origin of coordinates is on one of the walls of the capillary. Express your answer in terms of $\Delta P$, capillary parameters and liquid viscosity $\eta$.}{1.00}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A2}{At some point, a reagent is uniformly injected into the initial section of the capillary $AA'$. In the figure, thick horizontal lines indicate the walls of the capillary. On your answer sheet, draw where the reactant will be located via $\tau=5~\text{s}$.  For the drawing, select an appropriate scale along the horizontal axis, which is directed along the fluid flow. Capillary parameters: $L = 8~\text{mm}$, $b = 0.2 ~\text{mm}$, pressure difference $\Delta P = 1.5 ~\text{Pa}$, $\eta = 8.9 \cdot 10^{-4}~\text{Pa} \cdot \text{s} $. Neglect the diffusion of the reagent.}{1.00}
+
+\section*{Part B. Interaction between the electrolyte and the capillary wall (4 points)}
+
+An electrolyte is a substance that conducts electric current due to dissociation into ions, which occurs in solutions. When two phases come into contact, one of which is liquid, an electric double layer (EDL) appears - a layer of ions formed on the surface of a solid as a result of the adsorption of ions from a solution, the dissociation of a surface compound, or the orientation of polar molecules at the phase interface. According to modern theory, the DES structure consists of two layers: Helmholtz layer or adsorption layer adjacent directly to the interphase surface (stationary); Gouy's layer or diffuse layer in which electrolyte ions of both signs are located.
+
+An electrolyte is a substance that conducts electric current due to dissociation into ions, which occurs in solutions. When two phases come into contact, one of which is liquid, an electric double layer (EDL) appears - a layer of ions formed on the surface of a solid as a result of the adsorption of ions from a solution, the dissociation of a surface compound, or the orientation of polar molecules at the phase interface. According to modern theory, the structure of the DES consists of two layers:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+The electrical characteristic of an electric double layer is the potential, and in this part of the problem you need to find its characteristic appearance near one flat surface of the capillary wall in the presence of an electrolyte. We will assume that the electrolyte itself is electrically neutral, and the cations and anions have charges $+e$ and $-e$, respectively. The concentration of each type of ion away from the walls is $n_0$. The dielectric constant of the electrolyte is $\varepsilon$, its viscosity is $\eta$. Let the potential in the volume of the electrolyte be zero. Let us apply some potential $\varphi_0$ to the capillary wall. Due to the effects occurring in the Helmholtz layer, the potential at the boundary of this layer will become $\varphi_\delta$. We will not further consider the processes occurring in the Helmholtz layer, so we can assume that the potential at the capillary boundary is equal to $\varphi_\delta$. The $z$ axis is directed perpendicular to the capillary boundary, the origin of coordinates is on the boundary.
+
+Electrolyte ions move under the influence of a field in a viscous medium. Consider the resistance force to be proportional to the speed $\vec f=-\alpha \vec v$.
+
+\problembox{B1}{Find the steady-state velocity of ions $v_z(z)$ at a distance $z$ from the capillary boundary. Assume that the movement of the ion during the establishment of the velocity is small. Express your answer in terms of the charge of the ion $q$$(q = \pm e)$, $\alpha$ and the potential $\varphi(z)$ (and its derivatives).}{0.50}
+
+At equilibrium, the ion flux caused by the field must be balanced by the reverse flux due to the concentration difference (diffusion), so that the total flux is zero. The diffusion flow is described by Fick's law: $$ j=-D\frac{dn}{dz}, $$ where $j$ is the number of particles crossing a unit area per unit time, $n$ is the concentration, $D$ is the diffusion coefficient, which for the given model of a viscous medium is described by the Einstein-Smoluchowski law $D= kT/\alpha$ ($\alpha$ is the same coefficient as in the resistance force, $k$ is the Boltzmann constant, $T$ is the absolute temperature).
+
+\problembox{B2}{Express the concentrations of cations ($n_+$) and anions ($n_-$) near the capillary wall in terms of the potential at this point and also in terms of $n_0, e, \alpha, k, T$.}{1.50}
+
+\problembox{B3}{Express the volume density of the uncompensated charge $\rho(z)$ near the capillary wall in terms of potential $\varphi(z)$, ion concentration $n_0$ and physical constants $e, k, T$. Assuming that the potential applied to the wall is small ($e\varphi_0 \ll kT$), you will obtain an approximate value of $\rho(z)$.}{0.50}
+
+In all the following points, also always use the $e \varphi \ll kT$ approximation.
+
+\problembox{B4}{Find the dependence of the potential $\varphi(z)$ on the coordinate near the capillary wall in the diffuse layer. Remember that the potential at the boundary is $\varphi_\delta$. Express your answer in terms of $n_0$, $\varphi_\delta$, $T$, physical constants and electrolyte parameters.}{1.00}
+
+\problembox{B5}{Find the distance $\lambda$ (formula and numerical value) at which the potential $\varphi(z)$ decreases by a factor of $e$. This length is considered the characteristic size of the Gouy diffuse layer. Liquid viscosity $\eta = 8.9 \cdot 10^{-4}~\text{Pa} \cdot \text{s} $, ion concentration $n = 1.1 \cdot 10^{25}~\text{m}^{-3}$, electrical constant $\varepsilon_0 = 8.85 \cdot 10^{-12} ~\text{F}/ \text{m}$, Boltzmann constant $k = 1.38 \cdot 10^{-23}~\text{J}/\text{K}$, temperature $T = 300~\text{K}$, dielectric constant $\varepsilon = 100$.}{0.50}
+
+\section*{Part C. Movement of electrolyte in a capillary (4 points)}
+
+In Part B it was shown that there is an uncompensated space charge near the capillary wall. Now, if you apply an electric field along the capillary, the ions will move, drawing the surrounding liquid with them. Of course, the applied field must be small so that its contribution to the change in potential $\varphi(z)$ can be neglected. In this part, it is not necessary to take into account the pressure difference $\Delta P$, which was discussed earlier.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{Write down Newton's second law for a small volume of liquid in projection onto the direction of the electric field, taking into account viscous friction and the electric field acting on the uncompensated charge.  Express the answer in terms of the electric field $E$, the ion concentration $n_0$, the potential $\varphi(z)$, the fluid and capillary parameters, and the velocity $v(z)$ and its derivatives.}{0.80}
+
+\problembox{C2}{Find the dependence of the fluid flow velocity on the coordinate $v(z)$.}{1.20}
+
+\problembox{C3}{Let there be a steady laminar flow of water in the capillary. At some point, a reagent is uniformly injected into the section $AA'$ of the capillary, the pattern is the same as in part $\mathrm{A}$.  On your answer sheet, draw where the reactant will be located through $\tau=5~\text{s}$. Use the capillary parameters from $\mathrm{A2}$ and the numerical data from $\mathrm{B5}$. Potential $\varphi_\delta = 1.8~\text{V}$, voltage drop along the length of the capillary $U = 0.3~\text{V}$. Neglect the diffusion of the reagent outside the diffusion layer. For the drawing, select an appropriate scale along the horizontal axis directed along the direction of fluid flow.}{1.00}
+
+Liquid movement in microfluidics occurs in thin capillaries and at low speeds and is thus generally laminar. In conventional macroscopic pipes, mixing of liquids occurs mainly due to turbulent phenomena. Accordingly, in microfluidics, mixing of liquids is a significant problem.
+
+\problembox{C4}{Based on part $\mathrm{C}$ of this problem, propose a system that allows mixing layers of liquid flowing near the wall of a capillary.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2846}
+
+\end{document}

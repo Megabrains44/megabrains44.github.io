@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Photography problems</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Photography problems</h1>
+<p class="camp">X26 (2026) — English translation</p>
+<p>This task consists of three independent parts, united by a common theme: each of them is devoted to a specific problem that can be encountered when photographing. Try to understand the physics behind these effects and answer the questions posed.</p>
+<h2 class="part">Part A: Defocus (2.0 points)</h2>
+<p>The picture shows a camera photographing a thin wire. It consists of two planes: the front plane contains an ideal thin converging round lens with focal length $f$ and diameter $D$, the rear plane is a screen. Distance between planes $l$. A photograph is an inverted image obtained on the screen, so we introduce coordinate systems as indicated in the figure: $xyz$ describes the position of the object in space, and $YZ$ – the position of the image in the photograph.</p>
+<div class="figure"><img src="T3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>The image of a thin wire obtained by this camera is limited from above and below by straight lines $Z = \pm kY$, where $k > 0$ and is not limited in both directions along the axis $Y$.</p>
+<div class="figure"><img src="T3_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the position and shape of the wire if its length is minimal.</div><span class="pb-pts">2.00</span></div>
+<h2 class="part">Part B. Rolling shutter (3.0 points)</h2>
+<p>When photographing fast-moving objects, image distortion may occur due to the non-simultaneous reading of different parts of the photograph. This effect is called time parallax or rolling shutter. Typically, reading occurs line by line. We will assume that in our camera the image is recorded starting from the top, all lines are taken in the same and extremely short time, so there is no need to take into account the distortion of individual lines. It is known that the total time taken to photograph is 10 ms. Using a vertically downward camera, we photographed a puck with a diameter of 7.62 cm sliding on a smooth horizontal surface.</p>
+<div class="figure"><img src="T3_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Using a compass and straight edge, draw a straight line parallel to the direction of the puck's speed.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Using an additional ruler with divisions, find the speed modulus of the puck.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part C. Distortion (3.0 points)</h2>
+<p>Consider photographing a flat screen. Let's enter the coordinates on the screen and in the photograph $(y,z)$ and $(Y,Z)$ respectively. For realistic transmission of images on the screen, it is necessary that the linear magnification coefficient be constant throughout the photograph, that is: \[ \vec{R} = \alpha \vec r,\quad\text{where:}\quad \vec r = (y,z);\quad \vec R = (Y,Z). \] Let's consider the simplest camera obscura. It consists of two parallel screens, one of which has a small hole. Light passing through this hole forms an image on the second screen. The image of any point in space will be located at the intersection of the ray coming from this point through the hole and the screen. We denote the distance between the photographic plane and the hole as $l$, and the distance between the camera and the screen being photographed as $L$.</p>
+<div class="figure"><img src="T3_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Show that the linear magnification of a pinhole camera is constant and find $\alpha$.</div><span class="pb-pts">0.50</span></div>
+<p>In most cases, the linearity property is violated and a distortion effect is observed, that is, the magnification is different at different points in the photograph. Let's consider the third-order distortion of paraxial rays: \[ \vec R = f(r) \vec r \approx \alpha \vec r + \beta r^2 \vec r. \]</p>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Draw a high-quality view of the photograph of part of the notebook sheet shown in the figure below, in the cases $\beta > 0$ (positive distortion) and $\beta < 0$ (negative distortion). Consider $\alpha > 0$.</div><span class="pb-pts">0.50</span></div>
+<p>Draw a high-quality view of the photograph of part of the notebook sheet shown in the figure below, in the cases $\beta > 0$ (positive distortion) and $\beta < 0$ (negative distortion). Consider $\alpha > 0$.</p>
+<div class="figure"><img src="T3_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<p>Let's look at the camera obscura again. Let this time between the camera and the screen there be a flat aquarium of thickness $h$, filled with a liquid with a refractive index $n$. The remaining space is filled with air with a refractive index $n_0 = 1$.</p>
+<div class="figure"><img src="T3_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Determine the coefficients $\alpha$ and $\beta$ in this case. What kind of distortion is observed in such a system: positive ($\alpha$ and $\beta$ of the same sign) or negative ($\alpha$ and $\beta$ of different signs)?</div><span class="pb-pts">2.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/4802">https://pho.rs/p/4802</a></p>
+</body>
+</html>

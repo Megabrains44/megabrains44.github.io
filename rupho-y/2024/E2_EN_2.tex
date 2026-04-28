@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Diffraction of ultrasonic waves}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+As you know, sound is the phenomenon of propagation of elastic longitudinal waves in a medium. A sound wave propagating in space, like any other, can be described by the wave equation: 
+$$\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2} = \Delta u,$$ 
+where $\Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}$, and $u(x, y, z, t)$ is the pressure or displacement deviation from equilibrium. Humans hear frequencies in the range of $20\text{ Hz}$ to $20\text{ kHz}$. Ultrasonic waves have frequencies $f \ge 20\text{ kHz}$.
+
+According to the Huygens-Fresnel principle, each element of a wavefront can be considered as a source of secondary spherical waves. The resulting oscillation at any point is determined by the interference of these secondary waves. Light and sound waves, despite different physical natures, are described by the same wave principles, allowing us to study the diffraction and interference of sound.
+
+\textbf{Equipment:} Oscilloscope, Generator, Receiver (white stand), Transmitter (black stand), Double-slit plate, Multi-slit plate, Zone plates (3 pcs), Plate stand, Goniometer, Plate with nails, Focusing structure, Lifting tables (3 pcs), Tape measure, 50 cm ruler, Graph paper, Masking tape, Protective screen, BNC-BNC tee, Connecting wires, Inductors.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Experimental setup.}
+\end{figure}
+
+\textit{Notes: Use inductors in parallel with the oscilloscope channel to reduce low-frequency noise. Do not apply voltage greater than 1 V amplitude (2 V peak-to-peak) to the transmitter.}
+
+\section*{Part A. Determination of wavelength and speed of sound (1.1 points)}
+
+\problembox{A1}{Determine the resonance frequency $f$ at which the voltage amplitude at the receiver $A_{out}$ is maximum.}{0.15}
+
+\problembox{A2}{Describe a method to determine the wavelength $\lambda$ at frequency $f$. Using it, determine the wavelength.}{0.70}
+
+\problembox{A3}{Based on your measurements, determine the speed of sound $v$ in air. Compare it with the theoretical value (adiabatic process, air molar mass $\mu = 29\text{ g/mol}$).}{0.25}
+
+\section*{Part B. Young's double-slit interference (3.3 points)}
+
+\problembox{B1}{Using one slot (cover the other with tape), determine the coordinates of the wavefront points containing the initial receiver position at a distance of $4\text{ cm}$. Mark these on graph paper and draw a smoothing curve.}{0.70}
+
+\problembox{B2}{Repeat the measurement of the wavefront points for a slot-to-receiver distance of $10\text{ cm}$.}{0.50}
+
+\problembox{B3}{Conclusion: At which distance can the slot be better approximated as a point source?}{0.20}
+
+\problembox{B4}{Using both slits, measure the signal amplitude $A(y)$ as a function of the transverse distance from the main axis (at least 25 points). Plot the graph and ensure you detect at least one minimum.}{1.30}
+
+\problembox{B5}{Using the data from B4, calculate the wavelength $\lambda$. Show your derivation and compare it with the value from Part A.}{0.60}
+
+\section*{Part C. Multi-slit plate (2.3 points)}
+
+For a multi-slit plate, the source distance $a$ and focus distance $b$ satisfy:
+$$\frac{1}{a} + \frac{1}{b} = \frac{1}{f} {}$$
+
+\problembox{C1}{Measure the dependence $b(a)$ for at least 5 values of $a$. Construct a linearized plot and determine the focal length $f$.}{0.90}
+
+\problembox{C2}{With the transmitter at the focus, determine the wavefront points at a distance $z \ge 30\text{ cm}$ behind the plate. Mark them on graph paper.}{0.60}
+
+\problembox{C3}{Remove the plate and determine the wavefront points produced by the source alone at the same position.}{0.60}
+
+\problembox{C4}{Can the sound front passing through the plate be considered flat? Justify your answer.}{0.20}
+
+\section*{Part D. Zone Plates (6.9 points)}
+
+A zone plate consists of odd Fresnel zones. The outer radius $r_m$ of the $m$-th zone is related to the source distance $a$ and focus $b$.
+
+\problembox{D1}{Derive the expression for the radius $r_m$ of the $m$-th zone in the paraxial approximation ($r_m \ll a, b$) in terms of $m, a, b, \lambda$.}{0.40}
+
+\problembox{D2}{Show that the relation $\frac{1}{a} + \frac{1}{b} = \frac{1}{f}$ holds and express $f$ in terms of $r_m, m,$ and $\lambda$.}{0.20}
+
+\problembox{D3}{For each plate, measure $b(a)$ for 5 points. Determine $f$ for each using linearized graphs.}{1.50}
+
+\problembox{D4}{Measure the physical radii $r_m$ of the zones and calculate $f$ from D2. Compare the accuracy of this method with D3.}{0.80}
+
+\problembox{D5}{Measure the phase shift $\Delta \varphi(y) = \varphi(y) - \varphi(0)$ at a distance of $5\text{ cm}$ behind the plate. Plot $\Delta \varphi(y)$ and $\Delta \varphi_0(y)$ (without the plate) on one graph.}{1.50}
+
+\problembox{D6}{Repeat D5 for distances of $15\text{ cm}$ and $25\text{ cm}$.}{2.20}
+
+\problembox{D7}{At which distance is the wavefront most nearly flat in the region $|y| < 5\text{ cm}$?}{0.30}
+
+\section*{Part E. Bragg diffraction (4.2 points)}
+
+Bragg's law describes intensity maxima for waves scattered by a periodic lattice with pitch $d$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Reflection from a crystal lattice.}
+\end{figure}
+
+\problembox{E1}{Derive the Bragg condition relating $\theta, \lambda,$ and $d$ for intensity maxima.}{0.60}
+
+\problembox{E2}{Measure $A(\theta)$ for $\theta \in [20^\circ, 70^\circ]$. Graph it and identify the Bragg maxima.}{1.30}
+
+\problembox{E3}{Calculate the lattice pitch $d$ from your results.}{0.20}
+
+\problembox{E4}{Repeat the derivation for a lattice rotated by $45^\circ$ (see Fig. 4).}{0.60}
+
+\problembox{E5}{Measure $A(\theta)$ for the $45^\circ$ configuration. Graph it and identify the maxima.}{1.30}
+
+\problembox{E6}{Calculate the lattice pitch $d$ for the rotated configuration.}{0.20}
+
+\section*{Part F. Non-periodic focusing structure (2.2 points)}
+
+This structure focuses a plane wave to a point $f$ by scattering. We require scattered waves to arrive at the focus with phase difference $2\pi m$.
+
+\problembox{F1}{Obtain the equation of the curve (in $x,y$ coordinates) containing scattering centers such that the path difference corresponds to $m\lambda$.}{0.90}
+
+\problembox{F2}{Experimentally determine the focal length $f$. Describe your detection method and sketch the signal amplitude $A(x)$ near the focus.}{1.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3865}
+
+\end{document}

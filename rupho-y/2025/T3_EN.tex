@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Earnshaw Balls}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In 1844, Earnshaw described an interesting effect in his mechanics textbook: a ball placed on a rotating horizontal table can move in circles, the axes of which do not have to coincide with the axis of rotation of the table. In 1940, Einstein said that this fact was not interesting enough to waste time on. In this problem we will try to please Albert by solving the problem for more complex options for the position and shape of the table.
+
+\section*{Part A: Is Earnshaw Right? (2.2 points)}
+
+Let us study the motion without slipping of a ball with radius $a$ and mass $m$ on a horizontal table rotating with angular velocity $\vec\Omega$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let us denote $\vec r$ the radius vector from the axis of rotation of the table to the center of the ball, running parallel to the surface of the table, $\vec a$ – the vector from the center of the ball to the point of contact with the table, $\vec\omega$ – the angular velocity of rotation of the ball, $\vec g$ – the acceleration of free fall, $\vec F$ and $\vec N$ – the friction forces and normal reaction of the support acting per ball, respectively. The moment of inertia of the ball is $I = \beta ma^2$, where $\beta = 2/5$.
+
+\problembox{A1}{Express $\ddot{\vec r}$ and $\dot{\vec\omega}$ in terms of $\vec F$, $m$, $\beta$, $\vec a$.}{0.50}
+
+\problembox{A2}{Write down the condition for kinematic coupling. Express your answer in terms of $\dot{\vec r}$, $\vec a$, $\vec r$, $\vec \omega$ and $\vec \Omega$.}{0.30}
+
+\problembox{A3}{Express $\ddot{\vec r}$ in terms of $\beta$, $\dot{\vec r}$ and $\vec \Omega$.}{0.70}
+
+\problembox{A4}{Let the initial position and speed of the ball be $\vec r_0$ and $\vec v_0$, respectively. Determine how $\dot{\vec r}$ depends on $\vec r$ as it moves further. Qualitatively depict the trajectory of the center of the ball in this case and indicate the characteristic dimensions and coordinates.}{0.70}
+
+\section*{Part B. Tilt table (1.7 points)}
+
+Now the table is tilted and there is a non-zero projection $\vec g_\parallel$ of the free fall acceleration onto it. The remaining notations are the same as part A.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Express $\ddot{\vec r}$ in terms of $\vec g_\parallel$, $\beta$, $\dot{\vec r}$ and $\vec \Omega$.}{0.30}
+
+\problembox{B2}{Let us denote $$\textbackslash\{\}vec\{u\} = \textbackslash\{\}frac\{\textbackslash\{\}left[\textbackslash\{\}vec\{\textbackslash\{\}Omega\} \textbackslash\{\}times \textbackslash\{\}vec g_\textbackslash\{\}parallel\textbackslash\{\}right]\}\{\textbackslash\{\}Omega^2\}.$$ Качественно изобразите траектории центра шара при следующих начальных скоростях: $\vec{v}_0 = \vec{u}$ $\vec{v}_0 = 2.5 \vec{u}$ $\vec{v}_0 = 5 \vec{u}$ $\vec{v}_0 = 0$ Для случая 4 рассчитайте численно характерные размеры траектории для $g_\parallel=1.0~m/s^2$, $\Omega = 10~rad/s$.}{1.40}
+
+For case 4, numerically calculate the characteristic dimensions of the trajectory for $g_\parallel=1.0~м/с^2$, $\Omega = 10~рад/с$.
+
+\section*{Part C. Conical table (6.1 points)}
+
+Now the table is a conical surface with an opening angle $\pi - 2\theta$ (see figure). Let us study the motion of a ball without slipping on such a table rotating with angular velocity $\vec\Omega$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Let us introduce unit vectors in the direction of the radius vector and the angular velocity of the cone: $\vec r = r \vec e _r$ and $\vec\Omega = \Omega \vec e_z$. Additionally, we denote the angular velocity of rotation of the radius vector $\vec\zeta = \dot{\varphi} \vec e_z$, where $\varphi$ is the angle of rotation of the ball around the axis of the cone.
+
+\problembox{C1}{Express $\ddot{\vec r}$ in terms of $m$, $\beta$, $\vec a$, $\vec r$, $\vec N$, $\vec g$, $\dot{\vec \omega}$}{0.20}
+
+\problembox{C2}{Write down the condition for kinematic coupling. Express your answer in terms of $\dot{\vec r}$, $\vec a$, $\vec r$, $\vec \omega$, $\vec \Omega$.}{0.40}
+
+\problembox{C3}{Express $\ddot{\vec r}$ in terms of $m$, $\beta$, $\vec a$, $\vec N$, $\vec g$, $\dot{\vec r}$, $\vec\Omega$, $\vec \zeta$, $\vec \omega$.}{0.90}
+
+With $\theta \ll 1$ and taking into account some other approximations, which we will further consider to be fulfilled, the equation of point C3 takes the form: $$ \textbackslash\{\}ddot\{\textbackslash\{\}vec r\} = \textbackslash\{\}frac\{1\}\{1+\textbackslash\{\}beta\} \textbackslash\{\}left(\textbackslash\{\}vec g + \textbackslash\{\}frac\{\textbackslash\{\}vec N\}\{m\}\textbackslash\{\}right) + \textbackslash\{\}frac\{\textbackslash\{\}beta[\textbackslash\{\}vec \textbackslash\{\}Omega \textbackslash\{\}times \textbackslash\{\}dot\{\textbackslash\{\}vec r\}]\}\{1 + \textbackslash\{\}beta\}. $$ Next, use this expression.
+
+\problembox{C4}{Prove that in the considered approximation the quantity $$ l = r^2 \textbackslash\{\}left( \textbackslash\{\}zeta-\textbackslash\{\}cfrac\{\textbackslash\{\}Omega\textbackslash\{\}beta\}\{2\textbackslash\{\}left(1+\textbackslash\{\}beta\textbackslash\{\}right)\} \textbackslash\{\}right). $$Здесь $\zeta = |\vec{\zeta}|$ is conserved.}{1.00}
+
+\problembox{C5}{Express $\ddot{r}$ in terms of $r$, $\zeta$, $\beta$, $\Omega$, $\theta$ and $g$.}{0.50}
+
+\problembox{C6}{Determine at what values ​​of $r$ movement along circular trajectories around the axis of symmetry of the cone $(r = \text{const})$ is possible and determine the values ​​of $\zeta$ corresponding to such movement. Express your answer in terms of $r$, $\beta$, $\Omega$, $\theta$ and $g$.}{0.70}
+
+Now let’s examine movement along trajectories other than circular ones.
+
+\problembox{C7}{Express $\dot{r}^2$ up to an arbitrary constant in terms of $l$, $r$, $g$, $\beta$, $\Omega$ and $\theta$. Qualitatively depict the appearance of the phase diagrams $\dot{r}(r)$.}{0.80}
+
+\problembox{C8}{Let us consider a small perturbation of a circular orbit with radius $r_0$. Determine the cyclic frequency $\xi$ of small radial vibrations. Express your answer in terms of $\Omega$, $r_0$, $\theta$, $g$, $\beta$.}{0.40}
+
+\problembox{C9}{Let the ball initially move with $\dot{\varphi}=\zeta_0=0.44~рад/с$, $\dot{r} = 0$, $r_0 = 15~cm$ along a cone with $\theta = 1^\circ$ and $\Omega = 10~рад/с$. Draw the type of trajectory and indicate its characteristic dimensions. It is known that $g = 9.81 ~м/с^2$. Note: you can consider it known that the deviation from the circular orbit in this case is small, therefore the dependence of $\ddot{r}(r)$ and $\dot\varphi (r)$ can be approximated by a linear function near the AVERAGE value $r$.}{1.20}
+
+Note: you can consider it known that the deviation from the circular orbit in this case is small, therefore the dependence of $\ddot{r}(r)$ and $\dot\varphi (r)$ can be approximated by a linear function near the AVERAGE value $r$.
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4562}
+
+\end{document}

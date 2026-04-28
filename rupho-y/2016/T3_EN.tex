@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Hoop on a wedge}}
+\author{\normalsize Y16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+On the horizontal surface there is a wedge of mass $m$ with an angle $\alpha=45^{\circ}$ at the base, on the wedge there is a hoop of the same mass $m$, radius $R$ (Fig. 1). The system is released without initial speed. At all points of the problem, we can assume that the hoop does not slip and the wedge does not tip over. The acceleration due to gravity is $g$.
+
+On the horizontal surface there is a wedge of mass $m$ with an angle $\alpha=45^{\circ}$ at the base, on the wedge there is a hoop of the same mass $m$, radius $R$ (Fig. 1). The system is released without initial speed. At all points of the problem, we can assume that the hoop does not slip and the wedge does not tip over. The acceleration due to gravity is $g$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the acceleration $a_C$ of the center of the hoop for a sufficiently large coefficient of friction between the wedge and the horizontal surface.}{1.00}
+
+\problembox{A2}{At what minimum coefficient of friction $\mu_{min}$ between the wedge and the horizontal surface will the wedge remain motionless?}{2.00}
+
+\problembox{A3}{With what acceleration $a_{p0}$ will the wedge move if the horizontal surface is smooth?}{2.00}
+
+\problembox{A4}{How will the answer in the previous paragraph change if a horizontal force $F$ directed to the left is applied to the wedge? Those. find the acceleration $a_{pF}$ of the wedge in this case.}{3.00}
+
+\problembox{A5}{Find the acceleration of the wedge $a_p$ for an arbitrary friction coefficient $\mu$ between the wedge and the horizontal surface (in the absence of force $F$).}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3029}
+
+\end{document}

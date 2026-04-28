@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Added mass</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Added mass</h1>
+<p class="camp">Y20 (2020) — English translation</p>
+<p>In this problem we will consider mathematical similarities in describing two phenomena: added mass when a body moves in a liquid and a superconductor in a magnetic field. In hydrodynamics, to describe the movement of a fluid, such a characteristic is used as the circulation of the velocity vector, equal to $\Gamma=\displaystyle\oint_L\vec{v}\cdot\vec{dl}$, where $L$ is a certain closed loop. Circulation velocity serves as a measure of flow vorticity. Simple irrotational motion of an incompressible fluid without viscosity can be described by a circulation equal to zero: $\Gamma=0$. A superconductor is a material whose electrical resistance becomes zero when the temperature drops to a critical value. In 1933, the Meissner effect was discovered - the complete displacement of the magnetic field from the volume of a conductor during its transition to the superconducting state (see figure). The absence of a magnetic field in the volume of a conductor allows us to conclude from the general laws of the magnetic field that only a surface current exists in a superconductor. The magnetic field of the current destroys the external magnetic field inside the superconductor. In all further points of the problem, the fluid can be considered incompressible and without viscosity.</p>
+<div class="figure"><img src="T4_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Solid in Liquid and Superconductor in a Magnetic Field</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Let us consider a rigid body moving translationally with speed $\vec{v_0}$ in a liquid. Let us move to the reference system in which the body is at rest. What is the normal velocity component to the surface of a solid body $v_n$? What is the velocity of the fluid at an infinite distance from the body $\vec{v_\infty}$ in the reference frame associated with the body? Record your answers in the table at the beginning of your answer sheet.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Let us consider a stationary superconducting body placed in a uniform field with induction $\vec{B}_0$. The geometric dimensions of the body and its orientation with respect to the vector $\vec{B}_0$ coincide with the dimensions of the body and the orientation of the body with respect to the vector $\vec{v}_0$ from point A1. What is the normal component of the magnetic field induction $B_n$? What is the magnetic field induction $\vec{B}_{\infty}$ at an infinite distance from the superconductor? Record your answers in the table at the beginning of your answer sheet.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Let the distribution of magnetic field induction $\vec{B}$=$f(\vec{B}_0, \vec{r})$ be given for point A2 in the entire space. Assuming that the vectors $\vec{B}_0$ and $\vec{v}_0$ are co-directed, find the distribution of fluid velocity in space in the reference system associated with the body.</div><span class="pb-pts">0.40</span></div>
+<h2 class="part">Part B. Ball in liquid</h2>
+<p>When a body moves, the liquid also begins to move and, therefore, has kinetic energy. During translational motion, this quantity does not depend on the speed of the body and is determined by the relation $E_k=\cfrac{(m+\mu)v^2}{2}$, where $E_k$ is the kinetic energy of the fluid and the body, $m$ is the mass of the moving body, $\vec{v}$ is the velocity vector of the body. In this part of the problem, we need to find the added mass of a ball of radius $R$ moving in a fluid having density $\rho$. Before the ball began to move, the liquid was also motionless. For universal notation, consider that $\vec{r}$ is a radius vector drawn from the center of the ball to an arbitrary point in space. Note: For this and the next part of the problem, you will need the results of Part A!</p>
+<p>Note: For this and the next part of the problem, you will need the results of Part A!</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Let us place a superconducting ball of radius $R$ in a uniform magnetic field with induction $\vec{B_0}$. Find the magnetic field induction in all space outside the sphere. Express your answer in terms of $\vec{B_0}, \vec{r}$ and $R$.</div><span class="pb-pts">1.80</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the speed of the fluid in all space outside the sphere. Express your answer in terms of $\vec{v}, \vec{r}$ and $R$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Find the kinetic energy of the fluid. Express your answer in terms of $v, \rho$ and $R$.</div><span class="pb-pts">1.70</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Find the value of $\mu$ for the ball. Express your answer in terms of $\rho$ and $R$.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part C. Cylinder in liquid</h2>
+<p>In this part of the problem, we need to find the added mass for a cylinder of length $L$ and radius $R$, moving translationally in the direction perpendicular to its axis of symmetry. When calculating fluid velocities, neglect edge effects (assume that the cylinder is infinitely long). Also consider that the main contribution to the kinetic energy comes from the fluid moving between the ends of the cylinder. The speed of the cylinder is $\vec{v}$, the density of the liquid is $\rho$. For universality of notation, consider that $\vec{r}$ is a radius vector perpendicular to the cylinder axis, drawn from it to an arbitrary point in space.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Let us place an infinitely long superconducting cylinder of radius $R$ in a uniform magnetic field of induction $\vec{B}_0$. Find the magnetic field induction in the entire space outside the cylinder. Express your answer in terms of $\vec{B}_0, \vec{r}$ and $R$.</div><span class="pb-pts">2.80</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find the speed of the fluid throughout the space outside the cylinder. Express your answer in terms of $\vec{v}$, $\vec{r}$ and $R$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find the kinetic energy of fluid motion. Express your answer in terms of $\rho, R, L$ and $v$.</div><span class="pb-pts">0.90</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Find the value of the added mass $\mu$ for the moving cylinder. Express your answer in terms of $\rho, R$ and $L$.</div><span class="pb-pts">0.20</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/30">https://pho.rs/p/30</a></p>
+</body>
+</html>

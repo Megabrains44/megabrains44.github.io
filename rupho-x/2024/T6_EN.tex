@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Conductors in a magnetic field}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+If a conductor is in an alternating magnetic field, or moves in a non-uniform magnetic field, an electric current arises in it. The occurrence of electric current in conductors is a consequence of the phenomenon of electromagnetic induction and has been quite well studied. In particular, the effect of the occurrence of electric current in conductors leads to the effect of so-called “magnetic braking,” which many of you have probably observed live. In this problem, the vibrations of conducting bodies are studied taking into account the influence of the magnetic field. We will study two limiting transitions corresponding to conducting bodies: The resistivity $\rho$ of the conductor is so great that the phenomenon of self-induction can be neglected when determining the Foucault currents arising in the conductor. Parts $A$, $B$ and $C$ of this problem are devoted to this passage to the limit. The resistivity $\rho$ of the conductor is so small that it can be taken equal to zero, and the magnetic field lines can be considered “frozen” into the conducting body. Part $D$ of this problem is devoted to this transition to the limit, in the description of which the effect of freezing of magnetic field lines into a conductor will be described in detail.
+
+If a conductor is in an alternating magnetic field, or moves in a non-uniform magnetic field, an electric current arises in it. The occurrence of electric current in conductors is a consequence of the phenomenon of electromagnetic induction and has been quite well studied. In particular, the effect of the occurrence of electric current in conductors leads to the effect of so-called “magnetic braking,” which many of you have probably observed live.
+
+In this problem, the vibrations of conducting bodies are studied taking into account the influence of the magnetic field. We will study two limit transitions corresponding to conducting bodies:
+
+\section*{Part A. Free vibrations with damping (1.2 points)}
+
+Let us consider a vertical spring pendulum consisting of a weightless spring with a stiffness coefficient $k$, one end of which is fixed, and a load of mass $m$ is attached to the other end. When moving at a speed $\vec{v}$, it is acted upon by a drag force $\vec{F}_{с}=-\beta\vec{v}$, where $\beta$ is a known constant value. Let us introduce an axis $x$ directed along the spring so that as the coordinate $x$ of the load increases, the length of the spring decreases, and in the equilibrium position the coordinate of the load $x_0=0$. At all points of parts $\mathrm{A}$-$\mathrm{C}$ the ball moves only vertically. We also introduce the following notation:
+$$\gamma=\frac{\beta}{2m},\qquad \omega_0=\sqrt{\frac{k}{m}},\qquad \gamma<\omega_0.$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Let the moment of time $t_0=0$ the load be at the origin of coordinates, and the projection of its velocity onto the axis $x$ is equal to $v_0$. Determine the dependences of the coordinate $x(t)$ and speed $v_x(t)$ of the load on time $t$. Express your answer in terms of $v_0$, $\gamma$, $\omega_0$ and $t$.}{0.60}
+
+Let $E_0$ be the kinetic energy of the load when passing the origin, and $E_1$ be the kinetic energy of the load when it subsequently passes the origin with the same direction of speed. Let us determine the quality factor $Q$ of the oscillatory system as follows:
+$$Q=\frac{2\pi E_0}{E_0-E_1}.$$
+
+\problembox{A2}{Obtain an exact expression for $Q$. Express your answer in terms of $\omega_0$ and $\gamma$.}{0.40}
+
+\problembox{A3}{Derive an approximate expression for the quality factor $Q$ at weak damping ($\gamma\ll\omega_0$). Express your answer in terms of $m$, $k$ and $\beta$.}{0.20}
+
+\section*{Part B. Forced vibrations (1.2 points)}
+
+Consider the spring pendulum from part $\mathrm{A}$ of the problem. The coordinate $x_1$ of the second end of the spring (to which no load is attached) varies as
+$$x_1(t)=x_{1(0)}+A_0\sin(\Omega t),$$
+where $A_0>0$ and $x_{1(0)}$ corresponds to the equilibrium position of the load. In what follows, consider only the steady motion under the driving constraint. Use the quantities $\omega_0$ and $\gamma$ introduced earlier.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{The deviation $x$ of the load from the equilibrium position depends on time $t$ as follows:
+$$x(t)=A\sin(\Omega t+\varphi_0).$$
+Find $A$ and $\varphi_0$. Express your answers in terms of $A_0$, $\Omega$, $\omega_0$, and $\gamma$.}{0.60}
+
+We will call resonant such a cyclic oscillation frequency $\Omega_{рез}$ at which the amplitude of oscillations of the system is maximum and is denoted as $A_{рез}$.
+
+\problembox{B2}{Obtain exact expressions for the resonant cyclic frequency $\Omega_{рез}$ and the corresponding oscillation amplitude $A_{рез}$. Express your answers in terms of $\omega_0$, $\gamma$ and $A_0$. Consider $\gamma\sqrt{2}<\omega_0$.}{0.30}
+
+The width of the resonance curve $\Delta{\omega}$ is the difference between the maximum and minimum cyclic frequencies $\Omega_{max}$ and $\Omega_{min}$, respectively, at which the oscillation amplitude is $\sqrt{2}$ times less than the resonant one.
+
+\problembox{B3}{Derive approximate expressions for $\Omega_{рез}$, $A_{рез}$ and $\Delta{\omega}$ under weak damping ($\gamma\ll{\omega_0}$). Express your answers in terms of $A_0$, $\omega_0$ and $\gamma$.}{0.30}
+
+\section*{Part C. The influence of the ring field on the motion of the ball (4.2 points)}
+
+A solid homogeneous ball of mass $m$ and radius $R_0$ is made of a material with high resistivity $\rho$. Its center can move along the axis of rotation of a ring of radius $R$, the plane of which is horizontal. The current in the ring is slowly increased to $I$ and then maintained constant. To determine the position of the center of the ball, we introduce the axis $x$ with its origin in the center of the ring, directed upward.  Assume that the dielectric and magnetic permeabilities of the ball, $\varepsilon$ and $\mu$, are both equal to unity, and that the ball is small in the sense that
+$$R_0 \ll R,\qquad R_0 \ll |x|.$$
+When the ball moves with velocity $\vec{v}$ along the axis of the ring, the force exerted on it by the ring has the form
+$$\vec{F}=-\beta(x)\,\vec{v},$$
+where $\beta(x)$ is a proportionality coefficient that depends on the coordinate $x$ of the center of the ball.
+
+Let's start by studying the magnetic field of the ring.
+
+\problembox{C1}{Find the induction $B_x$ of the magnetic field of the ring on its axis at the point with coordinate $x$. Express your answer in terms of $x$, $R$, $I$ and the magnetic constant $\mu_0$.}{0.30}
+
+Let us consider an initial ball of radius $R_0$ with resistivity $\rho$, located in a uniform magnetic field $\vec{B}=\vec{e}_xB$. Without changing direction, the magnitude of the magnetic field changes at a speed $dB/dt=\dot{B}$. Let us select a disk in the ball with radius $r_0$ and thickness $h\ll{r_0}$, the bases of which are perpendicular to the axis $x$.
+
+\problembox{C2}{Determine the magnetic moment $\vec{m}$ of the disk. Express your answer in terms of $\vec{e}_x$, $r_0$, $h$, $\rho$ and $\dot{B}$.}{1.00}
+
+\problembox{C3}{Determine the magnetic moment $\vec{m}$ of the ball. Express your answer in terms of $\vec{e}_x$, $R_0$, $\rho$ and $\dot{B}$.}{0.50}
+
+Now consider the motion of the ball along the axis of the ring with speed $v_x$.
+
+\problembox{C4}{Obtain the time derivative of the magnetic field induction of the ring at the center of the ball $dB_x/dt$, which is equivalent to the value $\dot{B}$. Express your answer in terms of $v$, $I$, $R$, $x$ and the magnetic constant $\mu_0$.}{0.40}
+
+\problembox{C5}{Find the proportionality coefficient $\beta(x)$. Express your answer in terms of $I$, $R$, $x$, $R_0$, $\rho$ and the magnetic constant $\mu_0$.}{0.50}
+
+Let us use the obtained result for $\beta(x)$ to determine the resistivity of the ball from free vibrations, as well as from the amplitude-frequency characteristic of forced vibrations. The ball was fixed on one of the ends of a weightless non-conducting spring with a stiffness coefficient $k$. The other end of the spring is fixed at the point with coordinate $x_{1(0)}$. In the equilibrium position, the center of the ball is located at a height $H\gg{R_0}$ above the center of the ring. The deviation $\Delta x$ of the center of the ball from the equilibrium position always satisfies
+$$\Delta x \ll R,\qquad \Delta x \ll H.$$
+
+The first graph shows the deviation of the ball from equilibrium during free oscillations, in arbitrary units (the other end of the spring is fixed). The second graph shows the amplitude $A$ of forced oscillations versus $\Omega$, in arbitrary units. The coordinate of the other end of the spring then varies as
+$$x_1(t)=x_{1(0)}+A_0\sin(\Omega t).$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{C6}{Determine the resistivity $\rho$ of the ball used in the first experiment. Express your answer in terms of $m$, $k$, $R_0$, $R$, $H$, $I$ and the magnetic constant $\mu_0$.}{0.80}
+
+\problembox{C7}{Determine the resistivity $\rho$ of the ball used in the second experiment. Express your answer in terms of $m$, $k$, $R_0$, $R$, $H$, $I$ and the magnetic constant $\mu_0$.}{0.70}
+
+\section*{Part D. “Frozen-in” magnetic field (3.4 points)}
+
+This part of the problem is devoted to the study of the magnetic field resulting from the movement of very good conductors in them.
+
+Consider the following design: Coaxially with a semi-infinite circular solenoid of radius $R$ with winding density of turns $n$ and current strength $I$ there is a very long, well-conducting cylinder of mass $m$ with radius $r\ll{R}$, the ends of which are located on opposite sides of the base of the solenoid and are distant from it at a distance many times greater than its radius. In the initial position of the cylinder there are no currents in it. Due to the high conductivity of the substance, the magnetic field induction lines are frozen into it. This means that when a substance moves, the magnetic field lines will move with it. In this case, corresponding to a solid body, this leads to the fact that the magnetic field induction at each point of the cylinder will be maintained as it moves, which is due to the occurrence of circular Foucault currents in the rod.
+
+Consider the following design: Coaxially with a semi-infinite circular solenoid with a radius $R$ with a winding density of turns $n$ and a current strength $I$ there is a very long, well-conducting cylinder of mass $m$ with a radius $r\ll{R}$, the ends of which are located on opposite sides of the base of the solenoid and are distant from it at a distance many times greater than its radius. In the initial position of the cylinder there are no currents in it. Due to the high conductivity of the substance, the magnetic field induction lines are frozen into it. This means that when a substance moves, the magnetic field lines will move with it. In this case, corresponding to a solid body, this leads to the fact that the magnetic field induction at each point of the cylinder will be maintained as it moves, which is due to the occurrence of circular Foucault currents in the rod.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+Solve the problem in the following approximations: Currents arising in the cylinder flow only along its surface; Outside the cylinder, the magnetic field induction is equal to the magnetic field induction of the solenoid; The cylinder deviates from its original position by the amount $x\ll{R}$; The interaction of the cylinder with the supply wires can be neglected; For the times considered in this problem, the damping of the currents in the cylinder can be neglected.
+
+Solve the problem in the following approximations:
+
+We will characterize the induction of the magnetic field of the solenoid by the axis $z$, directed outward of the solenoid along its axis. The origin of the $z$ axis coincides with the center of the solenoid base.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{D1}{Determine the induction $B_z$ of the magnetic field of the solenoid, as well as its derivative $dB_z/dz$ at the point with coordinate $z$. Express your answer in terms of $\mu_0$, $n$, $I$, $R$ and $z$.}{0.60}
+
+Let the cylinder be deflected by an amount $x\ll{R}$ along the axis $z$ from its original position.
+
+\problembox{D2}{Determine the linear current density $i$ on the surface of the cylinder at the point with coordinate $z$. Express your answer in terms of $\mu_0$, $x$ and $dB_z(z)/dz$.}{1.00}
+
+\problembox{D3}{Determine the force $F_x$ acting on the cylinder from the magnetic field of the solenoid. Express your answer in terms of $\mu_0$, $r$, $R$, $n$, $I$ and $x$.}{1.50}
+
+Let the cylinder in its initial position be given a speed $v_0$ directed along the axis $z$.
+
+\problembox{D4}{Obtain the dependence of the displacement of the rod $x$ on time $t$. Express your answer in terms of $\mu_0$, $r$, $R$, $n$, $I$ and $m$.}{0.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2912}
+
+\end{document}

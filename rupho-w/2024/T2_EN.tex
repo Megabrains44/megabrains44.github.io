@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{In the middle of the bridge}}
+\author{\normalsize W24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem, we study electrical circuits containing a nonlinear element, the current-voltage characteristic of which is shown in Fig. 1. The current-voltage characteristic of a nonlinear element is described by two sections: $I=I_0\cdot(U/U_0)$ at $U\leq U_0$, where $I_0=10~\text{мА}$ and $U_0=5~\text{В}$. $I=I_0=const$ at $U\geq U_0$.
+
+In this problem, we study electrical circuits containing a nonlinear element, the current-voltage characteristic of which is shown in Fig. 1.
+
+The current-voltage characteristic of a nonlinear element is described by two sections:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. DC Circuit (3.0 points)}
+
+Figure 2 shows a diagram of an electrical circuit consisting of resistors with resistances $R$, $2R$, $4R$, $6R$ and $8R$, an ideal constant voltage source $\mathcal{E}$ and the described nonlinear element. This part of the problem is devoted to studying the dependence of the current through a nonlinear element depending on the source voltage.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{Since without a section of the circuit between nodes $A$ and $B$ the electrical circuit consists entirely of constant voltage sources and resistors, the dependence of the current $I_{AB}$ flowing from node $A$ to node $B$ on the voltage $U_{AB}=\varphi_A-\varphi_B$ in this section of the circuit can be represented in a form that does not depend on the element connected between nodes $A$ and $B$: $$I_\{AB\}=\textbackslash\{\}cfrac\{\textbackslash\{\}mathcal\{E\}_0-U_\{AB\}\}\{r_0\}\{.\} $$Определите $\mathcal{E}_0$ и $r_0$. Ответы выразите через $\mathcal{E}$ и $R$.}{1.50}
+
+\problembox{A2}{Obtain the dependence of the current strength $I_{AB}$ on the value $\mathcal{E}$. Express your answer using $\mathcal{E}$, $R$, $U_0$ and $I_0$.}{0.50}
+
+\problembox{A3}{Obtain the dependence of the power $P_\text{н.э}$ released on the nonlinear element on the value $\mathcal{E}$. Express your answer using $\mathcal{E}$, $R$, $U_0$ and $I_0$.}{0.50}
+
+\problembox{A4}{Construct a high-quality graph of the dependence $P_\text{н.э}(\mathcal{E})$. Indicate all the characteristic points on the graph and indicate their corresponding values.}{0.50}
+
+\section*{Part B. Electric Circuit Containing a Capacitor (5.0 points)}
+
+The figure shows an electrical circuit consisting of an ideal voltage source $\mathcal{E}$, a resistor $R = 500~Ohm$, a capacitor with a capacitance $C = 100~мкФ$ and a nonlinear element connected in series, as well as a switch $K$. Initially, the key is open and the capacitor is not charged. At the initial time $t = 0$ the key is closed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Let the emf of the source be equal to $\mathcal{E} = 6~\text{В}$.
+
+\problembox{B1}{Obtain the dependence of the current $I_C(t)$ through the capacitor on time $t$. Express your answer in terms of $\mathcal{E}$, $R$, $U_0$, $I_0$, $C$ and $t$.}{0.80}
+
+\problembox{B2}{What amount of heat $Q_\text{н.э}$ will be released on the nonlinear element during the establishment of constant current? Express your answer in terms of $\mathcal{E}$, $R$, $U_0$, $I_0$ and $C$. Find the numerical value.}{0.60}
+
+\problembox{B3}{After what time $\tau$ the amount of heat released on the nonlinear element will reach $80\%$ from the value $Q_\text{н.э}$? Express your answer in terms of $R$, $U_0$, $I_0$, and $C$. Find the numerical value.}{0.60}
+
+Now the emf of the source is $\mathcal{E} =12~\text{В}$.
+
+\problembox{B4}{Obtain the dependence of the current $I_C(t)$ through the capacitor on time $t$. Express your answer in terms of $\mathcal{E}$, $R$, $U_0$, $I_0$, $C$ and $t$.}{1.50}
+
+\problembox{B5}{What amount of heat $Q_\text{н.э}$ will be released on the nonlinear element during the establishment of constant current?  Find the numerical value with an accuracy of at least $1\%$.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3553}
+
+\end{document}

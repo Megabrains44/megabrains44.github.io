@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{freezing rain}}
+\author{\normalsize Y18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+At the beginning of November 2016, precipitation in the form of freezing rain was observed in Moscow and the region, resulting from a temperature inversion, when the temperature at the Earth's surface is lower than at an altitude of 2-3 km. The characteristic dependences of temperature on height are shown in the figure. A “drop” of freezing rain near the ground is an icy spherical shell containing water inside
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{For a temperature profile reaching the temperature $+4^{\circ}\mathrm C$, droplets of the maximum radius $R_0=1~\text{mm}$ have time to freeze completely when flying towards the ground, but droplets of a larger size do not. What part of the mass of a drop of radius $R_1=2~\text{mm}$ will freeze as it moves towards the ground?}{8.00}
+
+\problembox{A2}{Determine the limiting radius $R^{(1)}_0$ for the second temperature profile.}{2.00}
+
+Consider that at the altitude where the temperature passes through $0^{\circ}\mathrm C$ (for example, $1{,}5~\text{км}$ in the blue graph), all raindrops are liquid at a temperature $T_0=0^{\circ}\mathrm C$. Heat removal from a unit surface of a droplet per unit time satisfies the empirical relation:
+
+Evaporation and condensation, as well as changes in the radius of the drop due to crystallization, are neglected. Assume that the thermal conductivity of ice and water is high enough so that the temperature at the center of the drop is equal to the temperature at the surface.
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3044}
+
+\end{document}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>The first days of the solar system</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>The first days of the solar system</h1>
+<p class="camp">Y13 (2013) — English translation</p>
+<p>According to one of the models, in the first “days” of our solar system, the Sun with mass $М$ and diameter $D$ was surrounded by a large resting spherical gas cloud. For simplicity, we will assume that the gas was monatomic, ideal (molecular mass of the gas $\mu$), and the total mass of the entire gas is much less than $М$. This problem asks you to determine the distribution of gas as a function of the distance $r$ from the Sun. We will assume that $r \gg D$.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">At this stage, consider the temperature in the cloud constant everywhere and equal to $T_0$, and the gas density distribution in the cloud $\rho=\rho_0 e^{\alpha/r}$. Determine the value of parameter $\alpha$.</div><span class="pb-pts">0</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">There is a significant drawback in the specified distribution of gas density in the cloud. Please indicate it.</div><span class="pb-pts">0</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">In an improved model, assume that the Sun emits $J_0$ thermal energy per second. We also assume that there are no heat losses, i.e. all solar radiation energy is transferred to the gas and the temperature distribution is stationary. Determine the thermal energy flux density at a distance $r$ from the Sun.</div><span class="pb-pts">0</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">The thermal energy flux density $I(r)$ at point A3 is proportional to the temperature gradient, i.e. \[ I(r) = -\sigma \frac{dT}{dr} ,\]where $\sigma$ is a positive constant called thermal conductivity. The minus sign occurs because heat is transferred from an area with a higher temperature to an area with a lower temperature. Determine the temperature $T$ at a distance $r$ from the Sun.</div><span class="pb-pts">0</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Now we will assume that the pressure in the cloud changes according to the law: \[p = p_0 \left( \frac{r}{r_0} \right)^{-\beta}.\]Determine the parameter $\beta$ and the gas density distribution.</div><span class="pb-pts">0</span></div>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">From point A4 it follows that at some distance $r_1$ from the Sun the temperature of the cloud will become less than the melting temperature of ice on Earth under normal conditions. Rate $r_1$. The average orbital radius of which planet in the Solar System is closest to $r_1$? Solar luminosity $J_0=8.846 \cdot 10^{26}~\text{Вт}$, $\sigma =5 \cdot 10^{11}~\text{Вт}/(\text{м} \cdot \text{К})$. The average distance from the Sun to the planets is given in the table.</div><span class="pb-pts">0</span></div>
+<p>Planet Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune $r, 10^6~\text{км}$ 58 108 150 228 778 1430 2870 4500</p>
+<p>The following formulas may be useful to you: \[\int x^n dx = \frac{x^{n+1}}{n+1} + C, \quad \text{where } n \neq -1\]\[ \int x^{-1} dx = \ln |x| +C\]</p>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3973">https://pho.rs/p/3973</a></p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Two diodes}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The figure shows a diagram of an electrical circuit consisting of an ideal constant voltage source $\mathcal{E}=9,\!6~\text{V}$, two identical diodes, a capacitor with a capacitance $C$ and two identical resistors with a resistance $R$. At the initial moment, the capacitor was not charged and the switch was open. There is no need to estimate errors in the problem.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A0}{Remove the dependence of the ammeter and voltmeter readings on the time after the key is closed.}{0}
+
+\problembox{A1}{Find the resistance of resistors $R$.}{1.50}
+
+\problembox{A2}{Find the capacitance of the capacitor $C$.}{2.50}
+
+\problembox{A3}{Obtain the dependence of the current in the diodes on the voltage across it in the widest possible range. Two table columns are accepted as the answer. You should mark these two columns with an asterisk on your answer sheet.}{4.00}
+
+\problembox{A4}{Plot a graph of the diode current versus voltage.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/79}
+
+\end{document}

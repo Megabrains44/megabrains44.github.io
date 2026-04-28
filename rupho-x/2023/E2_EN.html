@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Clear optics</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Clear optics</h1>
+<p class="camp">X23 (2023) — English translation</p>
+<h2 class="part">Equipment:</h2>
+<div class="figure"><img src="E2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>Incandescent lamp in housing Constant voltage source Two lenses with stands for the optical bench. A set of 9 diaphragms, the diameters in millimeters are indicated on them. Optical bench Masking tape Wooden ruler Tape measure Two tripods with claws Tablet for fixing paper</p>
+<p>Research into human vision and the development of photographic technologies inevitably involve the study of focusing images using converging lenses. In this work, the light source is a spiral inside an incandescent lamp. Let's denote its diameter as $W_A$, height as $H_A$ and the number of turns as $N_A$.</p>
+<div class="figure"><img src="E2_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>Attention! The problem does not require error estimation. Attention! Use a personal lamp to illuminate your work area. Attention! Do not remove the lamp wires from the terminals of the DC voltage source yourself. To power the lamp, use a constant voltage source $U=9.0~\text{В}$. When the lamp is working correctly, only the filament filament glows (if it is not working correctly, the inner surface is covered with a light sediment, and therefore the light bulb “glows” completely). Position the lamp so that the filament filament is vertical.</p>
+<p>Attention! Use a personal lamp to illuminate your work area.</p>
+<p>Attention! Do not remove the lamp wires from the terminals of the DC voltage source yourself.</p>
+<p>To power the lamp, use a constant voltage source $U=9.0~\text{В}$. When the lamp is working correctly, only the filament filament glows (if it is not working correctly, the inner surface is covered with a light sediment, and therefore the light bulb “glows” completely).</p>
+<p>Position the lamp so that the filament filament is vertical.</p>
+<h2 class="part">Part A. Introductory.</h2>
+<p>The notation chosen in this part is valid throughout the subsequent problem. Let us consider an optical scheme consisting of a non-point source $A$, a lens $L$ and a screen $S$. In the figure, $A'$ indicates the image of the source $A$. In the simplest camera, instead of a screen $S$, a matrix of photosensitive elements, for example, photodiodes, is used.</p>
+<div class="figure"><img src="E2_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>We denote by $L_F$ the lens with a larger focal length, and the focal length itself by $F$. A lens with a shorter focal length is correspondingly $L_f$, its focal length is $f$.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Measure the focal lengths $f$ and $F$ by taking the image $A'$ on the screen. Use $H \approx 1.20~\text{м}$ to measure. On the answer sheet, indicate with a cross the correspondence between the color of the lens and the names $L_f$ and $L_F$.</div><span class="pb-pts">0.20</span></div>
+<p>With sufficiently large $H$ on the screen, it is possible to focus the image in two positions: close focusing - the position with a smaller $a$ and far focusing - a position with larger $a$.</p>
+<h2 class="part">Part B: Near Focus Inaccuracies</h2>
+<p>The method for determining the focal length of a lens, discussed in paragraph $\textbf{A1}$, in any case, has a significant drawback: there is no formal criterion for a “focused image”. In this part, we will complement the method and rid it of this shortcoming by considering the physics of inaccurate focusing and the concept of sharpness. This part uses only lens $L_F$. Distance $H \approx 1.20~\text{м}$. Let $a_0$ denote the distance $a$, corresponding to close focusing. By changing the distance $a$ in the vicinity of $a_0$, you can get images of varying degrees of blur on the screen (examples of a clear and very fuzzy image are shown in the photographs below). Also, the blurring of the image is affected by the shape and diameter of the diaphragm - a screen with a hole that covers part of the lens.</p>
+<p>Clear Image</p>
+<div class="figure"><img src="E2_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<p>Fuzzy image</p>
+<div class="figure"><img src="E2_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Align the lens so that $a = a_0 + F/2$. In further paragraphs we will study the characteristic size of such images, so choose which linear size - height $h$ or width $w$ of the fuzzy image you will measure in subsequent paragraphs. Justify your choice and mark it with a cross on your answer sheet. This size will be designated $p$.</div><span class="pb-pts">0.20</span></div>
+<p>First of all, let's study the effect of aperture on blur.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Cover the part of the lens facing the screen with an aperture of diameter $D$. For all apertures, measure the image size $p$.</div><span class="pb-pts">0.45</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Plot the dependence $p(D)$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">With the same arrangement of objects, remove the aperture from the lens and measure the size $p_0$ of the image on the screen. Determine the diameter $D_0$ of the open part of the lens based on $p_0$, compare the result with direct measurements.</div><span class="pb-pts">0.10</span></div>
+<p>Now let's look at how focusing error affects blur.</p>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">With $11$ different $a$ in the range $[a_0-F/3,a_0+F/2]$, measure the size $p$ of the image on the screen.</div><span class="pb-pts">0.55</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Construct a linearized graph of $p$ versus $a$. From the graph, find the focal length $F$ and compare it with the one obtained earlier. Consider the filament to be $0.10~\text{cm} \times 0.30~\text{cm}$ in size.</div><span class="pb-pts">1.30</span></div>
+<p>Now let's study how the shape of even an out-of-focus image is related to the shape of the source.</p>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Position the lens so that $a = a_0 + 2F/5$. Draw the border of the image on graph paper. Label the center of the image, the horizontal axis $x_S$ and the vertical axis $y_S$.</div><span class="pb-pts">0.30</span></div>
+<p>The boundary of a fuzzy lamp image cannot be accurately described without considering the distribution of light intensity across the screen, so first we consider two simplified models of a light source: In the first model, the source $A_1$ is a point source and is located in the middle of the incandescent lamp spiral. The border of the image created by it will be denoted by $\Gamma_1$. In the second model, the source $A_2$ is the boundary of the spiral section, that is, the source is a rectangle with dimensions $W_A \times H_A$. Consider that this source shines equally brightly along its entire perimeter. We denote the border of the image from it $\Gamma_2$. Our task is to “combine” these models. Let the “combined” source create the image boundary $\Gamma$. Each specific point $\Gamma$ corresponds to a ray $B'$ emerging from the center of the image and passing through it. We will assume that the boundary point $\Gamma$ is located in the middle between the points $\Gamma_1 \cap B'$ and $\Gamma_2 \cap B'$.</p>
+<p>Our task is to “combine” these models. Let the “combined” source create the image boundary $\Gamma$. Each specific point $\Gamma$ corresponds to a ray $B'$ emerging from the center of the image and passing through it. We will assume that the boundary point $\Gamma$ is located in the middle between the points $\Gamma_1 \cap B'$ and $\Gamma_2 \cap B'$.</p>
+<p>Sources $A_1$ and $A_2$.</p>
+<div class="figure"><img src="E2_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Calculate the position of the boundary $\Gamma$ of the image relative to its center at $11$ points lying in the area $x_S > 0$, $y_S > 0$. Place these dots on the same sheet of graph paper where you sketched the image.</div><span class="pb-pts">0.80</span></div>
+<h2 class="part">Part C. Chromatic aberration.</h2>
+<p>This part uses both lenses. Distance $H \approx 1.20~\text{м}$. By changing $a$ in the vicinity of $a_0$ in part $\textbf{B}$ you probably noticed that the image border has a different color at $a < a_0$ and $a > a_0$. This is because different colors refract slightly differently in the glass the lens is made from, and this can be described in terms of different refractive indices for different colored light: $n_\text{b}$ for blue and $n_\text{r}$ for red.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">On your answer sheets, place a cross next to the true statements.</div><span class="pb-pts">0.06</span></div>
+<p>$L_F$ Border blue at $a < a_0$, red at $a > a_0$ $L_F$ Border red at $a < a_0$, blue at $a > a_0$ $L_f$ Border blue at $a < a_0$, red at $a > a_0$ $L_f$ Border red at $a < a_0$, blue at $a > a_0$</p>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">On your answer sheets, mark the cross next to the true statements about $n_\text{b}$ and $n_\text{r}$. Justify your choice.</div><span class="pb-pts">0.50</span></div>
+<p>$L_F$ $n_\text{b} > n_\text{r}$ $L_F$ $n_\text{r} > n_\text{b}$ $L_f$ $n_\text{b} > n_\text{r}$ $L_f$ $n_\text{r} > n_\text{b}$</p>
+<h2 class="part">Part D. Magnification.</h2>
+<p>In this part of the problem, only the lens $L_F$ is used.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">With $7$ different $H$, measure the image size $p$ under close focus conditions.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">Linearize the dependence of $p$ on $H$ and plot it. Calculate the source parameters $W_A$ and $H_A$, making additional measurements if necessary.</div><span class="pb-pts">0.55</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Count the number of $N_A$ spirals in the source spiral.</div><span class="pb-pts">0.10</span></div>
+<h2 class="part">Part E. Kepler Telescope.</h2>
+<p>This part uses both lenses, and $H\approx1.20~\text{м}$. Using a two-lens system, obtain a clear image of source $A$ on screen $S$.</p>
+<div class="figure"><img src="E2_EN_assets/fig7.jpg" alt="" /><div class="caption">Fig. 7.</div></div>
+<div class="problem-box"><span class="pb-id">E1</span><div class="pb-text">For various fixed values ​​of $a$, select distances $l$ that correspond to a clear image. Measure the height of the clear image $h$. If several different values ​​of $l$ produce several clear images, then select the image with the larger $h$. The dependence of $h$ on $a$ has a characteristic point, describe it and measure its surroundings especially carefully. Take at least 15 measurements in total.</div><span class="pb-pts">0.85</span></div>
+<div class="problem-box"><span class="pb-id">E2</span><div class="pb-text">Obtain a theoretical formula for the dependence of $h$ on $a$. Construct a linearized graph and show that the theoretical formula is valid.</div><span class="pb-pts">1.74</span></div>
+<p>Due to the fact that any real lens is not thin, the focal length for rays traveling far from the optical axis differs from the focal length for paraxial rays. This effect (along with chromatic aberration) is noticeable in the Kepler telescope - a system of two converging lenses separated from each other by a distance close to the sum of their focal lengths.</p>
+<div class="figure"><img src="E2_EN_assets/fig8.jpg" alt="" /><div class="caption">Fig. 8.</div></div>
+<p>Place two lenses at a distance $l \approx f+F$ next to each other at one of the edges of the table so that you can through them observe objects located on the other edge - there, fix the ruler in a tripod and position the light source so that it illuminates the ruler $B$, but does not shine into the lenses. The magnification of a telescope is the ratio of the apparent size of an object to the actual size of the object.</p>
+<div class="problem-box"><span class="pb-id">E3</span><div class="pb-text">Adjust the Kepler telescope so that the distance between the lens $L_f$ and the ruler is $H\approx1.20~\text{м}$, and through the telescope you can clearly see the magnified image of the ruler. Make the necessary measurements and calculate the experimental magnification value $\Gamma_K$ of the Kepler telescope in such a system.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">E4</span><div class="pb-text">Observe the distortion of the ruler image at the edges of the telescope's field of view. Draw an image of the ruler as seen through the Kepler telescope. Show both chromatic and spherical aberrations in the figure.</div><span class="pb-pts">0.40</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3155">https://pho.rs/p/3155</a></p>
+</body>
+</html>

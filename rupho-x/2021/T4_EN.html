@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Double dumbbell</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Double dumbbell</h1>
+<p class="camp">X21 (2021) — English translation</p>
+<p>On a smooth horizontal surface lies a “double dumbbell,” a system consisting of two light rods of length $L$ connected by a mass hinge $2m$. Loads of mass $m$ are attached to the free ends of the rods. In this problem, the motion of this system is studied under different conditions.</p>
+<h2 class="part">Part A. Movement on the surface (2.0 points)</h2>
+<p>At the initial moment, the weights and the hinge lie on the same straight line. At some point, one of the rods begins to rotate with a constant angular velocity $\omega$, and the load at its end is motionless all the time. In this part of the problem, it is necessary to find the angular velocity of rotation of the second rod at different moments of movement. Consider it known that angular velocity is a vector quantity directed perpendicular to the plane of motion (for the first rod it is codirectional with the $OZ$ axis and is equal to $\vec\omega$). Also consider known the law of addition of angular velocities $$\vec\omega=\vec\omega_{отн}+\vec\omega_{пер} $$ где $\vec\omega_{ln}$ - угловая скорость вращающейся системы отсчёта, $\vec\omega_{rel}$ - angular velocity motion relative to a rotating reference frame.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the angular velocity vector of the second rod at the initial moment of time. Express your answer in terms of $\vec\omega$.</div><span class="pb-pts">0.30</span></div>
+<p>Let's move to a rotating reference system associated with the first rod. In a rotating reference frame, centrifugal and Coriolis forces act on the load of the second rod in the plane of motion, in addition to its tension force. The influence of the Coriolis force in this problem does not need to be taken into account, since it is perpendicular to the speed of the load and does not change its kinetic energy. Let us recall the expression for the centrifugal force $$\vec{F_{цб}}=m{\omega}^2\vec{r} $$ где $\vec{r}$ - the radius vector of the load in a rotating reference system, drawn from the origin.</p>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">At the initial moment of time, find the angular velocity vector $\vec\omega_{отн_0}$ of the second rod in the reference system associated with the first rod. Express your answer using $\vec\omega$</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the potential energy of the load in the field of centrifugal force at a distance $r$ from the axis of rotation accurate to an arbitrary constant. Express your answer using $m$, $\omega$, $r$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Let the second rod rotate at an angle $\varphi$ relative to the first. Find its angular velocity $\omega_{отн}$ in this position. Express your answer using $\omega$ and $\varphi$.</div><span class="pb-pts">0.50</span></div>
+<p>Now you have to calculate the speed of the load in a fixed frame of reference. Use the law of addition of velocities for rotating frames of reference.</p>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Find the speed of the load in a fixed frame of reference. Express your answer in terms of $\omega$, $L$, $\varphi$.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part B. Movement in the vertical plane (4.2 points)</h2>
+<p>In this part of the problem, at the initial moment of time, the weights and the hinge are on the same straight line and the hinge is imparted a speed $v_0$, directed vertically upward. You are invited to investigate the further movement of such a system. Let at some moment of time the rods form an angle $\varphi$ with the horizon. The $OX$ axis is directed horizontally, and the $OY$ axis is directed vertically upward.</p>
+<div class="figure"><img src="T4_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Let us denote the tension force of the rods as $T$ $$ $$ Найдите ускорения грузов $a_{1l}$,$a_{1p}$ в проекции на ось $OX$ и ускорение шарнира $a_2$ в проекции на ось $OY$.Ответы выразите через $m$.$g$.$T$ и $\varphi$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">In the indicated position, find the speed of the weights $v_1$ and the speed of the hinge $v_2$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Write down the equation of motion of the hinge relative to any of the masses, connecting $v_1$, $v_2$, $a_1$, $a_2$, $L$ and $\varphi$</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Find the tension force $T$ from the equation obtained in step $B3$. Express the answer in terms of $m,{v_0},g,L,{\varphi}$</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Let us assume that at some moment the weights are lifted off the surface. $$ $$ Найдите значение угла $\varphi_{neg}$ at this point in time.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Find the minimum value $v_0$ at which the weights will come off the surface and the value of the angle $\varphi' $ at the moment of lifting</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part C. Cargoes in light elastic shells (3.8 points)</h2>
+<p>This part of the problem is an actual continuation of the previous one. The difference is that now the loads are located in the centers of light elastic shells of radius $R<{L}$. It is assumed that the speed $v_0$ of the hinge is sufficient for the weights to come off the surface in part $B$. Let us denote by ${\varphi_0}$ the angle of the rods with the horizon at the moment of contact shells.</p>
+<div class="figure"><img src="T4_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">At what values ​​of $R$ does the collision of shells occur before their separation from the surface under the action of the rods? Express your answer using $L$,$\varphi_{отр}$,</div><span class="pb-pts">0.20</span></div>
+<p>In the future, assume that the condition on $R$ obtained in the previous paragraph is satisfied.</p>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Let immediately after the collision the projections of the speed of the load on the axes $OX$ and $OY$ be equal to $v_{1x}$ and $v_{1y}$, respectively. $$ $$ Выразите проекцию скорости шарнира на вертикальную ось $v_{2y}$ через $v_{1x}$,$v_{1y}$ и ${\varphi_0}$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find the velocity of the hinge $v_2$ immediately after the impact. Express your answer using ${v_0},g,{L},R$</div><span class="pb-pts">1.30</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Find the modulus of the load velocities $v_1$ immediately after the collision. Express the answer in terms of ${v_0},g,{L},R$</div><span class="pb-pts">1.30</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/47">https://pho.rs/p/47</a></p>
+</body>
+</html>

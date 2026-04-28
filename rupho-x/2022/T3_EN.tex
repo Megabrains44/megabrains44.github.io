@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Spherical aberrations}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Optical aberration is an error or image error in an optical system caused by the deviation of the beam from the direction in which it would go in an ideal optical system. Aberrations can be characterized based on both geometric and wave optics. Depending on various parameters (coordinates of rays and angles of incidence), an optical system can exhibit various aberrations (and their compositions): spherical aberration, coma, astigmatism, etc. In this problem, within the framework of geometric optics, only the spherical aberration of monochromatic light is studied. Only lenses with spherical surfaces are considered. Spherical aberration occurs due to mismatched focal points for light rays passing at different distances from the optical axis.
+
+Please note that in Part C the task is to prove some relations. If you fail, you can still use the given relationships to solve parts D and E of the problem. In the problem you will have to do a lot of calculations. For convenience, when describing aberrations, some conventions on the names of quantities are introduced. These agreements must be adhered to in your decision.
+
+- All quantities that relate to what happens AFTER the refractive surface are hatched, and those that BEFORE the refractive surface are unshaded. - The (back) focus $F'$ of a lens is the point of convergence of a parallel paraxial beam of rays incident on a collecting lens. For a diverging lens, the concept is introduced similarly. The front focus $F$ of the lens will not interest us in this problem. - The focal plane is the plane perpendicular to the optical axis, passing through the focus of the lens. - Longitudinal spherical aberration $\delta s'$ is the distance between point $F'$ and the point of intersection with the optical axis of the refracted extreme beam of the beam. - The magnitude of spherical aberration is considered positive if the outer rays converge further from the lens than the focus. The magnitude of spherical aberration is considered negative if the outer rays converge closer to the lens than the focus. Answers must always be given taking into account the sign. - Transverse spherical aberration $\delta g'$ is the radius of the scattering circle observed in the focal plane. - Various points in the drawing (on the lens, ray, intersection) are indicated by capital letters. When specifying a point, select it (thick circle). - Different distances between points are indicated by lowercase letters. If the solution requires you to enter some distance value, in addition to indicating it in the figure, write it explicitly next to the figure, for example, $OA = a$. - The distance from the optical axis to an arbitrary ray under consideration is indicated by the letter $h$. The full width of the symmetrical beam is $2H$. - The distances along the optical axis from the refractive surface to the points of intersection of the rays with the optical axis are designated $s$ (for rays before refraction) and $s'$ (after refraction). And the points themselves are $S$ and $S'$, respectively. For $s$ and $s'$ the choice of sign is important. Zero is considered to be the point of intersection of the refractive surface and the optical axis.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The problem considers the following correction to paraxial optics, i.e. it will be possible to assume that $h$ are small compared to the radii of curvature of the surfaces. But because Since the problem examines precisely the small effects of aberrations, then when obtaining answers, expanding in a Taylor series, it is necessary to retain the corresponding terms.
+
+\section*{Part A. Direct construction of aberrations (0.75 points)}
+
+In this part of the problem, it is necessary to accurately (quantitatively) construct the course of the requested rays in the lenses in the answer sheet. For rough construction or practice, use additional sheets. The answer sheet should contain the final construction. It is highly desirable without corrections. The thickness of the rays in the answer sheet should not exceed 1 mm.
+
+\problembox{A1}{Construct the exact path of rays in a plano-convex and plano-concave lens. The radii of curvature of surfaces is $R=5~cm$, the refractive index of glass is $n=1.5$. Indicate the point $F'$ of convergence (divergence) of the parallel paraxial beam.}{0.45}
+
+\problembox{A2}{Measure the magnitude of the maximum spherical aberration $\delta s'$ for all constructions. Record your results (in mm) on your answer sheet.}{0.30}
+
+\section*{Part B. Calculation of aberrations “head-on” (3.75 points)}
+
+Let's consider the simplest optical system for which the magnitude of spherical aberration can be easily calculated: a plano-convex thin lens. A beam of light parallel to the optical axis falls on the flat side of the lens. For a “thin lens,” its thickness can be neglected. We can also assume that points $O$ and $H'$ (Fig. 1) are located in the center of the lens. The radius of curvature of the surface of a convex surface is $R$ and the refractive index of the lens is $n$.
+
+\problembox{B1}{What is the focal length $f'$ for a thin plano-convex lens?}{0.25}
+
+\problembox{B2}{For a given lens, find the dependence of the longitudinal spherical aberration $\delta s'$ on the half-width of the beam $h$. Express your answer using $R, n$ and $h$. Write an approximate expression for $\delta s'(h)$ by expanding the answer into a Taylor series of powers $h$ to $h^2$. Construct a schematic graph of the resulting relationship.}{1.50}
+
+\problembox{B3}{Find the value of transverse spherical aberration $\delta g'$. Express your answer in terms of $\delta s', f'$ and $h$.}{0.50}
+
+Let us now consider what the intensity distribution looks like in the scattering circle observed in the focal plane. Let a wide beam of light fall on the flat side of a plane-convex lens.
+
+\problembox{B4}{Let us divide the scattering circle into rings of radii $0.2\delta g', 0.4\delta g', 0.6\delta g', 0.8\delta g'$. From what fraction (in \%) of the transverse area of the incident beam are the rays collected into the central circle (radius $0.2\delta g'$)? From what fraction (in \%) of the transverse area of the incident beam are the rays collected into subsequent rings (between $0.2\delta g'$ and $0.4\delta g'$ and so on, respectively)? What fraction of the area of the scattering circle is occupied by each ring? Tabulate all calculations on your answer sheet. Construct a schematic graph of light intensity versus radial coordinate in the scattering circle.}{1.50}
+
+\section*{Part C. Theory of aberrations (1 point)}
+
+First, let's consider one spherical surface on which refraction will occur (remember that a lens is two refractive surfaces). Because the object for this refractive surface can be an image created by another refractive surface, then in general both the object and the image can have longitudinal aberration ($\delta s$ and $\delta s'$, respectively). The original object, the real object, of course, does not possess an aberration.
+
+Your task will be to show the validity of the following relation (up to higher orders $h$):
+$$ \cfrac{n'\delta s'}{s'^2}-\cfrac{n\delta s}{s^2}=-\cfrac{h^2}{2}\,Q^2(s)\left(\cfrac{1}{n's'}-\cfrac{1}{ns}\right), $$
+where $Q(s)=n\left(\cfrac{1}{r}-\cfrac{1}{s}\right)=n'\left(\cfrac{1}{r}-\cfrac{1}{s'}\right)=\mathrm{inv}.$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+First, you need to obtain some invariant relation to the geometric parameters. The word “invariant” in this case means preserving the type of dependence for the parameters before and after the refraction of the beam.
+
+\problembox{C1}{Using the sine theorem for triangles $MSC$ and $MS'C$, as well as Snell’s law of refraction, obtain an invariant of the form $n\cdot f(r, s, p)=n'\cdot f(r, s', p')=\mathrm{inv}$.}{0.30}
+
+\problembox{C2}{Using the cosine theorem in triangle $MSC$, go invariantly from magnitude $p$ to angle $\theta$. Assuming the angle $\theta$ to be small, expand the factors in the form of roots in a Taylor series up to the first term with a non-zero degree $\theta$. Divide the resulting approximate value by “$-r$” to obtain the reduced value of the invariant.}{0.10}
+
+Everything described above simply refers to the phenomenon of refraction. To move on to the magnitudes of aberrations, you need a certain point from which to count them. As in part B, for such a point we choose the point of convergence (origin) of paraxial rays (i.e. for which $\theta =0$). The distances for these points should be designated $s_0$ and $s_0'$. Accordingly, for non-paraxial rays it will be possible to take into account the aberration values: $s=s_0+\delta s$ and $s'=s_0'+\delta s'$.
+
+\problembox{C3}{Having written the invariant from point C2 for paraxial rays before and after refraction, show the invariance of the quantity $Q(s_0)$.}{0.10}
+
+\problembox{C4}{The left-hand side of the invariant obtained in C2 is a function of $f$ of $s$ and $\theta$. Find the value of $f(s,\theta)-f(s_0,\theta)$. Consider $\delta s$ and $\theta$ to be small parameters.}{0.10}
+
+\problembox{C5}{Using the results of the previous paragraphs, expressing the small angle $\theta$ in terms of the radius of curvature of the surface and the small height $h$, obtain the desired relationship:
+$$ \cfrac{n'\delta s'}{s_0'^2}-\cfrac{n\delta s}{s_0^2}=-\cfrac{h^2}{2}\,Q^2(s_0)\left(\cfrac{1}{n's_0'}-\cfrac{1}{ns_0}\right). $$}{0.20}
+
+As a rule, optical systems consist of many spherical surfaces (for example, a lens - 2, a primitive microscope (two lenses) - 4, etc.). The relationship proved above can be applied sequentially for each refractive spherical surface, ultimately relating the aberration of the object and the final image, without calculating intermediate aberrations.
+
+Let's consider several refractive surfaces (there are two of them in Figure 3). Let us introduce small angles $\alpha _i=\cfrac{h_i}{s_i}$ and $\alpha_i'=\cfrac{h_i}{s_i'}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C6}{Show that the aberrations of the object and the image after the $k$th refractive surface are related by the relation:
+$$ n_k'\delta s_k'\alpha_k'^2 - n_1\delta s_1\alpha_1^2=-\cfrac{1}{2}\sum_{i=1}^{k} h_i^4 Q_i^2(s_i)\left(\cfrac{1}{n_i's_i'}-\cfrac{1}{n_i s_i}\right). $$
+In other words, to obtain the total aberration, sum over all surfaces the right-hand side of this relation multiplied by $h_i^2$.}{0.20}
+
+\section*{Part D. Optimal converging lens (3.5 points)}
+
+The results obtained in part C can be used here and further without conclusion. In this part of the problem, it is necessary to calculate the parameters of a collecting lens for which the spherical aberration for an incident parallel beam of light would be minimized. It is required to make a thin collecting lens with a focal length $f'=10~cm$ from glass with a refractive index $n=1.5$. Because the lens must be considered thin, then for two refractive surfaces we can assume that $h_1=h_2=h$. It is clear that the system has one optimization parameter - the radius of curvature of one of the surfaces, because the second radius is uniquely determined by the refractive index and focal length.
+
+\problembox{D1}{Find the spherical aberration $\delta s_2'$ of a thin converging lens for an incident parallel beam of light. Apply the result of step C6 for two refractive surfaces and the thin lens formula, leaving the dependence only on the radius of curvature of the first surface (where the original beam of light falls). Express your answer in terms of the refractive index $n$ and the reciprocals $\rho=1/r$ and $\varphi=1/f'$.}{2.00}
+
+\problembox{D2}{Find the value of $\rho^*$ at which the spherical aberration $\delta s_2'$ is minimal. Express your answer using $n$ and $\varphi$.}{0.50}
+
+\problembox{D3}{Calculate the radii of curvature of the lens surfaces. Draw (qualitatively) your calculated lens on the answer sheet.}{0.50}
+
+Lenses with a given focal length can be manufactured with different radii of curvature of surfaces.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{D4}{Schematically depict a graph of the modulus of longitudinal spherical aberration $\delta s_2'$ for the lenses shown in Figure 4.}{0.50}
+
+\section*{Part E. Correcting aberrations by defocusing (3 points)}
+
+By using defocusing (shifting the observation plane from the focal plane to a plane closer/farther from the lens), you can reduce the circle of scattering observed on the screen. Let a wide parallel beam of light fall on the lens, and the observed longitudinal spherical aberration is $\delta s'$.
+
+\problembox{E1}{In what direction and at what distance should the observation plane be shifted from the focal plane so that the scattering circle is of minimum size?}{1.50}
+
+\problembox{E2}{Draw a schematic graph of light intensity versus radial coordinate in the minimum scattering circle. To do this, follow steps similar to point B4.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/505}
+
+\end{document}

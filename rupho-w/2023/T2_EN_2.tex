@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Rays of light in the atmosphere}}
+\author{\normalsize W23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In ordinary life, it seems to us that the rays of light in the atmosphere surrounding us move in a straight line. However, this is not the case, and the effects of ray bending are invisible only because the refractive index of air is practically indistinguishable from unity. On large scales and when certain atmospheric phenomena occur, it can no longer be neglected. In the Earth's atmosphere, an example of such phenomena is a mirage, and in the atmospheres of other planets - for example, Venus - there is an almost unlimited distance to the horizon. In this problem we will look at each of these phenomena in detail.
+
+\section*{Part A. Mirages (5.8 points).}
+
+Mirages occur when there is a large temperature difference between the earth's surface and the atmosphere. One of their many examples is the Kuril Islands, mirages of which can be observed in the Kunashir Strait in Japan in the spring due to the cooling of the air over the sea. The atmosphere can be considered an ideal gas, consisting of identical molecules of mass $m$. It is known that for most gases, including gas in the atmosphere, the following formula is applicable for the dependence of the refractive index $n$ of atmospheric air: \[n^2-1=\alpha N,\] where $N$ is the concentration of molecules, and $\alpha$ is a coefficient depending on the nature of the gas. When solving the problem, assume that the surface of the water is horizontal. The temperature of the atmosphere $T$ increases with increasing altitude $h$ above sea level, and the refractive index of the air also changes. Neglect the effect of gravity, assuming atmospheric pressure to be $p_0=1~\text{atm}$ regardless of altitude. The refractive index of the atmosphere under normal conditions ($T_0=273~\text{K}$, $p_0=1~\text{atm}$) is $n=1.00028$. Consider that temperature and refractive index depend only on $h$. Consider Snell's law for rays emitted at an angle of $\theta_S$ from the surface of the earth. Let us divide the atmosphere into thin layers with a thickness of $\Delta h$, as shown in Figure 1. We will assume that the refractive index of the atmosphere at an altitude from $\Delta h(l-1)$ to $\Delta hl$ is constant and equal to $n_l$, and the angle between the light ray and the horizon at this height is $\theta_l$, where $l=1,2,3,\ldots$. The refractive index of the atmosphere at the surface is $n_1=n_S$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Write down Snell's law for the point $P$ located at height $l\Delta h$. After passing to the limit $\Delta h\to0$, $\Delta hl\to h$, $\theta_l\to\theta(h)$, $n_l\to n(h)$, you obtain the expression for $\theta(h)$.}{0.40}
+
+Assume that the temperature $T(h)$ increases linearly with $h$ in the range $0\leq h\leq H$ and is constant at $h > H$: \[T(h)=\begin{cases}T_S+(T_\mathrm H-T_\mathrm S)\frac hH\&0\leq h\leq H\\T_\mathrm H\&H < h\end{cases},\]where $T_\mathrm S=T(0) < T_\mathrm H=T(H)$.
+
+Considering that $\frac{T_H-T_S}{T_S}\ll1$, the dependence of the concentration $N(h)$ at height $h$ ($0 < h < H$) can also be considered linear with good accuracy, i.e.: \[\frac{N(h)}{N_\mathrm S}=1-\frac{N_\mathrm S-N_\mathrm H}{N_\mathrm S}\frac hH,\] where $N_\mathrm S=N(0)$, $N_\mathrm H=N(H)$.
+
+\problembox{A2}{Using this result, find how the refractive index $n(h)$ of the atmosphere depends on the height. Express your answer in terms of $n_\mathrm S=n(0)$ and $n_\mathrm H=n(H)$.}{0.50}
+
+Let us consider the trajectory of a ray emitted at an angle $\theta_\mathrm S$ to the horizon. We will assume that upon reaching the top point of the trajectory $h_\mathrm m(\le H)$ the beam begins to move back down. Let us direct the axis $x$ horizontally in the plane of beam propagation, then its trajectory $h(x)$ must satisfy the differential equation: \[\frac{\mathrm dh}{\mathrm dx}=\operatorname{tg}\theta=\pm\sqrt{\frac1{\cos^2\theta}-1},\], with the sign $+$ corresponding to the rise, and $-$ to the descent of the beam.
+
+\problembox{A3}{Express the refractive index $n_\mathrm m\equiv n(h_\mathrm m)$ at the top point of the ray path in terms of $n_\mathrm S$ and $\theta_\mathrm S$.}{0.50}
+
+Taking into account the above, the equation for determining the ray trajectory can be written as \[\frac{\mathrm dh}{\mathrm dx}=\sqrt{a\left(1-\frac hb\right)},\quad a=a_\mathrm m\frac{h_\mathrm m}H.\]
+
+\problembox{A4}{Express $a_\mathrm m$ and $b$ in terms of $h_\mathrm m$, $n_\mathrm H$, $n_\mathrm S$ and $n_\mathrm m$.}{1.00}
+
+It is known that the solution to this equation for a ray passing through the origin $(x,h)=(0,0)$ is a parabola \[h=cx+dx^2.\]
+
+\problembox{A5}{Express the coefficients $c$ and $d$ in terms of $a$ and $b$.}{0.50}
+
+Let the numerical values $T_\mathrm S=275~\text{K}$, $T_\mathrm H=290~\text{K}$, $H=20~\text{m}$ be given. The observer is on the Japanese coast ($h=0$) and observes the Kuril Islands above the surface of the water. Let the distance to the islands be $L$. The observer sees them from the same angle at which he would see the islands if they were at the same distance at a height of $h_\mathrm g$ above the surface of the water.
+
+\problembox{A6}{Express $h_\mathrm g$ as a function of the distance $L$ from the observer to the island. Is the farthest observed island visible above or below the others?}{1.60}
+
+\problembox{A7}{Express in terms of $n_S$, $n_H$ and $H$ the maximum distance $L_\max$ to the island that the observer can still see. What is the angle $\theta_{S\max}$ equal to?}{0.80}
+
+\problembox{A8}{Calculate $L_{\max}$ and $\theta_\mathrm S$ to two significant figures.}{0.50}
+
+\section*{Part B. Curvature of light rays (4.2 points).}
+
+In part $\bf A$ the refractive index of the atmosphere was calculated without taking into account the influence of gravity and taking into account temperature changes only at the surface of the earth. As the height above the surface increases, the temperature, of course, decreases, but it is gravity that has the greatest influence on the concentration of the atmosphere. Therefore, in the future, for simplicity, we will assume that the atmospheric temperature $T$ is constant everywhere and consider the change in the refractive index only due to gravity. The acceleration due to gravity is $g$. Let us consider the balance of forces acting on a section of the atmosphere in the region of heights from $h$ to $h+\mathrm dh$, as shown in Figure 2. Let us denote the concentration of air molecules as $N(h)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Find the dependence $N(h)$ if the concentration at the earth's surface is $N(0)=N_0$.}{0.80}
+
+As in part $\bf A$, we will assume that the refractive index at height $h$ is equal to $n(h)$, and the angle with the horizon at which the beam moves at height $h$ will be denoted as $\theta(h)$. The curvature of the earth's surface can be neglected. The trajectory of the beam in the atmosphere is a curve, which at each point can be approximated by a section of a circle of radius $R$. This value $R$ is called the radius of curvature of the beam path at this point (see Figure 3).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B2}{Express $\frac1R$ in terms of $\theta(h)$ and $\frac{\mathrm d\theta}{\mathrm dh}$.}{1.00}
+
+\problembox{B3}{Convert the resulting $\bf B2$ expression using Snell's Law from $\bf A1$ so that it contains only $n$, $n_S$ and $\theta_S$.}{0.50}
+
+\problembox{B4}{Find what the radius of curvature $R$ of the trajectory of a ray propagating at a small angle to the horizon is equal to near the earth’s surface. Express your answer in terms of $m$, $g$, $n_\mathrm S$, $T$ and $k_\mathrm B$.}{0.90}
+
+Let us now take into account the curvature of the Earth. Its radius is $R_\mathrm E=6.4\cdot10^3~\text{k}$. The remaining numerical values are $m=29\cdot1.66\cdot10^{-27}~\text{kg}$, $T=300~\text{K}$, $k_\mathrm B=1.38\cdot10^{-23}~\frac{\text{J}}{\text{K}}$, $g=9.8~\frac{\text{m}}{\text{s}^2}$.
+
+\problembox{B5}{Find numerically the radius of curvature of the trajectory of the ray $R_E^{lr}$ emanating horizontally from a certain point on the surface of the earth. Does the height of the beam above the surface increase in the future?}{0.50}
+
+The atmosphere of Venus consists of $\mathrm{CO_2}$, which can be considered ideal and for which all the results obtained above can be applied. The atmospheric pressure on the surface of Venus is $p_\mathrm V=93~\text{atm}$ ($1~\text{atm}=1.0\cdot10^5~\text{Pa}$), and the temperature is $T_\mathrm V=740~\text{K}$. The radius of Venus is $R_\mathrm V=6.0\cdot10^3~\text{k}$, the acceleration of gravity on its surface is $g_\mathrm V=8.9~\frac{\text{m}}{\text{s}^2}$, the mass of the molecule is $\mathrm{CO_2}$ $m_\mathrm C=44\cdot1.66\cdot10^{-27}~\text{kg}$. For the refractive index on Venus, the equation is valid: \[n^2=1+\alpha_VN\] with a coefficient $\alpha_\mathrm V=4\pi a_\mathrm C^3$, where $a_\mathrm C=1.4\cdot10^{-10}~\text{m}$ is the effective size of the molecule $\mathrm{CO_2}$.
+
+\problembox{B6}{Find numerically the radius of curvature of the trajectory of the ray $R_V^{lr}$ emanating horizontally from some point directly above the surface of the planet. Does the height of the beam above the surface increase in the future?}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2901}
+
+\end{document}

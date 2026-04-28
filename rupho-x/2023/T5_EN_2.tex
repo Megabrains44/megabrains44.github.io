@@ -1,0 +1,114 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Three phase current}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Three-phase current circuits (3 points)}
+
+Along with conventional alternating current, which is a single sinusoidal oscillation, technology often uses the so-called multiphase (and in particular three-phase) current. Such a current is a superposition of several oscillations of the same frequency, shifted relative to each other in phase. The use of three-phase current allows energy to be transmitted over long distances with less losses. In addition, three-phase current is more convenient to use to power electric motors. By combining phase-shifted oscillations with each other, it is possible to achieve constant power on a load (for example, on a motor or heating device).
+
+A three-phase current generator can be modeled as three alternating current generators of the same frequency, the voltages of which are shifted relative to each other in phase by a third of a period. The wires connected to the terminals of the generators ($a$, $b$, $c$) are called linear, and the wire connected to the center of the star ($O$) is called zero (or neutral). The voltage between the two terminals of the generators to which the linear wires are connected is called linear. The voltages between the center of the star and the three terminals are called phase voltages; they are equal to
+$$\mathcal{E}_a = \mathcal{E}_0 \cos(\omega t),\quad
+\mathcal{E}_b = \mathcal{E}_0 \cos\!\left(\omega t - \frac{2\pi}{3}\right),\quad
+\mathcal{E}_c = \mathcal{E}_0 \cos\!\left(\omega t - \frac{4\pi}{3}\right).$$
+As a load for the generator, use three elements $Z_a$, $Z_b$, $Z_c$ connected in a star configuration. They are connected to the generator by wires, each of resistance $r$. The internal resistance of generators does not need to be taken into account.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{The line voltage between terminals $a$ and $b$ can be represented as $\mathcal{E}_{ab} = \mathcal{E'_0}  \cos \left(\omega t - \Delta \varphi \right)$, $\mathcal{E'_0} > 0$. Find $\mathcal{E'_0}$ and $ \Delta \varphi$. Express your answer using $\mathcal{E}_0$.}{0.60}
+
+The resistance of each of the connecting wires connecting the generator and the load is $r =5~\text{kOhm}$, the voltage amplitude of each of the generators is $\mathcal{E}_0 = 310~\text{V}$, and the voltage frequency is $f = 50~\text{Hz}$.
+
+\problembox{A2}{Let each of the load elements ($Z_a$, $Z_b$, $Z_c$) be a resistor $R = 9~\text{kOhm}$ and a capacitor $C= 2 \cdot 10^{-7}~\text{}$ connected in series.   Find the current amplitudes through the line wire $I_a$ and the neutral wire $I_0$ (formula and numerical value).}{1.00}
+
+\problembox{A3}{Find the efficiency of the circuit from point $\mathrm{A}2$$\eta$ (formula and numerical value). Consider the efficiency factor to be the ratio of the average power released at the load to the average power released in the entire circuit.}{0.40}
+
+\problembox{A4}{Now let the load be asymmetrical: elements $Z_b$ and $Z_c$ are resistors with resistance $R$, and element $Z_a$ is a capacitor with capacitance $_1 = 10^{-9}~\text{}$. Find the numerical value of the efficiency of circuit $\eta_1$ in this case. It is not necessary to obtain an analytical expression for $\eta_1$. Use the numerical data from point $A2$.}{1.00}
+
+\section*{Part B: Induction Motor (6 points)}
+
+In this part we will study one of the most common AC motor designs. The motor consists of two parts: a stationary stator and a rotor that can rotate. The stator is located around the rotor and contains several current-carrying coils that create an alternating magnetic field. This field creates induced currents in the rotor, which are acted upon by torque. This moment makes the rotor rotate.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+We will use the following engine model. The stator consists of three square frames with side $a$. The frames are rotated by $120^\circ$ relative to each other and a three-phase voltage is applied to them, so that the currents in the frames have the form
+$$I_1 = I_0 \cos(\omega t),\quad
+I_2 = I_0 \cos\!\left(\omega t - \frac{2\pi}{3}\right),\quad
+I_3 = I_0 \cos\!\left(\omega t - \frac{4\pi}{3}\right).$$
+At the center of the squares lies a small rectangular loop of area $S$ (its linear dimensions are much smaller than the side $a$ of a square), which can rotate freely about the horizontal $z$-axis, passing through the centers of all frames.
+
+The relative position of the frames, the directions of the currents in them and the directions of the coordinate axes are shown in the figure. The second figure shows a section of the frames by plane $xy$, as it looks when viewed from the side of positive $z$. Positive signs of currents (for example $+I_1$) correspond to currents that flow towards us.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{B1}{Let a current $I_0$ flow in one of the square frames with side $a$ at a given moment of time. Find the magnetic field $B_0$ at the center of the square created only by this frame.}{0.60}
+
+\problembox{B2}{We will now consider the field that is created by all three frames, the currents through which are indicated in the introduction. Prove that in this case the magnetic field rotates with a constant angular velocity in the plane $xy$, that is, its modulus is constant and equal to $B_1$, and the angle with the axis $x$$\psi = \omega t + \psi_0$ (then $B_x = B_ 1 \cos \psi$, $B_y = B_1 \sin \psi$). Find $B_1$ and $\psi_0$. Express your answer using $B_0$.}{1.50}
+
+\problembox{B3}{The small box in the center is rotated so that its normal makes an angle $\alpha$ with the axis $x$. Find the magnetic flux through it at time $t$. Express your answer using $B_1$, $S$, $\alpha$, $\omega$.}{0.40}
+
+\problembox{B4}{Let the inductance of the frame be $L_2$ and the resistance $R_2$. The frame rotates at a constant angular velocity $\omega_1$, so $\alpha = \omega_1 t$ ($0<\omega_1 < \omega$). In the steady state, the current in the loop depends on time as
+$$I(t) = A\cos\!\left(\omega_2 t - \varphi_2\right).$$
+Find $A$, $\omega_2$, and $\varphi_2$. Express your answer in terms of the frame parameters, $B_1$, $\omega$, and $\omega_1$.}{1.00}
+
+\problembox{B5}{In order to ensure more uniform rotation of the rotor, instead of one frame we will use three frames, rotated relative to each other by $120^\circ$ around the $z$ axis (that is, if the position of one frame is specified by the angle $\alpha$, the positions of the remaining frames are specified by the angles $\alpha_2 = \alpha + 2\pi/3$, $\alpha_3 = \alpha + 4\pi/3$). The frames are isolated from each other; their mutual induction can be neglected. Prove that the projection onto the $z$ axis of the moment of forces acting on the structure of three frames is constant. Find its value $M_z$. Express your answer in terms of the frame parameters, $B_1$, $\omega$, $\omega_1$.}{1.50}
+
+\problembox{B6}{Construct a qualitative graph of the dependence $M _z(\omega_1)$ in the frequency range $0 < \omega_1 < \omega$. Specify the coordinates of the characteristic points. Consider that $R_2/L_2 < \omega$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3163}
+
+\end{document}

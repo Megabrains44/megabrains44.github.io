@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Determination of refractive index}}
+\author{\normalsize W23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The refractive index of a material is a nonlinear quantity that depends on the wavelength of the incident radiation. This dependence can be a key property of the material in the manufacture of simple spectroscopic devices (for example, prisms). At the same time, the dependence of the refractive index on wavelength can be detrimental in other optical devices, in particular where precise focusing of rays is important. Recently, more and more new materials and substances have appeared, the optical properties of which need to be studied. In this problem we will try to determine the dependence of the refractive index of an unknown liquid on wavelength, using a liquid for which this dependence is already known. The measurement diagram is shown in the figure below. A thin beam from a source falls on an air prism with thin walls with an angle $\alpha=30^{\circ}$ at the apex, immersed in the liquid under study. The ray is incident on one of the faces of the prism perpendicularly at point $A$ and then exits the prism at point $B$. Because the refractive index depends on wavelength, the angles at which rays of different wavelengths exit the prism will differ. At a distance $L$ from point $B$ there is a screen perpendicular to $AO$. For the convenience of further work, we introduce the dimensionless quantity $x=\frac yL$. The screen contains many light-sensitive elements that measure the intensity $\mathcal J_x(x)$ (power incident on a unit surface area per unit time) at the points at which they are located.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Spectral properties of the source (3.77 points).}
+
+An ordinary light source (such as a table lamp) is characterized by the fact that it emits light not of one wavelength (as a laser does), but of wavelengths in a certain range at once. To characterize its radiation, we introduce the concept of spectral density $\mathcal J_\lambda(\lambda)$. We define it so that the power emitted by the source in the wavelength range from $\lambda$ to $\lambda+\Delta\lambda$ is equal to $\mathcal J_\lambda(\lambda)\Delta\lambda$, where $\Delta\lambda$ is a small value. In this part of the problem we study the spectral density of the source. Let us first find out at which point $x$ on the screen the beam passing through the prism should hit, depending on the refractive index of the liquid. Applying Snell's law for rays, we obtain the following formula for the dependence of $x$ on $n$:\textbackslash\{\}[x=\textbackslash\{\}operatorname\{tg\}\textbackslash\{\}alpha\textbackslash\{\}frac\{\textbackslash\{\}sqrt\{n^2-\textbackslash\{\}sin^2\textbackslash\{\}alpha\}-\textbackslash\{\}cos\textbackslash\{\}alpha\}\{\textbackslash\{\}sqrt\{n^2-\textbackslash\{\}sin^2\textbackslash\{\}alpha\}+\textbackslash\{\}sin\textbackslash\{\}alpha\textbackslash\{\}operatorname\{tg\}\textbackslash\{\}alpha\}.\textbackslash\{\}tag\{1\}\textbackslash\{\}]In order to restore the value $n$ from the known value of $x$, formula (1) must be “inverted”. As a result of simple calculations, we obtain:\textbackslash\{\}[n=\textbackslash\{\}frac\{\textbackslash\{\}sqrt\{1+x^2\}\}\{1-x\textbackslash\{\}operatorname\{ctg\}\textbackslash\{\}alpha\}.\textbackslash\{\}tag\{2\}\textbackslash\{\}]The refractive index of most transparent materials in the visible range can be approximately described by the formula:\textbackslash\{\}[n(\textbackslash\{\}lambda)=A+\textbackslash\{\}frac B\{\textbackslash\{\}lambda^2\},\textbackslash\{\}tag\{3\}\textbackslash\{\}]where $A$ and $B$ are some constants. First, measurements are carried out in a known liquid for which these constants are $A=1.14$ and $B=8.6\cdot10^4~нм^{2}$. The table in the answer sheet shows the intensity values ​​$\mathcal J_x$ in arbitrary units at points with coordinate $x$.
+
+\problembox{A1}{For each $x$, find $n$.}{0.41}
+
+\problembox{A2}{For each $x$, find $\lambda$.}{0.82}
+
+To obtain a formula for the spectral density $\mathcal J_\lambda$, it is necessary to carry out more complex calculations. Here we limit ourselves to only the final formula for spectral density: \textbackslash\{\}[\textbackslash\{\}mathcal J_\textbackslash\{\}lambda=\textbackslash\{\}frac\{2B\textbackslash\{\}sqrt\{1+x^2\}\}\{\textbackslash\{\}lambda^3\}\textbackslash\{\}frac\{(1-x\textbackslash\{\}operatorname\{ctg\}\textbackslash\{\}alpha)^2\}\{x+\textbackslash\{\}operatorname\{ctg\}\textbackslash\{\}alpha\}\textbackslash\{\}mathcal J_x.\textbackslash\{\}tag\{4\}\textbackslash\{\}]
+
+\problembox{A3}{For each $x$, find $\mathcal J_\lambda$ (in arbitrary units per nm). Since for each $x$ we have already calculated $\lambda$, we obtain the dependence $\mathcal J_\lambda(\lambda)$.}{0.82}
+
+\problembox{A4}{Plot a graph of $\mathcal J_\lambda(\lambda)$.}{0.49}
+
+In the future, we will also need to calculate what fraction of the source power is emitted at wavelengths shorter than a certain value $\lambda$. Let us denote this quantity as $\sigma(\lambda)$. To find it, you need to calculate the area under the graph $\mathcal J_x$. We will do this using the trapezoid method. Let us know the values ​​$f_i$ of the function $f(x)$ at points $x_i$. Then the area under the graph of this function can be estimated as the sum of the areas of the trapezoids constructed as shown in the figure below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Since in our case the points $x_i$ are located at equal intervals, the formula for the final area $S_k$ under the graph between points $x_0$ and $x_k$ is: \textbackslash\{\}[S_k\textbackslash\{\}approx\textbackslash\{\}left(\textbackslash\{\}frac\{f_0+f_k\}2+\textbackslash\{\}sum_\{i=1\}^\{k-1\}f_i\textbackslash\{\}right)\textbackslash\{\}Delta x,\textbackslash\{\}tag\{5\}\textbackslash\{\}] where $\Delta x=x_{i+1}-x_i$ is the distance between adjacent points.
+
+\problembox{A6}{Find for each $x$ the value $\sigma$. Since for each $x$ we found a $\lambda$, we also obtained the dependence $\lambda(\sigma)$.}{1.23}
+
+\section*{Part B. Dependence of the refractive index on wavelength (6.23 points).}
+
+Now we will replace the liquid in which the prism is immersed with an unknown liquid, the dependence of whose indicator on the wavelength we want to find. The experimental design remains the same. The table in the answer sheet shows the intensity values ​​$\mathcal J_x$ in arbitrary units at points with coordinate $x$.
+
+\problembox{B1}{For each $x$, find $n$.}{0.41}
+
+\problembox{B2}{Find for each $x$ the value $\sigma$.}{1.23}
+
+In the last part of the problem, we obtained the dependence $\sigma(\lambda)$, which will now allow us to reconstruct $n(\lambda)$ for the unknown liquid. However, the values ​​of $\sigma$ obtained in the previous part are not the same as the values ​​obtained here. To find out which values ​​$\lambda$ correspond to those obtained in the previous paragraph $\sigma$, we will resort to the so-called. linear interpolation of dependence $\lambda(\sigma)$. The essence of linear interpolation is as follows. Let us know the values ​​$\lambda_1$ and $\lambda_2$ of the function $\lambda(\sigma)$ at points $\sigma_1$ and $\sigma_2$, respectively. If these points are close enough to each other, then with good accuracy it is possible to approximate the function between these two points by a section of a straight line. This allows us to approximately reconstruct the function values ​​for $\sigma_1 < \sigma < \sigma_2$. Let us derive the formula that determines $\lambda(\sigma)$. Since we approximate the function as linear, the desired dependence can be written in the form: \textbackslash\{\}[\textbackslash\{\}lambda=a\textbackslash\{\}sigma+b.\textbackslash\{\}tag\{6\}\textbackslash\{\}]To find $a$ and $b$, we note that this line must pass through the points $(\sigma_1,\lambda_1)$ and $(\sigma_2,\lambda_2)$. Substituting them into equation (6), we obtain a system of equations:\textbackslash\{\}[\textbackslash\{\}begin\{cases\}\textbackslash\{\}lambda_1=a\textbackslash\{\}sigma_1+b,\textbackslash\{\}\textbackslash\{\}\textbackslash\{\}lambda_2=a\textbackslash\{\}sigma_2+b.\textbackslash\{\}end\{cases\}\textbackslash\{\}tag\{7\}\textbackslash\{\}]Solving this system, we finally obtain:\textbackslash\{\}[\textbackslash\{\}lambda=\textbackslash\{\}frac\{\textbackslash\{\}lambda_2-\textbackslash\{\}lambda_1\}\{\textbackslash\{\}sigma_2-\textbackslash\{\}sigma_1\}\textbackslash\{\}sigma+\textbackslash\{\}frac\{\textbackslash\{\}lambda_1\textbackslash\{\}sigma_2-\textbackslash\{\}lambda_2\textbackslash\{\}sigma_1\}\{\textbackslash\{\}sigma_2-\textbackslash\{\}sigma_1\}.\textbackslash\{\}tag\{8\}\textbackslash\{\}]
+
+\problembox{B3}{Using linear interpolation, find which values ​​of $\lambda$ correspond to the resulting values ​​of $\sigma$. Since $n$ were calculated in $\bf B1$, we obtain the desired dependence $n(\lambda)$.}{4.10}
+
+\problembox{B4}{Plot $n(\lambda)$ at a convenient scale (the curve should take up most of the graph on both axes; the axes do not have to start at zero).}{0.49}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2851}
+
+\end{document}

@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Propagation of detonation waves --- Solution}}
+\author{\normalsize Y23 (2023) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Write down a system of laws of conservation of mass and momentum for the volume of gas passing through the wave front of the shock wave. Determine from it the speed of movement of the wave front $c$.}{1.00}
+
+Let us move to a reference frame that moves with the velocity of the shock wave front $c$. In this CO, a gas with pressure $p_0$ and density $\rho_0$ impinges on a stationary front, and after the front moves with a certain speed $u$. Throughout the problem we will use this reference system. In time $dt$, mass $\rho_0  c dt$ passes through a unit area of the flow, and mass $\rho_1 u dt$ exits, therefore the law of conservation of mass $$ \rho_0 c = \rho_1 u. $$Momentum можно поrayandть, домножив массу на соответствующую velocity. At the same time momentum gasа изменяется for/at прохождении волнового фронта за счет сности давлений на quantity $(p_0 - p_1) dt$, therefore $$ (\rho_1 u^2 - \rho_0 c^2 )dt = (p_0 - p_1 )dt, $$and finally $$ p_0 + \rho_0 c^2 = p_1 + \rho_1 u^2. $$Eliminating velocity $u$ с помощью закона сохранения массы: $$ u = c \frac{\rho_0}{\rho_1} $$and we get $$ p_0 + \rho_0 c^2 = p_1 + \frac{\rho_0^2}{\rho_1} c^2, $$hence velocity волны $$ c = \sqrt{\frac{p_1 - p_0}{\rho_1 - \rho_0} \frac{\rho_1}{\rho_0}}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \rho_0 c = \rho_1 u, \quad p_0 + \rho_0 c^2 = p_1 + \frac{\rho_0^2}{\rho_1} c^2, \quad c = \sqrt{\frac{p_1 - p_0}{\rho_1 - \rho_0} \frac{\rho_1}{\rho_0}}. $$
+\end{solcard}
+
+\begin{solcard}{A2}{Write down the law of conservation of energy for an element of the volume of gas passing through the wave front. Obtain from it an additional equation relating the parameters $p_0$, $\rho_0$, $p_1$, $\rho_1$, the speed of movement of the wave front $c$ and the adiabatic exponent $\gamma$.}{1.00}
+
+Let us consider the mass $dm$ of gas crossing the boundary. Its kinetic energy changes by $$ \Delta E_{\text{к}} = \left( \frac{u^2}{2}  -\frac{c^2}{2}\right) dm, $$внутренняя energy на $$ \Delta U =  C_V \frac{dm}{\mu} (T_1 - T_0 )= C_V \frac{dm}{R} \left( \frac{p_1}{\rho_1} - \frac{p_0}{\rho_0}\right). $$Here $C_V$ – молярная heat capacity gasа for/at постоянном volumeе, а temperature выражена via/through pressure с помощью уравнения состояния идеального gasа. Над gasом совершена work $$ A =p_0 \frac{dm}{\rho_0} -p_1 \frac{dm}{\rho_1}. $$Therefore energy conservation law \textbackslash{}begin{align*} A \&= \textbackslash{}Delta E_{\textbackslash{}text{к}} + \textbackslash{}Delta U, \textbackslash{}\textbackslash{} p_0 \textbackslash{}frac{dm}{\textbackslash{}rho_0} -p_1 \textbackslash{}frac{dm}{\textbackslash{}rho_1}\& = \textbackslash{}left( \textbackslash{}frac{u^2}{2}  -\textbackslash{}frac{c^2}{2}\textbackslash{}right) dm + C_V \textbackslash{}frac{dm}{R} \textbackslash{}left( \textbackslash{}frac{p_1}{\textbackslash{}rho_1} - \textbackslash{}frac{p_0}{\textbackslash{}rho_0}\textbackslash{}right). \textbackslash{}end{align*} Сократим на массу and перенесем все terms, относящиеся к gasу до прохождения волнового фронта в одну сторону: $$ \frac{p_0}{\rho_0} + \frac{C_V}{R} \frac{p_0}{\rho_0} + \frac{c^2}{2} = \frac{p_1}{\rho_1} + \frac{C_V}{R} \frac{p_1}{\rho_1} + \frac{u^2}{2}. $$Это соratio – equation Бернулли, в котором внутренняя energy gasа выражена via/through pressure and density. Note that $$ \frac{C_V}{R} + 1 = \frac{C_P}{R} = \frac{C_P}{C_P-C_V} = \frac{\gamma}{\gamma - 1}, $$а also substituting expression for скорости $u$ via/through velocity волнового фронта $c$ and we get
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{\gamma}{\gamma - 1} \frac{p_0}{\rho_0} + \frac{c^2}{2} = \frac{\gamma}{\gamma - 1} \frac{p_1}{\rho_1} + \frac{\rho_0^2}{\rho_1^2}\frac{c^2}{2} $$
+\end{solcard}
+
+\begin{solcard}{A3}{Combining the results obtained in steps A1 and A2, express the pressure ratio $p_1/p_0$ in terms of the adiabatic exponent $\gamma$ and the compaction coefficient $k=\rho_1/\rho_0$. This relationship is called the adiabatic equation for a shock wave.}{0.50}
+
+Let us substitute the expression for the wave front speed into the relation from the previous paragraph: $$ \frac{\gamma}{\gamma - 1}\left( \frac{p_1}{\rho_1}- \frac{p_0}{\rho_0}\right) = \frac{1}{2}\left(1-\frac{\rho_0^2}{\rho_1^2} \right) \frac{p_1- p_0}{\rho_1 - \rho_0}\frac{\rho_1}{\rho_0}. $$Упростим правую часть $$ \frac{\gamma}{\gamma - 1}\left( \frac{p_1}{\rho_1}- \frac{p_0}{\rho_0}\right) = \frac{\rho_1 + \rho_0}{2\rho_0 \rho_1} (p_1 - p_0) , $$сгруппируем terms с $p_0$ and с $p_1$: $$ p_1\left(\frac{\gamma}{\gamma - 1} \frac{1}{\rho_1} -\frac{\rho_1 + \rho_0}{2 \rho_0 \rho_1} \right) = p_0\left(\frac{\gamma}{\gamma - 1} \frac{1}{\rho_0} - \frac{\rho_1 + \rho_0}{2 \rho_0 \rho_1} \right), $$hence требуемое ratio $$ \frac{p_1}{p_0}= \frac{\frac{\gamma}{\gamma - 1} \rho_1 - \frac{1}{2}(\rho_0 + \rho_1)}{\frac{\gamma}{\gamma - 1} \rho_0 - \frac{1}{2}(\rho_0 + \rho_1)} = \frac{2 \gamma k - (\gamma -1) (1 + k)}{2 \gamma - (\gamma - 1)(1 + k) }. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{p_1}{p_0} = \frac{(\gamma + 1)k  - (\gamma -1)}{\gamma + 1 - (\gamma - 1)k }. $$
+\end{solcard}
+
+\begin{solcard}{A4}{Determine the maximum possible value of the compaction coefficient $k_{max}$. Express your answer using $\gamma$. Calculate the answer for an ideal diatomic gas.}{0.50}
+
+From the formula for the previous paragraph we see that the pressure $p_1$ goes to infinity at $k = \dfrac{\gamma + 1}{\gamma -1}$. This is the maximum value $k$. For diatomic gas $\gamma = 7/5$, $k_{max} = 6$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ k_{max} = \frac{\gamma + 1}{\gamma -1} = 6. $$
+\end{solcard}
+
+\begin{solcard}{B1}{Write down the law of conservation of energy for a detonation wave. Obtain from it an equation relating the parameters $p_0$, $\rho_0$, $p_1$, $\rho_1$, the speed of movement of the wave front $c$, the specific thermal effect of the reaction $q$, as well as the adiabatic exponents $\gamma_0$ and $\gamma_1$.}{0.60}
+
+The law of conservation of energy is similar to point $\mathrm{B3}$, but you need to add the released heat $q dm$ to the work of pressure forces and take into account that the molar heat capacities of the original gas and reaction products differ: $$ p_0 \frac{dm}{\rho_0} -p_1 \frac{dm}{\rho_1} + q dm = \left( \frac{u^2}{2}  -\frac{c^2}{2}\right) dm + C_{V1} \frac{dm}{R}  \frac{p_1}{\rho_1} - C_{V0} \frac{dm}{R} \frac{p_0}{\rho_0}. $$Let us express теплоемкости gasов via/through показатели адиабаты, velocity gasа $u$ through the wave front velocity and rearrange the terms similarly to part A:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{\gamma_0}{\gamma_0 - 1} \frac{p_0}{\rho_0} + \frac{c^2}{2} + q = \frac{\gamma_1}{\gamma_1 -1} \frac{p_1}{\rho_1} + \frac{c^2}{2} \frac{\rho_0^2}{\rho_1^2}. $$
+\end{solcard}
+
+\begin{solcard}{B2}{The explicit dependence $p_1(v_1)_\text{дет}$ for a strong detonation wave can be represented as: $$p_1=\cfrac{q}{v_0}\cdot A $$Determine $A$. Answer выtimesandте via/through $\gamma_1$ and ratio $v_1/v_0$. This relationship is called the detonation adiabatic equation.}{0.60}
+
+In the strong wave approximation, the wavefront speed is $$ c^2 = \frac{p_1}{\rho_1 - \rho_0} \frac{\rho_1}{\rho_0} = p_1 \frac{v_0^2}{v_0 - v_1}. $$Substituting его в energy conservation law, we neglect at the same time terms $\frac{p_0}{\rho_0}$: $$ q + p_1 \frac{v_0^2}{2(v_0 - v_1)} = \frac{\gamma_1}{\gamma_1 -1}p_1 v_1 + \frac{v_1^2 }{v_0^2} p_1 \frac{v_0^2}{2(v_0 - v_1)} . $$Hence $$ p_1 \left( \frac{\gamma_1}{\gamma_1 -1} v_1  + \frac{v_1^2 - v_0^2}{2 (v_0 - v_1)}\right) = q, $$$$ p_1 = \frac{q}{\frac{\gamma_1}{\gamma_1 -1} v_1  -  \frac{1}{2} (v_0 + v_1)} = \frac{q}{v_0} \frac{2}{\frac{\gamma_1 + 1}{\gamma_1 -1} \frac{v_1}{v_0} - 1} $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ A =  \frac{2}{\frac{\gamma_1 + 1}{\gamma_1 -1} \frac{v_1}{v_0} - 1}. $$
+\end{solcard}
+
+\begin{solcard}{B3}{On one graph, qualitatively depict the dependence $p_1(v_1)_\text{дет}$, as well as the dependence $p_1(v_1)_\text{иmп}$ for different values ​​of the speed of movement of the wave front $c$.}{0.60}
+
+The graph of the dependence $p_1(v_1)_{\text{дет}}$ is a hyperbola whose asymptote is at $v_1 = v_0 \dfrac{\gamma_1 -1}{\gamma_1 + 1}$. The dependence of pressure on specific volume, expressed in terms of the speed of sound, has the form $$ p_1(v_1)_{\text{иmп}} = \frac{c^2}{v_0} \left( 1 - \frac{v_1}{v_0}\right), $$ее график - линейная function, обращающаяся в 0 for/at $v_1 = v_0$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T4_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B4}{Determine the parameters $p_1$ and $v_1$ of the Chapman-Jouguet point. Express your answer using $v_0$, $\gamma_1$, $q$.}{1.40}
+
+Let us equate the expressions for pressure through the wave speed and from the shock adiabatic equation. $$ \frac{c^2}{v_0} \left( 1 - \frac{v_1}{v_0}\right)= \frac{2q}{v_0} \frac{1}{\frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1}, $$we get квадратное equation на ratio $v_1/v_0$: $$ \left(1- \frac{v_1}{v_0} \right)\left( \frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1\right) = \frac{2q}{c^2}. $$Это equation будет иметь единственное solution, if правая часть equals максимальному значению квадратичной функции в левой части. Это максимальное value достигается for/at $$ \frac{v_1}{v_0} = \frac{\gamma_1}{\gamma_1 + 1}, $$соответствующее value equals $$ \frac{2q}{c^2} = \frac{1}{\gamma_1^2 -1}, $$hence velocity волны $$ c = \sqrt{2q (\gamma_1^2 -1)} $$and pressure $$ p_1 = \frac{c^2}{v_0}\left( 1 - \frac{v_1}{v_0}\right) = \frac{2q (\gamma_1^2-1)}{v_0} \frac{1}{\gamma_1 + 1} = \frac{2q}{v_0} (\gamma_1 -1). $$
+
+
+Second solution. The equation will have a unique solution if the dependence curves $p_1(v_1)$ touch each other. Let us equate the expressions for pressures and their derivatives with respect to $v_1$:
+
+
+\textbackslash{}begin{align*} \&\textbackslash{}frac{c^2}{v_0} \textbackslash{}left( 1 - \textbackslash{}frac{v_1}{v_0}\textbackslash{}right)= \textbackslash{}frac{2q}{v_0} \textbackslash{}frac{1}{\textbackslash{}frac{\textbackslash{}gamma_1 +1}{\textbackslash{}gamma_1 - 1} \textbackslash{}frac{v_1}{v_0} - 1},\textbackslash{}\textbackslash{} \&\textbackslash{}frac{c^2}{v_0^2} = \textbackslash{}frac{2q}{v_0^2} \textbackslash{}frac{\textbackslash{}gamma_1 +1}{\textbackslash{}gamma_1 -1}\textbackslash{}frac{1}{\textbackslash{}left(\textbackslash{}frac{\textbackslash{}gamma_1 +1}{\textbackslash{}gamma_1 - 1} \textbackslash{}frac{v_1}{v_0} - 1\textbackslash{}right)^2}. \textbackslash{}end{align*} Let's express the wave speed from the second equation and substitute it into the first: $$ c^2  = 2q \frac{\gamma_1 +1}{\gamma_1 -1}\frac{1}{\left(\frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1\right)^2}, $$$$ \frac{\gamma_1 +1}{\gamma_1 -1}\frac{1 - \frac{v_1}{v_0}}{\left(\frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1\right)^2} = \frac{1}{\frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1}, $$hence we get equation на ratio $v_1/ v_0$: $$ \frac{\gamma_1 +1}{\gamma_1 -1}\left(1 - \frac{v_1}{v_0} \right) = \frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1, $$from которого we find $$ v_1 = v_0 \frac{\gamma_1}{\gamma_1 + 1}. $$Substituting это value в expression for $c^2$, we get answerы for $c$ and then $p_1$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ v_1 = \frac{\gamma_1}{\gamma_1 + 1} v_0, \quad p_1 =\frac{2q}{v_0} (\gamma_1 -1). $$
+\end{solcard}
+
+\begin{solcard}{B5}{Determine the speed of movement of the wave front $c$. Express your answer in terms of $q$ and $\gamma_1$.}{0.20}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ c = \sqrt{2q (\gamma_1^2 -1)}. $$
+\end{solcard}
+
+\begin{solcard}{B6}{Calculate the speed of movement of the wave front during a detonation wave in a mixture of oxygen and hydrogen if, when it is heated to high temperatures, the following chemical reaction occurs: $$ 2\mathrm{H}_2+ \mathrm{O} _2 = \mathrm{H}_2 \mathrm{O} + \mathrm{H}^{+} + \mathrm{HO}^{-}. $$Реальный процесс горения водорода представляет собой совокупность реакций, в которых взаимодействуют atomы кислорода and водорода, therefore в числе продуктов реакции нужно учитывать ионы $\mathrm{H}^{+}$ and $\mathrm{HO}^{-}$ (этот ион можно считать двухatomной молекулой). В смеси на 2 моля водорода for/atходится моль кислорода в соответствии с equationм реакции. For этой реакции считайте, что $q \approx 15~\text{MJ}/\text{kg}$ for each kilogram of hydrogen consumed.}{0.60}
+
+The reaction products are a mixture of monatomic, diatomic and polyatomic gases in equal proportions (by amount of substance), therefore the adiabatic index (indices 1,2,3 mark the values ​​​​related to monatomic, diatomic and polyatomic gas, respectively) $$ \gamma_1 = \frac{C_{P1} + C_{P2} + C_{P3}}{C_{V1} + C_{V2} + C_{V3}} = \frac{10}{7}. $$Then velocity волны можно рассчитать по формуле from предыдущего partа. At the same time нужно учесть, что for/atведено количество тепла, for/atходящееся на единицу массы водорода. Согласно уравнению реакции, на 1 kg водорода for/atходится 8 kg кислорода, therefore нужно использовать value $q$ is 9 times less.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ c = \sqrt{2 q (\gamma_1^2 - 1)} \approx 1.86 \cdot 10^{3}~\frac{\text{ m}}{\text{s}}. $$
+\end{solcard}
+
+\begin{solcard}{C1}{Obtain an equation for the light detonation adiabatic similar to point B2, that is, find the pressure $p_1$ in the plasma after the passage of the wave front. Express your answer in terms of $v_0$, $v_1$, $\gamma_1$, $I_0$.}{1.20}
+
+Let's write down the law of conservation of energy from point $\mathrm{B2}$, replacing $q = I_0 v_0/c$ in it, expressing the speed of the wave $c$ through pressure and specific volumes: $$ I_0 v_0 \frac{\sqrt{1- v_1/v_0}}{\sqrt{p_1 v_0}}+ p_1 \frac{v_0^2}{2(v_0 - v_1)} = \frac{\gamma_1}{\gamma_1 -1}p_1 v_1 + \frac{v_1^2 }{v_0^2} p_1 \frac{v_0^2}{2(v_0 - v_1)} . $$Transforming это equation $$ I_0 \frac{\sqrt{v_0 -v_1}}{\sqrt{p_1}} =\frac{ p_1 v_0}{2} \left( \frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1\right) , $$ from where we get
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ p_1 =\left( \frac{2I_0 \sqrt{v_0 -v_1}}{\frac{\gamma_1 +1}{\gamma_1 - 1} v_1 - v_0} \right)^{2/3}. $$
+\end{solcard}
+
+\begin{solcard}{C2}{Determine the parameters ($p_1$ and $v_1$) of the Champin-Jouguet point for the light-detonation adiabat. Express your answer using $v_0$, $\gamma_1$, $I_0$.}{1.40}
+
+Let us again write down the equality of the pressures obtained from the formula for the light-detonation adiabat and from the speed of the wave: $$ \left( \frac{2I_0 \sqrt{v_0 -v_1}}{\frac{\gamma_1 +1}{\gamma_1 - 1} v_1 - v_0} \right)^{2/3} = \frac{c^2}{v_0} \left(1  - \frac{v_1}{v_0} \right). $$Transforming это equation: $$ \left(1  - \frac{v_1}{v_0} \right)^{2/3} \left( \frac{\gamma_1 +1}{\gamma_1 - 1} v_1 - v_0 \right)^{2/3} =\frac{ (2 I_0 v_0)^{2/3} }{c^2}. $$Возводя equation в степень $3/2$, снова we get квадратное equation на $v_1/v_0$: $$ \left(1- \frac{v_1}{v_0} \right)\left( \frac{\gamma_1 +1}{\gamma_1 - 1} \frac{v_1}{v_0} - 1\right) = \frac{2I_0 v_0}{c^3}. $ $Левая часть такая же, как и в случае ударной волны, поэтому максимум достигается при $$ v_1 = \textbackslash{}frac{\textbackslash{}gamma_1}{\textbackslash{}gamma_1 + 1} v_0, $$а скорость волны можно найти из соотношения $$ \textbackslash{}frac{2 I_0 v_0}{c^3} = \textbackslash{}frac{1}{\textbackslash{}gamma_1^2 -1}, \textbackslash{}quad c = \textbackslash{}left(2 I_0 v_0 (\textbackslash{}gamma_1^2 -1) \textbackslash{}right)^{1/3}. $$Тогда давление $$ p_1 = \textbackslash{}frac{\textbackslash{}left(2 I_0 v_0 (\textbackslash{}gamma_1^2 -1) \textbackslash{}right)^{2/3}}{v_0} \textbackslash{}frac{1}{\textbackslash{}gamma_1+ 1} = \textbackslash{}left( \textbackslash{}frac{4 I_0^2}{v_0}\textbackslash{}frac{(\textbackslash{}gamma_1 -1)^2}{\textbackslash{}gamma_1 + 1}\textbackslash{}right)^{1/3}. $$Для сравнения также построим на одном графике светодетонационную адиабату и зависимости $p_1(v_1) $ at constant speed of sound.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ v_1 = \frac{\gamma_1}{\gamma_1 + 1} v_0, \; p_1 =  \left( \frac{4 I_0^2}{v_0}\frac{(\gamma_1 -1)^2}{\gamma_1 + 1}\right)^{1/3}. $$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T4_S_EN_assets/fig2.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{С3}{Determine the speed of movement of the wave front $c$ of the light detonation wave. Express your answer in terms of $\gamma_1$, $I_0$, $\rho_0$. Calculate its numerical value.}{0.40}
+
+Let's use the formula for the wave front speed from the previous paragraph, substitute the intensity value $I_0 = P/\pi r^2 \sim 10^{15}~\text{W}/\text{m}^2$ and the value $v_0 = 1/\rho_0$ into it.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ c =  \left(2 I_0 v_0 (\gamma_1^2 -1) \right)^{1/3} \approx 100 ~\frac{\text{km}}{\text{s}} $$
+\end{solcard}
+
+\end{document}

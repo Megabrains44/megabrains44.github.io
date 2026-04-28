@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Electromagnetic hydrodynamics}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Взаимодействие электромагнитного поля с немагнитными жидкостями в случае высокой проводимости жидкости хорошо изучено в рамках магнитной гидродинамики (МГД). В данном случае можно пренебречь электрическими эффектами по сравнению с магнитными. Изученные в рамках МГД эффекты давно нашли широкое техническое применение и используются по сей день. Например, МГД устройства применяются в водных судах или для конструкций металлургического перемешивания. Менее изученным является противоположный случай взаимодействия электромагнитного поля с немагнитными жидкостями в случае низкой проводимости жидкости. В этом случае можно пренебречь магнитными эффектами по сравнению с электрическими. Данная область науки получила название электрогидродинамики (ЭГД) и активно развивается около 70 последних лет. Она нашла широкое техническое применение в современном мире. На её основе построены струйный принтеры, а также они используются в ионизаторах, для изготовления тонких полимерных нитей и капилляров. Наиболее интересным для исследований с научной точки зрения является случай промежуточных значений удельной проводимости, когда необходимо учитывать как электрические, так и магнитные эффекты, возникающие при движении жидкости в электромагнитном поле. Данное направление науки называется электромагнитной гидродинамикой (ЭМГД). В рамках данной задачи вам предлагается изучить динамику движения жидкости внутри плоского и цилиндрического конденсаторов, помещённых в однородное магнитное поле.
+
+Точное решение задач ЭМГД является очень сложным. В рамках данной задачи примем следующую модель: Все внешние электромагнитные поля являются стационарными; Все расcmатриваемые движения являются стационарными; Собственным магнитным полем, создаваемым токами, текущими в жидкости, можно пренебречь, т.е магнитное поле во всех точках пространства равно внешнему магнитному полю $\vec{B}\bigl(\vec{r}\bigr)$; Внешнее магнитное поле $\vec{B}\bigl(\vec{r}\bigr)$ создано токами, текущими вне жидкости; Во всех точках жидкости объёмная плотность свободного заряда равна нулю.
+
+Точное решение задач ЭМГД является очень сложным. В рамках данной задачи примем следующую модель:
+
+Считайте известными и постоянными все следующие величины: Плотность жидкости $\rho$; Удельная проводимость жидкости $\sigma$; Коэффициент динамической вязкости жидкости $\eta$; Магнитная проницаемость жидкости $\mu\approx 1$.
+
+Считайте известными и постоянными все следующие величины:
+
+Для решения задачи вам понадобится корректная формулировка закона вязкости Ньютона. Расcmотрим грань $AB$ бесконечно малого прямоугольного параллелепипеда жидкости, лежащую в плоскости $yz$ прямоугольной системы координат $xyz$. Касательным напряжением $\tau_{xy}$, действующим на расcmатриваемую грань параллелепипеда, называется отношение силы, действующей на данное сечение параллелепипеда в направлении оси $y$, к площади поверхности расcmатриваемой грани. Здесь первый индекс обозначает направление нормали к поверхности грани, а второй индекс – направление действия касательного напряжения. Из закона сохранения момента импульса для вещества следует, что касательное напряжение $\tau_{yx}$, действующее на грань $BC$ данного параллелепипеда, лежащую в плоскости $xz$, в направлении оси $x$, равно величине $\tau_{xy}$: $$\textbackslash\{\}tau_\{xy\}=\textbackslash\{\}tau_\{yx\}\{.\} $$ Здесь направления координатных осей $x$ и $y$ определяются направлениями внешних нормалей к граням $AB$ и $BC$ параллелепипеда. При этом соответствующие касательные напряжения, действующие на противоположные грани $CD$ и $AD$ параллелепипеда, должны быть направлены противоположно, поскольку для них направления нормали являются противоположными.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Newton's law of viscosity states that the shear stress $\tau_{xy}=\tau_{yx}$ is proportional to the shear strain rate, which is expressed by the following formula: $$\textbackslash\{\}tau_\{xy\}=\textbackslash\{\}tau_\{yx\}=\textbackslash\{\}eta\textbackslash\{\}left(\textbackslash\{\}cfrac\{\textbackslash\{\}partial v_x\}\{\textbackslash\{\}partial y\}+\textbackslash\{\}cfrac\{\textbackslash\{\}partial v_y\}\{\textbackslash\{\}partial x\}\textbackslash\{\}right)\{.\} $$Здесь частные производные вычисляются в один и тот же момент времени. Данное выражение применимо в любой системе отсчёта при условии, что проекции скорости $v_x$ и $v_y$ и координаты $(x,y)$ are calculated with respect to the chosen reference frame.
+
+\section*{Part A. EMGD equations (0.8 points)}
+
+The key relationship in EMGD is the connection between the current density $\vec{j}\bigl(\vec{r}\bigr)$ and the values ​​of specific conductivity $\sigma$, electric field strength $\vec{E}\bigl(\vec{r}\bigr)$, magnetic field induction $\vec{B}\bigl(\vec{r}\bigr)$, and fluid velocity $\vec{v}\bigl(\vec{r}\bigr)$. You know Ohm's law in differential form: $$\textbackslash\{\}vec\{j\}=\textbackslash\{\}sigma\textbackslash\{\}vec\{E\}\{.\} $$Этот закон применим только для неподвижных проводников. Если же проводник движется в магнитном поле, то данное уравнение становится неприменимым, а уравнение, описывающее распределение токов в проводнике, требует учёта взаимодействия движущихся в проводнике зарядов с магнитным полем. В общем случае величина плотности тока в проводнике определяется выражением: $$\textbackslash\{\}vec\{j\}=\textbackslash\{\}sigma\textbackslash\{\}Biggl\textbackslash\{\}langle\textbackslash\{\}cfrac\{\textbackslash\{\}vec\{F\}\}\{q\}\textbackslash\{\}Biggr\textbackslash\{\}rangle\{,\} $$где $\vec{F}$ – сила, действующая на заряд $q$ со стороны электромагнитного поля. Данная сила должна уравновешиваться силой, действующей на заряд $q$ from the side of the conductor substance. Here, averaging is carried out over all charges participating in the ordered motion. Consider it known that the velocities of charges relative to conductors are extremely small.
+
+\problembox{A1}{Let $\vec{v}$ be the fluid velocity at some point in space. What is the current density $\vec{j}$ at a given point in space? Express your answer in terms of $\sigma$, $\vec{E}$, $\vec{B}$ and $\vec{v}$.}{0.30}
+
+\problembox{A2}{Determine the force $\vec{f_B}$ acting per unit volume of liquid from the magnetic field. Express your answer in terms of $\sigma$, $\vec{E}$, $\vec{B}$ and $\vec{v}$.}{0.20}
+
+\problembox{A3}{Show that if the volume density of a free charge at any point in the liquid is zero, then the volume density of the total charge is also zero at any point in the liquid.}{0.30}
+
+\section*{Part B. Fluid flow in a parallel plate capacitor (3.3 points)}
+
+Consider a parallel plate capacitor with a distance $d$ between the plates, connected to a constant voltage source $U$. The width of the capacitor plates is $L\gg d$, and their length is also many times greater than the distance $d$ between the plates. Let us introduce the coordinate system $xyz$ as shown in the figure. The $x$ axis is directed perpendicular to the plates, and its origin is located in the middle between the plates. The $y$ axis is directed along the $L$ side of the capacitor plates, and the $z$ axis complements the $xyz$ triple to the right. The system is placed in a uniform magnetic field with induction $\vec{B}=B\vec{e}_y$. In the space between the plates, a conductive liquid with density $\rho$ with conductivity $\sigma$ and dynamic viscosity coefficient $\eta$ flows stationary.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+When solving this part of the problem, use the following model: The intensity $\vec{E}$ of the electrostatic field can be considered uniform throughout the entire region between the capacitor plates; The velocity $v$ of the fluid at each point in the space between the plates is directed along the axis $z$; Due to the relation $L\gg d$ the capacitor can be considered infinitely wide; Consider the fluid pressure to be the same at each point in the space between the plates and equal to the pressure at the inlet and outlet of the space between the plates.
+
+To solve this part of the problem, use the following model:
+
+\problembox{B1}{From general physical considerations, find what is the force $\vec{f_E}$ acting on a unit volume of liquid from the electrostatic field? Justify your answer.}{0.30}
+
+\problembox{B2}{Show that the dependence of the fluid velocity on the coordinate $x$ can be represented as: $$v(x)=A\textbackslash\{\}cosh\textbackslash\{\}omega x+B\textbackslash\{\}sinh\textbackslash\{\}omega x+C\{.\} $$Определите $A$, $B$, $C$ и $\omega$. Ответы выразите через $\sigma$, $\eta$, $U$, $B$ и $d$.}{1.00}
+
+\problembox{B3}{Determine the maximum fluid flow velocity $v_{max}$. Express your answer in terms of $\sigma$, $\eta$, $U$, $B$ and $d$.}{0.20}
+
+\problembox{B4}{Obtain the dependence $v(x)$ for the case of a weak magnetic field ($Bd\ll\sqrt{\sigma/\eta}$). Determine the maximum speed value $v_{max}$. Express your answers in terms of $\sigma$, $\eta$, $U$, $B$, $d$ and $x$. Construct a qualitative graph of the resulting dependence $v(x)$. Mark all important points on the graph.}{0.40}
+
+\problembox{B5}{Determine the maximum value of the fluid velocity $v_{max}$ for the case of a strong magnetic field ($Bd\gg\sqrt{\sigma/\eta}$). Express your answer in terms of $\sigma$, $\eta$, $U$, $B$ and $d$. Construct a qualitative graph of $v(x)$ for the case of a strong magnetic field. Mark all important points on the graph.}{0.30}
+
+\problembox{B6}{Obtain the dependence of the mass flow rate of liquid $Q$ through the cross section $xy$ of the capacitor. Express your answer in terms of $\rho$, $\sigma$, $\eta$, $U$, $B$, $d$ and $L$.}{0.30}
+
+\problembox{B7}{Obtain approximations for $Q(B)$ in the cases of weak and strong magnetic fields ($Bd\ll\sqrt{\sigma/\eta}$ and $Bd\gg\sqrt{\sigma/\eta}$ respectively). Express your answers in terms of $\rho$, $\sigma$, $\eta$, $U$, $B$, $d$ and $L$.}{0.40}
+
+\problembox{B8}{Construct a qualitative graph of the dependence of the mass flow rate $Q$ on the magnetic field induction $B$. Mark all important points on the graph.}{0.40}
+
+In all other parts of the problem, we consider a capacitor consisting of two very long coaxial cylindrical plates. The radius of the inner lining is $R_1$, and the radius of the outer lining is $R_2$. The height of the cylinders is the same and equal to $h\gg R_1{,}R_2$. The bases of the plates match. The space between the plates is filled with a conductive liquid of density $\rho$ with conductivity $\sigma$ and dynamic viscosity coefficient $\eta$. Let us denote the distance from the cylinder axis to an arbitrary point in the liquid as $r$. We also introduce the axis $z$, directed along the axis of the cylinders.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\section*{Part C. Liquid in a cylindrical capacitor in the absence of an electromagnetic field (1.5 points)}
+
+First, let's consider the movement of a fluid in the absence of an electromagnetic field. Let the inner and outer plates rotate with constant angular velocities, the projections of which on the $z$ axis are $\omega_1$ and $\omega_2$, respectively. In the steady state, the trajectories of fluid elements are circles perpendicular to the $z$ axis, the centers of which are located on the latter.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{Determine the projections onto the axis $z$ of the moments of forces $M_1$ and $M_2$ applied to the inner and outer plates, respectively, by external forces to maintain their stationary motion. Express your answer in terms of $\eta$, $\omega_1$, $\omega_2$, $R_1$, $R_2$ and $h$.}{1.30}
+
+\problembox{C2}{Obtain the dependence of the fluid velocity $v(r)$ on the distance $r$ to the cylinder axis. Express your answer in terms of $\omega_1$, $\omega_2$, $R_1$, $R_2$ and $r$.}{0.20}
+
+\section*{Part D. Equations of fluid motion in a cylindrical capacitor (0.9 points)}
+
+Now consider the movement of liquid in a capacitor in the presence of an electromagnetic field. The capacitor is connected to a constant voltage source $U$, and the potential of the internal plate is higher than the potential of the external one. The system is placed in a uniform magnetic field with induction $\vec{B}$ directed opposite to the axis $z$ (i.e. $\vec{B}=-\vec{e}_zB$). Both plates of the capacitor are fixed and cannot rotate. When solving the problem, use a cylindrical coordinate system with unit vectors $\vec{e}_r$, $\vec{e}_\varphi$ and $\vec{e}_z$ forming a right-hand triple. In the steady state, the trajectories of fluid elements are circles perpendicular to the $z$ axis, the centers of which are located on the latter. The description of this part of the problem is also a description of parts $\mathrm{E}$ and $\mathrm{F}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{D1}{Determine the electric field strength $\vec{E}(r)$ in the area between the cylinders at a distance $r$ from their axis. Express your answer in terms of $U$, $R_1$, $R_2$, $r$ and $\vec{e}_r$.}{0.30}
+
+\problembox{D2}{Determine the force $\vec{f_B}$ acting on a unit volume of liquid from the magnetic field. Express your answer in terms of $\sigma$, $U$, $r$, $B$, fluid velocity $v(r)$, $\vec{e}_r$ and $\vec{e}_\varphi$.}{0.20}
+
+\problembox{D3}{From general physical considerations, indicate the direction of the force $\vec{f_E}$ acting on a unit volume of liquid from the electrostatic field. As an answer, indicate the unit vector to which this force is directed collinearly. Justify your answer.}{0.40}
+
+\section*{Part E. Flow at low speeds (2.0 points)}
+
+To begin with, let us consider the case of fluid flow at low speeds $v$, satisfying the strong inequality: $$v\textbackslash\{\}ll \textbackslash\{\}cfrac\{E\}\{B\}\{.\} $$This type of motion is realized in weak magnetic fields.
+
+\problembox{E1}{Obtain the dependence of the fluid velocity $v(r)$ on the distance $r$ to the cylinder axis. Express your answer in terms of $\sigma$, $\eta$, $U$, $B$, $R_1$, $R_2$ and $r$.}{1.60}
+
+\problembox{E2}{Let the radius of the inner lining be equal to $R$, and the radius of the outer lining several (of the order of unity) times greater. Estimate the maximum value of magnetic field induction $B_{max}$ at which your results can still be considered applicable. Express your answer in terms of $\sigma$, $\eta$, $U$ and $R$.}{0.40}
+
+\section*{Part F. Flow in a very strong magnetic field (1.5 points)}
+
+Let the radii of the plates be again equal to $R_1$ and $R_2$, and the relationship between them can be arbitrary. The induction of the magnetic field in which the capacitor is placed takes on very large values ​​in this part of the problem.
+
+\problembox{F1}{Obtain the dependence $v(r)$ in the case of a strong magnetic field far from the capacitor plates. Express your answer in terms of $\sigma$, $\eta$, $U$, $B$, $R_1$, $R_2$ and $r$.}{0.90}
+
+\problembox{F2}{Construct a qualitative graph of the dependence $v(r)$ for all values ​​of $r$ between the plates of the capacitor in the case of a strong magnetic field. It is not necessary to indicate characteristic values ​​when plotting a graph.}{0.60}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3794}
+
+\end{document}

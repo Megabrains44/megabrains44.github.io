@@ -1,0 +1,134 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Nut and ruler on bifilar suspension}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this work, you will need to determine the radius of the issued thread in three different ways. Since the measured effects are quite subtle, next you will need to understand Zen.
+
+\section*{Equipment}
+
+1. Spool of thread 2. Two identical nuts 3. Tripod with foot and sleeve 4. Ruler 5. Stopwatch 6. Scales 7. Adhesive mass 8. Measuring tape 9. Scissors and tape as required
+
+\section*{Part A. Geometry of helical lines (1 point)}
+
+A helical line on the surface of a cylinder of radius $R$ is a curve such that at any point the tangent to it makes the same angle with the axis of symmetry of the cylinder (see figure). The $x$ and $y$ coordinates of the helix points are given by
+$$x=R\cos\varphi,\qquad y=R\sin\varphi.$$
+In all items of this part, the arc length of the curve is $l$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Let the curve make one revolution around a cylinder of radius $R<\frac{l}{2\pi}$ (i.e. $\varphi_B-\varphi_A=2\pi$) Find the angle between the tangent to the curve and the axis of symmetry of the cylinder.}{0.20}
+
+\problembox{A2}{Let $\varphi_B-\varphi_A=\Delta{\varphi}$. Express $z_B-z_A$ in terms of $l$, $R$ and $\Delta{\varphi}$}{0.40}
+
+\problembox{A3}{For $\frac{R\Delta{\varphi}}{l}\ll1$ show that $$z_B-z_A=l-\frac{(R\Delta\varphi)^2}{2l}$$}{0.40}
+
+The resulting formulas will be useful in further parts of the problem.
+
+\problembox{B1}{Measure the mass of nut $m$.}{0.10}
+
+\section*{Part B. Preparatory (4 points)}
+
+\problembox{B2}{Measure the radius of the thread $r_1$ using the row method.}{0.90}
+
+\problembox{B3}{Measure the moment of inertia of the nut about its main axis. Take $g = 9.8~\text{m}/\text{s}^2$.}{3.00}
+
+\section*{Part C. Tighten the nut (points)}
+
+Assemble the installation according to the diagram below.  The length of the threads should be 30-45 cm.  At the top point, the distance between the threads should be about 1 mm or less. The thread fastening point must be fixed. Please note that in the equilibrium position the threads are twisted at some angle.
+
+\problembox{C1}{Record the distance $L$ from the hanging point to the fastening point for your installation.}{0}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{C2}{When the threads are twisted at an angle $\varphi$, the nut rises to a height $h$. Remove the dependence $h(\varphi)$ in the widest possible range (up to angles of the order of $500\pi$) by tightening the nut counterclockwise when looking at it from top to bottom. In what follows we will call this twist direction right. Make sure that the thread sections below the fastening point do not twist.  No knots or pellets should appear on the threads.}{1.70}
+
+\problembox{C3}{Remove a similar constraint for twisting in the other direction. Make sure the installation is asymmetrical.}{1.10}
+
+IMPORTANT: Make all further measurements while tightening the nut counterclockwise when looking at the installation from above.
+
+IMPORTANT: when constructing all further theoretical relationships, consider the threads to be inextensible.
+
+\problembox{C4}{Derive the theoretical dependence $h(\varphi)$.  Using this, linearize the dependence obtained in point C2.}{0.30}
+
+\problembox{C5}{For a right-hand twist of the thread, plot the dependence $h(\varphi)$ in coordinates in which it is linear. From the angle coefficient, determine the radius of the thread $r_2$ again.}{1.20}
+
+\problembox{C6}{Obtain a theoretical dependence of $\tau$ on the installation parameters, where $\tau(h)$ is the time during which the nut stops if it is released from a height $h$.}{0.70}
+
+\problembox{C7}{For the right twist, experimentally obtain the dependence $\tau(h)$.}{1.00}
+
+\problembox{C8}{Remove dependency $\tau(L)$. Plot a linearized graph.}{2.50}
+
+\problembox{C9}{The torsional modulus $f$ of a homogeneous rod is the proportionality coefficient in the formula $M = f \cdot \varphi$, where $M$ is the torque of the forces applied to the base of the rod, $\varphi$ is the angle of rotation of the base of the rod. Determine the coefficient $C$ depending on $f = C/L$, where $f$ is the intrinsic torsion modulus of one thread, $L$ is the length of the thread. Describe the method. Rate the attitude $\frac{C}{mgr^2}$. Make sure that the effect considered has almost no effect on the results obtained.}{1.20}
+
+\problembox{C10}{Notice that the nut unscrews to angular velocities that are indiscernible to the eye. Estimate in order the maximum angular speed at which it rotates.}{0.30}
+
+\section*{Part D. Twist the ruler (5 points)}
+
+This part of the problem uses the experimental setup shown in the figure below. The ruler is suspended on two threads parallel to the floor, and the distance between the ends of the thread on the tripod is small, but on the ruler it is large. Let us denote as $\tau'(\varphi)$ the time required for a system twisted through an angle $\varphi$ to stop again.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Let's move on to building a theoretical model. Let the ruler initially be rotated by an angle $\varphi_0$ from the equilibrium position.
+
+\problembox{D1}{Considering it known that when the ruler deviates by an angle $\varphi$ from the equilibrium position, the change in its height can be represented as $$h=A\varphi,$$ express $A$ in terms of $R_0$, $H_0$, and $r$.}{1.20}
+
+\problembox{D2}{Obtain the theoretical dependence $\tau'(\varphi_0)$, where $\tau'$ is the time from the beginning of the movement of the ruler to the moment of its first stop, $\varphi_0$ is the initial angle of twisting of the threads.}{0.80}
+
+Assemble the installation shown in the figure. Use $R_0\approx 24$ cm, $H_0 < 40$ cm.
+
+\problembox{D3}{Remove the dependence $\tau'(\varphi_0)$, where $\tau'$ is the time from the beginning of the ruler’s movement until the moment it first stops, $\varphi_0$ is the initial angle of twisting of the threads. Take measurements in the range $\varphi_0 \in [\pi; 10\pi]$.}{1.50}
+
+\problembox{D4}{Plot a linearized graph and determine the radius of the thread $r_3$ for the third time.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/97}
+
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Hush, mice...}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Seeing Leopold standing on the high edge of the ravine from the opposite bank, the mice threw a stone straight at him at a speed of $v_1$. Leopold noticed this and, at the moment of the throw, jumped with a speed of $v_2$ in the plane of the stone’s flight path perpendicular to the line connecting it with the mice (see figure). When the distance between Leopold and the stone became minimal, their speeds were again perpendicular.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the maximum possible initial distance $L_{max}$ between the mice and Leopold.}{5.00}
+
+When the distance between Leopold and the stone became minimal, Leopold, the mice and the stone were photographed. The initial distance between the mice and Leopold was the maximum possible. In the figure, the point $A$ denotes the position of Leopold, $B$ the position of the mice, $C$ the stone at the time of the photograph. The orientation of the photo is unknown. You can use a graduated ruler.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A2}{Find the values of the speeds $v_1$ and $v_2$. Gravity acceleration $g=9,8~\text{m}/{\text{s}^2}$.}{5.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/69}
+
+\end{document}

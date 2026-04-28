@@ -1,0 +1,167 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Precession of Mercury's orbit --- Solution}}
+\author{\normalsize X24 (2024) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{At this point we will consider the movement of Mercury without taking into account other planets. Consider the orbit to be circular. Find the period of its revolution around the Sun $T$ (formula and numerical value in years) and the magnitude of the angular momentum $L$ (formula only). Express your answer using $G$, $a$, $M_S$, $m$.}{0.40}
+
+When moving in a circle $$ \frac{m v^2}{a} = \frac{GM_S m}{a^2}, \quad  v = \sqrt{\frac{G M_S}{a}}, $$hence period движения $$ T = \frac{2 \pi a}{v} = 2\pi \sqrt{\frac{a^3}{G M_S}}, $$а angular momentum $$ L= m v a = m \sqrt{G M_S a}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ T = \frac{2 \pi a}{v} = 2\pi \sqrt{\frac{a^3}{G M_S}} = 0.24 ~\text{gода}, \quad L= m v a = m \sqrt{G M_S a} $$
+\end{solcard}
+
+\begin{solcard}{A2}{Find the projection of the fall acceleration $g_z$ created by the ring on its axis of symmetry at a distance $z \ll R$ from the center. Express your answer using $G$, $M$, $R$, $z$.}{0.20}
+
+For reasons of symmetry, the components of the acceleration of free fall that are not directed along the $z$ axis are equal to 0. Let us consider the section of the mass ring $dM$. It creates acceleration $dg = G dM/(R^2 + z^2) \approx GdM/R^2$, and its projection onto the axis $z$ is equal to $dg_z = - dg /\sqrt{R^2 + z^2} \approx dg z/R =  -G dM z/R^3$ (the - sign means that the field is directed towards the center of the ring), therefore
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ g_z = -  \frac{G M z }{R^3} $$
+\end{solcard}
+
+\begin{solcard}{A3}{Find the radial projection of the gravitational acceleration $g_r$ created by the ring at a point in the plane of the ring at a distance $ r \ll R$ from its center. Use Gauss's theorem for the gravitational field. Write the answer up to terms of order $r$. Express your answer using $G$, $M$, $R$, $r$. The direction from the ring axis is considered positive.}{0.50}
+
+There are no massive bodies inside the end creating a gravitational field, so the flux of the vector $\vec{g}$ through any closed surface is zero. As such a surface, we choose a cylinder of radius $r$, the axis of which coincides with the axis of the ring, the lower base lies in the plane of the ring, and the coordinate of the upper base is $z$. Since $r \ll R$, we can assume that at all points of the upper base the projection $g_z$ coincides with its value at the center. On the lower base $g_z = 0$, since all the masses are in the plane of the ring. Since $z \ll r$, at all points on the lateral surface of the cylinder the radial component is equal to its value $g_r$ in the plane of the ring. Finally, the flow through the cylinder is $$ \Phi_g = \pi r^2 g_z + 2\pi r z g_r = 0, $$hence $$ g_r = - \frac{r}{2z} g_z = +\frac{G M r }{ 2 R^3}. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ g_r  = +\frac{G M r }{ 2 R^3} $$
+\end{solcard}
+
+\begin{solcard}{A4}{Find the potential energy $V(r)$ of Mercury if it is at a distance $r$ from the Sun. Express your answer in terms of $r$, $R$, $G$, $M_S$, $M$, $m$. The potential energy of interaction with the ring is zero when Mercury is at its center, and the potential energy of interaction with the Sun is zero when Mercury is at infinity.}{0.30}
+
+The force acting on Mercury from the side of the ring is equal to $$ F_r = m g_r = \frac{GMm}{2 R^3} r, $$integrating let us find potentialьную энергию $$ V_1 = - \frac{GM m}{4 R^3}r^2. $$The potential energy of interaction with the Sun must be added to it.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ V = - \frac{GM m}{4 R^3}r^2 - \frac{GM_S m}{r} $$
+\end{solcard}
+
+\begin{solcard}{B1}{Let the angular momentum of Mercury be $L$. Express the derivative of the distance to the Sun with respect to time $\dot{r} = dr/dt$ in terms of the derivative $u$ with respect to the angle $u' = du/d\theta$, and also in terms of $L$, $u$, $m$.}{0.40}
+
+Let us express the angular momentum through the time derivative of the angle $$ L = m r v_\theta = m r^2 \frac{d\theta}{dt}. $$Then $$ \frac{dr}{dt} = \frac{d r}{d \theta} \frac{d \theta}{dt} = \frac{L}{m r^2} \frac{d}{d\theta} \left( \frac{1}{u}\right) = - \frac{L u^2}{m} \frac{1}{u^2} \frac{du}{d\theta} = - \frac{L}{m} u'. $$
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{dr}{dt} = - \frac{L}{m} u' $$
+\end{solcard}
+
+\begin{solcard}{B2}{Write down an expression for the total mechanical energy of Mercury. Express your answer in terms of $u$, $u'$, $m$, $L$, $V(r)$.}{0.40}
+
+Kinetic energy $$ T = \frac{m v^2}{2} = \frac{m \dot{r}^2}{2 } + \frac{m v_\theta^2}{2} = \frac{L^2}{2 m} u^{\prime 2} + \frac{L^2}{2 m r^2}, $$$$ T = \frac{L^2}{2 m} (u^{\prime 2} + u^2). $$К ней нужно добавить potentialьную энергию $V(r) = V(1/u)$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ E =  \frac{L^2}{2 m} (u^{\prime 2} + u^2) + V \left( \frac{1}{u}\right) $$
+\end{solcard}
+
+\begin{solcard}{B3}{By differentiating the conservation law (for example, by angle), you obtain an expression for $u''(\theta)$. Express your answer in terms of $u$, $G$, $m$, $M_S$, $M$, $R$, $L$.}{0.60}
+
+Let us substitute the expression for potential energy: $$ E = \frac{L^2}{2 m} (u^{\prime 2} + u^2) - \frac{GM m}{4 R^3}\frac{1}{u^2} - GM_S m u. $$Differentiating, we get $$ E' = 0 = \frac{L^2}{m} (u' u'' + u u') + \frac{G M m}{2 R^3} \frac{u'}{u^3} - G M_S m u'. $$Сокращая на $u'$ (since в общем сrayае $u' = 0$ is not a solution to the equations of motion), we find
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ u'' = - u + \frac{G M_S m^2 }{L^2} - \frac{GM m^2}{2 R^3 L^2} \frac{1}{u^3} $$
+\end{solcard}
+
+\begin{solcard}{C1}{Using the equation from $B3$, you get an equation from which you can find the radius of the circular orbit $a$ (you don't need to solve it). The equation may include $m$, $M_s$, $M$, $R$, $G$, $L$, $a$.}{0.30}
+
+When moving in a circular orbit $u'' = 0$. Substituting $u = 1/a$, we obtain an equation for the orbital radius.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ - \frac{1}{a} + \frac{G M_S m^2 }{L^2}- \frac{GM m^2}{2 R^3 L^2} a^3 = 0 $$
+\end{solcard}
+
+\begin{solcard}{C2}{Obtain a linearized equation of motion for the deviation $\delta u$ of the orbital shape from circular, that is, an expression for $\delta u''$ to first order in $\delta u$. The answer may include the quantities used in C1.}{0.60}
+
+Substitute $u = u_0 + \delta u$ into the equation and expand to first order in $\delta u$: $$ \delta u '' = - u_0 - \delta u+  \frac{G M_S m^2 }{L^2} - \frac{GM m^2}{2 R^3 L^2} \left(\frac{1}{u_0^3}  - \frac{3 \delta u}{u_0^4} \right). $$Не зависящие от $\delta u$ terms сокращаются в силу уравнения from предыдущего partа. Substituting $u_0 = 1/a$, we obtain
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \delta u'' = - \left( 1 - \frac{3 G M m^2}{2 R^3 L^2} a^4\right) \delta u $$
+\end{solcard}
+
+\begin{solcard}{C3}{Let us neglect the terms describing the field of the ring. Write down the solution for $\delta u(\theta)$ in this approximation. Consider that $\theta = 0$ corresponds to the maximum value $u$. Express your answer in terms of the radius of the circular orbit $a$ and the eccentricity $e \ll 1$. Show that the solution describes a closed orbit.}{0.50}
+
+The field of the ring corresponds to the term containing $M$. Discarding it, we obtain $$ \delta u ''  = - \delta u. $$Отметим, что это equation является точным, since if пренебречь вкладом кольца, equation на $u$ будет линейным. Его solution, максимальное for/at $\theta = 0$, имеет вид $$ \delta u = A \cos \theta, \quad A > 0. $$Then полное solution $$ u = \frac{1}{a} \left(1 + a A \cos \theta \right) = \frac{1}{a} \left(1 + e \cos \theta \right), $$therefore coefficient перед косинусом $$ A = \frac{e}{a}. $$Since $u(\theta) = u(\theta + 2\pi)$, the orbit is closed.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \delta u = \frac{e}{a } \cos \theta. $$
+\end{solcard}
+
+\begin{solcard}{C4}{Find a solution to the equation for $\delta u(\theta)$ from $C2$ with the same initial conditions as in $C3$. Now consider the contribution of the ring. Express your answer in terms of the orbital radius $a$, its eccentricity $e\ll 1$ and $M$, $M_S$, $R$. The angular momentum value is equal to that found in A1.}{0.50}
+
+Let us substitute the expression for the angular momentum $$ \delta u'' = - \left(1 -\frac{3 G M m^2 a^4}{2 R^3 m^2 G M_S a}  \right) \delta u = - \left(1 -\frac{3  M a^3 }{2 M_S R^3 } \ \right) \delta u. $$ into the equation from C2. Its solution has the form
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \delta u = \frac{e}{a} \cos \left( \theta\sqrt{1 - \frac{3  M a^3 }{2 M_S R^3 } }\right) $$
+\end{solcard}
+
+\begin{solcard}{C5}{From the solution found it follows that during one revolution of the orbit the position of Mercury’s perihelion changes by a certain amount $\delta \theta$. Obtain the exact expression for $\delta  \theta$ following from the solution in $C4$, as well as an approximate expression for $\delta  \theta$ to first order in $M$. Indicate the direction of the perihelion shift (in the direction of Mercury's rotation or against it). Express your answer using $M$, $M_S$, $R$, $a$.}{0.50}
+
+Mercury is at perihelion (i.e., its distance to the Sun is minimal) when the value of $u$ is maximum, that is, $$ \theta = \frac{2\pi n}{\sqrt{1 - \dfrac{3  M a^3 }{2 M_S R^3 }} }. $$В частности, изменение положения перигелия за один оборот $$ \delta \theta  = \frac{2\pi }{\sqrt{1 - \dfrac{3  M a^3 }{2 M_S R^3 }} } - 2\pi \approx 2\pi \left( 1 + \dfrac{3  M a^3 }{4 M_S R^3 }\right) - 2\pi = \frac{3 \pi }{2} \frac{M a^3}{M_S R^3}. $$Since $\delta \theta > 0$, that is перигелий отстоит от предыдущего на angle больше $2\pi$, the direction of rotation of the perihelion coincides with the direction of movement of Mercury.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \delta \theta  = \frac{3 \pi }{2} \frac{M a^3}{M_S R^3} $$
+\end{solcard}
+
+\begin{solcard}{С6}{The table shows the orbital radii (we consider them approximately equal to the semimajor axes) and masses for the planets of the Solar System. For each of them, calculate the shift of the perihelion of Mercury per revolution around the Sun. In all cases, you can assume that the radius of the planet’s orbit is much greater than the radius of Mercury’s orbit. Express your answer in arcseconds. Indicate the two planets that make the greatest contribution to precession. Note: An arcsecond is a unit of measurement of angles that is 1/3600 of a degree.}{0.70}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Planet Contribution to $\delta \theta$, '' Venus $0.3669$ Earth $0.1677$ Mars $0.0051$ Jupiter $0.3806$ Saturn $0.0183$ Uranus $3.47\cdot 10^{-4} $ Neptune $1.06 \cdot 10^{-4}$
+\end{solcard}
+
+\begin{solcard}{C7}{Find the angle by which Mercury's perihelion shifts in one century, taking into account the contributions of all the planets given in the table. Express your answer in arcseconds.}{0.30}
+
+To a first approximation, we can assume that the contributions of all planets add up. In order to get the displacement per century, we multiply the total contribution of all planets by $100/T$, where $T$ is the period of Mercury in years, we get
+
+
+Note that the resulting value of $\Delta \theta$ differs from the exact prediction of Newtonian mechanics for orbital precession. This is due to the fact that we did not take into account the following orders in the expansion of the potential of the planets (the radius of Venus is only 2 times larger than the orbit of Mercury, so the first term of the expansion is clearly insufficient). In addition, it is necessary to take into account the ellipticity of the orbits and the fact that they do not lie in the same plane. Accurate prediction of classical mechanics $\Delta \theta = 532 ''$ for a century.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Delta \theta = 391'' \text{ за sтоLетие} $$
+\end{solcard}
+
+\begin{solcard}{D1}{Let Mercury move in the central field, the force acting on it is equal to $\vec{F}  = F_r \vec{e}_r$. Show that the derivative is $$ \frac{d}{dt} \left( \vec{v} \times \vec{L}\right) = B \frac{d}{d t} \vec{e}_r. $$Find coefficient $B$, выtimesandте его via/through $r$, $m$, $F_r$.}{0.80}
+
+We use Newton's second law $$ m \vec{a} = m \frac{d}{dt} \vec{v}  = \vec{F} = F_r \vec{e}_r, $$а also expression for momentа momentumа via/through угловую velocity Меркурия $$ \vec{L}  = m r^2 \vec{\omega}. $$Then требуемая производная $$ \frac{d}{dt} \left( \vec{v} \times \vec{L}\right) = \vec{a} \times \vec{L} = \frac{F_r}{m} \vec{e}_r \times m r^2 \vec{\omega}= - r^2F_r \vec{\omega} \times \vec{e}_r = - r^2 F_r \frac{d \vec{e}_r}{dt}. $$Тот же result можно поrayandть and более прямолинейным вычислением $$ \frac{d}{dt} \left( \vec{v} \times \vec{L}\right) = \frac{F_r}{m} \vec{e}_r \times \vec{L}  = \frac{F_r}{m} \vec{e}_r \times m \left[\vec{r} \times \vec{v} \right]. $$Раскрывая двойное vectorное произведение, we get $$ \frac{d}{dt} \left( \vec{v} \times \vec{L}\right) = F_r \left(\vec{r} (\vec{e}_r \vec{v}) - \vec{v} (\vec{r} \vec{e}_r) \right)= F_r \left( \frac{(\vec{r} \vec{v}) \vec{r}}{r} - r \vec{v}\right) = F_r r^2\left( \frac{(\vec{r} \vec{v}) \vec{r}}{r^3} - \frac{\vec{v}}{r}\right) . $$Let us find теперь производную $\vec{e}_r$: $$ \frac{d}{dt} \vec{e}_r = \frac{d}{dt} \left( \frac{\vec{r}}{r}\right) = \frac{\vec{v}}{r} - \vec{r} \frac{1}{r^2} \frac{d r}{dt} = \frac{\vec{v}}{r} - \frac{\vec{r} (\vec{v} \vec{r})}{r^3}. $$Comparing these expressions, we return to the same result
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{d}{dt} \left( \vec{v} \times \vec{L}\right)  = - r^2 F_r \frac{d \vec{e}_r}{dt}, \quad B = - r^2 F_r $$
+\end{solcard}
+
+\begin{solcard}{D2}{Find the time derivative of the Laplace vector for Mercury, which moves in the field of the Sun and the ring. Express your answer in terms of $m$, $M$, $R$, $r$, $G$, $\dfrac{d \vec{e}_r}{dt}$.}{0.50}
+
+Using the relation from the previous paragraph, we differentiate the Laplace vector and obtain $$ \frac{d \vec{A}}{dt} = \frac{d}{dt} \left( \vec{v} \times \vec{L}\right) - G M_S m \frac{d \vec{e}_r}{dt} = \left( -r^2 F_r - G M_S m\right) \frac{d \vec{e}_r}{dt}. $$Force, действующая на Меркурий, equals $$ F_r = - \frac{GM_S m}{r^2 } + \frac{GMm}{2 R^3} r. $$The first term in the force cancels with the second term from the definition of the Laplace vector. Therefore, when moving under the influence of gravity towards the Sun, the Laplace vector is conserved. Taking into account the ring we obtain
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{d \vec{A}}{dt} = - \frac{GMm}{2 R^3} r^3\frac{d \vec{e}_r}{dt} $$
+\end{solcard}
+
+\begin{solcard}{D3}{Let $\theta$ be the polar angle between the radius vector of Mercury $\vec{r}$ and the direction of the axis $x$. Angle $\theta$ increases as Mercury moves. Calculate the derivatives of the Laplace vector components with respect to $\theta$, $A_x'$, and $A_y'$. Express your answer using $m$, $M$, $R$, $r$, $G$, $\theta$.}{1.00}
+
+From the previous result it follows $$ d \vec{A} = - \frac{GMm}{2 R^3} r^3 d \vec{e}_r, $$differentiating по углу, we get $$ \frac{d \vec{A}}{d\theta} = - \frac{GMm}{2 R^3} r^3\frac{d \vec{e}_r}{d\theta}. $$Проекции единичного vectorа $\vec{e}_r$ на координатные оси $$ e_{rx} = \cos \theta, \quad e_{r y} = \sin \theta, $$а их производные $$ \frac{d e_{rx}}{d\theta}  = - \sin\theta, \quad \frac{d e_{ry}}{d\theta} = \cos \theta. $$Then for the Laplace vector
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{d A_x}{d\theta} =  \frac{GMm}{2 R^3} r^3 \sin \theta, \quad \frac{d A_y}{d\theta} =   - \frac{GMm}{2 R^3} r^3 \cos \theta $$
+\end{solcard}
+
+\begin{solcard}{D4}{Find the change in the Laplace vector $\Delta \vec{A}$ over the period. Indicate the projections of this change on the axes indicated in the previous paragraph. When calculating, assume that Mercury moves in an elliptical orbit. Express your answer in terms of the semimajor axis of the orbit $a$, eccentricity $e$, $G$, $m$, $M$, $M_S$.}{1.00}
+
+When moving along an elliptical orbit $$ r = \frac{p} {1 + e \cos \theta}, $$where $p = a(1 - e^2)$ – parameter эллипса. Then производные компонент vectorа Лапласа имеют вид $$ \frac{d A_x}{d\theta} =  \frac{GMm}{2 R^3} \frac{p^3}{(1 + e\cos \theta)^3} \sin \theta, \quad \frac{d A_y}{d\theta} =   - \frac{GMm}{2 R^3} \frac{p^3}{(1 + e\cos \theta)^3} \cos \theta. $$Integrating по углу от $0$ до $2 \pi $ (or что то же самое, от $-\pi$ до $\pi$, since функции periodandчные), we get изменение vectorа Лапласа за period: $$ \Delta A_x = \frac{GM mp^3}{2 R^3} \int_{-\pi}^{\pi} \frac{\sin \theta \, d \theta}{(1 + e \cos \theta)^3} = 0, $$since function под интегралом нечетная, $$ \Delta A_y =- \frac{GM mp^3}{2 R^3} \int_{0}^{2 \pi} \frac{\cos \theta \, d \theta}{(1 + e \cos \theta)^3} = \frac{GM mp^3}{2 R^3} \frac{3 \pi e}{(1- e^2)^{5/2}}. $$The integral from the condition was used here. Substituting the formula for the parameter, we get
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Delta A_x = 0, \quad \Delta A_y = \frac{3 \pi GM m a^3}{2 R^3}  e(1- e^2)^{1/2}. $$
+\end{solcard}
+
+\begin{solcard}{D5}{Find the rotation of the direction to the perihelion of Mercury over the period $\Delta \theta$. Express your answer in terms of $G$, $M_S$, $M$, $R$, $a$, $e$. By what percentage will the result of point C7 change for the perihelion shift due to taking into account the eccentricity of Mercury's orbit?}{0.50}
+
+The Laplace vector is directed along the $x$ axis, so the change in the Laplace vector is perpendicular to it. This means, to a first approximation, its length does not change, but it itself rotates by an angle $$ \Delta \theta = \frac{\Delta A_y}{A} = \frac{3\pi }{2} \frac{M a^3}{M_S R^3} (1 - e^2)^{1/2}. $$Since vector Лапласа направлен к перигелию, его angle поворота equals смещению перигелия. Точный answer отличается от for/atближенного answerа from части C только множителем $(1 - e^2)^{1/2} \approx 1 - e^2/2$. From-за этой поправки answer уменьшится  на $e^2/2 \approx 0.02 = 2\text{%}$.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Delta \theta =  \frac{3\pi }{2} \frac{M a^3}{M_S R^3} (1 - e^2)^{1/2}. $$ Angle поворота перигелия уменьшится на $2 \text{%}$.
+\end{solcard}
+
+\end{document}

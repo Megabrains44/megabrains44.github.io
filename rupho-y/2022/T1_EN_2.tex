@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Cell membranes}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Electrical interactions play an important role in living organisms. If you place an acid molecule, such as DNA, in water, some of the weakly bound atoms may dissociate. Positive ions will leave the molecule, thereby making it negatively charged. In the same way, cell membranes in water will be negatively charged, and the electrostatic repulsion between them prevents macromolecules, membranes and cells from “sticking together.” Since the substance as a whole is electrically neutral, a large number of positive ions in the solution will cause the force of interaction between the membranes to weaken with distance. When solving the problem, assume that the temperature is everywhere equal to room temperature $T$. The cell membrane can be considered a uniformly charged sphere with a surface charge density $(-\sigma)$. The membrane contains the neutral contents of the cell. The membrane is surrounded by a solution with dielectric constant $\varepsilon$. Positive ions float in a thin layer of this solution near the outer surface of the membrane. Let us consider a fragment of the membrane and the adjacent layer. In this region, consider the membrane field to be uniform. Let us direct the $x$ axis with its origin on the membrane perpendicular to it (see figure). The system is in thermal equilibrium with the environment. Due to electrostatic interaction, the density of positive ions in the solution is not uniform, but each part can be considered to be locally in equilibrium. The behavior of positive ions in this case is similar to the behavior of molecules in the atmosphere with the only exception that the positive ions are affected by an electric field, and the molecules of the atmosphere are affected by a gravitational field. Let us take the concentration of positive ions $n_0$ near the surface of the membrane as an indefinite constant. Electron charge $-e$, positive ion charge $+e$, Boltzmann constant $k$, electric constant $\varepsilon_0$. Do not take into account gravity and the viscosity of water.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Write down the differential equation that the electric field potential $\varphi$ must satisfy. \textit{Hint:} according to the Boltzmann distribution, the concentration $n$ of particles with energy $E$ is proportional to $\exp\left(-\frac{E}{kT}\right)$, where $T$ is the absolute temperature of the medium.}{1.00}
+
+The potential on the surface of the cellular membrane is chosen equal to zero.
+
+\problembox{A2}{Write down the boundary conditions satisfied by the potential $\varphi$ on the surface of the membrane, i.e. find $\varphi(0)$, $\displaystyle\frac{d\varphi}{dx}(0)$.}{0.30}
+
+Under certain conditions, the solution to the differential equation obtained in step $\textbf{A1}$, satisfying the boundary conditions obtained in step $\textbf{A2}$, can be represented as a logarithmic function: $\varphi(x)=A_1\ln(1+B_1x)$.
+
+\problembox{A3}{Define $n_0$, $A_1$ and $B_1$. Express $\varphi(x)$ and $n(x)$ (the concentration of positive ions at point $x$) in terms of $\sigma$, $\varepsilon$, $\varepsilon_0$, $T$, $e$ and $k$.}{0.80}
+
+\problembox{A4}{Show that the resulting $n(x)$ guarantees the electrical neutrality of the system.}{0.40}
+
+\problembox{A5}{Per unit area of the membrane, find the energy of the electric field $U_f$ and the sum of the potential energies of positive ions $U_e$ in this field.}{1.50}
+
+Let us now consider a situation where two cells are located close to each other. A simplified model looks like this: two identical large spherical surfaces are located so that the gap between them is equal to $2D$, and the gap size is much less than the radius of curvature of the surfaces. Both membranes are uniformly charged with a charge with surface density $-\sigma$. We choose the middle of the gap as the origin of coordinates, direct the $x$ axis perpendicular to the membranes, and take the potential at the origin equal to zero. Let us again take the concentration of positive ions $n_0$ at $x=0$ as an indefinite constant. The dependence of the potential on the coordinate can be sought in the form $\varphi(x)=A_2\ln\left[\cos(B_2x)\right]$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Define $A_2$ and $B_2$. Express your answer in terms of $T$, $\varepsilon$, $\varepsilon_0$, $e$, $k$ and $n_0$.}{0.80}
+
+\problembox{B2}{Let us introduce the quantity $\theta=B_2D$. From the boundary conditions on the membrane surface, obtain an equation relating $\theta$ and $e$, $\sigma$, $D$, $\varepsilon$, $\varepsilon_0$, $k$ and $T$.}{0.50}
+
+\problembox{B3}{Express $n_0$ in terms of $D$, $\sigma$, $\varepsilon$, $\varepsilon_0$, $T$, $e$, $k$ and $\theta$.}{0.40}
+
+\problembox{B4}{Find the difference $\Delta n\equiv n(\pm D)-n_0$ between the concentrations of positive ions at the surface of the two membranes and in the middle between them. Express your answer in terms of $\sigma$, $\varepsilon$, $T$ and $k$.}{0.50}
+
+\problembox{B5}{Show that the resulting $n(x)$ guarantees the electrical neutrality of the system.}{0.50}
+
+\problembox{B6}{Find the total force $f$ acting per unit area of the membrane. Hydrostatic pressure can be neglected. Express your answer in terms of $e$, $D$, $\theta$, $\varepsilon$, $\varepsilon_0$, $k$ and $T$. \textit{Hint:} positive ions in water behave like an ideal gas and are locally in thermal equilibrium.}{1.50}
+
+\problembox{B7}{For relatively small distances $D$ the dependence $f(D)$ has the form: $f=k_1D^\alpha$, and for large ones: $f=k_2D^\beta$. Find $\alpha$ and $\beta$.}{1.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2848}
+
+\end{document}

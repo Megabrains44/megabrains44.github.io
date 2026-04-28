@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Three devices}}
+\author{\normalsize Y14 (2014) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+An electrical circuit consisting of two identical capacitors $10~\mu\text{F}$ and two resistors $1~\text{k}\Omega$ is connected to an alternating voltage source $220~\text{V}$, $50~\text{Hz}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{What would an ideal voltmeter show when connected between terminals $A$ and $B$?}{0}
+
+\problembox{A2}{What current would be measured by an ideal ammeter connected to terminals $A$ and $B$ instead of a voltmeter?}{0}
+
+\problembox{A3}{What readings will be given by a wattmeter whose high-resistance winding (voltage winding) is connected directly to the network $220~\text{V}$, and the low-resistance (current) winding is connected between terminals $A$ and $B$?}{0}
+
+A wattmeter is a device that at each moment of time measures the voltage on one of its windings and the current through the other, after which it multiplies them and averages the resulting power over a large time interval.
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3967}
+
+\end{document}

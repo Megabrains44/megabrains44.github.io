@@ -1,0 +1,128 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Measuring the radius of a star}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Measuring the radii of stars is a difficult task due to the large distance to them. Irregularities in the atmosphere blur the image, making it difficult to determine their actual size. One possible method for measuring the radius of stars is to use an interferometer. This method was proposed by Michelson and Pease in 1921 to measure the diameter of Betelgeuse. The figure below shows a diagram of the interferometer used to measure the radius of the star.
+
+Rice. 1. The path of light rays coming from a star.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Reflecting from the mirror M1, beam 1 hits the beam splitter HM, which reflects $50\%$ light in intensity and transmits the remaining $50\%$. The reflected beam hits the mirror M3, reflected from which it passes through HM and falls on the screen. At the same time, beam 2 is reflected from mirror M2. Reflected from HM, it also hits the screen. Consider that mirrors M1, M2, M3 reflect all the light incident on them, adding $\pi$ radians to its phase. The wavelength of the light used is $\lambda$.
+
+\section*{Part A. Rays parallel to the $z$ axis (1.6 points)}
+
+\problembox{A1}{Let us consider the case when rays 1 and 2 are parallel to the $z$ axis, and the mirror M3 is parallel to the $xy$ plane. Find the difference in optical paths $\Delta_{12}$ between rays 1 and 2 if they both fall on the screen at point $O$.}{0.20}
+
+\problembox{A2}{Let us consider the case when the mirror M3 is deflected by an angle $\alpha$ from the plane $xy$ by rotating around the axis $x$ (see Fig. 1). If ray 1' hits the screen at $O$, find the optical path difference $\Delta_{1'2}$ between rays 1' and 2. Show that, to a first approximation, the path difference is independent of $\alpha$ and simplify your answer at $\alpha\ll1$.}{1.40}
+
+\section*{Part B. Rays at angle $\theta$ in plane $yz$ (4.7 points)}
+
+Let the rays now fall on the interferometer at an angle $\theta\ll1$ to the $z$ axis in the $yz$ plane, as shown in the figure below. As in A2, mirror M3 is deflected by an angle $\alpha$. Note: Further, in all points of the problem, work only in a linear approximation when calculating optical paths, i.e. neglect terms containing factors $\alpha^2$, $\theta^2$, $\alpha\theta$, etc.
+
+Fig. 2. Rays moving at an angle $\theta$ in the plane $yz$ and incident on the screen at point $O$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Let rays 1 and 2 fall at fixed points of mirrors M1 and M2, respectively. Show in the solution sheets that, to a first approximation, the optical paths of rays 1 and 2 from the points of reflection from the mirrors M1 and M2, respectively, to the screen do not depend on the angles $\theta$ and $\alpha$.}{0.80}
+
+\problembox{B2}{Let the angles $\alpha$ and $\theta$ be fixed, and the positions of the points of incidence of rays 1 and 2 on the mirrors M1 and M2, respectively, can change. Show in the solution sheets that the optical paths of rays 1 and 2 from the dotted line corresponding to the coordinate $z_\text{p}=L_3+L_4$ (meaning the points of intersection of the dotted line with the trajectories of rays 1 and 2 before falling on the mirrors M1 and M2, respectively) to the screen, to a first approximation, do not depend on the angles $\theta$ and $\alpha$.}{0.80}
+
+If rays 1 and 2 fall on the screen at point $O$, the phase difference between them can be written as:$\delta_{12}=\frac{2\pi}\lambda b\theta+\delta_O.$
+
+\problembox{B3}{Express $b$ and $\delta_O$ in terms of $\lambda$, $L_1$, $L_2$, $L_3$, $L_4$.}{1.00}
+
+If ray 1' reflected from mirror M1 and ray 2' reflected from mirror M2 fall at the same point on the screen with coordinate $y$, the phase difference between them can be written as:$\delta_{1'2'}=\frac{2\pi}\lambda b\theta+\delta_y.$
+
+\problembox{B4}{Show in the solution sheets that $\delta_y=\delta_O-\cfrac{2\pi}{\lambda}\cdot 2\alpha y $ Note: Further, in all points of the problem, you can use the statements of points B1-B4, even if they are not proven.}{0.60}
+
+\problembox{B5}{Thus, an interference pattern will appear on the screen. Find the distance $y_1$ to the interference maximum closest to point $O$. Also find the distance $\Delta y_m$ between two adjacent interference maxima. Give numerical answers in the case of $L_1=0.50~m$, $L_2=1.50~m$, $L_3=0.50~m$, $L_4=1.00~m$, $\alpha=10^{-4}$, $\theta=10^{-5}$, $\lambda=500~nm$.}{0.60}
+
+\problembox{B6}{Find how the intensity $I(y)$ on the screen depends on the coordinate $y$ if its maximum value is $I_0$, substituting here the numerical values from the previous paragraph. Consider the effect of the beam splitter on the intensity of transmitted light.}{0.90}
+
+\section*{Part C. Well, completely arbitrary rays (1.0 points)}
+
+Let now rays 1'' and 2'' fall on the interferometer at an angle $\theta_x\ll1$ to the plane $yz$ and at an angle $\theta_y\ll1$ to the plane $xz$ (see Fig. 3).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{Express the wave vector $\vec k$ of the incident rays in terms of $\theta_x$, $\theta_y$, the modulus of the wave vector $k=2\pi/\lambda$ and the unit unit vectors of the coordinate axes.}{0.40}
+
+So, let the ray ''1'' reflected from the mirror M1 and the ray ''2'' reflected from the mirror M2 fall at the same point on the screen on the axis $y$ at a distance $y$ from the point $O$.
+
+\problembox{C2}{Express the phase difference between beams 1'' and 2'' in terms of $\lambda$, $L_1$, $L_2$, $L_3$, $L_4$, $\theta_x$, $\theta_y$, $\alpha$, $y$.}{0.60}
+
+\section*{Part D: Measuring Radius (2.7 points)}
+
+Consider a star with angular radius $\theta_R$, which we need to determine. For simplicity, we will assume that the star radiates as a homogeneous disk, i.e. the intensity of light coming from the solid angle $\mathrm d\Omega=\mathrm d\theta_x\mathrm d\theta_y$ is equal to $\mathcal J\mathrm d\Omega$, where $\mathcal J$ is a constant value in any direction inside the star's disk. Let the interferometer (more precisely, the $z$ axis) be directed exactly to the center of the star. At $\alpha > 0$ an interference pattern will be observed on the screen. Let us denote the minimum and maximum intensities on the screen along the $y$ axis as $I_{y(min)}$ and $I_{y(max)}$, respectively. Let us introduce the visibility $V$ of the interference pattern as:$V=\frac{I_{y(max)}-I_{y(min)}}{I_{y(max)}+I_{y(min)}}.$
+
+Fig. 4. Left: side view of the star and observer; right: view of the star's disk from the observation point.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{D1}{Write $V$ as an integral over one variable. It is not necessary to perform integration explicitly. Hint: the integral of some function $f(\theta_y)$, depending only on $\theta_y$, over the surface of a disk with radius $\theta_R$ can be represented as:$I=\int\limits_{-\theta_R}^{\theta_R}\mathrm d\theta_y\int\limits_{-\sqrt{\theta^2_R-\theta^2_y}}^{\sqrt{\theta^2_R-\theta^2_y}}\mathrm d\theta_x\sim f(\theta_y)=\int\limits_{-\theta_R}^{\theta_R}\mathrm d\theta_y\cdot 2\sqrt{\theta^2_R-\theta^2_y}f(\theta_y).$}{1.80}
+
+The interferometer is used to observe Betelgeuse. If we symmetrically move mirrors M1 and M2 away from the center of HM $\Big($ so that $L_1^*=L_1+d/2$ and $L_2^*=L_2+d/2\Big)$, then the visibility of $V$ will be zeroed at $d=0.97~m,3.12~m,\ldots$ (the system parameters are the same as in B3). In this part of the problem, $L_1$ and $L_2$ are not given numerically, but $\lambda=500~\text{nm}$.
+
+\problembox{D2}{Find Betelgeuse's angular radius $\theta_R$. Find its radius $R$ if the distance to it is $h=6.079\cdot10^{15}~$. Hint: The first two zeros of the integral$F_n=\int_0^1\left(1-w^2\right)^n\cos(\eta w)\sim\mathrm dw$as functions of $\eta$ are given in the table below.}{0.90}
+
+Hint: The first two zeros of the integral$F_n=\int_0^1\left(1-w^2\right)^n\cos(\eta w)\sim\mathrm dw$as a function of $\eta$ are given in the table below.
+
+$n$ $\eta_1$ $\eta_2$ 0.5 3.832 7.016 0 4.493 7.725 1.5 5.136 8.417
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3485}
+
+\end{document}

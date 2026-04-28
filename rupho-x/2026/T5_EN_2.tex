@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Enjoy your steam!}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem is devoted to droplet evaporation by diffusion and related effects. Diffusion is the spatial redistribution of mixture components due to random thermal molecular motion. At each point, the particle flux density of component $i$ is described by Fick's law:
+\[
+\vec{j}_i=-D\,\nabla n_i,
+\]
+where $D$ is the diffusion coefficient and $n_i(\vec r)$ is the number density of component $i$. In this task, consider only a two-component mixture of air and water vapor (air means all gases except water vapor).
+
+\section*{Part A. Stefanovskoe current (3.7 points)}
+
+Consider a stationary spherical drop of water in the air. The initial radius of the drop is $r_0$. The relative humidity of the air far from the drop is $\eta$, the temperature of the air and the drop at all points is the same and equal to $T_0$, the concentration of saturated vapor at this temperature is $n_0$. Let $\vec{r}$ be the radius vector from the center of the drop to some point in space, $|\vec{r}| = r$. Let us consider a steady state, so that the diffusion flux of vapor, due to spherical symmetry, is equal to $\vec{j}(\vec{r}) = j(r) \vec{e}_r$, where $\vec{e}_r = \vec{r}/r$. In this part, the diffusion coefficient is assumed to be constant and equal to $D$. To begin with, we will assume that the air concentration is the same throughout the entire space, so there is no diffusion of air.
+
+\problembox{A1}{Using the law of conservation of mass, express $j(r)$ in terms of $j(r_0)$, $r_0$, $r$.}{0.20}
+
+\problembox{A2}{Find the dependence of $n(r)$ vapor concentration on the distance to the center of the drop. Express your answer in terms of $n_0$, $\eta$, $r_0$, $r$.}{0.30}
+
+\problembox{A3}{Find the initial rate of change in the mass of the drop $I_1$. Express your answer in terms of $D$, $n_0$, $\eta$, $r_0$, $m_\mathrm{w}$. Hereinafter, the rate of change in the mass of a drop is called $I = -\cfrac{dm}{dt}$, where $m$ is the mass of the drop.}{0.30}
+
+\problembox{A4}{Find the time for the drop to completely evaporate. Assume that the droplet evaporates slowly enough so that at each instant the flow can be considered steady. Express your answer in terms of $D$, $n_0$, $\eta$, $r_0$, $\rho_\mathrm{w}$, $m_\mathrm{w}$.}{0.30}
+
+\problembox{A5}{Calculate the evaporation time of a drop of radius $r_0 = 0.5~\text{mm}$. Temperature $T_0 = 293~\text{K}$, diffusion coefficient $D = 0.25~\mathrm{cm^2/s}$, saturated vapor pressure at this temperature $p_0 = 2.34~\text{kPa}$, air humidity far from the drop $\eta = 0.5$.}{0.30}
+
+Due to the low rate of processes occurring under the conditions of the problem, the viscosity and inertness of the gas can be neglected. Then the condition for mechanical equilibrium of the medium is the equality of pressures throughout the entire space, which is impossible with a constant concentration of air in the medium. Let us denote the air concentration at a distance $r$ from the center of the drop $N(r)$.
+
+\problembox{A6}{Express the derivative of $N'(r)$ in terms of $n'(r)$. Hereinafter $n'(r) = \cfrac{dn(r)}{dr}$, $N'(r) = \cfrac{dN(r)}{dr}$.}{0.20}
+
+The presence of the gradient $N(r)$ leads to the presence of diffusion air flow. However, the drop does not absorb air, therefore, in addition to diffusion, in the described system there must be a hydrodynamic flow (the flow of a mixture of air and steam as a whole), compensating for the air flow to the drop. The presence of such a flow was first noticed in the 19th century by the Austrian-Slovenian physicist and mathematician Josef Stefan, which is why such a flow is called Stefan’s. Let the flow velocity at a distance $r$ from the center of the drop be equal to $v(r) \vec{e}_r$. Air humidity far from the drop is $\eta$. Let us denote the total concentration of the mixture of air and vapor far from the droplet as $n_s$.
+
+\problembox{A7}{Express $v(r)$ in terms of $D$, $N(r)$, $N'(r)$, $r$.}{0.50}
+
+\problembox{A8}{Express the total (taking into account diffusion and hydrodynamic flow) vapor flow from the drop $j_{\mathrm{sum}}(r)$ through $D$, $n(r)$, $n'(r)$, $n_s$, $r$.}{0.50}
+
+\problembox{A9}{Find the dependence of $n(r)$ vapor concentration on the distance to the center of the drop. Express your answer in terms of $n_0$, $n_s$, $\eta$, $r_0$, $r$.}{0.50}
+
+\problembox{A10}{Find the initial rate of change in the mass of the drop $I_2$. Express your answer in terms of $D$, $n_0$, $n_s$, $\eta$, $r_0$, $m_\mathrm{w}$.}{0.30}
+
+\problembox{A11}{Calculate the value of $\cfrac{I_2 - I_1}{I_1}$, where $I_1$, $I_2$ are the values from points A3, A10. Ambient temperature $T_0 = 293~\text{K}$, total pressure of air and water vapor $P = 101.3~\text{kPa}$, take the remaining necessary numerical values from point A5.}{0.30}
+
+It is interesting to note that the Stefan flow can be observed directly, since thanks to it small aerosol particles are repelled by evaporating droplets and attracted by growing droplets.
+
+In the future, do not take into account the Stefan flow!
+
+\section*{Part B. Cooling of droplets during evaporation (3.5 points)}
+
+As is well known, liquids cool during evaporation. In this part, consider a droplet of initial radius $r_0$ in air with relative humidity $\eta$ far from the droplet. If temperature is nonuniform, heat flux appears due to thermal conductivity. Fourier's law is
+\[
+\vec q=-\varkappa \nabla T,
+\]
+where $\varkappa$ is thermal conductivity and $T(\vec r)$ is temperature. In this problem, treat $\varkappa$ of the air-vapor mixture as temperature independent. Let the steady droplet temperature be $T_0$ and far-field air temperature be $T_\infty$. Use the Clausius-Clapeyron approximation
+\[
+p(T)=p(T_\infty)\exp\!\left(\frac{\mu_\mathrm{w}L}{R}\left(\frac{1}{T_\infty}-\frac{1}{T}\right)\right).
+\]
+
+\problembox{B1}{Find the steady-state temperature distribution in space $T(r)$ depending on the distance $r$ to the center of the drop. Express your answer in terms of $T_0$, $T_\infty$, $r_0$, $r$.}{0.30}
+
+\problembox{B2}{Determine the power $J$ supplied to the drop at the initial moment of time due to the thermal conductivity of the air. Express your answer in terms of $\varkappa$, $T_0$, $T_\infty$, $r_0$.}{0.20}
+
+If droplet temperature $T_0$ differs significantly from $T_\infty$, the temperature dependence of diffusion must be included:
+\[
+D(T)=D_\infty\left(\frac{T}{T_\infty}\right)^\alpha,
+\]
+where $D_\infty$ is a constant and $\alpha>1$.
+
+\problembox{B3}{Determine the initial rate of change in droplet mass. Express your answer in terms of $T_0$, $T_\infty$, $D_\infty$, $m_\mathrm{w}$, $k_\mathrm{B}$, $p(T_0)$, $p(T_\infty)$, $r_0$, $\eta$, $\alpha$. Note: in integrals of the form $\int f(1/x)\,dx/x^2$, the substitution $y=1/x$ may be useful.}{1.50}
+
+Note. In integrals of the form $$\int f\left(\frac{1}{x}\right) \frac{dx}{x^2}$$
+
+\problembox{B4}{From the droplet thermal balance condition, obtain an equation relating $T_0$, $T_\infty$, $\varkappa$, $D_\infty$, $L$, $m_\mathrm{w}$, $k_\mathrm{B}$, $p(T_0)$, $p(T_\infty)$, $r_0$, $\eta$, $\alpha$.}{0.30}
+
+\problembox{B5}{Calculate the droplet temperature $T_0$ to the nearest tenth of a kelvin. Use: $T_\infty = 293.0~\text{K}$, $p(T_\infty)=2.34~\text{kPa}$, $\varkappa=26.0~\text{mW}/(\text{m}\cdot\text{K})$, $D_\infty=0.25~\text{cm}^2/\text{s}$, $r_0=0.5~\text{mm}$, $\eta=0.5$, $\alpha=1.8$.}{1.20}
+
+Calculate the droplet temperature $T_0$ to the nearest tenth of a kelvin. Use the following numerical values:
+
+In the future, do not take temperature effects into account! Assume that the temperature at all points in space is the same.
+
+\section*{Part C. Accounting for surface curvature (0.8 points)}
+
+The saturated vapor pressure above a curved surface differs from that above a flat surface. Use Kelvin's approximation:
+\[
+p_r \approx p_\infty\left(1+\frac{r_\sigma}{r}\right),
+\]
+where $p_\infty$ is saturated vapor pressure above a flat surface ($r\to\infty$), and $r_\sigma$ is a constant. This effect causes droplets to evaporate even in saturated air ($\eta=1$), and is important for fog physics. Consider a droplet of radius $r_0$ in saturated air, with temperature $T_0$, saturated vapor concentration above a flat surface $n_0$, and diffusion coefficient $D$.
+
+\problembox{C1}{Find the time for the drop to completely evaporate. Express your answer in terms of $r_0$, $\rho_w$, $D$, $n_0$, $r_\sigma$.}{0.50}
+
+\problembox{C2}{Calculate the evaporation time of a fog droplet with radius $r_0 = 10^{-5}~m$. Temperature $T_0 = 293~\text{K}$, saturated vapor pressure at this temperature $p_0 = 2.34~\text{kPa}$, diffusion coefficient $D = 0.25~\mathrm{cm^2/s}$, $r_\sigma = 1.08 \cdot 10^{-9}~m$.}{0.30}
+
+Further, do not take into account the dependence of saturated vapor pressure on surface curvature!
+
+\section*{Part D. Electrostatic analogy (2.0 points)}
+
+Electrostatic methods are applicable to stationary diffusion by analogy between electric potential and vapor concentration. Outside a droplet:
+\[
+\vec j=-D\nabla n.
+\]
+In electrostatics:
+\[
+\vec E=-\nabla\varphi.
+\]
+So we can map flux $\vec j$ to electric field $\vec E$, and concentration $n(\vec r)$ to potential $\varphi(\vec r)$. The droplet surface corresponds to a conductor surface at fixed potential (set by near-surface saturated concentration). Consider two equivalent systems: an isolated conductor with charge $q$ and potential distribution $\varphi(\vec r)$, and an evaporating droplet of the same shape with concentration distribution $n(\vec r)=\gamma\varphi(\vec r)$ for constant $\gamma$. If the electric field is $\vec E(\vec r)$, then the diffusion flux is $\vec j(\vec r)=\gamma D\,\vec E(\vec r)$.
+
+\problembox{D1}{Show that the rate of change of mass $I$ of the drop in this case is proportional to the charge of the conductor $q$ in the equivalent electrical system. Define the relation $I/q$. Express your answer in terms of $\varepsilon_0$, $\gamma$, $D$, $m_\mathrm{w}$.}{0.40}
+
+\problembox{D2}{Find the rate of change in the mass of a drop of arbitrary shape if a conductor of the same shape has an electric capacitance $C$. The drop has a temperature $T_0$, the concentration of saturated vapor at this temperature is $n_0$, and far from the drop the relative air humidity is $\eta$. Also use $m_\mathrm{w}$, $D$, $\varepsilon_0$ in your answer.}{0.60}
+
+Using an electrostatic analogy, we can evaluate the influence of the evaporation of different droplets on each other. Consider a stationary spherical drop of radius $r_1$. The air humidity far from the drop is $\eta$, the temperature of the entire system is $T_0$, the concentration of saturated vapor at this temperature is $n_0$. Let us denote the initial rate of change in the mass of the drop in this case by $I$. Let us now introduce a second drop of radius $r_2$ into the system. It is located motionless at a distance $l \gg r_1, r_2$ from the first drop. In this case, the initial rate of change in the mass of the first drop is $I'$.
+
+\problembox{D3}{Find $\cfrac{I' - I}{I}$. Express your answer in terms of $r_1$, $r_2$, $l$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4813}
+
+\end{document}

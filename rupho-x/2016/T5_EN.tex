@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Down the straight line that leads you up}}
+\author{\normalsize X16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+An ideal polyatomic gas participates in a process, the states of which are depicted in the figure by points on the straight line $p=p_M (1- \alpha V)$, where $\alpha$ is a certain constant coefficient, $V$ is the current value of the volume. Molar heat capacity $C_V$ does not depend on temperature.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{At what pressure $p_0$ does the heat capacity of the gas become zero?}{2.00}
+
+\problembox{A2}{Now suppose the process involves an ideal Clausius gas, whose equation of state is
+\[
+p=\frac{RT}{V-b}.
+\]
+For which gas (ideal polyatomic or ideal Clausius) is the temperature at the point of maximum heat capacity higher? Calculate the temperature difference $\Delta T$ between those points. Given:
+$b = 44~\text{cm}^3/\text{mol}$, $R = 8.314~\text{J}/(\text{mol}\cdot\text{K})$, $p_M = 1.51~\text{MPa}$, and $b \ll V_M$, where $V_M=p_M/\alpha$ is a fixed volume.}{3.00}
+
+\problembox{A3}{What value does the molar heat capacity $C$ of an ideal polyatomic gas participating in the process described in paragraph A1 tend to as the volume tends to zero?}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4003}
+
+\end{document}

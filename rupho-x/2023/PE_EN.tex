@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Anisotropy of thermal conductivity}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In September 2021, scientists from the University of Chicago created a material with a record anisotropy of thermal conductivity: the thermal conductivity of the material along a selected direction turned out to be almost a thousand times less than the thermal conductivity in directions perpendicular to it! They were able to achieve this effect by layering two-dimensional layers of atoms on top of each other in random orientations, as shown in Figure $\it1$. While the theoretical side of this effect is quite complex and goes far beyond the classical school curriculum, the experimental side turns out to be accessible to understanding and processing. In this problem, we explore exactly how scientists were able to measure the thermal conductivity of a material along different directions.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{About the least squares method.}
+
+To solve the problem, you will need a generalization of the least squares method to the case of an arbitrary, not necessarily linear, dependence. Let a set of points $(x_i, y_i)$ be given as an experimental dependence, which we want to model with some function $f=f(x, a_1, a_2, \dots)$, where $a_1, a_2, \dots$ are parameters that can be varied. By the definition of least squares, the variation of the parameters must result in the following sum being the minimum: $$ S = \sum_i~\Delta y_i^2 = \sum_i~\left(y_i-f(x_i, a_1, a_2, \dots)\right)^2 \rightarrow \min_\{a_1, a_2, \dots\} $$Задача минимизации этой суmmы сводится к решению системы уравнений:где символ $\partial$ denotes differentiation with respect to the parameter specified in the denominator when the other parameters are fixed.
+
+\section*{Part A. Transverse thermal conductivity (4.0 points).}
+
+To measure thermal conductivity in the direction perpendicular to the layers, a homogeneous sample with a diameter of $D=1\ mm$ and a thickness of $d$ is clamped between two flat plates of materials with high thermal conductivity, one of which is maintained at a constant temperature $T_0$, and the other is supplied with a constant power $Q=3.1\cdot10^{-4}\ Вт$. After thermal equilibrium is established, the temperature $T_1$ of the second plate is measured, from which the difference $\Delta T=T_1-T_0$ is obtained. To clarify the nature of the mechanisms of thermal conductivity, researchers also need to test whether the thermal conductivity of a material depends on its temperature.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+The table in the answer sheet gives you the values of the temperature difference $\Delta T$ depending on the thickness of the sample $d$ for three different temperatures $T_0$ and two different materials - molybdenum sulfides $\rm(MoS_2)$ and tungsten sulfides $\rm(WS_2)$. In an ideal experiment, the temperature difference $\Delta T$ could be described by the formula:\begin\{equation\}\Delta T=Ad,\tag1\end\{equation\}where $A=\cfrac{4Q}{\pi\varkappa_\perp D^2}$ and $\varkappa_\perp$ are the thermal conductivity coefficient in the direction perpendicular to the layers. However, heat exchange between two plates occurs not only due to thermal conductivity, but also due to other methods of heat transfer. They can be taken into account with good accuracy by adding a correction term to equation $(1)$:\begin\{equation\}\Delta T=Ad-BT_0^\{1/2\}d^\{3/2\}.\tag2\end\{equation\}
+
+\problembox{A1}{Using the least squares method, obtain formulas for finding the coefficients $A$ and $B$ for each temperature value $T_0$ and for each material. Express your answer in terms of sample average values of products of the form $\Delta T^{k_1}d^{k_2}$, where $k_{1,2}$ are some numbers.}{0.60}
+
+\problembox{A2}{For molybdenum sulfide $\rm(MoS_2)$, find $A$ and $B$ for each of the temperatures $T_0$.}{1.20}
+
+We will assume that thermal conductivity $\varkappa_\perp$ does not depend on temperature if the relation is satisfied: \\[\Delta A < \overline BT_\{0\max\}^\{1/2\}d_\max^\{1/2\},\\] where $\Delta A$ is the maximum difference between the values $A$ obtained in the previous paragraph, and $\overline B$ is the arithmetic mean of the values $B$, $d_{\max}=200\ um$, $T_{0\max}=373\ К$ obtained in the previous paragraph.
+
+\problembox{A3}{Find out whether it is possible to conclude from the results of the experiment that thermal conductivity $\varkappa_\perp$ depends on temperature, underline the correct option on the answer sheet (both sides of the inequality must be explicitly calculated in the solution). Find the arithmetic mean $\overline A$ and calculate the thermal conductivity $\varkappa_\perp$ from it.}{0.50}
+
+\problembox{A4}{Follow steps $\bf A2$ and $\bf A3$ for tungsten sulfide $\rm(WS_2)$.}{1.70}
+
+\section*{Part B. Longitudinal thermal conductivity (6.0 points)}
+
+To measure longitudinal thermal conductivity, a sample of thickness $d$ is placed on a horizontal surface of a material that is very poorly conductive to heat and illuminated at the center with a thin laser beam of constant power. As a result, a certain temperature distribution is established in the sample, which can be obtained by solving the heat conduction equation in polar coordinates. The temperature at large distances from the center of the laser beam is considered to be $T_0$. To find out how much the temperature of the sample at the center has increased, the researchers measure the power of the laser radiation reflected from it, since for small changes in temperature $\Delta T$ the reflection coefficient can be considered with good accuracy as a linear function of $\Delta T$. In addition, due to radiation and thermal conductivity between the sample and the environment, heat is dissipated from its surface with a power proportional to the temperature difference $\Delta T$. This leads to the fact that the real $\Delta T$ always turns out to be less than the predicted one and has a certain limit $\Delta T_{\max}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Thus, we will be interested in two asymptotic cases: $\it1)$ the case of a large sample thickness $d$. In this case, the contribution of thermal conductivity inside the sample will be dominant, and the temperature change can be described by the equation:\begin\{equation\}\Delta T=\frac Ad-\frac B\{d^2\},\tag3\end\{equation\}where $A=\cfrac{A_0}{\varkappa_\parallel}$, $A_0=9.43\ mVт$ and $B$ are some constants; $\it2)$ case of small sample thickness $d$. In this case, the contribution of thermal conductivity and radiation between the sample and the environment will be dominant, and the temperature change can be described by the equation:\begin\{equation\}\Delta T=\Delta T_\{\max\}-Cd,\tag4\end\{equation\}where $C$ is a certain coefficient. The table in the answer sheet gives you the temperature difference $\Delta T$ depending on the thickness of the sample $d$ for three different temperatures $T_0$ and two different materials - molybdenum sulfides $\rm(MoS_2)$ and tungsten sulfides $\rm(WS_2)$. When solving the problem, consider that half of the points with a larger $d$ correspond to the case $\it1)$, and the other half to the case $\it2)$. Let us first consider the case $\it1)$.
+
+\problembox{B1}{Using the least squares method, obtain a formula for finding the coefficient $A$ for each temperature value $T_0$ and for each material. Express your answer in terms of sample average values of products of the form $\Delta T^{k_1}d^{k_2}$, where $k_{1,2}$ are some numbers.}{0.60}
+
+\problembox{B2}{For molybdenum sulfide $\rm(MoS_2)$, find $A$ for each of the temperatures $T_0$. From here, for each $T_0$, find the values of $\varkappa_\parallel$. Find the thermal conductivity anisotropy coefficient $\rho=\cfrac{\varkappa_\parallel}{\varkappa_\perp}$ at temperature $T_0=273\ К$.}{1.00}
+
+This time the values of $\varkappa_\parallel$ clearly depend on temperature. It can be assumed that they satisfy the power law $\varkappa_\parallel\propto\cfrac1{T_0^n}$.
+
+\problembox{B3}{Find $n$.}{0.40}
+
+\problembox{B4}{Follow steps $\bf B2$ and $\bf B3$ for tungsten sulfide $\rm(WS_2)$.}{1.40}
+
+Let us now consider the case $\it2)$.
+
+\problembox{B5}{Using the least squares method, obtain a formula for finding the coefficient $\Delta T_{\max}$ for each temperature value $T_0$ and for each material. Express your answer in terms of sample average values of products of the form $\Delta T^{k_1}d^{k_2}$, where $k_{1,2}$ are some numbers.}{0.60}
+
+\problembox{B6}{For each of the materials, find $\Delta T_{\max}$ for each of the temperatures $T_0$.}{1.20}
+
+In order to improve experimental conditions in the future, scientists want to know whether heat is transferred from the sample to the environment in the first place - due to conduction or radiation. For this purpose, you can just use the obtained values $\Delta T_{\max}$. It can be shown that if the dominant contribution is made by thermal conductivity, then $\Delta T_{\max}\propto\cfrac1{\sqrt{T_0}}$, and if radiation, then $\Delta T_{\max}\propto\cfrac1{T_0^3}$. Let's try to approximate $\Delta T_{\max}$ by the power dependence $\Delta T_{\max}\propto\cfrac1{T_0^m}$.
+
+\problembox{B7}{For each of the materials, find $m$. What makes the main contribution to heat transfer between the sample and the environment – thermal conductivity or radiation? Underline the correct option on your answer sheet.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3116}
+
+\end{document}

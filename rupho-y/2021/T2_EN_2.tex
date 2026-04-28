@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Intensities in wave optics}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Hole}
+
+A plane monochromatic wave with wavelength $\lambda$ and intensity $I_0$ is incident on a round hole of radius $R_0$ in an opaque plane parallel to the axis of the hole. Behind the plane there is a screen at a distance $L$. Consider $\frac{ \sqrt{\lambda L}}{R_0} \gtrsim 1$.
+
+\problembox{A1}{Estimate the radius of the spot $R$ on the screen.}{0.20}
+
+\problembox{A2}{Estimate the intensity $I$ at the center of the spot.}{0.20}
+
+\problembox{A3}{Estimate the minimum achievable spot radius $R_{\text{min}}$ when varying the hole radius.}{0.30}
+
+\section*{Part B: Conventional Lens}
+
+A plane monochromatic wave with wavelength $\lambda$ and intensity $I_0$ is incident on a lens of diameter $D$ and focal length $F$ parallel to the axis of the lens.
+
+\problembox{B1}{Estimate the diameter $D_F$ of the spot at the focal point of the lens.}{0.20}
+
+\problembox{B2}{Estimate the intensity $I_F$ at the lens focus from energy considerations.}{0.30}
+
+\problembox{B3}{Now calculate the answer for the intensity $I_F$ at the focal point of the lens exactly. Compare with the previous point.}{1.00}
+
+\section*{Part C. Not much of a lens anymore}
+
+A plane monochromatic wave with wavelength $\lambda$ and intensity $I_0$ is incident on an ideal parabolic mirror with parabola parameter $p$ and diameter $D$ parallel to the mirror axis.
+
+\problembox{C1}{Find the focal length $F$ of the mirror.}{0.30}
+
+\problembox{C2}{Estimate the intensity $I$ at the mirror focus.}{0.30}
+
+\problembox{C3}{How many times will this value change when the wavelength is halved?}{0.20}
+
+\section*{Part D. Almost like a lens}
+
+An ideal spherical mirror with radius $R = 1 m$ and diameter $D$ was illuminated with a beam of rays with wavelength $\lambda = 800$ nm and intensity $I_0$ parallel to the mirror axis.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{D1}{Find the focal length $F$ of the mirror.}{0.20}
+
+\problembox{D2}{Estimate the size of the spot $d$ in the focal plane of the mirror, for two mirror diameters: $D_1 = 1~cm$, $D_2 = 15~cm$.}{1.30}
+
+\problembox{D3}{For these two mirror diameters ($D_1 = 1~cm$, $D_2 = 15~cm$), estimate the intensity at the focus.}{0.80}
+
+\problembox{D4}{How do the intensities at the focus found at the previous point depend on the wavelength $\lambda$?}{0.70}
+
+\section*{Part E. Not a lens at all}
+
+A normally plane wave is incident on a diffraction grating with a period $d$ and a slit width $a$. Wavelength $\lambda = d/100$, plane wave intensity $I_S$. Further, the intensity of the maximum should be understood as the intensity of a plane wave propagating in the direction of the maximum with number $h$.
+
+\problembox{E1}{Determine the intensity of the zero maximum $I_0$. Express the answer in general terms in terms of $d$ and $a$. Provide answer for $d=3a$.}{1.00}
+
+\problembox{E2}{Determine the intensity $I_h$ of the maximum with number $h$. Express the answer in general terms in terms of $d$ and $a$. Provide answer for $d=3a$.}{1.00}
+
+\problembox{E3}{What fraction of the energy $\beta$ falls into all maxima on the screen except the zero one $(h\neq 0)$? Calculate the answer for $d=3a$.}{1.00}
+
+\problembox{E4}{What fraction of the energy $\gamma$ is absorbed by the non-transmitting part of the diffraction grating? Calculate the answer for $d=3a$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/235}
+
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{AC Gray Box}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+There is no need to estimate errors in this problem! The PE3 program meets this task. This problem asks you to examine a gray box with four terminals. Inside the box there is a well-known circuit (see figure). The AB outputs are supplied with a sinusoidal voltage with an amplitude of 1 V and an adjustable frequency $\omega$.  It is possible to measure the amplitudes of the total current $I$ through the circuit (between outputs AB) and the voltage $U$ in the section $CD$. In addition, you can set the resistance value of the variable resistor $R_1$. The program displays graphs of $I$ (in amperes)  and $U$ (in volts) in the selected frequency range. The program takes input frequency range $\omega$ ($\text{c}^{-1}$)  and resistance $R_1$ (Ohm). To set the range, you need to specify the minimum frequency, maximum frequency and step that is used to plot the graph.  All frequencies must be positive, the maximum is greater than the minimum! The integer part is separated from it by a fractional dot.
+
+This problem asks you to examine a gray box with four terminals. Inside the box there is a well-known circuit (see figure). The AB outputs are supplied with a sinusoidal voltage of 1 V amplitude and adjustable frequency $\omega$.  It is possible to measure the amplitudes of the total current $I$ through the circuit (between outputs AB) and the voltage $U$ in the section $CD$. In addition, you can set the resistance value of the variable resistor $R_1$. The program displays graphs of $I$ (in amperes)  and $U$ (in volts) in the selected frequency range.
+
+The program takes input frequency range $\omega$ ($\text{c}^{-1}$)  and resistance $R_1$ (Ohm). To set the range, you need to specify the minimum frequency, maximum frequency and step that is used to plot the graph.  All frequencies must be positive, the maximum is greater than the minimum! The integer part is separated from it by a fractional dot.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Define the circuit parameters ($L_1$, $L_2$, $C_1$, $C_2$, $R_2$, $r$).}{7.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/2849}
+
+\end{document}

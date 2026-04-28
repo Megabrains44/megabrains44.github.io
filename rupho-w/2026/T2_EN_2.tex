@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Rotating medium}}
+\author{\normalsize W26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Most physical systems are not conservative due to the presence of dissipative forces. An example of such forces is friction. In this problem we will consider examples of such systems with the simplest case of viscous friction.
+
+\section*{Part A. Fixed medium (4 points)}
+
+Let a particle of mass $m$ move in a stationary medium in which it is acted upon by a viscous friction force $\vec{F}_\text{} = -\varepsilon m \vec{v}$, where $\vec v$ is the particle velocity. The free fall acceleration is $\vec g$, initially the particle was at the origin and had a speed of $\vec v_0$.
+
+\problembox{A1}{Find the trajectory of motion $\vec r (t)$ for this particle. Express the answer in vector form through $\vec{v}_0$, $\vec{g}$, $\varepsilon$ or express the dependences of the components of the vector $\vec{r}(t)$ in the Cartesian coordinate system through the components of the vectors $\vec{v}_0$, $\vec{g}$.}{1.30}
+
+\problembox{A2}{How does the power of energy loss $P(t)$, which goes into heat, depend on time? Express your answer in terms of $\vec{v}_0$, $\vec{g}$, $\varepsilon$, $t$, $m$.}{0.70}
+
+Let us now consider the motion of a particle in the absence of gravity, but now it is acted upon by a constant modulus rotating force $F_x = F_0 \cos(\omega t)$, $F_y = F_0 \sin(\omega t)$.
+
+\problembox{A3}{Find the loss power $P$, which goes into heat, a long time after the power $t\gg1/\varepsilon$ is turned on. Express your answer using $F_0$, $\varepsilon$, $m$, $\omega$.}{2.00}
+
+\section*{Part B. Rotating medium (7 points)}
+
+A particle of mass $m$ is in a medium rotating with an angular velocity $\omega$ around a vertical axis $z$, the acceleration of gravity is $\vec g = -g\vec e_z$, the friction force is $\vec{F} = -\varepsilon m \vec v_\text{rel}$, where $\vec v_\text{rel}$ is the velocity of the particle relative to the medium. At the initial moment, the particle is motionless and located at the point with coordinates $(x_0,y_0,z_0) = (r_0,0,0)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Find the dependence $z(t)$. Express your answer in terms of $r_0$, $\varepsilon$, $g$.}{0.50}
+
+\problembox{B2}{Express $\ddot{x}$ and $\ddot{y}$ in terms of $x$, $y$, $\dot x$, $\dot y$, $\varepsilon$ and $\omega$.}{1.00}
+
+It is known that the equations you obtained have a solution of the form $$ \textbackslash{}left(x(t),y(t)\textbackslash{}right)=\textbackslash{}left(A e^{at} \textbackslash{}cos(\textbackslash{}Omega t + \textbackslash{}varphi_0), A e^{at} \textbackslash{}sin(\textbackslash{}Omega t+ \textbackslash{}varphi_0)\textbackslash{}right). $$    for   $\varphi_0$, in h for $\varphi_0 = 0$ and $\varphi_0 = \pi/2$  $$\textbackslash{}left(x_1(t),y_1(t)\textbackslash{}right)=\textbackslash{}left(A e^{at} \textbackslash{}cos(\textbackslash{}Omega t), A e^{at} \textbackslash{}sin(\textbackslash{}Omega t)\textbackslash{}right),$$ $$\textbackslash{}left(x_2(t),y_2(t)\textbackslash{}right)=\textbackslash{}left(-A e^{at} \textbackslash{}sin(\textbackslash{}Omega t), A e^{at} \textbackslash{}cos(\textbackslash{}Omega t)\textbackslash{}right).$$         $(a, \Omega)$.
+
+\problembox{B3}{Using the solution $(x_1, y_1)$, obtain a system of equations from which the possible values of the constants $a$ and $\Omega$ can be determined.  The answer may also include $\varepsilon$, $\omega$.}{1.00}
+
+\problembox{B4}{Solve the resulting system of equations and find suitable pairs of values $(a_1, \Omega_1)$ and $(a_2, \Omega_2)$ if $a_2>a_1$. Express your answer using $\varepsilon$, $\omega$.}{1.00}
+
+\problembox{B5}{Find approximate values of these quantities in the cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.}{0.50}
+
+In what follows we will use the notation $$A\textbackslash{}vec{r}_{1i}=\textbackslash{}left(Ae^{a_it} \textbackslash{}cos(\textbackslash{}Omega_i t), A e^{a_it} \textbackslash{}sin(\textbackslash{}Omega_i t)\textbackslash{}right), \textbackslash{};A\textbackslash{}vec{r}_{2i}=\textbackslash{}left(-Ae^{a_it} \textbackslash{}sin(\textbackslash{}Omega_i t), A e^{a_it} \textbackslash{}cos(\textbackslash{}Omega_i t)\textbackslash{}right).$$   $i$     $1, 2$,     $(a, \Omega)$.
+
+\problembox{B6}{An arbitrary solution to the system of equations has the form $$\textbackslash{}left(x(t), y(t)\textbackslash{}right) = A\textbackslash{}vec r_{11}+B\textbackslash{}vec r_{12}+C\textbackslash{}vec r_{21}+D\textbackslash{}vec r_{22}.$$   ,     h,   $A$, $B$, $C$ and $D$  $r_0$, $a_1$, $a_2$, $\Omega_1$ and $\Omega_2$.}{1.50}
+
+\problembox{B7}{Draw qualitatively the trajectory of the particle in the $xy$ plane for cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.}{0.50}
+
+\problembox{B8}{Find the energy loss power $P$, which goes into heat, at the moment when the particle is at a point with coordinates $\vec r = (x,y,z)$ and moves with a speed $\vec v = (v_x,v_y,v_z)$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4672}
+
+\end{document}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Spring capacitor.</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Spring capacitor.</h1>
+<p class="camp">Y17 (2017) — English translation</p>
+<p>A non-conducting spring with stiffness $k$ is attached to the plates of a flat capacitor with capacity $C_0$. In this state, the distance between the plates $L$ and the spring is relaxed. The plates were connected by a resistor and an external constant uniform electric field of intensity $E$ was turned on so that the field vector is perpendicular to the plates.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the final charge on the plates of the capacitor $q$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Find the change in the distance $\Delta{x}$ between them, considering the charge flow process to be quasi-static.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">What amount of heat $Q$ will be released on the resistor during this process?</div><span class="pb-pts">2.00</span></div>
+<p>The system is returned to its original state (without a resistor and external field). The capacitor is connected to a source of electric current with a constant voltage $U$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Assuming that the change in the distance between the plates $\Delta{x}\ll{L}$, find the capacitance $C$ of the capacitor after establishing all transient processes.</div><span class="pb-pts">2.50</span></div>
+<p>The dependence of the capacitance $C$ of the capacitor on the voltage $U$ can be represented as: $C=C_0\left(1+\alpha{U}^2\right)$, where $\alpha$ is a constant that does not depend on voltage.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">What is $\alpha$ equal to?</div><span class="pb-pts">0.50</span></div>
+<p>The capacitor is connected to an alternating current source, on which the voltage varies according to the law $U=U_0\sin\omega t$. The dependence of the current strength in the circuit on time can be represented as: $I=I_0\left(A_1\cos\omega t+A_2\cos 3\omega t\right)$, where $A_1$ and $A_3$ are dimensionless coefficients. Due to the nonlinearity in the capacitance of the capacitor, the current in the circuit has a third harmonic $A_3\cos 3\omega t$.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Find the ratio of the amplitudes of the third and fundamental harmonics $A_3/A_1$. Consider that $\omega$ is much less than the frequency of natural mechanical vibrations, i.e. the delay due to mechanical inertia can be neglected. The following relationship may be useful: $4\cos^3x=3\cos x+\cos 3x$.</div><span class="pb-pts">3.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3038">https://pho.rs/p/3038</a></p>
+</body>
+</html>

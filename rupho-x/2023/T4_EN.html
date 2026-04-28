@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Some strange spinner...</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Some strange spinner...</h1>
+<p class="camp">X23 (2023) — English translation</p>
+<p>Consider the mechanical system shown in the figure. Two small spheres $A$ and $B$ of mass $m$ are fixed at the ends of a homogeneous rod of length $2l$ and mass $4m$, attached at the middle perpendicular to the horizontal axis. Above the initial position of the sphere $A$, in which the rod is horizontal and motionless, there is a vertical tunnel from which at specially selected moments of time a ball of mass $m$ flies out, colliding with the spheres and causing the system to rotate around its axis. The speed of the ejected ball just before the collision is $v$. As a result of the first collision, the system acquires a certain angular velocity $\omega_1$. When the sphere $B$ reaches the position in which the sphere $A$ was originally located, $B$ collides with a new ball, and the system acquires some angular velocity $\omega_2$, and so on. In all parts of the problem, consider all collisions to be elastic. Neglect the sizes of balls and spheres.</p>
+<div class="figure"><img src="T4_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Central collisions without dissipation (2.0 points)</h2>
+<p>In this part of the problem, all collisions are central. There are no dissipations in the system.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Determine the moment of inertia of the system of the rod and spheres relative to the axis of rotation. Express your answer in terms of $m$ and $l$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Express the angular velocity $\omega_{i+1}$ of the system after the collision with the $i+1$ emitted ball in terms of $\omega_i$, $v$ and $l$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">What is $\omega_1$ equal to? Express your answer in terms of $v$ and $l$.</div><span class="pb-pts">0.20</span></div>
+<p>As can be expected, the angular velocity of such a rotating system tends at $i\to{\infty}$ to a constant value $\omega^*$.</p>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Express $\omega^*$ in terms of $v$ and $l$.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">By solving the recurrence equation obtained in step $\bf A1$, you will obtain an explicit expression for $\omega_i$. Express your answer using $i$, $v$ and $l$. Hint: Use the variable $\omega'_i=\omega_i-v/l$.</div><span class="pb-pts">0.60</span></div>
+<p>Hint: Use the variable $\omega'_i=\omega_i-v/l$.</p>
+<p>Let now, instead of one pair of spheres, we have two pairs of them, placed on rods perpendicular to each other and the axis.</p>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">What would be the limiting value $\omega^*$ for such a system?</div><span class="pb-pts">0.20</span></div>
+<h2 class="part">Part B. Off-center collisions without dissipation (3.0 points)</h2>
+<p>Let's go back to the system with one pair of spheres. In this part of the problem, non-central collisions of balls with spheres $A$ and $B$ are studied. There are no dissipations in the system (including friction between the escaping ball and the spheres). We will characterize the off-center impact by the parameter $k=b/r$, where $b < r$ is the impact parameter with which the ejected ball hits the sphere, and $r\ll{l}$ is the distance between the centers of the ball and the sphere when they come into contact (see Fig.).</p>
+<div class="figure"><img src="T4_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">At what value of the parameter $k_0$ will the speed of the first emitted ball, immediately after colliding with the sphere, be directed horizontally?</div><span class="pb-pts">1.00</span></div>
+<p>Next, an arbitrary value of the parameter $k$ is considered.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Express the angular velocity $\omega_{i+1}$ of the system after the collision with the $i+1$ emitted ball in terms of $\omega_i$, $v$, $l$ and $k$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">What is $\omega_1$ equal to? Express your answer in terms of $v_0$, $l$ and $k$.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">By solving the recurrence equation obtained in step $\bf B2$, you will obtain an explicit expression for $\omega_i$. Express your answer using $i$, $v$ and $l$.</div><span class="pb-pts">0.80</span></div>
+<h2 class="part">Part C. Based on Kotkin–Serbo (4.0 points)</h2>
+<p>In this part of the problem, the motion of the system under the influence of friction is studied. Under the influence of friction, a moment $M$ acts on the system, which is a certain function of the angular velocity $\omega$. Depending on the geometry of the system, the main contribution comes from: Dry friction – moment $M=\alpha I=\operatorname{const}$; Linear viscous friction – moment $M=\beta I\omega$, $\beta=\operatorname{const}$; Quadratic viscous friction – moment $M=\gamma I\omega^2$, $\gamma=\operatorname{const}$. Here $I$ is the moment of inertia of the system. Instead of the moment of inertia of the system and the speed of the ball, we introduce parameters $\varepsilon=\frac{ml^2}I$ and $\omega_0=\cfrac vl$. At all points in part C the impacts are central and elastic. Express all answers in points C1 – C3 using $\varepsilon$ and $\omega_0$.</p>
+<p>Here $I$ is the moment of inertia of the system. Instead of the moment of inertia of the system and the speed of the ball, we introduce parameters $\varepsilon=\frac{ml^2}I$ and $\omega_0=\cfrac vl$. At all points in part C the impacts are central and elastic.</p>
+<p>Express all answers in points C1 – C3 through $\varepsilon$ and $\omega_0$.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Find at what values ​​of the parameter $\alpha$ the system in the dry friction mode will continue to move indefinitely long after the first collision with the ball.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find at what values ​​of the parameter $\beta$ the system in the mode of linear viscous friction will continue to move indefinitely long after the first collision with the ball.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find at what values ​​of the parameter $\gamma$ the system in the mode of quadratic viscous friction will continue to move indefinitely long after the first collision with the ball.</div><span class="pb-pts">0.50</span></div>
+<p>Let us now proceed directly to the exact calculation of the steady-state average angular velocities in each of the three modes. To do this, together with the equation for a collision with a ball, you need to solve the equation of free motion of the system and find stationary points.</p>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Find the steady-state average over the period angular velocity of the system $\overline\omega_1$ in the dry friction mode. Express your answer in terms of $\varepsilon$, $\alpha$ and $\omega_0$.</div><span class="pb-pts">0.70</span></div>
+<p>Express your answers in C5 and C6 using $\varepsilon$, $\beta$ and $\omega_0$.</p>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Find the stationary value of the angular velocity $\omega^\uparrow_2$ of the system immediately after the next collision with the ball in the mode of linear viscous friction.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Find the steady-state average over the period angular velocity of the system $\overline\omega_2$ in the mode of linear viscous friction.</div><span class="pb-pts">0.40</span></div>
+<p>Express your answers in C7 and C8 in terms of $\varepsilon$, $\gamma$ and $\omega_0$.</p>
+<div class="problem-box"><span class="pb-id">C7</span><div class="pb-text">Find the stationary value of the angular velocity $\omega^\uparrow_3$ of the system immediately after the next collision with the ball in the quadratic viscous friction mode.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C8</span><div class="pb-text">Find the steady-state average over the period angular velocity of the system $\overline\omega_3$ in the mode of quadratic viscous friction.</div><span class="pb-pts">0.40</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3160">https://pho.rs/p/3160</a></p>
+</body>
+</html>

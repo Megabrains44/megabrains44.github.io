@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Two capacitors}}
+\author{\normalsize X17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In the electrical circuit, the diagram of which is shown in the figure, at first the key is open, there is no charge on the capacitors. The emf of the source is $\mathcal{E}=10~\text{V}$, the resistances of the resistors are the same and equal to $R=1.0~\text{k}\Omega$, the electrical capacitances of the capacitors are the same and equal to $C=1.0~\mu\text{F}$. The current source is ideal. The key is closed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{What is the charging current through each of the capacitors immediately after the switch is closed? Write down the formulas and give numerical values.}{1.60}
+
+\problembox{A2}{What are the voltages on the capacitors after the time interval $\tau=1.0~\text{s}$? Write down the formulas and give numerical values.}{1.60}
+
+\problembox{A3}{Draw on one graph the qualitative dependence of $U(t)$ voltage on time on each of the four elements of the circuit. Indicate on the graph the asymptotes and singular points (zero crossings and extrema) for each of the dependencies.}{4.00}
+
+\problembox{A4}{If for at least two different dependencies any of the special points occur at the same instant, determine the corresponding values of time and voltage. An exact solution is difficult, so use numerical approximation methods. The permissible error is $10\%$.}{2.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/307}
+
+\end{document}

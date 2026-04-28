@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Semiconductor wafers}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. van der Pauw method (6 points)}
+
+Determining the resistivity of flat objects is an important practical problem. Because The shape of objects is arbitrary, and it is difficult to calculate streamlines in them. In 1958, Leo van der Pauw solved this problem for plates of arbitrary geometric shape. 4 contacts $A$, $B$, $C$ and $D$ are connected to the central part of the side surface of the plate of thickness $d$ (see figure). First, current $I_{AB}$ is passed through nodes $A$ and $B$ and voltage $U_{CD}$ is measured between nodes $C$ and $D$. Resistance $R_{\text{AB,CD}}$ is calculated as $\cfrac{U_{CD}}{I_{AB}}$. Then, current $I_{BC}$ is passed through nodes $B$ and $C$ and voltage $U_{DA}$ is measured between nodes $D$ and $A$. Resistance $R_{\text{BC,DA}}$ is calculated as $\cfrac{U_{DA}}{I_{BC}}$.
+
+Determining the resistivity of flat objects is an important practical problem. Because The shape of objects is arbitrary, and it is difficult to calculate streamlines in them. In 1958, Leo van der Pauw solved this problem for plates of arbitrary geometric shape. 4 contacts $A$, $B$, $C$ and $D$ are connected to the central part of the side surface of the plate of thickness $d$ (see figure). First, current $I_{AB}$ is passed through nodes $A$ and $B$ and voltage $U_{CD}$ is measured between nodes $C$ and $D$. Resistance $R_{\text{AB,CD}}$ is calculated as $\cfrac{U_{CD}}{I_{AB}}$. Then, current $I_{BC}$ is passed through nodes $B$ and $C$ and voltage $U_{DA}$ is measured between nodes $D$ and $A$. Resistance $R_{\text{BC,DA}}$ is calculated as $\cfrac{U_{DA}}{I_{BC}}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Theoretically, it can be shown that the resistivity of a material is calculated using the following formula $$ \textbackslash\{\}rho=\textbackslash\{\}cfrac\{\{\textbackslash\{\}pi\}d\}\{\textbackslash\{\}ln2\} (\{R_\{\textbackslash\{\}text\{AB,CD\}\}\}+\{R_\{\textbackslash\{\}text\{BC,DA\}\}\}) \textbackslash\{\}cfrac\{f\textbackslash\{\}left(\textbackslash\{\}frac\{R_\{\textbackslash\{\}text\{AB,CD\}\}\}\{R_\{\textbackslash\{\}text\{BC,DA\}\}\}\textbackslash\{\}right)\}\{2\}, $$ где $f$ — некая функция, которая не выражается аналитически. В этой задаче вам предстоит численно найти значения этой функции в нескольких точках, а затем вычислить удельное сопротивление пластины. Обозначим $y=\cfrac{R_{\text{AB,CD}}}{R_{\text{BC,DA}}}$, тогда выражение для удельного сопротивления принимает вид $$ \textbackslash\{\}rho=\textbackslash\{\}cfrac\{\{\textbackslash\{\}pi\}d\}\{\textbackslash\{\}ln2\} \{R_\{\textbackslash\{\}text\{BC,DA\}\}\} (y+1) \textbackslash\{\}frac\{f(y)\}\{2\} $$ Из теоретических выкладок можно получить, что функция $f(y )$ удовлетворяет соотношению $$ \textbackslash\{\}cfrac\{y-1\}\{y+1\}=\textbackslash\{\}cfrac\{f(y)\}\{\textbackslash\{\}ln2\}\textasciitilde\{\}\textbackslash\{\}text\{arch\} \textbackslash\{\}left(\textbackslash\{\}cfrac\{1\}\{2\}\textbackslash\{\}exp\textbackslash\{\}left(\textbackslash\{\}cfrac\{\textbackslash\{\}ln2\}\{f(y)\}\textbackslash\{\}right)\textbackslash\{\}right) $$ Для удобства обозначив $x=\cfrac{\ln2}{f(y)}$, можно получить равносильную систему уравнений для нахождения удельного сопротивления, которой и нужно пользоваться при дальнейшем решении задачи $$ \textbackslash\{\}rho=\{\{\textbackslash\{\}pi\}d\} \{R_\{\textbackslash\{\}text\{BC,DA\}\}\} (y+1) \textbackslash\{\}frac\{1\}\{2x\}, $$ $$ \textbackslash\{\}cfrac\{y-1\}\{y+1\}=\textbackslash\{\}cfrac\{1\}\{x\} \textbackslash\{\}text\{arch\}\textbackslash\{\}left(\textbackslash\{\}cfrac\{\textbackslash\{\}text\{e\}^x\}\{2\}\textbackslash\{\}right). $$ Примечание. Гиперболические и обратные гиперболические функции задаются следующими формулами: $$\textbackslash\{\}text\{sh\}\textasciitilde\{\}x=\textbackslash\{\}cfrac\{\textbackslash\{\}text\{e\}^x-\textbackslash\{\}text\{e\}^\{-x\}\}\{2\},\textbackslash\{\}quad\textbackslash\{\}text\{ch\}\textasciitilde\{\}x=\textbackslash\{\}cfrac\{\textbackslash\{\}text\{e\}^x+\textbackslash\{\}text\{e\}^\{-x\}\}\{2\},$$ $$\textbackslash\{\}text\{arsh\}\textasciitilde\{\}x=\textbackslash\{\}ln(x+\textbackslash\{\}sqrt\{x^2+1\}),\textbackslash\{\}quad\textbackslash\{\}text\{arch\}\textasciitilde\{\}x=\textbackslash\{\}ln(x+\textbackslash\{\}sqrt\{x^2-1\}).$$
+
+\problembox{A1}{Obtain the values ​​of $I_{AB}$, $U_{CD}$, $I_{DA}$ and $U_{BC}$ for 15 different plate connections.}{0}
+
+\problembox{A2}{Compute $R_{\text{AB,CD}}$, $R_{\text{BC,DA}}$ and $y$ for each of the connections. Round all values ​​to the nearest 4 significant figures.}{0.90}
+
+\problembox{A3}{The formula $\cfrac{y-1}{y+1}=\cfrac{1}{x} \text{arch}\left(\cfrac{\text{e}^x}{2}\right)$ can be converted to the form $\text{e}^x=\text{e}^{\alpha x} + \text{e}^{\beta x}$. Find $\alpha$ and $\beta$. Express your answer in terms of $y$.}{0.10}
+
+\problembox{A4}{The equation $\text{e}^x=\text{e}^{\alpha x} + \text{e}^{\beta x}$ is transcendental and cannot be solved analytically. Solve it numerically, i.e. for each $y$, find $\text{e}^x$ (to 4 significant figures).}{3.00}
+
+\problembox{A5}{Having plotted a graph in suitable coordinates, determine the numerical value $\rho$ of the semiconductor. Round your answer to 3 significant figures. Take the thickness of the material equal to $d=1~\text{mm}$.}{2.00}
+
+\section*{Part B. Impurity semiconductor (4 points)}
+
+There are two types of semiconductors—intrinsic and impurity. The criterion for their separation is as follows: if in intrinsic semiconductors conductivity is carried out primarily due to the movement of intrinsic electrons, then in an impurity semiconductor the conductivity is influenced by impurity atoms. In this part of the problem, a $n$-type semiconductor is considered, in which the conductivity is influenced by donors. Depending on the temperature of the semiconductor, donors can be either the main or weak source of conductivity. As the temperature rises in the semiconductor, the processes of ionization of donors and the transition of its own electrons from the valence band to the conduction band occur. At low temperatures, $kT\ll{E_d}$, ($E_d$ is the ionization energy of the donor), and the transition of electrons to the conduction band can be neglected. Therefore, the main source of conductivity is ionized donors. The dependence of the concentration of ionized donors in this regime is as follows: $$ n=\{C_1\}T^\{3/4\}\textbackslash\{\}exp\textbackslash\{\}left(-\textbackslash\{\}frac\{\{E_d\}\}\{2kT\}\textbackslash\{\}right) $$ Процесс перехода от низких температур к высоким сопровождается областью истощения, когда практически все атомы примеси ионизируются, а концентрация свободных носителей заряда остается постоянной в широком диапазоне температур. Температура перехода в область истощения называется $T_i$. В области высоких температур собственные электроны приобретают достаточную энергию для перехода в зону проводимости, и концентрация свободных электронов начинает резко возрастать. В этой области температур, называемой областью собственной проводимости, основной вклад в проводимость вносят собственные электроны. Температура перехода в область собственной проводимости обозначается $T_s$. Концентрация свободных электронов в области собственной проводимости зависит от температуры по следующему закону $$ n=\{C_2\}T^\{3/2\}\textbackslash\{\}exp\textbackslash\{\}left(-\textbackslash\{\}frac\{\textbackslash\{\}Delta\{E_g\}\}\{2kT\}\textbackslash\{\}right), $$ где $\Delta{E_g}$ is the band gap.
+
+\problembox{B1}{Remove the constraint $n(T)$.}{0}
+
+\problembox{B2}{Plot the dependence $\ln n~(\frac{1}{T})$. Approximate three sections of this graph with straight lines and determine the values ​​of $T_i$ and $T_s$. Estimate the error of the obtained values.}{1.60}
+
+\problembox{B3}{Find $E_d$.}{1.20}
+
+\problembox{B4}{Find $\Delta{E_g}$.}{1.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/37}
+
+\end{document}

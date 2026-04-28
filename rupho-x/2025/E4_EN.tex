@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+      \textbf{#1}\hfill\textbf{#3}\par\smallskip
+      #2
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Gauss gun}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}
+\maketitle
+A Gauss gun is a device that allows you to convert electromagnetic energy into the kinetic energy of a ferromagnetic projectile. In practice, this mechanism has a low efficiency (1%), so it has no application in science and technology, but is widely used as a visual demonstration of the properties of ferromagnets, due to the simplicity and safety of installation. In this problem we will consider the simplest type of Gauss gun - the interaction of a chain consisting of a permanent magnet ($\rm NdFeB$) and steel balls with a steel ball flying at it. The configuration of the magnetic field before the collision is different from that after the collision, so part of the difference in magnetic energy is converted into the kinetic energy of the ball ejected after the interaction. Thus, the outgoing ball has a much higher speed than the incoming one.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig1.jpg}
+    \caption{Fig. 1.}
+\end{figure}
+Equipment: Aluminum gutter. Hall sensor (sensitivity $\frac{\mathrm{d}U}{\mathrm{d}B}=31.25~В/Тл$) with attachment. Plastic container for catching balls. Masking tape. Tripod with coupling and foot – 2 pcs. Ruler Banana-banana wire – 2 pcs. Additional foot to support the corner. A sheet of carbon paper. Sheet of A3 graph paper for measurements – 3 pcs. Calipers. 5 rubber tubes of different lengths. Cylindrical level. Ball magnet, diameter $ 10~ мм$. Steel ball caliber $10~ мм$, weight $M=4.17~г$ – 5 pcs. Roulette. Multimeter Pencil section. In this problem, the steel balls can be considered homogeneous, $\mu_{ст} \gg1$. Assume that the magnetization of a ball magnet is constant over time and is also independent of the external magnetic field. Attention! This problem does not require error estimation. Attention! Parts C and D are practically independent of the other parts.
+In this problem, the steel balls can be considered homogeneous, $\mu_{ст} \gg1$. Assume that the magnetization of a ball magnet is constant over time and is also independent of the external magnetic field.
+Attention! This problem does not require error estimation.
+Attention! Parts C and D are practically independent of the other parts.
+\problembox{*}{Attention! If your steel ball rolls under someone else's table, then it is forbidden to take it out! Spare balls and magnets are not issued! Marking ANY kind of mark on an aluminum gutter will result in a penalty point. Losing ANY equipment other than balls or a magnet will result in a penalty point. Intentionally changing the angle of an aluminum gutter will disqualify you.}{-2.00}
+Marking ANY kind of mark on an aluminum gutter will result in a penalty point. Losing ANY equipment other than balls or a magnet will result in a penalty point.
+Intentionally changing the angle of an aluminum gutter will disqualify you.
+\section*{Part A. Installation calibration (2.3 points)}
+This part of the problem examines the rolling of a steel ball along an aluminum channel. Assemble the installation as shown in the figure below.  Set the height of the horizontal section $h$ approximately at the level $24~ см.$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig2.jpg}
+    \caption{Fig. 2.}
+\end{figure}
+\problembox{A1}{Specify the value $h$. Determine the installation angle $\alpha .$}{0.10}
+When a ball falls on the matte part of a sheet of copy paper, it leaves a clear dotted mark, so you can determine where the ball fell.
+\problembox{A2}{Measure the dependence of the flight range $l$ on the length of the inclined section of the ball path $L$ in the range from $0$ to $70$ cm for 5 values ​​$L$. Repeat each measurement at least $3$ times. All measurements $l$ must be taken using ball drop marks on A3 sheets. A3 sheets are required to be handed in at the end of the work.}{1.00}
+We will assume that when the ball passes through the corner of the groove, part $\gamma<1$ of its kinetic energy is lost.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig3.jpg}
+    \caption{Fig. 3.}
+\end{figure}
+\problembox{A3}{Obtain a theoretical expression relating the quantities $l$ and $L$. Assume that the ball moves along the chute all the time without slipping; the angle between the generatrices of the chute is straight.  Express your answer in terms of $h, \alpha, \gamma, l, L$}{0.40}
+\problembox{A4}{Using the result of the previous paragraph, construct a graph of $l$ versus $L$ in coordinates in which it will be linear.}{0.60}
+\problembox{A5}{Find the slope coefficient of the graph constructed in the previous paragraph. Determine the loss factor $\gamma$.}{0.20}
+\section*{Part B. “Shot” energy (3.3 points)}
+Let's move on directly to studying the mechanism of the Gauss gun. To do this, install a magnet and two steel balls attached to it from behind on a horizontal section of the gutter (see figure). Note. Do not place the gun near the tripod leg as its influence may skew your results. Place the gun at the very edge of the gutter.
+Note. Do not place the gun near the tripod leg as its influence may skew your results. Place the gun at the very edge of the gutter.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig4.jpg}
+    \caption{Fig. 4.}
+\end{figure}
+\problembox{B1}{Measure the dependence of the flight range $l'$ of the emitted ball on the length of the inclined section of the path of the incoming ball $L$. Take measurements for the same values ​​of quantity $L$ that you used in Part A. For each value of $L$ take at least 5 measurements of quantity $l'$. All measurements $l$ must be taken using ball drop marks on A3 sheets.}{2.00}
+All measurements $l$ must be taken using ball drop marks on A3 sheets.
+Next, we will study the influence of the initial velocity on the addition to the kinetic energy $E_{кин}$ of the translational motion of the “projectile” after interaction with the gun. Since there is an unambiguous connection between $E_{кин}$ and $l$, in what follows we will describe any energies in terms of the quantities $l$ and $l'$.
+\problembox{B2}{Obtain an expression for the dependence $E_{кин}(l)$.}{0.30}
+\problembox{B3}{Using the results of steps A2 and B1, calculate the addition $\Delta E_{кин}$ to the kinetic energy of the projectile translational motion obtained during interaction with the gun, for each experimental value. Calculate the energy using the formula obtained in the previous paragraph, discarding constant factors in front of the function of $l$.}{0.40}
+The Gauss gun works due to the difference between the magnetic energy of the initial and final states. Let us denote by $W_1$ the work done by the magnetic field of the gun on the ball that flies at it ($W_1>0$), by $W_2$ the work done by the magnetic field of the gun on the ball that flies away from it as a result of the “shot” ($W_2 < 0$). In this case, due to the impact, part of the energy is dissipated. This fact can be taken into account by introducing the coefficient $\beta$ – part of the kinetic energy of the translational motion of the ball, which is lost during the impact. The quantities $W_1$ and $W_2$ do not depend on the initial speed of the incident ball. Let us introduce the notation $\Delta E_\mathrm{max}=W_1(1-\beta) + W_2$.
+\problembox{B4}{Plot a graph of $\Delta E_{кин}$ versus $l$ in coordinates in which it is linear.}{0.40}
+\problembox{B5}{Using the graph from point B4, determine the value of $\beta$, as well as the maximum possible experimentally observed addition to the kinetic energy $\Delta E_\mathrm{max}$.}{0.20}
+\section*{Part C. Induced field (5.0 points)}
+In this part of the problem, we will determine the magnetic moment of a ball magnet and study the induced field in a steel ball. Position the aluminum trough so that its long part is horizontal and secure the Hall sensor in it with tape. A special holder will allow you to hold the sensitive part of the Hall sensor on the axis of the balls. Note: Do not measure with Hall sensor voltage $>200~мВ$. In a substance with magnetization $\vec{M}$ the following relation holds:\[\vec{B}=\mu_0(\vec{H}+\vec{M})\]
+Note: Do not measure with voltage across the Hall sensor $>200~мВ$.
+In a substance with magnetization $\vec{M}$ the following relation holds:\[\vec{B}=\mu_0(\vec{H}+\vec{M})\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig5.jpg}
+    \caption{Fig. 5.}
+\end{figure}
+\problembox{C1}{Using a Hall sensor, measure the magnet field for 5 values ​​of $s$.}{0.30}
+The field outside a uniformly magnetized ball is equivalent to the field of a point dipole $\vec{m}$ located at its center. In this case, $\vec{m}=\int \vec{M}\mathrm{d}V$, where $\vec{M}$ is the magnetization vector.
+\problembox{C2}{Give the dimensions of $m$ and $M$ in SI units.}{0.10}
+\problembox{C3}{Obtain the theoretical form of the dependence $B(s)$. Express the answer through the quantities $\mu_0, m, s$, where $m$ is the magnetic moment of the issued ball magnet. Specify the direction of the magnetic field at the point where the sensor is located.}{0.30}
+\problembox{C4}{Using the results of the previous two paragraphs, construct a graph of $B(s)$ in coordinates in which it will be linear. Determine the magnetization value of the magnet $M$.}{0.60}
+Note. The characteristic magnetization value of neodymium magnets is $1.5\cdot 10^{6}$ units. SI. If you place a steel ball at a distance $x$ (the distance between their centers) from the magnet, then a field will be induced outside the ball, which with good accuracy is equivalent to the field of a point dipole, which is NOT necessarily located at its center. The induced field can be measured as follows: according to the principle of superposition, the fields of the magnet and the steel ball are added, so by subtracting from the total field the additional magnet field we measured at the same distance from the sensor (it is enough to remove the tube with the steel ball after measuring the total field and recording a new value), we obtain the induced field. A neodymium magnet has $|\mu-1|\ll1$, so external fields do not affect its magnetization.
+If you place a steel ball at a distance $x$ (the distance between their centers) from the magnet, then a field will be induced outside the ball, which with good accuracy is equivalent to the field of a point dipole, NOT necessarily located at its center. The induced field can be measured as follows: according to the principle of superposition, the fields of the magnet and the steel ball are added, so by subtracting from the total field the additional magnet field we measured at the same distance from the sensor (it is enough to remove the tube with the steel ball after measuring the total field and recording a new value), we obtain the induced field.
+A neodymium magnet is $|\mu-1|\ll1$, so external fields do not affect its magnetization.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig6.jpg}
+    \caption{Fig. 6.}
+\end{figure}
+\problembox{C5}{For each tube, measure the $x$ value using a caliper. Also, for each tube, obtain the dependence $B_{нав}(s)$ by taking at least 5 experimental points.}{1.50}
+\problembox{C6}{For each tube, using the results of the previous paragraph, using the least squares method, determine the dipole moment $m'$ induced in the steel ball. There is NO need to create graphs. Choose a linearization such that a shift in the position of the dipole induced in the steel ball (i.e., a constant shift $s$) does not affect the linearity.}{0.50}
+There is NO need to create graphs. Choose a linearization such that a shift in the position of the dipole induced in the steel ball (i.e., a constant shift $s$) does not affect the linearity.
+Next, we theoretically study the dipole moment induced in a steel ball.
+\problembox{C7}{Write down the boundary conditions for the vectors $\vec{B}$ and $\vec{H}$ at the steel-air interface. Using the boundary conditions, obtain the relationship between the angles that form the magnetic field induction vector $\vec{B}$ with the normal to the surface in both media. The resulting relation may contain the specified angles and $\mu_{сталь}$. Obtain an expression for the angle between the magnetic field induction vector and the normal in air in the limiting transition $\mu_{сталь}\gg 1$.}{0.40}
+With the correct replacement of quantities, magnetostatics is equivalent to electrostatics, so we can apply well-known methods for solving electrostatic problems.
+\problembox{C8}{What type of substance does $\varepsilon \gg 1$ correspond to in electrostatics?}{0.10}
+\problembox{C9}{At a distance $y>R$ from the ferromagnetic sphere of radius $R$ there is a magnetic charge $q_m$.  The external field created by a ferromagnetic sphere is equivalent to a system of magnetic charges. Describe the equivalent system of magnetic charges for this situation (find their magnitudes and positions). Note. Magnetic charge $q_m$ creates a magnetic field $\vec{B}$ at a point with radius vector $\vec{r}$ according to the law:\[\vec{B}=\dfrac{\mu_0q_m}{4\pi r^3}\vec{r}\]}{0.20}
+Describe the equivalent system of magnetic charges for this situation (find their magnitudes and positions).
+Note. Magnetic charge $q_m$ creates a magnetic field $\vec{B}$ at a point with radius vector $\vec{r}$ according to the law:\[\vec{B}=\dfrac{\mu_0q_m}{4\pi r^3}\vec{r}\]
+When a steel ball is in the field of a point magnetic dipole, a system of magnetic charges $q_{m,i}$ is induced in it, the field of which at large distances from it is characterized by a dipole moment: \[\vec{m}=\sum_i q_{m,i}\vec{r_i}\] We will assume that this dipole moment is located in the center of the ball.
+We will assume that this dipole moment is located at the center of the ball.
+\problembox{C10}{Obtain an expression for the magnetic moment $m'$ induced in a steel ball radius $R$ when it is at a distance $x$ from the magnetic dipole $m$.}{0.20}
+\problembox{C11}{Using the relationship obtained in the previous paragraph, linearize the measurement results in paragraph C6 and plot it. Find the parameters of the line and compare them with the theoretical values.}{0.80}
+\section*{Part D. Analysis of gun efficiency (2.4 points)}
+A ferromagnetic ball in an external uniform magnetic field $\vec{B}_0$ acquires a dipole moment:\[\vec{m}=\dfrac{4\pi R^3}{\mu_0}\vec{B}_0.\] Next, consider that the steel ball acquires such a magnetic moment as if it were in a uniform magnetic field equal to the external field at its center. This approximation within the framework of this problem is equivalent to that considered at the end of part C.
+Next, consider that the steel ball acquires a magnetic moment as if it were in a uniform magnetic field equal to the external field at its center. This approximation within the framework of this problem is equivalent to that considered at the end of part C.
+\problembox{D1}{In a steel ball located at a distance $s_1=2R$ from a dipole with a dipole moment $m$, a dipole moment $t_1m$ is induced, and at a distance $s_2=4R$ a moment $t_2m$ is induced. Determine $t_1$ and $t_2.$ The steel balls do not affect the dipole $m$!}{0.20}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig7.jpg}
+    \caption{Fig. 7.}
+\end{figure}
+\problembox{D2}{Obtain an expression for the induced dipole moments $m_1$, $m_2$ in the ball-magnet-ball system and $m_3$, $m_4$ in the ball-ball-magnet system. Express your answer in terms of $m$. Note. Don't forget to take into account the influence of the balls on each other.}{0.60}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig8.jpg}
+    \caption{Fig. 8.}
+\end{figure}
+\problembox{D3}{Obtain an expression for the magnetic field induction $B(x)$ of the ball-ball-magnet system at a distance $x$ from the center of the magnet. Express your answer in terms of $m,\mu_0, x, R$.}{0.30}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig9.jpg}
+    \caption{Fig. 9.}
+\end{figure}
+\problembox{D4}{Obtain an expression for the magnetic field induction $B(x)$ of the ball-magnet-ball system at a distance $x$ from the center of the magnet. Express your answer in terms of $m,\mu_0, x, R$.}{0.30}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig10.jpg}
+    \caption{Fig. 10.}
+\end{figure}
+Note. For the following points you may need the following integrals: \[\int\limits_4^\infty \left(\dfrac{1}{x^3}+\dfrac{A}{(x-2)^3}+\dfrac{B}{(x+2)^3}\right)\cdot \left(\dfrac{1}{x^4}+\dfrac{A}{(x-2)^4}+\dfrac{B}{(x+2)^4}\right)\mathrm{d}x=5.58 \cdot 10^{-8}\cdot (27+8A+216B)^2\] \[\int\limits_2^\infty \left(\dfrac{1}{x^3}+\dfrac{A}{(x+2)^3}+\dfrac{B}{(x+4)^3}\right)\cdot \left(\dfrac{1}{x^4}+\dfrac{A}{(x+2)^4}+\dfrac{B}{(x+4)^4}\right)\mathrm{d}x=5.58 \cdot 10^{-8}\cdot \left(27\cdot(8+A)+8B\right)^2\]
+\[\int\limits_4^\infty \left(\dfrac{1}{x^3}+\dfrac{A}{(x-2)^3}+\dfrac{B}{(x+2)^3}\right)\cdot \left(\dfrac{1}{x^4}+\dfrac{A}{(x-2)^4}+\dfrac{B}{(x+2)^4}\right)\mathrm{d}x=5.58 \cdot 10^{-8}\cdot (27+8A+216B)^2\]
+\[\int\limits_2^\infty \left(\dfrac{1}{x^3}+\dfrac{A}{(x+2)^3}+\dfrac{B}{(x+4)^3}\right)\cdot \left(\dfrac{1}{x^4}+\dfrac{A}{(x+2)^4}+\dfrac{B}{(x+4)^4}\right)\mathrm{d}x=5.58 \cdot 10^{-8}\cdot \left(27\cdot(8+A)+8B\right)^2\]
+\problembox{D5}{Obtain an expression for the work $W_1$ performed by the gun's magnetic field on the incident ball in the form of the integral of the force acting on it. You will receive the coefficient in front of the functional part in numerical form. Express your answer in terms of $\mu_0, R, m$.}{0.30}
+\problembox{D6}{Obtain an expression for the work $W_2$ performed by the gun's magnetic field on the flying ball in the form of the integral of the force acting on it. You will receive the coefficient in front of the functional part in numerical form. Express your answer in terms of $\mu_0, R, m$.}{0.30}
+\problembox{D7}{Using the expression for $W_1$, $W_2$ and the values ​​$\beta$, $m$, $R$, determine the theoretical value of $\Delta E_\mathrm{max}$.}{0.40}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4026}
+\end{document}

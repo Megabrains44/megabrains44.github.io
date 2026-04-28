@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Humid adiabatic atmosphere}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+An adiabatic atmosphere is an atmosphere in equilibrium, in which possible movements of air masses occur without heat exchange with each other. The standard model of the adiabatic atmosphere considers the equilibrium of dry air. In reality, the air contains water vapor, which, upon reaching saturation, condenses. Steam condensation results in the temperature gradient being significantly different from that obtained in the dry air model. Taking into account the content of water vapor in the atmosphere is the basis of this task. In all points of the problem, consider it true for any point in the atmosphere that: 1) the temperatures of air and water vapor are equal; 2) the ratio of water vapor density to air density $\cfrac{\rho_\text{п}}{\rho_\text{в}}=\alpha\ll{1}$. Consider the following data known: 1) free fall acceleration $g=9.8~м/с^2$; 2) atmospheric pressure on the Earth’s surface $p_0=1.01\cdot{10^5}~\text{Па}$; 3) unsaturated water vapor is an ideal triatomic gas with molar mass $\mu_\text{п}=18~г/mol$ and adiabatic exponent $\gamma_\text{п}$; 4) air is an ideal diatomic gas with molar mass $\mu_\text{в}=29~г/mol$ and adiabatic exponent $\gamma_\text{в}$; 5) universal gas constant $R=8.31~J/(mol\cdot К)$; 6) the specific heat capacity of water is equal to $c=4200~J/(кг\cdot К)$ and does not depend on temperature; 7) the specific heat of vaporization of water at $T_n=273~\text{К}$ is equal to $\lambda_n=2.491\cdot{10^6}~J/кг$. 8) a graph of the dependence of water vapor pressure on temperature $p_\text{н.п}(T)$ in the temperature range $273~\text{К}-293~\text{К}$ is shown in the figure below:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A: Determining the dew point (2.5 points)}
+
+Consider an adiabatic atmosphere consisting of dry air. On the Earth's surface the air temperature is $T_0$.
+
+\problembox{A1}{Find the air temperature $T_\text{в}$ at a height $h$ above the Earth's surface. Express your answer in terms of $T_0$, $g$, $\mu_\text{в}$, $R$ and the adiabatic exponent $\gamma_\text{в}$.}{1.00}
+
+Further, within the framework of this part of the problem, the temperature depends on the height according to the law found in paragraph $\textbf{A1}$. Also, for the purposes of this part of the problem, assume that mechanically water vapor does not interact with air.
+
+Let the relative humidity of vapor $\varphi=\cfrac{p_\text{п}}{p_\text{н.п}}$ on the Earth's surface be equal to $\varphi_0$.
+
+\problembox{A2}{Find the dependence of water vapor pressure on temperature $p_\text{п}(T)$. Express your answer in terms of $\varphi_0$, $p_{\text{п}0}$, $T_0$, $\mu_\text{п}$, $\mu_\text{в}$, $\gamma_\text{в}$ and $T$.}{1.00}
+
+\problembox{A3}{Using the graph of $p_\text{н.п}(T)$, find for $\varphi_0=65\text{%}$ and $T_0=287~\text{К}$ the height $h$ above the Earth's surface at which the vapor becomes saturated.}{0.50}
+
+\section*{Part B. Condensation of water vapor (5.5 points)}
+
+After saturation, the water vapor begins to condense. This significantly distorts the type of dependence $T_\text{в}(h)$ found in point $\textbf{A1}$. Consider that all condensed water vapor falls instantly as precipitation.
+
+To study the condensation of water vapor, it is necessary to take into account that the specific heat of vaporization differs from the value known for $T_n=273~\text{К}$.
+
+\problembox{B1}{The specific heat of vaporization depends on the temperature $T$ as follows: $$\textbackslash\{\}lambda(T)=\textbackslash\{\}lambda_n+k(T-T_n) $$ Найдите $k$. Ответ выразите через $c$, $R$, $\mu_\text{n}$ и показатель адиабаты $\gamma_\text{n}$. $\textit{Note:}$ если вы не можете решить этот пункт, то в дальнейшем считайте, что $\lambda=\lambda_n=const$. This does not lead to loss of points.}{1.00}
+
+Let us consider the air mass $m_\text{в}$, which is in equilibrium. In the volume of air $V_\text{в}$, the ratio of the mass of water vapor in the separated mass of dry air $\alpha=\cfrac{m_\text{п}}{m_\text{в}}$ depends on the height $h$, i.e. $\alpha=\alpha(h)$.
+
+\problembox{B2}{Show that when the released air mass moves, the amount of heat received by the system enclosed in its volume can be represented as follows: $$\textbackslash\{\}delta\{Q\}=m_\textbackslash\{\}text\{в\}\textbackslash\{\}left(\textbackslash\{\}frac\{\textbackslash\{\}gamma_\textbackslash\{\}text\{в\}R\}\{\textbackslash\{\}mu_\textbackslash\{\}text\{в\}(\textbackslash\{\}gamma_\textbackslash\{\}text\{в\}-1)\}dT+gdz+\textbackslash\{\}lambda d\textbackslash\{\}alpha\textbackslash\{\}right) $$}{0.50}
+
+\problembox{B3}{Find $\cfrac{d\alpha}{dz}$. Express your answer in terms of $\mu_\text{п}$, $\mu_\text{в}$, $P_\text{в}$, $P_\text{н.п}$, $\cfrac{dP_\text{н.п}}{dT}$, $\cfrac{dT}{dz}$ and $\cfrac{dP_\text{в}}{dz}$}{0.50}
+
+\problembox{B4}{Find the temperature gradient $\cfrac{dT}{dz}$. Express your answer in terms of $\alpha$, $g$, $R$, $\gamma_\text{в}$, $T$, $\mu_\text{в}$, $\mu_\text{п}$ and $\lambda(T)$.}{1.00}
+
+The graph below shows the dependence of the temperature $T$ in the atmosphere on the height $h$ above the Earth's surface. The marking of the coordinate axes is unknown. The break in the graph occurs at temperature $T_1=283~\text{К}$, and the origin of coordinates corresponds to the Earth’s surface (see figure).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B5}{Find the temperature $T_0$ on the Earth's surface.}{1.80}
+
+\problembox{B6}{Estimate at what altitude $h_2$ snow begins to fall.}{0.70}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/1928}
+
+\end{document}

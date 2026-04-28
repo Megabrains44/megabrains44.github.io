@@ -1,0 +1,180 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Fountaining chain}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+If you put a long string of beads in a glass vessel and pull out its free end, the beads will not just slip out and fall to the floor, but will bend in an arc. The beads, like water in a fountain, will seem to jump out to a noticeable height above the edge of the glass. The purpose of this task is to try to describe the physical causes of this amazing phenomenon and obtain a quantitative estimate of the magnitude of the “fountain” effect. Everywhere in the problem we can assume that the linear density of the chain of beads is known and equal to $\lambda$, and the acceleration of free fall is $g$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Uniformly accelerated fall (0.8 points)}
+
+To begin with, neglecting the “fountain” effect, let’s assume that the chain of beads filling the glass simply falls over its edge, and the lower end of the chain accelerates down. The chain links that fell out of the glass are connected to each other, so the impulse of gravity is spent not only on accelerating the dropped links, but also on attaching new links to the falling mass, and the acceleration is less than $g$.
+
+\problembox{A1}{Find the acceleration of the lower end of the chain if it is known to be constant.}{0.80}
+
+\section*{Part B. Classics (2.5 points)}
+
+To identify some of the causes of the “fountain”, we will solve and analyze the classical problem. A chain with inelastic links is thrown over a block, with part of it lying on the table and part on the floor. After the chain was released, it began to move. It is required to find the speed of steady uniform motion of the chain. Table height $h$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Assuming that the loss of mechanical energy of the links occurs only when they hit the floor, and all the previous time the mechanical energy is conserved, find the speed $v$ of the steady uniform motion of the chain.}{0.30}
+
+To check the conservation of mechanical energy when the links are separated from the table, we will solve the problem in a different way: using the law of change in momentum.
+
+\problembox{B2}{What is the chain tension $T_f$ at points approaching the floor? What is the tension of the chain $T(h)$ at points $h$ above the floor? Is the tension the same at points on the left and right sections of the chain that are at the same height?}{0.50}
+
+\problembox{B3}{Write down the law of momentum change and calculate the tension force $T_t$ at points of the chain close to the table level. Express your answer using $v$.}{0.50}
+
+\problembox{B4}{Based on the results of steps B2 and B3, express the desired speed $v$.}{0.20}
+
+Let's start analyzing energy losses in the system.
+
+\problembox{B5}{What mechanical energy per unit time $\cfrac{\Delta W_f}{\Delta t}$ turns into heat during inelastic impacts of fallen links on the floor?}{0.20}
+
+The difference in the results of points B1 and B4 is due to energy losses when already flying chain links sharply “pull” another link still lying on the table. In this case, a certain decaying sequence of longitudinal jerks occurs in the recently taken off part of the chain, or, one can consider it, one inelastic impact, leading to the joint movement of the new link with the already flying ones. The energy loss during such an inelastic impact is most easily described by moving to a reference frame rising upward with the chain speed $v$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B6}{Calculate the loss of mechanical energy per unit of time $\cfrac{\Delta W_t}{\Delta t}$ during inelastic impacts of new links on those that have already taken off.}{0.50}
+
+\problembox{B7}{Find the ratio $\cfrac{\Delta W_t}{\Delta W_f}$ of energy loss on the table and on the floor.}{0.10}
+
+\problembox{B8}{If we consider the same links BEFORE they are lifted off the table and AFTER they land on the floor, then we can calculate the change in their potential energy. Show that it coincides with the sum of the losses on the table and on the floor.}{0.20}
+
+\section*{Part C. Upper estimate of the height of the “fountain” (2.0 points)}
+
+We are ready to consider the “fountain” case. Here and further we assume that the “fountain” has already been established and maintains a constant shape and speed; the ends of the chain lie on the table and on the floor.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{By analogy with points B2 and B3, write down expressions for the chain tension forces at different points: $T_t$ (above the table), $T_c$ (in the loop near the ceiling), $T_f$ (near the floor).}{0.20}
+
+\problembox{C2}{By combining the written expressions with the law of momentum change, solve the system of equations and obtain expressions for $v$ and for the expected height of the “fountain” $h_2$.}{0.40}
+
+Since the obtained result contradicts the experiment, it is necessary to adjust the model of the phenomenon. Let us assume, firstly, that there is a certain support reaction force acting from the side of the table on the link that “jumps” from the table. For dimensional reasons, this force must be proportional to $\lambda v^2$, so let $R=\alpha \lambda v^2$, where $\alpha$ is a certain numerical coefficient. Secondly, let the chain tension near the floor be $\beta \lambda v^2$, where $\beta$ is also a numerical coefficient.
+
+\problembox{C3}{What are the coefficients $\alpha$ and $\beta$ in the simplified model discussed earlier in C1?}{0.20}
+
+\problembox{C4}{Under the described new assumptions, repeat calculations similar to point C2 and obtain expressions for $\cfrac{h_2}{h_1}$ and for the ratio $\cfrac{E_\text{}}{E_\text{}}$ of the kinetic energy of the flying link to its initial potential energy (measured from the floor level).}{0.60}
+
+\problembox{C5}{What condition must $\alpha$ and $\beta$ satisfy so that the law of conservation of energy is not violated? At what values of $\alpha_0$ and $\beta_0$ is the maximum permissible height of the “fountain” achieved? What are the corresponding ratios $\left( \cfrac{h_2}{h_1} \right)_{max}$ and $\left( \cfrac{E_\text{}}{E_\text{}} \right) _{max}$ equal to?}{0.60}
+
+\section*{Part D. Experiment (0.2 points)}
+
+The resulting estimate $h_2$ turns out to be too high. The figure below shows a graph $h_2(h_1)$ describing the effect sizes observed in the experiments.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{D1}{Using the graph, calculate the experimental coefficient $\left( \cfrac{h_2}{h_1} \right)_{exp}$.}{0.20}
+
+\section*{Part E: Link Rotation (2.0 points)}
+
+The occurrence of a significant reaction of the support $R$, “pushing” the links coming off the table, is contrary to intuition. Let us, however, try to describe one of the reasons for its appearance. Let the chain consist of links of length $b$ and mass $m$, $I$ is the moment of inertia of each link (relative to the axis passing through its center and perpendicular to the plane of the figure). If, for example, a large force $T_t\gg mg$ is applied to the right end of a link that is about to come off the table, then at the first moment after this both the translational and rotational motion of the link will accelerate.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{E1}{Calculate what force $R$ must act on the left end of the link to cause such a movement. Express your answer using $m$, $b$, $I$, $\lambda$.}{1.10}
+
+\problembox{E2}{Assuming that the chain is “pins” connected to each other (i.e., the links are thin cylinders), calculate $\alpha_\text{.}$ - the numerical value of the coefficient introduced earlier by the relation $R=\alpha \lambda v^2$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_\text{.}$.}{0.30}
+
+\problembox{E3}{Now considering the links to be thin hoops, calculate $\alpha_\text{.}$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_\text{.}$.}{0.30}
+
+If you use beads as a chain, then the separation of the links from the table affects several neighboring beads at once. Let us assume that a segment of three small neighboring balls is set in motion, rigidly connected to each other by weightless segments of length $b/2$. Let the force $T_t$ act on one of the ends of this “three”.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{E4}{Calculate $\alpha_3$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_3$.}{0.30}
+
+In addition to the described reason for the occurrence of $R$, associated with the imprecision of the links, there are many more factors that contribute to this force, but their full calculation is complex and highly dependent on the design of the chain. For example, if these are beads, then lifting off the table can begin with horizontally “dragging” several beads over a pile of stationary ones. During such “dragging,” impacts may occur, the reaction of the support in which will have a vertical component. Further analysis of the process of link separation is beyond the scope of the problem.
+
+\section*{Part F. “Fountain” shape (2.5 points)}
+
+First of all, let's consider the problem of a “catenary line”, i.e. Let us describe what form a chain with fixed ends takes, hanging statically in a gravitational field. Let the coordinate $s$ be introduced, measured along the chain from one of its ends. The angle of inclination $\theta(s)$ of the tangent to the chain and the tension force $T(s)$ depend on $s$. Consider a small arc of length $ds$ in the neighborhood of some $s$.
+
+\problembox{F1}{By writing Newton's second law in projection onto the tangent to the chain and onto the perpendicular to it, you obtain a system of differential equations connecting the functions $T(s)$, $\theta(s)$ and containing the constants $\lambda$ and $g$. There is no need to solve the system.}{1.00}
+
+It is known that by solving such a system of equations, one can obtain the dependence $y(x)$, which describes a chain line in Cartesian coordinates. The beautiful fact is that the chain line is a hyperbolic cosine: $y(x) = A+B\cdot ch(Cx+D)$, where $A$, $B$, $C$, $D$ are some constants expressed in terms of the length of the chain and the coordinates of the suspension points. All possible chain lines have equations of this form.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig8.jpg}
+    \caption{Figure 8.}
+\end{figure}
+
+Let’s move from the “static” task to the “dynamic” one. Let us consider a gushing chain and assume that the shape of the “fountain” has become established, i.e. the trajectories of all links exactly repeat each other. The speed of the chain in the “fountain” is $v$.
+
+\problembox{F2}{Similar to point F1, write down a system of differential equations connecting the functions $T(s)$ and $\theta(s)$ for the “fountain” line. There is no need to solve the system.}{1.00}
+
+\problembox{F3}{Let $T (s)$ be the tension in the fountain line, i.e. a function that satisfies the equations from point F2. The function $(T(s)-\tau)$ satisfies the system of equations for the chain line from point F1 for some value of the constant $\tau$. Express $\tau$.}{0.50}
+
+The tension force at each point is increased by $\tau$ compared to the “static” problem, and this is the only difference: it is known that such an addition to $T(s)$ does not affect the shape of the curve. Thus, we have proven that the “fountain” is also a chain line!
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/107}
+
+\end{document}

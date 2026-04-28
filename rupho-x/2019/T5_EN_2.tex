@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Let's talk about the weather}}
+\author{\normalsize X19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The map below shows isobars (for the same altitude, approximately at sea level). Assume that the isobar diagram is stationary (changing slowly over time).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Sketch the wind direction at points $A$ and $B$.}{1.00}
+
+\problembox{A2}{Estimate the wind speed $v_A$ at point $A$. Consider the isobars to be straight lines around this point. Air density $\rho=1{.}23~\text{kg}/\text{m}^3$.}{2.00}
+
+\problembox{A3}{Estimate the wind speed $v_B$ at point $B$.}{3.00}
+
+Note: When a body of mass $m$ (for example, a layer of air) moves with speed $v$ in a rotating frame of reference (rotating with angular speed $\Omega$), it is acted upon by a certain fictitious force, which is called the Coriolis force: $$F_C=2m\Omega v\sin\varphi$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3056}
+
+\end{document}

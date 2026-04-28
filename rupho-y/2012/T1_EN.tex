@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Tropical cyclone - a giant heat engine}}
+\author{\normalsize Y12 (2012) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem considers a simplified model of a tropical cyclone. In this model, the cyclone is considered as a giant heat engine operating according to the Carnot cycle.
+
+Rice. 1. Diagram of air mass flows
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Rice. 2. Carnot cycle
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+A mass of dry air $\Delta m$ flows along the ocean surface from a high pressure area ($A$) to a low pressure area ($B$) close to the center of the storm $O$ (Fig. 1), capturing moisture (water vapor) along the way. Together with the vapors, heat $Q_1$ is taken from the ocean. Air masses saturated with water vapor rise into the troposphere (section $BC$). In the troposphere (section $CD$) they are discharged as a tropical shower, giving off energy $Q_2$.
+
+\problembox{A1}{Using the first law of thermodynamics, find an expression for $Q_1$ (see Fig. 2) in terms of $L$ - the specific heat of evaporation, $\Delta q$ - the moisture mass of the trapped air mass $\Delta m$ on the way from $A$ to $B$ $P_A$ and $P_B$ - pressure in point $A$ and point $B$ respectively. Use the universal gas constant $R$, sea surface temperature $T_1$, molar mass $M$ of air.}{0}
+
+Use the universal gas constant $R$, sea surface temperature $T_1$, molar mass $M$ of air.
+
+\problembox{A2}{Find the total work done in one Carnot cycle by a heat engine on a mass of air $\Delta m$.}{0}
+
+\problembox{A3}{Assuming that the work done by the heat engine goes entirely to increasing the kinetic energy of the air mass, obtain an expression for the speed $v_B$ of the air in the central part of the cyclone (the “eye” of the cyclone).}{0}
+
+\problembox{A4}{Assuming $v_A = 0$, find the numerical value of $v_B$ using the following data: $T_1=273~\text{К}$, $T_2=213~\text{К}$, $R=8.31~\text{J}/(\text{mol}\cdot\text{К})$, relative air humidity at $B$ $\varphi=75\%$, at $T = T_1$ saturated vapor pressure $P_Н = 42~\text{мбар}$, $P_A = 1000~\text{мбар}$, $P_B = 950~\text{мбар}$, average molar mass of air $M = 29 \cdot 10^{-3}~\text{кг} \cdot \text{mol}^{-1}$, molar mass of water $M_\text{в}=18 \cdot 10^{-3}~\text{кг}\cdot\text{mol}^{-1}$, specific heat of evaporation of water $L = 2.26 \cdot 10^6~\text{J}\cdot\text{кг}^{-1}$, density of dry air $\rho=1.3~\text{кг}/\text{м}^3$ ($1~\text{бар} = 10^5~\text{Па}$).}{0}
+
+\problembox{A5}{Assuming that the azimuthal velocity $v$ and the radial distance $r$ from the center of the cyclone are related by $v\sqrt{r} = \text{const}$, and that the velocity $v_A$ at the outer edge of the cyclone is $10~\text{м}/\text{с}$, calculate the effective radius of the cyclone (assume $r_B = 10~\text{км}$).}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3971}
+
+\end{document}

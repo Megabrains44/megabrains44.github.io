@@ -1,0 +1,224 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Coulomb's law}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Equipment}
+
+Fig.~ 1. Photo of equipment
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Two long identical solenoids, each with mass $m=(170 \pm 2)~\text{g}$; tripod with two crossbars; two threads; DC power supply; ammeter; thermometer; ruler; and connecting wires.
+
+\section*{Notes}
+
+In Fig. 2, the following are marked: the hole for attaching the solenoid to the thread and the thermistor leads. When connecting wires, do not press on the terminals. The thermistor resistance depends linearly on temperature:
+\[
+R=R_0(1+\alpha t),
+\]
+where $R_0=101~\Omega$, $\alpha=0.00377~^\circ\text{C}^{-1}$, and $t$ is the thermistor temperature in $^\circ\text{C}$. Handle the solenoids carefully: do not shake, drop, or apply excessive force. Do not touch the winding when it is hot. Remove wires by holding the plug, not the wire itself. Magnetic constant:
+\[
+\mu_0 = 4\pi\cdot 10^{-7}~\text{H/m}.
+\]
+
+Fig.~ 2. Solenoid end
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\section*{Theoretical introduction}
+
+\section*{Magnetics}
+
+Some substances in a magnetic field become magnetized, i.e. become sources of magnetic field themselves. These substances are called magnets. For a magnetized substance,
+\[
+\vec{B}=\mu\mu_0\vec{H}.
+\]
+Substances that can be strongly magnetized are called ferromagnets, and for them $\mu\gg 1$.
+
+When a magnet is magnetized, the arrangement of molecular currents becomes partially or completely ordered. Therefore, a magnetized magnet can be represented as a system of tiny oriented currents (see Fig. 3). These currents form a certain surface current, which gives the magnet its magnetic properties.
+
+Figure 3. Molecular currents in a magnet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\section*{Hysteresis}
+
+A demagnetized ferromagnet in a field changes the induction $B$ along the curve $OCA$. At $H=H_s$ saturation of $B_s$ is reached, after which the increase in $H$ has almost no effect on $B$. As $H$ decreases from the point $A$, the induction follows the curve $ACD$ and at $H=0$ the residual induction $B_r$ remains. It arises because, during demagnetization, molecular currents do not return completely to their original state, in which they mutually compensate each other. As a result, some magnetization remains in the sample, directed in the same way as during saturation. To eliminate it, it is necessary to apply an external magnetic field of the opposite direction with intensity $H_c$, which is called coercive force. At $H=-H_s$ at point $C'$ saturation $-B_s$ occurs. The value $H_s$ is called saturation voltage. Fig.~ 4. Ferromagnetic hysteresis loop
+
+When $H$ decreases from the point $A$, the induction follows the curve $ACD$ and at $H=0$ the residual induction $B_r$ remains. It arises because, during demagnetization, molecular currents do not return completely to their original state, in which they mutually compensate each other. As a result, some magnetization remains in the sample, directed in the same way as during saturation. To eliminate it, it is necessary to apply an external magnetic field of the opposite direction with a intensity $H_c$, which is called coercive force.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+When the field strength $H$ changes in the section $CDEC'FGC$, the magnetization reversal curve describes a loop called a magnetic hysteresis loop. The hysteresis loop we considered is limiting, that is, when the sample is remagnetized, saturation induction $B_{s}$ is achieved. Any loop that occurs when the field changes in the range from $-H_{0}$ to $H_{0}$, where $H_{0} < H_{s}$, is not limiting (all internal loops in Fig. 4).
+
+\section*{Magnetic charges}
+
+Similar to an electric dipole, a magnetic dipole can be modeled as two magnetic charges $+q_m$ and $-q_m$ separated in space. This is only a convenient calculation model. For a sufficiently long solenoid, the external field is approximately equal to the field of two point magnetic charges at its ends. The magnetic flux through the core is
+\[
+\mu_0 q_m=\oint\limits_{\Pi_{\text{core}}}\left(\vec{B}\cdot d\vec{S}\right).
+\]
+Figure 5. The simplest example of a magnetic dipole.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+A single magnetic charge $q_m$ creates at distance $r$ the field
+\[
+B(r)=\frac{\mu_0 q_m}{4\pi r^2}.
+\]
+The interaction force between two magnetic charges $q_{m1}$ and $q_{m2}$ at distance $r$ is
+\[
+F=\frac{\mu_0 q_{m1}q_{m2}}{4\pi r^2}.
+\]
+
+\section*{Experiment}
+
+Assemble the installation shown in Fig. 6. Use the maximum suspension length (solenoids should hang a short distance above the floor). The distance between the axes of the solenoids should be equal to $(5.0\pm0.1)~cm$. Clearly check that: The crossbars are parallel to each other and at the same height. The solenoids are located parallel to each other, are at the same height and are not offset relative to each other, and the distance between them coincides with the distance between the crossbars. The distance between the suspension points to the crossbar coincides with the distance between the suspension points to the ends of the solenoid. Show in the picture on your answer sheet how you do this.
+
+Make final adjustments only after connecting the wires, as they can affect the position of the solenoids. Connect the wires only after hanging the solenoids to avoid twisting the wires and threads. The distance between the crossbars can be changed by rotating them simultaneously relative to the tripod (see Fig. 7a). IMPORTANT! The wires have bending elasticity, which creates an additional moment of force on the solenoids. It is normal that after adjusting the gimbal to the crossbars, the solenoids will not be parallel to each other. To align them: – Route the wires along the bars near the suspension points, securing them horizontally with several layers of masking tape (see Fig. 7b). – Make sure that the wires do not twist around the thread, do not twist with each other, and do not come into contact with other objects (for example, a table). – You can carefully rotate the wire tips inserted into the solenoid around its axis to change the parasitic torque on the wire side (see Fig. 7c).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig8.jpg}
+    \caption{Figure 8.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig9.jpg}
+    \caption{Figure 9.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig10.jpg}
+    \caption{Figure 10.}
+\end{figure}
+
+Errors need to be assessed only in Part A of this problem. Please note that measurements in part C take a long time!
+
+\problembox{00}{Attention! The solenoids supplied include low-melting plexiglass (melting point $140~{}^\circ\mathrm C$). The resistance of the thermistor during the experiment MUST NOT exceed $145~Ohm$. Equipment breakdown if you act contrary to the instructions of the conditions will lead to your disqualification from the tour!}{-20.00}
+
+\section*{Part A: Repulsion (10 points)}
+
+\problembox{A0}{Write down the distance $x_{0}$ between the axes of the solenoids in the absence of current through them. After assembling the setup, invite the audience member to take a photo of your setup. The photograph should show: Solenoids attached to threads of as long a length as possible. The solenoids must be parallel and horizontal! Wires brought out through the top near the solenoid suspension points (otherwise the wires will create an additional deflecting moment of force). The entire installation must be secured and cannot be supported by hands! Attention! In case of violation of the order of assembly of the installation and recognition of the installation as unsuitable for measurements or absence of photographs, all points related to measurements and data processing WILL BE ASSESSED WITH 0 POINTS!}{1.00}
+
+The photo should show:
+
+\problembox{A1}{Obtain a formula relating the repulsive force $F$ of solenoids from each other with the distance $x$ between them. Express this force in terms of the magnetic charges $q_m$ on the ends of the solenoids, the lengths of the solenoids $l$, $x$ and $\mu_0$.}{0.30}
+
+\problembox{A2}{Express the magnetic field induction $B$ in the center of the solenoid cores through the distance $x$ between them, the mass of the solenoids $m$, the length of the suspension $L$, as well as other necessary quantities.}{0.20}
+
+\problembox{A3}{Measure the dependence of the distance $x$ between the axes of the solenoids on the current $I$ through each solenoid, varying the current in the range from $-5~\text{A}$ to $+5~\text{A}$.}{2.20}
+
+Since the magnetic permeability of the solenoid core depends on temperature, try to keep the solenoids' temperature within $10~{}^\circ\mathrm C$ of room temperature in your measurements.
+
+\problembox{A4}{From the dependence obtained in A3, calculate the magnetic induction $B$ inside the solenoid and the magnetic field strength $H=nI$, where $n$ is the number of turns per unit length. Plot $B(H)$ for currents from $-5~\text{A}$ to $+5~\text{A}$.}{3.20}
+
+The hysteresis is quite small, but its contribution can be estimated.
+
+\problembox{A5}{From experimental data, estimate the residual magnetization $B_{r}$ for the hysteresis loop from A4.}{0.30}
+
+\problembox{A6}{From the experimental data, estimate the coercive force $H_{c}$ for the hysteresis loop from A4.}{0.30}
+
+\problembox{A7}{At what maximum absolute value of the current flowing through the solenoids, the dependence $B(H)$, neglecting hysteresis, is still described by direct proportionality?}{0.20}
+
+\problembox{A8}{Calculate the magnetic permeability $\mu=\dfrac{1}{\mu_0}\dfrac{\mathrm dB}{\mathrm dH}$ of the solenoid core in the linear section. To improve measurement accuracy, use linearization, which does not require knowledge of the value $x_0$.}{1.50}
+
+\section*{Part B. Attraction (3.5 points)}
+
+Attention! In this part, the installation is much more sensitive to the parallelism and horizontality of the suspended solenoids. Please be careful when adjusting. If you change the direction of current flow in one of the solenoids, they will begin to attract each other. The distance between the axes of the solenoids should be equal to $4~cm$ to $6~cm$. In this part of the problem, you can neglect the interaction of like magnetic charges and take into account only the attraction of two pairs of charges.
+
+Let's solve a theoretical problem:
+
+\problembox{B1}{Derive a theoretical expression relating the distance $x$ between solenoids and the current $I$ through one solenoid. The answer may include the function $B(H)$ and any necessary quantities.}{0.30}
+
+\problembox{B2}{At what minimum current $I_\mathrm{high}$ does a sharp “sticking together” of solenoids occur with a smooth increase in current? The response may include the function $H(B)$ and any necessary quantities.}{1.00}
+
+\problembox{B3}{At what current $I_\mathrm{low}$ do the solenoids come apart again? The response may include the function $H(B)$ and any necessary quantities.}{0.30}
+
+\problembox{B4}{Measure the relationship $I_\mathrm{low,high}(x_0)$ for three different values of $x_0$. Plot these dependencies on the same graph with the theoretical dependencies calculated from the curve obtained in the previous part. Do any of these dependencies diverge from the theoretical ones? If yes, please explain why.}{1.90}
+
+\section*{Part C. Heating and demagnetization (6.5 points)}
+
+In this part, study the dependence of the magnetic permeability of the cores on temperature. When a ferromagnet is heated toward the Curie temperature $T_c$, its permeability decreases and magnetic properties weaken. Below $T_c$, use Bloch's law:
+\[
+\mu(T)=\mu(0)\left(1-\left(\frac{T}{T_c}\right)^{3/2}\right),
+\]
+where $\mu(0)$ is the permeability at $T=0~\text{K}$.
+
+\problembox{C1}{Obtain at least four different values of $\mu(T)$. To measure, use repulsion as in Part A. If you are reassembling the unit, you cannot use the value obtained in Part A at room temperature. This is due to the fact that differences in the values of $\mu$ arising from non-ideal assembly of the installation can be comparable to the measured effect. When processing experimental data, use the linearization from A8. Attention! The issued cores have low thermal conductivity. You can consider the core temperature to be equal to the thermocouple temperature by maintaining the corresponding constant thermocouple temperature for at least 10 minutes.}{4.50}
+
+\problembox{C2}{Define $\mu(0)$ and $T_c$ for issued cores.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4765}
+
+\end{document}

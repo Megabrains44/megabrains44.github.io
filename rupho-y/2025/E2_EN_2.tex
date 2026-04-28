@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Long line 2.0}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+A two-wire line is a system of two closely spaced conductors used to transmit electrical signals. Traveling waves of current and voltage can propagate along a two-wire line. A two-wire line per unit length has a capacitance $\mathcal C$ and an inductance $\mathcal L$. The characteristic of a two-wire line is the characteristic impedance $Z$:$Z=\sqrt{\dfrac{\mathcal L}{\mathcal C}},$wave propagation speed in the line:$v=\dfrac{1}{\sqrt{\mathcal L\mathcal C}}.$The most common implementation of a two-wire line is a coaxial cable, with the help of which a large number of electronic devices are connected instruments (for example, generators and oscilloscopes). The structure of a coaxial cable is shown in the figure below.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Another common example of implementing a two-wire line is twisted pair, on which most modern physical communication networks (in particular, the World Wide Web) are based. The structure of a twisted pair is shown in the figure below:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+This problem is devoted to the study of two-wire lines. Parts A and B examine standard coaxial cable, while Part C examines twisted pair cable.
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Oscilloscope Generator Breadboard Personal set of jumpers BNC-board adapter Resistor of unknown resistance $R$ BNC tee Male-to-male BNC connector (4 pcs.) Short BNC-BNC wire with characteristic impedance $50~Ohm$ (2 pcs.) BNC-BNC wire with characteristic impedance $50~Ohm$ and length $5~m$ (5 pcs.) BNC-BNC wire (twisted pair) with unknown characteristic impedance, length $10~m$
+
+\section*{Notes on operating the equipment}
+
+Long cables are wound into a coil and secured with ties specifically for ease of handling. Do not remove cable ties or unwind cables! If used carelessly, the BNC lugs on long cables may become damaged. Try not to pull them or bend them at very large angles. If you suspect that one of the cables is faulty, you can check this by connecting it directly to the generator and oscilloscope and making sure that it is transmitting the signal correctly. If a malfunction is detected, immediately contact the auditorium duty officer. Some of the BNC lugs may be tight to fit into the board connector. This does not mean they are malfunctioning.
+
+\section*{Part A. Not a button accordion with CN21. Characteristics of coaxial cable (6 points)}
+
+Consider a coaxial cable located along the $Ox$ axis. Let's consider the section $x = \mbox{const}.$ Let us denote by $U(x, t)$ the voltage between the internal and external wires at the point with coordinate $x$ at the moment of time $t$. Through the section under consideration, current $I(x, t)$ flows through the outer wire, and the same current flows through the inner wire in the opposite direction.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+The easiest way to examine a coaxial cable is to excite two voltage waves in it, propagating in opposite directions. To do this, an alternating voltage source $\mathcal{E}(t)$ is connected to the cable through a resistor with resistance $R$ (see figure). The size of the connecting wires compared to the voltage wavelength in the cable can be neglected. Let us denote $U_l(x, t)$ -- the voltage distribution in a wave propagating in the positive direction of the $Ox$ axis, $U_r(x, t)$ -- the same for a wave propagating in the opposite direction. The currents in each of the waves are related to the voltages through the so-called wave impedance $Z$: $I_l(x, t) = -\frac{U_l(x,t)}{Z} ,\qquad I_r(x, t) = \frac{U_r(x, t)}{Z}$  $U(x, t) = U_l(x, t) + U_r(x, t), \\ I(x, t) = I_l(x, t) + I_r(x, t).$    in  $x = 0$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{A1}{Express the voltage across the resistor $U_R(t)$, and the current through it $I_R(t)$ in terms of $U_l(x, t)$, $U_r(x, t)$, $I_l(x, t)$, $I_r(x, t)$ and $\mathcal E(t)$. Obtain an expression relating $U_l(0, t)$ and $U_r(0, t)$. The expression may contain $R$, $Z$, $\mathcal E(t)$.}{0.40}
+
+Now let the coaxial cable have a length $L$ and at the end it is connected to an oscilloscope with a very high internal resistance. A step voltage is applied to the resistor:$\mathcal{E}(t)=\begin{cases}0,& t < 0\\U_0,& t \ge 0\end{cases}$Due to the fact that the wave travels from the resistor to the oscilloscope and back in a finite time, the voltage on the cable (which is detected by the oscilloscope) begins to increase stepwise, gradually reaching a plateau. Voltage $U(x,t)$ is a solution to the wave equation $ \frac{\partial^2 }{\partial x^2} U(x,t) - \frac{1}{v^2} \frac{\partial^2}{\partial t^2} U(x,t) = 0,$which allows us to represent $U(x,t)$ as the sum of two waves traveling to the left and to the right. In this case, the speed of wave propagation along the cable is equal to $v$.
+
+\problembox{A2}{Find the voltage $U_\mathrm{OSC}(t)$ on an oscilloscope versus time.}{1.10}
+
+Note: if you were unable to complete steps A1 and A2, use the following expression:$U(t)=U_0\left[1-\left(\dfrac{R-Z}{R+Z}\right)^{\left\lfloor\frac{Vt}{2L}-\frac{1}{2}\right\rfloor}\right].$
+
+Assemble the installation shown in the figure:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{A3}{By applying a rectangular signal from the generator, remove the dependence of voltage on time. Record the times $t_n$ when the $n$ voltage step occurred, and the values of voltage $U_n$ immediately afterwards.}{0.70}
+
+\problembox{A4}{Repeat the previous step, connecting more cable sections (from 2 to 5 inclusive).}{2.80}
+
+Due to the non-ideal nature of the author of the problem, the cable sections do not perfectly match in length, so all available points must be used for analysis. Let the voltage supplied from the generator be equal to $U_0$, then the measured values $U_n$ can be nondimensionalized by introducing the value $u(n,m)=U_n/U_0$ for $m$ cable sections. Similarly, for $m$ cable sections, we enter the time $t(n,m)=t_n$.
+
+\problembox{A5}{Neglecting the length of the cables used to connect the generator, linearize the dependences $u(n,m)$ and $t(n,m)$. Plot the linearized dependence $u(n,m)$ and determine the resistance $R$ of the supplied resistor if the characteristic impedance of the cable is $50~ Ohm$. Plot a linearized graph of $t(n,m)$ and determine the speed $v$ of wave propagation in the coaxial cable. Give the errors of the results.}{1.00}
+
+\section*{Part B. Linear capacity (1.5 points)}
+
+If you apply low-frequency alternating voltage (i.e., at which the wavelength is much greater than the length of the cable section) to a section of cable, it will behave like a capacitor and coil connected in series. Since the coil impedance can be neglected at low frequencies, the cable capacitance per unit length can be measured with good accuracy.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{B1}{Neglecting the intrinsic capacitance of the cables used to connect the generator and oscilloscope, propose a circuit that allows you to determine the capacitance of a coaxial cable per unit length. Take measurements for different numbers of cable sections and determine its capacity per unit length. Knowing the characteristic impedance of the cable, find its inductance per unit length. Estimate the error of the obtained results.}{1.50}
+
+\section*{Part C. Characteristic impedance of an unknown cable (2.5 points)}
+
+To find the characteristic impedance of the twisted pair given to you, you can assemble the same circuit as in the first part (see paragraph A3).
+
+\problembox{C1}{Having supplied a rectangular signal from the generator, remove the dependence of voltage on time, namely, find the moments of time $t_n$ when the $n$ stepwise increase in voltage occurred, and the voltage values $U_n$ immediately after that.}{1.00}
+
+\problembox{C2}{Find the speed $v$ of signal propagation in the twisted pair and its characteristic impedance $Z$. Give the errors in the results obtained.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4538}
+
+\end{document}

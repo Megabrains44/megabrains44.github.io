@@ -1,0 +1,203 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Movement of a metal ball in a wire field --- Solution}}
+\author{\normalsize X23 (2023) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{A metal ball of radius $R$ is placed in a uniform electric field $\vec{E}_0$. Find the dipole moment $\vec{p}$ acquired by the ball. Express your answer in terms of $\vec{E}_0$, $R$ and the electric constant $\epsilon_0$.}{0.80}
+
+The electric field inside the ball is zero, and outside the ball it is the sum of the external field and the dipole field: $$\vec{E}=\vec{E}_0+\cfrac{1}{4\pi\epsilon_0}\left(\cfrac{3\left(\vec{p}\cdot{\vec{r}}\right)\vec{r}}{r^5}-\cfrac{\vec{p}}{r^3}\right) $$ On the surface of the ball, the electric field is directed perpendicular to the surface. From here:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\vec{p}=4\pi\epsilon_0R^3\vec{E}_0 $$
+\end{solcard}
+
+\begin{solcard}{A2}{Let the ball be located in an electric field directed along the $z$ axis, the intensity of which varies according to the law: $$\vec{E}\approx{\left(E_0+kz\right)\vec{e}_z} $$ where $E_0$ and $k$ — известные величины, moreover $kR\ll{E_0}$. Find силу $F_z$, действующую на ball/sphere. Answer выtimesandте via/through $E_0$, $k$, $R$ and электрическую постоянную $\epsilon_0$.}{0.50}
+
+By definition, a dipole is two point charges $+q$ and $-q$ located at a distance $l$ from each other. Let $\vec{r}$ be the radius vector of the negative charge, and $\vec{l}$ be the radius vector of the positive charge relative to the negative one. Then for the interaction force we have: $$\vec{F}=q\left(\vec{E}(\vec{r}+\vec{l})-\vec{E}(\vec{r})\right) $$ If electric field направлено вдоль дипольного momentа системы, то, since диполь ориентирован вдоль оси $z$, force, действующая нnotго, направлена вдоль оси $z$. If диполь можно считать точечным $$E_z(\vec{r}+\vec{l})-E_z(\vec{r})=\cfrac{dE_z}{dz}\cdot{l} $$ Hence for силы we get: $$F_z=p_z\cfrac{dE_z}{dz} $$ В нашей задаче since $kR\ll{E_0}$ - модель электрического диполя хорошо описывает electric field ball/sphereа. Substituting expression for $p_z$ and $\cfrac{dE_z}{dz}$, we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$F_z=4\pi{R}^3\epsilon_0E_0k $$
+\end{solcard}
+
+\begin{solcard}{A3}{Find the magnitude of the electric field of the wire $E_\text{п}$ at a distance $r$ from it. Express your answer in terms of $\lambda$, $r$ and the electric constant $\varepsilon_0$.}{0.20}
+
+From Gauss's theorem we have: $$2\pi rLE_\text{п}=\cfrac{q}{\epsilon_0}=\cfrac{\lambda L}{\epsilon_0} $$ whence:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$E_\text{п}=\cfrac{\lambda}{2\pi\epsilon_0 r} $$
+\end{solcard}
+
+\begin{solcard}{A4}{Find the magnitude and direction (attraction or repulsion) of the force $F$ acting on the ball from the side of the wire at a distance $r$ from it. Express your answer in terms of $\lambda$, $R$, $r$ and the electric constant $\varepsilon_0$.}{0.50}
+
+At $r\gg{R}$ the values ​​$E$ and $\cfrac{dE}{dr}$ of the wire fields on the ball size scale can be considered constant. In this approximation, the dipole moment of the ball is equal to: $$p=\cfrac{2\lambda R^3}{r} $$ Force, действующая на ball/sphere, equals: $$F_r=p\cfrac{dE_r}{dx} $$ whence:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The force of attraction is: $$F=\cfrac{\lambda^2R^3}{\pi\epsilon_0r^3} $$
+\end{solcard}
+
+\begin{solcard}{A5}{Show that the mechanical potential energy $W_p$ of a ball in the field of a wire at a distance $r$ between the wire and the center of the ball is equal to: $$W_p=-\cfrac{A}{r^2} $$ Find $A$. Answer выtimesandте via/through $\lambda$, $R$ and электрическую постоянную $\varepsilon_0$.}{0.40}
+
+For potential energy we have: $$W_p=-\int\limits_r^{\infty}Fdr $$ Integrating, we find: $$W_p=-\cfrac{\lambda^2R^3}{2\pi\epsilon_0r^2} $$ Hence parameter $A$ is equal to:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$A=\cfrac{\lambda^2R^3}{2\pi\epsilon_0} $$
+\end{solcard}
+
+\begin{solcard}{B1}{Find the minimum distance $r_{\min}$ between the center of the ball and the wire during motion, assuming that no collision occurs. Express your answer in terms of $A$, $b$, $m$ and $v_0$.}{0.60}
+
+From the law of conservation of energy we have: $$\cfrac{mv^2}{2}-\cfrac{A}{r^2}=\cfrac{mv^2_0}{2} $$ Let us represent квадрат скорости в следующем виде: $$v^2=\dot{r}^2+r^2\dot{\varphi}^2 $$ From the law сохранения angular momentum we get: $$L=mr^2\dot{\varphi}\Rightarrow{\dot{\varphi}=\cfrac{v_0b}{r^2}} $$ Комбинируя с законом сохранения энергии, we get: $$\cfrac{m\dot{r}^2}{2}+\cfrac{mv^2_0b^2}{2r^2}-\cfrac{A}{r^2}=\cfrac{mv^2_0}{2} $$ Минимальное distance до проwater достигается for/at $\dot{r}=0$. From here we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$r_{min}=\sqrt{b^2-\cfrac{2A}{mv^2_0}} $$
+\end{solcard}
+
+\begin{solcard}{B2}{Find $v_{crit}$. Express your answer in terms of $A$, $b$ and $m$.}{0.20}
+
+The radical expression must be non-negative. From here we get:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{crit}=\cfrac{1}{b}\sqrt{\cfrac{2A}{m}} $$
+\end{solcard}
+
+\begin{solcard}{C1}{Express $u'$ in terms of $r$, $\dot{r}$ and $\dot{\varphi}$. Find $u'(0)$ corresponding to the value of $\varphi=0$.}{0.40}
+
+Explicitly differentiate $u$: $$u'=\cfrac{du}{d\varphi}=-\cfrac{1}{r^2}\cfrac{dr}{d\varphi} $$ Let us represent $\cfrac{dr}{d\varphi}$ как производную сложной функции: $$\cfrac{dr}{d\varphi}=\cfrac{\dot{r}}{\dot{\varphi}} $$ from where:
+
+
+The value is constant and equal to: $$r^2\dot{\varphi}=\cfrac{L}{m}=v_0b $$ At the initial moment, the speed is directed directly towards the wire. Then we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$u'=-\cfrac{\dot{r}}{r^2\dot{\varphi}} $$
+\end{solcard}
+
+\begin{solcard}{C2}{Express the mechanical energy $E$ of the ball in terms of $m$, $u$, $u'$, $v_0$, $b$ and $A$.}{0.30}
+
+The expression for the mechanical energy of the ball is as follows: $$E=\cfrac{m\dot{r}^2}{2}+\cfrac{mr^2\dot{\varphi}^2}{2}-\cfrac{A}{r^2} $$ From angular momentum conservation we have: $$L=mr^2\dot{\varphi}=mv_0b $$ hence: $$E=\cfrac{m\dot{r}^2}{2}+\cfrac{mv^2_0b^2}{2r^2}-\cfrac{A}{r^2} $$ Переходя к переменным $u$ and $u'$, we obtain:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\cfrac{mv^2_0b^2}{2}\left(u'^2+u^2\right)-Au^2=E=\cfrac{mv^2_0}{2} $$
+\end{solcard}
+
+\begin{solcard}{C3}{Get addicted $u(\varphi)$.  Express your answer in terms of $m$, $v_0$, $b$, $A$ and $\varphi$.}{0.70}
+
+Differentiating the expression for energy with respect to $\varphi$, we obtain the equation of harmonic vibrations: $$u''=-u\left(1-\cfrac{2A}{mv^2_0b^2}\right) $$ с циклической частотой: $$\omega_0=\sqrt{1-\cfrac{2A}{mv^2_0b^2}} $$ Общее solution let us write в виде: $$u(\varphi)=C\sin\left(\omega_0\varphi+\varphi_1\right) $$ Taking into account начальных условий: $$u(0)=0\quad u'(0)=\cfrac{1}{b} $$ We find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$u(\varphi)=\cfrac{1}{b\sqrt{1-\cfrac{2A}{mv^2_0b^2}}}\sin\left(\varphi\sqrt{1-\cfrac{2A}{mv^2_0b^2}}\right) $$
+\end{solcard}
+
+\begin{solcard}{C4}{On the answer sheet, qualitatively construct the trajectory of the center of the ball in coordinates $u{,}\varphi$. The coordinates of all feature points can be expressed in terms of $m$, $v_0$, $b$ and $A$.}{0.60}
+
+The value $u$, starting from zero, reaches a maximum, and then, reaching zero, remains constant in time. The graph is shown in the figure below:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{C5}{Using the value of the parameter $A$ found in step $\bf{A4}$, find the initial speed of the ball $v_1$ at which during the interaction between it and the wire the direction of the ball’s speed changes to the opposite. Express your answer in terms of $m$, $b$, $R$, $\lambda$ and the electrical constant $\epsilon_0$.}{0.50}
+
+When the direction of the ball's speed is reversed, the total change in angle $\varphi$ is $2\pi$. From here we find the value $\omega_0$: $$\omega_0=\cfrac{1}{2} $$ Then parameter $A$ equals: $$A=\cfrac{3mv^2_1b^2}{8} $$ For/Atравнивая с expressionм, поrayенным в partе $\textbf{A4}$ $$\cfrac{\lambda^2R^3}{2\pi\epsilon_0}=\cfrac{3mv^2_1b^2}{8} $$ we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_1=\cfrac{2\lambda R}{b}\sqrt{\cfrac{R}{3\pi\epsilon_0m}} $$
+\end{solcard}
+
+\begin{solcard}{D1}{Find $S$ and $q_2$. Express your answers using $R$, $L$ and $q$.}{0.60}
+
+Let us introduce a coordinate system at the center of a cylindrical sphere with the axis $z$ directed along the line connecting the center of the sphere with the charge $q_1$. The potential of charges $q_1$ and $-q_2$ at any point on the surface of the ball is equal to zero, therefore: $$\cfrac{q_1}{\sqrt{r^2+(x-L)^2}}=\cfrac{q_2}{\sqrt{r^2+(x-S)^2}} $$ or: $$(q^2_1-q^2_2)(r^2+x^2)+2x(q^2_2L-q^2_1S)+q^2_1S^2-q^2_2L^2=0 $$ Since $r^2+x^2=R^2$, coefficient for/at $x$ equals нулю. Then we get систему уравнений: $$\cfrac{L}{S}=\cfrac{q^2_1}{q^2_2}\qquad (q^2_1-q^2_2)R^2=q^2_2L^2-q^2_1S^2 $$ solving which, we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$S=\cfrac{R^2}{L}\quad q_2=\cfrac{q_1R}{L} $$
+\end{solcard}
+
+\begin{solcard}{D2}{Find $dq_1$, $dq_2$, $S$ and $r_{-}$. Express your answers using $\lambda$, $R$, $r$, $\alpha$ and $d\alpha$.}{0.40}
+
+For $dq_1$ we have: $$dq_1=\lambda rd\tan{\alpha} $$ or:
+
+
+The element in question is located at a distance $L=\cfrac{r}{\cos\alpha}$ from the center of the ball. From here we find $dq_2$ and $S$:
+
+
+For $r_{-}$ we have: $$r_{-}=r-S\cos\alpha $$ or
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$dq_1=\cfrac{\lambda r}{\cos^2\alpha}d\alpha $$
+\end{solcard}
+
+\begin{solcard}{D3}{Find the magnitude and direction (attraction or repulsion) of the vector sum of forces $d\vec{F}=d\vec{F}_++d\vec{F}_-$ interaction of charges $dq_2$ and $-dq_2$ with the wire.  Express your answer in terms of $\lambda$, $R$, $r$, $\alpha$, $d\alpha$ and the electrical constant $\epsilon_0$.}{0.20}
+
+The pair of image charges are attracted to the wire because the negative charge is at a smaller distance from the wire. For the force of attraction, taking into account the electric field of the wire, we have: $$dF=\cfrac{\lambda dq_2}{2\pi\epsilon_0}\left(\cfrac{1}{r_{-}}-\cfrac{1}{r}\right) $$ or:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The force of attraction is $$dF=\cfrac{\lambda^2R^3}{2\pi\epsilon_0r^3}\cfrac{\cos\alpha d\alpha}{1-\cfrac{R^2}{r^2}+\cfrac{R^2}{r^2}\sin^2\alpha} $$
+\end{solcard}
+
+\begin{solcard}{D4}{Find the magnitude and direction of the total force of interaction between the ball and the wire $F_\text{поLн}$. Express your answer in terms of $\lambda$, $R$, $\theta$ and the electric constant $\epsilon_0$.}{1.00}
+
+To find the total force, we calculate the integral of the expression obtained in point $\textbf{D3}$ in the range from $-\cfrac{\pi}{2}$ to $\cfrac{\pi}{2}$. Let's introduce the value $t$, equal to: $$t=\cfrac{R\sin\alpha}{\sqrt{r^2-R^2}} $$ Then we get: $$F=\cfrac{\lambda^2R^2}{2\pi\epsilon_0r\sqrt{r^2-R^2}}\int\limits_{-\frac{R}{\sqrt{r^2-R^2}}}^{\frac{R}{\sqrt{r^2-R^2}}}\cfrac{dt}{1+t^2}=\cfrac{\lambda^2}{\pi\epsilon_0}\cfrac{R}{r}\cfrac{R}{\sqrt{r^2-R^2}}\arctan\cfrac{R}{\sqrt{r^2-R^2}} $$ Taking into account relation $r$, $R$ and $\theta$, we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The force of attraction is $$F=\cfrac{\lambda^2}{\pi\epsilon_0}\cfrac{\sin^2\theta\cdot{\theta}}{\cos\theta} $$
+\end{solcard}
+
+\begin{solcard}{D5}{Find the potential energy $W_p$ of the interaction of the ball with the wire. Express your answer in terms of $\lambda$, $R$, $\theta$ and the electric constant $\varepsilon_0$.}{1.00}
+
+Considering that the ball is attracted to the wire, the expression for potential energy is: $$W_p=-\int\limits_r^{\infty}F(r)dr $$ Let us find quantity $dr$ в переменных $R$ and $\theta$: $$dr=d\left(\cfrac{R}{\sin\theta}\right)=-\cfrac{R\cos\theta d\theta}{\sin^2\theta} $$ Then we have: $$W_p=-\cfrac{\lambda^2R}{\pi\epsilon_0}\int\limits_0^{\theta}\theta d\theta $$ from where:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$W_p(\theta)=-\cfrac{\lambda^2R\theta^2}{2\pi\epsilon_0} $$
+\end{solcard}
+
+\begin{solcard}{D6}{What speed $v_\text{sт}$ will an uncharged metal ball of radius $R$ and mass $m$ have when colliding with a wire if it is released from infinity without an initial speed? Express your answer in terms of $\lambda$, $R$, $m$ and the electric constant $\varepsilon_0$.}{0.30}
+
+At the moment of contact between the ball and the wire $\theta=\cfrac{\pi}{2}$. Let's write down the law of conservation of energy: $$\cfrac{mv^2_0}{2}=\cfrac{\lambda^2R}{2\pi\epsilon_0}\left(\cfrac{\pi}{2}\right)^2 $$ from where:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v=\cfrac{\pi\lambda}{2}\sqrt{\cfrac{R}{\pi\epsilon_0m}} $$
+\end{solcard}
+
+\begin{solcard}{E1}{For a given value $v_0$, obtain the dependence of the square of the radial velocity component $\dot{r}^2$ on the parameter $\theta$. Express your answer in terms of $m$, $v_0$, $\lambda$, $R$, $b$, electric constant $\varepsilon_0$ and $\theta$.}{0.40}
+
+From the law of conservation of energy we have: $$\cfrac{mv^2}{2}-\cfrac{\lambda^2R\theta^2}{2\pi\epsilon_0}=\cfrac{mv^2_0}{2} $$ Let us represent velocity в следующем виде: $$v^2=\dot{r}^2+r^2\dot{\varphi}^2 $$ Taking into account закона сохранения momentа momentumа $$L=mv_0b=mr^2\dot{\varphi} $$ we find:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{r}^2=v^2_0-v^2_0\cfrac{b^2}{R^2}\sin^2\theta+\cfrac{\lambda^2R}{\pi\epsilon_0m}\theta^2 $$
+\end{solcard}
+
+\begin{solcard}{E2}{Construct high-quality graphs of the dependence $\dot{r}^2(\theta)$ for different values ​​of $v_0$.}{0.60}
+
+Depending on the value of $v_0$, functions are divided into three types: 1) intersecting the ordinate axis at $\theta<\cfrac{\pi}{2}$; 2) ordinates that do not intersect the axis; 3) touching the ordinate axis at $\theta<\cfrac{\pi}{2}$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig2.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{E3}{Considering all quantities except $v_0$ constant, you obtain a system of equations that allows you to determine the value $v_{crit}$. The system of equations can include $m$, $R$, $b$, $\lambda$, electric constant $\varepsilon_0$, $\theta_{max}$ and $v_{crit}$.}{0.60}
+
+At sufficiently high speeds (type 1 function), the graph intersects the ordinate axis. At the moment of intersection, the value of $\dot{r}$ is reversed because $\dot{r}^2>0$. At sufficiently low speeds (type 2 function), the value of $\dot{r}^2$ is positive at the extremum, so the ball falls on the wire. The function of the 3rd type is a boundary case of those considered above - at the extremum, the value of the function $\dot{r}^2$ becomes zero. At any speed, the ball will not touch the wire. From here it is clear that when the value $\dot{r}^2$ is equal to zero, the derivative $\cfrac{d\dot{r}^2}{d\varphi}$ must also be equal to zero, which is written in the form of a system as follows:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\left(\cfrac{b^2\sin^2\theta_{max}}{R^2}-1\right)=\cfrac{\lambda^2R\theta^2_{max}}{mv^2_0\pi\epsilon_0}\qquad\cfrac{b^2\sin2\theta_{max}}{R^2}=\cfrac{2\lambda^2R\theta_{max}}{mv^2_0\pi\epsilon_0} $$
+\end{solcard}
+
+\begin{solcard}{E4}{Find $v_{crit1}$, $v_{crit2}$ and $v_{crit3}$ corresponding to the following values ​​of $b$ : $$b_1=20R\quad b_2=3R\quad b_3=1{,}1R $$ Answerы выtimesandте via/through $m, R, \lambda$ and электрическую постоянную $\varepsilon_0$.}{1.20}
+
+From the equation for the zero derivative we find: $$v_0=\lambda\sqrt{\cfrac{R}{\pi\epsilon_0m}}\cdot{\cfrac{R}{b}\sqrt{\cfrac{2\theta_{max}}{\sin2\theta_{max}}}} $$ For нахождения $v_0$ необходимо оlimitandть $\theta_{max}$. Разделив уравнения друг на друга, we get: $$\cfrac{k^2\sin^2\theta_{max}-1}{k^2\sin2\theta_{max}}=\cfrac{\theta_{max}}{2}\quad k=\cfrac{b}{R} $$ Solving the equation на калькуляторе, we find: $$\theta_{max1}=0{,}296~\text{rad}\quad\theta_{max2}=0{,}793~\text{rad}\quad\theta_{max3}=1{,}459~\text{rad} $$ from where:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{crit1}\approx{5{,}15\cdot{10^{-2}}\lambda\sqrt{\cfrac{R}{\pi\epsilon_0m}}}\quad v_{crit2}\approx{3{,}15\cdot{10^{-1}}\lambda\sqrt{\cfrac{R}{\pi\epsilon_0m}}}\quad v_{crit3}\approx{3{,}30\lambda\sqrt{\cfrac{R}{\pi\epsilon_0m}}} $$
+\end{solcard}
+
+\end{document}

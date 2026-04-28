@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+      \textbf{#1}\hfill\textbf{#3}\par\smallskip
+      #2
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Pop-up bubbles}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}
+\maketitle
+When observing air bubbles floating in a liquid, you will notice that their shape very much depends on the volume of air inside the bubbles and can be either close to spherical or resemble a thin disk. This problem is devoted to the study of the shapes of air bubbles floating in a liquid. When solving the problem, we will accept the following model of the phenomenon: unless otherwise indicated, all moving bodies have a shape slightly different from spherical; the compressibility and viscosity of the liquid can be neglected; the gravitational field in parts A and B can be neglected.
+When observing air bubbles floating in a liquid, you will notice that their shape very much depends on the volume of air inside the bubbles and can be either close to spherical or resemble a thin disk. This problem is devoted to the study of the shapes of air bubbles floating in a liquid. When solving the problem, we will accept the following model of the phenomenon:
+\section*{Part A. Well forgotten old (5.0 points)}
+Let us consider a ball of radius $R$ moving with speed $\vec{v}_0$ in an infinite volume of incompressible fluid with density $\rho$ and zero viscosity. The ball sets the liquid in motion. Recall that the gravitational field can be neglected. The motion of the fluid is characterized by the quantity $\mu$, called the added mass.
+
+If a ball moves in a fluid with speed $\vec{v}_0$, then the kinetic energy $E_k$ of the surrounding fluid is determined by the expression
+\[
+E_k=\frac{\mu v_0^2}{2}.
+\]
+If the ball moves in the fluid with speed $\vec{v}_0$, then the momentum $\vec{p}$ of the surrounding fluid is determined by
+\[
+\vec{p}=\mu\vec{v}_0.
+\]
+
+Let $\vec{r}$ be the radius vector from the center of the ball to an arbitrary point in space, and let $\vec{v}(\vec{r})$ be the velocity of the corresponding fluid element in the laboratory frame. You will need Thomson’s theorem, which states that if an initially motionless incompressible inviscid fluid is set in motion, then the circulation of the velocity vector along any closed contour that does not intersect the surfaces of bodies moving in the fluid is zero:
+\[
+\oint_l \vec{v}\,d\vec{l}=0.
+\]
+In points A1--A9 we will work in the reference frame attached to the ball. The fluid velocity in this frame will be denoted by $\vec{v}_{\text{rel}}$.
+\problembox{A1}{What is the flow of the relative velocity vector of the fluid through an arbitrary closed surface that does not intersect the surface of the ball? Justify your answer. Note: the flow of the relative fluid velocity vector through a closed surface is the quantity $\Phi$, determined by the expression: \begin{equation*} \Phi=\oint_S\vec{v}_\text{rel}\bigl(\vec{r}\bigr)d\vec{S}{.} \end{equation*}}{0.30}
+Note: the flow of the relative fluid velocity vector through a closed surface is the quantity $\Phi$, determined by the expression: \begin{equation*} \Phi=\oint_S\vec{v}_\text{rel}\bigl(\vec{r}\bigr)d\vec{S}{.} \end{equation*}
+\problembox{A2}{What is the normal component of the fluid velocity $v_{\text{rel},n}$ in the frame of reference associated with the ball?}{0.10}
+\problembox{A3}{What is the relative velocity of the fluid $\vec{v}_{\infty}$ at an infinite distance from the ball?}{0.10}
+\problembox{A4}{Let us consider a superconducting body placed in a uniform magnetic field with induction $\vec{B}_0$. Write an expression for the circulation of the magnetic field $\vec{B}(\vec{r})$ along a contour that does not intersect the surface of the superconductor, and an expression for the flux of the magnetic field through a closed surface that does not intersect the surface of the superconductor. Also indicate the boundary conditions of the magnetic field at the boundary of the body and at an infinite distance from it.}{0.40}
+\problembox{A5}{Let us place a superconducting ball of radius $R$ in a uniform magnetic field with induction $\vec{B_0}$. Find the magnetic field induction $\vec{B}(\vec{r})$ in the entire space outside the sphere. Express your answer in terms of $\vec{B_0}, \vec{r}$ and $R$.}{0.80}
+\problembox{A6}{Using the results of the previous paragraphs, find the dependence $\vec{v}_{\text{rel}}(\vec{r})$.}{0.20}
+Since the ball moves in the fluid at a constant speed, in the ball's frame of reference the motion of the fluid is stationary. This allows us to obtain the pressure distribution on the surface of the ball.
+\problembox{A7}{Let us consider the stationary motion of an incompressible fluid with zero viscosity through a thin tube. Let $p$ be the pressure in the liquid, $\varphi$ the potential energy per unit mass of the liquid, and $v$ the flow velocity in the pipe. Using the laws of conservation of energy and mass, show that for all points of the tube the relation (Bernoulli equation) holds:
+\[
+\varphi + \frac{p}{\rho} + \frac{v_{\text{rel}}^{2}}{2} = \mathrm{const}.
+\]}{0.40}
+Let $\theta$ be the angle between the radius vector $\vec{r}$ and the speed $\vec{v_0}$.
+\problembox{A8}{Assuming that the pressure at infinite distance from the ball is equal to $p_0$, find the dependence $p(\theta)$ on the surface of the ball. Express your answer in terms of $p_0$, $\rho$, $v_0$, $\theta$.}{0.60}
+\problembox{A9}{Calculate the resultant of the pressure forces acting on the surface of the ball. Express your answer in terms of $\vec{v_0}$, $R$, $\rho$.}{0.40}
+Let's return to the laboratory frame of reference. In the laboratory reference frame, the fluid velocity at a point with radius vector $\vec{r}$ is equal to $\vec{v}(\vec{r})$
+\problembox{A10}{Find the distribution of fluid velocity $\vec{v}(\vec{r})$ in the laboratory frame of reference.}{0.10}
+\problembox{A11}{What is the kinetic energy of the liquid $E_k$ in the laboratory frame of reference? Express your answer in terms of $\rho$, $R$, $v_0$.}{0.80}
+\problembox{A12}{Find the added mass $\mu$. Express your answer in terms of $\rho$, $R$.}{0.20}
+If you were unable to solve the previous point, you can continue to count $\mu = \frac{4}{3}\pi R^3\rho$.
+\problembox{A13}{Consider a ball moving with speed $\vec{v}_0$ and acceleration $\vec{a}_0$. Using the expression for the momentum $\vec{p}$ of the fluid, obtain an expression for the force $\vec{F}$ acting on the ball from the fluid. Express your answer in terms of $\rho$, $R$ and $\vec{a}_0$.}{0.30}
+Since the bubble is not a solid body, it will be deformed as a result of movement. In the future, consider its deformation to be small. Let us consider the movement of a bubble with a surface tension coefficient $\sigma$ with a speed $v_0$. Consider all expressions obtained in the previous paragraphs to be applicable. The pressure inside the bubble is the same everywhere and is equal to $p_{in}$.
+\problembox{A14}{Obtain the dependence of the curvature $K$ of the bubble surface on the angle $\theta$. Use $p_{in}$, $p_0$, $\rho$, $\theta$ and $v_0$.
+
+Note: the curvature $K$ of a surface is the sum of the inverse principal radii of curvature,
+\[
+K=\frac{1}{R_1}+\frac{1}{R_2}.
+\]
+It is related to the Laplace pressure by
+\[
+\Delta p=\sigma K.
+\]}{0.30}
+\section*{Part B. Effect of speed on bubble deformation (2.5 points)}
+Let us consider an ellipsoid obtained from an ellipse with a semi-major axis $a$ and a semi-minor axis $b$ by rotation about the minor axis. We denote the rotation axis as $y$. This figure can be obtained by compressing a sphere of radius $a$ along the axis $y$ with a coefficient $k$, where $k = b/a$. Let us find the curvature of the surface of the resulting figure at an arbitrary point $A'$, which before compression corresponded to the point $A$ and the angle $\theta$, measured from the axis $y$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Fig. 1.}
+\end{figure}
+It can be shown that in the $(x,y)$ plane the radius of curvature of the ellipsoid is
+\[
+R_1(\theta)=\frac{a}{k}\,\bigl(\cos^2\theta + k^2\sin^2\theta\bigr)^{3/2},
+\]
+and in the plane containing the normal to the ellipsoid at $A'$ and perpendicular to the $(x,y)$ plane the radius of curvature is
+\[
+R_2(\theta)=\frac{a}{k}\,\sqrt{\cos^2\theta + k^2\sin^2\theta}.
+\]
+Since $K(\theta)$ in Part A was derived assuming a nearly spherical bubble, deviations from a sphere should be small. This means $k=1-\varepsilon$, where $\varepsilon\ll 1$. Also assume $a\approx R$, where $R$ is the bubble radius used in Part A.
+\problembox{B1}{Taking into account the smallness of $\varepsilon$, the quantities $R_1$ and $R_2$ can be represented in the form: \begin{equation*} R_1(\theta)\approx R(1+A_1\varepsilon-B_1\varepsilon\sin^2\theta)\qquad R_2\approx R(1+A_2\varepsilon-B_2\varepsilon\sin^2\theta){.} \end{equation*} Find $B_1$ and $B_2$. In what follows, the terms $A_1\varepsilon$ and $A_2\varepsilon$ can be neglected. If you were unable to solve this point, then you can further assume that $B_1=B_2=1$. This does not lead to the loss of subsequent points.}{0.60}
+\problembox{B2}{Find the dependence of the curvature of the ellipsoid $K(\theta)$ in first order in $\varepsilon$. Express your answer in terms of $R$, $\theta$.}{0.20}
+\problembox{B3}{What is the value of $\varepsilon$ for the bubble discussed in A14? Express your answer in terms of the bubble speed $v_0$, bubble radius $R$, surface tension coefficient $\sigma$ and liquid density $\rho$.}{0.60}
+\problembox{B4}{What is the eccentricity $e$ of the bubble discussed in A14? Express your answer in terms of the bubble speed $v_0$, bubble radius $R$, surface tension coefficient $\sigma$ and liquid density $\rho$.}{0.30}
+\problembox{B5}{A spherical bubble with an initial diameter $d = 2~\mathrm{mm}$ rises in water with density $\rho = 10^3~\mathrm{kg/m^3}$ and surface tension $\sigma = 72\cdot 10^{-3}~\mathrm{N/m}$. After taking the necessary measurements, calculate the speed of the bubble in the last three photographs. Also calculate the acceleration of the bubble $a$.}{0.80}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Fig. 2.}
+\end{figure}
+\section*{Part C. Dynamics of Bubble Motion (1.5 points)}
+In real life, the free fall acceleration $g$ creates a vertical pressure gradient in the vessel, as a result of which the Archimedes force $F_A$ appears and accelerates the bubble upward. Initially the bubble is spherical, but during acceleration, according to the theory from the previous paragraph, it begins to flatten. Newton's second law for a nearly spherical bubble can be written as
+\[
+m\vec{a}=m\vec{g}+\vec{F}_A+\vec{F}_\mu+\vec{F}_{\mathrm{tr}},
+\]
+where $m$ is the bubble mass (which can be neglected), $\vec{F}_\mu$ is the force from the water associated with the added mass, and $\vec{F}_{\mathrm{tr}}$ is a drag force due to turbulence. In our model,
+\[
+\vec{F}_{\mathrm{tr}}=-\pi R^2\rho\,v\,\vec{v},
+\]
+where $\vec{v}$ is the bubble velocity (initially $\vec{v}=0$).
+\problembox{C1}{What is its acceleration $a$ at the initial moment of time? Express your answer in terms of $g$.}{0.60}
+\problembox{C2}{Find the steady speed of the bubble $v_{\max}$. What is the value of $\varepsilon$ at steady speed? Express your answers in terms of $R$, $g$, $\rho$ and $\sigma$.}{0.30}
+\problembox{C3}{Calculate the numerical values of $v_{\max}$ and $\varepsilon$ for $\rho = 10^3~\mathrm{kg/m^3}$, $\sigma = 72\cdot 10^{-3}~\mathrm{N/m}$, $g = 10~\mathrm{m/s^2}$, and $R = 1~\mathrm{mm}$. Is the selected model applicable to the specified radius?}{0.60}
+\section*{Part D. Cool Jellyfish Bubble (2.0 points)}
+In large-volume bubbles, the force of surface tension is weaker than in small ones, so their shape when they reach a constant speed is far from spherical.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Fig. 3.}
+\end{figure}
+In general, the shape of the bubbles shown in the figure above is simulated using a computer. However, in the previous parts we were able to study a shape close to spherical: these are the bubbles $a$ and $b$. In this part we will study the model applicable to bubbles $m$ and $n$. Let us describe the bubble as a segment of a sphere with base radius $r$. The radius of curvature of the bubble, that is, the radius of the sphere, is constant and equal to $R$. Photographs $m$ and $n$ show that the bubbles are almost flat, which means we can assume that $r \ll R$. We will characterize a point on the bubble surface by a small angle $\theta$, measured from the center of curvature. The air pressure inside the bubble is $p_{in}$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig4.jpg}
+    \caption{Fig. 4.}
+\end{figure}
+\problembox{D1}{Prove that the water pressure at points on the surface of the bubble is constant.}{0.20}
+The water flow lines are schematically indicated in the figure. We will assume that the distribution of fluid velocities $\vec{v}_{\text{rel}}(\vec{r})$ over the bubble is exactly the same as in the case of motion of a solid ball of radius $R$ with speed $v_0$. The free-fall acceleration is $g$.
+Let the bubble float in a deep pond. The pressure on the surface of the reservoir is equal to atmospheric pressure $p_0$. The distance from the surface of the reservoir to the point $A$ is $h \gg R$.
+\problembox{D2}{Find the pressure relationship above the bubble surface $p(\theta)$ using $\rho$, $v_0$, $g$, $R$, $\theta$ and $h$.}{1.00}
+\problembox{D3}{Derive an expression for the steady-state velocity of the bubble $v_0$. Calculate the value for $R = 30~\mathrm{cm}$ and $g = 10~\mathrm{m/s^2}$.}{0.80}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4196}
+\end{document}

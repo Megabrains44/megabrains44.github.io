@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Synchrotron physics}}
+\author{\normalsize Y26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A synchrotron is a cyclic resonant accelerator of both light and heavy particles. In a synchrotron, the orbit of accelerated particles remains constant, and the magnetic field changes with increasing particle energy, ensuring cyclical motion of particles (circular or more complex orbit) and stability of motion using weak or strong focusing. Acceleration of particles is carried out by a high-frequency alternating electromagnetic field; accelerating systems are placed, as a rule, in straight sections free from the magnetic field.
+
+In this problem the following notation will be used: 
+\begin{itemize}
+\item $e$ value of elementary charge 
+\item $m_e$ electron mass 
+\item$m_p$ proton mass 
+\item$v$ particle speed 
+\item$c$ speed of light 
+\item$\gamma$ particle gamma factor
+
+
+\end{itemize}
+
+
+
+
+\section*{Part A. Equilibrium particles (1.4 points)}
+
+Particles enter the synchrotron acceleration cycle with non-zero energy. For initial acceleration, a linear or other cyclic accelerator is used. In this case, the initial energy usually exceeds several tens of MeV, but not more than $100-200$ MeV, therefore the motion of electrons (rest energy $0.511$ MeV) is initially strongly relativistic, and the motion of protons (rest energy $938 $ MeV) is non-relativistic. At the same time, the synchrotron allows one to obtain energies of tens of GeV (that is, even protons become relativistic). Due to this fact, we will consider electron and proton synchrotrons separately.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Electron Synchrotron}
+
+Let us consider the motion of an electron in a circular orbit with radius $R$. As acceleration progresses, the period of motion $T$ practically does not change, since the speed of the electron is always approximately equal to the speed of light. The magnitude of the magnetic field $B$ is controlled so that the radius of the electron's orbit does not change.
+
+\problembox{A1}{Determine the magnitude of the magnetic field $B(t)$ of the electromagnets at the moment when the energy of the electrons is $E(t)$. Express your answer in terms of $E(t)$, $T$, and physical constants.}{0.5}
+
+In the accelerating element, the voltage changes according to a harmonic law with frequency $\omega_U = n \cdot 2\pi/T$, where $n$ is a natural number. During one revolution of the particle, its energy changes by:
+$$\Delta E = T \frac{dE}{dt} = eU \cos \varphi,$$
+where $U$ is the voltage amplitude in the accelerating element, and $\varphi$ is the phase of the electromagnetic field at the moment the particle passes through the accelerator. 
+
+A particle is called "equilibrium" if the phase $\varphi$ remains constant (during one revolution it changes by $2\pi n$, which can be ignored as it does not affect the acceleration).
+
+\problembox{A2}{Determine at what ratio of $T$, $U$, and $dB/dt$ equilibrium electrons exist.}{0.4}
+
+\section*{Proton Synchrotron}
+
+The main difference of a proton synchrotron is the need to take into account the increase in particle speed. In this case, the frequency of the resonators of the accelerating elements must change with time. Let us consider the motion of a proton in a circular orbit with radius $R$. The frequency of the accelerating electromagnetic field is controlled so that it is always $n$ times the angular velocity of the protons. The magnitude of the magnetic field $B$ is controlled so that the radius of the proton orbit does not change.
+
+\problembox{A3}{Find the dependence of frequency $\omega_U(t)$ on time. Express your answer in terms of $B(t)$, $n$, $R$, and physical constants.}{0.5}
+
+\section*{Part B. Critical energy (2.5 points)}
+
+Now let us consider the behavior of differently accelerated non-equilibrium particles between passes through the accelerating element (the magnetic field does not change in time). For such particles, the phase $\varphi$ is different for each pass (over one period it changes by an amount not a multiple of $2\pi$). In accelerators with complex geometries, the magnetic field is not uniform, and the particle trajectory may not be a circle.
+
+The orbital expansion coefficient $\alpha$ shows how the orbital length $L$ changes when its momentum $p$ changes:
+$$\alpha = \frac{p}{L} \frac{\partial L}{\partial p},$$
+where $L$ is the orbit length (in the case of motion in a circle $L = 2\pi R$). From general considerations, it is clear that in an accelerator it is desirable to have $\alpha$ as small as possible. Then the orbit reacts weakly to a change in momentum, i.e., it is more stable.
+
+\textbf{Weak focusing.} In such an accelerator design, the field of the electromagnets is uniform along the circular orbit of the equilibrium and non-equilibrium particles. In this case, the dependence of the field on the orbit radius has the form:
+$$B(R) = \frac{\text{const}}{R^\xi}, \quad \text{where } 0 < \xi < 1.$$
+
+\problembox{B1}{Obtain the value of $\alpha$ for the weak focusing case.}{0.5}
+
+\textbf{Strong focusing.} In this accelerator design, a system with a non-uniform magnetic field is used, allowing one to obtain $\alpha \ll 1$. Let us denote by $\omega = 2\pi/T$ the cyclic frequency of the periodic motion of particles in the accelerator. We are interested in the value:
+$$K = \frac{E}{\omega} \frac{\partial \omega}{\partial E},$$
+which shows how significantly the cyclic frequency of motion differs for particles with similar energy.
+
+\problembox{B2}{Express $K$ in terms of $\gamma$ and $\alpha$.}{1.5}
+
+Critical energy is defined as the particle energy at which $K = 0$.
+
+\problembox{B3}{State for which type of focusing a critical energy exists. Find $\gamma$ for particles with critical energy.}{0.5}
+
+\section*{Part C. Phase fluctuations (4.1 points)}
+
+Let us consider the process of acceleration of nonequilibrium particles. Let us denote $\omega_0$ and $\omega$ the cyclic frequencies, $\varphi_0$ and $\varphi$ the phases of the accelerating element, $E_0$ and $E$ the energies of the equilibrium and nonequilibrium particles, respectively. The frequency of the accelerating electromagnetic field is $n\omega_0$ and the equilibrium phase is $\varphi_0 = \text{const}$. For nonequilibrium particles, the $\varphi$ phase is different for each flight (over one period it does not change by a multiple of $2 \pi$). Let us denote by $\mathcal{E} = E - E_0$ the difference in the energy of a nonequilibrium particle from an equilibrium one.
+
+\problembox{C1}{Considering that the initial energies of the particles differ slightly, express $\dot \varphi$ in terms of $K$, $\mathcal E$, $n$, $\omega_0$ and $E_0$.}{0.90}
+
+The change in particle energy per revolution is equal to $eU\cos\varphi$. Next, assume that the changes over time $K$, $E_0$ and $\omega_0$ are small and can be neglected when considering the changes in $\mathcal E$ and $\varphi$.
+
+\problembox{C2}{Express $\dot{\mathcal{E}}$ in terms of $\varphi_0$, $\varphi$, $U$, $\omega_0$ and physical constants. Use the fact that the difference between $\omega$ and $\omega_0$ is small enough to be neglected in this case.}{0.30}
+
+\problembox{C3}{Obtain an expression for $\ddot\varphi$ in terms of $K$, $E_0$, $\omega_0$, $U$, $\varphi_0$, $\varphi$, $n$ and physical constants. Determine at what $\varphi_0$ the equilibrium orbit is stable (that is, the initially infinitesimal deviations $\varphi$ do not grow with time).}{0.60}
+
+At the initial moment of time, the phase of some particle is $\varphi = \varphi_i \in [-\pi,\pi]$, and its energy deviation from the equilibrium one is $\mathcal{E} = \mathcal{E}_i$.
+
+\problembox{C4}{Express $\dot \varphi^2$ in terms of $K$, $E_0$, $\omega_0$, $U$, $\varphi_0$, $\varphi$, $n$, $\varphi_i$ and $\mathcal{E}_i$ and physical constants.}{0.50}
+
+\problembox{C5}{Determine at what values of $\varphi_i$ and $\mathcal E_i$ the particle is involved in the acceleration process, that is, on average it receives the same amount of energy as the equilibrium one. Qualitatively depict the boundaries of the found region of the plane $(\varphi_i, \mathcal E_i)$ for $\varphi_0=0$ (resonant acceleration) and $\varphi=\pi/4$.}{1.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/5053}
+
+\end{document}

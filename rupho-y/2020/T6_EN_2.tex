@@ -1,0 +1,134 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Wave optics}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Polarization and crystal optics (2 points)}
+
+When passing through the polarizer $P$, natural light is converted into linearly polarized light, the plane of polarization is parallel to the axis of the polarizer. In this part of the problem we will consider only monochromatic radiation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Linearly polarized light with intensity $I_0$ falls on the analyzer $A$, the polarization axis of which is rotated by an angle $\alpha$ relative to the axis by the polarizer $P$. Determine the intensity of the light after passing through the analyzer. Neglect reflection and absorption.}{0.10}
+
+\problembox{A2}{The polarizer and analyzer are positioned perpendicular to each other and no light passes through the analyzer. If a third polarizer $P'$ is placed between the two elements, light begins to pass through the analyzer. Find the intensity $I$ of the transmitted light through the intensity of the incident light $I_0$ and the angle $\alpha$ that makes the axis of the polarizer $P'$ with the axis of the polarizer $P$. Find the maximum intensity of transmitted light $I'$ and the angle $\alpha'$ at which it is achieved.}{0.40}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Let us now replace the polarizer $P'$ with a birefringent crystal. In such a crystal, the incident beam is divided into two. One of them propagates at the same speed in any direction, the so-called “ordinary” ray, and the other propagates at different speeds in different directions, the “extraordinary” ray. The figure shows the wavefronts for an ordinary beam (spherical) and for an extraordinary one (ellipsoidal) for a point source located in the crystal. The direction in which the rays propagate at the same speed is called the crystal axis. The refractive index for an ordinary ray is $n_o$ and the refractive index for an extraordinary ray is direction dependent and its value is between $n_o$ and $n_e$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{A3}{Consider a crystal whose edges are parallel to the crystal axis. Linearly polarized light falls normally on the surface of the crystal. The two beams will travel in the same direction, but at different speeds. They are linearly polarized in mutually perpendicular directions. At the exit from the crystal, a phase shift appears between the two beams. Express this phase shift $\delta$ in terms of the refractive indices $n_o$ and $n_e$, as well as the emission wavelength $\lambda$ and the crystal thickness $d$.}{0.30}
+
+\problembox{A4}{Let the amplitudes of both waves (ordinary and extraordinary) be the same and equal to $E$. Find the relationship between the electric field strength of the extraordinary wave $E_e$, the electric field strength of the ordinary wave $E_o$ and the phase shift $\delta$. Analyze the cases where the phase shift $\delta$ takes the values $\delta = 2\pi k, \delta=(2k+1)\pi, \delta=k\pi+\frac{\pi}{2}, k\in Z.$ For each case, indicate the polarization of the light leaving the crystal.}{1.20}
+
+\section*{Part B. Electro-optics (4 points)}
+
+Some substances under the influence of an electric field acquire the properties of a uniaxial crystal, and the optical axis is directed along the field. The electro-optical effect consists of changing the refractive index of a medium in an electric field. If the refractive index depends linearly on the strength of the applied electric field, this phenomenon is called the Pockels effect. Those. $n(E)=n_0+aE$, and $aE\ll n_0$. The value of the constant $a=-\cfrac{1}{2}rn_0^3$, where $r$ is the Pockels coefficient. For applied research it is convenient to use the following value: $\eta=\cfrac{1}{n^2}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{B1}{Find the approximate dependence function $\eta(E)$.}{0.50}
+
+\problembox{B2}{A variant of the Pockels cell is shown in the figure. The refractive index of the substance in the absence of a field is $n_0$, the cell sizes are $L$ and $d$. the wavelength of the radiation used is $\lambda$, and the Pockels coefficient is $r$. What voltage must be applied for the cell to introduce a phase difference $\delta\phi=\phi-\phi_0=\pi$, where $\phi_0$ is the phase shift in the absence of a field, $\phi$ is in the presence of a field.}{0.50}
+
+\problembox{B3}{For some anisotropic substance, let two refractive indices depend on the field strength as follows: $n_e=n_{e0}-\cfrac{1}{2}r_en_{e0}^3E$ and $n_o=n_{o0}-\cfrac{1}{2}r_on_{o0}^3E$. The crystal was cut so that, in the absence of a field, the output was linearly polarized light. What minimum voltage must be applied to produce linearly polarized light at the output, the polarization of which is rotated by $90^\circ$ relative to that obtained at the output in the absence of voltage?}{1.00}
+
+If the dependence of the refractive index on the field strength is quadratic, then this effect is called the Kerr effect. And for a uniaxial crystal, the following relationship between the refractive indices of the ordinary and extraordinary waves holds: $n_e-n_o=\lambda BE^2$, where $B$ is the Kerr constant.
+
+\problembox{B4}{The figure shows a cell with nitrobenzene (which exhibits the Kerr effect), in which a capacitor is located. On both sides of the cell there are two ideal polaroids, the allowed directions of which are parallel and directed at an angle $\alpha=45^\circ$ to the direction of the field in the capacitor. The capacitor plates have a length $l=5~\text{cm}$, the distance between them is $d=5~\text{mm}$. A voltage $U=2910~\text{V}$ is applied to the capacitor. Determine the intensity $I$ of light at the output of the second polaroid if circularly polarized light with intensity $I_0$ falls on the first polaroid. The Kerr constant for nitrobenzonle is $B=2.2\cdot 10^{-12}~\text{m/V}^2$.}{2.00}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\section*{Part C. Interference of non-monochromatic radiation (5 points)}
+
+The two-beam interference circuit is illuminated by the red cadmium line $\lambda_0=6438,8~\text{A}$, spectral width $\lambda=1.2\cdot 10^-3~\text{A}$. In the frequency spectrum, the radiation intensity is represented by a rectangle. Let $L$ be the optical path difference between two waves that interfere at some observation point $M$, and $p\equiv L/\lambda_0$ be the order of interference at that point.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{C1}{Express the intensity at point $M$ as $I(M)=2I_0[1+V(p)\cos (2\pi p)]$. Find the visibility function $V(p)$ through $\lambda_0, \Delta\lambda$ and $p$.}{1.00}
+
+\problembox{C2}{Find the coherence length $\Delta l$, which is defined as the minimum optical path difference at which the interference pattern is blurred. Find the relationship between the coherence time $\Delta t=\Delta l/c$ and the spectral width $\Delta\nu$.}{0.60}
+
+\problembox{C3}{Determine the largest value of the interference order $p$, for which the visibility $V(p)$ of the observed bands is higher than $90\%$.}{0.60}
+
+The experiment is repeated. The interference pattern is now illuminated by the sodium doublet ($\lambda_1=5890~\text{A}, \lambda_2=5896~\text{A}, \delta\lambda=0.11~\text{A}$). Let us denote $\lambda_0$ as the arithmetic mean of the wavelengths $\lambda_1$ and $\lambda_2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{C4}{Express the intensity at the observation point of the interference pattern $M$ in a form similar to point C1. Find the visibility function $V(p)$ through $\lambda_0, \delta\lambda, \Delta\lambda$ and $p$.}{1.00}
+
+\problembox{C5}{For what order of interference $p_0$ will there be the greatest intensity at point $M$?}{0.40}
+
+\problembox{C6}{For what order of interference $p_1$ at point $M$ will there be a first decrease in light intensity to a value equal to half the greatest intensity?}{0.70}
+
+\problembox{C7}{From what interference order $p_2$ does the fringe contrast begin to increase again after always decreasing?}{0.70}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/44}
+
+\end{document}

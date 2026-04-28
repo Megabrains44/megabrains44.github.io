@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Why is the boomerang coming back?}}
+\author{\normalsize X18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem we study the motion of a boomerang. Its exact dynamics are complicated, but with simplifying assumptions we can explain why it returns toward the thrower. Consider a symmetric cross-shaped boomerang with uniform mass distribution. Its total mass is $M$, blade length is $R$, and blade width is $a\ll R$. The thickness is negligible. The boomerang is thrown so that its plane is vertical. It rotates with angular velocity $\omega$ about the symmetry axis perpendicular to its plane, while its center of mass moves horizontally with speed $v$ in the boomerang plane. During motion, a hydrodynamic force acts on each blade, perpendicular to the blade plane. For the rotation direction shown in the figure, this force is directed away from the observer. For a small blade-area element $\Delta A$, the force magnitude is
+\[
+F=\gamma v_\perp^2\,\Delta A,
+\]
+where $v_\perp$ is the component of air velocity relative to this element that is perpendicular to the blade edge. The constant $\gamma$ is proportional to air density (assumed constant) and depends on boomerang shape. Also neglect gravity and air drag.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the total hydrodynamic force $\langle F\rangle$ acting on the boomerang, time-averaged per revolution. Express your answer in terms of $v$, $\omega$, $R$, $a$ and $\gamma$.}{2.50}
+
+\problembox{A2}{Find the total moment of hydrodynamic forces $\langle\vec{\tau}\rangle$ acting on the boomerang relative to its center. The torque must be averaged over time per revolution. Express your answer in terms of $v$, $\omega$, $R$, $a$ and $\gamma$. Indicate the direction of the average moment relative to the direction of the velocity vector of its center.}{2.50}
+
+\problembox{A3}{What should the ratio $v/(\omega R)$ be equal to at the moment of throwing the boomerang, so that during the subsequent movement the center of the boomerang moves along a horizontal circular path? Consider that the period of rotation of the boomerang $2\pi/\omega$ is much less than the period of circular motion of the center of mass. This allows us to use the values $\langle F\rangle$ and $\langle\vec{\tau}\rangle$ averaged over the period found earlier.}{3.00}
+
+\problembox{A4}{Express the radius $r$ of the trajectory of the boomerang's center of mass in terms of $\gamma$ and the parameters of the boomerang.}{1.50}
+
+\problembox{A5}{Suppose we made two similar boomerangs from the same material, such that each size of one of them is half the corresponding size of the second. What is the ratio of the radii $r_2/r_1$ of their circular trajectories?}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/316}
+
+\end{document}

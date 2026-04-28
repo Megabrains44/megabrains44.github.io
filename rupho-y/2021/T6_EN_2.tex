@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Curling}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A thin ring of mass $m$ and radius $r$ is placed on a table with friction coefficient $\mu$ and gravitational acceleration $g$. The ring was given a linear velocity $v$ (in the direction $x$) and an angular velocity $\omega$ (counterclockwise). The ring moves in a straight line, rotating around its own axis, and eventually stops.  In the future we will try to find the quantities $v(t)$, $\omega(t)$ and some symmetry between them. In all subsequent paragraphs, it is assumed that the action of the support reaction on the ring is uniformly distributed.
+
+You may need the following formula: $$ \sqrt{\frac{1 - \sin \theta}{2}} = \Bigg| \sin \left( {\frac{\theta}{2}} - \frac{\pi}{4} \right) \Bigg| $$
+
+\section*{Equations of motion}
+
+\problembox{A1}{Show that the total force acting on the ring is given by: $$ \vec F_{tot} = - \mu mg \cdot f \left( \frac{v(t)}{\omega (t)\ r} \right) \hat x, $$ where $$ f(a) = \frac{1}{2 \pi} \int \limits_0^{2 \pi} \frac{a - \sin \theta}{\sqrt{ 1 + a^2 - 2 a \sin \theta}} d \theta $$}{0.50}
+
+\problembox{A2}{Show that the total moment acting on the ring is: $$ \tau_{tot} = - \mu mg r f \left(\frac{\omega(t) r}{v(t)} \right) $$}{0.50}
+
+\problembox{A3}{Prove that the equations of motion have the form: $$\begin{aligned} \dot v &= -\mu g \cdot f\left(\frac{v}{\omega r}\right),\\ \dot\omega\, r &= -\mu g \cdot f\left(\frac{\omega r}{v}\right). \end{aligned}$$}{0.10}
+
+\section*{Primary Research}
+
+We have obtained a system of differential equations relating $v(t)$ and $\omega (t)$. In this part we want to find interesting physical aspects of this situation, for which we need to make non-standard mathematical calculations. Let's start by considering the properties of the function $f(a)$:
+
+\problembox{B1}{Prove that:
+\begin{enumerate}[label=\alph*)]
+    \item $f(0) = 0,\ f(1) = \dfrac{2}{\pi},\ f(\infty) = 1$;
+    \item $f(a)$ strictly increases for $a \geqslant 0$.
+\end{enumerate}}{0.50}
+
+\problembox{B2}{Let us consider the behavior of the parameter $a(t) = \dfrac{v(t)}{\omega(t)\,r}$. Show what happens to $a(t)$ (increases/decreases/remains unchanged) in each of the following cases:
+\begin{enumerate}[label=\alph*)]
+    \item at some moment $a(t) = 1$;
+    \item at some moment $a(t) < 1$;
+    \item at some moment $a(t) > 1$.
+\end{enumerate}}{0.30}
+
+\problembox{B3}{Draw qualitatively on a graph, the axes of which are $v$ and $\omega r$, trajectories that display different movements of the ring, that is, given $v_0$ and $\omega_0 r$, draw how they will change over time. It is necessary to draw at least one trajectory for each point of the previous task. In addition, draw a trajectory passing through point $(v_0, 0)$ and another one starting at point $(0, \omega_0 r)$ Label the graph axes and indicate the direction of movement of the system for each drawn trajectory}{0.60}
+
+Let's consider the power that is consumed during the movement of the ring.
+
+\problembox{B4}{Calculate the instantaneous power that is consumed when there is only angular velocity $\omega$ $(v = 0)$, and separately when only linear velocity $v$ $(\omega = 0)$ is present.}{0.10}
+
+\problembox{B5}{For given $v$ and $\omega$, calculate the instantaneous power $P$, which is spent on friction at a given time. Give your answer as an integral with a dimensionless variable.}{0.60}
+
+\problembox{B6}{Let us assume that the ring was given a certain initial kinetic energy $E_0$. What should be the ratio $a_0 = \dfrac{v_0}{\omega_0 r}$ at which the ring will move for the maximum time? Hint: Try to answer the previous point using only $E_0$ and $a_0$ (and other data from this point), eliminating $v$ and $\omega$ from the equation}{1.20}
+
+\problembox{B7}{What is the maximum time of motion at the initial energy $E_0$?}{0.50}
+
+\section*{Heterogeneous system}
+
+The system of equations that we received at the beginning of the problem is called homogeneous because the system starting to move from the point $(0,0)$ will remain at rest, that is, there is no “current” term in the equations that creates movement. Let's introduce such a term into one of the equations by considering a similar physical problem: Now we put the same ring on an inclined plane with an angle $\alpha$ with the same friction coefficient $\mu$.
+
+\problembox{C1}{Rewrite the equations of motion from point A3 so that they fit the new condition.}{0.60}
+
+\problembox{C2}{Given the initial $\omega_0$ and $v_0 = 0$, draw all possible families of trajectories of the ring in coordinates $(v, \omega r)$ (for each type of curve, draw your own graph). Specify the following components:
+\begin{enumerate}[label=\alph*)]
+    \item relevant parameter values;
+    \item end points (to which the trajectories arrive in finite or infinite time) in the plane $(v, \omega r)$.
+\end{enumerate}
+Here it is enough to write, for each component, that it tends to zero / tends to infinity / is equal to or tends to some positive value. Label the axes of the graph and indicate the directions of motion of the system for each drawn trajectory.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/237}
+
+\end{document}

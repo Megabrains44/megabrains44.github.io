@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Dynamics of quasiparticles}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Solids (such as metals) are a crystal lattice of positively charged ions between which electrons move. Electrons interact with the crystal lattice and with each other, so to accurately describe the properties of a solid it is necessary to solve an extremely complex multiparticle problem.  However, in some cases it turns out that the entire influence of interaction comes down to the fact that instead of electrons in the crystal, particles weakly interacting with each other propagate, the equations of motion of which differ significantly from the equations for free electrons. Such particles that practically do not interact with each other are called quasiparticles. For simplicity, they are also usually called electrons. The properties of quasiparticles are determined by the parameters of the crystal lattice and the magnitude of the interaction between electrons and ions. For an electron (quasiparticle), the dependence of energy on momentum $\varepsilon(\vec{p})$ can have a very complex form. Then the connection between velocity and momentum is given by the relations
+$$ v_x = \frac{\partial \varepsilon}{\partial p_x}, \quad v_y = \frac{\partial \varepsilon}{\partial p_y}, \quad v_z = \frac{\partial \varepsilon}{\partial p_z}. $$
+For motion under an external force $\vec{F}$, the momentum satisfies
+$$ \frac{d\vec{p}}{dt} = \vec{F}. $$
+Here the electron charge is $-q$ with $q > 0$. In Part C, you can study another type of quasiparticle — phonons, which are vibrations of the crystal lattice.
+
+\section*{Part A. Bloch oscillations (2 points)}
+
+\problembox{A1}{Let the dependence of electron energy on momentum have the form $$\varepsilon(p) = \varepsilon_0 (3 - \cos(ap_x) - \cos( ap_y) - \cos (ap_z)).$$    in  ,    $p_x = \dfrac{\pi}{2 a}$, $p_y = \dfrac{\pi}{3 a}$, $p_z = 0$,    on   $F_x$, $F_y$, $F_z$.}{0.70}
+
+\problembox{A2}{Let an electron with $\varepsilon(\vec{p})$ from A1 move in a constant electric field of magnitude $E$ directed along the $x$ axis.  The initial coordinates and projections of the momentum are equal to zero. The electron charge is $-q$. Find his law of motion $x(t)$.}{0.80}
+
+\problembox{A3}{The concentration of free electrons in a certain substance is equal to $n$, the dependence $\varepsilon(p)$ as in A1. At the initial moment of time, a constant electric field $E$ is turned on, directed along the axis $x$. Find the dependence of the current density $j$ on time.}{0.50}
+
+\section*{Part B. Motion in a magnetic field (4 points)}
+
+In this part we will consider the motion of an electron in a constant magnetic field $\vec{B}$.
+
+\problembox{B1}{Let the dependence of energy on momentum $\varepsilon(\vec{p})$ be arbitrary. Prove that the energy $\varepsilon$ and the projection of momentum on the direction of the magnetic field are conserved.}{0.50}
+
+We will further assume that the magnetic field of magnitude $B$ is directed along the $z$ axis, and the electron moves in the $xy$ plane.
+
+\problembox{B2}{Let the dependence of energy on momentum have the form $$\varepsilon = \frac{p_x^2}{2 m_x} + \frac{p_y^2}{2 m_y} .$$    $\varepsilon$.  h  $\omega$.    h on  $xy$, indicate the characteristic dimensions and direction of motion. Place the origin of coordinates at the center of symmetry of the trajectory.}{1.10}
+
+Let now, in addition to the magnetic field, the electron from B2 be subject to an electric field $E$ directed along the axis $x$. The initial values of the coordinate and momentum of the electron are zero.
+
+\problembox{B3}{Find the hodograph of the electron's momentum vector (the trajectory along which the end of the momentum vector moves if it is plotted from one point). Draw it on the plane $p_x$, $p_y$. Please indicate typical dimensions.}{0.60}
+
+\problembox{B4}{Find the law of motion $x(t)$, $y(t)$.}{0.40}
+
+The electric field is again zero. The dependence of electron energy on momentum has the form $$\varepsilon = \varepsilon_0(1 - \cos (ap_x)) + \frac{p_y^2}{2 m_y}.$$
+
+\problembox{B5}{If the energy is greater than the minimum value, the trajectories on the plane become open, and the particle can travel indefinitely in some direction. Find this minimum energy $\varepsilon_{min}$. At energy $\varepsilon > \varepsilon_{min}$, draw the trajectory and indicate the characteristic geometric dimensions.}{1.40}
+
+The presence of open electron orbits significantly changes the properties of the material. In particular, such orbits determine the behavior of resistance in strong magnetic fields.
+
+\section*{Part C. Phonon decay (4 points)}
+
+Another type of quasiparticle found in solid state physics is phonons, which are vibrations of a crystal lattice. Their properties are similar to photons, but due to the characteristics of the lattice, the dependence of energy on momentum is nonlinear. Let the dependence of energy on momentum for a phonon have the form $$\varepsilon(p) = u p + \alpha p^3.$$ $u$ —   in ,  $\alpha$   . V  h  ,      , $\alpha p^3 \ll up$.
+
+V  from ,  for     on  .   .      $p$, and   on   s  $q_1$ and $q_2$,     $\theta_1$, $\theta_2[ M9]p$, and   on   s  $q_1$ and $q_2$,     $\theta_1$, $\theta_2$ with the direction of motion of the original phonon.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{C1}{First, we neglect the variance and consider the case $\alpha = 0$. At what angles $\theta_1$, $\theta_2$ is decay possible?}{0.50}
+
+Next we will consider the case $\alpha \ne 0$. It turns out that in the case of a small momentum of the initial phonon $p$, the angles $\theta_1$, $\theta_2$ are also small.
+
+\problembox{C2}{Express the modulus of the second phonon $q_2$ in terms of $p$, $q_1$, $\theta_1$. Obtain the expression in the limit of small $\theta_1$ up to second order in $\theta_1$.}{0.50}
+
+\problembox{C3}{The angle dependence of the emitted phonon momentum at small angles has the form $$q_1(\theta_1) = A + B \theta_1.$$   $A$, $B$.    $p$, $u$, $\alpha$.}{1.20}
+
+\problembox{C4}{At what sign of the constant $\alpha$ is decay possible?}{0.30}
+
+\problembox{C5}{Find the maximum angle $\theta_{max}$ at which a phonon can be emitted. Under what condition on $p$ can the phonon momentum be considered small?}{0.50}
+
+\problembox{C6}{Express the angle $\theta_2$ at which the second phonon is emitted in terms of $\theta_1$, $p$, $u$, $\alpha$. Consider the angles small, take into account the first-order contributions from $\theta_1$, $\theta_2$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3148}
+
+\end{document}

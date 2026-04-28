@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Airbag</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Airbag</h1>
+<p class="camp">X21 (2021) — English translation</p>
+<p>An air cushion is often used to move heavy loads. In this task we will explore the principle of its operation, which is schematically depicted in the figure below. Consider the following system configuration. Under the platform there is a cylindrical space with a diameter of $D=40~\text{cm}$ and a height of $h=10~\text{cm}$ into which air is pumped. The ambient temperature is $T_0=300~\text{К}$, the atmospheric pressure is $P_{atm}=1.01\cdot 10^5~\text{Па}$. The weight of the platform and surrounding structures is $W=78.48~\text{кН}$. When the air pressure force exceeds this value, the platform rises, forming a gap of width $\varepsilon$ with the surface. Consider the compressor to maintain a constant flow of air. In the problem, air can be considered an ideal gas. The gas flow is considered adiabatic and equilibrium. We will be mainly interested in stationary operating modes. For numerical calculations in the problem, use the values ​​of the molar mass of air $\mu=29.0~\text{г/моль}$ and $\gamma=c_P/c_V=1.4$. Also, for specific heat capacities at constant pressure and volume, the relation $c_P-c_V=r$, where $r=287~\text{Дж/(kg}\cdot\text{К)}$, is valid, and the equation of state can be written as $P=\rho rT$.</p>
+<div class="figure"><img src="T7_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A: Platform Equilibrium (1 point)</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Express $c_V$ and $c_P$ in terms of $r$ and $\gamma$. Find their meanings.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">How does the ratio of pressure in a cylindrical cavity to atmospheric pressure $P_0/P_{atm}$ depend on the weight of the platform and the geometric parameters of the system?</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part B: Air Cushion Basics (5.5 points)</h2>
+<p>Mass flow rate of gas flowing through a gap at the surface. is given by $dm/dt=\rho vA$, where $v$ and $\rho$ are the velocity and density of the escaping gas.</p>
+<p>Let us consider a certain jump in the density and pressure of a gas propagating at a speed $c$ in a tube of unit cross section. The disturbed region of the gas moves with speed $v$, and the undisturbed region is at rest. Let the pressure and density in the disturbed region of the gas be $P$ and $\rho$, respectively, and in the undisturbed region - $P_0$ and $\rho_0$, respectively. The temperature in the undisturbed region of the gas is $T$. It is convenient to carry out some of the further arguments in a reference frame in which the wave front (the boundary of the unperturbed region) is at rest.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Express the speed of motion of the disturbed gas region $v$ in terms of $c$, $\rho$ and $\rho_0$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Express the pressure difference $P-P_0$ in terms of $\rho$, $\rho_0$, and $c$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Express $c$ in terms of $\gamma, r, T$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Calculate the speed of sound in air at a given ambient temperature $T_0$.</div><span class="pb-pts">0.50</span></div>
+<p>As the gas flows out from under the platform, it expands adiabatically and its temperature $T$ will be different from $T_0$. For convenience, the Mach number can be introduced as $M=v/c$, where $c$ is the speed of sound in the escaping gas, so the mass flow can be rewritten as $dm/dt=\rho AMc$.</p>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Express the mass flow rate $dm/dt$ in terms of $M, \gamma, T/T_0$ and the relation $P_0A\gamma/c_0$, where $c_0$ is the speed of sound at temperature $T_0$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Express the gas velocity $v$ in terms of $M, T, r$ and $\gamma$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Using Bernoulli's equation for a compressible gas in the form $\cfrac{v^2}{2}+c_PT=\mathrm{const}$, find the temperature ratio $T/T_0$ in terms of $M$ and $\gamma$.</div><span class="pb-pts">1.50</span></div>
+<h2 class="part">Part C. Critical gas flow regime (2.0 points)</h2>
+<p>It can be shown that when a gas flows from a narrow place to a wide place, the flow speed $v$ cannot exceed the speed of sound in that medium (i.e. $M\le1$). When the forced air flow changes, the gas flow rate $v$ also changes. For sufficiently large flows, the rate $v$ can reach a maximum value $c$.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Express $dm/dt$ in terms of $M, \gamma$ and $P_0A\gamma/c_0$, and sketch this dependence on $M$ for $M\in[0;1]$. Find the value $M$ for which the flow reaches its maximum value (this mode is called critical).</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Let the compressor produce flow $5.0~\text м^3/\text{мин}$. Calculate the values ​​$\varepsilon, T, P, v$ and $\rho$ of the output flow in the critical mode.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part D. Surface roughness (1.5 points)</h2>
+<p>In practice, surface irregularities do not allow the gap $\varepsilon$ to take a value higher than 0.5 mm, so the critical condition cannot be achieved.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Calculate the values ​​of $M, T, P, v$ and $\rho$ of the escaping gas at $\varepsilon=0.5~\text{мм}$ and $dm/dt=0.1~\text{kg/с}$.</div><span class="pb-pts">1.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/106">https://pho.rs/p/106</a></p>
+</body>
+</html>

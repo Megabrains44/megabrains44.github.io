@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Cryogenic temperatures}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The main results of this work are of an evaluative nature and therefore an assessment of errors need not be made.
+
+In this experimental work, you will explore some of the properties of liquid nitrogen, as well as the behavior of substances at low temperatures (down to the boiling point of liquid nitrogen). To complete the work you may need the following equipment (see picture):
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+two glasses made of foam polystyrene with a heat-insulating lid (you can pour water and nitrogen into them); thick-walled foam cup with a lid (thermostat) for liquid nitrogen; water, ice (on request); liquid nitrogen (on demand); steel nuts of different weights; electronic scales; digital stopwatch; multimeter with wires; halogen incandescent lamp with tungsten filament; tripod with foot; a plastic glass for draining used water; plastic spoon; paper towels or napkins (upon request); threads; ruler; calipers, scissors (on request).
+
+Liquid nitrogen is a cryogenic liquid: at atmospheric pressure, the boiling point of liquid nitrogen is about $-196~^\circ\mathrm{C}$! Nitrogen poured into a foam plastic cup (thermostat) evaporates due to heat exchange with the environment through the walls of the thermostat, and its mass decreases at a certain rate. If, to carry out the necessary measurements, a sample (nut, halogen lamp) is immersed in nitrogen, the initial temperature of which is significantly higher than the temperature of liquid nitrogen, then rapid boiling will begin, which will continue until the sample is cooled to the boiling point of nitrogen. A sign of completion of the sample cooling process can be a short-term release of some additional portion of nitrogen gas from the thermostat. This is due to the disappearance of the gaseous layer between the cooling sample and liquid nitrogen. Do not forget that during and after cooling the sample, nitrogen also evaporates due to heat supply through the walls of the thermostat.
+
+Be especially careful when working with liquid nitrogen!
+
+Avoid contact of liquid nitrogen with exposed parts of the body and clothing!
+
+Upon request, liquid nitrogen will be dispensed to you no more than twice in a volume of no more than 100 ml at a time. Nitrogen is dispensed within 5 minutes of request. The nitrogen is dispensed into your thick-walled Styrofoam cup.
+
+\section*{Reference data, constants:}
+
+Water density: $\rho_0 = 1~\text{г/cm}^3$; Specific heat of melting of ice: $\lambda_0 = 334~\text{J/г}$; Universal gas constant: $R = 8.31~\text{J/(mol}\cdot{К})$; Avogadro's number: $N_A = 6.02\cdot 10^{23}~\text{mol}^{-1}$; Molar mass of molecular nitrogen ($N_2$): $\mu_N = 28~\text{г/mol}$; Molar mass of air: $\mu_\text{в} = 29~\text{г/mol}$; Molar mass of iron: $\mu_{Fe} = 56~\text{г/mol}$; Gas kinetic diameter of air molecules: $d \sim 3\cdot 10^{-8}~cm$; Boiling point of liquid nitrogen at normal pressure: $T_N = 77.4~\text{К}$; Normal atmospheric pressure: $P_0 = 0.1013~\text{МПа}$; Nitrogen triple point: $T_\text{тр} = 63.15~\text{К}, P_\text{тр} = 12.53~\text{кПа}$. The figure below shows the complete $(T,P)$ phase diagram of nitrogen:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+You may also need the temperature and barometric pressure in the room where you are conducting the experiment: barometric pressure today $P_\text{атм} = 760~\text{mm. рт. ст.}$ ($\text{1 mm. рт. ст.} \approx 133~\text{Па}$); room temperature $t_\text{комн} = 24~^\circ\mathrm{C}$.
+
+\section*{Part A. Density of liquid nitrogen}
+
+\problembox{A1}{Determine the density $\rho_N$ of liquid nitrogen. Describe the method; Enter the results of measurements and calculations on the answer sheet.}{1.00}
+
+\section*{Part B: Liquid Nitrogen Evaporation Rate}
+
+Pour liquid nitrogen into the thermostat, cover it with a lid and place it on the scale (there should be such an amount of nitrogen that the scale does not go off scale).
+
+\problembox{B1}{Remove the dependence $m(t)$ of the mass of the thermostat with nitrogen on time and, using the graph of dependence $m(t)$, determine the average rate of evaporation of nitrogen $\varphi = \Delta m_N/\Delta t$ during the measurement time $t \sim 7-10~\text{мин}$.}{3.00}
+
+\section*{Part C. Heat of Vaporization of Liquid Nitrogen}
+
+\problembox{C1}{Suggest a method for determining the specific heat of vaporization of liquid nitrogen. Use pictures, diagrams and formulas to explain your actions.}{1.00}
+
+\problembox{C2}{Take measurements and calculate the specific heat of vaporization of liquid nitrogen $r_N$.}{2.00}
+
+It is known that the temperature $T$ of the 1st order phase transition (melting, boiling) depends on the external pressure $P$. This dependence is expressed by the Clapeyron-Clausius formula, which determines the angle of inclination of the tangent at each point of the equilibrium curve of two phases on the phase $(T,P)$-diagram (see Fig.): $$\frac\{dP\}\{dT\} = \frac\{q_\{12\}\}\{T(v_2 – v_1)\},$$ где $q_{12}$ — удельная теплота фазового перехода $1\rightarrow 2$, $v_1$ и $v_2$ - specific volumes phases 1 and 2, respectively.
+
+\problembox{C3}{Using the Clapeyron-Clausius equation, using reference data and data from the phase $(Т,P)$ diagram of nitrogen, make a theoretical estimate of the value $r_\text{теор}$ of the specific heat of vaporization of liquid nitrogen, considering it constant in the temperature range from the triple point to $\sim 100~\text{К}$. In the answer sheet, enter the working formula for calculating $r_\text{теор}$ and its numerical value.}{1.00}
+
+\problembox{C4}{Compare the theoretical value of the heat of vaporization of nitrogen with the experimental value. Reflect the result of the comparison in the answer sheet in the form of a ratio $r_N/r_\text{теор}$. Draw a conclusion.}{0.20}
+
+\section*{Part D. Einstein temperature for steel (iron)}
+
+If at room temperatures (and above) the heat capacity of a solid is a practically constant value, then at low temperatures there is a strong dependence of the heat capacity on temperature, and at absolute zero, as is known, the heat capacity of all bodies tends to zero. According to Einstein’s model, which works well in practice, the temperature dependence of the molar heat capacity of a body can be represented as: $$C(T)=3R\\,\left(\frac\{\Theta_\text\{Э\}\}\{T\}\right)^2\frac\{e^\{\Theta_\text\{Э\}/T\}\}\{\left(e^\{\Theta_\text\{Э\}/T\}-1\right)^2\}$$, где $\Theta_\text{E}$ - Einstein’s characteristic temperature is different for different bodies. Typically the Einstein temperature is several hundred kelvins.
+
+\problembox{D1}{Determine experimentally the amount of heat $Q_\text{экс}$ that a steel nut receives when heated from nitrogen $T_N$ to temperature $T_0$ of melting ice.}{1.50}
+
+\problembox{D2}{Using Einstein's heat capacity formula, obtain the theoretical value $Q_\text{теор}$. When calculating, assume that $e^{\Theta_\text{Э}/T_N} \gg e^{\Theta_\text{Э}/T_0} > 1$.}{1.50}
+
+\problembox{D3}{Select the value of the Einstein temperature $\Theta_\text{Э}$ at which the equality is best satisfied: $Q_\text{экс} = Q_\text{теор}$.}{2.00}
+
+\section*{Part E: Thermal Conductivity of Foam Plastic}
+
+The heat flow through a flat wall of thickness $\delta$ for the stationary case is determined by Fourier’s law of thermal conductivity: $$j = - \kappa \frac\{\Delta T\}\{\delta\}$$, где $j$ — плотность мощности теплового потока (поток тепла в единицу времени через единичную перпендикулярную площадку), $\Delta T$ — перепад температур, $\kappa$ is the thermal conductivity coefficient of the substance (in our case, foam plastic).
+
+\problembox{E1}{Using drawings, diagrams, and formulas, describe the method for estimating the thermal conductivity coefficient $\kappa$ of foam plastic at a temperature difference from room temperature $T_\text{комн}$ to the boiling point of liquid nitrogen $T_N$.}{1.00}
+
+\problembox{E2}{Take measurements and estimate the thermal conductivity coefficient $\kappa$ of the foam.}{1.50}
+
+\problembox{E3}{Determine the coefficient of thermal conductivity of air under room conditions by calculating it using the gas kinetic formula: $\kappa_\text{возд}=\frac{1}{3}\rho c_V \lambda v_T$, where $\rho$ is the density of air, $с_V$ is the specific heat capacity of air at constant volume, $\lambda$ is the free path of air molecules, $v_T$ is the speed of thermal movement of molecules.}{0.50}
+
+\problembox{E4}{Compare the thermal conductivity coefficient of polystyrene foam with the thermal conductivity coefficient of air at room conditions.}{0.30}
+
+\section*{Part F. Electrical resistance of tungsten at high and low temperatures}
+
+To complete the tasks of this paragraph, you may need some characteristics of the halogen incandescent lamp with G4 base available in your equipment: operating voltage of the lamp: $U = 220~\text{В}$; rated lamp power: $W = 35~\text{Вт}$; filament temperature in operating mode: $T_\text{р} \approx 3000~^\circ\mathrm{C}$.
+
+It is known that the resistance of metals in a fairly wide temperature range varies according to a linear law: $R(t) = R_0(1 + \alpha t)$, where $R_0$ is the resistance at temperature $0~^\circ\mathrm{C}$, $\alpha$ is the temperature coefficient of resistance, $t$ is the temperature on the Celsius scale.
+
+\problembox{F1}{Estimate the temperature coefficient of resistance $\alpha$ of tungsten by measuring the resistance $R(t_\text{комн})$ of the lamp filament at room temperature and at the temperature of melting ice $R_0$. Using drawings, diagrams, formulas, explain how you do this.}{1.00}
+
+\problembox{F2}{By extrapolating the linear dependence with the obtained value $\alpha$ to the region of high temperatures, find out whether the linear dependence $R(t)$ “works” up to the operating temperature of the lamp $\sim T_\text{р}$. Using pictures, diagrams, formulas, explain how you check this.}{1.00}
+
+\problembox{F3}{By extrapolating the linear dependence with the obtained value $\alpha$ to the region of low temperatures, find out whether the linear dependence $R(t)$ “works” at low temperatures (down to the nitrogen temperature $\sim T_N$).  Using drawings, diagrams, formulas, explain how you check this.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/18}
+
+\end{document}

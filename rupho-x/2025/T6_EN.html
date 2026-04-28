@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Physics Horizons</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Physics Horizons</h1>
+<p class="camp">X25 (2025) — English translation</p>
+<p>In this task you are asked to study the principle of operation of a camera using the example of a pinhole camera. It is a box with parallel walls, in one of which a small hole is made. Light passing through this hole forms an image on the opposite wall - the screen. The image of any point in space will be located at the intersection of the ray coming from this point through the hole and the screen.</p>
+<div class="figure"><img src="T6_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>The screen produces an inverted image of objects in front of the camera, so a photograph is obtained by flipping the resulting picture. It is convenient to enter a coordinate system for the camera as shown in the figure. The coordinates $x$, $y$ and $z$ determine the positions of objects in space, and $X$ and $Y$ are the image coordinates.</p>
+<div class="figure"><img src="T6_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<h2 class="part">Part A. Ancient physics (1.2 points)</h2>
+<p>The first pinhole cameras were darkened rooms with a hole in one of the walls. Mentions of the camera obscura date back to the 5th-4th centuries BC. — followers of the Chinese philosopher Mo Tzu described the appearance of an inverted image on the wall of a darkened room. Perhaps references to the camera obscura are found in Aristotle, who wondered how a round image of the Sun could appear when it shines through a square hole. Let's study this effect in more detail. Let the Sun at sunset be filmed using a camera obscura, which is a room of length $L = 10 ~\text{м}$ with a square hole. The camera is directed at the Sun, the angular size of the Sun (the ratio of the diameter of the Sun to the distance to it from the Earth) is equal to $\alpha = 0.5^\circ$, therefore all rays can be considered paraxial.</p>
+<div class="figure"><img src="T6_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Let the side of the square hole be $a = 1 ~\text{м}$. Find the characteristic angular dimension $\beta$ of the hole as viewed from the screen. Compare it to the angular size of the Sun.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Let now the side of the square hole be $a = 5 ~\text{мм}$. Find the characteristic angular dimension $\beta$ of the hole as viewed from the screen. Compare it to the angular size of the Sun.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">In the answer sheets, qualitatively give the image of the Sun at $a = 1~\text{м}$. Please indicate the dimensions that characterize this image.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">In the answer sheets, qualitatively give the image of the Sun at $a = 5~мм$. Please indicate the dimensions that characterize this image.</div><span class="pb-pts">0.50</span></div>
+<p>Further, in all parts of the problem, we will consider the hole to be a point hole, that is, its angular size when viewed from the screen will be much smaller than the characteristic angular sizes of the objects being photographed.</p>
+<h2 class="part">Part B. Photograph of a person (1.0 points)</h2>
+<p>Consider photographing a person with a pinhole camera. For a qualitative description, we will consider a person as a rod of length $h$. Let the camera of length $L$ be directed horizontally and always oriented towards the middle of the person. The person moves away from the camera at speed $v$. At time $t=0$ the distance between the camera and the person is $l_0$. Consider that the entire image of a person is located on the screen.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the dependence of the size $a$ of the human image on the time $t$.</div><span class="pb-pts">0.30</span></div>
+<div class="figure"><img src="T6_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">The figure shows images of an adult human and the Sun (angular size of the Sun $\alpha = 0.5^\circ$) at an unknown scale. Estimate how far away the adult was when the photograph was taken.</div><span class="pb-pts">0.70</span></div>
+<h2 class="part">Part C. Flag on a hot air balloon (3.3 points)</h2>
+<p>Let a square flag with side $a$ be suspended by one of its vertices from a balloon rising vertically upward with speed $v$. A camera obscura of length $L$ films the flag and is always aimed at its center. Consider that the camera is rotated so that its opening is motionless. Initially, the center of the flag and the camera are at the same height at a distance $l_0$ from each other, and the plane of the flag at this moment is perpendicular to the direction of the camera. The $AC$ diagonal is vertical at all times and the flag does not rotate.</p>
+<div class="figure"><img src="T6_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Prove that the image of a segment in a photograph will be a line segment or a ray.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">At what ratio between $l_0$ and $a$ will all points of the flag be depicted on the screen at any moment of time, if we neglect the finiteness of the screen dimensions? In all subsequent paragraphs of this part of the problem, consider the resulting condition fulfilled.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Find the coordinates $(X, Y)$ of the flag vertices in the photograph as a function of time.</div><span class="pb-pts">1.40</span></div>
+<p>Further, it is known that $l_0 = 3\text{м}$, $v = 1\text{м/с}$.</p>
+<div class="figure"><img src="T6_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">The picture shows a photograph of the flag at an unknown scale. Determine at what point in time $\tau$ the photograph was taken.</div><span class="pb-pts">1.20</span></div>
+<h2 class="part">Part D: Skyline Photography (3.5 points)</h2>
+<p>In this part of the problem we will study a photograph of the horizon obtained using a horizontal pinhole camera. The radius of the Earth is $R = 6378\text{км}$; surface irregularities can be neglected.</p>
+<div class="figure"><img src="T6_EN_assets/fig7.jpg" alt="" /><div class="caption">Fig. 7.</div></div>
+<div class="figure"><img src="T6_EN_assets/fig8.jpg" alt="" /><div class="caption">Fig. 8.</div></div>
+<p>We will characterize the position of the horizon point by the angles $\varphi$ and $\theta$ (see figure). To begin with, let’s neglect the influence of the atmosphere.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">What is the angle $\theta$? Express your answer in terms of $R$ and $h$.</div><span class="pb-pts">0.10</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">Determine the coordinates $x$, $y$ and $z$ of the horizon point corresponding to the angle $\varphi$. Express your answer in terms of $\theta$, $R$, $\varphi$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Prove that the coordinates $X$, $Y$ are related to the coordinates $x$, $y$ and $z$ by the relations: $$\cfrac{X}{x} = \cfrac{Y}{y} = \cfrac{L}{z}.$$</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">D4</span><div class="pb-text">Show that the image of the horizon on the screen is described by the following equation: $$\cfrac{Y^2}{A^2} - \cfrac{X^2}{B^2} = 1,$$ где $A, B > 0$. Выразите $A$ и $B$ через $L$ и $\theta$. Примечание: следующее выражение может оказаться полезным: $$\cfrac{1}{\cos^2\varphi} = 1+\tan^2\varphi.$$</div><span class="pb-pts">0.70</span></div>
+<p>Note: The following expression may be useful: $$\cfrac{1}{\cos^2\varphi} = 1+\tan^2\varphi.$$</p>
+<p>The figure shows part of a photograph of the horizon in an unknown, but identical scale along the axes.</p>
+<div class="figure"><img src="T6_EN_assets/fig9.jpg" alt="" /><div class="caption">Fig. 9.</div></div>
+<div class="problem-box"><span class="pb-id">D5</span><div class="pb-text">Determine from what height $h$ the photograph was taken.</div><span class="pb-pts">1.00</span></div>
+<p>In reality, the rays entering the camera do not travel in a straight line. The path of the rays characterizing the horizon in the photograph is shown in the figure.</p>
+<div class="figure"><img src="T6_EN_assets/fig10.jpg" alt="" /><div class="caption">Fig. 10.</div></div>
+<p>The refractive index of air depends linearly on density: $n = 1+\alpha \rho_{air}$. The difference between the refractive index of air at the Earth's surface and unity is $n_0-1 = 2.74\cdot 10^{-4}$. The difference in the refractive index from unity at the photographic height can be neglected.</p>
+<div class="problem-box"><span class="pb-id">D6</span><div class="pb-text">Determine the angle $\theta'$. Express your answer in terms of $R$, $n_0$ and $h$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">D7</span><div class="pb-text">Taking into account the smallness of $n_0-1$, determine by what amount $\Delta h$ the real photographing height differs from the one you obtained in point D5. Express the answer in terms of $n_0-1$, $R$ and $h$, and calculate its numerical value.</div><span class="pb-pts">0.60</span></div>
+<p>In what follows, we will neglect the influence of the atmosphere.</p>
+<h2 class="part">Part E: Focusing on the horizon (2.0 points)</h2>
+<p>To analyze the boundaries of an image of an object, you may need knowledge of conic sections. A cone is a surface formed in space by a number of rays (forming a cone) connecting all points of a certain flat curve (cone guide) with a given point in space (the vertex of the cone). A special case of a cone is a straight circular cone, its directing curve is a circle, and the vertex lies on the axis of symmetry of this circle. Note that the boundaries of the image of an object in a camera obscura are formed by rays tangent to it passing through the camera opening. These rays form a cone. The image of the boundaries of an object is a section of this cone by the plane of the screen. The case of a circular cone may be of particular interest. In this case, the section by the plane will be a second-order curve: an ellipse at $90^\circ - \psi > \alpha$, a parabola at $90^\circ - \psi = \alpha$, a hyperbola $90^\circ - \psi < \alpha$.</p>
+<div class="figure"><img src="T6_EN_assets/fig11.jpg" alt="" /><div class="caption">Fig. 11.</div></div>
+<p>Now let's consider photographing the horizon using a camera aimed at one of its points.</p>
+<div class="figure"><img src="T6_EN_assets/fig12.jpg" alt="" /><div class="caption">Fig. 12.</div></div>
+<p>At low altitudes the camera can only capture a certain part of the horizon, but at high altitudes it can be seen completely.</p>
+<div class="problem-box"><span class="pb-id">E1</span><div class="pb-text">Determine $h_{cr}$, starting from which the horizon is completely visible when ascending.</div><span class="pb-pts">0.30</span></div>
+<p>The visible fraction of the horizon is determined by the ratio of the length of the horizon arc, consisting of points falling on the photograph, to the length of the entire horizon circumference.</p>
+<div class="problem-box"><span class="pb-id">E2</span><div class="pb-text">Determine the dependence of the visible part of the horizon $\eta$ on the value $h/R$. Plot a graph of this relationship. Note: The angle $\theta$ shown in the figure may be useful for intermediate calculations.</div><span class="pb-pts">1.10</span></div>
+<p>Note: The angle $\theta$ shown in the figure may be useful for intermediate calculations.</p>
+<div class="problem-box"><span class="pb-id">E3</span><div class="pb-text">Draw high-quality images of the horizon at $h < h_{cr}$, $h = h_{cr}$ and $h > h_{cr}$. Determine the types of curves obtained when photographing from different heights.</div><span class="pb-pts">0.60</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/4202">https://pho.rs/p/4202</a></p>
+</body>
+</html>

@@ -1,0 +1,141 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Magnetic friction in cut tubes}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem is devoted to the effects associated with the movement of a magnet in conducting tubes. It is well known about the Foucault currents that arise during such movement, which interact with a moving magnet and slow down its movement. The resistance forces turn out to be proportional to the speed of movement. The task consists of five sequential parts: Introductory part to learn how to work with the provided equipment Determination of the magnetic moment Study of effects in a solid pipe Study of effects in longitudinally cut pipes Study of a black box
+
+This problem is devoted to the effects associated with the movement of a magnet in conducting tubes. It is well known about the Foucault currents that arise during such movement, which interact with a moving magnet and slow down its movement. The resistance forces turn out to be proportional to the speed of movement.
+
+The task consists of five consecutive parts:
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+1. Coils 2. Adapters for coils 3. Oscilloscope with power cable and BNC-crocodile wire 4. Tripod with foot and coupling 5. Magnet 6. Hall sensor (with battery) and screwdriver for adjustment 7. Tube holder 8. Plastic tube 9. Metal tubes, solid and with longitudinal cuts 10. “Black box” 11. Capacitor 12. Multimeter with wires 13. Connecting wires 14. Ruler 50 cm 15. Nut 16. Threads 17. Plastic tie 18. Calipers 19. Tape measure 20. Narrow masking tape 21. Clothes pins 22. Work gloves
+
+\section*{Important notes for the success of the experiment}
+
+1. The neodymium magnet you were given is, of course, hard, but fragile. If it collides with a metal surface (such as a table frame, base, or tripod stand) at high speed, it may break. You will not be given a new magnet, and it is impossible to perform the experiment with fragments. 2. The coils given to you have output connectors (“female”). During the experiment, pin connectors of connecting wires (“male”) are inserted into them. You don't need to use much force to insert the pin connectors into the coil connectors. If you feel that the pin is not inserting, pull it out, rotate it 90 degrees around its axis and try again. There is a position for the pin connector where it fits easily into the coil connector. 3. If you apply excessive force to insert the pin into the coil, the contact strip in the coil connector may move deeper into the connector. There will be no electrical contact and the coil will become unusable. You will not be given a new reel. 4. The work involves aluminum pipes in which a longitudinal section is made. The cut may be sharp. Therefore, wear the provided construction gloves if you are doing anything with cut pipes. 5. The effects observed in slit pipes are quite subtle and depend on the width of the slit. Do not bend, do not straighten - in general, do not change the width of the cut in the tubes in any way.
+
+\problembox{00}{List all the pieces of equipment and your work area that the magnet you were given is magnetic to.}{0}
+
+\problembox{01}{It is prohibited to apply any inscriptions directly to aluminum or plastic pipes. If you need to make any marks, apply masking tape along the pipe or make stickers in the places you need. You can only write on masking tape with a pen and pencil. The auditorium duty officer has the right to check the presence of inscriptions on the pipes at any time. If inscriptions are detected, the duty officer immediately puts a penalty point on the answer sheet. The statement that you will erase the inscriptions later is not accepted. A penalty point can be received up to 20 times.}{-1.00}
+
+The basic setup of this work is shown in the figure below. - The pipe is fixed in a holder (Fig. 1A), from one to six coils are put on the pipe, the coils are connected in series with each other, and the entire system is connected to the oscilloscope (Fig. 1B). - Depending on the diameter of the pipes, coil adapters can be used. - Use clothespins to secure the position of the coils on the pipe. - If a magnet flies through a coil, an induced emf $\mathcal{E}_{\text{ind}}$ appears in it due to a change in the magnetic field flux; this is recorded by an oscilloscope. - Long metal pipes are actually antennas, so high-frequency interference can be observed on the oscilloscope, degrading the signal-to-noise ratio. To get rid of the high-frequency component of the signal, connect the supplied capacitor $C=0.1~\mu\text{F}$ in parallel with the coil system (Fig. 1C). For high frequency harmonics it actually acts as a jumper. The signal-to-noise ratio should then improve significantly. - Remember that the objects under study should be located as far as possible from metal objects so that they have minimal influence on the experiment.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\section*{Part A. Unusual stopwatch (3.5 points)}
+
+In this part of the problem you will determine the acceleration due to gravity $g$ using an oscilloscope. Attach the tube holder to the tripod leg. Place the empty plastic pipe in the holder. The pipe should be inclined at a certain angle to the horizontal. Place 2 coils on the pipe and place them at some distance from each other (> 50 cm).
+
+\problembox{A1}{Measure the distances from the top edge of the pipe to the middle of the first coil $L_1$ and from the middle of the first coil to the middle of the second $L_2$ and write them down on your answer sheet.}{0}
+
+\problembox{A2}{Find the time $t$ during which the magnet flies between the centers of the two coils. Express $t$ in terms of $L_1$, $L_2$, $\mu_1$, $g$, $\alpha$, where $\mu_1$ is the coefficient of sliding friction between the tube and the magnet.}{0.50}
+
+Using the oscilloscope readings, you can determine the time $t$ during which the magnet will fly the distance between the centers of the coils.
+
+\problembox{A3}{On the answer sheet, qualitatively depict the picture of the signal recorded by the oscilloscope. Indicate how you measure time $t$ from the waveform.}{0.50}
+
+\problembox{A4}{Remove the dependence of time $t$ on the angle of inclination $\alpha$ of the plastic pipe for 7 different angles. The angle range should be in the range $(\pi/4;\pi/2)$.}{1.40}
+
+\problembox{A5}{Propose a linearization of the dependence obtained in point A2.}{0.20}
+
+\problembox{A6}{Plot the graph in coordinates corresponding to the linearization in step A5.}{0.50}
+
+\problembox{A7}{Using the graph, determine $g$. Estimate the error.}{0.40}
+
+\section*{Part B. Magnetic moment (2 points)}
+
+The magnet given to you can be considered as a magnetic dipole. The field created by the magnet can be studied using a Hall sensor. It measures the component of the magnetic field perpendicular to the sensor plane. The additional potential difference that arises due to the magnetic field is related to its induction by the relation $U = \chi B$, where $\chi=50~\text{V/T}$. The baseline (voltmeter reading in the absence of a field) for most sensors is 0. If it is not 0, it is clearly indicated on the sensor (voltage changes must be read from the baseline). The baseline can “float” depending on different parameters. The baseline can be adjusted with a screwdriver. The operating range of the sensor is $[-4.5; 4.5]~\text{V}$ for sensors with a baseline of 0, and $[0; |9|]~\text{V}$ for sensors with a baseline of $|4.5~\text{V}|$.
+
+\problembox{B1}{Measure the radius of the magnet $R$ and its height $H$. Determine the dipole moment of the magnet $M$. Use diagrams, diagrams, and graphs to explain how you do this.}{2.00}
+
+\section*{Part C. Steady motion in an aluminum pipe (5 points)}
+
+When a magnet falls in an aluminum tube, it experiences a braking force that occurs due to eddy currents. In our problem, the speed of the magnet is sufficient to use the following approximation: $F_{\text{drag}}=k v_{\text{mag}}$, where $k=\cfrac{(\mu_0 M)^2\sigma w f(H/a)}{8\pi (aH)^2},$ and $m$ is the mass of the magnet, $\sigma$ is the specific conductivity of the pipe material, $a$ is the internal radius of the pipe, $M$ is the magnetic moment of the magnet, $w$ is the thickness of the pipe walls, $f(H/a)$ is some function. In this problem we can assume that $f(H/a)=1.75$. $\mu_0=4\pi\cdot 10^{-7}~\text{H/m}$, $m=21.0~\text{g}$.
+
+\problembox{C1}{Find the speed of the magnet $v_{\text{mag}}$ as a function of time through $t, g, k, \mu_2, \alpha$, where $\mu_2$ is the coefficient of sliding friction between the aluminum tube and the magnet.}{0.50}
+
+\problembox{C2}{Express the steady speed $u$ in terms of $g, k, \mu_2, \alpha$.}{0.50}
+
+\problembox{C3}{Schematically depict an experimental setup that can be used to measure steady-state velocity over several intervals. Explain with the help of diagrams, graphs, oscillograms what and how you measure to calculate the steady-state speed.}{0.50}
+
+After the magnet has traveled a certain distance, we can assume that, within the limits of error, it moves at a steady speed.
+
+\problembox{C4}{How do you check that the speed in the area under study can be considered steady? Explain using diagrams, graphs, oscillograms.}{0.50}
+
+\problembox{C5}{Remove the dependence of the steady speed of the magnet on the angle of inclination of the aluminum pipe for at least 7 inclination angles. For each inclination angle, average the steady-state speed over at least three intervals. In the tables, indicate the primary data taken from the devices.}{1.00}
+
+\problembox{C6}{Propose a linearization of the relationship obtained in point C2 so that the sliding friction coefficient $\mu_2$ and the drag force coefficient $k$ can be determined.}{0.50}
+
+\problembox{C7}{Based on C6, construct a graph to determine $\mu_2$ and $k$.}{0.50}
+
+\problembox{C8}{Using the graph, determine $\mu_2$ and $k$.}{0.50}
+
+\problembox{C9}{Determine the specific conductivity of aluminum $\sigma$. Assess the errors.}{0.50}
+
+\section*{Part D. Movement in pipes with cuts (5.5 points)}
+
+\problembox{D1}{For each pipe, determine the corresponding coefficient in the resistance force $k_i~(i=2,3,4,5)$. Be careful, the effects shown here are very subtle. Monitor the quality of the data taken from the installation and its optimal processing.}{4.00}
+
+\problembox{D2}{Measure the width of the cut $x$ and plot $k_i$ versus $x$.}{1.00}
+
+\problembox{D3}{Determine the parameters of the dependence obtained in step D2.}{0.50}
+
+\section*{Part E. Metal black box (4.0 points)}
+
+Inside the black box there is an aluminum tube in which sections with cuts alternate with solid sections. The origin of coordinates is on the edge of the aluminum tube, and the direction is indicated on the plastic one.
+
+\problembox{E1}{Find the position and width of the cuts. Using formulas and pictures, explain how you do this and provide calculations.}{4.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/104}
+
+\end{document}

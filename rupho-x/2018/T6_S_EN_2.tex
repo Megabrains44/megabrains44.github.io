@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+\title{\textbf{Stability of various systems --- Solution}}
+\author{\normalsize X18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+\problembox{A1}{Express the angular acceleration of rod $\ddot{\varphi}$ in terms of $\varphi$, $l$ and $g$. Show that the time dependence of the inclination angle $\varphi$ is given by $\varphi=Ae^{t/\tau}+Be^{-t/\tau}$, where $A$ and $B$ are constants depending on the initial position and initial angular velocity of the rod, and $\tau$ is the characteristic time of fall. Express $\tau$ in terms of $l$ and $g$.\\ The moment equation for the rod about the hinge is: \[ I = M \ddot{\varphi},\]where $I=\frac{1}{3} ml^2$ is the moment of inertia of the rod about its end, and $M=mg \cdot \left(\frac{1}{2} l \sin \varphi \right) \simeq \frac{1}{2} mgl \varphi$ is the moment of gravity.\\ Let's check that $\varphi =Ae^{t/\tau}+Be^{-t/\tau}$ is a solution to the resulting equation: $\ddot{\varphi} = \frac{1}{\tau^2} \left(Ae^{t/\tau}+Be^{-t/\tau} \right) =  \frac{\varphi (t)}{\tau^2}$.\\ Answer: $\ddot{\varphi}=\frac{3g}{2l} \varphi$.}{1.50}
+\problembox{A2}{Let the boy now try to support a long thin stick in an upright position on his hand. As soon as the stick begins to fall, for example, to the left, he moves his hand to the left an even greater distance so that the center of mass of the stick is to the right of its fulcrum. As a result, the moment of gravity begins to rotate the stick to the right, reducing its speed of rotation directed to the left. Estimate how long a stick the boy can hold vertically if his reaction time is approximately $\tau_r=0.2~\text{s}$. (Reaction time is the time delay between the command sent by the brain to the hands and the corresponding movement of the hands.)\\ The boy's reaction time $\tau_r$ must be of the order of the characteristic fall time $\tau$. Using this, we find the length of the stick: $l_r=\tau_r^2  \frac{3g}{2}$.\\ Answer: \[l_r=\tau_r^2  \frac{3g}{2}=0.59~\text{m}\]}{0.50}
+\problembox{A3}{Humans and birds maintain a standing position in a similar way. They move the fulcrum (the point at the bottom of the foot where normal ground reaction force is applied), for example, changing the angle between the foot and leg to counteract the fall of the upper body. A small bird of height $l=6~\text{cm}$ can stand on its feet. Estimate her reaction time from above.\\ The bird's reaction time $\tau_b$ must be of the order of the characteristic fall time $\tau$ Using this, we find the bird's reaction time: $\tau_b=\sqrt{\frac{2 l_b}{3 g}}$.\\ Answer: \[\tau_b=\sqrt{\frac{2 l_b}{3 g}}=0.065~\text{s}\]}{0.50}
+\problembox{A4}{Balance on a bicycle is also maintained by moving the fulcrum, which lies on the line between the points of contact of the wheels and the ground. This line can be moved by turning the steering wheel while driving. Estimate the minimum speed of the cyclist $v_m$ at which he can maintain balance in this way. Consider that its characteristic time of fall is the same as that of a rod of length $L=2~\text{m}$; distance between wheel axles $d=1~\text{m}$.\\ The time $\tau_m$ during which the cyclist’s fulcrum can be moved depends on the base $d$ of the bicycle and its speed $v_m$ as follows $\tau_m=\frac{d}{v_m}$. This time must be on the order of the characteristic fall time $\tau$. Find the speed $v_m=d\sqrt{\frac{3g}{2L}}$.\\ Answer: \[v_m=d\sqrt{\frac{3g}{2L}}=2.7~\text{m}/\text{s}\]}{1.00}
+\problembox{B1}{Suppose that initially the tightrope walker stood in almost perfect balance ($\alpha_1=\alpha_2=0$). Due to the instability of the equilibrium, it slowly begins to fall clockwise. He notices this when $t=t_0$, $\alpha_1=\alpha_2=\alpha_0>0$. He quickly bends to stop falling. Consider that angle $\beta$ instantly takes on the value $\beta_0$. Express the new values of angles $\alpha_1$ and $\alpha_2$ in terms of $\beta_0$ and $\alpha_0$.\\ In the process of changing the configuration, the tightrope walker is affected by the moment of gravity, however, this does not lead to a change in the angular momentum (changes in angles $\alpha_1$ and $\alpha_2$ occur at a very high speed over a short period of time). Let us write down the law of conservation of angular momentum relative to the support point \[m(1.4H)^2 \dot{\alpha}_1+mH^2\dot{\alpha}_2 = 0\], taking into account the fact that at the initial moment the tightrope walker is at rest. We integrate the resulting expression over time and obtain $1.96(\alpha_1-\alpha_0) + (\alpha_2 - \alpha_0) = 0$. We add the condition $\alpha_1 - \alpha_2=\beta$ to this equation and solve a system of two linear equations.\\ Answer: $\displaystyle \alpha_1=\alpha_0+\frac{\beta_0}{2.96},\quad \alpha_2=\alpha_0-\frac{1.96 \beta_0}{2.96}$}{1.00}
+\problembox{B2}{Thus, the tightrope walker is now bent and maintains the same body shape ($\beta=\beta_0$) for a time $T_b$, after which he almost instantly straightens up ($\beta=0$). He wants to stand upright again $\alpha_1=\alpha_2=0$. Should it have folded clockwise ($\beta_0>0$) or counterclockwise ($\beta_0<0$)? Explain your answer.\\ Moment of gravity $M=mg (1.4H) \alpha_1+mgH\cdot\alpha_2$. Let's substitute here $\alpha_1$ and $\alpha_2$ from the previous paragraph and get \[ M=mgH(2.4 \alpha_0-\frac{7}{37} \beta_0 ) .\]In order for the tightrope walker to return to the previous position, he needs to reverse the speed gained, for this there must be $M<0$, i.e. $\beta_0>0$.\\ Answer: \[\beta_0>0\]}{0.50}
+\problembox{B3}{Now we will assume that $\alpha_0\ll{\beta_0}$. Immediately after it straightens up, neither its angular velocity ($\dot{\alpha}_1=\dot{\alpha}_2$) nor its angle $\alpha_1$ are zero (they will become zero much later). Find the meaning of the expression $\dot{\alpha}_1/\alpha_1$. Express your answer using $H$ and $g$.\\ The motion of a straightened tightrope walker is described by the equation $2.96mH^2 \ddot{\alpha}_1=2.4mgH\alpha_1$. We look for its solution in the form $\alpha_1=Ae^{t/\tau}+Be^{-t/\tau}$. In order for the tightrope walker to return to the starting position, $A=0$. Therefore $\frac{\dot{\alpha}_1}{\alpha_1} = - \frac{1}{\tau}$.\\ Answer: \[\frac{\dot{\alpha}_1}{\alpha_1} = - \frac{1}{\tau}=-\sqrt{\frac{30g}{37H}}\]}{1.00}
+\problembox{B4}{Find the time $T_b$ during which the tightrope walker is bent. Express your answer in terms of $\alpha_0$, $\beta_0$, $H$ and $g$. We can assume that $\alpha_0\ll{\beta_0}$.\\ As shown above, the speed of the tightrope walker immediately after straightening (after the second change of form) is $\dot{\alpha}_\mathrm{f}=-\frac{\alpha}{\tau}$. The speed right before bending is equal to $\dot{\alpha}_\mathrm{i}=\frac{\alpha_0}{\tau}$, since this process is equivalent, up to a change in the sign of time, to that described in the previous paragraph. Change in angular momentum in a bent configuration: \[\Delta L=2.96mH^2\cdot(\alpha_\mathrm{f}-\alpha_\mathrm{i} )=-\frac{5.92mH^2 \alpha_0}{\tau}\]Taking into account condition $\alpha_0 \ll \beta_0$, moment of force $M\simeq-\frac{7}{37} mgH\beta_0$. The change in angular momentum occurs due to the moment $M$ during the time $T_b=\frac{\Delta L}{M}$. From here we get the answer $T_b=28.18 \frac{\alpha_0}{\beta_0} \sqrt{\frac{H}{g}}$.\\ Answer: \[T_b=28.18 \frac{\alpha_0}{\beta_0} \sqrt{\frac{H}{g}}\]}{1.00}
+\problembox{C1}{Consider that at moment $t=T/2$ the pendulum was motionless and inclined at a small angle $\varphi_0$. Draw a graph of the angle of inclination $\varphi$ versus time, and determine the angular displacement of the pendulum $\Delta{\varphi}$ at time $t=T$, that is, $\Delta{\varphi}=\varphi(T)-\varphi(T/2)$. We can assume that $\Delta{\varphi}\ll{\varphi_0}$.\\ In the case where the acceleration is directed upward (for example, $0 < t < T$), the inertial force is directed downward. The equation of motion for this case is: \[ \ddot{\varphi}=\frac{2v_0}{lT} \varphi.\]Since the displacements from position $\varphi_0$ are small, we can assume that the motion is uniformly accelerated: $\ddot{\varphi}=\frac{2v_0}{lT} \varphi_0$. Taking into account the initial conditions $\dot{\varphi}\left(\frac{T}{2}\right)=0$, $\varphi\left( \frac{T}{2}\right)=\varphi_0$ we obtain dependence $\varphi(t) = \varphi_0 + \frac{v_0}{lT} \left( t- \frac{T}{2} \right)^2$. After $t=T$ the moment of force changes direction, and the movement is described by a similar law. The amplitude of the angle change is $\Delta \varphi=\frac{v_0 T}{4 l } \varphi_0$.}{1.50}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig1.jpg}
+\end{figure}
+\problembox{C2}{Since we are still neglecting gravity, only the inertial force has a non-zero moment about the hinge. Find the time average value of this moment of inertia over time $2T$.\\ Let's calculate the average moment "head-on": \[ \langle M \rangle = \langle ml a \varphi \rangle = ml \langle a \cdot \left[ \left(\varphi -\langle \varphi \rangle \right) + \langle \varphi \rangle \right] \rangle = ml \langle a (\varphi - \langle \varphi \rangle ) \rangle + ml \langle \varphi \rangle \langle a \rangle  = - mla_0 \langle |\varphi - \langle \varphi \rangle| \rangle + 0 \] Let's calculate the average deflection modulus: \[ \langle |\varphi(t) - \varphi| \rangle = \frac{2}{t} \int\limits_0^\frac{T}{2} \Delta \varphi\left( 1- \frac{4t^2}{T^2}\right) dt = \frac{2}{3} \Delta \varphi = \frac{v_0 T}{6 l} \varphi_0\]Then the expression for the average moment of force $\langle M \rangle =-\frac{mv_0^2}{3} \varphi_0$\\ Answer: \[\langle M \rangle =-\frac{mv_0^2}{3} \varphi_0\]}{1.50}
+\problembox{C3}{Now let's take gravity into account. Write the inequality that must hold for $g$, $T$, $l$, and $v_0$ for vertical position to exist.\\ Gravity does not affect the value of the average moment of inertia obtained earlier. A moment of gravity equal to $mgl \varphi_0$ is added. Then the equation of motion has the following form $l^2 \ddot{\varphi} = \left( gl - \frac{v_0^2}{3} \right) \varphi_0$. The vertical position will be stable when the right side is negative, that is, a restoring moment occurs.\\ Answer: \[v_0^2>3gl\]}{1.00}
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/314/s}
+\end{document}

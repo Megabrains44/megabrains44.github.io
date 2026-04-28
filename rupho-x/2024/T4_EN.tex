@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Oil production}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Oil deposits are a layer of porous liquid-conducting medium, which is covered on top by a cap of poorly conductive rock. There must be a source rock underneath the conductive porous medium. Over a long period of time (on the order of millions of years), under the influence of high temperatures and pressures in a practically oxygen-free environment, the organic matter of the source rock (kerogen) decomposes into hydrocarbons. The pores of the medium are filled with a mixture of these hydrocarbons and water, of which there is always more on average. This mixture is called fluid.  Due to the increase in specific volume, as well as due to the compaction of rock over time under the force of gravity, pressure in the pore fluid, fluid, begins to increase. This leads to fluid movement. The non-conductive clay cap is a natural barrier to fluid. Over millions of years, it accumulates near the interface in “traps”—irregularities in the rock (see figure).
+
+Schematic representation of an oil field
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Consider the following numerical data known: Oil density $\rho=800~кг/м^3$; Atmospheric pressure $p_0=1~атм=10^5~Па$; Gravity acceleration $g=10~м/с^2$. In all parts of the problem except $\mathrm{A}$, neglect it completely.
+
+Consider the following numerical data known:
+
+\section*{Part A. Estimation of oil reserves (1.5 points)}
+
+As stated in the preface, all petroleum fluid is located in the pores of the medium. An important characteristic of the medium is porosity - the value $$\varphi=\cfrac\{V_\{пор\}\}\{V_\{ср\}\}, $$ где $V_{por}$ — объём, занимаемый порами в выделенном объёме среды $V_{avg}$.
+
+\problembox{A1}{Let the oil reservoir be a section of ancient fluvial sandstone deposits in the shape of a parallelepiped with a height of $h = 10~{м}$, a width of $b = 100~{м}$ and a length of $L = 2000~{м}$. Rock porosity $\varphi = 0.1$. Estimate the oil reserves $m_{н}$ in this field. Express your answer in terms of $L$, $b$, $h$, $\rho$ and $\varphi$, and also give its numerical value in tons. Consider that the oil fluid completely fills the pore volume.}{0.30}
+
+One of the most important quantities in the oil industry is reservoir pressure. Reservoir pressure $p_{пл}$ is the pressure of liquids in the pores in the case when the pores are connected to each other. This case is most often realized in reality. Reservoir pressure is due to the fact that the fluid in the pores is compressed relative to normal conditions. Fluid compression is characterized by the compressibility of the substance $\beta$, which is determined by the relation: $$\beta=-\cfrac\{1\}\{V\}\cfrac\{dV\}\{dp\}, $$где $p$ и $V$ — давление и объём вещества, а производная $dV/dp$ is taken at a constant amount.
+
+Further, in all points of this part of the problem, consider that all the pores are connected to each other, therefore the pressure distribution in them is determined according to the laws of hydrostatics.
+
+\problembox{A2}{Let the reservoir oil pressure at the bottom of the deposits be $p_{пл}=250~{атм}$. Find at what maximum depth $H_{max}$ the deposit will be gushing, i.e. oil will flow to the surface under its own pressure. Express the answer in terms of $\rho$, $g$ and $p_{пл}$, and also give its numerical value. The compressibility of oil can be neglected.}{0.30}
+
+Not all the oil can be extracted from a deposit, but only part of it. The share of recovered oil from total reserves is called the oil recovery factor (ORF) $\alpha$. As a rule, it is low and almost never reaches half.
+
+\problembox{A3}{Estimate the maximum possible oil recovery factor $\alpha_{max}$ in the flowing mode at reservoir pressure $p_{пл}=250~{атм}$, if the oil compressibility is $\beta = 5\cdot 10^{-10}~{Па}$. Express the answer in terms of $\beta$ and $p_{пл}$, and also give its numerical value. Consider streambed sediments to be insulated by impermeable clays of low porosity. The depth of the deposits $H$ can be chosen arbitrarily.}{0.60}
+
+\problembox{A4}{Given the same data, estimate the maximum possible oil recovery factor $\alpha_{max}$ in the flowing mode, if there is water in the reservoir sediments below with a volume of $kV_0$ ($k = 9$) with initial oil reserves $V_0$. Consider the compressibility of water equal to the compressibility of oil. Express the answer in terms of $\beta$ and $p_{пл}$, and also give its numerical value. Consider that the liquid is taken from above, i.e. Only oil is taken. The depth of the deposits $H$ can be chosen arbitrarily.}{0.30}
+
+\section*{Part B: Hydraulic Fracturing (3.2 points)}
+
+A common method of increasing oil recovery in a field is that before production, a special liquid, a proppant, is pumped into the well under high pressure. This leads to the formation of a flat crack of order $100~{м}$ in length and no more than $1~{cm}$ in width. A fracture created in oil-containing layers significantly simplifies the flow of oil into the well at the same pressure, which significantly speeds up production and reduces costs. This method is called hydraulic fracturing.
+
+When describing a crack, we will use the following model: The crack consists of two identical symmetrical halves lying in the same vertical plane (Fig. a); The speed of the fluid flowing in the crack is considered to be directed horizontally along the crack (Fig. b); The velocities of fluid elements lying on the same vertical are the same; The proppant fluid flow $Q=6~{м}^3/{мин}$ is divided equally between the halves of the fracture under consideration, enters them at $x=0$ and remains constant in all sections $wh$ (Fig. b); The height $h=10~{м}$ of the crack under consideration is the same at any point; The width of the crack $w$ (Fig. a) depends on the excess pressure $p'=p-\sigma_0$ compared to the rock pressure, where $\sigma_0=const$, according to the law $$w=\cfrac\{p'h\}\{E\},$$ где $E=10^{10}~{Pa}$ – модуль плоской деформации; Вязкость расклинивающей жидкости равна $\eta=1{.}00~{Pa}\cdot{c}$.
+
+При описании трещины воспользуемся следующей моделью:
+
+На (рис. а) показан вид сверху на трещину, а на (рис. б) приведено поперечное сечение трещины $wh$, лежащее в вертикальной плоскости и перпендикулярное оси $x$. through which liquid flows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+In paragraphs $\mathrm{B1}$ and $\mathrm{B2}$, half of the fracture corresponding to $x>0$ is considered, in which the proppant velocity is directed along the axis $x$.
+
+\problembox{B1}{Let us consider the horizontal flow of fluid along the axis $x$ between two parallel planes of height $h$. Distance between planes $w\ll{h}$. Determine the volumetric flow rate (hereinafter in all points of the problem - flow) of the liquid $Q$ through the cross section $wh$. Express your answer in terms of $\eta$, $w$, $h$ and the pressure gradient $dp(x)/dx$.}{1.00}
+
+Since the distance between planes decreases slowly along the length of the crack, always consider the result obtained in $\mathrm{B1}$ to be applicable.
+
+\problembox{B2}{An excess pressure $\Delta p$ is created in the center of the gap. Find the dependence of the excess pressure $p'$ in the slot on the coordinate $x$. Express your answer in terms of $\Delta{p}$, $Q$, $E$, $h$, $\eta$ and $x$.}{1.00}
+
+\problembox{B3}{The crack ends at a position corresponding to zero overpressure. Determine the crack length $L$. Express your answer in terms of $\Delta{p}$, $E$, $h$, $\eta$ and $Q$.}{0.20}
+
+\problembox{B4}{Determine the crack volume $V$. Express your answer in terms of $\Delta{p}$, $h$, $\eta$, $Q$ and $E$.}{0.70}
+
+The critical overpressure withstood by the barriers is $\Delta{p}=100~{атм}$.
+
+\problembox{B5}{Calculate the maximum possible values of the crack length $L_{max}$ and its volume $V_{max}$.}{0.30}
+
+\section*{Part C. Oil production time (3.2 points)}
+
+Let a well be drilled along the edges of an oil field, each of which creates a crack.  The cracks are parallel to the side faces of the deposit and completely cover them. The injection well creates high pressure, and the production well creates low pressure. The propagation of fluid in the formation is described by Darcy's law $$ \vec\{v\} = - \frac\{k\nabla p\}\{\eta\}, $$ где $\vec{v}$ — скорость течения жидкости, $\eta$ — вязкость жидкости, а $k$ — величина, называющаяся проницаемостью пласта для данной жидкости. В рамках данной задачи движение является одномерным, поэтому величину $\nabla p$ можно записать следующим образом: $$\nabla p=\vec\{e\}_x\cfrac\{dp\}\{dx\}. $$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Consider the following model of fluid flow: Fluids can be considered incompressible; Liquids flow through a pipe of constant cross-section without mixing with each other; When fluids flow, the area of their contact (hereinafter referred to as the front) always maintains a flat shape, perpendicular to the direction of the fluid velocity; The injection fluid with permeability $k_2$ and viscosity $\eta_2=1\cdot 10^{-3}~{Па}\cdot{c}$ enters the tube at pressure $p_2=350~{атм}$, and the effluent fluid with permeability $k_1$ and viscosity $\eta_1=5\cdot 10^{-2}~{Па}\cdot{c}$ flows out of the tube at pressure $p_1=100~{атм}$; The length of the tube is $L = 2~{км}$, and the value $S$ denotes the coordinate $x$ of the front; At the initial moment of time, liquid $1$ completely fills the tube, so $S(0)=0$; Consider that in each of the liquids the pressure varies linearly along the formation.
+
+Consider the following fluid flow model:
+
+\problembox{C1}{Determine the speed $v$ of motion of the fluid boundary when the front moves by an amount $S$. Express your answer in terms of $p_1$, $p_2$, $L$, $\eta_1$, $\eta_2$, $k_1$ and $k_2$.}{1.00}
+
+At $\mathrm{C2}$ and $\mathrm{C3}$, consider $k_1=k_2=k=5\cdot 10^{-12}~{м}^2$.
+
+\problembox{C2}{Determine the dependence of the movement $S$ of the front on time $t$. Express your answer in terms of $p_1$, $p_2$, $L$, $\eta_1$, $\eta_2$, $k$ and $t$}{0.90}
+
+\problembox{C3}{Determine the total time $\tau$ for oil displacement from the field. Express the answer in terms of $p_1$, $p_2$, $L$, $\eta_1$, $\eta_2$ and $k$ and calculate it.}{0.50}
+
+\problembox{C4}{Under what condition on the parameters of the system will the motion of the boundary be stable, that is, if the shape of the boundary deviates small from flat, this deviation will not increase? Write the stability condition in terms of $\eta_1$, $\eta_2$, $k_1$ and $k_2$. Is the fluid flow discussed in $\mathrm{C2}$ and $\mathrm{C3}$ stable?}{0.80}
+
+\section*{Part D. Oil flow at the bottom of the well (2.1 points)}
+
+The bottom of a well is a cylindrical section of a well with permeable walls through which oil can penetrate. As part of this part of the problem, you are asked to study the distribution of the fluid velocity field inside a given cylinder.
+
+To begin with, let us consider the classical flow of a liquid with viscosity $\eta$ in a pipe of length $L$ with radius $R$, to the ends of which a pressure difference $\Delta p$ is applied. At points $\mathrm{D1}$ and $\mathrm{D2}$ the lateral surface of the cylinder is impenetrable, that is, the liquid does not escape through the walls, and the movement of each of its elements is one-dimensional.
+
+\problembox{D1}{Find the dependence of the fluid flow velocity in such a pipe on the distance to the pipe axis $v(r)$, the maximum value of the velocity $v_{max}$ and the total fluid flow $Q$ through the cross section of the cylinder. Express your answers in terms of $\Delta{p}$, $\eta$, $L$, $R$ and $r$.}{0.80}
+
+\problembox{D2}{Express the distribution of fluid velocity $v(r)$ in terms of the total flow $Q$, $R$ and $r$.}{0.20}
+
+Next, we will move directly to the analysis of fluid flow in the bottom of the well. It is a cylinder with radius $R$ and height $H$, through the walls of which the full flow of oil $Q_0$ flows.
+
+Next, we will move directly to the analysis of fluid flow in the bottom of the well. It is a cylinder with radius $R$ and height $H$, through the walls of which the full flow of oil $Q_0$ flows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+When solving the problem, use the following model and notation: The value $h$ is the distance measured from the bottom edge of the face; The liquid enters the face evenly over the entire area of the side surface of the cylinder, and its flow through the lower edge of the face is zero; The value $u_r$ denotes the radial component of the fluid flow velocity, directed from the cylinder axis; Despite the presence of a radial component of the fluid flow velocity, it is small, therefore, when finding the distribution of the axial velocity component $v$ of the fluid flow, use the results obtained in paragraphs $\mathrm{D1}$ and $\mathrm{D2}$.
+
+When solving the problem, use the following model and notation:
+
+\problembox{D3}{Find the flow $Q$ in the face section at a distance $h$ from its lower edge and the corresponding expression for the vertical velocity $v(r,h)$ depending on the distance to the axis $r$ and the height $h$. Express your answers in terms of $Q_0$, $H$, $R$, $r$ and $h$.}{0.20}
+
+\problembox{D4}{Consider a ring of height $dh$ with inner and outer radii $r$ and $r+dr$, respectively. Using the fact that the fluid is incompressible, show that from the condition that the volume of the fluid inside the selected ring is constant, the following relation follows: $$\cfrac\{\partial v\}\{\partial h\}=-\cfrac\{1\}\{r\}\cfrac\{\partial (u_rr)\}\{\partial r\}.$$You can use this relation even if you could not prove it.}{0.30}
+
+\problembox{D5}{Find the radial velocity of the fluid flow $u_r(r,h)$ depending on the distance to the axis $r$ and the height $h$, as well as the maximum value of its modulus $u_{r(max)}$. Express your answers in terms of $Q_0$, $R$, $H$, $h$ and $r$.}{0.50}
+
+\problembox{D6}{What is the ratio $u_{r(max)}/v_{max}$? Express your answer in terms of $R$ and $H$.}{0.10}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3730}
+
+\end{document}

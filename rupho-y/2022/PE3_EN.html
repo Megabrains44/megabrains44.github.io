@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>AC Gray Box</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>AC Gray Box</h1>
+<p class="camp">Y22 (2022) — English translation</p>
+<p>There is no need to estimate errors in this problem! The PE3 program meets this task. This problem asks you to examine a gray box with four terminals. Inside the box there is a well-known circuit (see figure). The AB outputs are supplied with a sinusoidal voltage with an amplitude of 1 V and an adjustable frequency $\omega$.  It is possible to measure the amplitudes of the total current $I$ through the circuit (between outputs AB) and the voltage $U$ in the section $CD$. In addition, you can set the resistance value of the variable resistor $R_1$. The program displays graphs of $I$ (in amperes)  and $U$ (in volts) in the selected frequency range. The program takes input frequency range $\omega$ ($\text{c}^{-1}$)  and resistance $R_1$ (Ohm). To set the range, you need to specify the minimum frequency, maximum frequency and step that is used to plot the graph.  All frequencies must be positive, the maximum is greater than the minimum! The integer part is separated from it by a fractional dot.</p>
+<p>This problem asks you to examine a gray box with four terminals. Inside the box there is a well-known circuit (see figure). The AB outputs are supplied with a sinusoidal voltage of 1 V amplitude and adjustable frequency $\omega$.  It is possible to measure the amplitudes of the total current $I$ through the circuit (between outputs AB) and the voltage $U$ in the section $CD$. In addition, you can set the resistance value of the variable resistor $R_1$. The program displays graphs of $I$ (in amperes)  and $U$ (in volts) in the selected frequency range.</p>
+<p>The program takes input frequency range $\omega$ ($\text{c}^{-1}$)  and resistance $R_1$ (Ohm). To set the range, you need to specify the minimum frequency, maximum frequency and step that is used to plot the graph.  All frequencies must be positive, the maximum is greater than the minimum! The integer part is separated from it by a fractional dot.</p>
+<div class="figure"><img src="PE3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Define the circuit parameters ($L_1$, $L_2$, $C_1$, $C_2$, $R_2$, $r$).</div><span class="pb-pts">7.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/2849">https://pho.rs/p/2849</a></p>
+</body>
+</html>

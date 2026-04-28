@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Shadow length}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+As part of this task, you will have to investigate how the length of the shadow of a light black ball tied to the bottom of a wide vessel with a thread and illuminated by sunlight depends on the level of transparent liquid $h$ in the vessel. The length of a shadow is defined as the maximum distance between its boundary points. Consider that the Archimedes force acting on the ball in the air is sufficient to keep the thread taut. In the future, use the following notations: Length of the thread $l$ Radius of the ball $R$ Angle of incidence of the rays on the surface of the liquid $\alpha$ Angle of refraction of the rays $\beta$ Length of the shadow $L$ The graph shows the dependence of the length of the shadow on the level of the liquid in the vessel.
+
+In what follows, use the following notation:
+
+The graph shows the dependence of the shadow length on the liquid level in the vessel.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\section*{Part A. Before the Break}
+
+\problembox{A1}{Express $L$ in terms of $R$ and $\alpha$ with $h=0$.}{0.20}
+
+Let $h_1$ be the water level in the vessel at the moment when the break begins in the graph.
+
+\problembox{A2}{Express $L$ in terms of $R$, $\alpha$, $\beta$, $l$ and $h$ with $0 < h < h_1$.}{0.30}
+
+\problembox{A3}{Express $h_1$ in terms of $l$, $R$, $\alpha$ and $\beta$.}{1.00}
+
+\section*{Part B: Fracture Study}
+
+Let $h_2$ be the water level at the moment when the kink turns into the linear section of the dependence.
+
+\problembox{B1}{For $h_1 < h < h_2$, obtain the dependence of the shadow length on $l$, $R$, $\alpha$, $\beta$ and $h$.}{2.50}
+
+\problembox{B2}{Express $h_2$ in terms of $l$, $R$, $\alpha$, $\beta$.}{1.00}
+
+\section*{Part C. Linear Section}
+
+Let $h_3$ be the liquid level at the moment when the length of the shadow stops changing.
+
+\problembox{C1}{Since the section is linear, the dependence $L(h)$ has the form $L=L_0-kh$. Express $L_0$ and $k$ in terms of $l$, $R$, $\alpha$ and $\beta$.}{1.30}
+
+\problembox{C2}{Express the minimum shadow length in terms of $l$, $R$, $\alpha$ and $\beta$.}{0.20}
+
+\problembox{C3}{Express $h_3$ in terms of $l$, $R$, $\alpha$ and $\beta$.}{0.50}
+
+\section*{Part D. Numerical values}
+
+\problembox{D1}{Find the numerical values ​​of $\cos\alpha$ and $\cos\beta$.}{1.50}
+
+\problembox{D2}{Find the radius of the ball $R$.}{0.50}
+
+\problembox{D3}{Find the refractive index of the liquid $n$.}{0.50}
+
+\problembox{D4}{Find the length of the thread $l$.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/70}
+
+\end{document}

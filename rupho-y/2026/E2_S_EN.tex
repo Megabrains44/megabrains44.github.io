@@ -1,0 +1,175 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Waves on the water 2.0 --- Solution}}
+\author{\normalsize Y26 (2026) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A0}{Attention! Damage to equipment may result in your score being canceled for this task!}{-10.00}
+
+To avoid damage, we will not use the equipment.
+
+\end{solcard}
+
+\begin{solcard}{A1}{Write down the formula for the difference in coordinates $\Delta x = x^\text{min}_{n+1} - x^\text{min}_{n} = x^\text{max}_{n+1} - x^\text{max}_{n}$ of nodes/antinodes located on line $OX$, in the approximation $x_n \ll l, d$. Express your answer using $l$, $d$ and $\lambda$.}{1.00}
+
+Consider the classical Young interference scheme:
+
+
+Two waves from point sources with wave vectors $\vec k_1$ and $\vec k_2$ arrive at point $A$ located at coordinate $x_A$ (in the figure $x_A < 0$). Let us find cCoordinate of the surface at point $A$. $$z_A = \dfrac{A}{\left((x_A + \frac{l}{2})^2 + d^2\right)^{\frac{1}{4}}} \cos\left(\omega t - k \left((x_A + \frac{l}{2})^2 + d^2\right)^{\frac{1}{2}}\right) + \dfrac{A}{\left((x_A - \frac{l}{2})^2 + d^2\right)^{\frac{1}{4}}} \cos\left(\omega t - k \left((x_A - \frac{l}{2})^2 + d^2\right)^{\frac{1}{2}}\right)$$ Expanding это expression в for/atближении $x \ll d,~l$ and for/atменим ормулу for суммы косинусов. For удобства введем обоvalue $r_0 = \sqrt{\left(\frac{l}{2}\right)^2 + d^2}$. $$z_A \approx \dfrac{2A}{\sqrt{r_0}}~ \cos \left(\frac{kx_Al}{2r_0}\right)~\cos(\omega t - kr_0)$$ Наблюдаем предсказанные стоячие волны вдоль оси $x$. Or considering this effect from the point of view of the average amplitude, we see interference. Then the distance between neighboring nodes/antinodes:
+
+
+Let us find cCoordinate of the surface at point $A$.
+
+
+$$z_A = \dfrac{A}{\left((x_A + \frac{l}{2})^2 + d^2\right)^{\frac{1}{4}}} \cos\left(\omega t - k \left((x_A + \frac{l}{2})^2 + d^2\right)^{\frac{1}{2}}\right) + \dfrac{A}{\left((x_A - \frac{l}{2})^2 + d^2\right)^{\frac{1}{4}}} \cos\left(\omega t - k \left((x_A - \frac{l}{2})^2 + d^2\right)^{\frac{1}{2}}\right)$$
+
+
+Let us expand this expression in the $x \ll d,~l$ approximation and apply the formula for the sum of cosines. For convenience, we introduce the notation $r_0 = \sqrt{\left(\frac{l}{2}\right)^2 + d^2}$.
+
+
+$$z_A \approx \dfrac{2A}{\sqrt{r_0}}~ \cos \left(\frac{kx_Al}{2r_0}\right)~\cos(\omega t - kr_0)$$
+
+
+We observe the predicted standing waves along the $x$ axis. Or considering this effect from the point of view of the average amplitude, we see interference.
+
+
+Then the distance between neighboring nodes/antinodes:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\Delta x = \dfrac{2\pi r_0}{lk} = \dfrac{\lambda \sqrt{\dfrac{l}{4}^2 + d^2}}{l}$$
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A2}{Measure and record the $d$ value used as accurately as possible.}{0.10}
+
+$$d = (12.5 \pm0.5)~cm$$ Комметарий. Погрешность $0.5~cm$ выбрана, since $d$ varies depending on the amplitude of water vibrations,
+
+
+Comment. The error $0.5~cm$ was chosen because $d$ varies depending on the amplitude of water vibrations,
+
+\end{solcard}
+
+\begin{solcard}{A3}{Write down the voltage $U_0$ on the motor corresponding to the frequency $f_0 = (17.5 \pm 0.5) ~\mathrm{Hz}$.}{0.10}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$U_0=1.5\pm 0.1~\mathrm{V}$$
+\end{solcard}
+
+\begin{solcard}{A4}{Draw how the amplitude of oscillation of laser beam 1 changes on a ruler when the coordinate $x$ changes. Describe, using diagrams, drawings and formulas, a method that allows you to experimentally determine $\Delta x$ with good accuracy. Circle on your answer sheet what you will measure the distance between (nodes/antinodes).}{1.00}
+
+The greatest accuracy is obtained by measuring the distance using the method of rows between nodes. It is necessary to measure the distance between nodes and not antinodes, since: The engine rotates quite unstable, as a result of which the amplitude can change over time at the same point, as a result of which a false maximum can be observed. In reality, in such waves there are higher harmonics $2f$, $3f$, etc. with smaller amplitudes that do not shift the position of the zero (or minimum) of the amplitude, but can significantly shift the maximum. When assembling an experimental setup, it is easy to verify that the minimums are visible much more clearly than the maximums. We will measure the distance between non-neighboring nodes, thus measuring $m \Delta x$. The distance should be measured between not too many nodes (so that their coordinates satisfy the inclusion $x_n \in \left[-\frac{l}{2}; \frac{l}{2}\right]$). The process of measuring minimums is to move the laser holder along the wall of the container so that the laser beam remains perpendicular to the line of movement. The ruler shows a picture of a laser dot oscillating vertically. By looking for positions in which the amplitude of these oscillations is zero (i.e. the surface is motionless), we find the positions of the nodes. We measure the distance between the positions of the angles on the ruler. This distance is equal to the distance between nodes, because the laser beam moved parallel to the $Ox$ axis and the ruler.
+
+
+You should measure the distance between nodes and not antinodes, since:
+
+
+When assembling an experimental setup, it is easy to verify that the minimums are visible much more clearly than the maximums.
+
+
+We will measure the distance between non-neighboring nodes, thus measuring $m \Delta x$. The distance should be measured between not too many nodes (so that their coordinates satisfy the inclusion $x_n \in \left[-\frac{l}{2}; \frac{l}{2}\right]$).
+
+
+The process of measuring minimums is to move the laser holder along the wall of the container so that the laser beam remains perpendicular to the line of movement. The ruler shows a picture of a laser dot oscillating vertically. By looking for positions in which the amplitude of these oscillations is zero (i.e. the surface is motionless), we find the positions of the nodes. We measure the distance between the positions of the angles on the ruler. This distance is equal to the distance between nodes, because the laser beam moved parallel to the $Ox$ axis and the ruler.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig2.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A5}{Measure the dependence of $\Delta x$ on $l$, at a fixed frequency of the motor $f_0$ (at least 5 points).}{1.00}
+
+Let's set and measure the distance $d=125 ~\mathrm{mm}$. The experimental data is shown in the table below.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $l,~cm$ $N$ $x_1,~ cm$ $x_2, ~cm$ $\Delta x,~ cm$ $\varphi$ 19.5 5 26.5 31.5 1.00 0.81 17.2 5 27.0 31.8 0.96 0.88 14.3 5 25.0 31.0 1.20 1.01 11.8 3 27.0 31.2 1.40 1.17 9.1 2 26.2 30.0 1.90 1.40 8.0 1 27.1 29.4 2.30 1.64
+\end{solcard}
+
+\begin{solcard}{A6}{Construct a linearized graph of $\Delta x(l)$.}{0.80}
+
+The dependence of $\Delta x$ on $\varphi=\dfrac{\sqrt{\left(\frac{l}{2}\right)^2+d^2}}{l}$, according to the theory, is linear. Let's recalculate the experimental points and draw a graph.
+
+
+In this graph, the most accurate point is $(0,0)$. The optimal execution of the straight line is precisely the execution shown on the graph because the measurement error $d$ and $l$ begins to significantly distort the measurements at small $l$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig3.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A7}{Determine the wavelength $\lambda(f_0)$ and estimate its error.}{0.50}
+
+The wavelength is the slope of this dependence. Using the graph we get:
+
+
+The error is estimated based on the spread of the slope coefficient values.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\lambda = (12.4\pm0.5)\text{ mm}$.
+\end{solcard}
+
+\begin{solcard}{B1}{Construct a qualitative graph of the dependence of $f$ on $\lambda$, described by formula (1).}{0.30}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig4.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B2}{Measure and record the value of $l$.}{0.10}
+
+Commentary on error assessment. $l$ is the distance between point sources, which in reality are not point sources.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$l = (19.5\pm0.5)~cm$$ Комметарий по оценке погрешности. $l$ is the distance between point sources, which in reality are not point sources.
+\end{solcard}
+
+\begin{solcard}{B3}{Measure the dependence of $\Delta x$ on $f$ in the range $f\in[6.0, 24.0]~\mathrm{Hz}$ (at least 13 points).}{3.00}
+
+For each frequency we will find the wavelength by measuring the distance between several nodes. The measurement results are shown in the table below
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $f$, Hz $x_1$, mm $x_2$, mm $N$ $\Delta x$, mm $\lambda$, mm $\frac{1}{\lambda^2}$, $\frac{10^3}{м^2}$ $f^2\lambda,~m/s^2$ 5.7 248 383 3 44.88 55.2 0.33 1.79 6.3 235 348 3 37.50 46.1 0.47 1.80 7.8 256 336 3 26.50 32.6 0.94 1.99 8.8 260 353 4 23.33 28.7 1.21 2.21 9.1 242 327 4 21.18 26.1 1.47 2.16 9.8 273 347 4 18.54 22.8 1.92 2.19 10.6 310 432 7 17.36 21.4 2.19 2.40 11.4 274 389 7 16.45 20.2 2.44 2.63 12.2 246 347 7 14.39 17.7 3.19 2.63 12.8 255 347 7 13.20 16.2 3.79 2.67 13.7 224 354 10 12.97 16.0 3.93 3.00 15.4 218 338 10 12.03 14.8 4.57 3.51 15.6 250 364 10 11.43 14.1 5.06 3.43 17.4 222 322 10 10.03 12.3 6.56 3.74 18.1 250 346 10 9.60 11.8 7.17 3.88 18.4 247 343 10 9.59 11.8 7.18 4.00 19.4 240 328 10 8.78 10.8 8.57 4.06 19.8 233 319 10 8.56 10.5 9.03 4.14 20.8 234 319 10 8.45 10.4 9.25 4.50 22.0 236 320 10 8.40 10.3 9.43 4.99
+\end{solcard}
+
+\begin{solcard}{B4}{Plot a linearized graph of $\Delta x$ versus $f$.}{1.30}
+
+The dependence of $f^2\lambda$ on $\lambda^{-2}$, according to the theory, is linear. Let's recalculate the experimental points and draw a graph.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig5.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B5}{Determine the coefficients $\alpha$, $\beta$ and estimate their error.}{0.80}
+
+Using MNC,
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\alpha = (1.77\pm0.14)~m/s^2,\quad \beta = (0.29\pm0.03)\cdot10^{-3}~\mathrm{m}^3/с^2.$$
+\end{solcard}
+
+\end{document}

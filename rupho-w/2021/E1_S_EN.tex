@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Rolling and sliding friction --- Solution}}
+\author{\normalsize W21 (2021) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Determine experimentally the rolling friction coefficient $k$ of a cylinder rolling on a wooden block. Describe the measurement method and sketch the installation diagram.}{11.00}
+
+Let's balance the ruler on the edge of the block, thereby determining the position of the center of mass of the ruler: $x_r=248~\mathrm{mm}$.  Using the ruler as a lever, we determine the mass ratio $M/m$ of the cylinder and the ruler $$M/m=3.44±0.22.$$ Закрепим линейку в качестве стержня на основание cylinderа using клейкую массу. Сторону линейки со шкалой направим в сторону cylinderа: так удобнее оlimitять положение линейки относительно cylinderа. На край стола закрепим лист с начерченными линиями под сными углами к вертикали. Запустим колебания системы cylinderа and стержня. The quantity амплитуды фиксируем по совпадению с линиями на листе. Линии на листе не обязательно рисовать как rayand from одного центра: можно подобрать положения так, чтобы линия совпадала с наклонённой линейкой for/at соответствующем положении cylinderа. Energy системы for/at колебаниях, выраженная via/through угловую амплитуду $\varphi$: $$W=mgd(1-cos⁡\varphi )≈mgd \varphi^2/2.$$ For/At повороте cylinderа со стержнем на angle $d\alpha$ torqueы реакции опоры совершает работу: $$\delta A=-M⋅d\alpha=-k(m+M)g⋅d\alpha.$$ Остальные силы работы не совершают.  Note that даже когда system находится в положении equalsвесия, но движение ещё не закончилось, system всё equals характеризуется угловой амплитудой $\varphi$. Energy change системы for/at повороте на малый angle $d \alpha$: $$dW=mgd⋅\varphi d\varphi=-k(m+M)g⋅d\alpha.$$ Energy loss за 1/4 periodа (here sign «$\Delta$» означает убыль, not изменение): $$mgd⋅\varphi⋅\Delta\varphi_{T/4} = k(m+M)g⋅\varphi.$$ За $N$ periodов quantity убыли амплитуды будет в $4N$ times больше. Let us express coefficient of friction качения $$k=\frac{m}{m+M} \frac{d⋅\Delta\varphi_N}{4N}.$$
+
+
+$x_{up}$, mm $d$, mm $\varphi_0$, ° $\varphi$, ° $N$ $k$, mm $\Delta k$, mm 0 186.5 30 10 18 0.23 0.019 20 166.5 30 10 16 0.231 0.02 40 146.5 30 10 14 0.233 0.022 40 146.5 40 10 21 0.233 0.016 40 146.5 40 20 13 0.25 0.025
+
+
+As a result, the rolling friction coefficient is $$k=(0,24 \pm 0,02)~\mathrm{mm}.$$
+
+\end{solcard}
+
+\begin{solcard}{A2}{Determine experimentally the sliding friction coefficient $\mu$ of a cardboard cylinder on a tree. Give the measurement method and installation diagram.}{4.00}
+
+Using adhesive paste, attach the ruler as a rod to the base of the cylinder. Let's place this system on a block. Let's start tilting the block (Fig. 1). At a certain angle of inclination $\beta$ of the block to the horizon, the system will begin to slide. Friction coefficient $$ \mu = \mathrm{tg}~ ⁡\beta=\mathrm{tg}~⁡ (17° \pm 1°)= 0,31 \pm 0,02 .$$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{In the footsteps of van der Waals}}
+\author{\normalsize W22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+As industry developed, the need arose to work with gases. They needed to be extracted, transported, stored, and any of these stages required calculations of the state of the gases. Already in the middle of the 19th century, the formulated model of an ideal gas ceased to satisfy industrialists who worked with gases under high pressures and low temperatures. Accordingly, attempts have been made to propose refined models describing the states of gases. The interactions between gas molecules are quite complex, so a simple model is unlikely to be possible. But industrialists, to a large extent, did not require a perfectly verified physical model; they were quite satisfied with the empirical equations of state that were proposed by scientists. In this problem, you will try to determine the parameters of dependencies in a number of models using the least squares method. Then, having plotted the initial data and the modeled dependence on one graph, visually assess the satisfactoriness of the model.
+
+\section*{About the least squares method (LSM)}
+
+The practical basis of least squares is the minimization of the sum of squared deviations of experimental points from some modeling (fitting) curve. Let a set of some points $(x_i, y_i)$ be given, the number of pairs of points is equal to $n$. Let's set some modeling function $f=f(x, a_1, a_2, \dots)$, where $a_1, a_2, \dots$ are the function parameters that can be varied. The variation of the parameters should result in the following sum being the minimum: $$ S = \textbackslash\{\}sum_n\textasciitilde\{\}\textbackslash\{\}Delta y_i^2 = \textbackslash\{\}sum_n\textasciitilde\{\}\textbackslash\{\}left(y_i-f(x_i, a_1, a_2, \textbackslash\{\}dots)\textbackslash\{\}right)^2 \textbackslash\{\}rightarrow \textbackslash\{\}min_\{a_1, a_2, \textbackslash\{\}dots\} $$ Задача минимизации этой суmmы сводится к решению системы уравнений: \textbackslash\{\}begin\{equation\} \textbackslash\{\}begin\{cases\} \textbackslash\{\}cfrac\{\textbackslash\{\}partial S\}\{\textbackslash\{\}partial a_1\}=0\textbackslash\{\}\textbackslash\{\} \textbackslash\{\}cfrac\{\textbackslash\{\}partial S\}\{\textbackslash\{\}partial a_2\}=0\textbackslash\{\}\textbackslash\{\} \textbackslash\{\}dots \textbackslash\{\}end\{cases\} \textbackslash\{\}end\{equation\} где значок $\partial$ denotes differentiation with respect to the variable specified in the denominator when the other variables are fixed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let's look at how this works using the example of a well-known linear relationship. The fitting function is $f(x)=kx+b$. We minimize the following amount: $S= \sum_n~(y_i-kx_i-b)^2$. According to what is written above, we obtain the system \textbackslash\{\}end\{cases\} \textbackslash\{\}end\{equation\}
+
+Both equations can be divided by 2 and nothing will change. Thus, we get: \textbackslash\{\}begin\{equation\} \textbackslash\{\}begin\{cases\} \textbackslash\{\}sum_n\textasciitilde\{\}(-x_iy_i)+\textbackslash\{\}sum_n\textasciitilde\{\}kx_i^2+\textbackslash\{\}sum_n\textasciitilde\{\}bx_i=0\textbackslash\{\}\textbackslash\{\} \textbackslash\{\}sum_n\textasciitilde\{\}(-y_i)+\textbackslash\{\}sum_n\textasciitilde\{\}kx_i+\textbackslash\{\}sum_n\textasciitilde\{\}b=0 \textbackslash\{\}end\{cases\} \textbackslash\{\}end\{equation\} and further, taking out from under the sum sign the quantities $k$ and $b$, \textbackslash\{\}begin\{equation\} \textbackslash\{\}begin\{cases\} \textbackslash\{\}sum_n\textasciitilde\{\}x_iy_i=k\textbackslash\{\}sum_n\textasciitilde\{\}x_i^2+b\textbackslash\{\}sum_n\textasciitilde\{\}x_i\textbackslash\{\}\textbackslash\{\} \textbackslash\{\}sum_n\textasciitilde\{\}y_i=k\textbackslash\{\}sum_n\textasciitilde\{\}x_i+b\textbackslash\{\}sum_n\textasciitilde\{\}1 \textbackslash\{\}end\{cases\} \textbackslash\{\}end\{equation\} it is clear that we have obtained a system of linear equations for the parameters $k$ and $b$, having solved it, we will find those parameters $k$ and $b$ that minimize the original sum. The coefficients in the system of equations are simply sums over the entire data set of the following quantities $(x_iy_i), (x_i)^2, x_i, y_i$. The last coefficient $\sum_n~1$ before $b$ is simply the number of data points, i.e.  $\sum_n~1=n$. Having solved the system of equations for $k$ and $b$, we obtain: $$ k=\textbackslash\{\}cfrac\{-n\textbackslash\{\}sum_n\textasciitilde\{\}x_iy_i+\textbackslash\{\}sum_n\textasciitilde\{\}x_i\textbackslash\{\}sum_n\textasciitilde\{\}y_i\}\{-n\textbackslash\{\}sum_n\textasciitilde\{\}x_i^2+\textbackslash\{\}left(\textbackslash\{\}sum_n\textasciitilde\{\}x_i\textbackslash\{\}right)^2\} $$ $$ b=\textbackslash\{\}cfrac\{-\textbackslash\{\}sum_n\textasciitilde\{\}x_i\textbackslash\{\}sum_n\textasciitilde\{\}x_iy_i+\textbackslash\{\}sum_n\textasciitilde\{\}x_i^2\textbackslash\{\}sum_n\textasciitilde\{\}y_i\}\{-\textbackslash\{\}left(\textbackslash\{\}sum_n\textasciitilde\{\}x_i\textbackslash\{\}right)^2+n\textbackslash\{\}sum_n\textasciitilde\{\}x_i^2\} $$ Если числитель и знаменатель каждого выражения поделить на $n^2$, то получатся более изящные формулы: $$ k=\textbackslash\{\}cfrac\{-\textbackslash\{\}overline\{xy\}+\textbackslash\{\}overline x\textbackslash\{\},\textbackslash\{\}overline y\}\{-\textbackslash\{\}overline\{x^2\}+\textbackslash\{\}overline x^2\} $$ $$ b=\textbackslash\{\}cfrac\{-\textbackslash\{\}overline x\textbackslash\{\},\textbackslash\{\}overline\{xy\}+\textbackslash\{\}overline\{x^2\}\textbackslash\{\},\textbackslash\{\}overline y\}\{-\textbackslash\{\}overline x^2+\textbackslash\{\}overline\{x^2\}\} $$ where the bar means averaging the value over the entire data set. Using these formulas, your calculators and computers calculate the parameters of the modeling relationship. In some cases where you can linearize the relationship, what's described above also applies, of course. In cases where the dependence cannot be linearized, it is necessary to optimize the coefficients from scratch (and, generally speaking, this is not always possible, it depends on the function).
+
+Attention! In the scoring, very narrow gates will be set for the range of determined values. The expressions by which you will calculate the optimal values ​​of quantities should be written in the form of sums or average values ​​of quantities. It is assumed that you will do all calculations numerically, counting amounts similar to those described above. Probably, graphical methods for solving some points will not provide the necessary accuracy. There is no need to estimate errors.
+
+\section*{Exercise}
+
+For one mole of some nonideal gas, the dependence $T(V)$ on the isobar $p=2~МПа$ was removed. The data table is provided in the answer sheet. The relationship is slightly non-linear, and your task will be to find a suitable model to describe it.
+
+\section*{Part A. Pressure with constant addition}
+
+Let us model the state of the gas using the equation $(p+a_0)V=RT$. It is necessary to select a value of $a_0$ that would minimize the sum of squared deviations of the experimental points from the model curve.
+
+\problembox{A1}{Write down an expression for finding the optimal value $a_0$ through the sums (or averages) of values ​​$T, V$ and their combinations.}{0.40}
+
+\problembox{A2}{Calculate the sums (or averages) you need for the entire data set.}{0.30}
+
+\problembox{A3}{Calculate the value of $a_0$. Specify it to three significant figures.}{0.40}
+
+\problembox{A4}{For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.}{0.40}
+
+\section*{Part B. Let's try to take into account the attraction of molecules}
+
+Let us model the state of the gas using the equation $(p+\cfrac{a_1}{V})V=RT$. It is necessary to select a value of $a_1$ that would minimize the sum of squared deviations of the experimental points from the model curve.
+
+\problembox{B1}{Write down an expression for finding the optimal value $a_1$ through the sums (or averages) of values ​​$T, V$ and their combinations.}{0.40}
+
+\problembox{B2}{Calculate the sums (or averages) you need for the entire data set.}{0.30}
+
+\problembox{B3}{Calculate the value of $a_1$. Specify it to three significant figures.}{0.40}
+
+\problembox{B4}{For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.}{0.40}
+
+\section*{Part C. Improving the pressure correction}
+
+Let us model the state of the gas using the equation $(p+\cfrac{a_2}{V^2})V=RT$. It is necessary to select a value of $a_2$ that would minimize the sum of squared deviations of the experimental points from the model curve.
+
+\problembox{C1}{Write down an expression for finding the optimal value $a_2$ through the sums (or averages) of values ​​$T, V$ and their combinations.}{0.40}
+
+\problembox{C2}{Calculate the sums (or averages) you need for the entire data set.}{0.30}
+
+\problembox{C3}{Calculate the value of $a_2$. Specify it to three significant figures.}{0.40}
+
+\problembox{C4}{For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.}{0.40}
+
+\section*{Part D. Advanced model}
+
+Let us model the state of the gas using the equation $(p+\cfrac{c}{V^2}+\cfrac{d}{V^3})V=RT$. It is necessary to select such values ​​of $c$ and $d$ that would minimize the sum of squared deviations of the experimental points from the model curve.
+
+\problembox{D1}{Write down expressions for finding the optimal values ​​of $c$ and $d$ through the sums (or averages) of values ​​$T, V$ and their combinations.}{1.50}
+
+\problembox{D2}{Calculate the sums (or averages) you need for the entire data set.}{2.00}
+
+\problembox{D3}{Calculate the values ​​of $c$ and $d$. Please provide them to three significant figures.}{1.00}
+
+\problembox{D4}{For each volume value, calculate the temperature value that is obtained as a result of fitting. Plot the initial experimental data and fitting points on one graph. Mark data from different series with different icons. Sign the series.}{1.00}
+
+\section*{Part E. Van der Waals equation of state (0 points)}
+
+Let us model the state of the gas using the equation $(p+\cfrac{a}{V^2})(V-b)=RT$. It is necessary to select such values ​​of $a$ and $b$ that would minimize the sum of squared deviations of the experimental points from the model curve.
+
+\problembox{E1}{Calculate the values ​​of $a$ and $b$. Please provide them to three significant figures. Consider the scale of work carried out by Van der Waals.}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/273}
+
+\end{document}

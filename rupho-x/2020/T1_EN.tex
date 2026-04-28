@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Physics of billiard balls}}
+\author{\normalsize X20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Billiards is the collective name for several board games with different rules in which the player uses a wooden rod - a cue - to move balls along the surface of the table. An experienced billiards player knows how important the physical characteristics of the balls and cues are to proper play and how the laws of physics can be used to your advantage during the game. In this problem we will explore some topics related to the physics of billiard balls. At all points, we consider the billiard ball to be a homogeneous body of radius $R$ with a moment of inertia $I=\frac{2}{5} mR^2$ about any axis passing through the center.
+
+\section*{Part A. Sweet spot (1.5 points)}
+
+After hitting a ball with a cue, the ball may generally lose some of its initial speed while motion is established due to friction as it slips. However, good billiard players know the point (“sweet spot”), when hit, the ball will not lose speed while moving. We will assume that the impact on the ball is concentrated at a certain point at a height $h$ from the table; the cue is oriented at an angle $\alpha$ to the table surface ($-\pi/2\le\alpha\le\pi/2$, cm. Fig.). Consider that the force of the blow is such that for any $\alpha$ the ball does not come off the table. Friction on the surface can be neglected at this point.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Determine at what ratio between $h$ and $\alpha$ after impact the ball will move without slipping.}{1.00}
+
+\problembox{A2}{Draw a (qualitative) graph of $\alpha(h/R)$ showing the points corresponding to $\alpha=0$ and $h=R$.}{0.50}
+
+\section*{Part B. Collision of billiard balls on a table (4.5 points)}
+
+This part of the problem considers the collision of two billiard balls. The friction between the balls during a collision can be neglected, and the impact is absolutely elastic. To begin with, let’s also neglect friction on the table. Let a billiard ball (“cue ball”) collide with the same one at rest with speed $\vec{v}$; the relative impact parameter (the value marked in the figure) is $\frac{b}{R}<2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Find the speeds of the balls after expansion (modules and directions).}{1.00}
+
+\problembox{B2}{What angle does the speed of the balls form after flying apart in such a model?}{0.50}
+
+The simple prediction made in the previous paragraph, often used as a rule of thumb by pool players, changes significantly when friction with the table surface is taken into account. Its influence on the movement of the cue ball is especially noticeable.
+
+\problembox{B3}{Let's consider an auxiliary problem: a ball on a horizontal table at the initial moment has a translational velocity $\vec{v}=\begin{pmatrix} v_x \\ v_y \end{pmatrix}$ and an angular velocity $\vec\omega=\begin{pmatrix} \omega_x \\ \omega_y \end{pmatrix}$ (vectors $\vec v$ and $\vec\omega$ lie in the plane of the table). There is friction with the surface, which stops as soon as slippage disappears. What will be the steady speed of the ball (modulus and direction)?}{1.50}
+
+\problembox{B4}{Let's go back to the collision of two balls; let the cue ball move without slipping before the impact.  At what angles to the initial velocity are the steady-state velocities of the balls now directed?}{0.50}
+
+\problembox{B5}{Determine the angle $\varphi$ between the steady-state velocities of the balls as a function of the impact parameter $\frac{b}{R}$.}{0.50}
+
+\problembox{B6}{Draw a qualitative graph of the dependence $\varphi(\frac{b}{R})$.}{0.50}
+
+\section*{Part C. Analysis of experimental data (2 points)}
+
+Let us turn to experimental data to test the models we have considered. Using high-speed photography, the time dependence of the speed of two colliding balls was obtained; on the graph, $V_c$ is the speed of the “cue ball”, $V_o$ is the speed of the initially stationary ball (object ball).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{Determine the coefficient of sliding friction. Estimate the error of the obtained value.}{0.50}
+
+\problembox{C2}{Estimate the relative energy losses when the balls collide.}{0.50}
+
+\problembox{C3}{Determine the relative impact parameter $\frac{b}{R}$ for the collision using data for both balls. Estimate the error of the obtained value.}{1.00}
+
+\section*{Part D. Young's modulus of the billiard ball material (2 points)}
+
+It is known that the force $F$ acting between two spherical bodies pressed against each other depends on the deformation (the distance by which the centers of the balls approach each other) $h$ according to the Hertz formula
+$$F=k\,E\,R^{1/2}\,h^{3/2},$$
+where $k$ is a numerical coefficient, $k\approx 1$, $E$ is Young's modulus of the ball material, and $R$ is the ball radius.
+
+\problembox{D1}{Consider the central impact ($b=0$) of two identical balls of mass $M$. The first ball hits the second with speed $V$. Considering the speed of the incident ball to be much lower than the speed of sound in the ball material, find the collision time $\tau$ and the maximum deformation $h_m$. Hint: the value of the integral
+$$\int\limits_0^1 \frac{dx}{\sqrt{1-x^{5/2}}} \approx 1.5$$
+is known.}{1.50}
+
+\problembox{D2}{Estimate the Young's modulus of the ball material based on the experimental values: $\tau=310~\mu\text{s}$, $V=7.0~\text{m/s}$, $M=280~\text{g}$, $R=6.8~\text{cm}$.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/14}
+
+\end{document}

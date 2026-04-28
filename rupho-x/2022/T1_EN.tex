@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Two pendulums}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. One pendulum (2.9 points)}
+
+In this part we will consider a mathematical pendulum - a mass of mass $m$ suspended on a thread of length $l$. Gravity acceleration $g$. We will denote the angular amplitude of oscillations of the pendulum $\alpha$ and will always consider it small $\alpha \ll 1$.
+
+\problembox{A1}{Find the average tension force of the pendulum thread $\langle T\rangle$ over the period. Express the answer in terms of the angular amplitude of oscillations $\alpha$ and the parameters of the pendulum.}{0.50}
+
+\problembox{A2}{Now let the length of the pendulum thread be slowly changed, so that the relative change in length during one period of oscillation is small. How much work will be done on the load if the length of the string changes by $\Delta l \ll l$? Express the answer in terms of the angular amplitude of oscillations $\alpha$ (assuming it to be constant) and the parameters of the pendulum.}{0.20}
+
+\problembox{A3}{At the initial moment of time, the length is $l_0$, and the vibration energy is $W_0$. Find the vibration energy $W_1$ when the length of the thread becomes $l_1$. In this case, the potential energy is always counted from the lower position of the load, that is, with a change in the length of the thread, the zero of the potential energy shifts!}{0.80}
+
+\problembox{A4}{Under the conditions of the previous paragraph, find the amplitude $\alpha_1$ when the length of the pendulum becomes $l_1$. At the initial moment of time, the length of the thread is $l_0$, the amplitude of oscillations is $\alpha_0$.}{0.40}
+
+\problembox{A5}{Let now the pendulum have a charge $q >0$ and be placed in an external electric field $E$, directed vertically ($E>0$ when the field is directed downwards). This electric field changes slowly over time. Let at the initial moment of time the field be equal to zero, and the amplitude of oscillations of the load $\alpha_0$. Consider this system similarly to points A1 - A4. Find the amplitude of oscillations of the load $\alpha_2$ when the electric field becomes equal to $E_1$. Assume that the field changes slowly enough so that the change in the oscillation amplitude over one period is small. The length of the pendulum is constant and equal to $l$.}{1.00}
+
+\section*{Part B. Two pendulums (4.2 points)}
+
+Let the thread be thrown over two smooth nails of small diameter, and weights of masses $m_1$ and $m_2$ are attached to the ends of the thread, respectively. In this case, the left load 1 always moves strictly vertically, and the right one at the initial moment is deflected by a small angle $\alpha \ll 1$ from the vertical. The thread is long enough so that during movement the left weight does not reach the nail. The initial length of the right section of the thread is $l$. We study the further motion of the system with such initial conditions under different assumptions regarding the masses of the loads.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Let $m_1 = m + \delta m$, $m_2 = m$, $\delta m \ll m$. The initial speed of the load $m_1$ is zero, the initial amplitude of oscillations of the second weight is $\alpha_0$, the length of the right section of the thread is $l_0$. Find the average acceleration $a_0$ of the left mass at the initial moment of time. Averaging is performed over the period of oscillation of the right weight. Consider that $a_0 >0$ if the acceleration is directed upward.}{0.90}
+
+\problembox{B2}{At what value of $\delta m_0$ will the left weight, on average, not move?}{0.20}
+
+\problembox{B3}{Let $\delta m = \delta m_0$. Find the maximum displacement $z_{max}$ of the weight $m_1$ relative to the initial position.}{1.00}
+
+\problembox{B4}{If the value $\delta m$ is not very different from $\delta m_0$, then the load $m_1$ will oscillate, the cyclic frequency of oscillations of which is much less than the oscillation frequency of the right load. Find this frequency $\Omega$, as well as the amplitude $B$ of vibrations. At what values of $\Delta m = \delta m - \delta m_0$ can such oscillations be considered harmonic?}{1.30}
+
+\problembox{B5}{Now let the value $\delta m  \ll m$ be arbitrary. Find the maximum and minimum lengths of the right section of the thread during further movement.}{0.80}
+
+\section*{Part C. Electric circuit (0.9 points)}
+
+\problembox{C1}{Let us consider an oscillatory circuit consisting of an inductor $L$ and a flat capacitor, between the plates of which there is a vacuum.  The distance between the capacitor plates is slowly changed.  Let the initial capacitance of the capacitor be $C_0$, the initial amplitude of the current in the circuit $I_0$. Consider the system similarly to points A1-A4. Find the amplitude of the current $I_1$ at the moment when the capacitance of the capacitor becomes equal to $C_1$.}{0.90}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/315}
+
+\end{document}

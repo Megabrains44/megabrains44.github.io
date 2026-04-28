@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Phased array antenna}}
+\author{\normalsize Y18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Brown Antenna System}
+
+In a number of works by the 1909 Nobel laureate Karl Ferdinand Braun and his students, methods for constructing antenna systems for directed radiation of electromagnetic waves and their reception are theoretically and experimentally studied. One way is illustrated in the figure. The transmitter is loaded on three vertical antennas installed at the vertices of an equilateral triangle, and in antennas 2 and 3, oscillations begin simultaneously, but with a delay of a quarter period from the beginning of oscillations of antenna 1. Then, according to Brown’s calculations, the maximum radiation will occur in the direction from antenna 1 to the middle of the distance between antennas 2 and 3. Using an antenna switch, you can change the direction of the maximum radiation by 60 and 120 degrees. An experimental test at a military training field near Strasbourg showed a fairly close agreement of the results with the theory.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Determine the ratio of the minimum distances between antennas to the radio wavelength.}{0.50}
+
+\problembox{A2}{What phase shifts of oscillations between antennas 1, 2 and 3 should be in this system so that maximum radiation occurs in the direction from the 1st to the 2nd antenna?}{0.50}
+
+Radar antennas are an indispensable element of the equipment of space communications systems, air or missile defense systems, airports or seaports. It is clear that in all cases it is necessary to create a narrowly directed “beam”, which must either follow a given object or scan a given solid angle. Changing the direction of the beam can be done mechanically by rotating the antenna. However, antennas can be very bulky, and the required beam rotation speed can be quite significant. In addition, sometimes it is necessary for this speed to change quite quickly (for example, if you need the beam to “slowly” pass the most important directions where the appearance of a “target” is most likely, and “quickly skip” those directions where scanning is still necessary, but the appearance of a “target” is unlikely). In all these cases, mechanical methods of turning the beam become ineffective, and it is necessary to switch to electronic beam control. This problem is solved using \textit{phased array antennas} (PAA) - systems in which coherent emitters of electromagnetic waves are arranged in an orderly manner, and their radiation is controlled by an electronic circuit. Let's look at some of its elements.
+
+\section*{Part B. Phase Shifter}
+
+Phase shifter. This is a device for controlled wave phase shift. There are several types of phase shifters, but we will consider only one of them. This is a ferroelectric rod, the dielectric constant of which depends on the applied “transverse” voltage: $\varepsilon=\overline{\varepsilon}\left[1+\alpha U(t)\right]$. The control voltage varies within $-20~\text{V}\leq{U(t)}\leq{+20~\text{V}}$, and the coefficient $\alpha=10^{-3}~\text{V}^{-1}$. An electromagnetic signal from the generator comes to the “input” of the rod. The change in electric field strength in this signal is described by the expression $E_{in} (t)=E_0\cos\omega t$. The signal propagates along the rod and hits the emitter (indicated by a circle in the figure). Refractive index of the rod substance at zero control signal $\overline{n}=8$. The length of the rod is $L=20\pi c/\omega$, where $c$ is the speed of light in vacuum.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Neglecting losses, write down an expression for the change in electric field strength $E_{out}(t)$ in the signal at the “output” of the rod.}{0.50}
+
+\problembox{B2}{What signal phase shifts can a phase shifter create?}{0.50}
+
+\section*{Part C. Phased Array Antenna}
+
+Linear chain. Let us now consider $N=100$ emitters to which the same signal is supplied through independent phase shifters. The control voltage is supplied to the phase shifters in such a way that the output signal of the $(n+1)$-th phase shifter is ahead in phase of the output signal of the $n$-th by $\Delta{\varphi}=\varphi_0\sin\Omega t$, $(\Omega\ll{\omega})$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{According to what law should the control voltage of the $n$-th phase shifter change to provide such a signal with $\varphi_0 = 3\pi/4$?}{1.00}
+
+Let the distance between the emitters be equal to half the radiation wavelength: $d=\pi c/\omega=\lambda/2$. Study the radiation of the chain in the plane formed by the chain of emitters and the normal to this chain.
+
+\problembox{C2}{How will the angle $\theta$ between the normal and the direction of the ray change over time?}{2.50}
+
+It should be assumed that the directional pattern of each of the emitters is such that in all directions in the plane under consideration, within the limits of $-80^{\circ}\leq{\theta}\leq{+80^{\circ}}$ values, it emits waves with the same amplitude.
+
+\problembox{C3}{Find the angular width of the beam. The boundary of the beam is considered to be the direction in which the radiation intensity is 4 times less than the maximum intensity in this beam.}{1.00}
+
+\problembox{C4}{Find the maximum angular velocity of the beam.}{0.50}
+
+\problembox{C5}{How many times does the maximum energy flow in the beam exceed the energy flow from one emitter?}{0.50}
+
+In fact, a beam with the intensity found at point $\mathrm C3$ does not always exist during the entire scanning period, and it is not always the only one. Therefore, we introduce two additional characteristics of the antenna: scanning density $\beta = t_\text{beam}/T_\text{scan}$ – the ratio of the duration of time intervals within the scanning period, during which such a beam exists, to the value of the scanning period; scanning multiplicity $K$ – the number of such rays. For example, for the antennas $\beta=1$ and $K=1$ studied in points C2-C5. From a technical point of view, these are the “optimal” values of these characteristics - the parameters of real antennas are usually selected so that their values are exactly these.
+
+\problembox{C6}{Find $\beta$ and $K$ for an antenna with $d=\lambda/4$, which uses the same laws for changing control voltages. Specify the scanning area (the interval of angles $\theta$ within which the scanning rays move).}{1.00}
+
+\problembox{C7}{Similarly, find $\beta$ and $K$ for the antenna with $d=\lambda$. Also specify the scanning area.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3046}
+
+\end{document}

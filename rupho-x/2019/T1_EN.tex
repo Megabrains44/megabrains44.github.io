@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Gravity racing}}
+\author{\normalsize X19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In the general case, the motion of three gravitationally interacting bodies is chaotic and described in a complex way. However, in some cases the movement may be regular. The simplest example of such periodic motion is the circular motion of three bodies located at the vertices of an equilateral triangle. In this problem, however, we will consider a more complex periodic motion. Relatively recently, in 1993, it was discovered that three identical point masses can periodically move along a common trajectory shaped like a figure eight (see figure). The figure in the figure represents the correct trajectory of movement, constructed according to computer calculations. If necessary, in a larger version of the drawing, you can measure the distances between points of the figure using a ruler.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let's define the terminology. Let us number the bodies with numbers $1$, $2$ and $3$ in accordance with the order in which they pass the leftmost point of the trajectory $P$. Let $O_2$ and $O_3$ be the positions of bodies $2$ and $3$, respectively, at the moment when body $1$ is at the midpoint $O$. At point $O$ the body $1$ moves down to the right. Similarly, $P_2$ and $P_3$ are the positions of bodies $2$ and $3$, respectively, at the moment when body $1$ is at point $P$. Let also $T$ be the total period of motion of each of those along this trajectory.
+
+\problembox{A1}{Find the time of movement of one of the bodies from point $O_2$ to point $O$; from point $O_3$ to point $P_2$.}{2.00}
+
+Find the time of motion of one of the bodies
+
+\problembox{A2}{Let $\vec{v}_1$, $\vec{v}_2$ and $\vec{v}_3$ be the velocities of these three bodies at some point in time. Write down an expression relating these speeds to each other.}{1.00}
+
+\problembox{A3}{Prove that the total angular momentum of this system is zero.}{2.00}
+
+\problembox{A4}{Plot the positions of points $O_2$ and $O_3$ on the answer sheet. In the solution sheet, prove the validity of the construction.}{2.00}
+
+\problembox{A5}{Plot the positions of points $P_2$ and $P_3$ on the answer sheet. Suggest two independent construction methods. In the solution sheet, prove the validity of the constructions.}{2.00}
+
+\problembox{A6}{Find the ratio of the speeds of the bodies at points $O$ and $P$.}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/318}
+
+\end{document}

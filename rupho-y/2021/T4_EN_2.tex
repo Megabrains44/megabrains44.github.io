@@ -1,0 +1,170 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Adiabatic invariant and magnetic mirrors}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Let us consider a classical mechanical system with some parameter $\lambda$, which can slowly change over time.  If the motion of the system is periodic with a period $T$, the change in the parameter can be considered slow provided $$T\frac{d\lambda}{dt} \ll \lambda.$$ In general, by $T$ one can understand the characteristic time of the processes occurring in the system.
+
+An adiabatic invariant is a physical quantity that does not change under a slow variation of the parameters of the system. It can be proven that the quantity $$I = \frac{1}{2\pi}\oint p\,dq$$ is an adiabatic invariant. Here $p$ is one of the components of the momentum of the system, and $q$ is the corresponding coordinate. If one depicts the periodic motion of the particle in $p$, $q$ coordinates, one obtains a closed curve; then the integral in the definition of $I$ is equal to the area bounded by this curve.
+
+\section*{Part A. Movement between two walls (0.8 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+A bead of mass $m$ can slide along a smooth horizontal spoke between two vertical walls. All impacts of the bead with the walls are absolutely elastic. One wall is stationary, and the second wall moves towards the first with a speed $u$, satisfying the relation $u\ll{v}$, where $v$ is the speed of the bead. The initial distance between the walls is $L_0$, the initial speed of the bead is $v_0$.
+
+\problembox{A1}{Find the speed of the bead immediately after colliding with the moving wall.}{0.20}
+
+\problembox{A2}{Find the change in the distance between the walls during the time between two successive collisions of the bead with the moving wall. It is necessary to obtain the exact formula.}{0.20}
+
+\problembox{A3}{Find an expression for the adiabatic invariant $I$ for the considered system and determine the speed of the bead at the moment when the distance between the walls has decreased to the value $L$.}{0.40}
+
+\section*{Part B. Motion between a wall and a heavy particle (1.2 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+This part of the task is actually a continuation of the previous one. The difference is that now a light particle of mass $m$, moving with a speed $v_0$, is attacked by a particle of mass $M\gg{m}$ with a speed $u\ll{v_0}$. On the other side there is still a stationary wall. The initial distance between particles was $L_0$. It is known that during the movement the maximum speed of a light particle was $kv_0$. Particle masses are not given!
+
+\problembox{B1}{Express the mass ratio $M/m$ in terms of $u, v_0$ and $k$.}{0.40}
+
+\problembox{B2}{How long will it take for the heavy particle to stop? Express your answer in terms of $L_0, v_0, u$ and $k$.}{0.80}
+
+\section*{Part C. Ion model (1.5 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+In this part, a simplified model of the ${H_2}^+$ ion is considered. Two particles of mass $M$ and a particle of mass $m\ll{M}$ located between them can move along a smooth horizontal spoke. A light particle is attracted to heavy ones with constant forces $F$. At the moment when the distance between the heavy particles was $L_0$, the speed of the light particle in the reference frame of the center of mass of the two heavy particles was $v_0$. You are asked to investigate the equilibrium position of this system, as well as find the frequency of its small oscillations near it. Let us denote the distance between heavy particles as $x$.
+
+\problembox{C1}{Derive an expression for the kinetic energy of the system. Express your answer in terms of $M, m, x, \dot{x}, v_0$ and $L_0$.}{0.40}
+
+\problembox{C2}{Derive an expression for the potential energy of the system. Express your answer in terms of $F$ and $x$.}{0.20}
+
+\problembox{C3}{At what value of $x$ is the system in equilibrium? Express your answer in terms of $M, m, v_0, L_0$ and $F$.}{0.50}
+
+\problembox{C4}{Find the cyclic frequency of small oscillations of the system near the equilibrium position. Express your answer in terms of $M, m, v_0, L_0$ and $F$.}{0.40}
+
+\section*{Part D. Motion inside an ellipse (2.2 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+A small washer can move freely on a smooth horizontal surface limited by vertical walls. The walls limit part of the surface in the form of an ellipse with major and minor semi-axes $a$ and $b$, respectively. In a position with coordinates $(r;0)$, the puck was given a speed whose projections are equal to $v_x=v_0\sin\alpha; v_y=v_0\cos\alpha$, with $r\ll{a,b}$, $\alpha\ll{1}$. You will be required to describe, to a first approximation, the movement of the puck using these small parameters.
+
+\problembox{D1}{It can be shown that in the considered approximation the squared component $v_x$ of the puck velocity depends on the coordinate $x$ as $v^2_x=A+Bx+Cx^2$. Express $A, B$ and $C$ in terms of $v_0$, $\alpha, a, b$ and $r$.}{1.00}
+
+\problembox{D2}{Find the maximum value of the coordinate $x$ of the puck during movement. Express your answer in terms of $v_0$, $\alpha, a, b$ and $r$.}{0.60}
+
+\problembox{D3}{How long after launch will the puck first arrive at the point with coordinate $x=0$? What condition on the relation $a/b$ must be satisfied for the obtained result to be applicable?}{0.60}
+
+\section*{Part E. Mathematical pendulum on an inclined plane (1.3 points)}
+
+A mathematical pendulum is attached to a smooth inclined plane, making small oscillations near a stable equilibrium position. In this part of the problem, you are asked to investigate how the amplitude of oscillations of a pendulum changes with a change in the angle of inclination of the plane, as well as the length of the pendulum. At the initial moment, the amplitude of oscillations (the angle of deviation of the pendulum from the equilibrium position is measured) is equal to $\varphi_0 \ll 1$, the length of the pendulum is equal to $L_0$, and the angle of inclination of the plane is $\alpha_0$.
+
+\problembox{E1}{Find the adiabatic invariant $I$ for a harmonic oscillator with mass $m$ oscillating with cyclic frequency $\omega_0$ and amplitude $A$.}{0.50}
+
+\problembox{E2}{Let the length of the pendulum be adiabatically slowly increased to $L$ at a constant angle of inclination. Find the new amplitude of the pendulum $\varphi$. Express your answer in terms of $\varphi_0, \alpha_0, L_0$ and $L$.}{0.40}
+
+\problembox{E3}{Let the pendulum's length remain constant and the angle of inclination be adiabatically slowly increased to the value $\alpha$. Find the new vibration amplitude $\varphi$. Express your answer in terms of $\varphi_0, \alpha_0, \alpha$ and $L_0$.}{0.40}
+
+\section*{Part F. Larmor precession in a slowly varying magnetic field (2.5 points)}
+
+Let us consider a ring of mass $M$, uniformly charged along the perimeter with a charge $q$, placed in a uniform magnetic field with induction $\vec{B_0}$. The ring was spun around its axis to an angular velocity $\vec{\omega}$ and released. The angle between the vectors of magnetic induction and the angular velocity of rotation of the ring at the initial moment is equal to ${\alpha_0}$. Note: The magnetic moment of a system of charges can be calculated using the formula $$\vec{m}=\int\frac{[\vec{r}\times\vec{v}]}{2}dq $$
+
+\problembox{F1}{Express the vector of the magnetic moment of the ring $\vec{m}$ in terms of $q$,$M$ and the vector of its angular momentum relative to the center $\vec{L}$.}{0.20}
+
+\problembox{F2}{Show that the magnitude of angular momentum $L$ remains constant.}{0.20}
+
+\problembox{F3}{Show that the ring axis experiences precession and find the angular velocity vector $\vec{\Omega}$ of this precession. Express your answer in terms of $q$, $M$ and $\vec{B_0}$. Consider $\Omega\ll{\omega}$.}{0.70}
+
+\problembox{F4}{The magnetic field begins to decrease adiabatically slowly at a speed $\dot{B}$. Find the moment of forces (modulus and direction) acting on the ring from the vortex electric field. In this and the next paragraph, consider $\alpha_0=\pi/2$.}{0.70}
+
+\problembox{F5}{The magnetic field value decreased to $\vec{B_1}$. Find the angle between the axis of rotation and the direction of the magnetic field. The change in angle can be considered small.}{0.70}
+
+\section*{Part G. Motion in a non-uniform magnetic field (3.0 points)}
+
+One method of keeping particles in a magnetic trap in the longitudinal (along the field) direction is to use magnetic plugs, or magnetic mirrors, areas in which the magnetic field strength increases strongly (but smoothly). Such areas can reflect charged particles incident on them along the field lines. When a charged particle moves in a “mirror” magnetic trap, the radius of the particle’s trajectory decreases as it moves into the region of a strong field. In the last two parts we will study movement in such fields. For magnetic mirrors, we define the specularity coefficient $r_m$ $$r_m = \frac{B_{\max}}{B_{\min}};$$ this is, in essence, the ratio of the maximum value of the magnetic field at the boundaries of the trap to the minimum value at its center. We will introduce the quantities $v_{\parallel}$ and $v_{\perp}$ ($v_{\parallel} \ll v_{\perp}$), denoting the particle velocity components directed along and perpendicular to the direction of the magnetic field, respectively.
+
+\problembox{G1}{Let us first consider plane motion in a uniform magnetic field with induction $B_0$. Let its time derivative be equal to $\dot{B}$ and the change occurs adiabatically slowly. The initial velocity of the particle is $v_0$, its mass is $M$, and its charge is $q$. Express the tangential acceleration of particle $\dot{{v_\perp}}$ in terms of $M, q, v_0, B_0$ and $\dot{B}$.}{0.20}
+
+\problembox{G2}{Let the magnetic field slowly change its value to the value $B$. Express the speed of particle $v_\perp$ in terms of $v_0, B_0$ and $B$.}{0.50}
+
+Let's move on to a non-uniform magnetic field. Because the leading center of the electron trajectory moves along the field line. We will assume that the magnetic field changes only in this direction.
+
+\problembox{G3}{Let the angle of inclination of the helix be equal to $\alpha$ and small. Show that the time-averaged force acting in the direction of the magnetic field on the charge is equivalent to the interaction of a magnetic dipole with a non-uniform field. Find the magnitude of the force $F_{||}$. Express your answer in terms of $m, v, q, B_z$ and $\frac{dB_z}{dz}$, where the $z$ axis is aligned with the magnetic field. Note: We have already mentioned that any charged particles have a magnetic moment. Therefore, you just need to consider a circuit with direct current moving in a non-uniform magnetic field.}{1.00}
+
+\problembox{G4}{Using the results of the previous paragraphs, determine the dependence of the angle $\alpha$ on the magnitude of the magnetic field $B$ Express the answer in terms of $\alpha_0, B_0$ and $B$.}{0.70}
+
+\problembox{G5}{Express the maximum possible value of the angle $\alpha$ in terms of $r_m$.}{0.60}
+
+\section*{Part H. Installation for the implementation of a magnetic mirror (2.5 points)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+We have studied motion in inhomogeneous magnetic fields and are ready to move on to studying the problem of magnetic mirrors. The circuit used to implement them is shown in the figure. It consists of two coaxial turns of the same radius $R$, the centers of which are located at a distance $2H\gg{R}$ from each other. Currents of equal strength $I$ flow through the turns in one direction. the turns are placed in a region of a large uniform magnetic field with induction $B_0$, directed along their axes. The goal of this problem is to study the field lines of such a system and, as a consequence, to describe the trajectory of the leading center of the electron orbit.
+
+\problembox{H1}{Obtain the exact formula for the dependence of the magnetic field induction on the coordinate $x$. The origin of coordinates is located at the center between the turns, the $x$ axis is directed along the magnetic field. Find, taking into account the smallness of some parameters, also the maximum and minimum values of the total magnetic field induction on the axis of the turns.}{0.40}
+
+\problembox{H2}{Find the specularity coefficient $r_m$ for this system. Please note here and in what follows that $H\gg{R}$.}{0.60}
+
+\problembox{H3}{Qualitatively draw a line of force passing through the plane of the ring at a small distance $R_0\ll{R}$ from its axis in coordinates $r'(x)$, where $r'$ is the distance to the axis of symmetry of the system. Find the maximum value of $r'$ and express the answer as: $r' \approx  A + B (r-1)$.}{1.00}
+
+\problembox{H4}{Find the maximum value of the angle $\alpha$ during the motion if reflection from the magnetic mirrors occurs in the plane of the rings. Assume that the particle's turning points are fairly close to the centers of the rings. Consider the smallness of $r_m$.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/242}
+
+\end{document}

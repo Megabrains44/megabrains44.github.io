@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Dumbbell rotation in an electrostatic field}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem is devoted to the study of the dynamics of a system of conducting bodies placed in a uniform electrostatic field of intensity $\vec{E}_0$. The system under consideration is an electrically neutral dumbbell consisting of two metal balls of radius $r$ with a distance $l\gg r$ between their centers. The balls are connected by a very thin cylindrical rod. The mass of each of the balls is $m$, and the mass of the rod can be neglected. Let us introduce the vector $\vec{l}$, denoting the radius vector of the second ball relative to the first (see figure).
+
+This problem is devoted to the study of the dynamics of a system of conducting bodies placed in a uniform electrostatic field of intensity $\vec{E}_0$. The system under consideration is an electrically neutral dumbbell consisting of two metal balls of radius $r$ with a distance $l\gg r$ between their centers. The balls are connected by a very thin cylindrical rod. The mass of each of the balls is $m$, and the mass of the rod can be neglected. Let us introduce the vector $\vec{l}$, denoting the radius vector of the second ball relative to the first (see figure).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A: Metal rod (2.0 points)}
+
+In this part of the problem, the balls are connected by a metal rod. We will call the induced dipole moments of the balls and rod the dipole moments of the electrically neutral ball and rod, respectively, acquired by them when placed in an electrostatic field far from other bodies. In all points of this problem, neglect the induced dipole moments of the balls and the rod, and also assume that the charge distributions over the surfaces of the balls are uniform.
+
+\problembox{A1}{Determine the dipole moment of the dumbbell $\vec{p}$. Express your answer in terms of $\vec{E}_0$, $r$, $\varepsilon_0$ and $\vec{l}$.}{0.50}
+
+\problembox{A2}{Determine the moment of force $\vec{M}$ acting on the dumbbell. Express your answer in terms of $\vec{E_0}$, $r$, $\varepsilon_0$, $\vec{l}$.}{0.20}
+
+\problembox{A3}{Find the equilibrium positions of the system. As an answer, indicate the values ​​of the angles $\alpha_0$ between the rod and the direction of the electrostatic field strength $\vec{E}_0$.}{0.20}
+
+\problembox{A4}{Which of the equilibrium positions you found in point $\mathrm{A3}$ are stable and which are unstable? Justify your answer. Also find periods of small oscillations near stable equilibrium positions. Express your answers in terms of $l$, $R$, $m$, $E_0$ and $\varepsilon_0$.}{0.50}
+
+\problembox{A5}{In a stable equilibrium position, the rod was instantly given an angular velocity $\vec{\omega}_0$ perpendicular to the electric field. At what minimum initial angular speed $\omega_{min}$ can the dumbbell make a full revolution? Express your answer in terms of $l$, $r$, $m$, $E_0$ and $\varepsilon_0$.}{0.60}
+
+\section*{Part B. Rotation with constant angular velocity (2.6 points)}
+
+Let the system rotate around an axis perpendicular to the rod with a constant angular velocity $\vec{\omega}$. The direction of the electrostatic field strength $\vec{E}_0$ forms an angle $\theta$ with the plane in which the rod moves (see figure). The figure shows the position of the dumbbell at the moment when the rod lies in the plane containing the axis of rotation and the direction of the electrostatic field strength $\vec{E}_0$. Take the moment of time $t=0$ to be the position corresponding to the figure. In this part of the problem, the rod is not metal, but has a resistance $R$ between its ends.
+
+Let the system rotate around an axis perpendicular to the rod with a constant angular velocity $\vec{\omega}$. The direction of the electrostatic field strength $\vec{E}_0$ forms an angle $\theta$ with the plane in which the rod moves (see figure). The figure shows the position of the dumbbell at the moment when the rod lies in the plane containing the axis of rotation and the direction of the electrostatic field strength $\vec{E}_0$. Take the moment of time $t=0$ to be the position corresponding to the figure. In this part of the problem, the rod is not metal, but has a resistance $R$ between its ends.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Write down the equation that determines the current strength $I$ in the rod. Show that the current in our system is equal to the current in some $RLC$ circuit connected to the alternating harmonic voltage generator $\mathcal{E}(t)$. Using the resulting equation, determine the parameters of the equivalent circuit: time dependence of the EMF of the equivalent generator $\mathcal{E}_{eff}(t)$, inductance $L_{eff}$, capacitance $C_{eff}$ and resistance $R_{eff}$. Express your answers in terms of $E_0$, $l$, $r$, $R$, $\varepsilon_0$, $\omega$, $\theta$ and $t$.}{0.90}
+
+Further, in all points of the problem, consider that only forced oscillations occur in the system.
+
+\problembox{B2}{Obtain the time dependence $t$ of the projection $p_l(t)$ of the dipole moment of the dumbbell onto the axis directed along the vector $\vec{l}$. Express your answer in terms of $E_0$, $l$, $r$, $R$, $\varepsilon_0$, $\omega$, $\theta$ and $t$.}{0.50}
+
+In all subsequent points of the problem, if the rod has a resistance $R$, it is so small that the voltage across the resistor is much less than the effective amplitude $\mathcal{E}_0$ of the voltage from point B1.
+
+\problembox{B3}{Simplify your answer for $p_l(t)$, obtained in step B2, taking into account the smallness of the resistance $R$. The simplified answer should contain only quantities whose order of smallness in $R$ does not exceed the first. Express your answer in terms of $E_0$, $l$, $r$, $R$, $\varepsilon_0$, $\omega$, $\theta$ and $t$.}{0.20}
+
+Let us introduce a rectangular Cartesian coordinate system $xyz$ as shown in the figure. Here, the $z$ axis is directed along the direction of the electrostatic field strength $\vec{E}_0$, and the $x$ axis lies in the plane of the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B4}{Determine the long-time average dipole moment components $\langle p_x\rangle$, $\langle p_y\rangle$ and $\langle p_z\rangle$ of the dumbbell. Express your answers in terms of $E_0$, $l$, $r$, $R$, $\varepsilon_0$, $\omega$ and $\theta$.}{1.00}
+
+\section*{Part C: Flat Dumbbell Movement (0.8 points)}
+
+In this part of the problem, the resistance of the rod is $R$. In a position of stable equilibrium, the rod is given a large angular velocity $\vec{\omega}_0$, perpendicular to the direction of the electrostatic field strength $\vec{E}_0$. Consider $\omega_0\gg\omega_{min}$, where $\omega_{min}$ was defined by you in step A5.
+
+\problembox{C1}{Find the time dependence $t$ of the angular velocity of the rod $\omega(t)$, assuming that $\omega(t)\gg\omega_{min}$ at any time and $t\gg 2\pi/\omega_0$. Express your answer in terms of $\omega_0$, $E_0$, $l$, $r$, $R$, $\varepsilon_0$ and $t$.}{0.50}
+
+\problembox{C2}{Estimate the time $\tau$ after which the rod stops making full rotations. Express your answer in terms of $\omega_0$, $E_0$, $l$, $r$, $R$ and $\varepsilon_0$.}{0.30}
+
+\section*{Part D. Precession of the rod (4.6 points)}
+
+This part of the problem is devoted to studying the dynamics of the spatial movement of a dumbbell in an electrostatic field. It turns out that for a very fast rotating dumbbell there is a regime of motion in which on average it experiences regular precession around the $z$ axis. Regular precession means a mode of motion of the dumbbell in which the plane of rotation of the rod rotates around the axis $z$ with a constant average angular velocity $\Omega_z$, and the angle $\theta$ between the plane of motion of the rod and the direction of the electrostatic field strength $\vec{E}_0$ remains constant. In the mode corresponding to regular precession, the angular velocity vector of the dumbbell $\vec{\omega}$ is represented in the following form: $$\textbackslash\{\}vec\{\textbackslash\{\}omega\}=\textbackslash\{\}vec\{\textbackslash\{\}omega\}'+\textbackslash\{\}vec\{\textbackslash\{\}Omega\}\{.\} $$Здесь $\vec{\Omega}=\Omega_z\vec{e_z}$ – вектор средней угловой скорости прецессии плоскости движения стержня, а $\vec{\omega}'$ – вектор угловой скорости гантели в системе отсчёта, вращающейся со средней угловой скоростью прецессии плоскости движения стержня.
+
+Данная часть задачи посвящена изучению динамики пространственного движения гантели в электростатическом поле. Оказывается, что для очень быстро вращающейся гантели существует режим движения, при котором она в среднем испытывает регулярную прецессию вокруг оси $z$. Под регулярной прецессией подразумевается такой режим движения гантели, при котором плоскость вращения стержня вращается вокруг оси $z$ с постоянной средней угловой скоростью $\Omega_z$, а угол $\theta⟦M 13⟧\vec{E}_0$ остаётся постоянным. В режиме, соответствующей регулярно прецессии, вектор угловой скорости гантели $\vec{\omega}$ представляется в следующем виде: $$\textbackslash\{\}vec\{\textbackslash\{\}omega\}=\textbackslash\{\}vec\{\textbackslash\{\}omega\}'+\textbackslash\{\}vec\{\textbackslash\{\}Omega\}\{.\} $$Здесь $\vec{\Omega}=\Omega_z\vec{e_z}$ – вектор средней угловой скорости прецессии плоскости движения стержня, а $\vec{\omega}'$ – vector of the angular velocity of the dumbbell in a reference system rotating with the average angular velocity of precession of the plane of motion of the rod.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+In this part of the problem: Consider that at any moment the dumbbell rotates with an angular velocity $\omega'$, many times greater than $\omega_{min}$; Unless otherwise stated, assume that the angular velocity $\omega'$ is many times greater than the average angular velocity of precession $\Omega_z$. All components of the angular velocity vector of the rod (including $d\theta/dt=\dot\theta$) can be considered constant during the time during which the rod makes one revolution in its plane of rotation; Write all equations of motion of the rod in the form of averages over the time of one revolution of the rod in its plane of rotation.
+
+In this part of the task:
+
+Let the rod at points D1 and D2 be metal.
+
+\problembox{D1}{Obtain an exact expression for the angular momentum $\vec{L}$ of a dumbbell in regular precession mode. Express your answer in terms of $m$, $l$, $\vec{\omega}'$ and $\vec{\Omega}$. Simplify your answer to include $\Omega_z\ll\omega'$.}{0.50}
+
+\problembox{D2}{Show that it is possible for a dumbbell to move in such a way that it experiences, on average, regular precession around the $z$ axis. Give all the relevant equations of motion from which you base your proof. Determine for this mode of motion the average angular velocity of precession of the plane of motion of the rod $\Omega_z$. Express your answer in terms of $E_0$, $\varepsilon_0$, $m$, $l$, $r$, $R$, $\omega'$ and $\theta$. Also express the answer in terms of $\omega_{min}$, $\omega'$ and $\theta$ and verify that $\Omega_z\ll\omega'$.}{1.50}
+
+Let at the initial moment of time the electrostatic field strength $\vec{E}_0$ make an angle $\theta_0$ with the rod (see figure). The dumbbells instantly impart an angular velocity $\vec{\omega}_0$, the modulus of which is much greater than $\omega_{min}$, directed perpendicular to the rod as shown in the figure. Let us take into account the resistance of the rod $R$. Due to the smallness of $R$, we can still assume that the voltage across the resistor is much less than the effective amplitude $\mathcal{E}$ of the voltage from point $\mathrm{B1}$. Over a time of the order of $1/\omega_0$, the dumbbell goes into a mode of motion corresponding to a slowly changing precession.  During the transition, the loss of kinetic energy of the dumbbell can be neglected. With slowly changing precession, the values ​​$\Omega_z$ and $\theta$ change very slowly with time due to the small resistance $R$. Since the angle $\theta$ begins to change, for a given mode of dumbbell movement, the angular velocity vector is written in the following form: $$\textbackslash\{\}vec\{\textbackslash\{\}omega\}=\textbackslash\{\}vec\{\textbackslash\{\}omega\}'+\textbackslash\{\}Omega_z\textbackslash\{\}vec\{e\}_z+\textbackslash\{\}dot\{\textbackslash\{\}theta\}\textbackslash\{\}vec\{e\}_y\{.\} $$Здесь $\vec{\omega}'$ всё также направлен перпендикулярно плоскости движения стержня. Во всех последующих пунктах считайте, что $\omega'\gg\dot\theta{,}\Omega$.
+
+Пусть в начальный момент времени напряжённость электростатического поля $\vec{E}_ 0$ составляет угол $\theta_0$ со стержнем (cм. рисунок). Гантели мгновенно придают угловую скорость $\vec{\omega}_0$, модуль который много больше $\omega_{min}$, направленную перпендикулярно стержню так, как показано на рисунке. Учтем сопротивление стержня $R$. В силу малости $R$ по-прежнему можно считать, что напряжение на резисторе много меньше эффективной амплитуды $\mat hcal{E}$ напряжения из пункта $\mathrm{B1}$. За время порядка $1/\omega_0$ гантель переходит в режим движения, соответствующий медленно изменяющейся прецессии.  За время перехода потерями кинетической энергии гантели можно пренебречь. При медленно изменяющейся прецессии величины $\Omega_z$ и $\theta$ изменяются со временем очень медленно в силу малости сопротивления $R⟦M2 8⟧\theta$ начинает изменяться, то для данного режима движения гантели вектор угловой скорости записывается в следующей форме: $$\textbackslash\{\}vec\{\textbackslash\{\}omega\}=\textbackslash\{\}vec\{\textbackslash\{\}omega\}'+\textbackslash\{\}Omega_z\textbackslash\{\}vec\{e\}_z+\textbackslash\{\}dot\{\textbackslash\{\}theta\}\textbackslash\{\}vec\{e\}_y\{.\} $$Здесь $\vec{\omega}'$ всё также направлен перпендикулярно плоскости движения стержня. Во всех последующих пунктах считайте, что $\omega'\gg\dot\theta{,}\Omega$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{D3}{What is the steady-state angular velocity of rotation of the rod $\omega_\infty$ after a large period of time? Express your answer in terms of $\omega_0$ and $\theta_0$.}{0.50}
+
+\problembox{D4}{Obtain the dependence of the average angular precession $\Omega_z$ on the angle $\theta$. Express your answer in terms of $\omega_{min}$, $\omega_0$, $\theta_0$ and $\theta$.}{0.50}
+
+\problembox{D5}{Obtain the time dependence $t$ of the value $\theta$ at $t\gg 2\pi/\omega_0$. Express your answer in terms of $\theta_0$, $E_0$, $m$, $r$, $R$, $\varepsilon_0$ and $t$.}{1.00}
+
+\problembox{D6}{Determine the maximum value of $\dot\theta$. Express your answer in terms of $\theta_0$, $E_0$, $m$, $r$, $R$ and $\varepsilon_0$. Make sure $\dot\theta_{max}\ll\omega_0$.}{0.40}
+
+\problembox{D7}{Find the dependence of the precession rate on time $\Omega(t)$. Express your answer in terms of $E_0$, $\omega_0$, $m$, $r$, $R$, $\varepsilon_0$, $\theta_0$ and $t$.}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3817}
+
+\end{document}

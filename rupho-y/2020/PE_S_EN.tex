@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Semiconductor wafers --- Solution}}
+\author{\normalsize Y20 (2020) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Obtain the values ​​of $I_{AB}$, $U_{CD}$, $I_{DA}$ and $U_{BC}$ for 15 different connections to the plate.}{??}
+\end{solcard}
+
+\begin{solcard}{A2}{Compute $R_{\text{AB,CD}}$, $R_{\text{BC,DA}}$ and $y$ for each of the connections. Round all values ​​to the nearest 4 significant figures.}{0.90}
+\end{solcard}
+
+\begin{solcard}{A3}{The formula $\cfrac{y-1}{y+1}=\cfrac{1}{x} \text{arch}\left(\cfrac{\text{e}^x}{2}\right)$ can be converted to the form $\text{e}^x=\text{e}^{\alpha x} + \text{e}^{\beta x}$. Find $\alpha$ and $\beta$. Express your answer using $y$.}{0.10}
+\end{solcard}
+
+\begin{solcard}{A4}{The equation $\text{e}^x=\text{e}^{\alpha x} + \text{e}^{\beta x}$ is transcendental and cannot be solved analytically. Solve it numerically, i.e. for each $y$, find $\text{e}^x$ (to 4 significant figures).}{3.00}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig1.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{A5}{Having plotted a graph in suitable coordinates, determine the numerical value $\rho$ of the semiconductor. Round your answer to 3 significant figures. Take the thickness of the material equal to $d=1~\text{mm}$.}{2.00}
+
+$\rho=(2.3\cdot 10^3\pm5)~\text{\Omega}$
+
+\end{solcard}
+
+\begin{solcard}{B1}{Remove dependency $n(T)$.}{??}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig2.jpg}
+\end{figure}
+\end{solcard}
+
+\begin{solcard}{B2}{Plot the dependence $\ln n~(\frac{1}{T})$. Approximate three sections of this graph with straight lines and determine the values ​​of $T_i$ and $T_s$. Estimate the error of the obtained values.}{1.60}
+\end{solcard}
+
+\begin{solcard}{B3}{Find $E_d$.}{1.20}
+\end{solcard}
+
+\begin{solcard}{B4}{Find $\Delta{E_g}$.}{1.20}
+\end{solcard}
+
+\end{document}

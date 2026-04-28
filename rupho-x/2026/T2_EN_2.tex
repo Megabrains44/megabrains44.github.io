@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Hertz-Quincke effect}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The spontaneous rotation of small spherical and cylindrical objects immersed in liquid dielectrics and exposed to strong electrostatic fields was first recorded by Georg Quincke in 1896. In his experiments, Quincke used glass balls and cylinders suspended on silk threads. Currently, this effect has been reproduced for liquid droplets and dielectric balls floating in a conducting liquid.
+
+In the entire problem we will use a cylindrical coordinate system $r, \theta, z$, the axis $z$ of which is directed along the axis of symmetry of the cylinder, $r$ is the distance from the point to the cylinder axis, and $\theta$ is the angle in the plane perpendicular to the axis. The vector $\vec{r}$ is perpendicular to the axis $z$ and directed from the axis to the point in question.   Cartesian coordinates $x$ and $y$ are also used, in this case the $x$ axis corresponds to $\theta = 0$, and the $y$ axis corresponds to $\theta = \pi/2$. The electrical constant $\varepsilon_0$ can be used throughout the problem.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Electrostatics (4.0 points)}
+
+\problembox{A1}{An infinite uniformly charged thin thread is in a vacuum. The thread is located along the $z$ axis, the linear charge density is $\kappa$.  Determine the dependence of the electrostatic potential of this thread $\varphi(r)$ in the entire space up to a constant. Express your answer in terms of $\varepsilon_0$, $\kappa$, $r$.}{0.40}
+
+\problembox{A2}{Now let's add a second thread with the opposite linear charge density $-\kappa$, parallel to the original one, at a very small distance from it. The dipole moment per unit length of this structure is constant and equal to $\vec p$. Determine the dependence of the electrostatic potential of this dipole line $\varphi(\vec r)$ throughout space. The potential at a large distance from the dipole line tends to zero. Express your answer in terms of $\varepsilon_0$, $\vec p$, $\vec r$.}{0.40}
+
+\problembox{A3}{Differentiating the expression obtained in the previous paragraph, find the electric field $\vec{E}(\vec{r})$ in the entire space. Express your answer in terms of $\varepsilon_0$, $\vec p$, $\vec{r}$.}{0.60}
+
+Consider a long homogeneous non-conducting cylinder of a substance with dielectric constant $\varepsilon_1$, placed in an infinite medium with dielectric constant $\varepsilon_2$. The axis of symmetry of the cylinder coincides with the axis $z$, the radius of the cylinder $R$, length $L \gg R$. The external uniform electric field $\vec{E}_0$ is directed perpendicular to the axis of symmetry of the cylinder. Neglect all edge effects associated with the finite length of the cylinder.
+
+\problembox{A4}{Show that the field distribution in space outside the cylinder is equal to the superposition of a uniform external field $\vec E_0$ and a dipole line field with linear dipole moment density $\vec p$. Use the expression for the dipole line field in vacuum. Define $\vec p$. Express your answer in terms of $\varepsilon_1$, $\varepsilon_2$, $\vec{E}_0$, $\varepsilon_0$, $R$. The value $\vec{p}$ you found includes both the dipole moment of the cylinder and the dipole moment of the polarization charges of the medium.}{0.60}
+
+\problembox{A5}{Determine the dependence of the electric field $\vec{E}(\vec{r})$ throughout space. Express your answer in terms of $\varepsilon_1$, $\varepsilon_2$, $\vec{E}_0$, $\vec{r}$.}{0.30}
+
+\problembox{A6}{Let the conductivity and permittivity of the cylinder be $\lambda_1$, $\varepsilon_1$, and that of the environment $\lambda_2$, $\varepsilon_2$. Electric field at a large distance from the cylinder $\vec{E}_0$. The current distribution is completely established. It is known that the field outside the cylinder is still equal to the superposition of the external field and the dipole field, and the field inside the cylinder is uniform. However, now a distribution of free (not associated with polarization) charges with a density $\sigma_f(\theta)$ appears on the surface of the cylinder. Determine the volume current density $\vec{j_1}$ inside the cylinder and the surface charge density $\sigma_f (\theta)$ as a function of the angle $\theta$. The direction $\vec{E}_0$ corresponds to $\theta = 0$. Note: in a conducting medium, the volumetric current density is related to the electric field by the relation $\vec{j} =\lambda \vec{E}$, where $\lambda$ is the conductivity of the medium. Note: boundary conditions for the normal components of the electric field can be obtained by considering the normal components of the current density at the boundary of the cylinder and the medium. There are no surface currents flowing through the cylinder.}{1.00}
+
+\problembox{A7}{Now let the cylinder be ideally conductive, and the conductivity of the surrounding medium $\lambda_2$, its dielectric constant $\varepsilon_2$. There is no external electric field. The initial charge of the cylinder is $q_0$. Find the dependence of the charge of the cylinder $q(t)$ on time. Obtain an expression for the time $\tau_2$ during which the charge of the cylinder is reduced by a factor of 2. Express your answers using $\lambda_2$, $\varepsilon_0$, $\varepsilon_2$.}{0.70}
+
+\section*{Part B: Rotating Cylinder (5.0 points)}
+
+Let the cylinder from the previous part rotate with angular velocity $\omega$ around its axis. We assume that $\omega> 0$ if the angular velocity is directed along the axis $z$. The positive direction of angle $\theta$ coincides with the direction of rotation of the cylinder. The conductivity of the cylinder is $\lambda_1$, and the conductivity of the medium is $ \lambda_2$, the dielectric constant of the cylinder is $\varepsilon_1$, and the medium is $\varepsilon_2$. In a medium at a large distance from the cylinder, a uniform external electric field $\vec{E}_0$ is created, the direction of which corresponds to $\theta = 0$. In all subsequent paragraphs of the problem, accept the following assumptions: In steady state, the charge is stationary distributed in space relative to the laboratory frame of reference. The currents considered in the problem are quite small, so completely neglect the magnetic field.
+
+In all subsequent paragraphs of the problem, make the following assumptions:
+
+Let us consider the boundary of a cylinder and a liquid. The quantities related to the inside of the cylinder will be denoted by index 1, and the quantities outside the cylinder by index 2. The normal ($n$) and tangential ($\tau$) components of the electric field will be denoted by $E_{1n}$, $E_{2n}$, $E_{1\tau}$, $E_{2\tau}$, respectively.  The positive direction of the normal is outward. Due to the external current, free charges with a surface density $\sigma_f(\theta)$ accumulate on the surface of the cylinder. The answers to all points in this part may include the conductivities and dielectric constants of these media.
+
+\problembox{B1}{Write down the relationship between the tangential components of the electric fields at the interface between the medium and the cylinder.}{0.10}
+
+\problembox{B2}{When the cylinder moves, free charges on the surface of the cylinder rotate with it. Therefore, a surface current density $i (\theta)$ appears on the surface of the cylinder. Express it in terms of $\omega$, $R$ and the density of free charges.  The value $i(\theta)$ is considered positive if the current is directed in the direction of increasing $\theta$.}{0.50}
+
+\problembox{B3}{Let us consider a small section of the cylinder surface corresponding to the interval of angles $(\theta_0, \theta_0 + d\theta)$ of area $dS = RL d\theta$. Charge flows into it through the boundaries $\theta = \theta_0$ due to $i(\theta_0)$, and current flows through the boundary at $\theta = \theta_0 + d\theta$ due to $i(\theta_0 + d\theta)$. Also, a normal current with density $j_{1n}$ flows into it and a normal current with density $j_{2n}$ flows out. In steady state, the total charge of the region under consideration does not change. Write down the following relationship between the currents $i(\theta_0)$, $i(\theta_0 + d\theta)$, $j_{1n}$, $j_{2n}$ from the law of conservation of charge. The answer may also include $R$ and $d\theta$.}{0.70}
+
+\problembox{B4}{In the relation from the previous paragraph, substitute expressions for normal currents through the normal components of the electric field and surface currents through the charge density. Get the relationship between $E_{1n}$, $E_{2n}$, $\omega$, $\lambda_1$, $\lambda_2$, $\partial \sigma_f/\partial \theta$.}{0.50}
+
+\problembox{B5}{Express the free charge density $\sigma_f$ in terms of the electric field components near the boundary. Using the results of point B4, obtain from here the relationship only between the electric field components $E_{1n}$, $E_{2n}$ and their derivatives with respect to $\theta$. The answer may also include $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$, $\omega$.}{0.40}
+
+Let's move to the rotating reference frame of the cylinder. In this frame, the external field rotates clockwise:
+\[
+\vec E = E_0 \left(\vec e_x \cos \omega t - \vec e_y \sin \omega t\right).
+\]
+
+\problembox{B6}{Show that the effective complex dielectric constants can be introduced in the form
+\[
+\varepsilon_1^*=\varepsilon_1+\frac{i\lambda_1}{\varepsilon_0\omega}, \qquad
+\varepsilon_2^*=\varepsilon_2+\frac{i\lambda_2}{\varepsilon_0\omega}.
+\]
+Further, these formulas may be used without proof. Note: since the cylinder rotates with angular velocity $\omega$, we have $d\theta/dt=+\omega$, so the derivative with respect to $\theta$ can be related to the time derivative in the rotating frame.}{0.50}
+
+Thus, the form of the boundary conditions will formally coincide with the boundary conditions for a stationary cylinder. Therefore, the expressions for $\vec{E}_1^*$ and $\vec{p}^*$ can be obtained from the expression for the dipole moment of the cylinder from A4, formally replacing the dielectric constants with complex values.
+
+\problembox{B7}{Determine the complex amplitude of the linear density of the dipole moment of the cylinder $\vec p ^*$. Express your answer in terms of $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$, $\omega$, $\varepsilon_0$, $R$, $\vec E_0^*$.}{0.50}
+
+Since the complex amplitude $\vec{p}^*$ differs from $\vec{E}_0^*$ only by the common complex factor, the dipole moment of the cylinder is rotated at a constant angle relative to the electric field. This means that in the laboratory frame of reference the dipole moment of the cylinder is constant. It is convenient to calculate it at time $t = 0$, when the rotation angle is 0.
+
+\problembox{B8}{Determine the projections on the $x$ and $y$ axes of the vector $\vec p$ in the laboratory frame.}{0.80}
+
+The dipole moment found above matches the actual dipole moment of the cylinder and the polarization charges of the fluid around it, so it can be used to calculate the moment of forces.
+
+\problembox{B9}{Determine the projection of the moment of force $M_{E}$ acting on the cylinder (with the polarization charges of the medium surrounding it) from the external electric field onto the axis $z$. Express your answer in terms of $E_0$, $\varepsilon_0$, $\omega$, $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$, $R$, $L$.}{0.60}
+
+\problembox{B10}{At a certain relationship between the system parameters, the torque obtained above causes a further increase in the angular velocity of the cylinder. Indicate the relationship between the parameters at which this is possible.}{0.40}
+
+\section*{Part C. Cylinder in liquid (3.0 points)}
+
+The maximum angular velocity to which the cylinder can accelerate is limited by viscous friction forces. Let the viscosity of the fluid surrounding the cylinder be $\eta$. Let us determine the projection of the moment of viscous friction forces onto the axis $z$, $M_\eta$. The cylinder can still be considered very long, $L \gg R$. Angular speed of rotation of the cylinder $\omega$. Consider the distribution of fluid velocities at each moment of time to be steady.
+
+\problembox{C1}{The moment of forces can be written in the form $M_\eta = -\alpha \eta^a \omega^b R^c L^d$, where $\alpha$ is a dimensionless constant. Using the dimensional method and physical considerations, determine the exponents $a$, $b$, $c$, $d$.}{0.70}
+
+In steady motion, the fluid velocity $v(r)$ at each point is directed tangentially to a circle centered on the cylinder axis through that point. Its magnitude depends only on the distance to the axis. For convenience, introduce the local angular velocity $\omega(r)$ via $v(r)=r\omega(r)$. Then the shear stress (tangential force per unit area) is
+\[
+\tau_{\theta z}=\eta\,r\,\frac{\partial \omega(r)}{\partial r}.
+\]
+
+\problembox{C2}{Find the moment of viscous friction forces $M$ acting on the outer side of a cylindrical layer of liquid of radius $r$, where $r> R$. Express your answer in terms of $\eta$, $r$, $L$, $\frac{\partial \omega}{\partial r}$.}{0.30}
+
+\problembox{C3}{Determine the coefficient $\alpha$ in the formula for the moment of force $M_{\eta}$.}{1.20}
+
+\problembox{C4}{Let us give the cylinder a small angular velocity $\delta \omega$. If the external electric field is greater than a certain critical value $E_0 > E_{cr}$, the angular velocity will increase. Express the critical field $E_{cr}$ in terms of $\varepsilon_1$, $\varepsilon_2$, $\varepsilon_0$, $\eta$, $\lambda_1$, $\lambda_2$, $\alpha$.}{0.30}
+
+\problembox{C5}{Let $E_0 > E_{cr}$. Determine the steady-state angular velocity of the cylinder $\omega_0$. Express your answer in terms of $E_0$, $E_{cr}$, $\varepsilon_0$, $\varepsilon_1$, $\lambda_1$, $\varepsilon_2$, $\lambda_2$.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4810}
+
+\end{document}

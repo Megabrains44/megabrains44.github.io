@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Two satellites</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Two satellites</h1>
+<p class="camp">X22 (2022) — English translation</p>
+<p>In 1973, a method was proposed for launching satellites into hyperbolic orbit using a gravitational maneuver, which you are invited to analyze. Within the framework of this problem, the motion of two satellites 1 and 2, launched from opposite poles of the Earth with the same magnitude and direction velocities $v$ tangential to it, is studied.  Satellite 2 is launched into orbit a short time $\tau$ after the launch of the first. If only one of the satellites is launched into orbit, its trajectory will be a parabola. The mass of satellite 1 is $M_1$, and satellite 2 is $M_2\gg{M_1}$. The resistance of gas in the atmosphere can be neglected, as well as the influence of gravitational attraction from other bodies. The mass of the Earth is $M_{\text{З}}\gg{M_2}$, the radius of the Earth is $R_{\text{З}}$, the gravitational constant is $G$. Let us denote by $P$ the point of intersection of the elliptical orbits of the satellites, and by $\varphi$ the angle between the directions of their velocities at this point. The movement of satellite 1 consists of three sections: 1) Movement in a parabolic orbit; 2) Interaction with satellite 2 near point $P$; 3) Further movement along a hyperbolic orbit in the Earth's gravity field.</p>
+<div class="figure"><img src="T4_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Trajectory of one of the satellites (3.3 points)</h2>
+<p>In this part of the problem, you will have to approximately describe the trajectory of the satellites to the intersection point $P$ of their orbits.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">What is the speed of the satellites $v$ at the moment of launch? Express your answer in terms of $G$, $М_З$ and $R_З$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">At what distance from the center of the Earth $R_0$ is the point $P$ of intersection of the satellite trajectories? Express your answer using $R_\text{З}$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">What is the angle $\varphi$ between the directions of satellite velocities at point $P$?</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Find the time $t_0$ after which the satellites reach point $P$. Express your answer using $G$, $R_\text{З}$ and $M_\text{З}$.</div><span class="pb-pts">1.50</span></div>
+<p>Hereinafter, assume that $\tau\ll{t_0}$. When satellites approach point $P$, their interaction with the Earth can be neglected.</p>
+<h2 class="part">Part B. Satellite Interaction (4.0 points)</h2>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Assuming that near the point $P$ the satellites moved along straight lines, the directions of which coincided with the directions of their velocities at this point, find the relative speed of the satellites $v_0$, as well as the minimum distance $b$ between them, neglecting their gravitational interaction. Express your answer using $v$ and $\tau$.</div><span class="pb-pts">0.70</span></div>
+<p>Next, consider that in the reference frame of satellite 2, the orbit of satellite 1 is a hyperbola with an impact parameter $b$ at their infinite distance. Also consider that at an infinite distance the relative speed of the satellites is equal to $v_0$ found in the previous paragraph.</p>
+<div class="figure"><img src="T4_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>When the interaction of satellites 1 and 2 can again be neglected, the speed of satellite 1 in the Earth's reference frame is equal to $u$ and is directed perpendicular to the line connecting it to the Earth.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find $u$. Express your answer using $v$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Find $\tau$. Express your answer in terms of $G$, $M_2$, $M_3$ and $R_\text{З}$.</div><span class="pb-pts">2.30</span></div>
+<h2 class="part">Part C. Repeated motion in the Earth&#x27;s gravity field (2.7 points)</h2>
+<p>After interaction with satellite 2, the orbit of satellite 1 in the Earth's gravity field is a hyperbola.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Find the speed $v_\infty$ of satellite 1 at an infinite distance from the Earth. Express your answer using $v$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find the angle $\varphi_\infty$ between vectors $\vec{u}$ and $\vec{v}_\infty$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Is it really possible to put a satellite into orbit this way? Justify your answer.</div><span class="pb-pts">0.20</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/277">https://pho.rs/p/277</a></p>
+</body>
+</html>

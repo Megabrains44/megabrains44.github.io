@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Nonlinear oscillations}}
+\author{\normalsize Y22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\textbackslash\{\}textbf\{In this problem, there is no need to estimate errors!\} The PE2 program answers this problem. Problems about vibrations are easy to solve analytically if they are described by linear equations. Finding nonlinear corrections is much more difficult. In this problem we study them numerically. For experimental observation of nonlinear oscillations, the following setup can be used. A magnetic bar is fixed in the center of the elastic rope, the moment of inertia of which is $I = 5 \cdot 10^{-5}~\text{кг} \cdot \text{м}^2$. When the block deviates from equilibrium by an angle $x$ (in radians), it is acted upon by a restoring moment of force $M(x) = k_1 x + k_3 x^3$, where $k_1 = 6 \cdot 10^{-2} ~\text{Н} \cdot \text{м}$, $k_3 =  4 \cdot 10^{-2}~\text{Н} \cdot \text{м}$. To excite oscillations, the bar can be exposed to a magnetic field, which is created by coils with current (see figure).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+In this problem we will study vibrations by numerically solving the corresponding differential equations. A program has been provided for you to do this. In it you can set the equation parameters and initial conditions. When you click on the "Build a numerical solution" button, it will display a graph of the solution - the dependence of the coordinate on time for the corresponding part of the problem. Individual sections of this graph can be enlarged (to do this, click on the button under the graph with a magnifying glass and the pop-up inscription Zoom to Rectangle, and then select the desired section of the graph) in order to read the values ​​with the required accuracy. Return to the previous view of the graph, click on the arrow (<-), and if this does not work, build the numerical solution again.
+
+Numerical data can be entered into the program using the windows on the right. A block common to all parts allows you to set the initial value of the coordinate ($x_0$) and its time derivative (velocity $v_0$). In addition, you can specify the total time $T$ (in seconds) at which the solution is determined (then the solution will be found on the time interval $0< t <T$) and the time step (also in seconds) used to find the solution. It is almost always recommended to use the default time step (0.001 s). If you need to increase the accuracy of the solution, you can reduce the step. However, the time to find a solution will increase. In each part of the problem, you can set the parameters of the corresponding equation. The meaning of these parameters is explained in the relevant parts. The names of the variables are given next to the corresponding fields (Omega - $\Omega$, omega - $\omega$, Epsilon - $\varepsilon$, w0 - $\omega_0$, Gamma - $\gamma$, mu - $\mu$). \textbackslash\{\}textbf\{When solving all points of the problem, indicate the values ​​of parameters and initial conditions used!\}
+
+\section*{Part A. Free vibrations (4 points)}
+
+\problembox{A1}{Write down the equation of oscillations of the block without taking into account friction and external forces in the form $$ \textbackslash\{\}ddot\{x\} +  \textbackslash\{\}omega_0 ^2 x + \textbackslash\{\}varepsilon x^3 = 0. $$ Укажите численные значения частоты свободных гармонических колебаний малой амплитуды $\omega_0$ и параметра нелинейности $\varepsilon$.}{0.20}
+
+\textbackslash\{\}textbf\{Next in this part we will explore the equation written above with the parameters you found!\}
+
+\problembox{A2}{Remove the dependence of the period on the oscillation amplitude $T(A)$. Describe the methodology (what initial conditions and times were used, what formulas were used to determine the period). Explore the range of amplitudes at which the period changes by no more than 10\%. Take at least 15 measurements at different amplitudes.}{1.00}
+
+\problembox{A3}{For sufficiently small amplitudes, the dependence of the period on the amplitude has the form $$ T = T_0 (1 + \textbackslash\{\}alpha A^n). $$ Здесь $T_0$ – период колебаний малой амплитуды. Определите из ваших данных параметры $\alpha$, $n$.}{0.80}
+
+\problembox{A4}{With a sufficiently small amplitude of oscillations, the dependence of the angle on time has the form $$ x = a \textbackslash\{\}cos \textbackslash\{\}omega t + b \textbackslash\{\}cos 3 \textbackslash\{\}omega t. $$ Исследуйте зависимость амплитуды гармоники утроенной частоты $b$ от амплитуды колебаний $A$. Исследуйте ту же область амплитуд $A < 0.5$ и определите как можно точнее значение $b$ for 5 different amplitudes. \textbackslash\{\}textit\{Note:\} The effect under study is quite small. Make sure you carry out calculations and measurements with sufficient accuracy to observe it well. If necessary, you can reduce the time step for the numerical solution.}{1.50}
+
+\problembox{A5}{It is known that at small amplitudes $b = \beta A^3$. Determine the coefficient $\beta$ from your data.}{0.50}
+
+\section*{Part B. Forced vibrations (3.5 points)}
+
+Let now the magnetic bar be acted upon by an external moment of force, the amplitude of which is specified by the parameter $f$, frequency $\Omega$. Then the equation of motion will look like: $$ \textbackslash\{\}ddot\{x\} + 2 \textbackslash\{\}gamma \textbackslash\{\}dot \{x\}+ \textbackslash\{\}omega_0^2 x  +  \textbackslash\{\}varepsilon x^3 = f \textbackslash\{\}cos \textbackslash\{\}Omega t $$ Здесь мы учитываем еще и вязкое трение, величина которого задается постоянной $\gamma$.
+
+В этой части вам неизвестны значения параметров $\omega_0$, $\gamma$ и $\varepsilon$, но вы можете регулировать амплитуду $f$ and the frequency of the applied external torque, as well as the initial conditions.
+
+\problembox{B1}{Determine the values ​​of $\omega_0$, $\varepsilon$, $\gamma$ as accurately as possible.}{1.00}
+
+Let us assume that the resulting steady-state oscillation can be described with reasonable accuracy by the function $$ x(t) = A \textbackslash\{\}cos (\textbackslash\{\}Omega t + \textbackslash\{\}varphi). $$ Тогда величину $\varphi$  будем называть сдвигом фаз колебаний (по отношению к внешнему воздействию). Не ограничивая общности можно считать, что $- \pi < \varphi \leq \pi$.
+
+\problembox{B2}{Let's choose the value $f = 25 ~\text{c}^{-2}$. Plot graphs of the oscillation amplitude and phase shift versus frequency. For comparison, plot similar theoretical relationships on the same graphs without taking into account nonlinearity.}{1.50}
+
+When the amplitude of the external moment of forces $f$ is large enough, nonlinear terms become significant. Because of this, in the region near resonance, one set of parameters $f$, $\Omega$ may correspond to several values ​​of the oscillation amplitude. The steady-state oscillation that actually settles depends on the initial conditions. This is analogous to the phenomenon of hysteresis in magnetism.
+
+\problembox{B3}{Select the value $f = 80 ~\text{c}^{-2}$. Plot a graph of the amplitude of the resulting oscillations versus frequency.  Indicate the frequency range in which hysteresis is observed (that is, two amplitude values ​​at the same frequency).}{1.00}
+
+\section*{Part C. Parametric vibrations (4.5 points)}
+
+Consider oscillations for which the frequency varies slightly with time (that is, $\mu \ll 1$), they are described by the equation $$ \textbackslash\{\}ddot\{x\} +\textbackslash\{\}omega_0^2 (1 + \textbackslash\{\}mu  \textbackslash\{\}cos \textbackslash\{\}Omega t)x  = 0. $$ При определенных значениях $\mu$ и $\Omega$ амплитуда колебаний будет экспоненциально расти, при каких-то оставаться ограниченной. Используйте в этой части численное значение $\omega_0 = 20 ~\text{c}^{-1}$. До пункта C5 считайте, что трения и нелинейности нет ($\varepsilon = 0$, $\gamma = 0$ in the equation parameters in the program).
+
+\problembox{C1}{The fastest increase in the oscillation amplitude is observed at frequency $\Omega \approx 2 \omega_0$. Let us determine the deviation from the resonant frequency $\delta = \Omega - 2 \omega_0 $. The amplitude of the oscillations will increase if $\delta$ is not too large. On the plane $\delta$, $\mu$, draw the region where the amplitude of oscillations increases. Consider the area $\mu \ll 1$, $\delta \ll \omega_0$.}{1.00}
+
+\problembox{C2}{Determine the equation for the boundary of the region $\delta(\mu)$. Write down the equation and find its parameters.}{0.50}
+
+\problembox{C3}{In the region of parametric resonance, the time dependence of the amplitude has the form $A \sim e^{s t}$. Determine the dependence of the parameter $s$ on the relative change in frequency $\mu$ and frequency detuning $\delta$. Using numerical data, find the form of the $s(\mu,\, \delta)$ dependence and determine its parameters. Hint: It may be useful to examine the constant frequency $s (\mu)$ relationship $\delta$ for several values ​​of $\delta$. In this case, the dependence of $s^2$ on $\mu^2$ has a very simple form.}{1.50}
+
+\problembox{C4}{The amplitude of oscillations also increases near the region $\Omega \approx \omega_0$, at sufficiently small $\delta = \Omega - \omega_0$. Find the boundaries of the region at which an increase in the amplitude $\delta ( \mu)$ is possible. Draw this area on the plane $\delta$, $\mu$. Determine the equation of this boundary. (Hint: the $\delta (\mu)$ dependence is a power law.)}{1.00}
+
+In the resonance region, in the linear approximation, the amplitude of oscillations increases without limit. Therefore, the amplitude of steady-state oscillations is determined by nonlinear terms, and we need to consider the complete equation $$ \textbackslash\{\}ddot\{x\} +2 \textbackslash\{\}gamma \textbackslash\{\}dot\{x\} + \textbackslash\{\}omega_0^2 (1 + \textbackslash\{\}mu  \textbackslash\{\}cos \textbackslash\{\}Omega t)x + \textbackslash\{\}varepsilon x^3  = 0. $$
+
+\problembox{C5}{Let $\gamma = 0.2 ~\text{c}^{-1}$, $\varepsilon = 450 ~ \text{c} ^{-2}$.  Draw on the plane $\mu$, $\delta = \Omega - 2 \omega_0$ the region in which the oscillation amplitude increases. For $\delta = 0$ and $\mu = 0.05$, find the amplitude of the steady-state oscillations, as well as the time, estimate the time during which they are established.}{0.50}
+
+\section*{Part D. Pendulum with viscous friction (1 point)}
+
+A mathematical pendulum is a weight attached to a weightless rod. The rod can rotate freely around a certain axis. A certain constant moment of force is applied to the pendulum. Then the angle of deviation of the pendulum from equilibrium $x$ satisfies the equation $$ \textbackslash\{\}ddot\{x\} + 2 \textbackslash\{\}gamma \textbackslash\{\}dot\{x\} + \textbackslash\{\}omega_0^2 \textbackslash\{\}sin x = f. $$ Здесь $\omega_0 = 20 \text{s}^{-1}$ – частота малых колебаний, а величина $f$ пропорциональна моменту внешних сил. При достаточно больших значениях $\gamma$ a mode of motion is possible in which the pendulum rotates with a constant average angular velocity.
+
+\problembox{D1}{In the case of $\gamma =  \omega_0/ 2$, find the minimum value of $f_0$ at which such a movement is possible. (The initial angle of deflection and the initial angular velocity of the pendulum are considered equal to zero.) For $f- f_0 \ll f_0$, the dependence of the average angular velocity on the applied torque has the form $\langle \omega \rangle  \sim (f - f_0)^\alpha$.  Find the value of the constant $\alpha$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/1929}
+
+\end{document}

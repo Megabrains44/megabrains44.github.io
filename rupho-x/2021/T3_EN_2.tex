@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Particle motion in electric fields}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Motion in a non-uniform field of constant direction (3.9 points)}
+
+A particle with charge $q$ and mass $m$ moves only under the influence of the electric field $E(y)$, parallel to the axis $y$ along the trajectory $y=b\sqrt{1-\frac{x^2}{a^2} }$ (the values $a$ and $b$ are also known $a,b>0$). At the initial moment of time, the particle speed is $v_0$ and is directed perpendicular to the electric field.
+
+\problembox{A1}{Find the dependence of the projection of the electric field $E_y(y)$ on the coordinate $y$, where $y\in(0,b]$. Express your answer using $v_0, a, b, q, m$.}{2.40}
+
+\problembox{A2}{From the same initial point in the same electric field, the same particle is released without an initial velocity. Determine the speed $v_1$ when the particle passes the distance $s=b/41$. Express your answer using $v_0,a,b$.}{1.20}
+
+\problembox{A3}{Find the travel time $\tau$ for the previous point. Express your answer in terms of the quantities given in A1.}{0.30}
+
+\section*{Part B. Charge Distribution (2.1 points)}
+
+\problembox{B1}{For convenience, we will continue to use this notation. Let $E_y(b)=E_0$. Write down how $E_y(y)$ from A1 is expressed in terms of $E_0, b, y$.}{0.10}
+
+Let now the electric field be arranged like this: $E=0$ for $y>2b$; $y<\frac{b}{100}$ For $y\in(b/100,2b)$ the functional dependence found in point A1 is satisfied. Recall that the electric field is everywhere directed parallel to the $Oy$ axis. This electric field is created by the following system of charges: Charged plane $y=y_1=b/100$ with surface charge density $\sigma_1$; Charged plane $y=y_2=2b$ with surface charge density $\sigma_2$; A volume charge with a density of $\rho(y)$, distributed between the above planes.
+
+\problembox{B2}{Find $\sigma_1$, $\sigma_2$, $\rho(y)$. Express your answer in terms of $E_0$, $b$, $y$ and fundamental constants.}{2.00}
+
+\section*{Part C. Equipotential surfaces of a charged segment (4 points)}
+
+A rod of length $2L$ is charged uniformly along its length with a linear charge density $\rho$. Let us introduce a coordinate system $YOX$ with the origin at the center of the rod, the axis $OX$ is directed along the rod, and the axis $OY$ is perpendicular to it.
+
+\problembox{C1}{Find points lying on lines $x=0$ and $y=0$ such that the potential at these points is equal to $\varphi_0$.}{0.60}
+
+\problembox{C2}{Prove that the curve $y(x)$ such that the potential at any point is equal to $\varphi_0$ is an ellipse. Find the equation of the given ellipse in coordinates $y(x)$, as well as its semi-major and minor axes $a$ and $b$, respectively.}{2.00}
+
+Along a smooth spoke shaped like an ellipse, found at point C2, a charged particle of mass $m$ and charge $q$ is launched from point $x=0$ at speed $v_0$. The spoke potential is $\varphi_0$.
+
+\problembox{C3}{Find the radius of curvature $R$ of the given ellipse at the point with coordinate $x$. Express your answer using $x$, $a$ and $b$. Note: If the function $y=f(x)$ is given, then its radius of curvature at a given point can be calculated using the formula $$R=\frac{\left(1+{y'}^2\right)^\frac{3}{2}}{|y"|}. $$}{0.40}
+
+\problembox{C4}{Find the force of interaction between the particle and the spoke at its points of intersection with the straight line $x=0$. Express your answer in terms of $m,q,{v_0},L,\rho,\varphi$ and physical constants.}{0.50}
+
+\problembox{C5}{Find the force of interaction between the particle and the spoke at its points of intersection with the straight line $y=0$. Express your answer in terms of $m,q,{v_0},L,\rho,\varphi$ and physical constants.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/103}
+
+\end{document}

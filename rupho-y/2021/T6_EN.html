@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Curling</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Curling</h1>
+<p class="camp">Y21 (2021) — English translation</p>
+<p>A thin ring of mass $m$ and radius $r$ is placed on a table with friction coefficient $\mu$ and gravitational acceleration $g$. The ring was given a linear velocity $v$ (in the direction $x$) and an angular velocity $\omega$ (counterclockwise). The ring moves in a straight line, rotating around its own axis, and eventually stops.  In the future we will try to find the quantities $v(t)$, $\omega(t)$ and some symmetry between them. In all subsequent paragraphs, it is assumed that the action of the support reaction on the ring is uniformly distributed.</p>
+<p>You may need the following formula: $$ \sqrt{\frac{1 - \sin \theta}{2}} = \Bigg| \sin \left( {\frac{\theta}{2}} - \frac{\pi}{4} \right) \Bigg| $$</p>
+<h2 class="part">Equations of motion</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Show that the total force acting on the ring is given by: $$ \vec F_{tot} = - \mu mg \cdot f \left( \frac{v(t)}{\omega (t)\ r} \right) \hat x, $$ где $$ f(a) = \frac{1}{2 \pi} \int \limits_0^{2 \pi} \frac{a - \sin \theta}{\sqrt{ 1 + a^2 - 2 a \sin \theta}} d \theta $$</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Show that the total moment acting on the ring is: $$ \tau_{tot} = - \mu mg r f \left(\frac{\omega(t) r}{v(t)} \right) $$</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Prove that the equations of motion have the form: $$ \dot v = - \mu g\cdot  f \left( \frac{v}{\omega r} \right) \\ \dot \omega r = - \mu g \cdot f \left( \frac{ \omega r}{v} \right) $$</div><span class="pb-pts">0.10</span></div>
+<h2 class="part">Primary Research</h2>
+<p>We have obtained a system of differential equations relating $v(t)$ and $\omega (t)$. In this part we want to find interesting physical aspects of this situation, for which we need to make non-standard mathematical calculations. Let's start by considering the properties of the function $f(a)$:</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Prove: a) $ f(0) = 0, \: f(1) = \dfrac{2}{\pi}, \: f(\infty) = 1$ b) $ f(a) $ strictly increases as $a \geqslant 0 $</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Let us consider the behavior of the parameter $a(t)  = \dfrac{v(t)}{\omega (t) r} $. Show what happens to $a(t)$ (increases/decreases/remains unchanged) in each of the following cases: a) at some moment $a(t) = 1$ b) at some moment $a(t) < 1$ c) at some moment $a(t) > 1$</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Draw qualitatively on a graph, the axes of which are $v$ and $\omega r$, trajectories that display different movements of the ring, that is, given $v_0$ and $\omega_0 r$, draw how they will change over time. It is necessary to draw at least one trajectory for each point of the previous task. In addition, draw a trajectory passing through point $(v_0, 0)$ and another one starting at point $(0, \omega_0 r)$ Label the graph axes and indicate the direction of movement of the system for each drawn trajectory</div><span class="pb-pts">0.60</span></div>
+<p>Let's consider the power that is consumed during the movement of the ring.</p>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Calculate the instantaneous power that is consumed when there is only angular velocity $\omega$ $(v = 0)$, and separately when only linear velocity $v$ $(\omega = 0)$ is present.</div><span class="pb-pts">0.10</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">For given $v$ and $\omega$, calculate the instantaneous power $P$, which is spent on friction at a given time. Give your answer as an integral with a dimensionless variable.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Let us assume that the ring was given a certain initial kinetic energy $E_0$. What should be the ratio $a_0 = \dfrac{v_0}{\omega_0 r}$ at which the ring will move for the maximum time? Hint: Try to answer the previous point using only $E_0$ and $a_0$ (and other data from this point), eliminating $v$ and $\omega$ from the equation</div><span class="pb-pts">1.20</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">What is the maximum time of motion at the initial energy $E_0$?</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Heterogeneous system</h2>
+<p>The system of equations that we received at the beginning of the problem is called homogeneous because the system starting to move from the point $(0,0)$ will remain at rest, that is, there is no “current” term in the equations that creates movement. Let's introduce such a term into one of the equations by considering a similar physical problem: Now we put the same ring on an inclined plane with an angle $\alpha$ with the same friction coefficient $\mu$.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Rewrite the equations of motion from point A3 so that they fit the new condition.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Given the initial $\omega_0$ and $v_0 = 0$, draw all possible families of trajectories of the ring in coordinates $(v, \omega r)$ (for each type of curve, draw your own graph).  Specify the following components: a) relevant parameter values; b) end points (to which the trajectories arrive in finite or infinite time) in the plane $(v, \omega r)$. Here it is enough to write for each component that it tends to zero / tends to infinity / is equal to or tends to some positive value. Label the axes of the graph and indicate the directions of movement of the system for each drawn trajectory</div><span class="pb-pts">2.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/237">https://pho.rs/p/237</a></p>
+</body>
+</html>

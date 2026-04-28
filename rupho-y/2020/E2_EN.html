@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Varicap research</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Varicap research</h1>
+<p class="camp">Y20 (2020) — English translation</p>
+<p>$!Важно:$ before changing the circuit configuration, smoothly turn the amplitude of the generator to zero, then turn off the generator and the current source! New reels will not be issued!</p>
+<h2 class="part">Part A. Oscillatory circuit with nonlinear capacitance.</h2>
+<p>\emph{Equipment used in this part:} generator, DC voltage source, oscilloscope, multimeter, instrument wire set, breadboard, board wire set, varicap, resistor $R_0=1~МОм$ (beige color), resistor $r=10~Ом$ (blue color), three inductor $L_1=3,3~мГн, L_2=15,0~мГн, L_3=15,0~мГн$, capacitor $C_{ш}=10~мкФ$ (marking 105).</p>
+<p>In the first part of the work, the resonant properties of a nonlinear oscillatory circuit are studied. A semiconductor diode (varicap) is used as a nonlinear element included in the oscillatory circuit, the capacitance of which depends on the magnitude of the constant voltage across it.</p>
+<p>At an arbitrary moment of time, the voltage on the varicap is $U=U_\sim + V$, where $U_\sim-$ is the variable voltage component, and $V-$ is the constant voltage component. Let a constant voltage $V=-V_0$ be maintained on the varicap $C$, then the dependence of the varicap capacitance on the voltage across it in the vicinity of the operating point can be written as: $$ C(V)=C_0+\chi(V+V_0)+\beta(V+V_0)^2 $$</p>
+<p>Соберите установку (рис. 1). В этой части используйте только катушку $L_1$. Pay attention to the polarity of the varicap connection! The white point is connected to the positive of the source.</p>
+<div class="figure"><img src="E2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Set the voltage amplitude on the generator $\mathcal{E}_0 < 1,0~B$. Remove the dependence of the resonant frequency $f_{рез}$ of the circuit on the value of the constant voltage on the varicap $V_{0}$ in the range from $0$ to $3~В$.</div><span class="pb-pts">1.20</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Plot a graph of the dependence of the circuit capacitance on the voltage $C(V+V_0)$ applied to it. Define the parameters $\chi$ and $\beta$.</div><span class="pb-pts">0.90</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Take the resonance curve for $V_0=0,3~B$. Using the obtained dependence, determine the quality factor of the circuit $Q$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Theoretically calculate the quality factor of the circuit through its parameters (without using the resonance curve).</div><span class="pb-pts">0.40</span></div>
+<h2 class="part">Part B. Frequency doubling effect.</h2>
+<p>Due to the fact that the capacitance of the circuit depends on the voltage, under some conditions the oscillation frequency in it may not coincide with the frequency of the generator. In particular, at the generator frequency $\omega = \frac{\omega_0}{2}$, oscillations with a natural frequency $\omega_0$ arise.</p>
+<p>Using the Kirchhoff equations and some expansions in the vicinity of the operating point, we can obtain the equation for oscillations of the variable component of the voltage on the varicap in the form: $$ \ddot{U}+2\gamma\dot{U}+\omega_0^2U=-\omega_0^2U_0sin(\omega t)+\alpha' U^2 $$ где введены обозначения $U_0=\cfrac{L\omega_0}{R_0}\mathcal{E}_0,~\alpha'=2\omega_0^2 \cfrac{\chi-\beta V_0}{C_0-\chi V_0}$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Express $\gamma$ and $\omega_0$ in terms of $r, r_L, C_k, L$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Let the oscillation frequency of the external voltage be $\omega=\cfrac{\omega_0}{2}$. Find the solution to the equation of oscillations of the variable voltage component on the varicap $U_1$ in the first (linear) approximation with weak damping $(\gamma \ll \omega_0)$.</div><span class="pb-pts">0.90</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">When taking into account nonlinear terms (in the second approximation), the solution to the equation of oscillations of the variable component of the voltage on the varicap represents the superposition $U=U_1+U_2$. Derive the vibration equation for $U_2$ in terms of $\alpha', \gamma, \omega_o, U_0 $.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Assuming that $U_1 \gg U_2 $, find from the equation obtained in paragraph B3 the correction $U_2$ to the voltage at the varicap.</div><span class="pb-pts">0.90</span></div>
+<p>At the generator frequency $\frac{\omega_0}{2}$ the signal will look like in Figure 2.</p>
+<div class="figure"><img src="E2_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Set the oscillator frequency $\omega = \frac{\omega_0}{2}$. Remove the experimental dependence of the amplitude $A_2$ of oscillations with frequency $\omega_0$ on the inductance in the circuit.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Let $A_2 \propto L^\xi$. From the theoretical formula for $A_2$, obtain the value of $\xi$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Find the value of $\xi$ from the measured dependence $A_2(L)$</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Set the varicap $V_0=0,3~В$, the amplitude of the generator $\mathcal{E}_0=12~В.$ Sketch the dependence of the alternating voltage on the varicap on time for $\omega=\frac{\omega_0}{n}$ for $n=3,4,5$.</div><span class="pb-pts">0.90</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/42">https://pho.rs/p/42</a></p>
+</body>
+</html>

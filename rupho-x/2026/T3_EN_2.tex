@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Photography problems}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This task consists of three independent parts, united by a common theme: each of them is devoted to a specific problem that can be encountered when photographing. Try to understand the physics behind these effects and answer the questions posed.
+
+\section*{Part A: Defocus (2.0 points)}
+
+The picture shows a camera photographing a thin wire. It consists of two planes: the front plane contains an ideal thin converging round lens with focal length $f$ and diameter $D$, the rear plane is a screen. Distance between planes $l$. A photograph is an inverted image obtained on the screen, so we introduce coordinate systems as indicated in the figure: $xyz$ describes the position of the object in space, and $YZ$ – the position of the image in the photograph.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The image of a thin wire obtained by this camera is limited from above and below by straight lines $Z = \pm kY$, where $k > 0$ and is not limited in both directions along the axis $Y$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{Find the position and shape of the wire if its length is minimal.}{2.00}
+
+\section*{Part B. Rolling shutter (3.0 points)}
+
+When photographing fast-moving objects, image distortion may occur due to the non-simultaneous reading of different parts of the photograph. This effect is called time parallax or rolling shutter. Typically, reading occurs line by line. We will assume that in our camera the image is recorded starting from the top, all lines are taken in the same and extremely short time, so there is no need to take into account the distortion of individual lines. It is known that the total time taken to photograph is 10 ms. Using a vertically downward camera, we photographed a puck with a diameter of 7.62 cm sliding on a smooth horizontal surface.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B1}{Using a compass and straight edge, draw a straight line parallel to the direction of the puck's speed.}{2.00}
+
+\problembox{B2}{Using an additional ruler with divisions, find the speed modulus of the puck.}{1.00}
+
+\section*{Part C. Distortion (3.0 points)}
+
+Consider photographing a flat screen. Let $(y,z)$ be coordinates on the object screen and $(Y,Z)$ the corresponding coordinates in the photo. For geometrically faithful transmission, the linear magnification must be constant over the whole image:
+\[
+\vec R=\alpha \vec r, \qquad \vec r=(y,z),\quad \vec R=(Y,Z).
+\]
+Now consider the simplest pinhole camera. It consists of two parallel planes, one with a small hole. Light passing through this hole forms the image on the second plane. The image of any object point is at the intersection of the ray from that point through the hole with the photo plane. Let $l$ be the distance from hole to photo plane, and $L$ the distance from hole to the object screen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{Show that the linear magnification of a pinhole camera is constant and find $\alpha$.}{0.50}
+
+In most real systems this linearity is violated, producing distortion; i.e. magnification depends on position. For paraxial rays, consider third-order distortion:
+\[
+\vec R=f(r)\,\vec r \approx \alpha \vec r + \beta r^2 \vec r.
+\]
+
+\problembox{C2}{Draw a high-quality view of the photograph of part of the notebook sheet shown in the figure below, in the cases $\beta > 0$ (positive distortion) and $\beta < 0$ (negative distortion). Consider $\alpha > 0$.}{0.50}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+Let's look at the camera obscura again. Let this time between the camera and the screen there be a flat aquarium of thickness $h$, filled with a liquid with a refractive index $n$. The remaining space is filled with air with a refractive index $n_0 = 1$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{C3}{Determine the coefficients $\alpha$ and $\beta$ in this case. What kind of distortion is observed in such a system: positive ($\alpha$ and $\beta$ of the same sign) or negative ($\alpha$ and $\beta$ of different signs)?}{2.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4802}
+
+\end{document}

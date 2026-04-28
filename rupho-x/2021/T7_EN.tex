@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Airbag}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+An air cushion is often used to move heavy loads. In this task we will explore the principle of its operation, which is schematically depicted in the figure below. Consider the following system configuration. Under the platform there is a cylindrical space with a diameter of $D=40~\text{cm}$ and a height of $h=10~\text{cm}$ into which air is pumped. The ambient temperature is $T_0=300~\text{K}$, the atmospheric pressure is $P_{atm}=1.01\cdot 10^5~\text{Pa}$. The weight of the platform and surrounding structures is $W=78.48~\text{kN}$. When the air pressure force exceeds this value, the platform rises, forming a gap of width $\varepsilon$ with the surface. Consider the compressor to maintain a constant flow of air. In the problem, air can be considered an ideal gas. The gas flow is considered adiabatic and equilibrium. We will be mainly interested in stationary operating modes. For numerical calculations in the problem, use the values of the molar mass of air $\mu=29.0~\text{g}/\text{mol}$ and $\gamma=c_P/c_V=1.4$. Also, for specific heat capacities at constant pressure and volume, the relation $c_P-c_V=r$, where $r=287~\text{J}/(\text{kg}\cdot\text{K})$, is valid, and the equation of state can be written as $P=\rho rT$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T7_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A: Platform Equilibrium (1 point)}
+
+\problembox{A1}{Express $c_V$ and $c_P$ in terms of $r$ and $\gamma$. Find their meanings.}{0.50}
+
+\problembox{A2}{How does the ratio of pressure in a cylindrical cavity to atmospheric pressure $P_0/P_{atm}$ depend on the weight of the platform and the geometric parameters of the system?}{0.50}
+
+\section*{Part B: Air Cushion Basics (5.5 points)}
+
+Mass flow rate of gas flowing through a gap at the surface. is given by $dm/dt=\rho vA$, where $v$ and $\rho$ are the velocity and density of the escaping gas.
+
+Let us consider a certain jump in the density and pressure of a gas propagating at a speed $c$ in a tube of unit cross section. The disturbed region of the gas moves with speed $v$, and the undisturbed region is at rest. Let the pressure and density in the disturbed region of the gas be $P$ and $\rho$, respectively, and in the undisturbed region - $P_0$ and $\rho_0$, respectively. The temperature in the undisturbed region of the gas is $T$. It is convenient to carry out some of the further arguments in a reference frame in which the wave front (the boundary of the unperturbed region) is at rest.
+
+\problembox{B1}{Express the speed of motion of the disturbed gas region $v$ in terms of $c$, $\rho$ and $\rho_0$.}{0.50}
+
+\problembox{B2}{Express the pressure difference $P-P_0$ in terms of $\rho$, $\rho_0$, and $c$.}{1.00}
+
+\problembox{B3}{Express $c$ in terms of $\gamma, r, T$.}{0.50}
+
+\problembox{B4}{Calculate the speed of sound in air at a given ambient temperature $T_0$.}{0.50}
+
+As the gas flows out from under the platform, it expands adiabatically and its temperature $T$ will be different from $T_0$. For convenience, the Mach number can be introduced as $M=v/c$, where $c$ is the speed of sound in the escaping gas, so the mass flow can be rewritten as $dm/dt=\rho AMc$.
+
+\problembox{B5}{Express the mass flow rate $dm/dt$ in terms of $M, \gamma, T/T_0$ and the relation $P_0A\gamma/c_0$, where $c_0$ is the speed of sound at temperature $T_0$.}{1.00}
+
+\problembox{B6}{Express the gas velocity $v$ in terms of $M, T, r$ and $\gamma$.}{0.50}
+
+\problembox{B7}{Using Bernoulli's equation for a compressible gas in the form $\cfrac{v^2}{2}+c_PT=\mathrm{const}$, find the temperature ratio $T/T_0$ in terms of $M$ and $\gamma$.}{1.50}
+
+\section*{Part C. Critical gas flow regime (2.0 points)}
+
+It can be shown that when a gas flows from a narrow place to a wide place, the flow speed $v$ cannot exceed the speed of sound in that medium (i.e. $M\le1$). When the forced air flow changes, the gas flow rate $v$ also changes. For sufficiently large flows, the rate $v$ can reach a maximum value $c$.
+
+\problembox{C1}{Express $dm/dt$ in terms of $M, \gamma$ and $P_0A\gamma/c_0$, and sketch this dependence on $M$ for $M\in[0;1]$. Find the value $M$ for which the flow reaches its maximum value (this mode is called critical).}{1.00}
+
+\problembox{C2}{Let the compressor produce flow $5.0~\text{m}^3/\text{min}$. Calculate the values $\varepsilon, T, P, v$ and $\rho$ of the output flow in the critical mode.}{1.00}
+
+\section*{Part D. Surface roughness (1.5 points)}
+
+In practice, surface irregularities do not allow the gap $\varepsilon$ to take a value higher than 0.5 mm, so the critical condition cannot be achieved.
+
+\problembox{D1}{Calculate the values of $M, T, P, v$ and $\rho$ of the escaping gas at $\varepsilon=0.5~\text{mm}$ and $dm/dt=0.1~\text{kg}/\text{s}$.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/106}
+
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thermoelectricity and the Peletier effect}}
+\author{\normalsize X19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Thermoelectricity is the general name for the phenomena of direct conversion of electricity into heat and vice versa, heat into electricity. Thermoelectricity is generally based on contact potential differences in conductors and semiconductors. The work function of an electron leaving a material varies for different conductors, and therefore there is an effect such as a contact potential difference. The contact potential difference, as a rule, depends only on the materials that are in contact with each other. Depending on the temperature, the contact potential difference may change. This dependence can be described by a simple formula (temperature in Kelvin):
+$$U(T)=\beta+\alpha T.$$
+Here and below, interpret the voltage in this formula as \textbf{the potential of the first metal minus the potential of the second}.
+
+Among other thermoelectric effects, one of the most interesting is the Peltier effect. The Peltier effect is that when current $I$ passes through voltage $U$, thermal power $UI$ is released at the contact (direct Peltier effect). But if the electrical circuit is assembled in such a way that the current passes through the contact potential difference in the opposite direction, i.e. the current will flow from the lower potential to the higher one, then the contact will be $\textbf{}$ thermal power $UI$ from the environment (reverse Peltier effect).
+
+\section*{Part A}
+
+Two wires made of different materials with resistance $R_1$ and $R_2$ pass through two thermally insulated vessels with water. At the contact, the potential of conductor $1$ is always higher than that of conductor $2$. The wires have no electrical contact either with the water or with the material of the vessels; their thermal conductivity is low. Vessel temperature $T_2>T_1$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the magnitude of the current in the circuit if the coefficients $\alpha$ and $\beta$ are given. Find the powers $P_1$ and $P_2$ released at both contacts.}{1.00}
+
+\problembox{A2}{From general thermodynamic considerations and conditions, indicate the sign of the coefficients $\alpha$ and $\beta$.}{1.00}
+
+\problembox{A3}{Based on general thermodynamic considerations and conditions, find the minimum possible value of the coefficient $\beta$.}{1.00}
+
+\problembox{A4}{On the answer sheet, mark the contacts with the direct Peltier effect with a plus and the contacts with the reverse effect with a minus, and also indicate with an arrow the direction of the current in the circuit.}{0.50}
+
+\section*{Part B}
+
+Let both vessels be filled with water of mass $m=1~\text{kg}$. The first vessel has a temperature of $T_{1,0}=0^{\circ}\text{C}$, and the second one has a temperature of $T_{2,0}=100^{\circ}\text{C}$. The coefficient $\beta$ from the previous part takes on the minimum value.
+
+\problembox{B1}{Find the temperatures $T_1$ and $T_2$ of the first and second vessels at the moment when the current in the system stops.}{1.50}
+
+\problembox{B2}{Find the heat $Q_1$ and $Q_2$ released on the resistors}{1.00}
+
+\section*{Part C}
+
+Based on the above diagram, you can assemble a simple thermopile. Let the second vessel contain water at $T_2=273~\text{K}$, and the first vessel contain liquid nitrogen at atmospheric pressure, its temperature equal to the boiling point $T_1=77~\text{K}$. In the following, use the notation $\Delta{T}=T_2-T_1$. Consider that liquid nitrogen and water are constantly being added to the system, and ice does not freeze on the wires.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+The transfer of energy as a result of thermal conductivity is described by Fourier's law. The energy flux density $q$ through the wire cross-section is determined by the thermal conductivity of the wire material $\chi$ and the temperature distribution along the length $T(x)$:
+$$q=-\chi\frac{dT}{dx}.$$
+
+\problembox{C1}{Find the maximum output voltage of such a battery $U_0$ if $\alpha=1000~\text{mV}/\text{K}$.}{0.50}
+
+\problembox{C2}{Assuming that the main heat loss occurs in the wire between the two tanks (the left one), and neglecting losses in the wires leading to the load, as well as the walls of the tank, find the current value $I_0$ at which the ratio of useful work to heat received by nitrogen is maximum. Find the value of this maximum coefficient. Consider the thermal conductivity $\chi$ and resistivity $\rho$, as well as the cross-section $S$ and length $l$ of the left wire as given. The wire between the tanks runs mainly from the outside. Consider that $\frac{\alpha^2\Delta{T}}{\rho\chi}\gg{1}$.}{2.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/319}
+
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Gas quadrangle --- Solution}}
+\author{\normalsize X20 (2020) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Let the pipe be adiabatically insulated. Obtain the dependence of gas velocity on its temperature.}{0.80}
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} ZSE $$P_0 dV_0-PdV=dm\left(\frac{v^2-v_0^2}{2}+\frac{C_V}{\mu}(T-T_0)\right)$$
+\end{solcard}
+
+\begin{solcard}{A2}{Show that when gas flows, the relation $$v\frac{dv}{dx}=-\frac{1}{\rho}\frac{dP}{dx}.$$ is satisfied}{0.70}
+
+The law of momentum change for gas $$-Sdp=adm$$ Equality $a=v\frac{dv}{dx}$ proves the required
+
+\end{solcard}
+
+\begin{solcard}{A3}{Now thermal power $N=kL$ is supplied to any section of pipe with length $L$. Derive an expression for the gas velocity as a function of $x$ and $T$.}{0.50}
+
+ZSE $$Ndt=P_0dV_0-PdV=dm(\frac{v^2-v_0^2}{2}+C_V(T-T_0))$$ After transformations,we get $$v^2=v_0^2+\frac{2C_P}{\mu}(T_0-T)+\frac{2N}{m}$$ Answer $$ $$ $$v=\sqrt{v_0^2+\frac{2C_P}{\mu}(T_0-T)+\frac{2kx}{\rho_0S_0v_0}}$$
+
+\end{solcard}
+
+\begin{solcard}{A4}{Now the gas temperature depends linearly on $x$ according to the law $T=T_0+\alpha x$. Show that the gas moves through the pipe with uniform acceleration and find this acceleration $a$.}{0.50}
+
+$a=v\frac{dv}{dx}=-\frac{\alpha C_P}{\mu}+\frac{k}{\rho_0S_0v_0}=const$, which proves the required
+
+\end{solcard}
+
+\begin{solcard}{A5}{Obtain an equation for a polytropic process with constant molar heat capacity $C$ in coordinates $(P, \rho)$.}{0.50}
+
+$$C={C_V}+\frac{\nu RT}{V} \frac{dV}{dT}$$ $$ $$ After integration we have $TV^{n-1}=const$ $$ $$ $$P\rho^{-n}=const$$ $$ $$ where $n=\frac{C_P - C}{C_V - C}$
+
+\end{solcard}
+
+\begin{solcard}{A6}{Show that under the conditions of point A4 the gas moves as if it were in a polytropic process.}{1.20}
+
+From the equation of state and condition $\alpha=\frac{dT}{dx}=const$ we have $$ $$ $$a=v\frac{dv}{dx}=−\frac{1}{\rho}\frac{dP}{dx}=-\frac{RT}{\mu P}\frac{dP}{dT}\frac{dT}{dx}=-\frac{\alpha R}{\mu}\frac{T}{P}\frac{dP}{dT}$$ $$ $$ Но since $a=-\frac{\alpha C_P}{\mu}+\frac{k}{\rho_0S_0v_0}=const$ $$ $$ $\frac{T}{P}\frac{dP}{dT}=\frac{\mu}{\alpha R}\left(\frac{\alpha C_P}{\mu}-\frac{k}{\rho_0S_0v_0}\right)=const⟦1 0⟧$ $$ После интегрирования имеем $$ $$ $$TP^{\textbackslash{}frac{1}{\textbackslash{}frac{\textbackslash{}mu k}{\textbackslash{}alpha R\textbackslash{}rho_0S_0v_0}-\textbackslash{}frac{C_P}{R}}}=TP^\textbackslash{}frac{R}{C -C_P}=const$$ $$ $$ Для дальнейшего решения отметим, что $$ $$ $$C=\textbackslash{}frac{\textbackslash{}mu k}{\textbackslash{}alpha \textbackslash{}rho_0S_0v_0}$$
+
+\end{solcard}
+
+\begin{solcard}{A7}{Derive an expression for the gas density as a function of $x$.}{0.80}
+
+From the polytropic equation $$ $$ $$\rho=\rho_0\left(\frac{T}{T_0}\right)^\frac{1}{1-n}$$ $$ $$ Finding $n$  from $A6$, we get $$ $$ $$\rho=\rho_0\left(\frac{T_0}{T_0+\alpha x}\right)^{1-\frac{C_P}{R}+\frac{\mu k}{\alpha R\rho_0S_0v_0}}$$
+
+\end{solcard}
+
+\begin{solcard}{B1}{Find the gas mass flow rate $\dot{m}$.}{0.10}
+
+$$\dot{m}=\rho_0S_0v_0$$
+
+\end{solcard}
+
+\begin{solcard}{B2}{Find the heat $\delta Q_{ab}, \delta Q_{bc}, \delta Q_{cd}, \delta Q_{da}$ received by a portion of gas with mass $dm$ in these areas of the quadrilateral. Answers can be expressed in terms of $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, \beta, B, L_1, L_2, L_3, L_4$ and $dm$.}{0.80}
+
+From the first law of thermodynamics and point ${A6}$ $$\frac{\delta Q}{dm}={\frac{C}{\mu}}(T - T_0)$$ $$ $$ Substituting в последнее equation expression for теплоёмкости,поrayенное в $A6$ and сницы температур,we have $$ $$ $$Q_1=\frac{\alpha dm}{\rho_0S_0v_0}L_1$,$Q_2=\frac{\beta dm}{\rho_0S_0v_0}L_2$,$Q_3=-\frac{\alpha dm}{\rho_0S_0v_0}L_3$,$Q_4=-\frac{\beta dm}{\rho_0S_0v_0}L_4$$
+
+\end{solcard}
+
+\begin{solcard}{B3}{Get $\beta$ and $B$ via $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.}{1.00}
+
+Since the state is stationary, the quadrilateral receives zero thermal power. From here $$ $$ $$\alpha(L_1-L_3)+\beta(L_2-L_4)=0$$ Then answer на первый вопрос: $\beta=\alpha\frac{L_1-L_3}{L_4-L_2}$ $⟦5 ⟧$ Let us find сницу температур в точках  $c$ and $a$   двумя способами $$ $$ $$T_c-T_a=AL_1+BL_2=AL_3+BL_4$$ Hence answer на второй вопрос:$B=A\frac{L_1-L_3}{L_4-L_2}$
+
+\end{solcard}
+
+\begin{solcard}{B4}{Prove that for such a system to be stationary, it is necessary that the molar heat capacity of the gas be constant throughout the entire cycle.}{1.50}
+
+At point $A6$ we received $$ $$ $$C=\frac{\mu }{ \rho_0S_0v_0}\frac{dN}{dx}\frac{dx}{dT}$$ $$ $$ For $ab$ and $cd$ $$ $$ $⟦1 1⟧$ $$ $$ For $bc$ and $da$ $$ $$ $${C_2}=\frac{\mu\beta}{B\rho_0S_0v_0}$ $ $$ $$ Поскольку из пункта $B_3$ следует,что  $\frac{\alpha}{A}=\frac{\beta}{B}$ $$ $$ $${C_1}={C_2}$$ $$ $$ Since the processes in all pipes are polytropic, the molar heat capacity of the gas is the same throughout the process
+
+\end{solcard}
+
+\begin{solcard}{B5}{Find the accelerations $a_{ab}$ and $a_{bc}$ through $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.}{0.70}
+
+Substituting $A$,$B$,$\alpha$,$\beta$ into the expression in point $A4$, we have $$ $$ $$a_{ab}=-\frac{AC_P}{\mu}+\frac{\alpha}{\rho_0S_0v_0}$$ $$ $$ $$a_{bc}=\left(-\frac{\alpha C_P}{\mu}+\frac{k}{\rho_0S_0v_0}\right)\frac{L_1-L_3}{L_4-L_2}=a_{ab}\frac{B}{A}$$
+
+\end{solcard}
+
+\begin{solcard}{B6}{Find the velocities $v_b, v_c$ and $v_d$ through $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.}{0.50}
+
+Substituting the previously obtained results into the formula $v^2=v_0^2+2{a_x}x$, we have $$ $$ $$v_b^2=v_0^2+2a_{ab}L_1$$ $$ $$ $$v_c^2=v_0^2+2(a_{ab}L_1+a_{bc}L_2)$$ $$ $$ $$v_d^2=v_0^2+2a_{bc}L_4$$
+
+\end{solcard}
+
+\begin{solcard}{B7}{Find the minimum time $t$ after which the gas returns to its initial position. Express your answer in terms of the velocities at the points of intersection of the pipes and the accelerations in the pipes (the item is not assessed unless B5 and B6 are completed).}{0.20}
+
+Let's express time through changes in speed in individual sections of the pipe and acceleration in them $$t=\frac{v_b+v_c-v_a-v_d}{a_{ab}}+\frac{v_c+v_d-v_a-v_b}{a_{bc}}$$
+
+\end{solcard}
+
+\begin{solcard}{B8}{Find the mass of gas in the pipe. Express your answer in terms of $\dot{m}$ and $t$ (the item is not scored unless B5 and B6 are completed).}{0.20}
+
+Mass of gas in the pipe $m=\dot{m}t$
+
+\end{solcard}
+
+\end{document}

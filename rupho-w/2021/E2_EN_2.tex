@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{The main thing is not to oversalt}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The dependence of current on voltage (volt-ampere characteristic, CVC) in salt solutions does not obey Ohm’s law. This occurs due to chemical processes occurring at the metal contacts (cathode and anode) immersed in the solution to connect it to the electrical circuit. A possible option for modeling the electrical properties of such a system is shown in Fig. 1. The contact potential difference $U_\text{c}$ that appears on the electrodes is switched on to meet the external voltage $U_0$. The presence of a constant contact resistance $r_\text{c}$ is due to the mechanisms of current transfer directly in the contact areas and is not related to the resistance of the solution volume, which is shown in Fig. 1 is represented by a resistor of value $R$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+In this work, there is no need to estimate errors! For the three percent (by weight) solution of $\mathrm{NaCl}$ in water provided to you:
+
+\problembox{A1}{Measure the resistance of the limiting resistor $R_1$ with an ohmmeter (see equipment). The approximate value of 10 ohms is indicated below, but use the more accurate value you obtained in your calculations.}{0}
+
+\problembox{A2}{Experimentally confirm the validity of the proposed model. To do this, study the current-voltage characteristics of the solution at 5 different distances between the electrodes.}{7.50}
+
+\problembox{A3}{Estimate the magnitude of the contact potential difference $U_\text{c}$.}{1.00}
+
+\problembox{A4}{Determine the value of contact resistance $r_\text{c}$.}{2.50}
+
+\problembox{A5}{Calculate the specific conductivity $\sigma$ of a three percent solution of sodium chloride in water.}{1.00}
+
+\problembox{A6}{Calculate the mobility $\mu$ of sodium and chlorine ions in this solution.}{3.00}
+
+\noindent\textbf{Reference data:}
+\begin{itemize}
+    \item Molar mass of $\mathrm{NaCl}$: $58.4~\text{g}/\text{mol}$.
+    \item Elementary charge: $1.6\cdot 10^{-19}~\text{C}$.
+    \item Avogadro's number: $6.02\cdot 10^{23}~\text{mol}^{-1}$.
+    \item The density of the solution is considered equal to $\rho = 1~\text{g}/\text{cm}^3$.
+\end{itemize}
+
+\noindent\textbf{Notes:}
+\begin{enumerate}
+    \item The performance of the multimeter in ammeter mode is NOT GUARANTEED!
+    \item Specific conductivity $\sigma$ is the reciprocal of resistivity $\rho$.
+    \item The mobility $\mu$ of electric charge carriers in a conductor is the proportionality coefficient between the electric field strength $E$ and the carrier drift velocity, $v = \mu E$.
+    \item Consider the electric field inside the syringe to be uniform.
+    \item The mobilities of sodium and chlorine ions at the given solution concentration can be approximately considered the same.
+    \item Connect the positive pole of the voltage source to the syringe piston, and the negative pole to the needle cone.
+    \item When passing current through a solution in a syringe, place the syringe horizontally and try to avoid contact of the gas bubble formed inside with the electrodes (the bubble should be located in the middle between the electrodes).
+    \item Carry out each new series of measurements using a fresh salt solution.
+    \item Take measurements for each portion of the solution quickly enough, avoiding the formation of a large amount of gas in the volume.
+    \item For calculations of $\sigma$ and $R$, use the internal cross-sectional area $S$ of the syringe, despite the fact that the area of the electrode connected to the needle cone is significantly less than $S$.
+    \item Place a repeatedly folded napkin under the open needle cone of the syringe.
+    \item Carry out all operations with liquid over a plastic plate so as not to stain tables and your own clothes with the salt remaining after the solution has dried.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\noindent\textbf{Equipment:}
+\begin{enumerate}
+    \item Laboratory power supply (set voltage limit to $4.5~\mathrm{V}$).
+    \item Voltage regulation and measurement unit with three terminals, the diagram of which is shown in Figure 3 (central output -- black; potentiometer $R_2 = 100~\Omega$ output -- red; current-limiting resistor $R_1 = 10~\Omega$ output -- white).
+    \item Connecting wires ($3\times$ crocodile--crocodile, $4\times$ crocodile--banana).
+    \item Glass syringe with a metal piston and subneedle cone.
+    \item Multimeters ($\times 2$).
+    \item A glass with a three percent salt solution.
+    \item A container with clean water (for washing the syringe).
+    \item Ruler.
+    \item Napkins to keep your work area clean.
+    \item Container for draining the used solution (common on the floor, not shown in photo).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/78}
+
+\end{document}

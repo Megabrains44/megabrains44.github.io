@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Virtuous cycle}}
+\author{\normalsize W25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+As is known, efficiency is the ratio of the useful work performed by the working fluid to the amount of heat supplied to it. Loosely speaking, this coefficient determines how effectively the heat coming from a certain heater is “transferred” into work. This problem considers a cycle carried out with an ideal gas, consisting of two isobars and two isochores (see Fig. 1). The adiabatic exponent of the gas is known and equal to $\gamma$. Let us assume that heat is removed from the gas using a refrigeration machine operating in a reverse Carnot cycle between the gas and the environment. Let $A_$ be the work done by the gas during one described cycle, and $A_{}$ be the work done on the working fluid of the refrigeration machine during one cycle of the working fluid. In this case, heat is supplied to the gas through heat exchange with the environment. In this case, it is logical to introduce instead of efficiency the “efficiency” of the cycle $\eta$: $$\textbackslash{}eta = \textbackslash{}frac{A_}{A_{}}.$$ Consider that the change in gas temperature during one cycle of the refrigeration machine is negligible.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Express the molar heat capacity of the gas used in the isobaric process $C_P$ and in the isochoric process $C_V$ in terms of $R$ and $\gamma$.}{0.50}
+
+Let the maximum temperature in the cycle be equal to the ambient temperature $T$, with isochoric cooling the temperature decreases from $T$ to $T-t_1$, with isobaric cooling – from $T-t_1$ to $T-t$.
+
+\problembox{A2}{Express the relations $p_2/p_1$ and $V_2/V_1$ (notations in Fig. 1) in terms of $T$, $t_1$ and $t$.}{0.50}
+
+Let the amount of gas be $\nu$.
+
+\problembox{A3}{Express the work $A_$ in terms of $\nu$, $R$, $T$, $t_1$ and $t$.}{1.00}
+
+For a refrigeration machine, the refrigeration coefficient $\chi$ is determined by the formula: $$\textbackslash{}chi = \textbackslash{}frac{Q_{-}}{A_{}},$$where $Q_{-}$ is the heat removed from the gas in one cycle.
+
+\problembox{A4}{Determine $\chi$ at the moment when the gas temperature is $T-\tau$. Express your answer using $\tau$, $T$.}{0.50}
+
+\problembox{A5}{Define $A_{}$. Express your answer in terms of $\nu$, $R$, $\gamma$, $T$, $t_1$ and $t$.}{1.50}
+
+Let us introduce the notations $y = t/T$ and $x=t_1/t$.
+
+\problembox{A6}{Express $\eta$ for the described system in terms of $x$, $\gamma$ and $y$. Calculate its value for $\gamma = 5/3$, $x=0.5$, $y=0.5$.}{1.00}
+
+Now let's analyze what maximum $\eta$ can be obtained for different values of $y$ and $x$. Consider it known that the best $\eta$ is achieved at $y \ll 1$.
+
+\problembox{A7}{Find the relationship between $\eta(x)$ and $y \ll 1$. Express your answer using $\gamma$ and $x$. If necessary, you can use the formula: $\ln \left(1+\xi \right) \approx \xi - \xi^2/2$ at $\xi\ll1$.}{1.00}
+
+\problembox{A8}{Determine at which $x$ the efficiency $\eta$ will be maximum. Express your answer using $\gamma$.}{1.00}
+
+\problembox{A9}{Find the maximum possible efficiency $\eta_{max}$. Express your answer using $\gamma$. Calculate its value for $\gamma = 5/3$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3969}
+
+\end{document}

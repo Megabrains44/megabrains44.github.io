@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Rocket flight}}
+\author{\normalsize Y16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A space rocket rotates in a circular orbit at a distance $R=2.0\cdot{10^7}~\text{m}$ from the center of the Earth in the plane of the Earth’s orbit. Earth mass $m=6.00\cdot{10^{24}}~\text{kg}$, Sun mass $M=2.0\cdot{10^{30}}~\text{kg}$, Earth orbital radius $R_0=1.5\cdot{10^{11}}~\text{m}$, gravitational constant $G=6.67\cdot{10^{-11}}(\text{N}\cdot{\text{m}^2})/\text{kg}^2$.
+
+\problembox{A1}{Find the minimum value of the change in speed $\Delta{v}$ of the rocket, which may be sufficient for its departure from orbit outside the Solar System.}{5.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3031}
+
+\end{document}

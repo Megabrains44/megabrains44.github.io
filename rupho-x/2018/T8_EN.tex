@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Comet Churyumov - Gerasimenko}}
+\author{\normalsize X18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Comet 67P/Churyumov-Gerasimenko was discovered on October 23, 1969 by Soviet astronomer Klim Churyumov in Kyiv using photographic plates of another comet taken by Svetlana Gerasimenko in September at the Alma-Ata Observatory. At first it was considered a fragment of 32P/Comas Sol, but then it turned out that the object was moving in a completely different orbit.
+
+\section*{Part A. Present.}
+
+One possible way to accurately study the orbit is spectral analysis. The emission spectrum of the comet is shifted relative to the reference lines of atoms and radicals due to the Doppler effect. From this displacement, it is possible to calculate the projection of the comet's velocity onto the line of sight (the ray connecting the observer and the comet) - the radial velocity.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T8_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The graph shows the dependence $v_r(r)$ of the radial velocity of object 67P on its heliocentric distance r (the observer is placed at the center of the Sun). Solar mass $M_S$, gravitational constant $G$, $1~\mathrm{AU}$ = distance from Earth to Sun ($\textit{numerical values of these constants are not provided}$).
+
+\problembox{A1}{For an ellipse, you can define the eccentricity parameter $e=\sqrt{1-b^2/a^2}$, where $a$ and $b$ are the major and minor semi-axes of the ellipse, respectively. Find the eccentricity $e$ of the orbit of comet Churyumov-Gerasimenko.}{0.50}
+
+\problembox{A2}{The total energy of a body that moves along an elliptical orbit does not depend on its eccentricity, but depends only on the length of the semi-major axis $a$. Find the speed $v$ of the comet as a function of the distance $r$. Express your answer in terms of $a$, $r$ and physical constants.}{1.00}
+
+\problembox{A3}{Find the radial velocity $v_r$ as a function of the distance $r$. Express your answer in terms of $a$, $r$, $e$ and physical constants.}{1.00}
+
+\problembox{A4}{Using the graph, find the length of the semimajor axis $a$ of the comet's orbit.}{0.50}
+
+\section*{Part B. The Future.}
+
+On February 10, 2015, the Sun was exactly between the comet Churyumov-Gerasimenko and the Earth, and the distance between the latter was $d_0=3.70~\mathrm{AU}$. Just six months later, on August 13, the comet was recorded passing the perihelion of its orbit.
+
+\problembox{B1}{When will the comet next pass perihelion?}{0.40}
+
+\problembox{B2}{Estimate when we can expect the comet's next close approach to the Earth (the distance during a close approach does not exceed the minimum possible by more than $15\%$). The orbital planes of the Earth and the comet coincide, as do the directions of angular velocities. Consider the Earth's orbit to be circular.}{2.50}
+
+\section*{Part C. The Past}
+
+The gravitational influence of the large planets of the solar system can significantly change the orbits of other bodies. Computer modeling showed that before 1959, the perihelion of comet 67P/Churyumov-Gerasimenko was at a distance of $q_l=2.70~\mathrm{AU}$. from the Sun. As a result of interaction with Jupiter, this distance decreased, while the eccentricity remained virtually unchanged. Since then, the orbit has not been disturbed anymore.
+
+\problembox{C1}{Record the comet's current perihelion distance $q$.}{0.10}
+
+\problembox{C2}{Find the change $\Delta{(v^2)}$ in the squared magnitude of the comet's velocity during its interaction with Jupiter. Express your answer using $q$, $q_l$, $v_{r_{max}}$, $e$. Also obtain the numerical value $\Delta{(v^2)}$.}{2.00}
+
+\problembox{C3}{Find the angle $\Delta \psi$ through which the comet's velocity vector has rotated as a result of the described interaction, if it is known that it does not exceed $30^{\circ}$. Consider that Jupiter is moving in a circular orbit of radius $R=5.20~\mathrm{AU}$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/317}
+
+\end{document}

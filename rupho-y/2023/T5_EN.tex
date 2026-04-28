@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thomson jumping ring}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+To demonstrate the law of electromagnetic induction, a device called a Thomson induction accelerator is very often used. As shown in the figure, the accelerator is a long vertical ferromagnetic core, the lower end of which is placed in a solenoid. If you put a small ring of conductive non-magnetic material on the core and apply a powerful alternating current to the solenoid, the ring will fly up. If the current strength is increased slowly, the ring will soon come off the support and begin to levitate. This occurs due to the interaction of the solenoid's magnetic field with eddy currents (Foucault currents) generated in the ring. In this problem we study in detail the induction accelerator and the behavior of the ring. In future calculations, consider the height of the upper end of the core above the support (the initial position of the ring) to be equal to $H=200~\text{mm}$, the diameter of the core and ring to be $d=30~\text{mm}$. The mass of the ring is $m=30~\text{g}$, its inductance is $L=1{.}0~\text{H}$, and its resistance is $R=1.0~\text{Ohm}$. Cyclic frequency of current used $\omega=100\pi~\text{}/\text{s}$, acceleration due to gravity $g=9{.}8~\text{m}/\text{s}^2$.
+
+To demonstrate the law of electromagnetic induction, a device called a Thomson induction accelerator is very often used. As shown in the figure, the accelerator is a long vertical ferromagnetic core, the lower end of which is placed in a solenoid. If you put a small ring of conductive non-magnetic material on the core and apply a powerful alternating current to the solenoid, the ring will fly up. If the current strength is increased slowly, the ring will soon come off the support and begin to levitate. This occurs due to the interaction of the solenoid's magnetic field with eddy currents (Foucault currents) generated in the ring. In this problem we study in detail the induction accelerator and the behavior of the ring. In future calculations, consider the height of the upper end of the core above the support (initial position of the ring) to be $H=200~\text{mm}$, the diameter of the core and ring – $d=30~\text{mm}$. The mass of the ring is $m=30~\text{g}$, its inductance is $L=1{.}0~\text{H}$, its resistance is $R=1.0~\text{Ohm}$. Cyclic frequency of current used $\omega=100\pi~\text{}/\text{s}$, free fall acceleration $g=9{.}8~\text{m}/\text{s}^2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+In all points of the problem, consider that the induction component $B_z$ of the magnetic field inside the core depends only on the coordinate $z$. Also, everywhere except part C, consider that the induced emf in the ring is caused only by the vortex electric field.
+
+\section*{Part A. Force acting on the ring (1.9 points)}
+
+Let's consider the movement of the ring along the core. Let us introduce cylindrical coordinates by directing the axis $z$ vertically upward along the axis of symmetry of the core so that the support corresponds to the coordinate $z=0$. Let the axial component of the magnetic field be equal to $B_z(t)$ inside the core, and let the radial component of the magnetic field be equal to $B_\rho(t)$ outside the core. When the magnetic field changes in the core, Foucault currents arise in the ring, which interact with the radial component of the magnetic field. For the positive direction of currents, take the direction of the round counterclockwise when viewed from above.
+
+\problembox{A1}{Write down an equation relating the current in the ring $I(t)$ and the magnetic field in the core $B_z(t)$.}{0.30}
+
+\problembox{A2}{Obtain the dependence of the eddy current strength $I(t)$ on time at $B_z(t)=B_\mathrm m\cos\omega t$.}{0.50}
+
+Let now the field components be functions not only of time $t$, but also of the coordinates $z$. However, we will assume that the characteristic scale on which these functions change noticeably is much larger than the scale of “fast” ring oscillations. Thus, $B_z(z,t)=B_{0z}(z)\cos\omega t$ and $B_\rho(z,t)=B_{0\rho}(z)\cos\omega t$.
+
+\problembox{A3}{From Gauss's theorem, find the radial component of the field $B_{0\rho}(z)$. Further, in all points, use the result obtained.}{0.30}
+
+\problembox{A4}{Find the dependence of the axial component of the force $F_z(z,t)$ acting on the ring on the coordinate $z$ and time $t$.}{0.20}
+
+Since the frequency $\omega$ of the alternating current is also noticeably greater than the characteristic time scale on which the ring moves, we can assume that the force $F_z(z)$, averaged over the period, acts on the ring.
+
+\problembox{A5}{Find $F_z(z)$.}{0.60}
+
+\section*{Part B. Jumping and levitation (2.3 points)}
+
+Calculating the magnetic field components in a real induction accelerator is a rather complicated task, so in what follows we will assume that $B_{0z}(z)$ decreases linearly from a certain value $B_0$ at $z=0$ to zero at $z=H$. There is no field above the upper edge of the core.
+
+\problembox{B1}{Find an expression for $F_z(z)$ in the geometry under consideration and the potential of this force $U_F(z)$ (assume that it is zero at the top of the core).}{0.50}
+
+\problembox{B2}{At what height $h$ will the ring float in a state of equilibrium if the field is “turned on” slowly? Express your answer in terms of $m$, $g$, $R$, $L$, $\omega$, $d$, $B_0$, $H$.}{0.50}
+
+\problembox{B3}{To what height $h_\mathrm m$ will the ring jump if the field is “turned on” quickly? Express your answer in terms of $m$, $g$, $R$, $L$, $\omega$, $d$, $B_0$, $H$.}{0.50}
+
+These quantities can be related to each other.
+
+\problembox{B4}{Find to what height $h_\mathrm m$ in the general case the ring will jump when the field is turned on quickly, if when it is turned on slowly it levitates at a height $h$. Compute $h_\mathrm m$ if $h=18~\text{cm};8~\text{cm}$. Give your answers to two significant figures.}{0.80}
+
+\section*{Part C. Damping of oscillations (1.5 points)}
+
+In this part, we will take into account the contribution to the EMF caused by the change in the magnetic flux in the ring due to its movement along the $z$ axis. Let's assume that we turned on the magnetic field sharply, and the ring flew up to a height of $h_\mathrm m=16~cm$. Subsequently, the ring moves periodically along the core, slowly losing energy due to dissipation caused by this contribution to the emf. Let's explore this movement. Let the ring move at point $z$ with an average speed $v_z$.
+
+\problembox{C1}{Find the additional average Ampere force $F_z(v_z,z)$ due to the motion of the ring.}{0.50}
+
+Due to the losses described above, as a result of each oscillation, the amplitude of oscillations of the ring $A$ will decrease by a certain amount $\Delta A\ll A$. Let us introduce the logarithmic damping decrement as $\delta=\Delta A/A$.
+
+\problembox{C2}{Find the damping decrement $\delta$. Express your answer in terms of $R$, $L$, $\omega$, $g$, $H$, $h_\mathrm m$. Calculate $\delta$ to two significant figures.}{1.00}
+
+\section*{Part D. Several rings (1.8 points)}
+
+Now let’s apply just enough current to the solenoid so that the ring stops pressing on the support. Let's put another similar ring on top. Contrary to intuition, a pair of rings will rise above the support to a certain height. Let's explore this phenomenon in more detail.
+
+\problembox{D1}{Find the resistance $R_n$ of the stack of $n$ contact rings. Find the specific force $F_n/nmg$ acting on each of the rings in the stack at $z=0$. At what height $h_n$ does the stack levitate? The rings can be considered very thin, so the inductance of a stack of rings is equal to the inductance of a single ring. Express your answers using $n$, $H$, $R$, $L$, $\omega$.}{0.80}
+
+\problembox{D2}{At what number of rings $n_\mathrm{opt}$ will the specific force be greatest? Calculate it for the ring considered in the problem.}{0.50}
+
+\problembox{D3}{At what maximum number of rings $n_\mathrm{max}$ will the stack of rings still levitate? Calculate it for the ring considered in the problem.}{0.50}
+
+\section*{Part E. Such an engine (2.5 points)}
+
+The Thomson induction accelerator can be considered not only as an interesting demonstration model, but also as a completely working converter of electrical energy into mechanical energy. Let's try to find out how effective it is. The setup parameters for the numerical calculation are the same as in the introduction; $h=18~cm$. Consider that when the field is turned on abruptly, the ring can rise above the upper edge of the core.
+
+\problembox{E1}{Find how the average power $R\overline{i^2}$ of the Foucault currents arising in the coil depends on the coordinate $z$. Express your answer in terms of $z$, $H$, $R$, $L$, $\omega$, $g$ and $h$.}{0.70}
+
+\problembox{E2}{Find numerically the total Joule losses $Q$ in the ring during its acceleration. Give your answer to two significant figures.}{1.30}
+
+\problembox{E3}{Find numerically the mechanical energy $E$ transferred to the ring during its acceleration. Give your answer to two significant figures.}{0.30}
+
+\problembox{E4}{Find numerically the efficiency $\eta$ of the Thomson induction accelerator. Give your answer to two significant figures.}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3449}
+
+\end{document}

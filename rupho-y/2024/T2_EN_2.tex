@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Electromagnetic Hydrodynamics}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The interaction of electromagnetic fields with non-magnetic liquids in the case of high liquid conductivity is well studied within the framework of magnetohydrodynamics (MHD). In this case, electrical effects can be neglected compared to magnetic ones. The opposite case, involving low liquid conductivity, is studied in electrohydrodynamics (EHD). The most scientifically interesting case involves intermediate conductivities, where both electrical and magnetic effects must be considered. This field is called electromagnetic hydrodynamics (EMHD).
+
+In this problem, you are invited to study the dynamics of fluid motion inside flat and cylindrical capacitors placed in a uniform magnetic field. Exact solutions in EMHD are complex, so we adopt the following model:
+\begin{itemize}
+    \item All external electromagnetic fields and fluid motions are stationary.
+    \item The self-magnetic field created by currents in the liquid is neglected; the total magnetic field equals the external field $\vec{B}(\vec{r})$.
+    \item The external magnetic field $\vec{B}(\vec{r})$ is created by currents flowing outside the liquid.
+    \item The volume density of free charge is zero at all points in the liquid.
+\end{itemize}
+
+Consider a liquid with density $\rho$, conductivity $\sigma$, dynamic viscosity $\eta$, and magnetic permeability $\mu \approx 1$. Newton's law of viscosity states that the shear stress $\tau_{xy} = \tau_{yx}$ is proportional to the shear strain rate:
+$$\tau_{xy} = \tau_{yx} = \eta \left( \frac{\partial v_x}{\partial y} + \frac{\partial v_y}{\partial x} \right)$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{T2_EN_Assets/fig1.jpg}
+    \caption{Fluid element and shear stresses.}
+\end{figure}
+
+\section*{Part A. EMHD equations (0.8 points)}
+
+The key relationship in EMHD is the connection between current density $\vec{j}(\vec{r})$ and the parameters $\sigma, \vec{E}, \vec{B},$ and $\vec{v}$. For a conductor moving in a magnetic field, the current density is determined by the average force per unit charge:
+$$\vec{j} = \sigma \left\langle \frac{\vec{F}}{q} \right\rangle$$
+
+\problembox{A1}{Let $\vec{v}$ be the fluid velocity. What is the current density $\vec{j}$ at a given point? Express your answer in terms of $\sigma, \vec{E}, \vec{B}$ and $\vec{v}$.}{0.30}
+
+\problembox{A2}{Determine the force density $\vec{f_B}$ acting per unit volume of liquid from the magnetic field. Express your answer in terms of $\sigma, \vec{E}, \vec{B}$ and $\vec{v}$.}{0.20}
+
+\problembox{A3}{Show that if the volume density of free charge is zero, then the volume density of the total charge is also zero at any point.}{0.30}
+
+\section*{Part B. Fluid flow in a parallel plate capacitor (3.3 points)}
+
+Consider a parallel plate capacitor (distance $d$, voltage $U$, width $L \gg d$) placed in a uniform magnetic field $\vec{B} = B\vec{e}_y$. A conductive liquid flows stationary between the plates.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{T2_EN_Assets/fig2.jpg}
+    \caption{Parallel plate capacitor setup.}
+\end{figure}
+
+Assume $\vec{E}$ is uniform, $\vec{v}$ is directed along $z$, and fluid pressure is constant throughout.
+
+\problembox{B1}{From physical considerations, what is the force $\vec{f_E}$ acting on a unit volume of liquid from the electrostatic field? Justify your answer.}{0.30}
+
+\problembox{B2}{Show that the velocity profile is $v(x) = A\cosh \omega x + B\sinh \omega x + C$. Determine $A, B, C$ and $\omega$ in terms of $\sigma, \eta, U, B$ and $d$.}{1.00}
+
+\problembox{B3}{Determine the maximum fluid flow velocity $v_{\max}$.}{0.20}
+
+\problembox{B4}{Obtain $v(x)$ for a weak magnetic field ($Bd \ll \sqrt{\eta/\sigma}$). Determine $v_{\max}$ and sketch the profile.}{0.40}
+
+\problembox{B5}{Determine $v_{\max}$ for a strong magnetic field ($Bd \gg \sqrt{\eta/\sigma}$) and sketch the profile.}{0.30}
+
+\problembox{B6}{Obtain the dependence of the mass flow rate $Q$ through the capacitor cross-section.}{0.30}
+
+\problembox{B7}{Obtain approximations for $Q(B)$ in the weak and strong field limits.}{0.40}
+
+\problembox{B8}{Construct a qualitative graph of the dependence of mass flow rate $Q$ on induction $B$.}{0.40}
+
+\section*{Part C. Liquid in a cylindrical capacitor (1.5 points)}
+
+Consider a capacitor with coaxial cylindrical plates (radii $R_1, R_2$, height $h \gg R_2$). First, assume no electromagnetic fields and that the plates rotate at angular velocities $\omega_1, \omega_2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\textwidth]{T2_EN_Assets/fig3.jpg}
+    \caption{Cylindrical capacitor cross-section.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\textwidth]{T2_EN_Assets/fig4.jpg}
+    \caption{Rotating cylindrical plates.}
+\end{figure}
+
+\problembox{C1}{Determine the moments $M_1, M_2$ applied to the plates to maintain stationary motion.}{1.30}
+
+\problembox{C2}{Obtain the dependence of fluid velocity $v(r)$ on the distance $r$ to the axis.}{0.20}
+
+\section*{Part D. Equations in a cylindrical capacitor (0.9 points)}
+
+Now apply voltage $U$ ($\varphi_{inner} > \varphi_{outer}$) and a uniform magnetic field $\vec{B} = -B\vec{e}_z$. The plates are fixed.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{T2_EN_Assets/fig5.jpg}
+    \caption{Fields in the cylindrical setup.}
+\end{figure}
+
+\problembox{D1}{Determine the electric field strength $\vec{E}(r)$ between the cylinders.}{0.30}
+
+\problembox{D2}{Determine the force density $\vec{f_B}$ from the magnetic field.}{0.20}
+
+\problembox{D3}{Indicate the direction of the force $\vec{f_E}$ from the electrostatic field. Justify your answer.}{0.40}
+
+\section*{Part E. Flow at low speeds (2.0 points)}
+
+Consider the case $v \ll E/B$, realized in weak magnetic fields.
+
+\problembox{E1}{Obtain the velocity profile $v(r)$.}{1.60}
+
+\problembox{E2}{Estimate the maximum $B_{\max}$ for which these results remain applicable.}{0.40}
+
+\section*{Part F. Flow in a very strong magnetic field (1.5 points)}
+
+Consider the induction $B$ to be very large.
+
+\problembox{F1}{Obtain $v(r)$ for the strong field case far from the plates.}{0.90}
+
+\problembox{F2}{Construct a qualitative graph of $v(r)$ for all values of $r$ between the plates.}{0.60}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/3794
+
+\end{document}

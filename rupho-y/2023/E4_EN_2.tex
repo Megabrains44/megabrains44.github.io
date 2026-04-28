@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Intensities in diffraction}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem, there is no need to estimate errors!
+
+\textbf{Equipment:} 
+1. Optical bench. 2. Movable stands (6 pcs.). 3. Magnetic holders (3 pcs.). 4. Platform for smooth horizontal movements. 5. Diffraction grating holder. 6. Laser holder. 7. Steel screen. 8. Lens. 9. Laser module (wavelength 630 nm, max 5 V). 10. Slide with diffraction gratings, plastic holder with clips. 11. Power supply. 12. CCD array (linear array of photodiodes, 10 $\mu$m size). 13. Slit (blades in a slide frame). 14. Tape measure. 15. Laser connection wires. 16. Laptop.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E4_EN_assets/fig1.jpg}
+    \caption{Experimental setup components.}
+\end{figure}
+
+\section*{Working with the program}
+
+The program reads intensity from the CCD array. \textbf{Interface elements:} 1. Main axes. 2. Graph field. 3. Intensity plot. 4. Data collection button. 5. Port selection (COM3). 6. Sensor sensitivity. 7. Theoretical curve. 8. Function parameter widget. 9. Theory plot activation button. 10. Averaging bar. 11. Plotting widget. 12. Save/Load widget (.dat files). 13. Total intensity.
+
+\textbf{Operation:} Connect the device. Select COM3 in (5). Click "Get Data" (4). Use averaging (10) to reduce noise. Sensitivity (6) must be a divisor of 50000. For Fresnel diffraction (Part C), use (8) to adjust theoretical parameters. Save all data to a folder named with your surname on the desktop.
+
+\section*{Part A. Diffraction grating (2.8 points)}
+
+Laser radiation with wavelength $\lambda$ falls normally on a grating with period $d$ and slit width $b$.
+
+\problembox{A1}{Express the direction angle $\varphi$ to the $m$-th maximum in terms of the laser wavelength $\lambda, m$, and the grating period $d$.}{0.20}
+
+\problembox{A2}{Express the intensity $I_m$ of the $m$-th maximum in terms of the zero-maximum amplitude $I_0, d$, and the slit width $b$.}{0.70}
+
+Assemble the setup using grating DG3. Obtain the intensity distribution using the spectroscopic sensor.
+
+\problembox{A3}{Obtain the diffraction pattern. Save the file as "A3" in your folder. Enter the filename on your answer sheet.}{0.20}
+
+\problembox{A4}{Determine the lattice period $d$ as accurately as possible.}{0.80}
+
+\problembox{A5}{Determine the slit width $b$ as accurately as possible.}{0.90}
+
+\section*{Part B. Fraunhofer diffraction by a slit (1.4 points)}
+
+Laser light falls on a single slit. At distance $l$, a sensor records the intensity distribution. Ensure the beam hits the center of the slit perpendicularly.
+
+\problembox{B1}{Assemble the setup. Obtain the diffraction pattern. Record distance $l$. Save the data as "B1".}{0.40}
+
+\problembox{B2}{Determine the slit width $b$. Provide the theoretical formulas used for the calculation.}{1.00}
+
+\section*{Part C. Fresnel diffraction (3.8 points)}
+
+In this part, you study Fresnel diffraction using the blades in the holder. Record the holder number. A point source $S$ is at distance $a$ from the slit, and the detector plane is at distance $l$ from the slit.
+
+\problembox{C1}{Write the exact expression for the phase difference $\delta(x, y)$ between a secondary wave from point $x$ in the slit and the center, reaching point $y$ on the detector. Use $x, y, a, l, \lambda$.}{0.20}
+
+\problembox{C2}{Assuming $x, y \ll a, l$, show the phase difference can be written as $\delta = \delta_0 + (x- x_1)^2/L_0^2$ where $x_1 = x_{10} + \alpha y$, $\alpha = a/(a+l)$, and $L_0^2 = al\lambda / (\pi(a+l))$.}{0.60}
+
+To fit the theory in the program, you must specify 5 parameters:
+1. \textbf{Amplitude A}: vertical scale (order 100--1000).
+2. \textbf{Slit width b}: in meters.
+3. \textbf{Displacement}: horizontal shift $y_0$ in meters.
+4. \textbf{Coefficient $\alpha$}.
+5. \textbf{Length $L_0$}.
+
+\problembox{C3}{Determine the focal length $F$ of the lens provided.}{0.30}
+
+The laser hits the lens, forming a point source at the focal plane. Distance $a$ is measured from this focus to the slit.
+
+\problembox{C4}{Approach the slit to the focus and save three patterns: 1. A minimum begins to form in the center; 2. A deep intensity dip in the center ($I_{\min}/I_{\max}$ is minimal); 3. A central maximum with two side minima is visible. Record geometric parameters and save as "C4.1", "C4.2", "C4.3".}{1.20}
+
+\problembox{C5}{Fit the theoretical parameters to match the central part of your experimental data. Provide the resulting parameters. Note: the function is invariant if $\alpha, L_0$, and $b$ are scaled by the same factor.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3496}
+
+\end{document}

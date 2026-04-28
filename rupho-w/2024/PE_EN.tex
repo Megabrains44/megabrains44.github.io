@@ -1,0 +1,107 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Liquid-vapor transition}}
+\author{\normalsize W24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Preface}
+
+The simple iteration method (SI) is one of the simplest methods for numerically solving equations. To solve the equation using the MPI, it is represented as \textbackslash\{\}[x=f(x).\textbackslash\{\}]Substituting the initial approximation $x_0$ as an argument to the function, we obtain the first approximation $x_1$. Further, substituting $x_1$ as an argument to the function, we obtain the second approximation $x_2$, etc. The function $f(x)$ can always be chosen so that the difference between successive approximations decreases, and the result of the calculations becomes closer to the correct answer. The simple iteration method is convenient to use for numerically finding quantities that are given implicitly as a solution to some equation. Note: the problem uses the function $\operatorname{th}x$ - hyperbolic tangent. It is defined as \textbackslash\{\}[\textbackslash\{\}operatorname\{th\}x=\textbackslash\{\}frac\{e^x-e^\{-x\}\}\{e^x+e^\{-x\}\}.\textbackslash\{\}]It is easy to see that $|\operatorname{th}x| < 1$. The inverse of the hyperbolic tangent is denoted $\operatorname{arth}x$. Note: Throughout the problem, the letter $t$ represents the temperature at ${}^\circ\mathrm C$, and the letter $T$ represents the temperature at $\rm K$.
+
+The simple iteration method is convenient to use for numerically finding quantities that are given implicitly as a solution to some equation.
+
+Note: the problem uses the function $\operatorname{th}x$ - hyperbolic tangent. It is defined as \textbackslash\{\}[\textbackslash\{\}operatorname\{th\}x=\textbackslash\{\}frac\{e^x-e^\{-x\}\}\{e^x+e^\{-x\}\}.\textbackslash\{\}]It is easy to see that $|\operatorname{th}x| < 1$. The inverse of the hyperbolic tangent is denoted $\operatorname{arth}x$.
+
+Note: Throughout the problem, the letter $t$ represents the temperature at ${}^\circ\mathrm C$, and the letter $T$ represents the temperature at $\rm K$.
+
+\section*{Part A. Szymanski's equation (5.5 points)}
+
+In this problem we will consider the liquid–vapor phase transition. This transition is characterized by the specific heat of evaporation of the liquid $L$. In reality, the specific heat of evaporation depends on temperature. This dependence can be described with good accuracy by the Szymanski equation \textbackslash\{\}[\textbackslash\{\}frac L\{L_0\}=\textbackslash\{\}operatorname\{th\}\textbackslash\{\}left[\textbackslash\{\}frac\{L\}\{L_0\} \textbackslash\{\}frac\{T_\textbackslash\{\}mathrm c\}\{T\}\textbackslash\{\}right].\textbackslash\{\}]The characteristic form of dependence $L(T)$ is shown in Fig. 1. Here $L_0$ and $T_\mathrm c$ are some quantities determined by the nature of the liquid. $L_0$ has the dimension of the specific heat of evaporation, and $T_\mathrm c$ is called the critical temperature of the liquid. We will find out the physical meaning of the critical temperature in the next part of the problem, but for now we will determine $L_0$ and $T_\mathrm c$ for water using the known values ​​of $L(t)$.
+
+Rice. 1 -- Characteristic type of dependence $L(T)$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let us know the values ​​of the specific heat of evaporation of liquid $L_1$ and $L_2$ at temperatures $T_1$ and $T_2$, respectively (to be specific, $T_2 > T_1$).
+
+\problembox{A1}{Write down an equation that will allow you to use the simple iteration method to find the value $\dfrac{T_\mathrm c}{L_0}$, and equations that will allow you to find the values ​​$T_\mathrm c$ and $L_0$ from there.}{1.00}
+
+In the answer sheets you are given a table of pairs of dots $(t_1,L_1)$ and $(t_2,L_2)$ (one pair per line).
+
+\problembox{A2}{For each pair of points, find the values ​​$T_\mathrm c$ and $L_0$.}{4.00}
+
+\problembox{A3}{Find the arithmetic average of the values ​​you obtained, $\overline T_\mathrm c$ and $\overline L_0$.}{0.50}
+
+\section*{Part B. Critical point of water (4.5 points)}
+
+As you may have noticed, the specific heat of evaporation of a liquid decreases with increasing temperature, going to zero at a temperature above the critical one. Thus, the liquid-vapor transition at a temperature above the critical temperature would not imply a change in the interaction energy of molecules, i.e. liquid will be no different from steam. This state of matter at temperatures above $T_\mathrm c$ is called supercritical fluid. Moreover, at temperatures below $T_\mathrm c$, liquid and vapor are different phases of the substance. In coordinates $(p,T)$ (see Fig. 2), the boundary between them actually represents the saturated vapor pressure curve $p_\text{н}(T)$. The saturated vapor pressure satisfies the Clapeyron-Clausius equation \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}mathrm dp_\textbackslash\{\}text\{н\}\}\{p_\textbackslash\{\}text\{н\}\}=\textbackslash\{\}frac\{\textbackslash\{\}mu L\}\{R\}\textbackslash\{\}frac\{\textbackslash\{\}mathrm dT\}\{T^2\},\textbackslash\{\}]where $\mu$ is the molar mass of the substance $\big($for water $\mu_\text{в}=18.0~\frac{\text{г}}{\text{mol}}\Big)$, $R=8.314~\frac{\text{J}}{\text{mol}\cdot\text{К}}$ is the universal gas constant. Point $(p_\text{н}(T_\mathrm c),T_\mathrm c)$ is called the critical point of the substance. In this part we will try to estimate the pressure $p_\mathrm c=p_\text{н}(T_\mathrm c)$ at the critical point.
+
+This state of matter at temperatures above $T_\mathrm c$ is called supercritical fluid. Moreover, at temperatures below $T_\mathrm c$, liquid and vapor are different phases of the substance. In coordinates $(p,T)$ (see Fig. 2), the boundary between them actually represents the saturated vapor pressure curve $p_\text{н}(T)$. The saturated vapor pressure satisfies the Clapeyron-Clausius equation \textbackslash\{\}[\textbackslash\{\}frac\{\textbackslash\{\}mathrm dp_\textbackslash\{\}text\{н\}\}\{p_\textbackslash\{\}text\{н\}\}=\textbackslash\{\}frac\{\textbackslash\{\}mu L\}\{R\}\textbackslash\{\}frac\{\textbackslash\{\}mathrm dT\}\{T^2\},\textbackslash\{\}]where $\mu$ is the molar mass of the substance $\big($for water $\mu_\text{в}=18.0~\frac{\text{г}}{\text{mol}}\Big)$, $R=8.314~\frac{\text{J}}{\text{mol}\cdot\text{К}}$ is the universal gas constant.
+
+The point $(p_\text{н}(T_\mathrm c),T_\mathrm c)$ is called the critical point of the substance. In this part we will try to estimate the pressure $p_\mathrm c=p_\text{н}(T_\mathrm c)$ at the critical point.
+
+Rice. 2 -- Phase diagram of water in coordinates $(p,T)$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Since $\dfrac{\mathrm dT}{T^2}=-\mathrm d\left[\dfrac1T\right]$, to find $p_\mathrm c$ it is convenient to plot $L\left(\dfrac1T\right)$ on graph paper and find the area $S$ under it.
+
+\problembox{B1}{Write down a formula that allows you to use the simple iteration method to find $L\left(\dfrac1T\right)$ using the values ​​$\overline L_0$ and $\overline T_\mathrm c$ obtained in the previous part.}{0.30}
+
+\problembox{B2}{Using this formula, find the dependence of $L\left(\dfrac1T\right)$ in the temperature range from $t=100~{}^\circ\mathrm C$ to $T_\mathrm c$. Note: Count at least 20 points, try to cover the range uniformly. This will increase the accuracy of your further calculations.}{2.00}
+
+Note: Count at least 20 points, try to cover the range uniformly. This will increase the accuracy of your further calculations.
+
+\problembox{B3}{Plot $L\left(\dfrac1T\right)$ from $t=100~{}^\circ\mathrm C$ to $T_\mathrm c$.}{0.50}
+
+\problembox{B4}{Calculate the area $S$ under the graph.}{1.00}
+
+\problembox{B5}{Express the pressure $p_\mathrm c$ at the critical point in terms of $S$ and calculate it to three significant figures if the pressure is $p_\text{н}(100~{}^\circ\mathrm C)=1.013\cdot10^5~\text{Па}$.}{0.70}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3495}
+
+\end{document}

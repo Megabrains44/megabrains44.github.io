@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Two-component mixtures</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Two-component mixtures</h1>
+<p class="camp">Y21 (2021) — English translation</p>
+<p>The saturated vapor pressure above the surface of a mixture of two ideally miscible liquids ($A$) and ($B$) obeys Raoult’s law: $$ P_A=p_A x_A\\ P_B=p_B x_B, $$ где $p_A$, $p_B$ – давления насыщенных паров чистых жидкостей $A$ и $B$, $x_A$ и $x_B$ – молярные доли компонент жидкости в смеси ($x_A+x_B=1$).</p>
+<div class="figure"><img src="T3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Given $p_A$, $p_B$, $x_A$, $x_B$. Find the mole fractions of the mixture components in the gaseous fraction ($y_A$ and $y_B$).</div><span class="pb-pts">1.00</span></div>
+<p>The pressure of saturated vapor above the surface of a pure liquid depends on temperature. This dependence can be restored by considering the Carnot cycle, where a two-phase liquid-vapor system is used as a working fluid.</p>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Let the molar heat of vaporization $\lambda$ and the boiling point of the liquid $t$ at atmospheric pressure $P_0$ be known for a liquid. Find the dependence of the saturated vapor pressure of a pure liquid on temperature $P(T)$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Express $p_A/p_B$ at temperature $T$ in terms of the boiling points of pure liquids $t_A$ and $t_B$ (at atmospheric pressure), their molar heats of vaporization $\lambda_A$ and $\lambda_B$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Counting $\lambda_A=\lambda_B=\lambda$, find the boiling point of the two-component mixture: $T(\lambda,t_A,t_B,x_B)$.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Assuming the temperature of the two-component system $T$ to be constant, plot the dependences $P(x_B) , P(y_B)$ and $y_B(x_B)$ on the graphs.</div><span class="pb-pts">1.50</span></div>
+<div class="figure"><img src="T3_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<p>In a two-component system of two liquids with $p_B=2 p_A$, at the initial moment $x_B=0.01$. The vapor above the liquid is collected and condensed isothermally.</p>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">What $x_B$ will be reached after the first condensation ($N=1$)?</div><span class="pb-pts">0.60</span></div>
+<p>After the first condensation, the volume of the vessel is isothermally increased slightly so that saturated steam again appears in a small volume, this steam is collected and the procedure is repeated $N$ times.</p>
+<div class="problem-box"><span class="pb-id">A7</span><div class="pb-text">What $x_B$ will be achieved after the procedure is repeated $N=10$ times, $N= 10^6$?</div><span class="pb-pts">1.40</span></div>
+<div class="figure"><img src="T3_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>In a two-component system of two liquids with $p_B=2 p_A$, at the initial moment $x_B=0.5$.  At the initial moment, the volume of the vessel is only slightly larger than the volume of the liquid, then the vapor above the surface of the liquid is slowly pumped out, and the volume of the vessel is reduced so that the volume of the vapor is always much less than the volume of the liquid. During the entire process, the temperature $T$ remains constant. The molar densities of the mixed liquids are considered equal. After a long time, the mole fraction of liquid $B$ in the mixture reached $x_B=1/3$.</p>
+<div class="problem-box"><span class="pb-id">A8</span><div class="pb-text">Find how many times the total amount of liquid has decreased by this moment?</div><span class="pb-pts">2.00</span></div>
+<div class="figure"><img src="T3_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/239">https://pho.rs/p/239</a></p>
+</body>
+</html>

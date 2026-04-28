@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Added mass}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem we will consider mathematical similarities in describing two phenomena: added mass when a body moves in a liquid and a superconductor in a magnetic field. In hydrodynamics, to describe the movement of a fluid, such a characteristic is used as the circulation of the velocity vector, equal to $\Gamma=\displaystyle\oint_L\vec{v}\cdot\vec{dl}$, where $L$ is a certain closed loop. Circulation velocity serves as a measure of flow vorticity. Simple irrotational motion of an incompressible fluid without viscosity can be described by a circulation equal to zero: $\Gamma=0$. A superconductor is a material whose electrical resistance becomes zero when the temperature drops to a critical value. In 1933, the Meissner effect was discovered - the complete displacement of the magnetic field from the volume of a conductor during its transition to the superconducting state (see figure). The absence of a magnetic field in the volume of a conductor allows us to conclude from the general laws of the magnetic field that only a surface current exists in a superconductor. The magnetic field of the current destroys the external magnetic field inside the superconductor. In all further points of the problem, the fluid can be considered incompressible and without viscosity.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A. Solid in Liquid and Superconductor in a Magnetic Field}
+
+\problembox{A1}{Let us consider a rigid body moving translationally with speed $\vec{v_0}$ in a liquid. Let us move to the reference system in which the body is at rest. What is the normal velocity component to the surface of a solid body $v_n$? What is the velocity of the fluid at an infinite distance from the body $\vec{v_\infty}$ in the reference frame associated with the body? Record your answers in the table at the beginning of your answer sheet.}{0.40}
+
+\problembox{A2}{Let us consider a stationary superconducting body placed in a uniform field with induction $\vec{B}_0$. The geometric dimensions of the body and its orientation with respect to the vector $\vec{B}_0$ coincide with the dimensions of the body and the orientation of the body with respect to the vector $\vec{v}_0$ from point A1. What is the normal component of the magnetic field induction $B_n$? What is the magnetic field induction $\vec{B}_{\infty}$ at an infinite distance from the superconductor? Record your answers in the table at the beginning of your answer sheet.}{0.40}
+
+\problembox{A3}{Let the distribution of magnetic field induction $\vec{B}$=$f(\vec{B}_0, \vec{r})$ be given for point A2 in the entire space. Assuming that the vectors $\vec{B}_0$ and $\vec{v}_0$ are co-directed, find the distribution of fluid velocity in space in the reference system associated with the body.}{0.40}
+
+\section*{Part B. Ball in liquid}
+
+When a body moves, the liquid also begins to move and, therefore, has kinetic energy. During translational motion, this quantity does not depend on the speed of the body and is determined by the relation $E_k=\cfrac{(m+\mu)v^2}{2}$, where $E_k$ is the kinetic energy of the fluid and the body, $m$ is the mass of the moving body, $\vec{v}$ is the velocity vector of the body. In this part of the problem, we need to find the added mass of a ball of radius $R$ moving in a fluid having density $\rho$. Before the ball began to move, the liquid was also motionless. For universal notation, consider that $\vec{r}$ is a radius vector drawn from the center of the ball to an arbitrary point in space. Note: For this and the next part of the problem, you will need the results of Part A!
+
+Note: For this and the next part of the problem, you will need the results of Part A!
+
+\problembox{B1}{Let us place a superconducting ball of radius $R$ in a uniform magnetic field with induction $\vec{B_0}$. Find the magnetic field induction in all space outside the sphere. Express your answer in terms of $\vec{B_0}, \vec{r}$ and $R$.}{1.80}
+
+\problembox{B2}{Find the speed of the fluid in all space outside the sphere. Express your answer in terms of $\vec{v}, \vec{r}$ and $R$.}{0.50}
+
+\problembox{B3}{Find the kinetic energy of the fluid. Express your answer in terms of $v, \rho$ and $R$.}{1.70}
+
+\problembox{B4}{Find the value of $\mu$ for the ball. Express your answer in terms of $\rho$ and $R$.}{0.50}
+
+\section*{Part C. Cylinder in liquid}
+
+In this part of the problem, we need to find the added mass for a cylinder of length $L$ and radius $R$, moving translationally in the direction perpendicular to its axis of symmetry. When calculating fluid velocities, neglect edge effects (assume that the cylinder is infinitely long). Also consider that the main contribution to the kinetic energy comes from the fluid moving between the ends of the cylinder. The speed of the cylinder is $\vec{v}$, the density of the liquid is $\rho$. For universality of notation, consider that $\vec{r}$ is a radius vector perpendicular to the cylinder axis, drawn from it to an arbitrary point in space.
+
+\problembox{C1}{Let us place an infinitely long superconducting cylinder of radius $R$ in a uniform magnetic field of induction $\vec{B}_0$. Find the magnetic field induction in the entire space outside the cylinder. Express your answer in terms of $\vec{B}_0, \vec{r}$ and $R$.}{2.80}
+
+\problembox{C2}{Find the speed of the fluid throughout the space outside the cylinder. Express your answer in terms of $\vec{v}$, $\vec{r}$ and $R$.}{0.40}
+
+\problembox{C3}{Find the kinetic energy of fluid motion. Express your answer in terms of $\rho, R, L$ and $v$.}{0.90}
+
+\problembox{C4}{Find the value of the added mass $\mu$ for the moving cylinder. Express your answer in terms of $\rho, R$ and $L$.}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/30}
+
+\end{document}

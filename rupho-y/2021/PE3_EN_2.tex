@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thermodynamic black box}}
+\author{\normalsize Y21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The thermally insulated system consists of two vessels connected by a thin heat-conducting tube. The intrinsic heat capacity of the tube can be neglected; thermal equilibrium in each vessel and along the tube is established much faster than thermal equilibrium between the vessels.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+The heat capacity of the body in vessel No. 2 is known: $C_2 = 1~\text{kJ}/{}^\circ\mathrm{C}$. You can set the initial temperature of vessel No. 2 ($T_{20}$, between $0^\circ\mathrm{C}$ and $100^\circ\mathrm{C}$.) and the time $t$ after connecting the vessels with a tube. The program offered to you shows the temperature in vessel No. 2 at time $t$ (set in minutes) after connecting the vessels with a tube ($t=0$).
+
+\problembox{A1}{Determine the initial temperature of vessel No. 1 ($T_{10}$).}{0.40}
+
+\problembox{A2}{Plot a graph of the dependence of the heat capacity of vessel No. 1 on its temperature.}{3.60}
+
+\problembox{A3}{How long will it take for the temperature of vessel No. 1 to increase from $T_{10}$ to $T_{10}+20^\circ\mathrm{C}$ if, instead of vessel No. 2, a tube is connected to a vessel with a constant temperature $100^\circ\mathrm{C}$?}{3.00}
+
+\section*{Program}
+
+\noindent\textbf{exe} The executable file for Windows is published on GitHub.
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/244}
+
+\end{document}

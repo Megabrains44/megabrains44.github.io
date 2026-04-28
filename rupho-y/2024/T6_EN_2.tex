@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Optics coating}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Optics coating is a technology for treating the surface of lenses, prisms, and other optical parts to reduce the reflection of light from optical surfaces bordering air. This allows you to increase the light transmission of the optical system and increase the contrast of the image by reducing interfering parasitic reflections. Most optical systems, such as camera lenses, consist of many lenses, and reflection from each glass-air interface reduces the transmitted useful light flux. Without coating methods, the drop in intensity in a multi-lens system can reach several tens of percent. This problem is devoted to the theoretical foundations of optical coating.
+
+\section*{Part A. Fresnel formulas (3.2 points)}
+
+Let a plane electromagnetic wave with wave vector $\vec{k}$ and electric field strength $\vec{E}_0$ fall from medium 1 onto the interface between media 1 and 2 at an angle $\theta$ to the normal. The refractive indices are $n_1$ and $n_2$. The wave is partially reflected (index $r$) and partially transmitted (index $t$). An electromagnetic wave can be represented as a superposition of $s$-polarized and $p$-polarized waves. Positive directions of the vectors $\vec{E}_0$, $\vec{E}_r$, and $\vec{E}_t$ at point $O$ are shown in Fig. 1 for the $s$-polarized wave and in Fig. 2 for the $p$-polarized wave.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{T6_EN_Assets/fig1.jpg}
+    \caption{Positive directions for $s$-polarization.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{T6_EN_Assets/fig2.jpg}
+    \caption{Positive directions for $p$-polarization.}
+\end{figure}
+
+Media are nonmagnetic ($\mu \approx 1$) and waves are monochromatic. We use complex amplitudes where $r = E_r/E_0$ and $t = E_t/E_0$.
+
+\problembox{A1}{Express the amplitude of fluctuations in the magnetic field strength $H$ in terms of $E$, $n$, $\mu_0$, and $\varepsilon_0$.}{0.30}
+
+\problembox{A2}{Write down the 4 boundary conditions for the electric and magnetic fields satisfied at the interface.}{0.40}
+
+\problembox{A3}{Using boundary conditions, prove the equalities: $\omega_r = \omega_t = \omega$, $\theta_r = \theta$, and $n_2 \sin\theta_t = n_1 \sin\theta$.}{0.40}
+
+\problembox{A4}{Derive the Fresnel formulas for the complex reflection and transmission coefficients $r_s$ and $t_s$ in terms of $n_1, n_2, \theta$, and $\theta_t$.}{0.50}
+
+\problembox{A5}{Derive the Fresnel formulas for the coefficients $r_p$ and $t_p$ in terms of $n_1, n_2, \theta$, and $\theta_t$.}{0.50}
+
+If $\theta > \theta_{crit}$ (Total Internal Reflection), $\theta_t$ is complex.
+
+\problembox{A6}{Determine the value of $\cos\theta_t$ in terms of $n_1, n_2$, and $\theta$.}{0.30}
+
+\problembox{A7}{Represent $r_s = A_s e^{i\delta_s}$ and $r_p = A_p e^{i\delta_p}$. Determine $A_s, A_p, \delta_s,$ and $\delta_p$ in terms of $n_1, n_2,$ and $\theta$.}{0.40}
+
+\problembox{A8}{Define $\delta = \delta_p - \delta_s$ as one inverse trigonometric function in terms of $\theta$ and $n_{21} = n_2/n_1$.}{0.40}
+
+\section*{Part B. Fresnel and Mooney rhombuses (1.5 points)}
+
+Quarter-wave plates create circular polarization from linear polarization. Devices based on total internal reflection (TIR) work over a wider wavelength range.
+
+A \textbf{Fresnel rhombus} (Fig. 3) uses two total reflections to create a $\pi/2$ phase shift. Let $n = 1.510$ and $n_{air} = 1$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{T6_EN_Assets/fig3.jpg}
+    \caption{Fresnel rhombus.}
+\end{figure}
+
+\problembox{B1}{At what values of acute angle $\alpha$ will the wave experience TIR at both faces? Calculate in degrees to four significant figures.}{0.10}
+
+\problembox{B2}{At what values of $\alpha = \alpha'$ is circular polarization obtained?}{0.40}
+
+\problembox{B3}{At what values of $BC/AB$ does the rhombus reverse the entire beam?}{0.30}
+
+A \textbf{Mooney rhombus} (Fig. 4) uses reflections from $BC$ and $CD$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{T6_EN_Assets/fig4.jpg}
+    \caption{Mooney rhombus.}
+\end{figure}
+
+\problembox{B4}{Determine the values of $\alpha$ for TIR at faces $BC$ and $CD$.}{0.10}
+
+\problembox{B5}{At what values $\alpha = \alpha'$ is circular polarization obtained for the Mooney rhombus?}{0.30}
+
+\problembox{B6}{Determine the maximum ratio $\gamma$ of the beam cross-section to the area of face $AB$ such that the entire beam is reversed.}{0.30}
+
+\section*{Part C. Anti-reflective coating (3.6 points)}
+
+Consider media 1 ($n_1$) and 2 ($n_2$) separated by a plate of thickness $d$ and index $n$. A plane wave falls at angle $\theta$. Fig. 5 shows the superposition of 5 resulting waves.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{T6_EN_Assets/fig5.jpg}
+    \caption{Superposition of waves in a coated layer.}
+\end{figure}
+
+$r_1, t_1$ are coefficients at the $n_1/n$ interface; $r_2, t_2$ at the $n/n_2$ interface; $r'_1, t'_1$ for waves hitting the $n_1/n$ interface from the plate.
+
+\problembox{C1}{Show that $r'_1 = -r_1$ and $1 - r_1^2 = t_1 t'_1$.}{0.30}
+
+\problembox{C2}{Express $E_r$ and $E$ in terms of $E_1, E', r_1, r'_1, t_1,$ and $t'_1$.}{0.60}
+
+\problembox{C3}{Express $E'$ and $E_t$ in terms of $E, r_2, t_2, n, k, d,$ and $\theta$, accounting for the phase shift between $O$ and $O'$.}{0.60}
+
+\problembox{C4}{Determine the total reflectance $r = E_r/E_1$ in terms of $r_1, r_2, n, k, d,$ and $\theta$.}{0.60}
+
+For normal incidence ($\lambda_1$):
+
+\problembox{C5}{At what thickness $d$ can reflection vanish?}{0.70}
+
+\problembox{C6}{At what refractive index $n$ can reflection vanish?}{0.80}
+
+\section*{Part D. Optical tweezers (1.7 points)}
+
+Consider a biconvex lens ($n$) in air with radii of curvature $R$ and radius $r \ll R$. It is coated on both sides. Parallel light of intensity $I_0$ is incident.
+
+\problembox{D1}{What is the refractive index $n'$ of the antireflection coating?}{0.20}
+
+\problembox{D2}{What is the focal length $f$ of the lens?}{0.50}
+
+\problembox{D3}{Determine the force $F$ acting on the lens.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/3868
+
+\end{document}
+\end{latex}
+\end{document}

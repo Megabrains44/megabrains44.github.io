@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Heat engine}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The Carnot heat engine operates with two heat reservoirs of finite heat capacity $C=500~\text{J/K}$, which at the initial moment of time are at temperatures $T_h=625~\text{K}$ and $T_c=298~\text{K}$. The power developed by a heat engine decreases exponentially with time $P=P_0\,\mathrm{e}^{-kt}$, where $P_0=960~\text{W}$ is the power at the initial moment of time, and $t$ is the time elapsed since the initial moment.
+
+\problembox{A1}{At what temperature of the thermal reservoirs will the heat engine stop working?}{1.00}
+
+\problembox{A2}{How much work will the heat engine do during its operation?}{1.00}
+
+\problembox{A3}{After what time will the power developed by the heat engine be halved?}{1.00}
+
+\problembox{A4}{After what time will the efficiency of a heat engine decrease by half?}{1.00}
+
+\problembox{A5}{How long will it take for the temperature difference between the heat reservoirs to be halved?}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/101}
+
+\end{document}

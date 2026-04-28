@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Inclined planes}}
+\author{\normalsize X16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Composition on an inclined section}
+
+The railway section consists of 3 sections: the 1st and 3rd sections are horizontal, and the 3rd is located below the 1st at $h$. The second section, located between the 1st and 3rd, has a constant slope. The length of the 2nd section is $L$ (Fig. 1). The connections between sections are smooth (no shocks).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+A train of cars with length $S$ ($S > L$) followed along the stretch, moving from afar by inertia. The lengths of the 1st and 3rd sections are significantly longer than $S$. The friction acting on the train is negligible, the mass of the train is distributed evenly along its length, and the length of the car is much less than $L$. While the train was completely in the 1st section, its speed was $v$.
+
+\problembox{A1}{During what time did the train move on the stretch with a constant non-zero acceleration $a$?}{1.00}
+
+\problembox{A2}{What is this acceleration $a$?}{1.00}
+
+\problembox{A3}{How long did it take $\Delta t_1$ for the first car to move along the inclined section of the track?}{2.00}
+
+\problembox{A4}{How long did it take $\Delta t_2$ for the last car to move along the inclined section of the track?}{2.00}
+
+\section*{Part B. Ice on the hill}
+
+An ice cube slides down from a high straight slide of height $h = 30~\text{m}$. Having driven along the curve, which is much smaller in size than the size of the slide and comparable to the size of the ice cube, it travels horizontally for another $L = 60~\text{m}$. The trajectory of the ice cube in the rounding section is an arc of a circle of small radius (Fig. 2).  The horizontal distance from the projection of the top of the slide to the beginning of the horizontal section $d = 40~\text{m}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Find the coefficient of sliding friction $\mu$ between the ice and the ice.}{0}
+
+Hint: You may end up with an equation for $\mu$ that cannot be solved analytically. Figure out how to determine $\mu$ to two significant figures.
+
+\section*{Part C. Luggage on the slant panel}
+
+In the airport control area in front of the conveyor belt there is a panel with cylinders that can rotate freely about their axis (Fig. 3). A box of mass $M$ and length $L$ moves along solid cylinders of mass $m$ ($m \ll M$) and radius $r$ ($r \ll L$), which are located very close to each other, but do not touch each other. Horizontal distance between the conveyor belt and the beginning of the panel $d$ ($d \gg L$).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Calculate the average force against the box's motion (the component of the force directed against the speed of the box) for a horizontal panel. Calculate the time it takes for the box to move along the horizontal panel if it was launched at the initial speed. Now consider a longer panel installed at an angle $\alpha$ to the horizon, and the distance $d$ has not changed (Fig. 4). The box begins to move from rest. Consider that, since $d \gg L$, steady state (if possible) is reached quickly. At what angle $\alpha$ will the time of movement of the box be minimal?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{Answer questions 1, 2, 3 if the coefficient of friction is $\mu=0$.}{0.70}
+
+\problembox{C2}{Answer questions 1, 2, 3 if the coefficient of friction is $\mu \to \infty$.}{2.10}
+
+\problembox{C3}{Answer questions 1 and 3 if the friction coefficient $\mu$ is some known quantity comparable to 1. Assume that at any moment $v \ll \dfrac{Mr}{m} \sqrt{\frac{\mu g}{L}}$.}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4002}
+
+\end{document}

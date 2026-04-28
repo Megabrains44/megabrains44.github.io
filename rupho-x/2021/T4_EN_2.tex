@@ -1,0 +1,110 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Double dumbbell}}
+\author{\normalsize X21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+On a smooth horizontal surface lies a “double dumbbell,” a system consisting of two light rods of length $L$ connected by a mass hinge $2m$. Loads of mass $m$ are attached to the free ends of the rods. In this problem, the motion of this system is studied under different conditions.
+
+\section*{Part A. Movement on the surface (2.0 points)}
+
+At the initial moment, the weights and the hinge lie on the same straight line. At some point, one of the rods begins to rotate with a constant angular velocity $\omega$, and the load at its end is motionless all the time. In this part of the problem, it is necessary to find the angular velocity of rotation of the second rod at different moments of movement. Consider it known that angular velocity is a vector quantity directed perpendicular to the plane of motion (for the first rod it is codirectional with the $OZ$ axis and is equal to $\vec\omega$). Also consider known the law of addition of angular velocities
+$$\vec{\omega}=\vec{\omega}_{\mathrm{tr}}+\vec{\omega}_{\mathrm{rel}},$$
+where $\vec{\omega}_{\mathrm{tr}}$ is the angular velocity of the rotating reference frame and $\vec{\omega}_{\mathrm{rel}}$ is the angular velocity of the body as measured in that frame.
+
+\problembox{A1}{Find the angular velocity vector of the second rod at the initial moment of time. Express your answer in terms of $\vec\omega$.}{0.30}
+
+Let's move to a rotating reference system associated with the first rod. In a rotating reference frame, centrifugal and Coriolis forces act on the load of the second rod in the plane of motion, in addition to its tension force. The influence of the Coriolis force in this problem does not need to be taken into account, since it is perpendicular to the speed of the load and does not change its kinetic energy. Let us recall the expression for the centrifugal force
+$$\vec{F}_{\mathrm{cf}}=m\omega^2\vec{r},$$
+where $\vec{r}$ is the radius vector of the load in a rotating reference system, drawn from the origin.
+
+\problembox{A2}{At the initial moment of time, find the angular velocity vector $\vec{\omega}_{\mathrm{rel},0}$ of the second rod in the reference system associated with the first rod. Express your answer using $\vec{\omega}$}{0.20}
+
+\problembox{A3}{Find the potential energy of the load in the field of centrifugal force at a distance $r$ from the axis of rotation accurate to an arbitrary constant. Express your answer using $m$, $\omega$, $r$.}{0.50}
+
+\problembox{A4}{Let the second rod rotate at an angle $\varphi$ relative to the first. Find its angular velocity $\omega_{\mathrm{rel}}$ in this position. Express your answer using $\omega$ and $\varphi$.}{0.50}
+
+Now you have to calculate the speed of the load in a fixed frame of reference. Use the law of addition of velocities for rotating frames of reference.
+
+\problembox{A5}{Find the speed of the load in a fixed frame of reference. Express your answer in terms of $\omega$, $L$, $\varphi$.}{0.50}
+
+\section*{Part B. Movement in the vertical plane (4.2 points)}
+
+In this part of the problem, at the initial moment of time, the weights and the hinge are on the same straight line and the hinge is imparted a speed $v_0$, directed vertically upward. You are invited to investigate the further movement of such a system. Let at some moment of time the rods form an angle $\varphi$ with the horizon. The $OX$ axis is directed horizontally, and the $OY$ axis is directed vertically upward.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Let us denote the tension force of the rods as $T$$$$$    $a_{1l}$,$a_{1p}$ in  on  $OX$ and   $a_2$ in  on  $OY$.   $m$.$g$.$T$ and $\varphi$.}{0.40}
+
+\problembox{B2}{In the indicated position, find the speed of the weights $v_1$ and the speed of the hinge $v_2$.}{0.60}
+
+\problembox{B3}{Write down the equation of motion of the hinge relative to any of the masses, connecting $v_1$, $v_2$, $a_1$, $a_2$, $L$ and $\varphi$}{1.00}
+
+\problembox{B4}{Find the tension force $T$ from the equation obtained in step $B3$. Express the answer in terms of $m,{v_0},g,L,{\varphi}$}{0.70}
+
+\problembox{B5}{Let us assume that at some moment the weights are lifted off the surface. $$$$    $\varphi_{neg}$ at this point in time.}{1.00}
+
+\problembox{B6}{Find the minimum value $v_0$ at which the weights will come off the surface and the value of the angle $\varphi' $ at the moment of lifting}{0.50}
+
+\section*{Part C. Cargoes in light elastic shells (3.8 points)}
+
+This part of the problem is an actual continuation of the previous one. The difference is that now the loads are located in the centers of light elastic shells of radius $R<{L}$. It is assumed that the speed $v_0$ of the hinge is sufficient for the weights to come off the surface in part $B$. Let us denote by ${\varphi_0}$ the angle of the rods with the horizon at the moment of contact shells.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T4_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{C1}{At what values of $R$ does the collision of shells occur before their separation from the surface under the action of the rods? Express your answer using $L$,$\varphi_{}$,}{0.20}
+
+In the future, assume that the condition on $R$ obtained in the previous paragraph is satisfied.
+
+\problembox{C2}{Let immediately after the collision the projections of the speed of the load on the axes $OX$ and $OY$ be equal to $v_{1x}$ and $v_{1y}$, respectively. $$$$     on   $v_{2y}$  $v_{1x}$,$v_{1y}$ and ${\varphi_0}$.}{1.00}
+
+\problembox{C3}{Find the velocity of the hinge $v_2$ immediately after the impact. Express your answer using ${v_0},g,{L},R$}{1.30}
+
+\problembox{C4}{Find the modulus of the load velocities $v_1$ immediately after the collision. Express the answer in terms of ${v_0},g,{L},R$}{1.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/47}
+
+\end{document}

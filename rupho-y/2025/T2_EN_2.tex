@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Gaussian beams}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+As is known, the propagation of electromagnetic waves is described by Maxwell's equations. Their simplest solutions in vacuum are plane waves. However, plane waves are not limited in space and therefore are not physically realized. In this problem, axis-symmetric beams are considered, where intensity decreases with distance $r$ from the axis according to $I \sim \exp(-2r^2/w^2)$, with $w$ as the characteristic width. Such beams are called Gaussian beams. If the beam width is much greater than the wavelength, an analytical solution for the wave field can be obtained. It turns out that if intensity is Gaussian in one section, it remains Gaussian in all others. Each field component satisfies the wave equation; for $E_x$:
+\[ \frac{\partial^2 E_x}{\partial x^2} + \frac{\partial^2 E_x}{\partial y^2} + \frac{\partial^2 E_x}{\partial z^2} = \frac{1}{c^2} \frac{\partial^2 E_x}{\partial t^2} \tag{1} \]
+We consider strictly monochromatic waves with cyclic frequency $\omega$, wavelength $\lambda$, and wave number $k = 2\pi/\lambda$. Complex solutions take the form $\hat{E}_x = v(x, y, z)\exp(i\omega t)$, where $v$ is the complex amplitude. The observed field is $E_x = \text{Re}\{\hat{E}_x\}$.
+
+\section*{Part A. Diffraction of Gaussian beams (2.0 points)}
+
+Assume the beam propagates along $z$, oscillations at $z=0$ are in phase, and amplitude $v$ at $z=0$ is $v(r, 0) = E_0 \exp(-r^2/w_0^2)$, where $E_0$ is a real constant.
+
+\problembox{A1}{At very large distances $L$, estimate the spot size $D$ on a screen. Express the result in terms of $\lambda, w_0, L$.}{0.30}
+
+The Kirchhoff integral expresses the amplitude at $z > 0$ as $v(x, y, z) = -\frac{1}{i\lambda} \int dx' dy' \frac{v(x', y', 0)}{s} e^{-iks}$, where $s$ is the distance from the source point to the observation point.
+
+\problembox{A2}{Under what constraint on $L$ is Fraunhofer diffraction theory applicable? Use $L, w_0, \lambda$.}{0.20}
+
+\problembox{A3}{For the Fraunhofer case, find the field amplitude on the screen as a function of $r$. You may use $\int_{-\infty}^{+\infty} \exp(-ax^2 + ibx) dx = \sqrt{\pi/a} \exp(-b^2/4a)$.}{0.80}
+
+\problembox{A4}{In Fresnel diffraction, find the complex amplitude on the axis $A(z) = v(0,0,z) \exp(ikz)$. Express it using $E_0, w_0, k, z$.}{0.70}
+
+\section*{Part B. Gaussian beam as a solution to the wave equation (2.4 points)}
+
+We seek a field $\hat{E}_x = u(x, y, z) \exp(-ikz) \exp(i\omega t)$ with $\omega = ck$.
+
+\problembox{B1}{Substitute this into (1) to get the differential equation for $u(x, y, z)$.}{0.30}
+
+Using the slow-variation approximation $|\frac{\partial^2 u}{\partial z^2}| \ll |k \frac{\partial u}{\partial z}|$, the equation becomes $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} - 2ik \frac{\partial u}{\partial z} = 0 \quad (3)$. The Gaussian solution is $u(r, z) = A(z) \exp(-ikr^2 / 2q(z)) \quad (4)$.
+
+\problembox{B2}{Show that $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = [-2i\chi(z) - \chi^2(z) r^2] u$. Find $\chi(z)$ in terms of $q(z)$ and $k$.}{0.50}
+
+\problembox{B3}{Show that $\frac{\partial u}{\partial z} = [\frac{A'(z)}{A(z)} + i\zeta(z) r^2] u$. Find $\zeta(z)$ in terms of $q(z), q'(z),$ and $k$.}{0.30}
+
+\problembox{B4}{Derive the differential equation for $q(z)$. Solve it with $q(0) = iz_0$. Find $z_0$ in terms of $w_0$ and $k$.}{0.40}
+
+Let $1/q(z) = 1/R(z) - i2/(kw^2(z))$, where $R(z)$ and $w(z)$ are real.
+
+\problembox{B5}{Express $R(z)$ and $w(z)$ in terms of $k, z, z_0$.}{0.20}
+
+\problembox{B6}{Verify that $A(z)$ from Part A satisfies the non-$r^2$ terms of the reduction of (3).}{0.40}
+
+\problembox{B7}{For $A(z) = A_0(z) \exp(i\psi(z))$, find $A_0(z)$ and $\psi(z)$ using $z, z_0, E_0$.}{0.30}
+
+\section*{Part C. Characteristics of a Gaussian beam (4.0 points)}
+
+Intensity is $I = \beta \langle E^2 \rangle$. Energy flows only along $Oz$.
+
+\problembox{C1}{Find $I(r, z)$ in terms of $\beta, A_0(z), w(z)$. Sketch the radial intensity profile for fixed $z$.}{0.50}
+
+\problembox{C2}{Find total power $P$ through plane $z = \text{const}$ using $\beta, E_0, k, z_0$.}{0.40}
+
+Beam width $d(z)$ is the diameter where $I(r,z)/I(0,z) = 1/e^2$.
+
+\problembox{C3}{Express $d(z)$ via $w(z)$ and sketch $d(z)$.}{0.40}
+
+\problembox{C4}{Find the minimum width $d_{min}$ (waist width) using $z_0, k$.}{0.10}
+
+\problembox{C5}{Derive the equation for the wavefront passing through $(0, z_1)$ using $R(z), \psi(z), k, z, z_1$.}{0.40}
+
+\problembox{C6}{Find the radius of curvature $\rho(z_1)$ in terms of $R(z)$ and plot it.}{0.50}
+
+\problembox{C7}{Given $R(z_a) = R_a$ and $w(z_a) = w_a$, find $z_a$ and waist diameter $d_{min}$ using $R_a, w_a, k$.}{0.70}
+
+\problembox{C8}{Calculate $d_{min}$ for $\lambda_0 = 10.6$ $\mu$m, $d_1 = 3.398$ mm, $d_2 = 6.760$ mm at points separated by $L = 10$ cm.}{1.00}
+
+\section*{Part D. Gaussian beams in lenses (1.6 points)}
+
+A lens at $z_L$ has transmittance $\hat{\tau}(x, y) = \exp(i\eta(x^2+y^2))$.
+
+\problembox{D1}{If rays converge to focus with the same phase, find $\eta$ in terms of $k, f$.}{0.70}
+
+\problembox{D2}{For a beam with $R_1, w_1$ incident on a lens $f$, find parameters $R_2, w_2$ immediately after the lens.}{0.50}
+
+\problembox{D3}{Find the condition on $R_1, w_1, f$ for the beam to focus (waist located after the lens).}{0.40}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/4222
+
+\end{document}

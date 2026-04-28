@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Low Pass Filters</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Low Pass Filters</h1>
+<p class="camp">Y16 (2016) — English translation</p>
+<p>Electric current is characterized by the strength of the current and its frequency. Sometimes in practice, when applying a certain periodic voltage to the input, you want to filter out some frequencies. Circuits that allow you to achieve this result are called filters. In this problem, consider the simplest low-pass filter: $RC$-circuit (see figure).</p>
+<p>Electric current is characterized by the strength of the current and its frequency. Sometimes in practice, when applying a certain periodic voltage to the input, you want to filter out some frequencies. Circuits that allow you to achieve this result are called filters. In this problem, consider the simplest low-pass filter: $RC$-circuit (see figure).</p>
+<div class="figure"><img src="T4_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Harmonic signal (0.8 points)</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">A signal with a voltage amplitude $V_{in}$ and a cyclic frequency $\omega$ is supplied to the input. Determine the voltage amplitude of the output signal $V_C$. Express your answer in terms of $V_{in}$, $\omega$, $R$, $C$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Draw the amplitude-frequency response of the output signal on a graph.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Let a signal of the form $\sum_i V_{in}\sin\omega_it$ be applied to the input (for any $i$ the following condition is satisfied: $\omega_i<\omega_{i+1}$). Then the output signal will look like $\sum_i V_i\sin\left(\omega_it+\phi_i\right)$. Which value is greater: $V_i$ or $V_{i+1}$?</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">Part B. Single square pulse (1.0 points)</h2>
+<p>However, the input signal is not always a sine wave (or a finite sum of sines). In the next part of the problem, consider a single rectangular pulse (see Fig. 2) with amplitude $U$ and duration $\tau$, applied to the $RC$ circuit.</p>
+<p>However, the input signal is not always a sine wave (or a finite sum of sines). In the next part of the problem, consider a single rectangular pulse (see Fig. 2) with amplitude $U$ and duration $\tau$, applied to the $RC$ circuit.</p>
+<div class="figure"><img src="T4_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Consider a short "ballistic" pulse ($\tau\ll{RC}$). What will be the maximum output voltage $U_{CM}$ in such a process? Express your answer in terms of $U$, $\tau$, $R$, $C$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">How will the maximum output voltage $U_{CM}$ change if the pulse amplitude is doubled and the duration is halved? Those. find the relation $U_{CM2}/U_{CM1}$.</div><span class="pb-pts">0.20</span></div>
+<h2 class="part">Part C. Periodic rectangular pulses (6.2 points)</h2>
+<p>Consider a periodic input signal consisting of successive short rectangular pulses directed in different directions. Signal period $T$, signal amplitude $U$, pulse duration $\tau$. The duty cycle is the quantity $S=2\tau/T$. Let us also introduce the dimensionless quantity $A=T/RC$.</p>
+<p>Consider a periodic input signal consisting of successive short rectangular pulses directed in different directions. Signal period $T$, signal amplitude $U$, pulse duration $\tau$. The duty cycle is called the value $S=2\tau/T$. Let us also introduce the dimensionless quantity $A=T/RC$.</p>
+<div class="figure"><img src="T4_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Draw a qualitative graph of the output signal versus time in steady state.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Determine the ratio of the output signal amplitude to the input signal amplitude $U_M/U$. Express your answer in terms of $A$ and $S$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Considering $S\ll{1}$ and $A\gg{1}$, find in a first approximation a $A$ such that $U_M/U=1/2$. Express your answer in terms of $S$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Using the method of successive iterations, find $A$ such that $U_M/U=1/2$, up to the fourth significant figure for $S_1=1$;  $S_2=0{.}3$;  $S_3=0{.}1$; $S_4=0{.}01$;  $S_5=0{.}001$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Draw qualitatively graphs of the dependence of $U_M/U$ on $A$ on a logarithmic scale along $A$ at $S_1=1$;  $S_2=0{.}3$;  $S_3=0{.}1$; $S_4=0{.}01$;  $S_5=0{.}001$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Draw qualitatively graphs of the normalized dependence of $U_M/(US)$ on $A$ on a logarithmic scale in both coordinates for $S_3=0{.}1$; $S_4=0{.}01$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part D. Rectangular pulses in an LC circuit (2.0 points)</h2>
+<p>Let us now consider the ideal $LC$ contour.</p>
+<div class="figure"><img src="T4_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">At moment $t=0$, a circuit with a natural frequency $f=100~\text{Гц}$ is excited by a periodic sequence of rectangular pulses of duration $\tau=0{.}02~\text{с}$ (Fig. 4). Pulse amplitude $U_0=5~\text{В}$. Find the pulse repetition period $T$ at which the average voltage across the capacitor $U_\text{ср}=2~\text{В}$. Plot a graph of $U_C(t)$. Show all characteristic values ​​on the graph.</div><span class="pb-pts">2.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3030">https://pho.rs/p/3030</a></p>
+</body>
+</html>

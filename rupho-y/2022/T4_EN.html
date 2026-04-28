@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Metronome Sync</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Metronome Sync</h1>
+<p class="camp">Y22 (2022) — English translation</p>
+<p>If you put two metronomes on a moving platform and start them up, then after a while they will synchronize, that is, they will swing in phase. In this problem you are asked to explain the phenomenon of synchronization.</p>
+<div class="figure"><img src="T4_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A. Metronome structure (1.5 points)</h2>
+<p>A metronome is a device that marks short periods of time with even beats. In our model, its basis is a mathematical pendulum with length $l$ and mass $m$. To prevent the oscillations from dying out due to air resistance, a mechanism for pumping energy is needed - a trigger mechanism.  Suppose that when the pendulum passes the equilibrium position, the trigger mechanism imparts angular momentum $ml^2\omega_D$ in the direction of movement, and at this moment we hear a characteristic click. We will assume that the air resistance force is proportional to the speed $v$ and is equal to $f=2\gamma ml v$.</p>
+<div class="figure"><img src="T4_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Using the metronome oscillation graph, find with an accuracy of 10%: the angular frequency $\omega$, the steady-state amplitude $A$, the damping coefficient $\gamma$ and the angular velocity $\omega_D$ reported by the trigger mechanism upon impact. It is known that $\frac{\omega_D}\omega,\ \gamma\ll1$.</div><span class="pb-pts">1.50</span></div>
+<h2 class="part">Part B. Nonlinearity (2.2 points)</h2>
+<p>To describe synchronization, it is important that the oscillation equations are not exactly linear. In this part of the problem, you will become familiar with the Van der Pol method, which allows you to take into account nonlinearity. For example, let the vibration equation contain a cubic correction: \[ \ddot{x} + 2\gamma \dot{x} + \omega^2 x = \varepsilon x^3. \]</p>
+<p>For $\varepsilon = 0$, $\gamma=0$ the solution could be represented as \[ x(t) = \text{Re} \{Ae^{i\omega t}\}=\frac{1}{2}(A(t) e^{i\omega t} + A(t)^* e^{- i \omega t}) \]where $A$ is complex amplitude. Here and henceforth, ${}^*$ denotes complex conjugation, and a dot over a certain quantity denotes its time derivative. For $\gamma =0$, $\varepsilon = 0$ the value of $A$ is constant, but in the general case $A$ changes with time.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Express $\dot{x}(t)$ in terms of $A(t)$ and $A^*(t)$.</div><span class="pb-pts">0.20</span></div>
+<p>Note that, in essence, instead of the real variable $x$, we introduced a complex variable $A$, which now has an imaginary part that does not depend on the real one. Thus, we can require that the function $A(t)$ satisfy one arbitrary relation. It is convenient to choose this relation in the form $\dot{A} e^{i \omega t} + \dot{A^*} e^{-i \omega t} = 0$, so that $\dot A$ is not included in the expression for $\dot{x}$. In the future, assume that this condition is met.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Express $\ddot{x}(t)$ in terms of $A(t)$, $A^*(t)$, $\dot{A}(t)$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Using the vibration equation, find an expression for $\dot{A}$ in terms of $A$, $\gamma$, $\omega$, $\varepsilon$.</div><span class="pb-pts">0.50</span></div>
+<p>Let us assume that the damping and nonlinearity are small. In this case, the amplitude $A$ changes very slowly, and therefore the contribution of rapidly changing terms turns out to be negligible. This means that in the equation we can discard terms with exponents of type $e^{i n \omega t}$ at $n \neq 0$.</p>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Given this, write a simplified equation for $\dot{A}(t)$.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Let us assume that there is no friction, $\gamma = 0$. Let the initial value of $A$ be equal to $A_0$. Solve the equation from $\bf B4$ and get $A(t)$ and $x(t)$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Find the first correction $\Delta \omega$ to the frequency of oscillations described by the equation \[ \ddot{x} + \omega^2 \sin x = 0 \]with a small amplitude $A \ll 1$. What is $\frac{\Delta \omega}{\omega}$ equal to with the amplitude found in $\bf A1$?</div><span class="pb-pts">0.40</span></div>
+<h2 class="part">Part C. Synchronization (6.3 points)</h2>
+<p>We are ready to explain the phenomenon of synchronization. The equations that arise here are quite complex and we should coarse them as much as possible, provided that we do not miss the synchronization effect. We will consider one of the possible mechanisms of this phenomenon.</p>
+<p>Let's move on to the formulation of the problem. Two metronomes, with weight masses $m$ and pendulum lengths $l$, are placed on a platform that rests on two light cans. The mass of the stationary part of the system (i.e. everything except the pendulum weights) is equal to $M$. Let us introduce the following notations: $\omega$ – natural frequency of small oscillations of the pendulum, $f_k = D_kml$ ($k = 1, \, 2$ – numbers of metronomes) – the force with which the trigger mechanism interacts with the pendulum ($D_k$ are different from zero only in a short time, when the corresponding metronome passes the equilibrium position), $\alpha=\frac{m}{M}$ – coupling coefficient of metronomes, $\theta_1$, $\theta_2$ – angles of deflection of pendulums from the vertical counterclockwise, $A_1$, $A_2$ – complex amplitudes of pendulum oscillations, $\psi$ – phase difference by which the second metronome is ahead of the first. The pendulums are subject to a resistance force as in parts $\bf A$, $2\gamma ml v_k$. The influence of the platform speed on the magnitude of the drag force can be neglected. The amplitudes of oscillations can be considered small and limited to linear equations.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Let's start with an auxiliary task. Let the metronomes stand on a stationary board and oscillate with the known dependencies $\theta_1(t)$ and $\theta_2(t)$. In first order in terms of vibration amplitudes, find the force acting on the board. Express your answer in terms of $\theta_1$, $\theta_2$, $D_1$, $D_2$ and the constants that characterize metronomes.</div><span class="pb-pts">0.70</span></div>
+<p>Now let's take into account that the board can move. However, since its mass is $M \gg m$ (i.e. $\alpha \ll 1$), its motion can be taken into account as a small correction. In the future, we assume that the acceleration of the board is determined by the force found in the previous paragraph. We will solve the problem in a non-inertial frame of reference associated with the board.</p>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Write the equations of motion of the loads in the reference frame of the board, that is, express $\ddot{\theta}_1$, $\ddot{\theta}_2$ through $\theta_1$, $\theta_2$, $\dot{\theta}_1$, $\dot{\theta}_2$, $\omega$, $\gamma$, $\alpha$, $D_1$, $D_2$.</div><span class="pb-pts">1.00</span></div>
+<p>In our model, metronomes are synchronized due to the fact that the push of the trigger of one metronome affects the movement of the second metronome. When further analyzing the movement, take into account the terms proportional to $D_2$ in the equation of motion of the first metronome and neglect the remaining terms of order $\alpha$. Likewise for the second metronome. When analyzing the change in phase difference, we will assume that the amplitudes of the metronome oscillations have already been established, that is, during the push, the trigger mechanism imparts to the metronome just such an additional angular velocity to compensate for the attenuation from the moment of the previous push.</p>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">The phase diagram of oscillation is an image of the movement of a pendulum on a plane with coordinates $\dot{\theta}$, $\omega \theta$. Let us assume that an oscillation mode has been established in which their amplitudes are constant, but at the same time there is a certain phase difference $\psi$. Construct the phase diagram of the first oscillator for one period. Indicate on it the points at which the metronome triggers are triggered. Find the change in the phase difference between the metronomes over the period $\Delta \psi$.</div><span class="pb-pts">2.00</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Show that the change in phase difference between the oscillators satisfies the Kuramoto equation$$ \dot{\psi} = - B \sin \psi. $$Найдите выражение для постоянной $B$ и ее численное значение, если $\alpha=10^{-2}$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Let us assume that the natural frequencies of the oscillators are slightly different and are equal to $\omega_1$ and $\omega_2$, where $\Delta \omega = \omega_1 - \omega_2 \ll \omega_1$. Find an expression for $\dot{\psi}$ in this case. At what maximum frequency difference $\Delta \omega_{max}$ is synchronization possible?</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Let the frequency difference $\Delta \omega$ be less than the maximum. Find the steady-state phase difference $\psi$ of the oscillators.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">C7</span><div class="pb-text">Let the frequency difference in a system of two metronomes be equal to $\Delta \omega =0.1 c^{-1}$. In this case, the phase difference is $\psi = 0.5 ~\text{рад}$.  At some point in time, the weight of one of the metronomes shifts slightly and the frequency difference turns into $0$. Find the time $t$ during which the metronomes are completely synchronized, that is, their phase difference becomes less than $0.01~\text{рад}$.</div><span class="pb-pts">0.90</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/2850">https://pho.rs/p/2850</a></p>
+</body>
+</html>

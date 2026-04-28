@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Optical fiber}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The optical fiber consists of two glass coaxial cylinders, one inside the other, the radius of the inner cylinder is $a$ (Fig. 1). The refractive index of the outer cylinder (cladding) $_2$ is slightly less than the refractive index of the inner cylinder (core) $n_1$. Thus, light can propagate within the fiber due to total internal reflection at the interface of the layers.
+
+The optical fiber consists of two glass coaxial cylinders, one inside the other, the radius of the inner cylinder is $a$ (Fig. 1). The refractive index of the outer cylinder (cladding) $_2$ is slightly less than the refractive index of the inner cylinder (core) $n_1$. Thus, light can propagate within the fiber due to total internal reflection at the interface of the layers.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let us define the parameter $\Delta=\frac{n^2_1-n^2_2}{2n^2_1}$. Usually $\Delta\ll{1}$, so we can assume that $\Delta=\frac{(n_1+n_2)(n_1-n_2)}{2n^2_1}\approx{\frac{n_1-n_2}{n_1}}$. Within the framework of this task, we will accept the following values ​​for the parameters described above: $a=25~\text{um}$, $n_1=1{,}45$, $\Delta=0{,}01$.
+
+Let us consider a light beam incident from the end of the fiber at an angle $\alpha$ to the fiber axis. We will assume that the fiber is in a vacuum. There is a critical value of this angle $\alpha_m$ at which the incident beam inside the fiber will still experience total internal reflection. The sine of this angle is called the numerical aperture of the fiber and is designated as $NA$ (numerical aperture).
+
+Consider a beam of light incident from the end of the fiber at an angle $\alpha$ to the fiber axis. We will assume that the fiber is in a vacuum. There is a critical value of this angle $\alpha_m$, at which the incident beam inside the fiber will still experience total internal reflection. The sine of this angle is called the numerical aperture of the fiber and is designated as $NA$ (numerical aperture).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A1}{Express the numerical aperture $NA$ in terms of the fiber parameters $n_1$ and $\Delta$ and calculate its value. What is the critical angle $\alpha_m$?}{1.50}
+
+\problembox{A2}{If the fiber is bent under a small radius of curvature, then some of the light will begin to leave the fiber. What is the radius of curvature $r$ at which light incident at an angle $\alpha=0.99\alpha_m$ will begin to exit the fiber?}{2.50}
+
+\problembox{A3}{Although the light does not leave the fiber, the light intensity decays exponentially with distance due to absorption according to the Bouguer–Lambert–Beer law. Intensity attenuation is measured in units of decibels/km ($\text{дБ}/\text{км}$). If the original intensity $P_1$ is reduced to $P_2$, then the attenuation is $10\log_{10}P_1/P_2$ decibels. What will be the light intensity at the output of a fiber of length $40~\text{км}$, if the attenuation in the fiber is $5~\text{дБ}/\text{км}$, and the intensity at the input is $5~\text{mVт}$.}{1.50}
+
+\problembox{A4}{Rays entering at larger angles travel a larger optical path and, accordingly, take longer. As a result, the short pulse of light becomes wider. This phenomenon is called intermodal dispersion. Let us consider a fiber with the parameters described above and length $L=1~\text{км}$. Let us assume that a short pulse of light falls on the end of the fiber in the form of a beam of rays at all possible angles. Find the maximum possible light pulse length $\tau_i$ (time dispersion) at the output of the fiber. Assume that the input light pulse length is much smaller than $\tau_i$.}{0}
+
+\problembox{A5}{The quartz glass from which the fiber is made has chromatic dispersion due to the fact that the refractive index depends on the wavelength of light. As a result, a short pulse of non-monochromatic light will be longer (in time) at the output of the fiber than at the input due to the fact that light of different wavelengths travels at different speeds. Let the light source have a spectral width $\Delta{\lambda}=20~\text{нм}$, and the dispersion of the fiber material $\frac{dn}{d\lambda}=2\cdot{10^{-5}}~\text{нм}^{-1}$. Find the maximum possible light pulse length $\tau_с$ (time dispersion) at the output of a fiber of length $L=1~\text{км}$. Consider that the input light pulse length is much smaller than $\tau_с$. In this case, we assume that all rays propagate at a small angle to the fiber axis, and therefore intermodal dispersion can be neglected.}{1.50}
+
+\problembox{A6}{Optical fibers are widely used in the telecommunications industry and in particular for transmitting data on the Internet. In this case, the maximum information transmission rate, which is measured in units of $\text{бит}/\text{сек}$, plays an important role. The phenomena described above place limits on this speed. In the simplest case, we can assume that each bit corresponds to a separate light pulse. If the delay between two individual pulses leaving the fiber becomes less than the time dispersion, then information is lost. Thus, the dispersion sets a lower bound on the minimum time between adjacent pulses and, accordingly, a maximum bound on their frequency and data transfer rate. Estimate the maximum data transfer rate for a fiber of length $L=10~\text{км}$ and parameters as in the previous paragraphs. Consider that when there are multiple independent factors contributing to the variance, the total variance is considered to be $\tau_0=\sqrt{\tau^2_1+\tau^2_2}$.}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3039}
+
+\end{document}

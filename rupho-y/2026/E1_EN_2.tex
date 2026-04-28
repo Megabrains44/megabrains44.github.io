@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Topological insulator}}
+\author{\normalsize Y26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this problem, error estimation is not required!
+
+\section*{Introduction}
+
+At the end of the twentieth century, the Su-Schiffer-Heeger (SSH-chain) model was proposed to describe the electrical conductivity properties of polyacetylene, which laid the foundation for topological physics. Topologically protected edge states arise at the ends of topologically nontrivial systems. In this problem we will consider an LC circuit, the simplest system that models a polyacetylene molecule and has topological properties.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Polyacetylene molecule.}
+\end{figure}
+
+\section*{Equipment}
+
+\begin{enumerate}
+    \item Board with an LC circuit consisting of capacitors of unknown capacity $C_1$ and $C_2$ ($C_1 < C_2$) and inductors $L=18~\mu\text{H}$.
+    \item Resistor $R=200~\Omega$.
+    \item Oscilloscope.
+    \item Generator (supply voltage with an amplitude of no more than $2$ V).
+    \item Mother-banana wires (5 pcs.).
+    \item BNC-crocodile wires (3 pcs.).
+\end{enumerate}
+
+\textit{Note: Remove the mother-banana wire from the board strictly vertically so as not to damage the contacts!}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Board with LC circuit.}
+\end{figure}
+
+For measurements on the board, contacts J5, J2 and GND are available: 
+\begin{itemize}
+    \item Each of the J5 contacts is responsible for connecting to the circuit link with the number $n$.
+    \item J2 is responsible for connecting to the circuit input.
+    \item GND must be connected to the grounding of the generator and oscilloscope.
+\end{itemize}
+
+\section*{Part A: Chain Dispersion Relationship (5 points)}
+
+Consider a chain consisting of capacitors $C_1, C_2$ and inductors $L$. A generator is connected to the leftmost link, exciting voltage waves. We assume there is no reflected wave; the traveling wave propagates from left to right. The circuit is shown in Fig. 4. One link is indicated by a red rectangle. Let $V$ be the potential at node $A$ and $u$ be the potential at node $B$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Diagram of the LC circuit.}
+\end{figure}
+
+The voltage wave in complex form is: $V(n,t) = Ve^{-i\omega t+iqn}$ and $u(n,t) = ue^{-i\omega t+iqn}$, where $n$ is the link number, $\omega$ is the cyclic frequency, and $q$ is the wave vector. The dispersion relation is the dependence $q(\omega)$.
+
+\problembox{A1}{Using Kirchhoff's rules, obtain a system of equations relating $V, u$ and $q$. Express the answer in terms of $V, u, q, L, C_1, C_2$ and $\omega$.}{0.40}
+
+\problembox{A2}{From the resulting system, express $\cos q$ in terms of $\omega, L, C_1$ and $C_2$.}{0.80}
+
+The real and imaginary parts of $\arccos x$ are defined as:
+$\mathfrak{R}(\arccos x) = 0$ if $x > 1$ or $\pi$ if $x < -1$. 
+$\mathfrak{I}(\arccos x) = \text{arcosh } |x|$ if $|x| > 1$.
+
+\problembox{A3}{Determine at what frequencies the wave vector $q$ will have an imaginary part. Express your answer in terms of $L, C_1$ and $C_2$.}{0.60}
+
+\problembox{A4}{Measure the dependence of the real and imaginary components of the wave vector $\mathfrak{R}(q)$ and $\mathfrak{I}(q)$ on the frequency $f$. Describe the measurement technique. Take measurements from $650~\text{kHz}$ to $1300~\text{kHz}$ with steps of $50~\text{kHz}$.}{1.50}
+
+\problembox{A5}{Linearize the dependence of $\mathfrak{R}(\cos{q})$ on the frequency $f$ and determine the coefficients of the linear dependence.}{1.00}
+
+\problembox{A6}{Using the coefficients found in A5, determine the capacitances $C_1$ and $C_2$ ($C_1 < C_2$).}{0.70}
+
+\section*{Part B: Conduction Band Study (5 points)}
+
+Now we consider the reflected wave. Let the circuit have $N$ links. Denote waves traveling to the right as $r$ and to the left as $l$:
+$V_r(n,t) = V_{0r}e^{-i\omega t+iqn}, \quad V_l(n,t) = V_{0l}e^{-i\omega t-iqn}$.
+The wave impedances are defined as $z_r = V_r/I_r$ and $z_l = V_l/I_l$. The total impedance is $z = V(0,t)/I(0,t)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Waves in the LC circuit.}
+\end{figure}
+
+\problembox{B1}{Express the impedances $z_r$ and $z_l$ for waves traveling to the right and left. Express your answer in terms of $C_1, C_2, L, q$ and $\omega$.}{0.80}
+
+\problembox{B2}{Write the boundary condition relating $V_r(0,t)$ and $V_l(0,t)$. The result is an equation involving $V_r(0,t), V_l(0,t), C_1, C_2, L, q$ and $N$.}{0.60}
+
+\problembox{B3}{Obtain an expression for the total impedance modulus $|z|$ of a circuit consisting of $N$ links. Express it in terms of $N, q$ and $|z_r|$.}{1.20}
+
+\problembox{B4}{Write an equation for the frequencies at which the maximum impedance modulus is reached. Use $N, C_1, C_2, L, \omega$ and an integer parameter $m$.}{0.60}
+
+\problembox{B5}{Measure the frequencies of maximum impedance modulus in the range $1400~\text{kHz} < f < 6000~\text{kHz}$.}{1.00}
+
+\problembox{B6}{Linearize the results from B5 and construct a graph to determine the number of links $N$ in the chain.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/5013}
+
+\end{document}

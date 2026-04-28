@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Fiber accelerometer}}
+\author{\normalsize Y26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Fiber-based optical circuits make it possible to produce inexpensive yet sensitive sensors. As an example, consider a fiber accelerometer, a device that measures acceleration. 
+
+Boltzmann constant $k_B = 1.38 \cdot 10^{-23}~J/K$.
+
+\section*{Part A. Seismic sensor (3.3 points)}
+
+A rigid wire with diameter $d=80~\mu\text{m}$ and Young's modulus $E=74.0 Pa$ is tightly wound around the rubber support. The number of turns of the wire is $N=80$, the height of the winding area is $h=2.00~cm$, the diameter of the winding area is $D=3.50~cm$. Silicone rubber is a material whose shape can be changed extremely easily, but at the same time its volumetric elasticity is very high. Therefore, the volume of rubber inside the winding area does not change. Let's say the height of the winding area has changed and became $h + \delta h$, $\delta h \ll h$, and the diameter $D + \delta D$.
+
+Silicone rubber is a material whose shape can be changed extremely easily, but at the same time its volumetric elasticity is very high. Therefore, the volume of rubber inside the winding area does not change.
+
+Let's say the height of the winding area has changed and became $h + \delta h$, $\delta h \ll h$, and the diameter $D + \delta D$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Express the change in diameter of the winding region $\delta D$ in terms of $D$, $h$ and $\delta h$.}{0.20}
+
+Due to the deformation of the rubber, the length of the wire became $L + \delta L$.
+
+\problembox{A2}{The change in the total length of the wire $\delta L$ is proportional to $\delta h$ \[\delta L = \Lambda \delta h.\]Express $\Lambda$ in terms of $N$, $D$, $h$. The number of revolutions $N$ is strictly fixed.}{0.10}
+
+\problembox{A3}{Find the strain energy of the wire $W$. Express your answer in terms of $N$, $D$, $h$, $d$, $E$ and $\delta h$}{0.60}
+
+Consider a load of mass $M=540g$ sandwiched between two identical vertical supports discussed earlier. The supports are rigidly attached to the non-deformable sensor body.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+The position of the mass load $M$ in the laboratory reference frame (LRF) will be denoted by $x$ and the position of the sensor body in the LRF will be denoted by $y$. The equilibrium corresponds to $x=y=0$.
+
+\problembox{A4}{Let at some moment of time the body is displaced ($y \neq 0$) and the load is not in equilibrium $(x \neq y)$. Obtain the equation of motion of the load in the form \[\ddot{x} + \omega_0^2 x = A y.\]Express $\omega_0$ and $A$ in terms of $M$, $h$, $N$, $D$, $d$ and $E$.}{0.50}
+
+In any mechanical system there are dissipations, so the equation of motion of the load, in fact, has the form \[\ddot{x} + 2 \zeta \omega_0 \dot{x} + \omega_0^2 x = Ay,\] where $\zeta \ll 1$ is the dissipation coefficient. Let us assume that the sensor body experiences harmonic vibrations $y = y_0 e^{i \omega t}$. Then the load also oscillates, $x = x_0 e^{i \omega t}$, and with it for the left support $\delta h = h_0 e^{i \omega t}$ and $\delta L = L_0 e^{i \omega t}$.
+
+Let us assume that the sensor body experiences harmonic vibrations $y = y_0 e^{i \omega t}$. Then the load also oscillates, $x = x_0 e^{i \omega t}$, and with it for the left support $\delta h = h_0 e^{i \omega t}$ and $\delta L = L_0 e^{i \omega t}$.
+
+\problembox{A5}{Express $L_0$ in terms of $y_0$, $\omega/\omega_0$, $\Lambda$ and $\zeta$.}{0.50}
+
+For frequencies $\omega$ far from the resonant one $\omega_0$, the sensor operates either in seismograph mode: $y(t) = K_s \cdot \delta L(t)$, or in accelerometer mode: $\ddot{y}(t) = K_a \cdot \delta L(t)$, where $y(t)$ is a superposition of several low-frequency or high-frequency oscillations. Example of low-frequency oscillations: \[ y(t) = B_1 \sin (\omega_1 t) + B_2 \cos (\omega_2 t),\]where $\omega_{1,2} \ll \omega_0$. The low frequency region is characterized by $\zeta \ll \omega_{1,2} / \omega_0$.
+
+\problembox{A6}{Indicate the correspondence between frequency ranges and sensor operating modes. Express $K_s$ and $K_a$ in terms of $M$, $h$, $N$, $D$, $d$ and $E$.}{1.00}
+
+\problembox{A7}{Calculate the values of $K_a$ and $\omega_0$.}{0.40}
+
+\section*{Part B. Fiber interferometer (6.7 points)}
+
+If two pieces of optical fiber are used as the hard wire for the sensor described in Part A, then the interferometric circuit shown below can be used to measure $\delta L$. The refractive index of the optical fiber core is $n=1.47$. This part continues to use the notation and meanings of quantities from Part A.
+
+This part continues to use the notation and meanings of quantities from Part A.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+A laser with intensity $I_0$ and wavelength $\lambda=1.15~\mu\text{m}$ is used as a light source. Through the isolator (it allows light to pass in only one direction), the light goes to the $2 \times 2$ 50/50 splitter. After splitting, the light enters a pair of pieces of optical fiber wound around the left and right sensor supports. At the ends of the segments, light is reflected from their edge with an amplitude reflection coefficient $r$. After reflection from the edge of the fibers, the light again passes through the splitter and hits the photodiode, which registers the useful signal. The operating principle of the splitter is as follows: if a wave with complex amplitude $E_0$ is incident from the laser side, then it comes out of both outputs on the other side with complex amplitudes $E_0/\sqrt{2}$ and $iE_0/\sqrt{2}$. If waves with complex amplitudes $E_1$ and $E_2$ fall from the side of the measuring system, then a wave with complex amplitude $E_1/\sqrt{2}-iE_2/\sqrt{2}$ emerges from the side of the photodiode. Let the sensor be in such a state that the right support is compressed, and the length of the fiber wound on it is increased by $\delta L$.
+
+The operating principle of the splitter is as follows: if a wave with complex amplitude $E_0$ is incident from the laser side, then it comes out of both outputs on the other side with complex amplitudes $E_0/\sqrt{2}$ and $iE_0/\sqrt{2}$.
+
+If waves with complex amplitudes $E_1$ and $E_2$ fall from the side of the measuring system, then a wave with complex amplitude $E_1/\sqrt{2}-iE_2/\sqrt{2}$ emerges from the side of the photodiode.
+
+Let the sensor be in such a state that the right support is compressed, and the length of the fiber wound on it is increased by $\delta L$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{B1}{Express the intensity of light $I$ incident on the photodiode in terms of $\delta L$, $I_0$, $\lambda$, $n$, $r$ and $\varphi_0$. Here, $\varphi_0$ is the incident phase difference between the light passing through the fiber wound on the right and left supports, respectively, at $\delta L=0$. Note. You don't have to watch the $\varphi_0$ sign. In other words, solutions differing by the substitution $\varphi_0 \to -\varphi_0$ are considered equivalent.}{1.00}
+
+Here, $\varphi_0$ is the incident phase difference between the light passing through the fiber wound on the right and left supports, respectively, at $\delta L=0$.
+
+Note. You don't have to watch the $\varphi_0$ sign. In other words, solutions differing by the change $\varphi_0 \to -\varphi_0$ are considered equivalent.
+
+The sensor is being tested for $y(t) = Y \sin (2 \pi f t)$. The dependence of the current readings through the photodiode on time is shown in the figure. The sensor operates in accelerometer mode.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T6_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{B2}{Determine the numerical values of $Y$ and $f$.}{1.50}
+
+Let us find a strict theoretical limit for the minimum value of acceleration that can be studied using an accelerometer when operating at room temperature $T$.
+
+\problembox{B3}{Using the theorem about the uniform distribution of energy over degrees of freedom, write down an expression for $\langle \delta L^2 \rangle$—fluctuations $\delta L$ at room temperature. Express your answer in terms of Boltzmann's constant $k_B$, $T$, $E$, $D$, $N$ and $d$.}{0.30}
+
+The quartz from which the optical fiber core is made has a temperature dispersion $\beta = \mathrm{d}n/\mathrm{d}T = 7.6 \cdot 10^{-6}~^{-1}$ and a coefficient of thermal expansion $\alpha = \mathrm{d}L/(L \, \mathrm{d}T) = 0.54 \cdot 10^{-6}~^{-1}$. Let us divide the optical fiber of length $L$ into $P$ small sections of length $\Delta L$. When light passes through the $i$-th section, the $\varphi_{i,0}$ phase occurs. In this case, the $\Phi_0 = \sum\limits_i^P \varphi_{i,0}$ phase accumulates throughout the fiber.
+
+\problembox{B4}{If the temperature of this section of the optical fiber differs from room temperature by a small amount $\Delta T_i$, then when light passes through it, the phase $\varphi_i \neq \varphi_{i,0}$ occurs. Express $\Delta \varphi_i = \varphi_i - \varphi_{i,0}$ in terms of $\Delta T_i$, $\Delta L_i$, $\alpha$, $\beta$, $n$ and $\lambda$.}{0.60}
+
+We will assume that the difference in temperature $\Delta T_i$ from room temperature is random and independent (for $i \neq j$ it holds that $\langle \Delta T_i \Delta T_j \rangle=0$). Moreover, it is zero on average, $\langle \Delta T_i \rangle = 0$, and has the same variance $\langle \Delta T_i^2 \rangle = \langle \Delta T^2 \rangle$. The total change in phase shift caused by thermal fluctuations when passing (in one direction) through a fiber of length $L$ is equal to $\Delta \Phi = \sum\limits_{i=1}^P \Delta \varphi_i$.
+
+The total change in phase shift caused by thermal fluctuations when passing (in one direction) through a fiber of length $L$ is equal to $\Delta \Phi = \sum\limits_{i=1}^P \Delta \varphi_i$.
+
+\problembox{B5}{Express $\langle \Delta \Phi^2 \rangle$ in terms of $\langle \Delta T^2 \rangle$, $\Delta L$, $L$, $n$, $\alpha$, $\beta$ and $\lambda$.}{0.70}
+
+The total change in the phase shift caused by thermal fluctuations when passing through the fiber back and forth (with reflection from the second end) will be denoted by $\Delta \Psi$.
+
+\problembox{B6}{Express $\langle \Delta \Psi^2 \rangle$ in terms of $\langle \Delta \Phi ^2 \rangle$.}{1.00}
+
+\problembox{B7}{Find the root-mean-square difference in the changes in the phase shift on the two arms of the interferometer $\langle (\Delta \Psi_1 - \Delta \Psi_2)^2 \rangle$. Express your answer in terms of $\langle \Delta \Psi^2 \rangle$.}{0.60}
+
+The value $\Delta L$, the length of the section along which the temperature is considered constant, will be considered equal to $30.0~\mu\text{m}$.
+
+\problembox{B8}{Consider that the sensor operates at $T=305~\mathrm{K}$ and the magnitude of temperature fluctuations $\langle \Delta T^2 \rangle$ is $1.0 \cdot 10^{-6}~\mathrm{K}^2$. What is the minimum acceleration $a_\mathrm{min}$ that can be measured using the proposed sensor?}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/5012}
+
+\end{document}

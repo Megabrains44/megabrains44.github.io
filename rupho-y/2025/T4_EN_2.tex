@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Accelerated observers in SRT}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Typically, special relativity (SRT) considers motion only relative to inertial reference systems. However, accelerated bodies can also be considered as observers. By connecting a reference frame to accelerated observers, one can obtain non-inertial analogs in SRT. This problem explores such constructions for one-dimensional motion along the $Ox$ axis. Unless stated otherwise, positions are specified relative to an inertial laboratory frame with coordinates $(t, x)$.
+
+\section*{Part A. Pseudo-relativistic accelerated observers (3.2 points)}
+
+Consider initially stationary point observers moving with constant acceleration in the non-relativistic sense. They exchange signals traveling at the speed of light $c$. The acceleration $a$ of an observer depends on their initial coordinate $d$ as:
+$$ a(d) = \frac{a_0}{1 + 2 a_0 d / c^2}, \quad d \ge 0. $$
+
+\problembox{A1}{Find the maximum possible movement time $t_{\max}$ before the particle speed reaches $c$.}{0.10}
+
+\problembox{A2}{Show that if for two observers $d_1 < d_2$ at $t=0$, then for all $t < t_{\max}$, their coordinates satisfy $x_1(t) < x_2(t)$.}{0.50}
+
+\problembox{A3}{Let observer 1 at time $t_1$ emit a signal received by observer 2 at $t_2$. Show that for $d_2 > d_1$: $(t_1 - c/a_1)^2 = \varepsilon(t_2 - c/a_2)^2$, and for $d_2 < d_1$: $(t_1 + c/a_1)^2 = \varepsilon(t_2 + c/a_2)^2$. Express the constant $\varepsilon$ in terms of $a_1, a_2, d_1, d_2$.}{1.00}
+
+\problembox{A4}{Observer 1 (at $d_1$) emits a signal at $t_A$, which reflects off observer 2 (at $d_2 > d_1$) at $t_C$ and returns at $t_B$. The radar distance is $D_{rad} = c(t_B - t_A)/2$. Express $D_{rad}$ in terms of $d_1, d_2, a_0, c$ and show it is independent of $t_A$.}{1.30}
+
+\problembox{A5}{For $d_2 = d_1 + \Delta d$ ($\Delta d \ll d_1$), express $D_{rad}$ to first order in $\Delta d$ in terms of $d, a_0, c,$ and $\Delta d$.}{0.30}
+
+\section*{Part B. Radar coordinates and Lorentz transformations (1.3 points)}
+
+An observer moves as $(t_O(\tau), x_O(\tau))$ where $\tau$ is proper time. To define coordinates $(T, X)$ for an event at $(t, x)$, the observer sends a signal at proper time $\tau_1$ that reaches the event, and receives the reflection at $\tau_2$. Then:
+$$ T = \frac{1}{2}(\tau_1 + \tau_2), \quad X = \pm \frac{c}{2}(\tau_2 - \tau_1) $$
+where the sign depends on whether the event is to the right (+) or left (-) of the observer.
+
+\problembox{B1}{If the observer moves with constant velocity $v$ and $(t,x) = (0,0)$ at $\tau=0$, express $x$ and $t$ in terms of $\tau$.}{0.20}
+
+\problembox{B2}{For an event at $(t, x)$, find $\tau_1$ and $\tau_2$ for an observer moving at constant $v$.}{0.70}
+
+\problembox{B3}{Show that $(T, X)$ match the standard Lorentz transformed coordinates for a frame moving at velocity $v$.}{0.40}
+
+\section*{Part C. Accelerated Observers (5.5 points)}
+
+Consider an observer with constant acceleration $g$ in their instantaneous rest frame.
+
+\problembox{C1}{Show that for suitable initial conditions: $x = A \cosh(\alpha\tau)$ and $t = B \sinh(\alpha\tau)$. Determine $A, B,$ and $\alpha$ in terms of $g$ and $c$.}{0.80}
+
+\problembox{C2}{Coordinates $(t, x)$ can be related to radar coordinates $(T, X)$ as: $x = A f(X) \cosh(\alpha T)$ and $t = B f(X) \sinh(\alpha T)$. Find the function $f(X)$ in terms of $g$ and $c$. Sketch the region of space-time $(x, t)$ covered by these coordinates as $T, X$ vary from $-\infty$ to $+\infty$.}{1.50}
+
+\problembox{C3}{Show the interval $ds^2 = c^2 dt^2 - dx^2$ can be written as $ds^2 = F(X, T)(c^2 dT^2 - dX^2)$. Find $F(X, T)$ in terms of $g, c,$ and $X$.}{0.50}
+
+\problembox{C4}{Bodies at $X = \text{const}$ are considered motionless in this system. Show they move with constant acceleration in their own rest frames and find this acceleration $a(X)$.}{0.70}
+
+\problembox{C5}{A light ray is emitted from $X_0$ at $T_0$ in the $+x$ direction. How does $X$ depend on $T$ for this ray?}{0.70}
+
+\problembox{C6}{An observer at $X_1 = \text{const}$ emits light of wavelength $\lambda_1$. Determine the wavelength $\lambda_2$ measured by an observer at $X_2 = \text{const}$.}{1.30}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/4563
+
+\end{document}

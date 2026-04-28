@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Charge movement in a dipole field}}
+\author{\normalsize Y13 (2013) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+There is a rigidly fixed electric dipole (two opposite, but identical in module point charges $+q$ and $-q$, located at a distance $l=2~\text{cm}$ from each other). At a distance $L=2~\text{cm}$ from the dipole on a line perpendicular to its axis (Fig. 3), a ball of mass $m$, charged with a charge $+q$, is located at equal distances from the dipole charges. The ball is released without a push ($v_0=0$), and it begins to move in the electric field of the dipole.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Show that the curve along which the ball will move is an arc of a circle.}{0}
+
+\problembox{A2}{Indicate the points at which the ball will have maximum and minimum speeds.}{0}
+
+\problembox{A3}{Find the maximum speed of the ball, taking the value $\dfrac{q^2}{4\pi \varepsilon_0 m}=\dfrac{\text{V}}{\text{m} \cdot \text{kg}}$}{0}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3972}
+
+\end{document}

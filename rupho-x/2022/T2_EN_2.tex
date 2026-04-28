@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Partially inelastic surface}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Elastic and absolutely inelastic collisions are just models within which most problems are solved. They turn out to be applicable in the interaction of certain materials. For example, the model of elastic collisions well describes Newton's Cradle, in which metal balls suspended on threads collide with each other in such a way that during collisions between the balls the loss of mechanical energy is insignificant. The model of an absolutely inelastic collision describes a much larger number of phenomena, such as, for example, a stone falling on asphalt or a ballistic pendulum. In reality, all collisions are partially inelastic. For example, if you release a rubber ball without an initial speed, then each time it hits the floor surface its speed will decrease. The phenomenon of hysteresis, when bodies with good elastic properties have residual deformation after being subjected to a large external force, is also a good example of a partially inelastic interaction. A characteristic of a partially inelastic collision is the recovery coefficient $k$, with $0 < k < 1$.  In the absence of friction between contacting surfaces, it is defined as follows: Let $E_0$ be the total kinetic energy of the colliding bodies just before their collision, and $W$ be the maximum loss of their total kinetic energy spent on the deformation of the contacting surfaces. Then, immediately after the collision of the bodies, their total kinetic energy is equal to $E=E_0-E_{\text{def}}$, where $E_{\text{def}}$ is the residual energy of surface deformation, given by
+$$E_{\text{def}}=W(1-k).$$
+As an illustration, consider a ball bouncing on a partially elastic surface: if the ball is released from rest from height $H$ above a horizontal surface with restitution coefficient $k$, it rebounds to height $h=kH$. Let's move on to the main task.
+
+A homogeneous rod $AB$ of mass $m$ and length $2L$ falls on a horizontal surface with a coefficient of restitution $k$, making an angle $\varphi$ with the vertical, at a speed $v_0$. The coefficient of friction between the rod and the surface is $\mu$. The rod touches the surface with end $A$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Let's direct the $x$ axis horizontally (to the right), and the $y$ axis vertically (downwards). During the impact, let us denote by $v_x$ and $v_y$ the projections of the velocity of the center of the rod $O$ on the coordinate axis, by $\omega$ the angular velocity of the rod (direction of rotation clockwise), and by $v_{Ax}$ and $v_{Ay}$ the projections of the velocity of the point $A$ on the axis $x$ and $y$ respectively. Also, by $F_x$ we denote the projection of the friction force on the axis $x$, and by $N$ we denote the force of the normal reaction of the surface ($N_y=-N$). Consider that during the impact the angle $\varphi$ remains constant.
+
+\section*{Part A. Possible types of impact (2.5 points)}
+
+\problembox{A1}{Express $\dot{v}_x$ in terms of $F_x$ and $m$.}{0.10}
+
+\problembox{A2}{Express $\dot{\omega}$ in terms of $F_x$, $N$, $L$, $\varphi$ and $m$.}{0.40}
+
+\problembox{A3}{Express $v_{Ax}$ in terms of $\omega$, $v_x$, $\varphi$ and $L$.}{0.10}
+
+\problembox{A4}{Prove that $v_{Ax}\leq{0}$ for any values of $\mu$ and $\varphi$.}{0.40}
+
+Thus, two situations are possible: 1) There is no slippage during the impact; 2) When slipping $F_x>0$. Next, you have to find out at what ratios $\varphi$ and $\mu$ each of them is realized. A necessary condition for the realization of the second situation is $v_{Ax}<0$. Further, within the framework of this part of the problem, this condition is satisfied.
+
+\problembox{A5}{Express $v_{A_x}$ in terms of $v_x$, $\varphi$ and $\mu$.}{0.10}
+
+\problembox{A6}{At what minimum possible value $\mu_0$ is slippage impossible for any values of angle $\varphi$?}{0.60}
+
+\problembox{A7}{For $\mu<\mu_0$, find all values of the angle $\varphi$ at which slippage is possible. Express the boundaries of the range of angles using $\mu$.}{0.80}
+
+We have obtained the conditions under which each type of interaction between the rod and the surface occurs. Let's move on to a description of the collision processes. Since slippage is possible in this system, kinetic energy, in addition to residual deformation of the surface, can also be converted into heat release under the influence of friction. After the impact, the kinetic energy of the rod $E$ is equal to
+$$E=E_0-E_{\text{def}}+A_{\text{tr}},$$
+where $A_{\text{tr}}$ is the work done by friction, and $E_0$ and $E_{\text{def}}$ are defined in the same way as in the introduction. Also, within the framework of this problem, we can assume that the friction force arising in the system does not lead to additional surface deformations.
+
+\section*{Part B. No slippage (3.5 points)}
+
+In this part of the problem, at all points, assume that $\mu>\mu_0$.
+
+\problembox{B1}{Express $v_x$ in terms of $\omega$, $L$ and $\varphi$.}{0.20}
+
+\problembox{B2}{Express $v_y$ in terms of $v_0$, $\omega$, $L$ and $\varphi$.}{0.60}
+
+\problembox{B3}{Find the maximum energy $W$ spent on surface deformation. Express your answer in terms of $m$, $v_0$ and $\varphi$.}{0.80}
+
+\problembox{B4}{Find $\omega_{\text{}}$ after the hit. Express your answer in terms of $v_0$, $L$, $\varphi$ and $k$.}{1.20}
+
+\problembox{B5}{Find the velocity of point $A$ of rod $v_{A\text{}}$ immediately after the impact. Express your answer using $v_0$, $\varphi$ and $k$.}{0.30}
+
+\problembox{B6}{At what distance $L_{AC}$ from point $A$ is point $C$ of the rod, the speed of which is minimal immediately after the impact? Express your answer using $L$, $\varphi$ and $k$.}{0.40}
+
+\section*{Part C: Impact with Slip (4 points)}
+
+For this part of the problem, assume that $\mu<\mu_0$ and angle $\varphi$ falls within the range found in step $A7$.
+
+\problembox{C1}{Express $\omega$ and $v_y$ in terms of $v_x$, $v_0$, $L$, $\mu$ and $\varphi$.}{0.40}
+
+\problembox{C2}{Find the maximum energy $W$ spent on surface deformation. Express your answer in terms of $m$, $v_0$, $\mu$ and $\varphi$.}{1.20}
+
+\problembox{C3}{Find $v_{x\text{}}$ after the hit. Express your answer in terms of $v_0$, $\mu$, $\varphi$ and $k$.}{1.40}
+
+\problembox{C4}{Find the work done by the friction force $A_{\text{}}$ during the impact. Express your answer in terms of $m$, $v_0$, $\mu$, $\varphi$ and $k$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/502}
+
+\end{document}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Superconducting films</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Superconducting films</h1>
+<p class="camp">X21 (2021) — English translation</p>
+<p>In thin films $\rm In-O$ at low temperatures (of the order of $1~\text{K}$), a superconductor-insulator phase transition controlled by an external magnetic field is observed (the transition occurs when the external magnetic field $B$ changes).</p>
+<h2 class="part">Part A. Critical parameters (6.8 points)</h2>
+<p>The table “Experimental data” presents measurements of the dependences $R(T)$, where $R$ is the resistance of the sample, $T$ is the temperature, at different external magnetic fields $B$. Resistance measurement error $\varepsilon(R)=0.5\%$. The graph (see Fig.) shows approximate types of dependencies $R(T)$ for some values ​​$B$ indicated in the table. Let us assume that the dependence of resistance $R(T,B)$ has the following form: $$R(T,B) = R_C - \gamma T + A \left( B - B_C \right) T^{\alpha}, $$ где $A, R_C, B_C$ — некоторые параметры, связанные со свойствами образца. Если на кривой $R(T)$ есть точка перегиба (то есть $\dfrac{\partial R}{\partial T}=0$), то обозначим ее координаты, как $\left(T_\text{п}, R_\text{n}\right)$. Примечание: Для функции двух переменных аналогом производной выступает частная производная согласно определениям: ⟦0⟧ ⟦1⟧ Фактически, при вычислении частой производной по $x$ мы полагаем $y$ constant and vice versa, for example: \[ f(x,y) = 3x^2 + 2xy,\quad \frac{\partial}{\partial x}f(x,y) = 6x + 2y,\quad \frac{\partial}{\partial y}f(x,y) = 2x \]</p>
+<div class="figure"><img src="PE_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Derive the analytical relationship $R_\text{п}$ ($T_\text{п}$).</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Define $B_C$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Define $R_C$ in two ways.</div><span class="pb-pts">2.60</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Define the parameters $\gamma$ and $\alpha$.</div><span class="pb-pts">2.80</span></div>
+<h2 class="part">Part B. Probability of describing an experiment (3.2 points)</h2>
+<p>Estimating the error of a physical quantity $X$ allows one to calculate the probability with which its value lies in the interval $[a,b]$. To assess the probability $p$ that the result of the experiment is described by a mathematical expression, the criterion $\chi^2$ (chi-square) is used, calculated according to the following formula: \[ \chi^2 = \sum\limits_{i=1}^{N} \left( \frac{R_\text{теор} - R_\text{эксп}}{\Delta R} \right)^2 \] For a number of points $N=150$, a correspondence table $p$ and $\chi^2$:</p>
+<p>(Probability table)</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Count $\chi^2$ (definition in note) of $R(T)$ dependencies for each $B$.</div><span class="pb-pts">2.20</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Using the table from the note, estimate the probability according to which the formula $f={R(T,B)}$ describes the dependence $R(T,B)$ for any (specify which) $150$ points.</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/102">https://pho.rs/p/102</a></p>
+</body>
+</html>

@@ -1,0 +1,128 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Ferromagnetic fluid and spontaneous symmetry breaking}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Many physical systems possess symmetry, meaning they do not change their properties under certain transformations, such as rotations of the system as a whole. In spontaneous symmetry breaking, the state of the system with minimum energy is less symmetrical than the system itself. For instance, in some ferromagnets, energy does not depend on the direction of the magnetic moment, but in the magnetized state, the moment points in a specific direction. Spontaneous symmetry breaking often occurs during phase transitions (e.g., paramagnetic to ferromagnetic).
+
+Ferromagnetic fluid (ferrofluid) is a colloidal system of nanometer-sized ferromagnetic particles suspended in a carrier liquid (organic solvent or water), which becomes strongly polarized in a magnetic field. 
+
+Throughout the problem, partial derivatives are denoted as $\partial_x f = \frac{\partial f}{\partial x}$, $\partial_y f = \frac{\partial f}{\partial y}$, and $\partial_z f = \frac{\partial f}{\partial z}$.
+
+\section*{Part A. Preliminary data (3 points)}
+
+Consider an incompressible fluid with density $\rho$, surface tension $\sigma$, and magnetic permeability $\mu \neq 1$. In a vertical gravitational field $g$, the fluid fills the half-space $z < 0$ under a vacuum. Upon applying a sufficiently large vertical uniform magnetic field $B_0$, the surface distorts and is described by $\Theta(X, Y)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Surface stability for $B_0 < B_c$ and $B_0 > B_c$.}
+\end{figure}
+
+This process, known as the Rosenzweig instability, occurs because above a critical field $B_c$, the formation of surface peaks becomes energetically favorable as paramagnetic matter is drawn into regions of high local magnetic field.
+
+In experiments, for $B_0 > B_c$, hexagonal lattices of peaks are observed. We define surface averaging as:
+$$\langle F \rangle = \lim_{S \to \infty} \frac{1}{S} \int_{S} F \, dX \, dY$$
+
+\problembox{A1}{What is the value of $\langle \Theta \rangle$ in the crystalline phase?}{0.20}
+
+Consider a particle of mass $m$ in a potential well: $\Pi(\xi) = mg(\alpha\xi^2 + \beta\xi^4)$ with $\beta > 0$. For $\alpha > 0$, the equilibrium is at $\xi = 0$ (liquid phase symmetry). For $\alpha < 0$, the equilibrium shifts to $\pm \xi_0$ (crystalline phase, symmetry broken).
+
+For the ferrofluid, transformations include:
+\begin{itemize}
+    \item Translation $T_{\vec{a}}$: $(X', Y') = (X + a_X, Y + a_Y)$
+    \item Rotation $R_\varphi$: $(X', Y') = (X \cos \varphi - Y \sin \varphi, Y \cos \varphi + X \sin \varphi)$
+\end{itemize}
+
+\problembox{A2}{Describe the symmetries of the system (transformations that do not change the form of the energy dependence $\Pi[\Theta]$).}{0.20}
+
+\problembox{A3}{Describe the symmetries of the equilibrium state of the liquid phase ($\Theta(X', Y') = \Theta(X, Y)$).}{0.20}
+
+\problembox{A4}{Describe the symmetries of the equilibrium states of the crystalline phase.}{0.40}
+
+The energy per unit area $dS = dX dY$ consists of gravitational $\Pi_g$, surface $\Pi_\sigma$, and magnetic dipole $\Pi_B$ components.
+
+\problembox{A5}{Write $\Pi_g$ in terms of $\rho, g,$ and $\langle \Theta^2 \rangle$.}{0.60}
+
+\problembox{A6}{Using $dS = dX dY \sqrt{1 + (\nabla_0 \Theta)^2}$, write $\Pi_\sigma$ in terms of $\sigma$ and the average $\langle (\nabla_0 \Theta)^2 \rangle$.}{0.20}
+
+\problembox{A7}{Write $\Pi_B$ through $\vec{B}, \vec{B}_0, \mu, \mu_0,$ and $\Theta$. The expression may involve an average of an integral along the $Z$ axis.}{0.60}
+
+We normalize the energy $U = (\Pi_g + \Pi_\sigma + \Pi_B)/\sigma$ and dimensions $(X, Y, Z) = \sqrt{\sigma/(\rho g)}(x, y, z)$. The surface becomes $\zeta(x, y)$.
+
+\problembox{A8}{Write the expression for the dimensionless energy $U$ per unit area. Use $\zeta, \mu, \mu_0, \sqrt{\sigma\rho g}, \vec{B}, \vec{B}_0$, and dimensionless $\nabla$.}{0.60}
+
+\section*{Part B. Magnetic field on a rough boundary (5 points)}
+
+Consider a paramagnetic substance ($\mu > 1$) with small surface distortions $\zeta(x, y) \neq 0$. Use index $\uparrow$ for vacuum ($z > \zeta$) and $\downarrow$ for the substance ($z < \zeta$).
+
+\problembox{B1}{What is the jump $\Delta H = H_{0\uparrow}(0) - H_{0\downarrow}(0)$ in the magnetic field strength for a flat surface? Use $B_0, \mu,$ and $\mu_0$.}{0.30}
+
+Let $\vec{B} = \vec{B}_0 + \vec{b}$ and $\vec{H} = \vec{H}_0 + \vec{h}$. Introduce the potential $\phi$ such that $\vec{h} = \nabla \phi$. Assume $\partial_{x,y} \zeta \ll 1$ and $\langle \zeta \rangle = 0$.
+
+\problembox{B2}{Write the equation $\operatorname{div} \vec{b} = 0$ in vacuum and the substance using $\partial^2_{x,y,z} \phi_{\uparrow,\downarrow}$.}{0.30}
+
+\problembox{B3}{Write the approximate boundary condition for field $\vec{B}$ using components of $\vec{b}_{\uparrow,\downarrow}$.}{0.30}
+
+\problembox{B4}{Write the approximate boundary conditions for field $\vec{H}$ using $\vec{h}_{\uparrow,\downarrow}, \Delta H,$ and $\partial_{x,y} \zeta$, assuming $|\vec{h}| \ll \Delta H$.}{0.60}
+
+For a surface $\zeta = \sum a_i \cos \vec{k}_i \vec{r}$, the potential is $\phi = \sum u_i(z) \cos \vec{k}_i \vec{r}$.
+
+\problembox{B5}{Obtain the differential equation for $u_{i\uparrow,\downarrow}$ and find the general solutions for $z \to \pm \infty$. Plot a qualitative graph.}{0.70}
+
+\problembox{B6}{Find the constants for $u_i(z)$ and write the final expressions for $\phi_{\uparrow,\downarrow}(\vec{r}, z)$.}{0.80}
+
+\problembox{B7}{Express the energy correction $\Delta U_B$ through an average of an integral containing $\vec{b}$.}{0.80}
+
+\problembox{B8}{Find $\Delta U_B$ per unit area in terms of $\mu, \mu_0, B_0, \sqrt{\sigma\rho g}, k,$ and $\langle \zeta^2 \rangle$.}{1.20}
+
+\section*{Part C. Linear analysis (2 points)}
+
+A hexagonal lattice has peaks with amplitude $A$: $\zeta(\vec{r}) = \sum_{i=1}^3 a_i \cos \vec{k}_i \vec{r}$, with $ka \ll 1$ and $|\vec{k}_i| = k$.
+
+\problembox{C1}{How are the directions of $\vec{k}_i$ and the amplitudes $a_i$ related to each other and to $A$?}{0.30}
+
+\problembox{C2}{Find $U$ as a function of $A, k$ and system parameters.}{1.20}
+
+\problembox{C3}{At what $B_c$ does the flat state $\zeta = 0$ lose stability?}{0.20}
+
+\problembox{C4}{Determine the wave vector $k_c$ of the lattice that appears at $B \gtrsim B_c$.}{0.20}
+
+\problembox{C5}{Is the Rosenzweig instability possible in a diamagnetic ($\mu < 1$) fluid?}{0.10}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/4558
+
+\end{document}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Thermodynamic black box</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Thermodynamic black box</h1>
+<p class="camp">Y21 (2021) — English translation</p>
+<p>The thermally insulated system consists of two vessels connected by a thin heat-conducting tube. The intrinsic heat capacity of the tube can be neglected; thermal equilibrium in each vessel and along the tube is established much faster than thermal equilibrium between the vessels.</p>
+<div class="figure"><img src="PE3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>The heat capacity of the body in vessel No. 2 is known: $C_2=1~кДж/{}^\circ\mathrm{C}$. You can set the initial temperature of vessel No. 2 ($T_{20}$, between $0^\circ\mathrm{C}$ and $100^\circ\mathrm{C}$.) and the time $t$ after connecting the vessels with a tube. The program offered to you shows the temperature in vessel No. 2 at time $t$ (set in minutes) after connecting the vessels with a tube ($t=0$).</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Determine the initial temperature of vessel No. 1 ($T_{10}$).</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Plot a graph of the dependence of the heat capacity of vessel No. 1 on its temperature.</div><span class="pb-pts">3.60</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">How long will it take for the temperature of vessel No. 1 to increase from $T_{10}$ to $T_{10}+20^\circ\mathrm{C}$ if, instead of vessel No. 2, a tube is connected to a vessel with a constant temperature $100^\circ\mathrm{C}$?</div><span class="pb-pts">3.00</span></div>
+<h2 class="part">Program</h2>
+<p>exe The executable file for Windows is published on GitHub.</p>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/244">https://pho.rs/p/244</a></p>
+</body>
+</html>

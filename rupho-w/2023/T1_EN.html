@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Variable Voltage Capacitor</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Variable Voltage Capacitor</h1>
+<p class="camp">W23 (2023) — English translation</p>
+<p>Capacitor $C$ is connected in series with resistor $R$. This system is supplied with alternating voltage $V(t)$. Because of this, a voltage $U(t)$ appears across the capacitor, which is measured by an ideal voltmeter. We will examine the dependence of the voltage on the capacitor and the current through the resistor $I(t)$ on time in various modes. The polarity of the source connection is indicated on the diagram, use it to indicate the correct sign of the voltage. The problem statement contains a detailed explanation of how to study the voltage on a capacitor. It is important to find exactly what is asked in each point of the problem. If there are no intermediate points, no points are awarded for them, even if there is a correct final answer obtained by another method.</p>
+<div class="figure"><img src="T1_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<h2 class="part">Part A: Constant Voltage (2 points)</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Initially, the charge on the capacitor is zero. Let at time $t  = 0$ a constant voltage $V = V_0$ be applied to the input of the circuit. Find the dependence of the voltage on the capacitor on time $U(t)$ at $t > 0$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Find the dependence of the current through the resistor on time $I(t)$ ($t > 0$).</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the heat $Q_0$ that will be released on the resistor during the entire process.</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Let now the initial voltage on the capacitor at $t = 0$ be equal to $U_1$, and as before, a constant voltage $V = V_0$ is applied to the input. Find the dependence of the voltage on the capacitor on time $U(t)$ and the current through the resistor $I(t)$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Find the amount of heat $Q_1$ that will be released during the entire process from point \textbf{A4}. Construct (qualitatively) a graph of $Q_1$ versus $U_1$.</div><span class="pb-pts">0.70</span></div>
+<h2 class="part">Part B. Linear growth (4.5 points)</h2>
+<p>Let now a linearly increasing voltage $V = \alpha t$ (at $t > 0$) be applied to the circuit. At $t = 0$ the capacitor is not infected. It can be shown that then, after a sufficiently long time, the voltage on the capacitor will be approximately equal to the voltage at the input of the circuit.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Let a long time pass. Find an expression for the current through resistor $I(t)$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the amount of heat $Q$ that will be released on the resistor over a sufficiently long time $t$.</div><span class="pb-pts">0.20</span></div>
+<p>Now we will solve the problem exactly.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Find the current through resistor $I$. Express it in terms of the instantaneous voltage across the capacitor $U$, the input voltage $V$ and the circuit parameters.</div><span class="pb-pts">0.10</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Express the rate of change of voltage across capacitor $dU/dt$ in terms of the current through resistor $I$ and the circuit parameters.</div><span class="pb-pts">0.10</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Having differentiated the equation from \textbf{B3}, obtain a differential equation for the current through the resistor, that is, express $dI/dt$ in terms of $I$, the circuit parameters and the constant $\alpha$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">What is the current through the resistor at the initial time $I(0)$?</div><span class="pb-pts">0.10</span></div>
+<p>The resulting equation for the current looks exactly the same (up to notation) as the equation for the voltage across a capacitor, which is charged with a constant voltage.</p>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Using the analogy of charging a capacitor, find the current through the resistor as a function of time $I(t)$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Find the dependence of the voltage on the capacitor on time $U(t)$. Construct a (qualitative) graph of voltage versus time.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">B9</span><div class="pb-text">Find the amount of heat $Q(t)$ that will be released on the resistor during time $t$.</div><span class="pb-pts">0.50</span></div>
+<p>Now let the input voltage first grow linearly with time (at $0 < t < T$) to a certain maximum value $V_0$, and then remain constant (see graph). As before, at the initial time $t = 0$ the capacitor is not charged. We have already analyzed the time dependence at $t < T$. For the rest of this part, express your answers in terms of the circuit parameters, time $t$, $T$ and $V_0$.</p>
+<div class="figure"><img src="T1_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B10</span><div class="pb-text">Find the voltage across the capacitor as a function of time at $t > T$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B11</span><div class="pb-text">Find the amount of heat $Q_2$ that is released on the resistor at $t > T$.</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">B12</span><div class="pb-text">Find the amount of heat $Q_T$ that was released on the resistor during the entire charging time of the capacitor.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">B13</span><div class="pb-text">Find the ratio $k = Q_T/Q_0$. Here $Q_0$ is the heat that is generated at the resistor when voltage $V_0$ is instantly applied to the input of the circuit (see paragraph \textbf{A3}), $Q_T$ is defined in the previous paragraph. Write down an approximate expression for $k$ at $T \gg RC$.</div><span class="pb-pts">0.60</span></div>
+<h2 class="part">Part C. Periodic stress (3.5 points)</h2>
+<div class="figure"><img src="T1_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>Let us now apply alternating voltage to the capacitor in the form of a “saw” (see graph). This means that first the input voltage increases linearly to a certain maximum value $V_0$, and then decreases linearly at the same speed until it reaches the value $-V_0$. Then the process is repeated periodically with a period of $T$. After a sufficiently long time, the process will be established, that is, the change in voltage on the capacitor will also become periodic. Let at the moment of time when the input voltage is maximum and equal to $V_0$, the voltage on the capacitor is equal to $U_1$. At the moment when the input voltage is $-V_0$, the voltage on the capacitor is $U_2$.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Let a sufficiently long time pass and the vibrations become established. How should $U_1$ and $U_2$ be connected?</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">What is the current through resistor $I_1$ when the input voltage is $V_0$?</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">By analogy with point \textbf{B4}, write an equation that is satisfied by the current through the resistor in the section where the input voltage decays linearly.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Taking into account the previous two points, find the dependence of the current on time in the section where the input voltage decays linearly. For ease of notation, consider that this section begins at time $t = 0$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Using the found expression for the current, express the voltage on the capacitor at the end of the linear section $U_2$ in terms of the voltage at the beginning $U_1$ and the parameters of the problem.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Find the maximum voltage across capacitor $U_1$ at steady state. Write approximate expressions for $U_1$ for $T \ll RC$ and $T \gg RC$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C7</span><div class="pb-text">Plot a graph of the ratio $U_1/V_0$ versus the dimensionless variable $T/RC$.</div><span class="pb-pts">0.60</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/2928">https://pho.rs/p/2928</a></p>
+</body>
+</html>

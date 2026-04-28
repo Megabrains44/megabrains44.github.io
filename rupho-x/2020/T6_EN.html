@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Halbach magnetic assembly</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Halbach magnetic assembly</h1>
+<p class="camp">X20 (2020) — English translation</p>
+<p>The Halbach magnetic assembly is a special configuration of permanent magnets, characterized by the fact that the magnetic field on one of its sides is almost completely absent due to the special arrangement of the assembly elements. In this problem we explore this phenomenon.</p>
+<h2 class="part">Magnetic dipoles</h2>
+<p>A dipole is a point magnetic element (for example, a small loop with current. Its dipole moment is $I\vec S$, where $I$ is the current running through the loop, and $\vec S$ is the oriented area). The field created by a magnetic dipole is described by the following formula: $$\vec B (\vec r) = \frac {\mu_0}{4\pi} \left(\frac{3\vec r (\vec m \cdot \vec r )} {r^5} - \frac { \vec m} {r^3}\right), $$ где $m$ —  дипольный момент, $\vec r$ — радиус-вектор точки в пространстве относительно диполя. $\mu_0=4\pi\cdot 10^{-7}~\text{H/m}$. The figure shows a dipole, a vector and the angle between them.</p>
+<div class="figure"><img src="T6_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">The magnetic field weakens with increasing distance; for a given angle $\theta$, find the dependence of the magnetic field $B$ at a distance $r$ from the dipole.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Magnetic washer</h2>
+<p>Let us consider a light magnet, which is a flat cylinder of radius $R$ and thickness $h \ll R$ with a surface magnetic moment density $\vec\sigma$. The surface density vector is oriented along the disk axis.</p>
+<div class="figure"><img src="T6_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Express the magnetic field $B(y)$ along an axis perpendicular to the magnet at a distance $y$ from the center.</div><span class="pb-pts">1.50</span></div>
+<p>If you bring a small round magnet close to a metal refrigerator door, the magnet will be attracted to it with a force that depends on the size and type of material of the magnet, as well as the thickness of the door. At this point, consider the thickness of the door to be much larger than the linear dimensions of the magnet. Consider a cylindrical magnet with a volumetric dipole moment density $\rho = 1.05 \cdot 10^6 \frac {\text{ Тл} \cdot \text{м}}{\text{Гн}}$ of thickness $t=2~\text{мм}$ and diameter $D=20~\text{мм}$.</p>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Estimate the magnitude of the magnetic field near the surface of the magnet. Express your answer in terms of quantities $t,~D,~\rho,~\mu_0$.</div><span class="pb-pts">0.50</span></div>
+<div class="figure"><img src="T6_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<p>To determine the force of interaction between the magnet and the refrigerator door, it is necessary to use the law of conservation of energy. When a magnet is pulled away from a door, a field is created between them that is approximately equal to the field on the other side of the magnet. The rest of the field (including what's inside the door) remains almost unchanged.  The expression for the volumetric magnetic field energy density in air is: $w=\frac{B^2}{2\mu_0}$.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Obtain the expression and numerical value of the interaction force $F_0$ between the door and the magnet pressed to it, and also calculate the pressure $P_0$ of the magnet on the door.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Halbach magnetic assembly</h2>
+<p>In order to obtain the expression of the magnetic field in the Halbach assembly, we find the field of a long row of magnets, as shown in the figure. Linear density of the dipole moment of the series $\rho_L$, direction - along the axis $y$.</p>
+<div class="figure"><img src="T6_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Write down an expression for the field $\vec B(\vec r_0, y)$ that is created by a series of magnets. (For convenience, the field is expressed as both $\vec r_0$ and $y$, although technically it is $y = (\vec r_0)_y$.)</div><span class="pb-pts">2.00</span></div>
+<p>In a planar Halbach magnetic assembly, the polarization direction of a small area element rotates continuously. Its position changes in accordance with the formula: $$\beta(x,z)=\beta_0+k\cdot x,~k=2\pi/\lambda,~ t\ll\lambda$$ Здесь $\beta$ — это угол между направлением диполя и перпендикуляром к плоскости, этот угол вращается в плоскости $xy$. Длина $\lambda$ — это шаг сборки, а $t$ - thickness of the assembly.</p>
+<div class="figure"><img src="T6_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Find the magnetic field on both sides of the assembly. Give the answer in the form of some integral.</div><span class="pb-pts">1.00</span></div>
+<p>One of these integrals is needed to solve this point: $$ \int_{-\pi/2}^{\pi/2} dx\cdot\cos(2x)\cdot\cos(c\cdot\tan x)=\frac{c \cdot \pi} {e^c}=\int^{\pi/2}_{-\pi/2}dx\cdot\sin(2x)\cdot\sin(c\cdot\tan x) $$ $$ \frac{\pi}{e^d} = \int_{-\infty}^{\infty} dx\cdot\frac{\cos x}{d^2+x^2} $$ $$ \frac{\pi}{a\cdot e^a}= \int^{\infty}_{-\infty} dx\cdot \frac {2x\cdot\sin(2x)} {(a^2+x^2)^2} $$ $$ \frac {(b+1)\pi}{e^b}= \int^{\infty}_{-\infty}dx \cdot \frac{2b^3x\cdot \cos(x)}{(b^2+x^2)^2} $$</p>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Show that on one side of an ideal assembly the magnetic field tends to zero.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Write down the expression for the field on the other side.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">Based on the field expression, find the average pressure $Р$ of such a magnet on the refrigerator door. Take the following parameters: thickness $t=0.5~\text{мм}$, volumetric density of the magnetic dipole $\rho = 2 \cdot 10^5 \frac {\text{Тл} \cdot \text{м}} {\text{Гн}}$, assembly step $\lambda=5~\text{мм}$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Find the ratio between the pressure created by a Halbach magnetic assembly and the pressure created by a conventional magnet of the same material, with the same radius and thickness. Here, too, we should neglect the effects on the perimeter of the circle and the thickness of the magnet.</div><span class="pb-pts">0.50</span></div>
+<p>You might think that nothing more innovative than refrigerator magnets would use Halbach assembly. However, the Hendo company has developed an entire hoverboard based on it (the same one that was in the movie “Back to the Future”).  Using Halbach's ring assembly of electromagnets, Hendo achieved enough lift to lift an average-sized person off the ground! But only over copper.</p>
+<div class="figure"><img src="T6_EN_assets/fig6.jpg" alt="" /><div class="caption">Fig. 6.</div></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/19">https://pho.rs/p/19</a></p>
+</body>
+</html>

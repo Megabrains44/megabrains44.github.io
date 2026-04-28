@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Stability of various systems</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Stability of various systems</h1>
+<p class="camp">X18 (2018) — English translation</p>
+<h2 class="part">Part A. Stabilization using feedback.</h2>
+<p>Let us explore how an initially unstable equilibrium position can be stabilized. First, consider an inverted pendulum: a thin long rod of length $l$, hinged at the lowest point so that it can rotate freely around the hinge. The position of the rod is specified by the angle $\varphi$ between the rod and the vertical ($\varphi\ll{1}$). Gravity acceleration $g=9{,}8~\text{м}/\text{с}^2$.</p>
+<div class="figure"><img src="T6_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Express the angular acceleration of rod $\ddot{\varphi}$ in terms of $\varphi$, $l$ and $g$. Show that the time dependence of the inclination angle $\varphi$ is given by $\varphi=Ae^{t/\tau}+Be^{-t/\tau}$, where $A$ and $B$ are constants depending on the initial position and initial angular velocity of the rod, and $\tau$ is the characteristic time of fall. Express $\tau$ in terms of $l$ and $g$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Let the boy now try to support a long thin stick in an upright position on his hand. As soon as the stick begins to fall, for example, to the left, he moves his hand to the left an even greater distance so that the center of mass of the stick is to the right of its fulcrum. As a result, the moment of gravity begins to rotate the stick to the right, reducing its speed of rotation directed to the left. Estimate how long a stick the boy can hold vertically if his reaction time is approximately $\tau_r=0{,}2~\text{с}$. (Reaction time is the time delay between the command sent by the brain to the hands and the corresponding movement of the hands.)</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Humans and birds maintain a standing position in a similar way. They move the fulcrum (the point at the bottom of the foot where normal ground reaction force is applied), for example, changing the angle between the foot and leg to counteract the fall of the upper body. A small bird of height $l=6~\text{cm}$ can stand on its feet. Estimate her reaction time from above.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Balance on a bicycle is also maintained by moving the fulcrum, which lies on the line between the points of contact of the wheels and the ground. This line can be moved by turning the steering wheel while driving. Estimate the minimum speed of the cyclist $v_m$ at which he can maintain balance in this way. Consider that its characteristic time of fall is the same as that of a rod of length $L=2~\text{м}$; distance between wheel axles $d=1~\text{м}$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part B. Tightrope walker.</h2>
+<p>The rope walker cannot move the fulcrum in a direction perpendicular to the rope. Instead, its equilibrium is maintained by the movement of its center of mass. Consider a simple model of a person balancing on a tightrope. We model the lower half of the body with a point mass $m$ at a height $H$, and the upper half with the same point mass at a height $1.4H$. The relative position of these points can be changed by bending left or right; For simplicity, we will assume that the distance from the rope to them will remain constant, that is, they behave as if they were attached to the ends of two weightless rods of lengths $L$ and $1.4L$ respectively. Let the rods make angles $\alpha_1$ and $\alpha_2$ with the vertical (positive values ​​correspond to clockwise rotation), and the angle between them is $\beta=\alpha_1-\alpha_2$. The tightrope walker, bending, can adjust the angle $\beta$.</p>
+<div class="figure"><img src="T6_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Suppose that initially the tightrope walker stood in almost perfect balance ($\alpha_1=\alpha_2=0$). Due to the instability of the equilibrium, it slowly begins to fall clockwise. He notices this when $t=t_0$, $\alpha_1=\alpha_2=\alpha_0>0$. He quickly bends to stop falling. Consider that angle $\beta$ instantly takes on the value $\beta_0$. Express the new values ​​of angles $\alpha_1$ and $\alpha_2$ in terms of $\beta_0$ and $\alpha_0$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Thus, the tightrope walker is now bent and maintains the same body shape ($\beta=\beta_0$) for a time $T_b$, after which he almost instantly straightens up ($\beta=0$). He wants to stand upright again $\alpha_1=\alpha_2=0$. Should it have folded clockwise ($\beta_0>0$) or counterclockwise ($\beta_0<0$)? Explain your answer.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Now we will assume that $\alpha_0\ll{\beta_0}$. Immediately after it straightens up, neither its angular velocity ($\dot{\alpha}_1=\dot{\alpha}_2$) nor its angle $\alpha_1$ are zero (they will become zero much later). Find the meaning of the expression $\dot{\alpha}_1/\alpha_1$. Express your answer using $H$ and $g$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Find the time $T_b$ during which the tightrope walker is bent. Express your answer in terms of $\alpha_0$, $\beta_0$, $H$ and $g$. We can assume that $\alpha_0\ll{\beta_0}$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part C. Kapitza pendulum.</h2>
+<p>The equilibrium position of an inverted pendulum can be stable if its attachment point oscillates at a high frequency. Let us consider a pendulum of length $l$, similar to the pendulum from part $\mathrm A$, but here the rod is considered weightless, and a point mass is fixed at its end. The pendulum attachment point oscillates in the vertical direction. Let the speed $v$ of the attachment point depend on the time $t$, as shown in the graph below ($v>0$ corresponds to upward movement); half-cycle of oscillations $T\ll{l/v_0}$. We can also assume that $v_0/T\gg{g}$, so that in paragraphs $\mathrm C1$ and $\mathrm C2$ we can neglect the acceleration of free fall. To simplify calculations, it is better to study the process in the reference system associated with the attachment point (note: the acceleration of the reference system $\vec{a}$ creates an inertial force $-M\vec{a}$ acting on the body of mass $M$).</p>
+<div class="figure"><img src="T6_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="figure"><img src="T6_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Consider that at moment $t=T/2$ the pendulum was motionless and inclined at a small angle $\varphi_0$. Draw a graph of the angle of inclination $\varphi$ versus time, and determine the angular displacement of the pendulum $\Delta{\varphi}$ at time $t=T$, that is, $\Delta{\varphi}=\varphi(T)-\varphi(T/2)$. We can assume that $\Delta{\varphi}\ll{\varphi_0}$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Since we are still neglecting gravity, only the inertial force has a non-zero moment about the hinge. Find the time average value of this moment of inertia over time $2T$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Now let's take gravity into account. Write the inequality that must hold for $g$, $T$, $l$, and $v_0$ for vertical position to exist.</div><span class="pb-pts">1.00</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/314">https://pho.rs/p/314</a></p>
+</body>
+</html>

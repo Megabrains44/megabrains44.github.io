@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Physics of raindrops}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The mechanism of cloud formation can be summarized as follows. Moist air rises and cools with altitude, causing water vapor to become supersaturated, that is, its partial pressure becomes greater than the saturated vapor pressure at the corresponding temperature. In this case, water vapor begins to condense and form water droplets. As long as these droplets are small enough, they fall slowly enough and remain in the cloud. If the size of the drops is large enough that they can reach the Earth without evaporating, it begins to rain. This problem examines the mechanism of droplet formation in supersaturated water vapor and their further growth due to diffusion.
+
+The following notation and numerical values are used in the problem: 
+\begin{itemize}
+    \item $\sigma = 7.5 \cdot 10^{-2} ~\text{N}/\text{m}$ -- coefficient of surface tension of water;
+    \item $T = 283~\text{K}$ -- atmospheric temperature;
+    \item $p_s = 1.23~\text{kPa}$ -- pressure of saturated water vapor at the considered atmospheric temperature;
+    \item $\rho_s$ -- density of saturated water vapor at a given temperature;
+    \item $p_v$, $\rho_v$ -- pressure and density of water vapor in the atmosphere;
+    \item $\varphi = \rho_v/\rho_s = p_v/p_s$ -- water vapor supersaturation coefficient;
+    \item $\rho_L = 1.0 \cdot 10^3 ~\text{kg}/\text{m}^3$ -- density of water;
+    \item $\mu = 0.018 ~\text{kg}/\text{mol}$ -- molar mass of water;
+    \item $m$ -- mass of water molecules;
+    \item $k = 1.38 \cdot 10^{-23}~\text{J}/\text{K}$ -- Boltzmann constant;
+    \item $L = 2.48 ~\text{MJ}/\text{K}$ -- specific heat of water vaporization;
+    \item $R = 8.31~\text{J}/(\text{mol} \cdot \text{K})$ -- universal gas constant;
+    \item $N_A = 6.02 \cdot 10^{23}~\text{mol}^{-1}$ -- Avogadro's constant
+\end{itemize}
+. Water vapor can be considered an ideal gas in all parts of the problem.
+
+\section*{Part A. Drops in a homogeneous atmosphere (4 points)}
+
+Let the atmosphere consist only of air and water vapor without impurities. When a drop forms, additional energy must be expended to create the surface of the water. Therefore, even in the case of supersaturated water vapor, the formation of droplets is complicated by the fact that at a small size the relative value of the surface energy is large.
+
+It is known from thermodynamics that for a process at constant energy its possibility is determined by the value of the Gibbs free energy $G$. The greater the free energy required, the less likely the process. Let us investigate how the free energy required for the formation of a drop depends on its radius $r$. To do this you will need the following facts: The free energy of a liquid surface of area $A$ is equal to $\Delta G_{surf} = \sigma A$, $\sigma$ is the coefficient of surface tension. The free energy of one mole of saturated water vapor is equal to the free energy of a mole of water (ignoring surface energy) at the same temperature and pressure. The difference between the free energy of one mole of supersaturated water vapor and saturated water vapor at the same temperature is $\Delta G_v= R T \ln \varphi$ ($\varphi = \rho_v/\rho_s > 1$ is the steam supersaturation coefficient). The free energy of water vapor is proportional to its amount of matter.
+
+\problembox{A1}{Find the change in the free energy of water vapor if a drop of radius $r$ is formed from it. Express your answer in terms of $r$, $\sigma$, $\varphi$, $R$, $T$, $\rho_L$, $\mu$.}{1.00}
+
+\problembox{A2}{Find the critical value of the droplet radius $r_c$ at which $\Delta G$ is maximum, as well as the corresponding value $\Delta G_c$. Express your answer using $\sigma$, $\varphi$, $R$, $T$, $\rho_L$, $\mu$. Find the numerical value of $r_c$ at $\varphi = 1.01$.}{0.80}
+
+Until the drop has reached the radius $r_c$, its growth is accompanied by an increase in free energy and is therefore unlikely. As soon as the radius exceeds the critical one, further growth will occur without difficulty with a decrease in free energy. Therefore, when studying the number of droplets generated, one can focus on droplets of the critical radius. A drop can form around any of the water molecules, but the probability of such a process is small and is determined by the required free energy. From statistical mechanics it follows that the concentration of centers around which condensation can actually occur is equal to $$ n_c = n e^{- \Delta G_c/ kT}, $$ where $n$ is the concentration of water molecules in the vapor, $\Delta G_c$ was found in the previous paragraph.
+
+\problembox{A3}{Consider a drop of critical radius $r_c$. Determine the time $\tau$ during which the number of molecules in it will increase by $g$. Express your answer using $r_c$, $g$, $p_s$, $m$, $k$, $T$, $\varphi$. Assume that during the growth process the radius of the drop does not change; the evaporation of molecules from the drop can be neglected. It is known that $$ dN = dt\, dS \frac{p_v}{\sqrt{2\pi m k T}} $$ molecules. Here $p_v$ is the vapor pressure, $m$ is the mass of the molecules, $T$ is the gas temperature, falling on the surface area $dS$ in time $dt$.}{0.70}
+
+We will consider time $\tau$ to be the characteristic time of growth of droplets from the embryo. During time $\tau$, all nuclei present in the system turn into drops of critical radius, and in their place new nuclei appear in the same quantity.
+
+\problembox{A4}{Find the number of drops $J$ that are formed per unit time in a unit volume of supersaturated water vapor. Express your answer in terms of $\sigma$, $\varphi$, $p_s$, $r_c$, $T$, $g$.}{0.60}
+
+\problembox{A5}{From the results of the previous paragraph it follows that the rate of droplet formation very much depends on the steam supersaturation coefficient. Determine numerically the value of the vapor supersaturation coefficient $\varphi$, at which one drop per second is born at a temperature $T = 283~\text{K}$ in $1~\text{cm}^3$ air. Consider that $g = 100$. The remaining numerical data are given at the beginning of the problem.}{0.90}
+
+\section*{Part B. Diffusion growth of droplets (4 points)}
+
+In this part we will use the following notations (in addition to those given at the beginning of the problem): 
+\begin{itemize}
+    \item $\rho_v$ -- density of water vapor at a large distance from the drop;
+    \item $\rho_r$ -- density of water vapor near the surface of the drop;
+    \item $\rho_s$ -- density of saturated water vapor at atmospheric temperature at a large distance to a drop;
+    \item $T = 283~\text{K}$ -- atmospheric temperature at a large distance to the drop;
+    \item $T_r$ -- drop temperature;
+    \item $K =2.40 \cdot 10^{-2} ~\text{J}/ (\text{m} \cdot \text{s} \cdot \text{K})$ -- air thermal conductivity coefficient;
+    \item $D = 2.36 \cdot 10^{-5}~\text{m}^2/\text{s}$ -- diffusion coefficient of water vapor in air;
+    \item $r$ -- drop radius;
+    \item $M$ -- drop mass.
+\end{itemize}
+
+The drop grows due to diffusion. The rate of change in the mass of the drop and the rate of heat removal are given by the relations $$ \frac{dM}{dt} = 4 \pi r D (\rho_v - \rho_r); \quad \frac{dQ}{dt} = 4\pi Kr (T_r - T). $$ We assume that the temperature of the drop during its growth remains constant, and all the heat is released only due to the condensation of water.
+
+\problembox{B1}{For saturated vapor in equilibrium with a liquid, express the derivative of pressure with respect to temperature $dp_s/dT$ in terms of $p_s$, $L$, $R$, $T$, $\mu$. Using the result obtained, find the relative change in the density of saturated water vapor $\Delta \rho_s/\rho_s$ with a small change in temperature $\Delta T$. Express your answer using $\Delta T$, $T$, $L$, $\mu$, $R$. You can use the relationship between small changes in pressure, density and temperature of an ideal gas $$ \frac{\Delta p_s}{p_s} = \frac{\Delta \rho_s}{\rho_s} +\frac {\Delta T}{T}. $$}{0.80}
+
+\problembox{B2}{Express $dQ/dt$ in terms of $dM/dt$ and $L$.}{0.20}
+
+\problembox{B3}{Using the result of the previous paragraph and the heat equation, express the temperature difference between the drop and the atmosphere, $T_r- T$, in terms of $dM/dt$, as well as $r$, $L$, $K$.}{0.30}
+
+\problembox{B4}{We assume that near the surface of the drop the density of water vapor is equal to the density of saturated vapor at the temperature of the drop. Assuming the temperature and density differences are small and using the results B1, B3, express the ratio $(\rho_r - \rho_s)/\rho_s$ ($\rho_r$ is the vapor pressure near the surface of the drop) in terms of $L$, $r$, $K$, $\mu$, $R$, $T$ and $dM/dt$.}{0.30}
+
+\problembox{B5}{Using the diffusion equation, express the ratio $(\rho_r - \rho_v)/\rho_s$ in terms of $dM/dt$, $r$, $D$, $\rho_s$.}{0.30}
+
+\problembox{B6}{By excluding the vapor density near the surface of the drop $\rho_r$ from the answers in the two previous paragraphs, you obtain an expression for $dM/dt$. Express your answer in terms of $\varphi$, $\mu$, $R$, $T$, $D$, $p_s$, $L$, $K$, $r$.}{0.60}
+
+\problembox{B7}{The rate of increase in the radius of the drop has the form $$ \frac{dr}{dt} = \frac{\xi}{r^k}. $$ Determine $k$ and $\xi$, express the answer in terms of $\varphi $, $\rho_L$, $\mu$, $R$, $T$, $D$, $p_s$, $L$, $K$.}{0.50}
+
+\problembox{B8}{Find the dependence of the radius of the drop on time. The initial radius of the drop is $r_0$. Express your answer in terms of $r_0$, $\xi$, $t$.}{0.50}
+
+\problembox{B9}{Let the initial radius of the drop be $r_0 = 0.7~\mu\text{m}$. Find the numerical value of the time during which it will grow to size $r_1 = 10~\mu\text{m}$ with a supersaturation coefficient $\varphi = 1.1$. The remaining numerical values are given at the beginning of this part.}{0.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3732}
+
+\end{document}

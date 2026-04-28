@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Physics of billiard balls</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Physics of billiard balls</h1>
+<p class="camp">X20 (2020) — English translation</p>
+<p>Billiards is the collective name for several board games with different rules in which the player uses a wooden rod - a cue - to move balls along the surface of the table. An experienced billiards player knows how important the physical characteristics of the balls and cues are to proper play and how the laws of physics can be used to your advantage during the game. In this problem we will explore some topics related to the physics of billiard balls. At all points, we consider the billiard ball to be a homogeneous body of radius $R$ with a moment of inertia $I=\frac{2}{5} mR^2$ about any axis passing through the center.</p>
+<h2 class="part">Part A. Sweet spot (1.5 points)</h2>
+<p>After hitting a ball with a cue, the ball may generally lose some of its initial speed while motion is established due to friction as it slips. However, good billiard players know the point (“sweet spot”), when hit, the ball will not lose speed while moving. We will assume that the impact on the ball is concentrated at a certain point at a height $h$ from the table; the cue is oriented at an angle $\alpha$ to the table surface ($-\pi/2\le\alpha\le\pi/2$, cm. Fig.). Consider that the force of the blow is such that for any $\alpha$ the ball does not come off the table. Friction on the surface can be neglected at this point.</p>
+<div class="figure"><img src="T1_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Determine at what ratio between $h$ and $\alpha$ after impact the ball will move without slipping.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Draw a (qualitative) graph of $\alpha(h/R)$ showing the points corresponding to $\alpha=0$ and $h=R$.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part B. Collision of billiard balls on a table (4.5 points)</h2>
+<p>This part of the problem considers the collision of two billiard balls. The friction between the balls during a collision can be neglected, and the impact is absolutely elastic. To begin with, let’s also neglect friction on the table. Let a billiard ball (“cue ball”) collide with the same one at rest with speed $\vec{v}$; the relative impact parameter (the value marked in the figure) is $\frac{b}{R}<2$.</p>
+<div class="figure"><img src="T1_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the speeds of the balls after expansion (modules and directions).</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">What angle does the speed of the balls form after flying apart in such a model?</div><span class="pb-pts">0.50</span></div>
+<p>The simple prediction made in the previous paragraph, often used as a rule of thumb by pool players, changes significantly when friction with the table surface is taken into account. Its influence on the movement of the cue ball is especially noticeable.</p>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Let's consider an auxiliary problem: a ball on a horizontal table at the initial moment has a translational velocity $\vec{v}=\begin{pmatrix} v_x \\ v_y \end{pmatrix}$ and an angular velocity $\vec\omega=\begin{pmatrix} \omega_x \\ \omega_y \end{pmatrix}$ (vectors $\vec v$ and $\vec\omega$ lie in the plane of the table). There is friction with the surface, which stops as soon as slippage disappears. What will be the steady speed of the ball (modulus and direction)?</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Let's go back to the collision of two balls; let the cue ball move without slipping before the impact.  At what angles to the initial velocity are the steady-state velocities of the balls now directed?</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Determine the angle $\varphi$ between the steady-state velocities of the balls as a function of the impact parameter $\frac{b}{R}$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Draw a qualitative graph of the dependence $\varphi(\frac{b}{R})$.</div><span class="pb-pts">0.50</span></div>
+<h2 class="part">Part C. Analysis of experimental data (2 points)</h2>
+<p>Let us turn to experimental data to test the models we have considered. Using high-speed photography, the time dependence of the speed of two colliding balls was obtained; on the graph, $V_c$ is the speed of the “cue ball”, $V_o$ is the speed of the initially stationary ball (object ball).</p>
+<div class="figure"><img src="T1_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Determine the coefficient of sliding friction. Estimate the error of the obtained value.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Estimate the relative energy losses when the balls collide.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Determine the relative impact parameter $\frac{b}{R}$ for the collision using data for both balls. Estimate the error of the obtained value.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part D. Young&#x27;s modulus of the billiard ball material (2 points)</h2>
+<p>It is known that the force $F$ acting between two spherical bodies pressed against each other depends on the deformation (the distance at which the centers of the balls approach each other) $h$ as (Hertz formula) $$F=k\,E\,R^{\frac{1}{2}}h^{\frac{3}{2}},$$ где $k$ — численный коэффициент, $k\approx 1$, $E$ — модуль Юнга материала, из которого сделаны шары, $R$ - radius ball.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">Consider the central impact ($b=0$) of two identical balls of mass $M$. The first ball hits the second with speed $V$. Considering the speed of the incident ball to be much lower than the speed of sound in the ball material, find the collision time $\tau$ and the maximum deformation $h_m$. Hint: Consider the value of the integral $$\int\limits_0^1\frac{dx}{\sqrt{1-x^{5/2}}}\approx 1.5.$$ known.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">Estimate the Young's modulus of the ball material based on the experimental values: $\tau=310~мкс, V=7.0~m/s, M=280~г, R=6.8~cm$.</div><span class="pb-pts">0.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/14">https://pho.rs/p/14</a></p>
+</body>
+</html>

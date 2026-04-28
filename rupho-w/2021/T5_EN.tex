@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Nonlinear element}}
+\author{\normalsize W21 (2021) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The electrical circuit consists of a constant voltage source $U_0$, a capacitor $C$, a nonlinear element $\text{НЭ}$ and a switch $K$. The current-voltage characteristic of the nonlinear element is as follows: $$\textbackslash\{\}left(\textbackslash\{\}frac\{I\}\{I_0\}\textbackslash\{\}right)^2+\textbackslash\{\}left(\textbackslash\{\}frac\{U\}\{U_0\}\textbackslash\{\}right)^2=1 $$ при $I>0$ и $I=0$ при $|U|\geq U_0$ (cm. рис.). Величина $I_0$ известна. В начальный момент напряжение на конденсаторе равно $U_0/2$. Ключ $K$ close.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T5_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the maximum power $P_1$ released on the nonlinear element.}{2.00}
+
+\problembox{A2}{Find the maximum rate of change of energy of the capacitor $P_2$ and the time after closing the switch $\Delta t$ after which it is achieved.}{8.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/80}
+
+\end{document}

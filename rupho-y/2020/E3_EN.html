@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>CHYA, capacitor with moving plates</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>CHYA, capacitor with moving plates</h1>
+<p class="camp">Y20 (2020) — English translation</p>
+<p>In this experiment, the electrical black box is a flat capacitor. Each plate consists of a number of small teeth of the same geometric shape. The size of the capacitance $C$ can be changed by moving the upper plate horizontally relative to the lower one. Between the plates of the capacitor there is a layer of dielectric.</p>
+<h2 class="part">Equipment</h2>
+<div class="figure"><img src="E3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<p>Two black boxes ($A$ and $B$), oscilloscope, generator, breadboard, connecting wires and jumpers, capacitors $100\,пФ$ (marking 101) and $330\,пФ$ (marking 331), unknown capacitor $C_1$ (in red insulation), inductor $15.0\,мГн$ (black cylinder marked 153), resistor $510\,Ом$ (in black insulation).</p>
+<p>$!Важно!$ Avoid high voltages and sudden surges in current and voltage. Before changing the circuit configuration, smoothly turn the amplitude of the generator to zero, and then turn off the generator! New components will not be issued!</p>
+<h2 class="part">Part A. Calibration (1.3 points)</h2>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Assemble an oscillatory $RLC$ circuit by connecting inductance, a known capacitance and a resistor in series. Measure the dependence of the resonant frequency of this circuit on the capacitance used. Check the applicability of the theoretical relationship between them. Estimate $C_0$ - the irremovable capacitance of wires and other components of the circuit.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Assemble an oscillatory $RLC$-circuit using a capacitor of unknown capacitance $C_1$. Find the resonant frequency of this circuit $f_1$. Define $C_1$.</div><span class="pb-pts">0.30</span></div>
+<h2 class="part">Part B. Determination of the shape of capacitor plates (7.2 points)</h2>
+<p>Below are four possible plate shapes.</p>
+<div class="figure"><img src="E3_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="figure"><img src="E3_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="figure"><img src="E3_EN_assets/fig4.jpg" alt="" /><div class="caption">Fig. 4.</div></div>
+<div class="figure"><img src="E3_EN_assets/fig5.jpg" alt="" /><div class="caption">Fig. 5.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">For each plate shape, construct a qualitative plot of the expected dependence of $C$ on the position of the top plate $x$.</div><span class="pb-pts">1.60</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Having assembled the oscillatory $RLC$ circuit, remove the dependence $f(x)$ of the resonant frequency on the position of the upper plate. Make these measurements for both black boxes.</div><span class="pb-pts">2.40</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Calculate $C(x)$ for each of the boxes. Plot graphs of these dependencies on one piece of graph paper. Determine the plate shape numbers corresponding to the drawers.</div><span class="pb-pts">1.20</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">For each of the boxes, determine the values ​​$b$ and $w$, which characterize the shape of the teeth. The distance $d$ between the top and bottom plates is $1.00~\text{мм}$. The dielectric located between the plates has a dielectric constant $\varepsilon=2.9$. Electrical constant $\varepsilon_0=8.85\cdot 10^{-12}~\text{Ф/м}$.</div><span class="pb-pts">1.40</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">For each of the boxes, estimate the number of teeth on one plate of the parallel-plate capacitor. (In each drawer, the number of teeth on the bottom plate is the same as on the top).</div><span class="pb-pts">0.60</span></div>
+<h2 class="part">Part C: Digital Displacement Meter Resolution (1.5 points)</h2>
+<p>With a relative displacement of parallel plates, the capacitance of a flat-plate capacitor periodically changes, and with it the resonant frequency of the circuit. This installation can be used as a digital displacement meter.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Let our black box labeled $A$ be a displacement meter. For a frequency in the vicinity of $f=120~\text{кГц}$, using the experimental data from Part B, estimate the resolution of the setup: the minimum distance $\Delta x$ that can be measured. An estimate of the error of the final result is not required.</div><span class="pb-pts">1.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/46">https://pho.rs/p/46</a></p>
+</body>
+</html>

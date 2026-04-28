@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Clear optics}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Equipment:}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Incandescent lamp in housing Constant voltage source Two lenses with stands for the optical bench. A set of 9 diaphragms, the diameters in millimeters are indicated on them. Optical bench Masking tape Wooden ruler Tape measure Two tripods with claws Tablet for fixing paper
+
+Research into human vision and the development of photographic technologies inevitably involve the study of focusing images using converging lenses. In this work, the light source is a spiral inside an incandescent lamp. Let's denote its diameter as $W_A$, height as $H_A$ and the number of turns as $N_A$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+Attention! The problem does not require error estimation. Attention! Use a personal lamp to illuminate your work area. Attention! Do not remove the lamp wires from the terminals of the DC voltage source yourself. To power the lamp, use a constant voltage source $U=9.0~\text{V}$. When the lamp is working correctly, only the filament filament glows (if it is not working correctly, the inner surface is covered with a light sediment, and therefore the light bulb “glows” completely). Position the lamp so that the filament filament is vertical.
+
+\section*{Part A. Introductory.}
+
+The notation chosen in this part is valid throughout the subsequent problem. Let us consider an optical scheme consisting of a non-point source $A$, a lens $L$ and a screen $S$. In the figure, $A'$ indicates the image of the source $A$. In the simplest camera, instead of a screen $S$, a matrix of photosensitive elements, for example, photodiodes, is used.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+We denote by $L_F$ the lens with a larger focal length, and the focal length itself by $F$. A lens with a shorter focal length is correspondingly $L_f$, its focal length is $f$.
+
+\problembox{A1}{Measure the focal lengths $f$ and $F$ by taking the image $A'$ on the screen. Use $H \approx 1.20~\text{m}$ to measure. On the answer sheet, indicate with a cross the correspondence between the color of the lens and the names $L_f$ and $L_F$.}{0.20}
+
+With sufficiently large $H$ on the screen, it is possible to focus the image in two positions: close focusing - the position with a smaller $a$ and far focusing - a position with larger $a$.
+
+\section*{Part B: Near Focus Inaccuracies}
+
+The method for determining the focal length of a lens, discussed in paragraph $\textbf{A1}$, in any case, has a significant drawback: there is no formal criterion for a “focused image”. In this part, we will complement the method and get rid of it from this shortcoming by considering the physics of inaccurate focusing and the concept of sharpness. This part uses only lens $L_F$. Distance $H \approx 1.20~\text{m}$. Let $a_0$ denote the distance $a$, corresponding to close focusing. By changing the distance $a$ in the vicinity of $a_0$, you can get images of varying degrees of blur on the screen (examples of a clear and very fuzzy image are shown in the photographs below). Also, the blurring of the image is affected by the shape and diameter of the diaphragm - a screen with a hole that covers part of the lens.
+
+Clear Image
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Fuzzy image
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{B1}{Align the lens so that $a = a_0 + F/2$. In further paragraphs we will study the characteristic size of such images, so choose which linear size - height $h$ or width $w$ of the fuzzy image you will measure in subsequent paragraphs. Justify your choice and mark it with a cross on your answer sheet. This size will be designated $p$.}{0.20}
+
+First of all, let's study the effect of aperture on blur.
+
+\problembox{B2}{Cover the part of the lens facing the screen with an aperture of diameter $D$. For all apertures, measure the image size $p$.}{0.45}
+
+\problembox{B3}{Plot the dependence $p(D)$.}{0.40}
+
+\problembox{B4}{With the same arrangement of objects, remove the aperture from the lens and measure the size $p_0$ of the image on the screen. Determine the diameter $D_0$ of the open part of the lens based on $p_0$, compare the result with direct measurements.}{0.10}
+
+Now let's look at how focusing error affects blur.
+
+\problembox{B5}{With $11$ different $a$ in the range $[a_0-F/3,a_0+F/2]$, measure the size $p$ of the image on the screen.}{0.55}
+
+\problembox{B6}{Construct a linearized graph of $p$ versus $a$. From the graph, find the focal length $F$ and compare it with the one obtained earlier. Consider the filament to be $0.10~\text{cm} \times 0.30~\text{cm}$ in size.}{1.30}
+
+Now let's study how the shape of even an out-of-focus image is related to the shape of the source.
+
+\problembox{B7}{Position the lens so that $a = a_0 + 2F/5$. Draw the border of the image on graph paper. Label the center of the image, the horizontal axis $x_S$ and the vertical axis $y_S$.}{0.30}
+
+The boundary of a fuzzy lamp image cannot be accurately described without considering the distribution of light intensity across the screen, so first we consider two simplified models of a light source: In the first model, the source $A_1$ is a point source and is located in the middle of the incandescent lamp spiral. The border of the image created by it will be denoted by $\Gamma_1$. In the second model, the source $A_2$ is the boundary of the spiral section, that is, the source is a rectangle with dimensions $W_A \times H_A$. Consider that this source shines equally brightly along its entire perimeter. We denote the border of the image from it $\Gamma_2$. Our task is to “combine” these models. Let the “combined” source create the image boundary $\Gamma$. Each specific point $\Gamma$ corresponds to a ray $B'$ emerging from the center of the image and passing through it. We will assume that the boundary point $\Gamma$ is located in the middle between the points $\Gamma_1 \cap B'$ and $\Gamma_2 \cap B'$.
+
+Sources $A_1$ and $A_2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+\problembox{B8}{Calculate the position of the boundary $\Gamma$ of the image relative to its center at $11$ points lying in the area $x_S > 0$, $y_S > 0$. Place these dots on the same sheet of graph paper where you sketched the image.}{0.80}
+
+\section*{Part C. Chromatic aberration.}
+
+This part uses both lenses. Distance $H \approx 1.20~\text{m}$. By changing $a$ in the vicinity of $a_0$ in part $\textbf{B}$ you probably noticed that the image border has a different color at $a < a_0$ and $a > a_0$. This is because different colors refract slightly differently in the glass the lens is made from, and this can be described in terms of different refractive indices for different colored light: $n_\text{b}$ for blue and $n_\text{r}$ for red.
+
+\problembox{C1}{On your answer sheets, place a cross next to the true statements.}{0.06}
+
+$L_F$ Border blue at $a < a_0$, red at $a > a_0$$L_F$ Border red at $a < a_0$, blue at $a > a_0$$L_f$ Border blue at $a < a_0$, red at $a > a_0$$L_f$ Border red at $a < a_0$, blue at $a > a_0$
+
+\problembox{C2}{On your answer sheets, mark the cross next to the true statements about $n_\text{b}$ and $n_\text{r}$. Justify your choice.}{0.50}
+
+$L_F$$n_\text{b} > n_\text{r}$$L_F$$n_\text{r} > n_\text{b}$$L_f$$n_\text{b} > n_\text{r}$$L_f$$n_\text{r} > n_\text{b}$
+
+\section*{Part D. Magnification.}
+
+In this part of the problem, only the lens $L_F$ is used.
+
+\problembox{D1}{With $7$ different $H$, measure the image size $p$ under close focus conditions.}{0.70}
+
+\problembox{D2}{Linearize the dependence of $p$ on $H$ and plot it. Calculate the source parameters $W_A$ and $H_A$, making additional measurements if necessary.}{0.55}
+
+\problembox{D3}{Count the number of $N_A$ spirals in the source spiral.}{0.10}
+
+\section*{Part E. Kepler Telescope.}
+
+This part uses both lenses, and $H\approx1.20~\text{m}$. Using a two-lens system, obtain a clear image of source $A$ on screen $S$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+\problembox{E1}{For various fixed values of $a$, select distances $l$ that correspond to a clear image. Measure the height of the clear image $h$. If several different values of $l$ produce several clear images, then select the image with the larger $h$. The dependence of $h$ on $a$ has a characteristic point, describe it and measure its surroundings especially carefully. Take at least 15 measurements in total.}{0.85}
+
+\problembox{E2}{Obtain a theoretical formula for the dependence of $h$ on $a$. Construct a linearized graph and show that the theoretical formula is valid.}{1.74}
+
+Due to the fact that any real lens is not thin, the focal length for rays traveling far from the optical axis differs from the focal length for paraxial rays. This effect (along with chromatic aberration) is noticeable in the Kepler telescope - a system of two converging lenses separated from each other by a distance close to the sum of their focal lengths.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E2_EN_assets/fig8.jpg}
+    \caption{Figure 8.}
+\end{figure}
+
+Place two lenses at a distance $l \approx f+F$ next to each other at one of the edges of the table so that you can through them observe objects located on the other edge - there, fix the ruler in a tripod and position the light source so that it illuminates the ruler $B$, but does not shine into the lenses. The magnification of a telescope is the ratio of the apparent size of an object to the actual size of the object.
+
+\problembox{E3}{Adjust the Kepler telescope so that the distance between the lens $L_f$ and the ruler is $H\approx1.20~\text{m}$, and through the telescope you can clearly see the magnified image of the ruler. Make the necessary measurements and calculate the experimental magnification value $\Gamma_K$ of the Kepler telescope in such a system.}{0.80}
+
+\problembox{E4}{Observe the distortion of the ruler image at the edges of the telescope's field of view. Draw an image of the ruler as seen through the Kepler telescope. Show both chromatic and spherical aberrations in the figure.}{0.40}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3155}
+
+\end{document}

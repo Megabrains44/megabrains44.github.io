@@ -1,0 +1,175 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Magnetic trap}}
+\author{\normalsize X23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Magnetic traps are widely used in science to hold various objects and isolate them from external influences. This experiment is devoted to the study of one of the types of magnetic traps.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+EQUIPMENT: Bubble level Fragment of graph paper Adhesive mass Plastic tweezers Set of graphite leads: $d\in\{0.3, 0.7, 0.9\}~\text{mm}$ - 1 pc., $d=0.5~\text{mm}$ - 3 pcs. Magnet with diametrical magnetization (another one will be provided upon request before completing part B) Adjustable table Magnet stand support Stand support for millimeter scale magnets Stopwatch Spacer (for easy assembly of magnets in the stand) Screwdriver Hall sensor with power supply Multimeter with connecting wires Ruler $20~\text{cm}$
+
+KNOWN CONSTANTS: gravitational acceleration $g = 9.81~\text{м}/\text{с}^2$ magnetic constant $\mu_0 = 4\pi\cdot10^{-7}~\text{Гн} / \text{м}$ graphite density $\rho = 1690~\text{kg}/\text{м}^3$
+
+KNOWN CONSTANTS:
+
+Let's introduce notations for the installation parameters and stick to them throughout the entire work. Do not redesignate the quantities mentioned in the condition! NOTATION: $L=40~\text{mm}$ – length of each magnet, $R=5.0~\text{mm}$ – radius of each magnet, $a=5.75~\text{mm}$ – distance between the center of the magnet in the stand and the origin of coordinates (see part B), $d=2r \in \{0.3, 0.5, 0.7, 0.9\}~\text{mm}$ – diameters of the issued leads, $l$ – length of the lead, $m_0$ – mass of the lead of length $l$, $m$ is the magnetic moment of each magnet, $M$ is the magnetization of each magnet (magnetic moment per unit volume), $\chi$ is the magnetic susceptibility of graphite, $m_\text{гр}$ is the magnetic moment of the stylus placed in an external magnetic field, $M_\text{гр}$ is the magnetization of the stylus placed in an external magnetic field (magnetic moment units of volume).
+
+Let's introduce notations for the installation parameters and stick to them throughout the entire work.
+
+Do not redesignate the quantities mentioned in the condition!
+
+INSTRUCTIONS: Calculation of errors is required only in paragraphs B1 and B6, where this is clearly written. The sensing element of the Hall sensor measures the magnetic field perpendicular to its surface. You can bend the wires leading from the sensing element to its power supply, but DO NOT BEND the SENSOR relative to the wires: its “legs” are extremely fragile. The neodymium magnets you were given are very strong, but fragile and expensive. BE EXTREMELY CAREFUL WITH MAGNETS! If a magnet breaks, a new one will not be issued, and most measurements will not be possible... The proximity of metal objects to magnets distorts their field. Select a part of the desk for measurements that is far from its metal fasteners, and move away any excess metal objects. Graphite leads are very fragile, be careful with them. Think about the sequence of measurements so that you have enough leads provided. NO NEW LEADERS WILL BE ISSUED.
+
+\section*{Part A. Dipole line field (5.0 points)}
+
+Let us introduce a coordinate system with the origin at the center of the magnet and the axis $Ox$ directed along the magnetization vector $\vec M$. Vector $\vec M$ is the same at all points inside the magnet and is directed as in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+INSTRUCTIONS FOR USING THE HALL SENSOR: Connect the Hall sensor power supply to the voltmeter using banana-to-banana wires. Turn on the voltmeter. Move the lever on the sensor power supply to the “ON” position (see figure on the left). Make sure that the green indicator light is visible through the hole in the housing (see figure on the right). You can insert a screwdriver into the same hole and adjust the trimming potentiometer so that in the absence of a magnetic field, the voltmeter shows $0~\text{В}$. The Hall sensor has a sensitivity of $k=31.25~В/Тл$. After completing the measurements, move the power supply switch to its previous position to turn off the power supply and prevent the built-in battery from discharging.
+
+INSTRUCTIONS FOR USING THE HALL SENSOR:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{A1}{Remove dependency $B(x)$. Take measurements at points on axis $Ox$ over the entire range $15~\text{mm} \leq x \leq 100~\text{mm}$. To secure the magnet on the table in a convenient position, you can use supports from the stand and adhesive mass. Conversion of voltage to field induction is not required at this point.}{2.00}
+
+In the limit $x \to \infty$ (i.e. in the “far field”) the magnetic field $B(x)$ coincides with the field of a point magnetic dipole, however, for small $x$ (in the “near field”) another dependence is valid, in which $n$ is an unknown positive number: \begin\{cases\} B(x) \propto 1/x^n, \& x \sim 1 \text\{cm\} \quad \text\{near field\}\\\\ B(x) \propto 1/x^3, \& x \to \infty \quad \text\{far field\} \end\{cases\}
+
+\problembox{A2}{Write down the exact formula $B(x)$ for a point magnetic dipole.}{0.60}
+
+\problembox{A3}{Plot a plot of $(-\ln B)$ versus $\ln x$ for the entire range of measured values. At what characteristic $x_{crit}$ does the nature of the dependence change?}{1.00}
+
+\problembox{A4}{Using the graph constructed in step A3, determine the value of $n$.}{0.40}
+
+\problembox{A5}{Construct a linearized graph in such coordinates as to determine the magnetization $M$ of the magnet (magnetic moment per unit volume) from the slope of the graph. Calculate the numerical value of the quantity $M$.}{1.00}
+
+\section*{Part B: Vertical Balance (5.0 points)}
+
+Ask the person on duty to give you a second magnet. Assemble the installation shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+This can be done conveniently and safely by performing the following sequence of actions: If the magnets are magnetized to each other, rotate their axes relative to each other to separate them. Bringing the magnets together again, clamp the spacer between them (see equipment). The holes in the supports are located at a slightly greater distance from each other than the spacer provides. To stick one pair of ends into the support, slightly deflect the magnets from the normal to the support and insert them “diagonally”. Without removing the spacer, insert the second pair of ends into the second support, similarly setting a small angle of the magnets with the normal. Once both pairs of magnet ends are inserted into the supports, level the system so that the supports are level on the table. The spacer can be easily removed.
+
+This can be done conveniently and safely by following these steps:
+
+Place the stand with magnets on the tilting table. Use the adjusting screws to ensure that its surface is horizontal, controlling it using a bubble level. Prepare one piece of length $\approx10~\text{mm}$ of each lead diameter $d$. Using tweezers, carefully place any of them into the "gutter" between the magnets. Observe the “levitation”, its stability, the damping of various types of vibrations. Check that the vibrations occur near the middle of the magnets, and if this is not the case and the stylus “moves” towards one of the supports, adjust the tilt of the table. When the lead stops in the equilibrium position, the scale on one of the supports can be used to determine the depth $h$ (in millimeters) to which it is immersed relative to the top points of the magnets. Be careful and think carefully about which line of the scale the signature “-3” refers to.
+
+\problembox{B1}{Measure the dependence $h(d)$. Indicate the measurement errors, taking into account that the manufacturing accuracy of each lead is $\Delta d = \pm 0.05~\text{mm}$. Describe the type of dependence $h(d)$. There is no need to create a schedule.}{1.00}
+
+\problembox{B2}{On your answer sheet, note what type of material graphite is according to the observed effects: diamagnetic, paramagnetic, or ferromagnetic. Explain your choice.}{0.50}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+In the gap between the magnets at all points on the $Oy$ axis (see figure), the magnetic field is directed along the $Ox$ axis and is specified by some function $B(y)$. Consider it known that in a uniform magnetic field $B$ the cylinder (graphite lead) develops magnetization $M_\text{гр}=\cfrac{2}{\mu_0} \cfrac{\chi}{\chi + 2} B$. The magnetic field in the area where the lead is located can be considered uniform. The energy of a stylus, which in a magnetic field has acquired a magnetic moment $\vec{m}_\text{гр}$, can be calculated as $U=-\cfrac{1}{2}\left( \vec{m}_\text{гр} \cdot \vec B \right)$.
+
+\problembox{B3}{Express the vertical force $F(y)$ acting on the magnetized stylus from the magnetic field in terms of the function $B(y)$ and the quantities $\chi$, $\mu_0$, $r$ and $l$. An expression containing other quantities will not be counted.}{1.00}
+
+Next, consider the explicit form of the function $ B(y) = \cfrac{\mu_0 M R^2}{a^2} \cdot \cfrac{1-u^2}{\left( 1+u^2 \right) ^2}$, where $u=\cfrac{y}{a}$, to be known.
+
+\problembox{B4}{Obtain the final expression for $F(u)$ in terms of the quantities $\chi$, $\mu_0$, $M$, $r$, $l$, $R$, $a$, $u$. An expression containing other quantities will not be counted.}{1.00}
+
+\problembox{B5}{Write down how $u$ is expressed in terms of the measured value $h$ and what numerical value $u$ you will use in your calculations.}{0.50}
+
+\problembox{B6}{Calculate numerically the magnetic susceptibility of graphite $\chi$ based on the measurements from Part B1. Estimate the error of the result using the bounds method.}{1.00}
+
+\section*{Part C. Horizontal equilibrium and horizontal oscillations. Bactrian potential (7.0 points)}
+
+For $x=0$ and a fixed vertical coordinate $y$, the magnetic field has a weak dependence on the $z$ coordinate. Due to this dependence, the potential energy of the stylus (per unit of its mass) $U(z)$ in a magnetic field at a fixed $y$ has the form of a “double-humped potential”, which has a dip of depth $\Delta U$ in the center and maxima at coordinates $\pm z_{max}$. At $|z|>z_{max}$ the potential decreases very sharply. \textit\{Note:\} In this part of the problem, measurements are carried out only with a lead of diameter $d=0.5~\text{mm}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+Use a stylus with parameters $d=0.5~\text{mm}$, $l\approx10~\text{mm}$. You can see the lead oscillate along the “groove” between the magnets, i.e. along the $Oz$ axis. Use the adjusting screws to change the tilt of the table to the horizon $\alpha$ so as to raise one of the ends of the “gutter” between the magnets. Observe how the equilibrium position $z_0$ of the horizontal oscillations of the stylus shifts. Note: Please note that the bubble level is not suitable for accurate angle measurements. The angle of inclination of the table should be calculated based on the height of its edge, measured with a ruler.
+
+Use the adjusting screws to change the tilt of the table to the horizon $\alpha$ so as to raise one of the ends of the “gutter” between the magnets. Observe how the equilibrium position $z_0$ of the horizontal oscillations of the stylus shifts.
+
+Note: Please note that the bubble level is not suitable for accurate angle measurements. The angle of inclination of the table should be calculated based on the height of its edge, measured with a ruler.
+
+\problembox{C1}{Measure the required quantities and obtain the dependence $z_0(\alpha)$ for at least 4 different values $\alpha$. There is no need to create a schedule at this point. If you discover any peculiarity in the behavior of the stylus, write down the corresponding $\alpha_{crit}$.}{1.00}
+
+\problembox{C2}{Estimate the value of $\Delta U$ numerically and present your reasoning.}{1.00}
+
+\problembox{C3}{In a strictly horizontal position of the table (check by the equilibrium position of the stylus), measure the dependence $T(l)$ of the oscillation period on the length of the stylus in the maximum possible range of lengths $l$. Get at least 10 experimental points $T(l)$. There is no need to create a schedule at this point. Write down the critical lengths $l_{min}$ and $l_{max}$, at which the nature of the observed processes changes, and describe what is happening.}{1.50}
+
+\problembox{C4}{Estimate the value of $z_{max}$ numerically and present your reasoning.}{0.50}
+
+The two-hump potential (per unit mass) can be approximated by a 4th degree polynomial: $U(z) \approx c_0 + c_2 z^2 + c_4 z^4$.
+
+\problembox{C5}{Based on the measurements of $z_0(\alpha)$ made in part C1, construct a linearized graph and determine the numerical value of the quantity $c_2$.}{1.00}
+
+\problembox{C6}{Write down the law of conservation of energy for vibrations of a stylus of length $l$ in potential $U(z) = c_0 + c_2 z^2 + c_4 z^4$ and obtain a theoretical expression for the period $T(l)$ of small vibrations. The middle of the stylus is located at the point with coordinate $z=0$.}{1.00}
+
+\problembox{C7}{Based on the measurements of $T(l)$ made in part C3, construct a linearized graph and determine the numerical values of the quantities $c_2$ and $c_4$.}{1.00}
+
+\section*{Part D. Damped oscillations (3.0 points)}
+
+The damping of the horizontal oscillations of the stylus is due to the viscosity of the air and the Foucault currents that arise when it moves in a non-uniform magnetic field and interacts with this field. Taking into account the above two effects, we can write the force of resistance to movement (per unit mass) as $F_\text{сопр}/m=-\gamma \dot z$. In this part, use a stylus with parameters $d=0.5~\text{mm}$, $l\approx10~\text{mm}$.
+
+\problembox{D1}{Carry out the necessary measurements of damped oscillations, construct a linearized graph and calculate numerically the value of $\gamma$.}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3161}
+
+\end{document}

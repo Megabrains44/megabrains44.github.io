@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most,breakable]{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\setlist{leftmargin=1.5em,topsep=2pt}
+
+%% Breakable problem card — prevents content cutoff across pages
+\newtcolorbox{solcard}[3]{
+  breakable, enhanced,
+  colback=white, colframe=gray!50, arc=2pt,
+  title={\textbf{#1}\hfill\textsf{\small #3\,pts}},
+  fonttitle=\normalsize\sffamily\bfseries,
+  before upper={\small\textit{#2}\par\smallskip\hrule height 0.4pt\smallskip},
+  top=4pt, bottom=6pt, left=7pt, right=7pt,
+  parbox=false,
+}
+
+\title{\textbf{Dynamics of membrane potential --- Solution}}
+\author{\normalsize X25 (2025) — English translation}
+\date{}
+\begin{document}\maketitle\vspace{-0.5em}
+\begin{solcard}{A1}{Show that the electric field strength can be written as: \[\vec E(x)=E_0\hat xe^{-x/\lambda}.\]The quantity $\lambda$ is called the Debye screening length. Express $\lambda$ in terms of $n_i$, $q_i$, $\varepsilon$, $\varepsilon_0$ and $k_BT$. Hint: According to the Boltzmann distribution, at thermodynamic equilibrium, the concentration of each type of ions $n_i$ depends on their potential energy of these ions $U_i$ according to the law: \[n_i =n_{i0}\exp\left[-\dfrac{Vq_i}{k_BT}\right].\]}{1.20}
+
+Hint: According to the Boltzmann distribution, at thermodynamic equilibrium the concentration of each type of ions $n_i$ depends on their potential energy of these ions $U_i$ according to the law: \[n_i =n_{i0}\exp\left[-\dfrac{Vq_i}{k_BT}\right].\]
+
+
+Let us take the potential at infinity to be zero. Then the potential at point $x$:\[\varphi(x)=-\int\limits_{\infty}^xE_x(\xi)\,\mathrm d\xi=E_0\int\limits_x^\infty \exp[-{\xi}/{\lambda}]\,\mathrm d\xi=\lambda E_0  e^{-x/\lambda}.\]Volume charge density according to Gauss’s theorem:\[\rho(x)=\varepsilon\varepsilon_0\dfrac{\mathrm dE_x}{\mathrm dx}=-\varepsilon\varepsilon_0\lambda E_0e^{-x/\lambda}.\]Finally, according to the Boltzmann distribution:\[\rho(x)=\sum_in_i(x)q_i=\sum_in_{i0}q_i\exp\left[-\dfrac{q_i\varphi(x)}{k_BT}\right]\approx \sum_in_{i0}q_i\left[1-\dfrac{q_i\varphi(x)}{k_BT}\right]=\\=-\sum_in_{i0}q_i\dfrac{q_i\varphi(x)}{k_BT}=-\dfrac{\lambda E_0 e^{-x/\lambda}}{k_BT}\sum_in_{i0}q_i^2=-\varepsilon\varepsilon_0\lambda E_0e^{-x/\lambda}\implies\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\lambda=\sqrt{\dfrac{\varepsilon \varepsilon_0 k_BT}{\displaystyle\sum\limits_in_{i0}q_i^2}}\]
+\end{solcard}
+
+\begin{solcard}{A2}{Assume that the extracellular solution is $\mathrm{NaCl}$ with a concentration of $440~\mathrm{mmol}/л$. Relative dielectric constant of water $\varepsilon= 81$, $T = 310~\mathrm{K}$. Calculate $\lambda$ in nm and compare your answer to the thickness of the cell membrane $d\approx 5~ нм$.}{0.30}
+
+Since $ммоль/л=моль/м^3$, to convert the molar concentration to normal it is necessary to multiply by Avogadro’s constant $N_A$. An ionized salt solution consists of two types of ions of equal concentration, for which $q_i^2=e^2$. Thus: \[\lambda=\sqrt{\dfrac{\varepsilon\varepsilon_0 k_BT}{2N_Ace^2}}\approx0.47~\mathrm{nm},\]which is much less than the thickness of the cell membrane.
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\lambda\approx0.47~\mathrm{nm}\ll d\]
+\end{solcard}
+
+\begin{solcard}{A3}{Find the charge of solution ions per unit area of ​​the cell membrane.}{0.20}
+
+From Gauss's theorem, written for the half-space outside the membrane, we immediately obtain:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\sigma=-\varepsilon \varepsilon_0 E_0\]
+\end{solcard}
+
+\begin{solcard}{B1}{Let the equilibrium concentration of sodium ions inside the cell be $c_{\mathrm{Na}^+}$, and outside – $c_{\mathrm{Na}^+}^0$. Using the Boltzmann distribution, find the Nernst potential $V^\mathrm{Nernst}_{\mathrm{Na}^+}$. At this point, consider $|eV|$ to be of the same order of magnitude as $k_BT$.}{0.40}
+
+Based on the Boltzmann distribution: \[c_{\mathrm {Na^+}}={c^0_{\mathrm{Na^+}}}\exp\left[-\dfrac{eV^\mathrm{Nernst}_{\mathrm{Na^+}}}{k_BT}\right]\implies\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[V^\mathrm{Nernst}_{\mathrm{Na^+}}=\dfrac{k_\mathrm BT} {e}\ln\dfrac{c^0_{\mathrm{Na^+}}}{c_{\mathrm{Na^+}}}\]
+\end{solcard}
+
+\begin{solcard}{B2}{Calculate the resting membrane potential $V$ in mV and the intracellular ion concentrations $c_\mathrm{K^+}$, $c_\mathrm{Na^+}$ and $c_\mathrm{Cl^-}$.}{0.80}
+
+In equilibrium, the concentrations obey the Boltzmann distribution:\[c_{\mathrm{Na^+}}=c_{\mathrm{Na^+}}^0\exp\left[-\dfrac{eV}{k_BT}\right],\quad c_{\mathrm{K^+}}=c_{\mathrm{K^+}}^0\exp\left[-\dfrac{eV}{k_BT}\right],\quad c_{\mathrm{Cl^-}}=c_{\mathrm{Cl^-}}^0\exp\left[\dfrac{eV}{k_BT}\right].\]The condition for equilibrium of the solution inside the cell is the electrical neutrality of the solution:\[c_{\mathrm{Na^+}}+c_{\mathrm{K^+}}-c_{\mathrm{Cl^-}}+\rho_\mathrm{macro}/N_Ae=0.\]For the convenience of further recording, we introduce the value $\xi\equiv \exp[-eV/k_BT]$. Then numerically: \[460\xi-560\xi^{-1}-400=0\\23\xi^2-20\xi-28=0\\\xi\approx1.62\implies\\ \\V=-\dfrac{k_BT}{e}\ln1.62\approx-12.9 мВ\\c_{\mathrm{Na^+}}=440\cdot1.62 ммоль/л=713 ммоль/л\\c_{\mathrm{K^+}}=20 0\cdot1.62 ммоль/л=32 ммоль/л  \\c_{\mathrm{Cl^-}}=560/1.62 ммоль/л=346 ммоль/л\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[V=-12.9~\mathrm{mV},\\c_{\mathrm{K^+}}=32~\mathrm{mmol}/л, \quad c_{\mathrm{Na^+}}=713~\mathrm{mmol}/л, \quad c_{\mathrm{Cl^-}}=346~\mathrm{mmol}/л\]
+\end{solcard}
+
+\begin{solcard}{B3}{Calculate the resting membrane potential $V$ in mV and the concentration of ions inside the cell $c_\mathrm{K^+}$, $c_\mathrm{Na^+}$ and $c_\mathrm{Cl^-}$, taking into account the operation of sodium-potassium pumps.}{1.00}
+
+Due to the influence of active transport channels, the concentrations of sodium and potassium ions will no longer satisfy the Boltzmann distribution. For chlorine ions, this still holds:\[c_{\mathrm{Cl^-}}=c_{\mathrm{Cl^-}}^0\exp\left[\dfrac{eV}{k_BT}\right].\]The active currents of sodium and potassium ions are expressed through $J_\mathrm{pump}$ as:\[J_\mathrm{pump,K^+}=-2J_\mathrm{pump},\quad J_\mathrm{pump,Na^+}=3J_\mathrm{pump}.\]Equilibrium condition for sodium and potassium ions:\[J_\mathrm{pump,Na^+}+g_{\mathrm{Na^+}}(V-V_{\mathrm{Na^+}}^\mathrm{Nernst})=0,\quad J_\mathrm{pump,K^+}+g_{\mathrm{K^+}}(V-V_{\mathrm{K^+}}^\mathrm{Nernst})=0\\3J_\mathrm{pump}+g_{\mathrm{Na^+}}\left(V-\dfrac{k_\mathrm BT} {e}\ln\dfrac{c^0_{\mathrm{Na^+}}}{c_{\mathrm{Na^+}}}\right)=0,\quad -J_\mathrm{pump}+g_{\mathrm{K^+}}\left(V-\dfrac{k_\mathrm BT} {e}\ln\dfrac{c^0_{\mathrm{K^+}}}{c_{\mathrm{K^+}}}\right)=0\\~\\c_{\mathrm{Na^+}}=c_{\mathrm{Na^+}}^0\exp\left[-\dfrac{3eJ_\mathrm{pump}}{k_BTg_{\mathrm{Na^+}}}\right]\exp\left[-\dfrac{eV}{k_BT}\right]\\c_{\mathrm{K^+}}=c_{\mathrm{K^+}}^0\exp\left[\dfrac{2eJ_\mathrm{pump}}{k_BTg_{\mathrm{K^+}}}\right]\exp\left[-\dfrac{eV}{k_BT}\right].\]Next, for convenience, we again introduce $\xi$, then the condition of electroneutrality of the solution inside the cell will be written in the form:\[\left(c_{\mathrm{Na^+}}^0\exp\left[-\dfrac{3eJ_\mathrm{pump}}{k_BTg_{\mathrm{Na^+}}}\right]+c_{\mathrm{K^+}}^0\exp\left[\dfrac{2eJ_\mathrm{pump}}{k_BTg_{\mathrm{K^+}}}\right]\right)\xi-c_{\mathrm{Cl^-}}^0\xi^{-1}+\rho_\mathrm{macro}/N_Ae=0.\]Similarly we solve the quadratic equation and after substitutions we get the answer:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[V=-70.0~\mathrm{mV},\\c_{\mathrm{K^+}}=568~\mathrm{mmol}/л, \quad c_{\mathrm{Na^+}}=36~\mathrm{mmol}/л, \quad c_{\mathrm{Cl^-}}=204~\mathrm{mmol}/л\]
+\end{solcard}
+
+\begin{solcard}{B4}{The operation of active transport channels requires energy expenditure from the cell. The standard mechanism of hydrolysis of the ATP (adenosine triphosphoric acid) molecule produces about $19k_BT$. How many ATP molecules are needed to complete the cycle in Fig. 2?}{0.40}
+
+The greatest energy consumption in the cycle is the transfer of three sodium ions, which requires energy: \[3eV=3\dfrac{eV}{k_BT}k_BT\approx 7.3k_BT < 19k_BT\implies\]one ATP molecule is enough!
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[N_{АТФ}=1\]
+\end{solcard}
+
+\begin{solcard}{C1}{Let current $I_0$ be supplied to the cell at point $x=0$. Find the equilibrium distribution of the dynamic membrane potential $v(x)$.}{1.00}
+
+Dynamic potential $v$ creates an additional current outward from the axon, which per unit of its length is equal to: \[J_\mathrm{out}=2\pi ag_\mathrm{tot}v.\] Let us write the law of charge conservation for a small section of the axon: \[\pi a^2\dfrac{\mathrm d j}{\mathrm dx}+J_\mathrm{out}=0,\] where $j$ is the current density along the $x$ axis. Ohm's law in differential form:\[j=\sigma E=-\sigma\dfrac{\mathrm d v}{\mathrm dx}.\]We combine into one equation:\[-a\sigma \dfrac{\mathrm d^2v}{\mathrm dx^2}+2g_\mathrm{tot}v=0.\]Since the current flows in at point $x=0$, at this point the derivative of the potential suffers a discontinuity. In this case, the dependence $v(x)$ is symmetrical and should vanish at infinity. Thus, the solution should look like:\[v(x)=v_0\exp\left[-|x|\left/\sqrt{\dfrac{a\sigma}{2g_\mathrm{tot}}}\right.\right].\]From Ohm’s law it follows that the jump in the derivative $v(x)$ at zero should be equal to:\[2\cdot \pi a^2\sigma \cdot v_0\sqrt{\dfrac{2g_\mathrm{tot}}{a\sigma}}=I_0\implies v_0=\dfrac{I_0}{2\pi a\sqrt{2a\sigma g_\mathrm{tot}}}\implies\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[v(x)=\dfrac{I_0}{2\pi a\sqrt{2a\sigma g_\mathrm{tot}}}\exp\left[-|x|\left.\sqrt{\dfrac{2g_\mathrm{tot}}{a\sigma}}\right.\right]\]
+\end{solcard}
+
+\begin{solcard}{C2}{In the nonequilibrium case, the dependence $v(x,t)$ satisfies the equation:\[\dfrac{\partial v}{\partial t}=\alpha\dfrac{\partial^2v}{\partial x^2}-\beta v.\]Write down expressions for the coefficients $\alpha$ and $\beta$.}{0.40}
+
+If an additional charge $\mathrm dq$ accumulates on an axon section of length $\mathrm dx$, this leads to an increase in the dynamic membrane potential by $\dfrac{\mathrm dq}{C\,\mathrm dx}$. The accumulating charge can be written as: \[\mathrm dq=\left(-\pi a^2\dfrac{\mathrm dj}{\mathrm dx}-2\pi ag_\mathrm{tot}v\right)\mathrm dx\,\mathrm dt=C\,\mathrm dx\,\mathrm dv\implies\\\dfrac{\partial v}{\partial t}=-\dfrac{\pi a^2}{C}\dfrac{\partial j}{\partial x}-\dfrac{2\pi ag_\mathrm{tot}}{C}v=\dfrac{\pi a^2\sigma}{C}\dfrac{\partial^2v}{\partial x^2}-\dfrac{2\pi ag_\mathrm{tot}}{C}v\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\alpha=\dfrac{\pi a^2\sigma}{C},\quad\beta=\dfrac{2\pi ag_\mathrm{tot}}{C}\]
+\end{solcard}
+
+\begin{solcard}{C3}{Let, as a result of excitation of the neuron, the distribution of the dynamic membrane potential be equal to \[v(x,0)=v_0\exp\left[-\dfrac{x^2}{b^2}\right].\]Find an expression for $v(x,t)$ at $t > 0$. Note: it is convenient to look for a solution in the form \[v(x,t)=\dfrac{v_0b}{\sqrt{f(t)}}\exp\left[-\dfrac{x^2}{f(t)}\right]\exp\left[-\dfrac{t}{\tau}\right],\], where $f(t)$ is a function linear in $t$, $\tau$ is some constant.}{1.00}
+
+Note: it is convenient to look for a solution in the form \[v(x,t)=\dfrac{v_0b}{\sqrt{f(t)}}\exp\left[-\dfrac{x^2}{f(t)}\right]\exp\left[-\dfrac{t}{\tau}\right],\], where $f(t)$ is a function linear in $t$, $\tau$ is some constant.
+
+
+Taking into account the initial condition, $f(t=0)=b^2$, that is, $f(t)$ must be looked for in the form:\[f(t)=b^2+\gamma t.\]Let us find the partial derivatives $v(x,t)$:\[\begin{aligned}&\dfrac{\partial v}{\partial t}=\dfrac{v_0b}{\sqrt{b^2+\gamma t}}\exp\left[-\dfrac{x^2}{b^2+\gamma t}\right]\exp\left[-\dfrac{t}{\tau}\right]\left(-\dfrac{\gamma}{2\left(b^2+\gamma t\right)}+\dfrac{\gamma x^2}{\left(b^2+\gamma t\right)^2}-\dfrac{1}{\tau}\right)\\ &\dfrac{\partial v}{\partial x}=\dfrac{v_0b}{\sqrt{b^2+\gamma t}}\exp\left[-\dfrac{x^2}{b^2+\gamma t}\right]\exp\left[-\dfrac{t}{\tau}\right]\left(-\dfrac{2x}{b^2+\gamma t}\right)\\ &\dfrac{\partial^2v}{\partial x^2}=\dfrac{v_0b}{\sqrt{b^2+\gamma t}}\exp\left[-\dfrac{x^2}{b^2+\gamma t}\right]\exp\left[-\dfrac{t}{\tau}\right]\left(-\dfrac{2}{b^2+\gamma t}+\dfrac{4x^2}{\left(b^2+\gamma t\right)^2}\right)\end{aligned}\]Substitute into the equation and reduce the common factors:\[-\dfrac{\gamma}{2\left(b^2+\gamma t\right)}+\dfrac{\gamma x^2}{\left(b^2+\gamma t\right)^2}-\dfrac{1}{\tau}=\alpha\left(-\dfrac{2}{b^2+\gamma t}+\dfrac{4x^2}{\left(b^2+\gamma t\right)^2}\right)-\beta\\~\\\begin{aligned}&\tau=\dfrac{1}{\beta},\quad \gamma=4\alpha\end{aligned}\]Finally, substituting $\alpha$ and $\beta$ from the previous paragraph, we get the answer:
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[v(x,t) = \dfrac{v_0b}{\sqrt{b^2+4\pi a^2\sigma t/C}}\exp\left[-\dfrac{x^2}{b^2+4\pi a^2\sigma t/C}-\dfrac{2\pi ag_{\mathrm{tot}}t}{C}\right]\]
+\end{solcard}
+
+\begin{solcard}{C4}{For the neuron under consideration, $a=20~\mathrm{\mu{}m}$, $g_\mathrm{tot}=5~\mathrm{\Omega}^{-1}\cdot м^{-2}$, thickness and dielectric constant of the cell membrane $d=5~\mathrm{nm}$ and $\varepsilon=7$, conductivity $\sigma=3~\mathrm{\Omega}^{-1}\cdot м^{-1}$. Estimate the distance and time scales over which a neural signal propagates.}{0.40}
+
+Time scale over which the signal propagates:\[\tau\sim\dfrac{C}{2\pi ag_\mathrm{tot}}.\]Capacity per unit length:\[C\,\mathrm dx=\dfrac{\varepsilon\varepsilon_0 \,2\pi a\,\mathrm dx}{d}\implies C=\dfrac{2\pi\varepsilon\varepsilon_0a}{d}.\]Thus:\[\tau\sim\dfrac{\varepsilon\varepsilon_0}{dg_\mathrm{tot}}=2.5~\mathrm{ms}.\]Distance scale over which the signal propagates:\[\dfrac{x^2}{4\pi a^2\sigma \tau/C}\sim1\implies x\sim\sqrt{\dfrac{4\pi a^2\sigma\tau}{C}}=\sqrt{\dfrac{2a\sigma}{g_\mathrm{tot}}}=5~\mathrm{mm}\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\tau\sim 2.5 ~\mathrm{ms},\quad x\sim5~\mathrm{mm}\]
+\end{solcard}
+
+\begin{solcard}{C5}{A plot of the current density through the cell membrane versus the membrane potential, $J(v)$, is shown in Fig. 5b. This graph intersects the x-axis at three points: $0$, $v_1$ and $v_2$. Find $v_1$ and $v_2$.}{0.60}
+
+In the absence of the term $Bv^2$, the additional current through the channels would be:\[J_\mathrm{plain}(v)=g_\mathrm{tot}v.\]Due to the additional addition $Bv^2$, a current arises in the conductivity:\[J_\mathrm{nonlinear}(v)=Bv^2\left(V-V_{\mathrm{Na^+}}^\mathrm{Nernst}\right)=Bv^2\left(V-V_0-H\right)=Bv^2(v-H).\]Thus, the total current:\[J(v)=g_\mathrm{tot}v+Bv^2(v-H).\]Zero crossing condition:\[J(v)=0\implies\\g_\mathrm{tot}+Bv(v-H)=0\\Bv^2-BHv+g_\mathrm{tot}=0\\v_{2,1}=\dfrac{BH\pm\sqrt{B^2H^2-4Bg_\mathrm{tot}}}{2B}\]
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[v_{1,2}=\dfrac{H}{2}\left[1\mp\sqrt{1-\dfrac{4g_\mathrm{tot}}{BH^2}}\right]\]
+\end{solcard}
+
+\begin{solcard}{C6}{If the dynamic membrane potential is increased to a certain threshold value $v_\mathrm c$, then the cell membrane in this region will no longer return to the resting membrane potential. Find $v_\mathrm c$.}{0.30}
+
+The dynamic potential returns to its equilibrium value as current flows through the axon wall. If the current is of the opposite sign with the dynamic potential, this will lead to the accumulation of charge and an increase in $v$. Thus,
+
+\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[v_\mathrm c=v_1\]
+\end{solcard}
+
+\end{document}

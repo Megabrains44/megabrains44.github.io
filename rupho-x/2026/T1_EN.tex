@@ -1,0 +1,169 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Dumbbell with viscosity}}
+\author{\normalsize X26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Dumbbell with fixed point (2.2 points)}
+
+The dumbbell consists of a light rigid rod of length $l$ and two point masses at its ends: $m_1$ and $m_2$ ($m_1 > m_2$). There is no gravity field in this part. The dumbbell is fixed at some point on a cylindrical hinge so that it can rotate in the plane containing it. The system is in a viscous medium, so the force of viscous friction acts on the point ends of the dumbbell (and only on them):
+\[
+\vec f_i = -\gamma \vec v_i.
+\]
+
+
+\problembox{A1}{Find the distance $x_1$ from the end of the dumbbell $m_1$ to the attachment point.}{0.60}
+
+\problembox{A2}{Find the moment of inertia $J$.}{0.20}
+
+At the moment of time $t = 0$ the dumbbell was at rest, and a force $F$, constant in magnitude, was applied to the heavy end $m_1$, the direction of which is always perpendicular to the arm of the dumbbell.
+
+\problembox{A3}{Calculate the angular acceleration $\varepsilon$ of the dumbbell at time $t = 0$.}{0.30}
+
+\problembox{A4}{Calculate the steady-state angular velocity $\omega_{\text{lim}}$ of the dumbbell rotation after a long time.}{0.60}
+
+\problembox{A5}{Find the moment of time $\tau$ at which the angular velocity is equal to $\omega_{\text{lim}}/2$.}{0.50}
+
+\section*{Part B. Free Dumbbell (1.4 points)}
+
+At this point, the gravity field and friction force are absent. Now the dumbbell is not secured.
+
+Let us introduce a rectangular Cartesian coordinate system $\mathrm{O}xy$. At the moment of time $t = 0$ the dumbbell was at rest along the axis $\mathrm{O}x$ and a force $F$, constant in magnitude, was applied to its heavy end $m_1$, the direction of which is always perpendicular to the arm of the dumbbell. At the initial moment, the force is co-directed with the $\mathrm{O}y$ axis.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{B1}{Calculate the angular acceleration $\varepsilon$ of the dumbbell at time $t = 0$.}{0.20}
+
+\problembox{B2}{How long will $T_n$ take for the $n$th rotation of the dumbbell?}{0.20}
+
+\problembox{B3}{After a long time, the speed of the dumbbell's center of mass becomes almost constant. Find the vector $\vec{u}$ of the steady-state velocity of the center of mass. In response, write down the $x$- and $y$-components of the $\vec{u}$ velocity.}{1.00}
+
+You may need the following Fresnel integrals:
+\[
+\int_0^\infty \sin(x^2)\,dx = \int_0^\infty \cos(x^2)\,dx = \sqrt{\frac{\pi}{8}}.
+\]
+
+\section*{Part C. Relaxation in a viscous medium (1.8 points)}
+
+Now the dumbbell is not fixed, it is in a viscous medium in the gravitational field, and it is also acted upon by a constant Archimedes force, the point of application of which is in the middle of the dumbbell. Its modulus is equal to the force of gravity. Initially, the dumbbell rests in a vertical position.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+In this part of the problem and further, for convenience, when solving and expressing the answer, you can use the following notation: by $\vec{\Delta}$ we denote the vector, the beginning of which is located at the center of mass of the dumbbell, and the end - in its middle; $\Delta = |\vec{\Delta}|$.
+
+The dumbbell is slightly tilted from its equilibrium position.
+
+\problembox{C1}{Determine the final displacement vector $\vec{s}$ of the center of mass of the dumbbell after it stops. The answer must be presented in the form of components in the coordinate system shown in this figure.}{1.50}
+
+\problembox{C2}{Determine how much heat was released during the entire movement of the dumbbell.}{0.30}
+
+\section*{Part D. Vibrations in a viscous medium (1.9 points)}
+
+Now, under the conditions of the previous point, the dumbbell is in a stable vertical equilibrium position: the heavy end $m_1$ is strictly under the light end $m_2$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+The dumbbell is deflected from the vertical by an angle $\varphi_0 \ll 1$, and then released without initial speed. Consider the energy losses caused by viscous friction to be small.
+
+\problembox{D1}{At an arbitrary moment in time, write down the total moment $\vec{M}_{\text{out}}$ of the external forces relative to the center of mass of the dumbbell. Express it in terms of the center of mass velocity $\vec{v}$, angular velocity $\vec{\omega}$, $\vec{\Delta},$$\vec{g}$ and system parameters.}{0.60}
+
+\problembox{D2}{Show that under the conditions of small damping and $\varphi_0 \ll 1$ in the equation of rotational motion we can neglect the moment caused by the translational motion of the center of mass.}{0.20}
+
+Even if you did not complete the previous step, the approximation introduced in it can be used further.
+
+\problembox{D3}{Write down the equation of rotational motion. Taking into account the smallness of the damping and the condition $\varphi_0 \ll 1$, obtain the equation of damped oscillations of the angle formed by a dumbbell with the vertical:
+\[
+\ddot{\varphi}+A\dot{\varphi}+B\varphi=0.
+\]}{0.50}
+
+\problembox{D4}{Determine the period $T$ of the dumbbell oscillations.}{0.20}
+
+\problembox{D5}{Estimate the characteristic time $\tau$ of damping of the dumbbell oscillations.}{0.20}
+
+\problembox{D6}{Determine the quality factor $\mathrm{Q}$ of such an oscillatory system.}{0.20}
+
+\section*{Part E. Regular dumbbell precession (0.8 points)}
+
+Now let the dumbbell rod be a homogeneous cylinder with radius $R$, length $l$ and mass $m$. In this section we will consider the precession of such a “top” under the influence of its own gravity. From now on until the end of the problem, assume $m_1 = m_2 = 0$.
+
+\problembox{E1}{Calculate the moment of inertia $I$ of the dumbbell rod about its axis.}{0.10}
+
+You can always use the notation $I$ when solving and expressing your answers.
+
+One of the ends of the dumbbell is fixed to the table surface on a spherical joint without friction. The dumbbell rotates around its axis with a very high angular velocity $\omega$, so we can further assume that the total angular momentum $\vec{L}$ of the dumbbell is directed along the vector $\vec{\omega}$. In addition to the reaction force of the support, the force of gravity also acts on the dumbbell, the moment of which causes a movement called gyroscopic (or regular precession): the center of mass of the dumbbell rotates around the vertical passing through the spherical joint with a certain steady angular velocity $\Omega$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+Let the dumbbell perform the described rotation in a uniform gravity field $\vec{g}$, moreover, the angle of the dumbbell shoulder with the vertical is constant and equal to $\theta_0$.
+
+\problembox{E2}{Write down the law of change in the angular momentum of a dumbbell relative to its attachment point.}{0.20}
+
+\problembox{E3}{Calculate the angular velocity $\vec{\Omega}$ of the regular precession of the dumbbell.}{0.50}
+
+\section*{Part F. Precession in the presence of viscous friction (1.9 points)}
+
+Now let the dumbbell perform gyroscopic motion in the presence of viscous friction. On the one hand, the non-supported end of the dumbbell $m_2$ is subject to the force of viscous friction associated with its precessional movement around the vertical. On the other hand, there is a moment of viscous friction forces caused by the rotation of the dumbbell around its own axis of symmetry. It is equal to $\vec{M}_{\text{fric}} = - \alpha \vec{\omega},~\alpha >0.$ Further, consider the following approximations always correct: $\omega \gg \Omega$ and $\dot{\theta} \ll \frac{mg}{\gamma l}.$
+
+\problembox{F1}{Calculate the dependence of the dumbbell angular momentum modulus on time.}{0.30}
+
+\problembox{F2}{Derive a differential equation describing the change in the angle of the dumbbell with the vertical over time.}{0.60}
+
+\problembox{F3}{Let the initial angle be $\theta_0$. What is the rate of change of the angle at the initial moment?}{0.20}
+
+\problembox{F4}{With the initial condition from the previous paragraph, obtain an explicit dependence $\theta(t)$.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4800}
+
+\end{document}

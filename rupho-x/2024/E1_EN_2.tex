@@ -1,0 +1,241 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Ferrite core and transformer}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Oscilloscope AC signal generator Digital multimeter BNC-banana wires BNC-BNC wires Banana-banana wires DuPont male-female triple wire Breadboard Potentiometers ($1~kOhm$ and $10~kOhm$) Two rubber bands Triple adapter BNC board Pieces of foil thickness $50~um$, $100~um$, $200~um$, $300~um$ Block with built-in sensor coil Plastic spacer Two ferrite cores Coils A with number of turns $N_A=300\pm1$ and B with $N_B=200\pm1$ Capacitor nominal $(1.0\pm0.1)~\mu\text{F}$ Resistors nominal $(10.0\pm0.1)~Ohm$, $(100\pm1)~Ohm$, $(51\pm1)~kOhm$
+
+Note 1. In all work, the generator signal is sinusoidal with double amplitude $2U_0=12~\text{V}$ (note that the generator shows exactly double amplitude) and frequency $f_0=10~kHz$, unless otherwise stated.
+
+Note 2. Use potentiometers only in points B2-B4.
+
+Ferrites are compounds of iron oxide $\mathrm{Fe_2O_3}$ with more basic oxides of other metals, which are ferrimagnetic. Ferrites are widely used as magnetic materials in radio electronics, radio engineering and computer technology, since they combine high magnetic susceptibility ($\chi\gg1$) with semiconductor or dielectric properties. Ferrite under normal conditions has low electrical conductivity. Therefore, losses due to the presence of eddy currents in ferrite cores can be neglected unless otherwise stated. Handle ferrite cores with care, they are fragile!
+
+Ferrite under normal conditions has low electrical conductivity. Therefore, losses due to the presence of eddy currents in ferrite cores can be neglected unless otherwise stated.
+
+Handle ferrite cores with care, they are fragile!
+
+\section*{Part A. Shielding of magnetic fields by eddy currents (3.8 points)}
+
+As is known, alternating magnetic fields cause eddy currents in conductors. In turn, eddy currents generate opposing fields. In superconductors, eddy currents push the magnetic field completely outward. Ordinary metals do not have this property due to their finite conductivity and are therefore less effective at shielding magnetic fields. To describe the shielding of magnetic fields using aluminum foil, adopt the following model \[B=B_0e^{-\alpha d},\] where $B_0$ is the magnetic field in the absence of foil, $B$ is the magnitude of the magnetic field passed through the foil, $\alpha$ is the attenuation constant, and $d$ is the thickness of the foil.
+
+The correspondence between banana pins and pins is shown in the figure. Between the terminals $1$ and $2$ there is the coil itself, between the terminals $2$ and $3$ there is a resistor connected in series with it. You can also use resistors (18) instead.
+
+The correspondence between banana pins and pins is shown in the figure. Between the terminals $1$ and $2$ there is the coil itself, between the terminals $2$ and $3$ there is a resistor connected in series with it. You can also use resistors (18) instead.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{A0}{Measure the resistance of coils A and B ($r_A$ and $r_B$ respectively), as well as the resistance of the resistors connected in series with them. All values must be in the range up to $15~Ohm$.}{0}
+
+Note 3. In further paragraphs, the ohmic resistance of the coils can be neglected unless otherwise indicated. Place coil A on the ferrite core (as shown) and place it feet down on the block so that coil A is directly above the sensor coil built into the platform. Secure the core to the block using rubber bands.
+
+Place coil A on the ferrite core (as shown) and place it feet down on the block so that coil A is directly above the sensor coil built into the platform. Secure the core to the block using rubber bands.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{A1}{Carry out measurements to verify the above model of magnetic field shielding at frequency $f=10~kHz$. Plot a linearized graph and find the damping coefficient $\alpha$ for the given frequency. The foil must be placed between coil A and the sensor coil.}{0.60}
+
+\problembox{A2}{Determine the attenuation coefficient $\alpha$ for several frequencies in the range $5-25~kHz$.}{2.00}
+
+\problembox{A3}{Plot a graph of $\alpha$ versus frequency.}{1.20}
+
+\section*{Part B: Transformer Study (4.8 points)}
+
+The transformer consists of several wire windings wound on a common core (magnetic core) made of a material with magnetic permeability $\mu\gg1$, where $\mu$ is determined by the expression \[\vec{B}=\mu\mu_0\vec{H},\] where $\vec{B}$ is the magnetic field induction vector, and $\vec{H}$ is the magnetic field strength vector. The winding connected to the current source is called primary, and the other, connected to the load, is called secondary. For this part, consider coil A to be the primary winding and coil B to be the secondary winding. The current in the primary winding creates a flux that, due to the properties of the core, is practically not dissipated along the magnetic circuit. This flux induces a current in the secondary winding. Transformers are typically used to increase or decrease voltage amplitude and galvanically separate input and output electrical circuits (i.e., transfer a signal from one circuit to another without leaking current).
+
+Arrange two U-shaped ferrite cores with two coils (as shown in the picture) and secure them with rubber bands. Using a generator, apply a sinusoidal signal $U_g(t)=U_0\sin2\pi{}f_0{}t$ with a frequency $f_0$ to the primary coil.
+
+Arrange two U-shaped ferrite cores with two coils (as shown in the picture) and secure them with rubber bands. Using a generator, apply a sinusoidal signal $U_g(t)=U_0\sin2\pi{}f_0{}t$ with a frequency $f_0$ to the primary coil.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+One of the characteristics of the transformer is the transformation ratio $m=\dfrac{U_{out,0}}{U_{in,0}}$, where $U_{in,0}$ and $U_{out,0}$ are the voltage amplitudes on the primary and secondary coils, respectively.
+
+\problembox{B1}{Determine $m$ experimentally. Draw the measurement diagrams necessary to obtain the numerical value of this quantity.}{0.30}
+
+Now we close the secondary coil to the rheostat. We denote the resistance of the rheostat as $R$. Let us introduce $P_{\text{use}}$ – the average useful power released at the rheostat, and $P_0$ – the time-averaged power of the generator. Operate at generator frequency $f_1 = 200~Hz$.
+
+\problembox{B2}{Remove the dependence of $P_{\text{use}}$ and $P_0$ on the current amplitude in the secondary coil $I_{B,0}$.}{1.30}
+
+Transformer efficiency $\eta$ is defined as $\eta=\dfrac{P_{\text{use}}}{P_0}$.
+
+\problembox{B3}{Plot the dependence $\eta(I_{B,0})$. Indicate the maximum efficiency $\eta_{max}$ and at what $I^{max}_{B,0}$ it is achieved.}{1.20}
+
+In point B4, the ohmic resistance of the coils should be taken into account. Let's analyze various sources of losses. The power $P_0$ supplied to the transformer is “decomposed” into useful power $P_{\text{use}}$, other joule losses in the coils and resistors $P_{\text{J}}$ and losses in the core $P_{\text{core}}$. \[P_0=P_{\text{use}}+P_{J}+P_{\text{core}}\]
+
+\problembox{B4}{Obtain the dependences of the relative contribution of each loss source $\dfrac{P_{J}}{P_0}$ and $\dfrac{P_{\text{core}}}{P_0}$ on the current amplitude in the secondary coil $I_{B,0}$. Graph them.}{2.00}
+
+\section*{Part C. Coils on a core (6.4 points)}
+
+\textbf{One coil}
+
+First, consider a core with one coil through which current $I$ flows. The magnetic flux $\Phi$, that the current creates in the ferrite core inside the coil is proportional to the current $I$ and the number of turns $N$. In addition, the flux depends on the geometric factor $g$, which is determined by the size and shape of the core, and the magnetic permeability $\mu$, which describes the magnetic properties of the core material.
+
+Thus, magnetic flux $\Phi$ is given by the formula
+\[\Phi=\mu\mu_0gNI.\]
+
+Consider that a signal with angular frequency $\omega$ is applied to the coil. Consider that $g$ is the same for coils A and B.
+
+\problembox{C1}{Obtain an equation that relates the amplitudes of current and voltage in the coil.}{0.10}
+
+\textbf{Two coils}
+
+Now consider a core with two coils. A ferrite core can be used to connect coils A and B to each other. In an ideal core, the magnetic flux will be the same for all cross sections, but due to flux leakage in real cores, the flux of the field produced by coil A through coil A and the flux of that field through coil B are related as follows:
+
+\[ \Phi_B=k\Phi_A,\]
+where $k<1$ is the so-called coupling coefficient.
+
+Similarly, the current in coil B will create a flux $\Phi'_B$ through coil B and
+\[ \Phi'_A =k\Phi'_B \]
+through coil A.
+
+It has been experimentally verified that the coefficient $k$ does not depend on which coil is taken as the primary one. Let coil A be the primary coil, i.e. connected to a generator with sinusoidal voltage $U_g(t)=U_0\sin2\pi f_0 t$ (recall $N_A=300\pm1$). Consider a situation where no current flows through coil B.
+
+In all points of this part (except C13), the layout of the coils on the core is the same as in part B.
+
+\problembox{C2}{In this case, obtain expressions for the induced emf $\mathcal{E}_A(t)$ and $\mathcal{E}_B(t)$ in coils A and B, respectively. Express your answer using $N_A$, $N_B$, $k$, $U_g(t)$. Consider the current in the primary coil to be positive if it flows from the “plus” of the source to the “minus”.}{0.10}
+
+Now let current $I_B(t)$ flow through coil B.
+
+\problembox{C3}{Obtain an expression for the derivative of the current in coil A $\dfrac{dI_A(t)}{dt}$. Express your answer using $\mu$, $\mu_0$, $g$, $N_A$, $N_B$, $k$, $U_g(t)$, $I_B(t)$. Consider currents $I_A$ and $I_B$ to be of the same sign if the currents they create add up.}{0.30}
+
+A generally accepted way of describing the relationship between current and induced emf in a coil is to determine the coil's own inductance $L$ as follows: \[\mathcal{E}(t)=-L\dfrac{dI(t)}{dt}\]
+
+\problembox{C4}{Obtain theoretical expressions for the self-inductances $L_A$ and $L_B$. Express your answer using $\mu$, $\mu_0$, $g$, $N_A$, $N_B$.}{0.60}
+
+\problembox{C5}{Determine $L_A$, $L_B$, $k$ experimentally. Draw the measurement diagrams needed to obtain numerical values for these quantities.}{0.80}
+
+\problembox{C6}{Show that neglecting the internal resistance of the coil is justified.}{0.30}
+
+If the secondary coil is short-circuited, the current in the primary coil will change. Let's denote it $I_P(t)$.
+
+\problembox{C7}{Obtain an explicit expression for $I_P(t)$ in terms of $f_0$, $L_A$, $k$, $U_g(t)$ and find the numerical value of its amplitude $I_{P,0}$.}{0.60}
+
+\problembox{C8}{Determine $I_{P,0}$ experimentally.}{0.60}
+
+Coils A and B can be connected in series in two different ways: the two currents produced are either added or subtracted from each other.
+
+\problembox{C9}{Express the self-inductance of series-connected coils $L_{A+B}$ in the case when the fluxes from different coils are summed. Express your answer using $L_A$, $L_B$, $k$.}{0.20}
+
+Connect coils A and B in series so that the fluxes they create add up.
+
+\problembox{C10}{Determine $L_{A+B}$ experimentally.}{0.30}
+
+\problembox{C11}{Using the experimental values $L_A$, $L_B$, $L_{A+B}$, find the coupling coefficient $k$. Compare the resulting value with that obtained in point C5.}{0.20}
+
+\problembox{C12}{Measure the amplitude of the induced emf on coils $\mathcal{E}_{A,0}$ and $\mathcal{E}_{B,0}$, when the directions of the generated flows are opposite and find the ratio $\dfrac{\mathcal{E}_{A,0}}{\mathcal{E}_{B,0}}$. Derive the theoretical expression for $\dfrac{\mathcal{E}_{A,0}}{\mathcal{E}_{B,0}}$. Express your answer using $k$, $N_A$, $N_B$.}{0.30}
+
+A thin plastic spacer inserted between the two cores significantly reduces the inductance of the coil. Assume $\mu_{\text{pl}}=1$ for the plastic spacer. The thickness of the gasket is $(1.20\pm0.02)~mm$. Consider that the presence of a plastic gasket has little effect on the pattern of magnetic lines, and their characteristic length inside the ferrite cores closed to each other is equal to $(24\pm1)~cm$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{C13}{Determine the relative magnetic permeability $\mu$ of the ferrite material. Draw measurement diagrams, marking the magnetic field induction lines on them.}{2.00}
+
+\section*{Part D. Hysteresis study (5.0 points)}
+
+Attention! For this part, you will need the X-Y mode on the oscilloscope. To enter this mode, press the MENU button, select Time Base and X-Y mode (see figure on the right).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig6.jpg}
+    \caption{Figure 6.}
+\end{figure}
+
+Hysteresis is a property of systems whose response to the influence applied to them depends not only on their current state, but also on their “prehistory”. For example, if you stretch a rubber cord and then return it to its unstretched state, its length before and after stretching will be different. This is called elastic hysteresis. A similar phenomenon is observed in the case of a field in matter and is called magnetic hysteresis. It turns out that if the value of the field strength $H$ is periodically changed, the graph of the dependence $B(H)$ will not pass through the point $(0,0)$. In the figure, the dependence $B(H)$ for some fixed amplitude $H$ is highlighted in bold. When $H$ increases, $B$ changes along the trajectory $4-5-6-1$, when it decreases, along the trajectory $1-2-3-4$. This cycle is called a hysteresis loop. The dotted lines show the hysteresis loops for different amplitudes $H$. If you connect the extreme points for all the loops, you get some curve (curve $0-1$ in the figure), called the magnetization curve, it describes the relationship between $B$ and $H$ for a demagnetized sample first placed in an external field (line $0-1$). In this part of the problem, we will need to obtain the magnetizing curve of ferrite and use it to explore other magnetic properties of this material.
+
+A similar phenomenon is observed in the case of a field in matter and is called magnetic hysteresis. It turns out that if the value of the field strength $H$ is periodically changed, the graph of the dependence $B(H)$ will not pass through the point $(0,0)$.
+
+In the figure, the dependence $B(H)$ for some fixed amplitude $H$ is highlighted in bold. When $H$ increases, $B$ changes along the trajectory $4-5-6-1$, when it decreases, along the trajectory $1-2-3-4$. This cycle is called a hysteresis loop. Dashed lines show hysteresis loops for different amplitudes $H$.
+
+If you connect the extreme points for all the loops, you get some curve (curve $0-1$ in the figure), called the magnetization curve, it describes the relationship between $B$ and $H$ for a demagnetized sample first placed in an external field (line $0-1$). In this part of the problem, we will need to obtain the magnetizing curve of ferrite and use it to explore other magnetic properties of this material.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig7.jpg}
+    \caption{Figure 7.}
+\end{figure}
+
+For this part, use two ferrimagnetic core coils (apply signal to coil A and remove signal to coil B). Use the highest possible amplitude value $U_{in}$ unless otherwise noted. The frequency of the supplied sinusoidal signal can be changed, but it must be in the range $[40; 10000]~\text{Hz}$. To obtain a hysteresis loop on the oscilloscope screen, the signals on the two oscilloscope channels $U_1(t)$ and $U_2(t)$ must be proportional to $H$ and $B$, respectively. According to the circulation theorem \[H \sim I,\] where $I$ is the current through the primary coil. It can be measured using a resistor connected in series to the primary coil. Voltage on the secondary coil $U$ according to Faraday's law \[U \sim \cfrac{dB}{dt}.\] To obtain $B(t)$, you need to apply voltage from the secondary coil $U$ to an integrating circuit, the output voltage of which \[U_2 \sim \int U dt \sim B.\] Consider the cross-section of the core to be circular with a diameter of $d = (20.1\pm0.1)~\text{mm}$. During measurements, do not allow strong vibrations of the cores (to do this, use rubber bands and additionally hold them with your hand). Note: If the cores begin to vibrate excessively, reinstall them on top of each other and press down on top.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E1_EN_assets/fig8.jpg}
+    \caption{Figure 8.}
+\end{figure}
+
+\problembox{D1}{Build an integrating circuit for the figure above whose output is proportional to $B(t)$. Select its parameters so that the current through the secondary coil can be neglected. Draw the assembled diagram on the answer sheets and indicate the selected parameters.}{1.00}
+
+\problembox{D2}{Using an oscilloscope, obtain hysteresis loops at different frequencies and sketch the resulting dependencies.}{0.50}
+
+Let us denote the frequency at which hysteresis is best visible as $f_b$. In the next step you can adjust the voltage $U_{in}$.
+
+\problembox{D3}{Write $f_b$ on your answer sheet. At frequency $f_b$, obtain the magnetization curve $B(H)$ by adjusting the voltage $U_{in}$ and plot it.}{2.00}
+
+Let us introduce the concept of normal relative magnetic permeability $\mu_{n}=\dfrac{1}{\mu_0}\dfrac{B}{H}$.
+
+\problembox{D4}{Construct a graph $\mu_{n}(H)$ for the dependence from the previous point. Indicate characteristic points, if any.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3704}
+
+\end{document}

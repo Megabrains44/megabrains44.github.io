@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Gravitational waves</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Gravitational waves</h1>
+<p class="camp">Y18 (2018) — English translation</p>
+<p>Constant electric and gravitational fields are described by a similar set of equations (as long as we consider fields far from black holes). However, if we consider changes in fields over time, the equations change. Therefore, one cannot simply transfer the equations of electromagnetic waves to gravitational ones. However, for the expressions below, the difference will only be in the numerical coefficient.</p>
+<h2 class="part">Part A. Dipole radiation</h2>
+<p>Charges that move with acceleration lose kinetic energy, emitting electromagnetic waves. This radiation is called dipole. The dipole radiation power is expressed as follows: $$P_{ed}=\cfrac{\ddot{\vec{d}}^2}{6\pi\varepsilon_0c^3} $$ где $\ddot{\vec{d}}$ – вторая производная дипольного момента, $c$ – скорость света, $\varepsilon_0$ – электрическая постоянная. Дипольный момент системы зарядов определяется как $\vec{d}=\sum_i\vec{r}_iq_i$, где $\vec{r}_i$ – радиус вектор заряда $q_i$. If the dipole oscillates harmoniously, then the frequency of the emitted wave will be equal to the frequency of the oscillations.</p>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Let an electron with charge $-e$ and mass $m$ rotate around an atomic nucleus with charge $+Ze$ at a distance $r$ from it. Consider this system non-quantum. Find the total radiation power and the wavelength of the emitted waves. Express your answer in terms of $e$, $Z$, $m$, $r$ and fundamental constants.</div><span class="pb-pts">1.40</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">You can try to calculate the dipole radiation power for gravitational waves. The charge $q_i$ will correspond to the mass $m_i$, and the gravitational dipole moment will be $\vec{d}_g=\sum_i\vec{r}_im_i$. Show that $P_{gd}=0$.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part B. Quadrupole radiation</h2>
+<p>Let a double star consist of two identical stars of mass $M$, which rotate in a circular orbit of radius $R$ with angular frequency $\omega$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Express $\omega$ in terms of $M$, $R$ and fundamental constants.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">In point A2 it was necessary to show that there is no dipole gravitational radiation. But there is a quadrupole. By analogy with dipole radiation, its power should be proportional to the second derivative (with respect to time) of the quadrupole moment. The gravitational quadrupole moment is proportional to the value $MR^2$. Thus, the quadrupole radiation power will be $P_{gd}=AM^2R^4$, where the parameter $A$ depends on $\omega$ and fundamental constants. (Treat $\omega$ as an independent quantity, although for a binary star it will be a function of $M$ and $R$.) Find an expression for $P_{gd}$ by the dimensional method.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Gravitational waves are characterized by the following dimensionless quantity $h=\Delta{l}/l$, where $l$ is the distance between two points in space, and $\Delta{l}$ is the change in this distance due to the wave. The energy flux density $S$ is proportional to the square of the amplitude $S=Kh^2_0$. Using the dimensional method, find $K$ as a function of $\omega$ and fundamental constants.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">The propagation of quadrupole radiation is, generally speaking, anisotropic. In a very rough model, assuming the radiation is isotropic, find the amplitude $h_0$ of the gravitational wave at a distance $L$. Express your answer in terms of $M$, $R$ and physical constants.</div><span class="pb-pts">1.00</span></div>
+<h2 class="part">Part C. LIGO Experiment</h2>
+<p>The energy of the binary star decreases due to the emission of gravitational waves. Thus, the distance between the two stars decreases. The process will continue until the stars collide with each other. The LIGO experiment (February 11, 2016) observed gravitational waves that were emitted just before two black holes merged. The Schwarzschild radius $R_s$ can be taken as the radius of the black hole. Due to gravitational attraction, light propagating in a sphere of this radius cannot leave its limits. To correctly calculate the value of $R_s$, knowledge from the general theory of relativity is needed.</p>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Express $R_s$ in terms of the black hole mass $M$ and fundamental constants. Note: If you make calculations using only knowledge of the special theory of relativity and the law of universal gravitation, then the correct answer will be twice as large as the one found.</div><span class="pb-pts">1.00</span></div>
+<p>In the LIGO experiment, the time dependence of the parameter $h$ of gravitational waves was measured using a laser interferometer (Fig. 1).</p>
+<div class="figure"><img src="T3_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Using the graph shown in Fig. 1, estimate the mass $M$ of the black holes that merged, assuming their masses are the same. Gravitational constant $G=6.67\cdot{10^{-11}}~\text{м}^3/(\text{кг}\cdot{с}^2)$, speed of light $c=3\cdot{10^8}~\text{м}/\text{с}$.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Estimate the distance $L$ to these black holes.</div><span class="pb-pts">1.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/3043">https://pho.rs/p/3043</a></p>
+</body>
+</html>

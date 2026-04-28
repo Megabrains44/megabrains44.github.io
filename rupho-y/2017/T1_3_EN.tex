@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Light and sound effects}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The refractive index of a medium can vary due to mechanical deformations. In particular, a standing acoustic wave creates a spatial periodic pattern that can be used to diffraction light. The simplest case of diffraction is Bragg diffraction. In this mode, light is incident at an angle, partially reflected from a structure with a periodically changing refractive index. Consider a standing sound wave with wavelength $\Lambda$, which creates periodic inhomogeneities in the refractive index along the axis $x$ with the same wavelength. Monochromatic light with wavelength $\lambda$ in a given medium falls at an angle $\theta$ (see figure), partially reflected from neighboring layers with the same standing wave phase. In this case, interference of light waves reflected from different layers occurs so that the light waves reflected at a certain angle have a phase difference that is a multiple of $2\pi$. These waves add up and create a diffraction peak. In other directions, the waves have different phases and, when summed, create a zero resulting field.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the condition for the angle $\theta$ at which diffraction peaks will appear.}{1.00}
+
+\problembox{A2}{Let us assume that the section of the medium where diffraction occurs has a width $L$ along the axis $x$, $L\gg{\lambda}$. Find the deviation of the angle from the optimal one at which diffraction disappears (in other words, the angular size of the diffraction peaks).}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3037}
+
+\end{document}

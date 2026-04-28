@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Gas quadrangle</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Gas quadrangle</h1>
+<p class="camp">X20 (2020) — English translation</p>
+<h2 class="part">Part A. Gas movement along a pipe of variable cross-section (5 points)</h2>
+<p>In this part of the problem, a gas of molar mass $\mu$ moves stationarily along a straight horizontal pipe without friction against its walls. Consider the gas input parameters $v_0, T_0, S_0, \rho_0$, as well as $C_p$, as given. Also consider any section to be symmetrical and neglect the velocity components that are perpendicular to the axis of symmetry.</p>
+<div class="figure"><img src="T2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Let the pipe be adiabatically insulated. Obtain the dependence of gas velocity on its temperature.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Show that when gas flows, the relation $$v\frac{dv}{dx}=-\frac{1}{\rho}\frac{dP}{dx}.$$ is satisfied</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Now thermal power $N=kL$ is supplied to any section of pipe with length $L$. Derive an expression for the gas velocity as a function of $x$ and $T$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Now the gas temperature depends linearly on $x$ according to the law $T=T_0+\alpha x$. Show that the gas moves through the pipe with uniform acceleration and find this acceleration $a$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">Obtain an equation for a polytropic process with constant molar heat capacity $C$ in coordinates $(P, \rho)$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">Show that under the conditions of point A4 the gas moves as if it were in a polytropic process.</div><span class="pb-pts">1.20</span></div>
+<div class="problem-box"><span class="pb-id">A7</span><div class="pb-text">Derive an expression for the gas density as a function of $x$.</div><span class="pb-pts">0.80</span></div>
+<h2 class="part">Part B: Closed Pipe (5 points)</h2>
+<p>Let us consider a quadrilateral $abcd$ along which a certain mass of gas moves stationarily. Let us introduce the notation: $ab=L_1, bc=L_2, cd=L_3, da=L_4$. On section $ab$: $\frac{dT}{dx}=A, \frac{dN}{dx}=\alpha$; on section $bc$: $\frac{dT}{dx}=B, \frac{dN}{dx}=\beta$; $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A$ consider given. For section $cd$: $\frac{dT}{dx}=-A, \frac{dN}{dx}=-\alpha$ and for $da$: $\frac{dT}{dx}=-B, \frac{dN}{dx}=-\beta$. Axis $x$ is directed for each pipe from the first point of the section to the second (for example, for $ab$ from $a$ to $b$).</p>
+<div class="figure"><img src="T2_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Find the gas mass flow rate $\dot{m}$.</div><span class="pb-pts">0.10</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">Find the heat $\delta Q_{ab}, \delta Q_{bc}, \delta Q_{cd}, \delta Q_{da}$ received by a portion of gas with mass $dm$ in these areas of the quadrilateral. Answers can be expressed in terms of $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, \beta, B, L_1, L_2, L_3, L_4$ and $dm$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">B3</span><div class="pb-text">Get $\beta$ and $B$ via $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">B4</span><div class="pb-text">Prove that for such a system to be stationary, it is necessary that the molar heat capacity of the gas be constant throughout the entire cycle.</div><span class="pb-pts">1.50</span></div>
+<div class="problem-box"><span class="pb-id">B5</span><div class="pb-text">Find the accelerations $a_{ab}$ and $a_{bc}$ through $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">B6</span><div class="pb-text">Find the velocities $v_b, v_c$ and $v_d$ through $v_a, S_a, T_a, \rho_a, \mu, C_P, \alpha, A, L_1, L_2, L_3, L_4$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">B7</span><div class="pb-text">Find the minimum time $t$ after which the gas returns to its initial position. Express your answer in terms of the velocities at the points of intersection of the pipes and the accelerations in the pipes (the item is not assessed unless B5 and B6 are completed).</div><span class="pb-pts">0.20</span></div>
+<div class="problem-box"><span class="pb-id">B8</span><div class="pb-text">Find the mass of gas in the pipe. Express your answer in terms of $\dot{m}$ and $t$ (the item is not scored unless B5 and B6 are completed).</div><span class="pb-pts">0.20</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/13">https://pho.rs/p/13</a></p>
+</body>
+</html>

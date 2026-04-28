@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Spring capacitor.}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A non-conducting spring with stiffness $k$ is attached to the plates of a flat capacitor with capacity $C_0$. In this state, the distance between the plates $L$ and the spring is relaxed. The plates were connected by a resistor and an external constant uniform electric field of intensity $E$ was turned on so that the field vector is perpendicular to the plates.
+
+\problembox{A1}{Find the final charge on the plates of the capacitor $q$.}{1.00}
+
+\problembox{A2}{Find the change in the distance $\Delta{x}$ between them, considering the charge flow process to be quasi-static.}{1.00}
+
+\problembox{A3}{What amount of heat $Q$ will be released on the resistor during this process?}{2.00}
+
+The system is returned to its original state (without a resistor and external field). The capacitor is connected to a source of electric current with a constant voltage $U$.
+
+\problembox{B1}{Assuming that the change in the distance between the plates $\Delta{x}\ll{L}$, find the capacitance $C$ of the capacitor after establishing all transient processes.}{2.50}
+
+The dependence of the capacitance $C$ of the capacitor on the voltage $U$ can be represented as: $C=C_0\left(1+\alpha{U}^2\right)$, where $\alpha$ is a constant that does not depend on voltage.
+
+\problembox{C1}{What is $\alpha$ equal to?}{0.50}
+
+The capacitor is connected to an alternating current source, on which the voltage varies according to the law $U=U_0\sin\omega t$. The dependence of the current strength in the circuit on time can be represented as: $I=I_0\left(A_1\cos\omega t+A_2\cos 3\omega t\right)$, where $A_1$ and $A_3$ are dimensionless coefficients. Due to the nonlinearity in the capacitance of the capacitor, the current in the circuit has a third harmonic $A_3\cos 3\omega t$.
+
+\problembox{D1}{Find the ratio of the amplitudes of the third and fundamental harmonics $A_3/A_1$. Consider that $\omega$ is much less than the frequency of natural mechanical vibrations, i.e. the delay due to mechanical inertia can be neglected. The following relationship may be useful: $4\cos^3x=3\cos x+\cos 3x$.}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3038}
+
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Mixture viscosity measurement}}
+\author{\normalsize W26 (2026) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem examines the dependence of the viscosity of a mixture of glycerol and water on temperature and their relative concentration. Viscosity is the ability of a liquid to resist flow. The more viscous the liquid, the more difficult it is to pump it through pipes, which means there is a need to use more powerful pumps and stronger pipes designed for higher pressure.
+
+\section*{Note for data processing}
+
+There are several ways to solve equations numerically. The simple iteration method (SI) is one of the simplest methods for numerically solving equations. It is convenient to use it for numerically finding quantities that are given implicitly as a solution to some equation. To solve an equation using the MPI, it must be represented in the form 
+\[x=f(x).\tag{1}\]
+Substituting the initial approximation $x_0$ as an argument to the function, we obtain the first approximation $x_1$. Further, substituting $x_1$ as an argument to the function, we obtain the second approximation $x_2$, etc. The function $f(x)$ can always be chosen so that the difference between successive approximations decreases, and the result of the calculations becomes closer to the correct answer. To do this, it is necessary that in a sufficiently large neighborhood of the correct answer, the derivative of the function $f(x)$ is less than one in absolute value. If this is not the case, the easiest way is to redefine $f(x)$:
+\[f(x)\to ax+(1-a)f(x).\] 
+This transformation is invariant under equation $(1)$ and in practice almost always achieves convergence with proper selection of $a\in \mathbb R$. Since the calculator uses the variable $\mathrm{Ans}$ to store the intermediate value, a practical implementation of the MPI is to set $\mathrm{Ans}$ equal to the initial guess and start calculating $f(\mathrm{Ans})$ many times. With the correct selection of the function $f(x)$ the result of the calculations will quickly converge to the correct answer. Another popular method for numerically solving equations is the segment division method. The most common way to do this is to divide the segment in half. The essence of the method is to successively reduce the segment within which the desired solution to the equation lies. To do this, at each iteration this segment is divided into equal parts, the left and right sides of the equation are calculated at the resulting points, and the one on which the difference between the left and right sides changes sign is selected as a new segment. The midpoint of the segment is usually chosen as an estimate for the root. One of the options for the practical implementation of dividing a segment is to use the Table mode, which is supported by some models of calculators. This mode allows you to calculate the values of a given function with equal steps within a given argument range. Typically, the calculator's memory is enough to calculate the function at about 20–25 points, so at each iteration you can effectively divide the segment by about 20 times.
+
+\section*{Introduction}
+
+The temperature at which a substance that does not crystallize or does not have time to crystallize becomes solid, turning into a glassy state, is called the glass transition temperature $T_g$. For a mixture of water and glycerol, the dependence of the glass transition temperature on the mass fraction of glycerol $w_g$ can be described with good accuracy by the polynomial: 
+\[T_g(K)=140.3+35.272w_g-3.879w_g^2+ 23.467w_g^3.\tag{2}\]
+Using this expression and knowing the glass transition temperature, the value of the glycerol concentration can be determined.
+
+Consider the following numerical data known: Density of glycerol $\rho_g=1260~\mathrm{kg/m^3}$; Density of water $\rho_w=1000~\mathrm{kg/m^3}$; Molar mass of glycerol $\mu_g=92~\mathrm{g/mol}$; The molar mass of water is $\mu_w=18~\mathrm{g/mol}$. In all parts of the problem, you can consider the volume of the mixture to be equal to the sum of the volumes of the components that make up this mixture.
+
+\section*{Part A. Dependence of viscosity on concentration (6.5 points)}
+
+In the general case, it is not possible to solve the problem of the viscosity of a mixture of substances, however, for a mixture of water and glycerin, you can use the empirical formula:
+\[ \text{[Empirical formula missing in original source]} \]
+
+The table in the answer sheets shows the experimental dependence of viscosity on the glass transition temperature of a mixture of glycerol and water. The measurements were carried out at a temperature of $T=25~^\circ \mathrm C$.
+
+\problembox{A1}{Express the molar concentration of water $n_w$ in solution in terms of the mass concentration of glycerol $w_g$, $\mu_w$ and $\mu_g$.}{0.50}
+
+\problembox{A2}{Using the equation $(2)$, convert the values of $T_g$ to the values of $w_g$.}{2.00}
+
+\problembox{A3}{Propose a linearization that describes a system with a low molar concentration of water, which can be used to determine the parameters $\xi$ and $k$.}{0.30}
+
+\problembox{A4}{Plot the linearized relationship over the range $n_w \in [0, 0.2]$. Determine the parameters $\xi$ and $k$ using the resulting graph.}{1.20}
+
+\problembox{A5}{Knowing the parameters $\xi$ and $k$, propose a linearization that allows you to determine the values of the parameters $a$ and $b$.}{0.30}
+
+\problembox{A6}{Plot the linearized relationship. From the graph, determine $a$ and $b$. Note: due to the inaccuracy of experimental data, some values cannot be recalculated. There are no more than 5 such values.}{1.20}
+
+\problembox{A7}{Draw a graph of the theoretical and experimental dependences $\eta(n_w)$ on one piece of graph paper.}{1.00}
+
+\section*{Part B. How does viscosity depend on temperature? (2.5 points)}
+
+To describe the dependence of viscosity $\eta$ on temperature $T$ the modified Andrade equation is often used:
+\[\eta = A \cdot \exp\left(\frac{B}{T} + C\right),\tag{3}\]
+where $A$, $B$ and $C$ are constants.
+
+At low temperatures close to the glass transition temperature, instead of $(3)$ it is convenient to use the Vogel–Tammann–Fulcher equation: 
+\[\eta = \eta_0 \cdot \exp\left(\frac{DT_0}{T - T_0}\right),\tag{4}\]
+where $\eta_0$, $D$ and $T_0$ are some constants.
+
+The table shows the experimental dependence of the mixture viscosity on temperature. The measurements were made with a mixture with a volume concentration of glycerol $c_g=0.5$.
+
+\problembox{B1}{Using the equation $(2)$, determine the glass transition temperature of the solution $T_g$.}{0.50}
+
+Let us assume that the value $\eta_0=3.33\cdot 10^{-3}~\mathrm{Pa\cdot s}$ is known.
+
+\problembox{B2}{Propose a linearization to determine the values of the parameters $D$ and $T_0$. After plotting the linearized dependence, determine the values of these parameters.}{2.00}
+
+\section*{Part C. Determination of viscosity by different methods (1 point)}
+
+In this part of the problem, it is proposed to find the numerical value of the viscosity of the mixture using two previously obtained dependencies. To be able to compare the results obtained, in both cases the mixture is under the same conditions.
+
+\problembox{C1}{Determine the viscosity of the mixture $\eta_n$ at the volume concentration of glycerol $c_g=0.5$ and temperature $T=25~^\circ \mathrm C$ using the dependence on the molar concentration of water.}{0.40}
+
+\problembox{C2}{Determine the viscosity of the mixture $\eta_t$ under the same conditions using the temperature dependence.}{0.40}
+
+\problembox{C3}{Compare your results. If there are discrepancies, suggest a possible reason for them.}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/4674}
+
+\end{document}

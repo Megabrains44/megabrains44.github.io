@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Silicon photomultiplier}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+With the development of modern technologies (including unmanned vehicles), LiDAR (Light Detection and Ranging) devices for measuring the distance to objects in real time are becoming in demand. The device sends laser pulses to an object and measures the time after which the scattered signal is received by a photodetector. One of the promising types of such photodetectors, capable of quickly detecting short pulses ($< 1$ ns) in a wide dynamic range, are SiPMs (silicon photomultipliers).
+
+A SiPM is formed by a matrix of parallel-connected cells. Each cell approximately represents a $p-n$ junction on silicon and a dielectric layer with leakage (quenching layer) deposited on it. Silicon is a semiconductor, and under normal conditions, electrons in it almost do not conduct electric current. However, when light hits the cell, an electron in the semiconductor can become conducting. Accelerating in a sufficiently strong electric field, this electron "knocks out" other electrons into a conducting state, and the new electrons also accelerate; this process is called avalanche impact ionization. At the boundary of the quenching layer, a charge accumulates that screens the field in the multiplication region, and the avalanche decays.
+
+To simplify calculations, an equivalent electrical circuit model of the SiPM has been developed, consisting of linear components (resistors, capacitors, inductors). Consider the equivalent electrical circuit of a SiPM connected to a power source and a measuring device (Fig. 1).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Equivalent circuit of a SiPM as part of a readout circuit.}
+\end{figure}
+
+The components of the equivalent circuit are described as follows:
+\begin{itemize}
+    \item The SiPM matrix consists of $N = 5 \cdot 10^4$ parallel cells and a parasitic (inter-cell) capacitance $C_0$.
+    \item The $p-n$ junction in the reverse bias range $[V_{br}, V_{op}]$ can be approximated by a constant capacitance $C_2$.
+    \item The avalanche process represents the short-term closure of a switch $K_i$ and an instantaneous drop in voltage at the $p-n$ junction to $V_{br} = 63$ V.
+    \item The quenching layer has a constant capacitance $C_1$ and a leakage resistance $R = 100$ M$\Omega$.
+    \item The parasitic inductance of the detector pins and connecting elements is $L = 1$ nH.
+    \item The SiPM is connected in series with a constant operating voltage $V_{op} = 65$ V.
+    \item The measuring device is equivalent to a load resistance $r = 50$ $\Omega$ and an ideal oscilloscope.
+\end{itemize}
+
+Additional notation: $C_{cell} = \frac{C_1 C_2}{C_1 + C_2}$ is the capacitance of one cell; $C_{det} = NC_{cell} + C_0 = 20$ pF is the detector capacitance; $k = C_1/C_2 = 5$; $p = C_0/C_{det} = 0.1$; $V_{ov} = V_{op} - V_{br} = 2$ V is the overvoltage.
+
+\section*{Part A. Avalanche process (2.5 points)}
+
+\problembox{A1}{For the steady state (switches $K$ open for a long time), find: the voltage $V_r$ across the load $r$; the voltage $V_0$ across each cell and the parasitic capacitance $C_0$; the voltage $V_1$ across the quenching layer of each cell.}{0.40}
+
+Suppose light hits $n$ cells simultaneously. Consider the state of the circuit immediately after the avalanche process, such that charges flowing through $L$ and $R$ can be neglected. Let $\Delta V$ be the voltage change across $C_0$ and the cells.
+
+\problembox{A2}{Find: the change in charge $\Delta q_0$ of capacitor $C_0$ (in terms of $C_0$ and $\Delta V$); the changes in charges $\Delta q_{1a}, \Delta q_{2a}$ for each active cell (in terms of $C_1, C_2, V_{ov}, \Delta V$); the changes in charges $\Delta q_{1p}, \Delta q_{2p}$ for each passive cell (in terms of $C_{cell}, \Delta V$).}{0.80}
+
+\problembox{A3}{Find the voltage change $\Delta V$ across the cells and $C_0$ upon completion of the avalanche process. Express your answer in terms of $V_{ov}, n, N, C_1, C_2, C_0$.}{0.70}
+
+The noise amplitude is estimated by $V_{noise} = \sqrt{4k_BTrf}$.
+
+\problembox{A4}{Estimate the thermal noise amplitude across $r=50$ $\Omega$ at room temperature for a bandwidth $f = 1$ GHz. Calculate the numerical value of $\Delta V$ when light hits one cell ($n=1$). Determine if the signal from one cell is distinguishable from the thermal noise.}{0.60}
+
+\section*{Part B. Multiplication factor (0.8 points)}
+
+The multiplication coefficient $M$ is defined as $M = Q/e$, where $Q$ is the total charge that flows through the load $r$ after light hits one cell as the circuit returns to the steady state. $e = 1.6 \cdot 10^{-19}$ C is the elementary charge.
+
+\problembox{B1}{Find the multiplication coefficient $M$. Express the answer in terms of $N, C_1, C_2, C_0, e, V_{ov}$ and provide the numerical value.}{0.80}
+
+\section*{Part C. Photoresponse pulse (1.2 points)}
+
+\problembox{C1}{Consider the pulse recorded after light hits one cell. Assuming the pulse is short enough to ignore $R$ but long enough for the avalanche to finish, replace the circuit with an equivalent series $RLC$ circuit. Specify its parameters.}{0.40}
+
+\problembox{C2}{Estimate the quality factor ($Q$-factor) of the resulting $RLC$ circuit. Will oscillations occur in this circuit?}{0.30}
+
+\problembox{C3}{Qualitatively sketch the dependence of the load voltage on time after light hits one cell, starting from the steady state.}{0.30}
+
+\problembox{C4}{Compare the maximum absolute value of the load voltage $|V_{max}|$ with the previously found $|\Delta V|$. Which is greater?}{0.20}
+
+\section*{Part D. Cell recovery (1.5 points)}
+
+\problembox{D1}{Find the approximate time dependence of the voltage across a cell's quenching layer after light hits it, given $\Delta V \ll V_{ov}$ and $R \gg r$. Assume the load voltage has returned to nearly zero. Express the result in terms of $V_{ov}, R, C_1, C_2, t$.}{1.00}
+
+\problembox{D2}{Find the voltage change $\Delta V$ across $C_0$ when light hits one ($n=1$) unrecovered cell whose quenching layer voltage was $V_1 < V_{ov}$. Assume all other cells were in the steady state.}{0.50}
+
+\section*{Part E. Photodetector noise (2.0 points)}
+
+Background illumination causes noise. Suppose each cell has a probability $dt/T$ of triggering in time $dt$. Let the amplitude of a pulse from a fully recovered cell be 1. If the cell is not fully recovered, the amplitude is $V = 1 - e^{-t/\tau}$, where $\tau$ is the recovery time.
+
+\problembox{E1}{Let $p(t)$ be the probability that a cell does not fire during time $t$. Find $p(t+dt)$ in terms of $p(t), dt, T$ for $dt \ll T$.}{0.30}
+
+\problembox{E2}{Find the probability that the cell does not fire during time $t$.}{0.20}
+
+\problembox{E3}{Given a cell fired at $t=0$, find the probability it fires again in the interval $[t, t+dt]$.}{0.20}
+
+\problembox{E4}{Find the average amplitude $\mu$ of the photoresponse pulses.}{0.40}
+
+\problembox{E5}{Find the standard deviation $\sigma$ of the pulse amplitudes. Use $\sigma = \sqrt{\mu(V^2) - \mu^2(V)}$.}{0.60}
+
+The signal-to-noise ratio is $SNR = \mu/\sigma$.
+
+\problembox{E6}{Find the $SNR$ of the amplitudes under uniform background illumination for: (a) $\tau = 0$; (b) $\tau \gg T$; (c) $\tau = T$.}{0.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3486}
+
+\end{document}

@@ -1,0 +1,196 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Atmospheric electricity}}
+\author{\normalsize X24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The phenomena of atmospheric electricity can be seen by anyone in everyday life. Each of us, although afraid, still admires the beauty of lightning appearing in the sky, or watches with delight the sparks in the air. As part of this task, you are invited to take a closer look at the electrical phenomena that occur in the atmosphere.
+
+\section*{Part A: Recharging Raindrops (4.6 points)}
+
+The first thought that arises about the charge of raindrops is that when they fall, they retain the same charge that they carried inside the clouds, that is, on average, equal to zero. Experience shows that this assumption is incorrect, and the average charge of drops falling on the Earth’s surface is positive. This part of the problem is devoted to the explanation and quantitative analysis of this phenomenon.
+
+You probably know Ohm's law in differential form:
+$$\vec{j}=\sigma\vec{E},$$
+where $\vec{j}$ is the current density, $\vec{E}$ is the electrostatic field strength in the medium, and $\sigma$ is the conductivity (the reciprocal of resistivity). In atmospheric air, the current density is determined by the motion of positively and negatively charged ions. Since these motions are independent, we can write
+$$\vec{j}=\vec{j}_+ + \vec{j}_-,$$
+where $\vec{j}_+$ and $\vec{j}_-$ are the current densities due to positive and negative ions, respectively. Each of these densities is proportional to $\vec{E}$, so Ohm's law for the atmosphere can be written as
+$$\vec{j}=\sigma_+\vec{E}+\sigma_-\vec{E}.$$
+Here $\sigma_+$ characterizes the contribution from positive ions and $\sigma_-$ from negative ions. Both $\sigma_+$ and $\sigma_-$ are strictly positive. Therefore, positive ions move along the electric field direction, while negative ions move opposite to it. In Earth's atmosphere, positive ions dominate, so we will always assume
+$$\sigma_+>\sigma_-.$$
+
+Let's move on directly to the formulation of the problem. A water drop, which can be considered a conducting ball of radius $R$, is located in a vertically downward electrostatic field of strength $\vec{E}_0$. The drop moves in an atmosphere with positive and negative ions, whose conductivities are $\sigma_+$ and $\sigma_-$, respectively. The global goal of this part of the problem is to find the stationary charge of the drop $Q_0$. If the drop falls quickly enough relative to the surrounding air, the change in the charge of the ball is due only to the movement of ions towards the surface of the drop.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+When solving, use the following model: When falling, a drop always retains the shape of a ball with radius $R$; The magnitude and direction of the electrostatic field $\vec{E}_0$ remain constant throughout the entire fall of the drop; The charge of a drop changes only when it comes into contact with positively and negatively charged ions, and the charges already on the surface of the drop never leave it.
+
+\problembox{A1}{Let a conducting ball of radius $R$, carrying a charge $Q$, be placed in a uniform electrostatic field of intensity $\vec{E}_0$. Determine the total strength $\vec{E}$ of the electric field at a point with radius vector $\vec{r}$ relative to the center of the ball, located outside the ball. Express your answer using $Q$, $\vec{E}_0$, $R$, $\varepsilon_0$ and $\vec{r}$.}{0.80}
+
+Let $\vec{n}$ be the normal vector to the surface of the ball, directed outward.
+
+\problembox{A2}{Let $\theta$ be the angle between the direction of the electrostatic field vector $\vec{E}_0$ and the radius vector $\vec{r}$ of some point on the surface of the ball relative to its center. Determine the projection of the electric field strength $E_n(\theta)$ onto the normal direction. Express your answer using $Q$, $E_0$, $R$, $\varepsilon_0$ and $\theta$.}{0.40}
+
+\problembox{A3}{At what values of the charge $Q$ of the ball can the value $E_n$ vanish? Express your answer using $E_0$, $\varepsilon_0$ and $R$. Further, at all points, consider that the charge of the ball $Q$ falls within the range you found.}{0.20}
+
+Let's move on to analyze the change in the charge of the ball. Consider some element of its surface $dS$ with normal vector $\vec{n}$. If at the considered point on the surface of the ball the electrostatic field strength is equal to $\vec{E}$, then per unit time a charge $dq/dt$ is received on this surface area, equal to: $$\cfrac{dq}{dt}=\begin{cases} -\sigma_-E_ndS\quad\text{for}\quad E_n>0\\\\ -\sigma_+E_ndS\quad\text{for}\quad E_n<0 \end{cases} $$  in    ,  for $E_n{>}0$ on     ,  for $E_n{<}0$ - positive.
+
+\problembox{A4}{Let the ball's charge be $Q$. At what value of the angle $\theta_0$ does the tension component $E_n(\theta_0)$ become zero? Express your answer using $Q$, $E_0$, $\varepsilon_0$ and $R$. Also determine at what values of the angle $\theta$ negative ions hit the surface of the ball, and at what values – positive ones. Express your answers using $\theta_0$.}{0.50}
+
+\problembox{A5}{Determine the total derivative with respect to time of the charge of the ball $dQ/dt$. Express your answer in terms of $Q$, $E_0$, $\varepsilon_0$, $R$, $\sigma_+$, $\sigma_-$ and, if necessary, $\theta_0$.}{1.00}
+
+\problembox{A6}{Determine the stationary charge of the ball $Q_0$ at which it remains constant in time. Express your answer in terms of $E_0$, $\varepsilon_0$, $R$, $\sigma_+$ and $\sigma_-$.}{0.80}
+
+Let $\Delta{Q}=Q-Q_0$ be the deviation of the ball’s charge from the stationary one. At the moment of time $t=0$ the deviation of the ball charge from the stationary one was $\Delta{Q}_0=Q(0)-Q_0$, and $|\Delta{Q}_0|\ll{Q}_0$.
+
+\problembox{A7}{For small values of $\Delta{Q}$ the dependence $\dot{Q}(\Delta{Q})$ can be represented as: $$\dot{Q}\approx A\Delta{Q}. $$ $A$  $\sigma_+$, $\sigma_-$ and $\varepsilon_0$.      $Q_0$ stable? Justify your answer.}{0.60}
+
+\problembox{A8}{Obtain the dependence of the deviation of the ball charge $\Delta{Q}$ on time $t$. Express your answer in terms of $\Delta{Q}_0$, $\varepsilon_0$, $\sigma_+$, $\sigma_-$ and $t$. Show also that the type of time dependence is determined only by the product $\sigma_+\sigma_-$.}{0.30}
+
+Next we will study a complex of phenomena called thunderstorms. It covers a whole range of issues related to both thunderstorm discharges, that is, lightning, and glow discharges associated with the corona of pointed objects.
+
+\section*{Part B. Occurrence of corona discharge at the tip (2.4 points)}
+
+Let us consider the issue of an anomalous increase in the strength of the electrostatic field near pointed objects. Let the conductor be an elongated ellipsoid of revolution, given by the equation: $$\cfrac{z^2}{a^2}+\cfrac{x^2+y^2}{b^2}=1. $$ $a$ and $b$   and    .  $z$         $\vec{E}_0$,   .  ,   $\vec{E}$             from  $x{,}y{,}z$: $$\vec{E}=\cfrac{\rho}{\varepsilon_0}\left(Az\vec{e}_z+B(x\vec{e}_x+y\vec{e}_y)\right). $$ $ A$ and $B$$$A=\left(\cfrac{b}{c}\right)^2\left(\cfrac{a}{c}\cdot\ln\cfrac{a+c}{b}-1\right)\qquad B=\cfrac{a}{2c}\left(\cfrac{a}{c}-\left(\cfrac{b}{c}\right)^2\ln\cfrac{a+c}{b}\right), $$where $c=\sqrt{a^2-b^2}$ –     .  $b\ll{a}$, then     : $$A\approx \left(\cfrac{b}{a}\right)^2\left(\ln\cfrac{2a}{b}-1\right)\qquad B\approx\cfrac{1}{2}\left(1-\left(\cfrac{b}{a}\right)^2\ln\cfrac{2a}{b}\right) $$   ,   $A$, use an approximate expression.
+
+The problem of placing a conducting ellipsoid in a uniform electric field directed parallel to its axis $z$ can be solved similarly to the problem for a conducting ball: Consider two ellipsoids with the same axis $z$, carrying charges with constant densities $\rho$ and $-\rho$. The center of a positive ellipsoid has a radius vector $\vec{l}$ relative to the center of a negatively charged ellipsoid.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Determine the vector $\vec{E}$ of the electrostatic field strength in the area of intersection of isolated ellipsoids. Express your answer in terms of $\rho$, $\vec{l}$, $\varepsilon_0$ and $A$.}{0.50}
+
+If the distance $l$ between the centers of the ellipsoids tends to zero, then their combination can be considered as one ellipsoid with a constant polarization vector $\vec{P}$.
+
+\problembox{B2}{Let us consider an isolated ellipsoid uniformly polarized along the $z$ axis. Let the electrostatic field strength inside the ellipsoid be equal to $\vec{E}$. Determine the polarization vector of the ellipsoid $\vec{P}$. Express your answer using $\vec{E}$, $\varepsilon_0$ and $A$.}{0.30}
+
+Let us consider an uncharged conducting ellipsoid placed in a uniform electrostatic field of intensity $\vec{E}_0$, directed along the axis $z$ of the ellipsoid.
+
+\problembox{B3}{Determine the polarization vector $\vec{P}$ of the ellipsoid. Express your answer in terms of $\vec{E}_0$, $\varepsilon_0$ and $A$. Also determine the maximum value of the surface charge density $\sigma_{max}$ on the surface of the ellipsoid. Express your answer using $P$.}{0.30}
+
+\problembox{B4}{Express the total component of the electrostatic field strength $E_n$ on the surface of the conductor in terms of the surface charge density $\sigma$ and $\varepsilon_0$. Determine the maximum strength $E_{max}$ of the electrostatic field on the surface of the ellipsoid. Express your answer using $E_0$ and $A$.}{0.40}
+
+Consider half of an ellipsoid uniformly polarized along the $z$ axis as shown in the figure below. With its equatorial cross-section it is in contact with an infinite conducting plane.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{B5}{The answer sheets show a drawing in which a point dipole is located above an infinite conducting plane, the dipole moment of which is directed perpendicular to the plane. In the answer sheets, provide the electrostatic image of a dipole in a conducting plane. Using the result obtained, provide in the answer sheets an electrostatic image of half of a uniformly polarized ellipsoid of revolution in contact with a conducting plane with an equatorial section.}{0.40}
+
+The above reasoning can be used when studying a real structure: Consider a conductor in the form of half an elongated ellipsoid of revolution with semi-axes $a = 1\text{}$ and $b = 1\text{mm}$, resting with its equatorial cross-section on the horizontal surface of the Earth, which can also be considered conductive. In the atmosphere, at a great distance from the ellipsoid, there is an electrostatic field directed vertically downward with a strength of $E_0 = 100 \text{V}/\text{m}$.
+
+\problembox{B6}{Show that the expression for the maximum electrostatic field strength $E_{max}$ coincides with the expression found in step $\mathrm{B4}$ and find its numerical value. Is the magnitude of the electrostatic field strength $E_0$ sufficient for the breakdown of air at any point in space if it occurs at a strength equal to $E_\text{}=30~\text{kV}/\text{cm}$?}{0.50}
+
+\section*{Part C. Extraction of electricity from the atmosphere (1.6 points)}
+
+Using a design similar to that considered in part $\mathrm{B}$ of the problem, it is possible to achieve the extraction of electric charge from the atmosphere. In this part of the problem, the conductivity of atmospheric air under normal conditions is equal to $\sigma_0$, and the effects described in part $\mathrm{A}$ of the problem can be neglected. Consider a conducting ball of radius $R_0$ connected to the Earth by a long thin straight wire of length $h \gg R_0$. Consider the radius of the wire small compared to $R_0$. The electrostatic field in the Earth's atmosphere can be assumed to be constant, directed vertically downward and equal to $E_0$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\problembox{C1}{Taking the potential of the ball equal to the potential on the surface of the Earth, i.e. zero, determine the magnitude of the charge $q_0$ of the ball. Express your answer in terms of $\varepsilon_0$, $E_0$, $R_0$ and $h$. The influence of the electrostatic field of the ball on the electrostatic field of the Earth can be neglected. The influence of the electrostatic field of charges located on the wire can be neglected throughout the entire space.}{0.30}
+
+\problembox{C2}{Determine the magnitude of the current $I$ flowing from the atmosphere into the ball if the conductivity of air in the entire atmosphere can be taken equal to $\sigma_0$. Express your answer in terms of $E_0$, $R_0$, $h$, $\varepsilon_0$ and $\sigma_0$.}{0.40}
+
+From the results obtained in the previous paragraphs of parts $\mathrm{B}$ and $\mathrm{C}$ it is clear that the magnitude of the electrostatic field strength near the surface of the conductor can reach quite large values, which leads to ionization of the layers of air closest to it and a strong increase in their conductivity. To take this effect into account, we will assume that the conducting ball is located inside a spherical shell with internal and external radii $R_0$ and $R$, respectively, in which ionized air with conductivity $\sigma$ is located. At distances $r{>}R$ from the center of the ball, the conductivity remains equal to $\sigma_0$. Consider the distribution of charges in the medium to be stationary, so that at any point in space the charge density remains constant. In this system, the charge is located only on spherical surfaces with radii $R_0$ and $R$, and on a surface with a radius $R_0$ the total charge is $q_0$, and on a surface with a radius $R$ – $q$ (cm. Fig.).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{C3}{Write down the expression for the condition that the ball's potential is equal to zero. The equations can include $E_0$, $h$, $q_0$, $q$, $R_0$ and $R$.}{0.30}
+
+\problembox{C4}{From the condition of equality of the strength of the current current $I$ crossing the spherical surface inside and outside the ionized layer, obtain an equation relating the charges $q_0$ and $q$. The $\sigma_0$ and $\sigma$ conductivities can also enter into the equation.}{0.30}
+
+\problembox{C5}{Determine the magnitude of the current $I$ flowing from the atmosphere into the ball in this case. Express your answer in terms of $E_0$, $R_0$, $R$, $h$, $\varepsilon_0$, $\sigma_0$ and $\sigma$.}{0.20}
+
+\problembox{C6}{Show that at $R\approx R_0$ the approximate expression for the current strength $I$ becomes an expression corresponding to the absence of an ionized layer.}{0.10}
+
+\section*{Part D. Lightning propagation channel (2.4 points)}
+
+We investigate the formation and development of a lightning discharge. As an example, consider the mechanism of lightning formation from the tip, considered in part $\mathrm{B}$ of the problem. A conductor can create a strong electrostatic field near itself, causing ionization of the air. Ionized air behaves as a conductor for a relatively long time, since the process of recombination of ions in it occurs slowly. As a result of this, the conducting region of space will grow until the electrostatic field is sufficient for ionization. If the conducting region (spark channel) formed in this way connects the clouds and the surface of the Earth, then a very large electric current can flow through it. This part of the problem is devoted to estimating the rate of formation of the spark channel. It was experimentally found that it is approximately equal to the speed of movement of free electrons at the boundary of the conducting region, where the field strength is equal to the critical value $E_\text{}$ at which ionization occurs.
+
+The proposed model of the phenomenon is as follows: In the atmospheric region there are electrons with a charge $-e$, the mass of which is equal to $m$. Also in the atmosphere there are neutral air molecules, the mass of which $M$ is many times greater than the mass of electrons, i.e. $M\gg{m}$. Under the influence of an electrostatic field, electrons acquire acceleration and collide with air molecules, and the average distance traveled by electrons between two successful collisions with air molecules is $\lambda$. The quantity $\lambda$ is called the mean free path. In this case, air molecules can always be considered motionless. The average kinetic energy of thermal motion of electrons is $\overline{W}$ and is so great that between two successful collisions there is practically no time to change. Consider that the value $\overline{W}$ is related to the average value of the speed of thermal motion of electrons $\overline{v}_\text{t}$ by the relation: $$\overline{W}=\cfrac{m\overline{v}^2_\text{t}}{2}. $$    in    $\vec{E}$, directed opposite to the speed of propagation of the spark channel.
+
+The average vector of thermal velocity of thermal motion of electrons is equal to zero: $$\langle\vec{v}_\text{t}\rangle=0. $$    in      $\tau=\lambda/\overline{v}_\text{t}$,          s  , : $$\langle\vec{S}\rangle=\langle\vec{v}_\text{t}\rangle\tau+\vec{a}\tau^2/2=\vec{a}\tau^2/2\Rightarrow \vec{u}=\cfrac{\langle\vec{S}\rangle}{\tau}=\cfrac{\vec{a}\tau}{2}. $$ $\vec{u}$ is called the average speed of electron drift in an electrostatic field. This value is equal to the speed of propagation of the spark channel.
+
+\problembox{D1}{Determine the value of the drift velocity $u$ of electron motion. Express your answer in terms of $e$, $E$, $\lambda$, $m$ and $\overline{v}_\text{t}$.}{0.20}
+
+When the average value of the kinetic energy of thermal motion of electrons reaches a stationary value $\overline{W}$, the average power of loss of kinetic energy of electrons when colliding with air molecules is compensated by the work of the electric field to move electrons.
+
+\problembox{D2}{From the energy balance, determine the average value $\overline{\Delta{W}}$ of the loss of kinetic energy of an electron when colliding with air molecules. Express your answer in terms of $e$, $E$, $\lambda$, $m$ and $\overline{W}$.}{0.40}
+
+The value of $\overline{\Delta{W}}$ can also be found directly from collision analysis.
+
+To determine the value of $\overline{\Delta W}$, we accept the following model: All collisions occurring between electrons and air molecules are elastic; Initially, an air molecule with mass $M$ is at rest, and the kinetic energy of an electron with mass $m$ incident on it is always equal to $\overline{W}$; In the reference frame of the center of mass of the considered system of two particles, all directions of the speed of an air molecule immediately after a collision with an electron are equally probable. Let $\varphi$ be the angle between the velocity vector of the incident electron and the velocity of the air molecule in the reference frame of the center of mass immediately after the collision. Then, since all directions of the speed of an air molecule in the reference frame of the center of mass are equally probable, the average value of the electron kinetic energy loss is determined by the expression: $$\overline{\Delta W}=\cfrac{1}{4\pi}\int_{\Omega}E_k(\varphi)d\Omega,$$ where $E_k(\varphi)$ –   in     ,     in   $\varphi$ in    ,  $d\Omega=2\pi\sin\varphi d\varphi$ –  ,         $\varphi$ and $\varphi+d\varphi$.
+
+where $E_k(\varphi)$ is the kinetic energy in the laboratory frame of reference of an air molecule, immediately after the collision, moving in the direction of angle $\varphi$ in the frame of reference of the center of mass, and $d\Omega=2\pi\sin\varphi d\varphi$ is the solid angle at which a segment of the surface of the sphere is visible between angles $\varphi$ and $\varphi+d\varphi$.
+
+\problembox{D3}{Obtain an exact expression for the quantity $\overline{\Delta{W}}/\overline{W}$. Express your answer in terms of $m$ and $M$. Simplify your answer to include $m\ll{M}$. If you were unable to solve this point, in the future consider that $\overline{\Delta{W}}/\overline{W}=m/M$.}{1.00}
+
+Consider the following data known: 
+\begin{itemize}
+    \item Electron charge $-e=-1{.}6\cdot 10^{-19}~\text{C}$;
+    \item Electron mass $m=9{.}1\cdot 10^{-31}~\text{kg}$;
+    \item Air molecule mass $M\approx 6\cdot 10^4~m$;
+    \item The critical electrostatic field strength at which breakdown occurs is $E_\text{}=30~\text{kV}/\text{cm}$;
+    \item Average free path $\lambda\approx 1~\text{um}$.
+\end{itemize}
+
+Consider the following information known:
+
+\problembox{D4}{Determine the stationary value of the kinetic energy of thermal motion of electrons $\overline{W}$ and the rate of formation of the spark channel $u$. Express your answers using $m$, $M$, $e$, $E$ and $\lambda$. Calculate the resulting values.}{0.80}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3703}
+
+\end{document}

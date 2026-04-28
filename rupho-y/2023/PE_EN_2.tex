@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Thermistor}}
+\author{\normalsize Y23 (2023) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+Thermistors are resistors that change their resistance significantly with temperature. NTC (Negative Temperature Coefficient) thermistors are often used as inrush current limiters in power supplies to prevent high currents from melting circuit components during the initial charging of large capacitors.
+
+\section*{Part A: Charging a Capacitor (4.2 points)}
+An NTC thermistor is connected in series with a capacitor of capacitance $C$ to a DC source with voltage $U$. The thermistor resistance at $T_0 = 298$ K is $R_0 = 37.3$ $\Omega$. During a test charge, the time dependence of the temperature deviation $\tau = T - T_0$ was recorded. We introduce the thermistor's heat capacity $c$ and contact thermal conductivity $\kappa$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Circuit diagram for capacitor charging.}
+\end{figure}
+
+\problembox{A1}{Write an equation for the time derivative of the thermistor temperature $\frac{d\tau}{dt}$. Express it in terms of the voltage $U_R$ across the thermistor, capacitance $C$, $c$, and $\kappa$. Also rewrite it in terms of $U_R, c, \kappa,$ and $R(\tau)$.}{0.20}
+
+\problembox{A2}{Let $c=a_1U^2$ and $\kappa=a_2U^2$. Using the asymptotes of the $\tau(t)$ curve at small and large $t$, find the values of $a_1$ and $a_2$.}{0.60}
+
+\problembox{A3}{Express the total heat released on the thermistor through $\kappa$ and $\tau$, and relate it to the change in capacitor energy $W_C$. Calculate the capacitance $C$.}{0.60}
+
+\problembox{A4}{Write an expression for the power $P$ dissipated by the thermistor in terms of $U, R_0, \tau,$ and the coefficients from A2.}{0.20}
+
+\problembox{A5}{Find the expression for the voltage $U_R$ across the thermistor in terms of $U, \tau,$ and the coefficients from A2.}{0.20}
+
+\problembox{A6}{Derive an expression for the resistance $R$ in terms of $R_0, \tau,$ and the coefficients from A2.}{0.20}
+
+\problembox{A7}{Using the provided graph, find the dependence $R(\tau)$ as accurately as possible.}{2.00}
+
+\problembox{A8}{Find the numerical values of $c$ and $\kappa$ for $U = 220$ V.}{0.20}
+
+\section*{Part B. Steinhart--Hart coefficients (2.0 points)}
+The resistance $R$ of an NTC thermistor follows the Steinhart--Hart equation:
+$$\frac{1}{T} = A + B \ln R + C (\ln R)^3$$
+where $A, B, C$ are material-specific coefficients.
+
+\problembox{B1}{Using experimental points $\left(\frac{1}{T_0+\tau_i}, R_i\right)$, write a system of equations to determine $A, B,$ and $C$.}{0.60}
+
+\problembox{B2}{Solve the system numerically to obtain the Steinhart--Hart coefficients.}{1.40}
+
+\section*{Part C. I-V characteristic of NTC thermistor (3.8 points)}
+Using the data from Parts A and B, we study the thermistor in a steady state to construct its current-voltage (I-V) characteristic.
+
+\problembox{C0}{\textbf{Note:} If you did not solve Parts A/B, you may use: $A=7.3\cdot10^{-4}$, $B=1.30\cdot10^{-4}$, $C=5.7\cdot10^{-6}$, and $\kappa=0.37$ W/K. Using these values reduces the maximum score for C2 and C4 by 10\%.}{0}
+
+\problembox{C1}{Write the equation for the steady-state resistance $R$ under a constant voltage $U$.}{0.20}
+
+\problembox{C2}{Obtain the dependence $R(U)$ and plot the I-V characteristic at low currents/voltages.}{1.50}
+
+\problembox{C3}{Find the critical voltage $U_{cr}$ and current $I_{cr}$ where the operating mode changes.}{0.30}
+
+Beyond this point, the characteristic is unstable until the melting point $T_{max} = 1380$ $^\circ$C.
+
+\problembox{C4}{Find the dependence $R(U)$ from the critical point to the melting point and plot it.}{1.50}
+
+\problembox{C5}{Find the coordinates $(U_m, I_m)$ of the melting point on the I-V characteristic.}{0.30}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig2.jpg}
+    \caption{Temperature deviation $\tau(t)$ graph.}
+\end{figure}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3021}
+
+\end{document}

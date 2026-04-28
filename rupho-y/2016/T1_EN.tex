@@ -1,0 +1,101 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Multilayer optical systems}}
+\author{\normalsize Y16 (2016) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Part A. Quartz plate and polarizer}
+
+Many substances have optical anisotropy, in which the refractive index depends on the direction of propagation and polarization of light. The direction in which light travels without birefringence is called the optical axis of the crystal.
+
+Let there be a quartz plate cut parallel to the optical axis between two parallel-oriented polarizers (Fig. 1). The transmission plane of the polarizers makes an angle $45^{\circ}$ with the optical axis of the plate. The thickness of the plate is $d$. A plane monochromatic wave with wavelength $\lambda$ is incident on this system. After passing through the polarizer $1$, the light becomes linearly polarized, and its electric field strength vector oscillates only in the plane of transmission of the polarizer $1$. Next, this light falls on an anisotropic quartz plate. Two light waves are excited in the plate: $\vec{E}_o$, polarized perpendicular to the optical axis (called an ordinary wave), and $\vec{E}_e$, polarized along the optical axis (called an extraordinary wave). The refractive index of a quartz plate for an ordinary wave is $n_o$, and for an extraordinary wave it is $n_e$. Let's denote it by $\Delta{n}=n_o-n_e$. Rice. 1. Birefringence
+
+Let there be a quartz plate cut parallel to the optical axis between two parallel-oriented polarizers (Fig. 1). The transmission plane of the polarizers makes an angle $45^{\circ}$ with the optical axis of the plate. The thickness of the plate is $d$. A plane monochromatic wave with wavelength $\lambda$ is incident on this system. After passing through the polarizer $1$, the light becomes linearly polarized, and its electric field strength vector oscillates only in the plane of transmission of the polarizer $1$. Next, this light falls on an anisotropic quartz plate. Two light waves are excited in the plate: $\vec{E}_o$, polarized perpendicular to the optical axis (called an ordinary wave), and $\vec{E}_e$, polarized along the optical axis (called an extraordinary wave). The refractive index of a quartz plate for an ordinary wave is $n_o$, and for an extraordinary wave it is $n_e$. Let's denote it by $\Delta{n}=n_o-n_e$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{When these waves pass through the plate, a phase difference $\varphi=\alpha kd$ arises between them, where $k=2\pi/\lambda$. Find the coefficient $\alpha$.}{0.50}
+
+Let the amplitude of the wave after passing through the first polarizer be equal to $A_0$. The amplitude of the light wave after the second polarizer is equal to the sum of the projections of the ordinary and extraordinary waves onto the direction of transmission of the second polarizer.
+
+\problembox{A2}{Find the amplitude of the wave $A_1$ after the second polarizer.}{1.00}
+
+\section*{Part B. Lyot filter}
+
+The Lyot interference polarization filter is an optical system consisting of $N+1$ polarizers and $N$ quartz plates (Fig. 2), cut parallel to the optical axis (the case discussed above). A plane monochromatic wave with wavelength $\lambda$ is incident on the filter. The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The thicknesses of the plates are $d$, $2d$, $4d$, $8d$, ... $2^{N-1}d$. The refractive indices of quartz are $n_o$ and $n_e$. Neglect the reflection of light at the boundaries of the plates and polarizers. Rice. 2. Lyo filter
+
+The Lyot interference polarization filter is an optical system consisting of $N+1$ polarizers and $N$ quartz plates (Fig. 2), cut parallel to the optical axis (the case discussed above). A plane monochromatic wave with wavelength $\lambda$ is incident on the filter. The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The thicknesses of the plates are $d$, $2d$, $4d$, $8d$, ... $2^{N-1}d$. The refractive indices of quartz are $n_o$ and $n_e$. Neglect the reflection of light at the boundaries of the plates and polarizers.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Let the amplitude of the wave after passing through the first polarizer be equal to $A_0$. Find the amplitude of the wave $A_{out}$ at the output of the system. Note: Your answer must not contain missing integrals, uncalculated sums or products.}{3.00}
+
+\problembox{B2}{Find the possible wavelengths $\lambda$ at which the output amplitude is maximum (main maxima).}{1.00}
+
+\problembox{B3}{Find the spectral width of the first main maximum $\Delta{\lambda}$.}{1.00}
+
+\problembox{B4}{Find the spectral resolution $\lambda/\Delta{\lambda}$ for the $m$th main maximum.}{0.50}
+
+\section*{Part C. Wood's monochromator}
+
+Wood's monochromator consists of alternating $N+1$ polarizers and $N$ quartz plates of equal thickness $d$ (Fig. 3). The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The refractive indices of quartz are $n_o$ and $n_e$. Rice. 3. Wood's monochromator
+
+Wood's monochromator consists of alternating $N+1$ polarizers and $N$ quartz plates of equal thickness $d$ (Fig. 3). The main directions of all polarizers are parallel and make an angle $45^{\circ}$ with the optical axis of the plates. The refractive indices of quartz are $n_o$ and $n_e$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T1_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{Find how the intensity of light passing through the monochromator depends on the phase difference $\varphi$ between the ordinary and extraordinary waves incident on one quartz plate. Draw a qualitative graph of this relationship for $N=5$ and $N=50$. $\textit{Примечание:}$ Your answer should not contain unused integrals, uncalculated sums or products.}{1.50}
+
+\problembox{C2}{Find the spectral resolution of the Wood monochromator $\lambda/\Delta{\lambda}$.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3027}
+
+\end{document}

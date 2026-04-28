@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{CHYA, capacitor with moving plates}}
+\author{\normalsize Y20 (2020) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In this experiment, the electrical black box is a flat capacitor. Each plate consists of a number of small teeth of the same geometric shape. The size of the capacitance $C$ can be changed by moving the upper plate horizontally relative to the lower one. Between the plates of the capacitor there is a layer of dielectric.
+
+\section*{Equipment}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Two black boxes ($A$ and $B$), oscilloscope, generator, breadboard, connecting wires and jumpers, capacitors $100\,pF$ (marking 101) and $330\,pF$ (marking 331), unknown capacitor $C_1$ (in red insulation), inductor $15.0\,H$ (black cylinder marked 153), resistor $510\,Ohm$ (in black insulation).
+
+$!!$ Avoid high voltages and sudden surges in current and voltage. Before changing the circuit configuration, smoothly turn the amplitude of the generator to zero, and then turn off the generator! New components will not be issued!
+
+\section*{Part A. Calibration (1.3 points)}
+
+\problembox{A1}{Assemble an oscillatory $RLC$ circuit by connecting inductance, a known capacitance and a resistor in series. Measure the dependence of the resonant frequency of this circuit on the capacitance used. Check the applicability of the theoretical relationship between them. Estimate $C_0$ - the irremovable capacitance of wires and other components of the circuit.}{1.00}
+
+\problembox{A2}{Assemble an oscillatory $RLC$-circuit using a capacitor of unknown capacitance $C_1$. Find the resonant frequency of this circuit $f_1$. Define $C_1$.}{0.30}
+
+\section*{Part B. Determination of the shape of capacitor plates (7.2 points)}
+
+Below are four possible plate shapes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig4.jpg}
+    \caption{Figure 4.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{E3_EN_assets/fig5.jpg}
+    \caption{Figure 5.}
+\end{figure}
+
+\problembox{B1}{For each plate shape, construct a qualitative plot of the expected dependence of $C$ on the position of the top plate $x$.}{1.60}
+
+\problembox{B2}{Having assembled the oscillatory $RLC$ circuit, remove the dependence $f(x)$ of the resonant frequency on the position of the upper plate. Make these measurements for both black boxes.}{2.40}
+
+\problembox{B3}{Calculate $C(x)$ for each of the boxes. Plot graphs of these dependencies on one piece of graph paper. Determine the plate shape numbers corresponding to the drawers.}{1.20}
+
+\problembox{B4}{For each of the boxes, determine the values $b$ and $w$, which characterize the shape of the teeth. The distance $d$ between the top and bottom plates is $1.00~\text{mm}$. The dielectric located between the plates has a dielectric constant $\varepsilon=2.9$. Electrical constant $\varepsilon_0=8.85\cdot 10^{-12}~\text{/m}$.}{1.40}
+
+\problembox{B5}{For each of the boxes, estimate the number of teeth on one plate of the parallel-plate capacitor. (In each drawer, the number of teeth on the bottom plate is the same as on the top).}{0.60}
+
+\section*{Part C: Digital Displacement Meter Resolution (1.5 points)}
+
+With a relative displacement of parallel plates, the capacitance of a flat-plate capacitor periodically changes, and with it the resonant frequency of the circuit. This installation can be used as a digital displacement meter.
+
+\problembox{C1}{Let our black box labeled $A$ be a displacement meter. For a frequency in the vicinity of $f=120~\text{kHz}$, using the experimental data from Part B, estimate the resolution of the setup: the minimum distance $\Delta x$ that can be measured. An estimate of the error of the final result is not required.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/46}
+
+\end{document}

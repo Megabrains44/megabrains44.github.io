@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Roche limits</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Roche limits</h1>
+<p class="camp">Y22 (2022) — English translation</p>
+<p>Gravitational forces increase as the distance between bodies decreases. Therefore, one can observe how, with a strong approach, for example, liquid satellites and planets with a strong gravitational field, the shape of the satellites begins to change and they are ultimately destroyed. The Roche limit is the minimum possible radius of a circular orbit of a satellite $R_{Roche}$ revolving around a planet, at which the satellite is not yet destroyed under the influence of tidal forces caused by the gravitational field of the planet. In this problem you have to find the Roche limits for a binary planetary system, as well as for a liquid satellite.</p>
+<h2 class="part">Part A. Roche limit for a binary planetary system (1.5 points)</h2>
+<p>Consider two identical spherical objects, the mass and radius of each being $m$ and $r$, respectively. Objects as a whole move in the gravitational field of a star with mass $M\gg{m}$ in circular orbits. Let us denote the distance from the point of contact of the objects to the star as $R$. Consider that $R\gg{r}$ and the centers of the objects are always on a straight line passing through the centers of the star (that is, the objects always face one side to the star). The gravitational constant is $G$.</p>
+<div class="figure"><img src="T5_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the value of the radius of the circular orbit $R_\text{ДПС}$ at which the mechanical stress in the area of ​​contact of the objects is equal to zero. The quantity $R_\text{ДПС}$ is the Roche limit $R_{Roche}$ for a binary planetary system</div><span class="pb-pts">1.50</span></div>
+<h2 class="part">Liquid satellite</h2>
+<p>All remaining points of the problem lead to finding the Roche limit for a liquid satellite. rotating around its own axis synchronously with the orbital rotation (in other words, the satellite always faces the same side towards the planet.). Let us denote the radius of the satellite's circular orbit as $R$. The gravitational constant $G$, the radius of the planet $R_0$, the density of the planet $\rho_M$ and the density of the liquid satellite $\rho_m$ are considered known at all points of the problem. The problem is solved in a reference frame rotating around the center of the planet with the orbital angular velocity of rotation of the satellite, and also under the following assumptions: 1) the center of the planet is stationary; 2) the influence of all forces, except centrifugal, gravity of the planet and the satellite’s own gravity can be neglected; 3) the liquid is incompressible; 4) in a rotating reference frame the fluid is motionless; 5) all linear dimensions of the satellite are much smaller than the radius of the circular orbit $R$. Also, when solving the problem, use a coordinate system, the origin of which is located at the position of the satellite’s center of mass, the $x$ axis is directed along a line drawn from the planet to the satellite, the $z$ axis is directed along the angular velocity vector of orbital rotation, and the $y$ axis complements the three basis vectors $\vec{e}_x, \vec{e}_y, \vec{e}_z$ to the right.</p>
+<div class="figure"><img src="T5_EN_assets/fig2.jpg" alt="" /><div class="caption">Fig. 2.</div></div>
+<h2 class="part">Part B. Potential of external fields (1.5 points)</h2>
+<p>We will call the potential energy of a unit mass, i.e.: $$\varphi=\displaystyle\frac{W_p}{m} $$ В данной части задачи необходимо приближенно описать суммарный потенциал $\varphi_{\text{ext}}$ поля центробежной силы и гравитационного поля планеты вблизи равновесного положения спутника. Считайте, что в начале координат потенциал $\varphi_{\text{ext}_0}=0$.</p>
+<div class="problem-box"><span class="pb-id">B1</span><div class="pb-text">Obtain an exact expression for the total potential $\varphi_\text{внеш}$ in the field of the centrifugal force and the gravitational field of the planet. Express your answer in terms of $x$, $y$, $z$, $G$, $\rho_M$, $R_0$ and $R$.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">B2</span><div class="pb-text">In the $x,y,z\ll{R}$ approximation, the expression for the potential $\varphi$ can be represented as follows: $$\varphi_{\text{внеш}}=A_1x^2+B_1y^2+C_1z^2 $$ Найдите коэффициенты $A_1$, $B_1$ и $C_1$. Ответы выразите через $R$, $G$, $R_0$ и $\rho_M$.</div><span class="pb-pts">0.80</span></div>
+<p>In what follows, assume that the coefficients $B_1$ and $C_1$ are equal to zero. As accurate calculations show, taking them into account gives a very small increase in accuracy, incomparable with an increase in the complexity of calculations. Thus, in all further points: $$\varphi_{\text{внеш}}=A_1x^2 $$ From the form of the potential it becomes clear that the figure we are considering is a figure of rotation, and the quadratic form of the dependence of the potential makes it possible to guess the geometric figure.</p>
+<h2 class="part">Part C. Gravitational field of an ellipsoid of revolution (5.5 points)</h2>
+<p>In this part of the problem, you are asked to familiarize yourself with the gravitational field inside an elongated ellipsoid of revolution, filled throughout its entire volume with a substance with density $\rho$. In the Cartesian coordinate system $xyz$ the ellipsoid of revolution is described by the equation: $$\frac{x^2}{a^2}+\frac{y^2+z^2}{b^2}\leq{1}\qquad a\geq{b} $$ где $a$ и $b$ – соответственно большая и малая полуоси эллипса в любом сечении. содержащем начало координат. Напомним, что фокусы эллипса находятся на расстоянии $2c=2\sqrt{a^2-b^2}$ друг от друга, а эксцентриситет эллипса равен $e=\cfrac{c}{a}$.</p>
+<p>Рассмотрим вспомогательную задачу: В рассматриваемом эллипсоиде создали полость, заданную уравнением: $$\frac{x^2}{k^2a^2}+\frac{y^2+z^2}{k^2b^2}\leq{1}\qquad k<1 $$</p>
+<div class="figure"><img src="T5_EN_assets/fig3.jpg" alt="" /><div class="caption">Fig. 3.</div></div>
+<div class="problem-box"><span class="pb-id">C1</span><div class="pb-text">Prove that the gravitational field inside the cavity is zero.</div><span class="pb-pts">0.80</span></div>
+<p>Let's return to the solid ellipsoid.</p>
+<div class="problem-box"><span class="pb-id">C2</span><div class="pb-text">Let the potential at the center of the ellipsoid be $\varphi_0$. Consider a point inside the ellipsoid, the radius vector relative to the center is equal to $\vec{r}$. The potential at this point is equal to $\varphi_1$. What is the potential $\varphi_2=\varphi(\gamma\vec{r})$ at the point with radius vector $\gamma\vec{r}$ also located inside the ellipsoid? Express your answer in terms of $\varphi_0$, $\varphi_1$ and $\gamma$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">C3</span><div class="pb-text">Show that at a point on an ellipsoid with coordinates $x,y,z$ the potential can be represented as: $$\varphi=\varphi_0+A_2x^2+B_2(y^2+z^2) $$ $\textit{Note:}$ note that this expression is applicable for ellipsoids of arbitrarily small sizes</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C4</span><div class="pb-text">Express $B_2$ in terms of $A_2$, $G$ and $\rho$. $\textit{Примечание:}~$ use Gauss's theorem in differential form for the gravitational field: $$\displaystyle\frac{\partial^2{\varphi}}{\partial{x}^2}+\displaystyle\frac{\partial^2{\varphi}}{\partial{y}^2}+\displaystyle\frac{\partial^2{\varphi}}{\partial{z}^2}=4\pi\rho G $$</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">C5</span><div class="pb-text">The potential $\varphi$ on the surface of the ellipsoid can be represented as a function of only the coordinate $x$ in the following form: $$\varphi=C_2+x^2D_2 $$ Выразите $C_2$ и $D_2$ через $\varphi_0$, $A_2$, $G$, $\rho$, $a$, $x$ и эксцентриситет $e$.</div><span class="pb-pts">0.30</span></div>
+<p>As can be seen, an ellipsoid of revolution can create a field that satisfies the condition of equipotentiality of the liquid surface. To do this, it is necessary to find the dependence of the coefficient $A_2$ on the eccentricity $e$ of the ellipsoid.</p>
+<div class="problem-box"><span class="pb-id">C6</span><div class="pb-text">Let us solve an auxiliary problem: mass with surface density $\sigma$ is uniformly distributed over the surface of a disk of radius $R$. Find the potential of the disk $\varphi_\text{д}$ on the axis at a distance $x$ from its center. Express your answer in terms of $\sigma$, $G$, $R$ and $x$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">C7</span><div class="pb-text">Find the potential $\varphi_0$ at the center of the ellipsoid. Express your answer in terms of $G$, $\rho$, $a$ and $e$. $\textit{Примечание:}$ you may need the following integral: $$\displaystyle\int\sqrt{1+x^2}dx=\cfrac{x\sqrt{1+x^2}+\ln\left(x+\sqrt{1+x^2}\right)}{2}+C $$</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C8</span><div class="pb-text">Find the potential of the ellipsoid $\varphi_a$ at the point with coordinates $(x, y, z)=(a, 0, 0)$. Express your answer in terms of $G$, $\rho$, $a$ and $e$. $\textit{Примечание:}$ you may need the following integral: $$\displaystyle\int\sqrt{x^2-1}dx=\cfrac{x\sqrt{x^2-1}-\ln\left(x+\sqrt{x^2-1}\right)}{2}+C $$</div><span class="pb-pts">1.00</span></div>
+<div class="problem-box"><span class="pb-id">C9</span><div class="pb-text">Find the coefficient $A_2$. Express your answer in terms of $G$, $\rho$ and $e$.</div><span class="pb-pts">0.20</span></div>
+<h2 class="part">Part D. Finding the Roche limit (1.5 points)</h2>
+<p>For a liquid satellite to be in equilibrium, its surface must be equipotential. In the previous part of the problem, we showed that the potential on the surface of a homogeneous ellipsoid of revolution can be represented as a function of only the coordinate $x$.</p>
+<div class="problem-box"><span class="pb-id">D1</span><div class="pb-text">On a sheet of graph paper, plot the dependence of the coefficient $D_2$ on the eccentricity $e$ of the ellipsoid formed by the satellite.</div><span class="pb-pts">0.70</span></div>
+<div class="problem-box"><span class="pb-id">D2</span><div class="pb-text">At what value of eccentricity $e$ is the Roche limit reached?</div><span class="pb-pts">0.30</span></div>
+<div class="problem-box"><span class="pb-id">D3</span><div class="pb-text">Find the Roche limit $R_{Roche}$. Express your answer in terms of $R_0$, $\rho_M$ and $\rho_m$.</div><span class="pb-pts">0.50</span></div>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/2442">https://pho.rs/p/2442</a></p>
+</body>
+</html>

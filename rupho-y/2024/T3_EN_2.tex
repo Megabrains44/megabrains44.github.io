@@ -1,0 +1,156 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Dynamics of a relativistic rocket}}
+\author{\normalsize Y24 (2024) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Since Einstein's discovery of the theory of relativity, humanity has set itself the task of achieving rocket speeds close to the speed of light in a vacuum. Currently known technologies do not allow achieving speeds that require taking into account relativistic effects. Thus, at the moment, the highest theoretically achievable rocket speed, which existing technologies can achieve, is approximately $0{.}1c$, which corresponds to the relativistic gamma factor $\gamma\approx 1{.}005$, therefore the dynamics of motion of even modern rockets is described with good accuracy by Newtonian mechanics. Theoretical research, as we know, is ahead of technological progress, and to date a large number of theoretical methods for launching relativistic rockets have been built. As part of this task, you are invited to familiarize yourself with some features of the dynamics of a relativistic rocket.
+
+In all points of the problem: the rocket engine is designed in such a way that it processes the fuel accumulated in it into a flammable substance that flies out of the engine in the same direction relative to the rocket; consider that the energy of the system consists only of kinetic energy and rest energy, and that during interactions these types of energy are transferred only into each other without the release of heat; consider the speeds to be relativistic.
+
+In all points of the task:
+
+\section*{Part A. Classical model of a relativistic rocket (2.8 points)}
+
+Let us consider a relativistic rocket with mass $M$ at rest in a vacuum. The rocket begins to move, in which the fuel flies out of the engine at a speed $u$ relative to the rocket. We denote the mass of the moving rocket as $m$.
+
+\problembox{A1}{What is the speed $v$ of the rocket at the moment when its mass decreases to the value $m$? Express your answer in terms of $m$, $M$, $c$ and $u$.}{0.70}
+
+Let the rocket move in such a way that its passengers experience a constant acceleration due to gravity $a$. The rocket engine stops working after a time $\tau$, measured by the rocket clock.
+
+\problembox{A2}{Determine the mass $m$ of the rocket at the moment the engine stops running. Express your answer in terms of $M$, $a$, $u$, $c$ and $\tau$.}{0.30}
+
+\problembox{A3}{Find the displacement $S$ of the rocket at the moment the engine stops running. Express your answer in terms of $c$, $u$, $a$ and $\tau$.}{0.30}
+
+Consider a rocket for which $u/c=0{.}1$. The rocket engine stops working after a time $\tau_0$, measured by the rocket clock. During the movement, the mass of the rocket $m$ was measured as a function of the time $\tau$ elapsed according to the rocket clock from the moment of launch. This dependence is presented in the table below in the form $y(x)$, where $y=m/M$, and $x=\tau/\tau_0$:
+\begin{table}[h]
+\centering
+\caption{Rocket mass as a function of elapsed time (u/c = 0.1)}
+\label{tab:rocket_mass}
+\begin{tabular}{cc}
+\hline
+$x = \tau/\tau_0$ & $y = m/M$ \\
+\hline
+0.000 & 1.000 \\
+0.020 & 0.981 \\
+0.040 & 0.929 \\
+0.060 & 0.858 \\
+0.080 & 0.782 \\
+0.100 & 0.709 \\
+0.150 & 0.557 \\
+0.200 & 0.449 \\
+0.250 & 0.373 \\
+0.300 & 0.318 \\
+0.350 & 0.276 \\
+0.400 & 0.244 \\
+0.450 & 0.218 \\
+0.500 & 0.197 \\
+0.550 & 0.180 \\
+0.600 & 0.165 \\
+0.650 & 0.153 \\
+0.700 & 0.142 \\
+0.750 & 0.133 \\
+0.800 & 0.125 \\
+0.850 & 0.117 \\
+0.900 & 0.111 \\
+0.950 & 0.105 \\
+1.000 & 0.100 \\
+\hline
+\end{tabular}
+\end{table}
+ 
+
+\problembox{A4}{Determine as accurately as possible the displacement $S$ of the rocket in the laboratory reference frame at the moment the engine stops operating. Express your answer in terms of $c$ and $\tau_0$. Give the required numerical values in the table on the answer sheets. If necessary, you can use graph paper in the answer sheets to make graphs.}{1.50}
+
+\section*{Part B. Two-component jet (1.4 points)}
+
+Let us consider a relativistic rocket with mass $M$ at rest in a vacuum. The rocket begins to move, in which the jet of fuel leaving the rocket has two components $1$ and $2$. Combustible substances $1$ and $2$ fly out of the engine at speeds $u_1$ and $u_2$, respectively, relative to the rocket, and the mass of the substance $2$ emitted per unit time is $\alpha$ times greater than the substance $1$ emitted per unit time. In all points of this part of the problem, consider the quantities $M$, $c$, $u_1$, $u_2$ and $\alpha$ known.
+
+\problembox{B1}{Let the rocket mass decrease to the value $m$. Find the masses $m_1$ and $m_2$ of the flammable substances $1$ and $2$ ejected from the rocket, respectively. Express your answer in terms of $m$ and known quantities.}{0.70}
+
+\problembox{B2}{Find the speed $v$ of the rocket at the moment when its mass has decreased to the value $m$. Express your answer in terms of $m$ and known quantities.}{0.70}
+
+\section*{Part C. Rocket motion in matter (1.8 points)}
+
+Let us consider a stationary rocket with mass $M$ located in stationary matter with constant density $\rho$. The cross-sectional area of the rocket is $S$. The rocket is propelled by a motor emitting fuel at a constant speed $u$ relative to the rocket in the same direction perpendicular to the cross section $S$. All the material that hits the front base of the rocket passes into the rocket and turns into fuel. In all points of this part of the problem, consider the quantities $M$, $c$, $u$, $\rho$ and $S$ known.
+
+\problembox{C1}{Let the rocket engine be turned off and the rocket move at speed $v$. At what speed $dm/d\tau$ does its mass change according to the rocket clock? Express your answer in terms of $v$ and known quantities.}{0.50}
+
+\problembox{C2}{Let the rocket engine operate in such a way that the mass of the rocket moving in vacuum changes at a speed $dm_0/d\tau$ according to the rocket clock at time $\tau$. At what speed $dm/d\tau$ according to the rocket's clock does its mass change at the moment of time $\tau$, if the rocket moves at a speed $v$, and the rocket engine operates in the same way as when moving in a vacuum (i.e. at the moment of time $\tau$ the same mass of fuel flies out of the rocket at the same speed per unit time)? Express your answer in terms of $dm_0/d\tau$, $v$ and known quantities.}{0.50}
+
+\problembox{C3}{Let the rocket engine be turned on, but working in an unknown way. An observer on the rocket found that at some point in time the rocket's mass was $m$, the rate of change of the rocket's mass according to the rocket's clock was $dm/d\tau$, and the rocket was moving at a speed $v$ relative to the laboratory frame of reference. What acceleration of gravity $a$ was experienced by the passenger at the moment in question? Express your answer in terms of $v$, $m$, $dm/d\tau$ and known quantities.}{0.80}
+
+\section*{Part D: Antimatter Rocket (1.5 points)}
+
+Let us consider a stationary rocket with mass $M$ located in stationary matter with constant density $\rho$. The cross-sectional area of the rocket is $S$. The rocket engine fuel is antimatter, which annihilates with the substance entering the rocket, after which photons are emitted from the rocket engine in a direction perpendicular to the cross section of the rocket. The masses of annihilating rocket fuel and the substance that gets into it are the same. In all points of this part of the problem, consider the quantities $M$, $c$, $\rho$ and $S$ known.
+
+\problembox{D1}{Let a rocket of mass $m$ move with speed $v$. Determine the acceleration due to gravity $a$ experienced by the rocket passengers. Express your answer in terms of $m$, $v$ and known quantities.}{0.50}
+
+\problembox{D2}{What speed $v$ will the rocket reach by the time its mass decreases to the value $m$? Express your answer in terms of $m$ and known quantities.}{0.70}
+
+\problembox{D3}{Find the displacement $L$ of the rocket at the moment when its speed reaches the value $v$. Express your answer in terms of $v$ and known quantities.}{0.30}
+
+\section*{Part E. Motion in low-density matter (2.5 points)}
+
+Consider an initially stationary rocket moving in a vacuum. Let $\tau$ be the time elapsed according to the rocket clock since the launch. The mass flow of fuel leaving the rocket depends on $\tau$ in such a way that when the rocket moves in a vacuum, passengers experience a constant acceleration of gravity $a$. When the rocket engine stopped working, the rocket speed was found to be $v_1$.
+
+Now let us consider the movement of a rocket with the same engine (i.e., with the same dependence of the mass flow rate of fuel emitted from the rocket on $\tau$, measured by the clock of the rocket moving in the substance), but in a low-density environment $\rho$. Since the density $\rho$ is small, the dependences $v(\tau)$ and $M(\tau)$, where $\tau$ is the time elapsed according to the rocket clock, can be represented in the following form: \begin{equation}
+v(\tau) = v_0(\tau) + \delta v(\tau)
+\end{equation}
+
+\begin{equation}
+m(\tau) = m_0(\tau) + \delta m(\tau)
+\end{equation}
+
+where $v_0(\tau)$ and $m_0(\tau)$ are the zeroth-order solutions 
+and $\delta v(\tau)$ and $\delta m(\tau)$ are small corrections such that 
+$\delta v(\tau) \ll v_0(\tau)$ and $\delta m(\tau) \ll m_0(\tau)$.
+
+Express the corrections in terms of $M$, $\rho$, $S$, $c$, $u$, and $a$.
+
+\problembox{E1}{Get dependency $\delta{m}(\tau)$. Express your answer in terms of $\tau$ and known quantities.}{0.50}
+
+\problembox{E2}{By what value $\delta{m}_1$ do the masses of rockets moving in vacuum and matter differ by the moment the engines stop working? Express your answer in terms of $v_1$ and known quantities.}{0.20}
+
+\problembox{E3}{Get dependency $\delta{v}(\tau)$. Express your answer in terms of $\tau$ and known quantities.}{1.50}
+
+\problembox{E4}{By what value $\delta{v}_1$ do the speeds of rockets moving in vacuum and matter differ by the time the engines stop working? Express your answer in terms of $v_1$ and known quantities.}{0.30}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3856}
+
+\end{document}

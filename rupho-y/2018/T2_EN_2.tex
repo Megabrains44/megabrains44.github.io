@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Magnetars}}
+\author{\normalsize Y18 (2018) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Magnetic fields can be found everywhere. For example, the Earth's magnetic field is $25{-}60~\text{\textmu T}$, strong permanent magnets give a field of about $1~\text{T}$, magnetic fields created in laboratories can reach an induction of $45~\text{T}$, magnetic fields of neutron stars and magnetars - up to $10^{11}~\text{T}$. In this problem we will look at several effects associated with strong magnetic fields. The magnetic field energy density is $w=\frac{B^2}{2\mu\mu_0}$, where $\mu_0 = 1.3\cdot 10^{-6}~\text{N}/\text{A}^2$ is the magnetic constant, $\mu$ is the relative magnetic permeability of the medium. Systems always try to occupy a lower energy state, which means that ferromagnetic substances ($\mu\gg{1}$) are pulled into regions of strong magnetic fields, while diamagnetic substances ($\mu<1$) are pushed out. The magnetic susceptibility $\chi=\mu-1$ of diamagnetic materials is a small value, $|\chi|\ll{1}$, so for the buoyancy force to be significant, the magnetic field must be strong. Water is diamagnetic ($\chi=-9\cdot{10^{-6}}$), and animals are composed primarily of water. Therefore, a frog can levitate in a sufficiently strong magnetic field.
+
+Let the height of the frog $H$ not exceed $h_0=10~\text{mm}$, and assume that the square of the field induction depends on the coordinate as shown in Fig. 1.
+
+Fig.~1. Levitating frog and the dependence of the square of the magnetic field $B^2$ on the height $z$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\problembox{A1}{Find the field induction values $B_0~\text{(in  T)}$ at which the frog will levitate. Consider that the frog is made entirely of water.  The density of water is $\rho=1000~\text{kg}/\text{m}^3$. Gravity acceleration $g=9.8~\text{m}/\text{s}^2$.}{1.50}
+
+Stars are made of plasma, which is a very good conductor of electricity.  Therefore, the magnetic field lines seem to be “frozen” into the moving plasma (Fig. 2). When a star contracts and turns into a neutron star, there is an instantaneous increase in the magnetic field induction of the star. Fig.~2. Magnetic field lines during plasma compression
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Let the magnetic field induction at the pole of the star be $B_s = 100~\text{\textmu T}$ and its average density $\rho_s=1400~\text{kg}/\text{m}^3$. What will be the magnetic field induction $B_n$ at the pole when the star turns into a neutron star? The density of the neutron star matter is $\rho_n=5\cdot{10^{17}}~\text{kg}/\text{m}^3$.}{1.00}
+
+\problembox{B2}{In reality, the magnetic fields of a neutron star look different. Let's look at a very simplified model. The inner part of the star shrinks to the size of a neutron star, while the outer part remains the same size. Let the star rotate with angular velocity $\omega_s$ before compression. Express the new angular velocity of rotation of the interior of the star $\omega_n$ in terms of $\omega_s$, $\rho_s$ and $\rho_n$.}{1.00}
+
+Because the angular velocities of rotation of the inner and outer parts of the star are different, the field lines will look as shown in the figure.
+
+Fig.~3. Field lines inside a neutron star
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T2_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+Carry out calculations under the following simplifying assumptions: solve the problem in a two-dimensional case, i.e. consider the star cylindrical; consider that the field was cylindrically symmetric at the initial moment of time; The field lines start on the inner cylinder and end on the outer one.
+
+\problembox{B3}{Let the initial field induction at the outer cylinder be $B_0$. Find the field induction $B$ as a function of time $t$ ($t\gg{1/\omega_n}$) in the region where the field lines are “stretched”. Express your answer in terms of $B_0$, $\omega_n$ and $t$.}{1.50}
+
+\problembox{B4}{Let's accept the following model. When a star contracts, gravitational energy transforms into rotational kinetic energy (we will neglect thermal energy), which then transforms into magnetic energy. Under these assumptions, estimate the maximum magnetic field induction $B_\text{max}$ of a neutron star of mass $M_n=4\cdot{10^{30}~\text{kg}}$ and radius $r_n = 13~\text{km}$. Gravitational constant $G=6.67\cdot{10^{-11}}~\text{m}^3/(\text{kg}\cdot{s}^2)$}{1.00}
+
+\problembox{C1}{Very strong magnetic fields can affect the chemical properties of matter by changing the shape of electron orbits. This occurs when the Lorentz force acting on the electron becomes greater than the Coulomb interaction with the nucleus. Estimate the magnetic field induction $B_H$ required for orbital bending in a hydrogen atom. The electron orbital radius is $R_H=5\cdot{10^{-11}~\text{m}}$. Electron charge $e = 1.6\cdot 10^{-19}~\text{C}$, electron mass $m_e = 9.1\cdot 10^{-31}~\text{kg}$, electric constant $\varepsilon_0 = 8.85\cdot 10^{-12}~\text{F}/\text{m}$.}{1.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/500}
+
+\end{document}

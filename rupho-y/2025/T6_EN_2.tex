@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Electron tube}}
+\author{\normalsize Y25 (2025) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+This problem is devoted to a device called an electron tube. Electron tubes differ in shape and design, but the principle of operation is the same: in an evacuated flask, two electrodes are located: a cathode and an anode. The cathode is heated by an electric current flowing through it (or a nearby heater), leading to thermionic emission of electrons from its surface. A potential difference between the cathode and anode drives the movement of electrons in the vacuum. Other elements, such as grids, may also be present.
+
+In all answers, unless otherwise specified, you may use:
+\begin{itemize}
+    \item magnetic constant $\mu_0 = 4\pi \cdot 10^{-7}$ H/A$^2$;
+    \item electrical constant $\varepsilon_0 = 8.85 \cdot 10^{-12}$ F/m;
+    \item Boltzmann constant $k = 1.38 \cdot 10^{-23}$ J/K;
+    \item electron mass $m = 9.1 \cdot 10^{-31}$ kg;
+    \item electron charge magnitude $e = 1.6 \cdot 10^{-19}$ C.
+\end{itemize}
+
+\textit{Note: The problem will require solving equations of the form $\psi''(z) = f(\psi(z))$. Multiplying both sides by $\psi'(z)$ and integrating yields $\frac{(\psi'(z))^2}{2} = \int f(\psi) d\psi + C$, where $C$ is a constant determined by initial conditions.}
+
+\section*{Part A. Motion of an electron in an electromagnetic field (3.8 points)}
+
+Consider a vacuum diode where the cathode and anode are parallel plates of area $S$. The distance between them is $h \ll \sqrt{S}$. The cathode is heated by a straight long wire of radius $r_0$ pressed against it, carrying a current $I$. Let the $x$-axis be parallel to the plates, the $y$-axis perpendicular to them (upward), and the $z$-axis directed towards us. The origin $C$ is above the wire.
+
+\problembox{A1}{Let an electron start with zero initial speed from point $C$. Show that $x(t) = 0$.}{0.30}
+
+\problembox{A2}{Write Newton's second law for the $y$ and $z$ projections and find expressions for $\ddot{y}$ and $\ddot{z}$. These may contain $\dot{y}, \dot{z}, y, z, U, I$ and system geometry.}{0.50}
+
+\problembox{A3}{Obtain a differential equation for $y$ of the form: $\dot{y}^2 = \alpha - \beta \frac{\ln(1+y/r_0)}{1+y/r_0}$. Find the constants $\alpha$ and $\beta$.}{1.00}
+
+\problembox{A4}{Find the maximum heater current $I_{cr}$ at which the electron reaches the anode.}{0.80}
+
+Now consider a cylindrical configuration: the cathode is a wire of radius $r_0$ and length $L$ carrying current $I$; the anode is a coaxial cylinder of radius $R_0$ and length $L$ ($L \gg R_0$). The potential difference is $U = \varphi_A - \varphi_K > 0$.
+
+\problembox{A5}{Find the maximum heater current $I_{cr}$ for which an electron starting from point $C$ with zero speed reaches the anode in this cylindrical configuration.}{1.20}
+
+\section*{Part B. I-V characteristics of a vacuum diode (4.1 points)}
+
+Assume electrons move in a steady state, creating a spatial distribution of charge $\rho$ and potential $\varphi$. We consider only the electric field ($I \ll I_{cr}$) and zero initial electron velocity ($kT \ll eU$). Let $\varphi(0) = 0$ at the cathode ($y=0$).
+
+\problembox{B1}{Derive a differential equation relating $\varphi(y)$ and $\rho(y)$.}{0.30}
+
+\problembox{B2}{For $U > 0$, find the electron speed $v(y)$ at distance $y$ from the cathode. Express it through $\varphi(y)$.}{0.20}
+
+\problembox{B3}{Express the total current $I$ (positive from anode to cathode) through $\rho(y), v(y)$, and system geometry.}{0.30}
+
+Assume the electric field at the cathode is zero ($\varphi'(0) = 0$).
+
+\problembox{B4}{Obtain a differential equation for $\varphi(y)$ containing $I$ and system geometry.}{0.40}
+
+\problembox{B5}{Find the dependence $\varphi(y)$ in terms of $I$ and system geometry.}{0.80}
+
+\problembox{B6}{The I-V characteristic is $I(U) = GU^{\gamma}$. Determine the perveance $G$ and exponent $\gamma$.}{0.80}
+
+\problembox{B7}{Find the charge density distribution $\rho(y)$.}{0.50}
+
+\problembox{B8}{Determine the I-V characteristic $I(U)$ for $U < 0$.}{0.20}
+
+\problembox{B9}{For a cylindrical configuration with radial coordinate $r$, obtain the differential equation for $\varphi(r)$ involving total current $I$ and geometry.}{0.60}
+
+\section*{Part C. Triode and Van der Pol Oscillator (2.1 points)}
+
+A conducting grid with potential $\varphi_C$ is placed between the plates. $U_C = \varphi_C - \varphi_K$ is grid voltage; $U_A = \varphi_A - \varphi_K$ is anode voltage. Assume no current flows to the grid. The anode current $I_A$ depends on $U_C$ and $U_A$. For $U_A = \text{const}$ near $U_C = 0$:
+$$I_A(U_C) \simeq I_0 + \lambda U_C - \mu U_C^3 \quad (1)$$
+where $\lambda, \mu$ are positive constants.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{T6_EN_assets/fig6.jpg}
+    \caption{Van der Pol oscillator circuit.}
+\end{figure}
+
+Assume the EMF induced by coil $L$ in $L_A$ is negligible. The coil $L_A$ induces an EMF in $L$: $\mathcal{E} = M \frac{dI_A}{dt}$, where $M$ is the mutual inductance.
+
+\problembox{C1}{Using Kirchhoff's law for the RLC circuit, derive an equation: $\ddot{U}_C + \zeta(1+\eta U_C^2)\dot{U}_C + \chi U_C = 0$. Express $\zeta, \eta, \chi$ through $R, L, C, M, \lambda, \mu$.}{0.90}
+
+\problembox{C2}{Find the condition on $\zeta, \eta, \chi$ for automatic oscillation buildup from $U_C \approx 0$. Express this condition in terms of $R, L, C, M, \lambda, \mu$.}{1.20}
+
+\vspace{1em}
+\noindent\textit{Source:} https://pho.rs/p/4223
+
+\end{document}

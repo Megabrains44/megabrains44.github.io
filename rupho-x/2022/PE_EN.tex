@@ -1,0 +1,105 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Sun spots}}
+\author{\normalsize X22 (2022) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+The Sun is a massive celestial body composed of plasma. Plasma has high electrical conductivity, so electric currents and, as a result, magnetic fields can arise in it. At the minimum of the solar activity cycle, it has an approximately dipole structure, while the field induction at the solar poles is maximum. Sunspots are observed on the surface of the Sun - dark areas on the Sun, the temperature of which is noticeably lower than the surrounding areas of the Sun's surface. The darkening in the spots is due to the suppression by the magnetic field of convective movements of matter and, as a consequence, a decrease in the flow of thermal energy transfer in these areas.
+
+\section*{Part A. Rotation of the surface of the Sun (2.3 points)}
+
+The sun is not a solid body, it consists of gaseous plasma. Points at different latitudes rotate with different periods, that is, the rotation of the Sun is differential. The rotation speed $\omega$ is greatest at the equator $\varphi=0^\circ$ of the Sun and decreases when moving towards the poles $\varphi=\pm90^\circ$. In a sufficiently wide vicinity of the equator, the formula \\[ \omega(\varphi) = a - b \sin^2\varphi \\] is applicable
+
+\problembox{A1}{You are presented with a table of experimental data $\omega(\varphi)$. The data was obtained based on the Doppler effect, which affects the frequency of electromagnetic radiation from the Sun recorded on Earth. Define parameters $a$ and $b$.}{2.00}
+
+\problembox{A2}{Find the limits of applicability of the formula given above.}{0.30}
+
+\section*{Part B. Initial state (1.6 points)}
+
+At the moment of minimum solar activity, we will consider the magnetic field of the Sun outside its boundaries to be a dipole field with a magnetic moment $\vec{\mathfrak{M}}$. This magnetic moment is directed along the axis of rotation of the Sun. We will call the field components $B_r$ – directed along the radius, $B_\varphi$ – directed along the increase in latitude, $B_\lambda$ – directed along the increase in longitude.
+
+\problembox{B1}{Obtain all components of the magnetic field on the surface of the Sun $B_{0,r}(\phi)$, $B_{0,\phi}(\phi)$, $B_{0,\lambda} (\phi)$. Express your answers using $\varphi$, $\mathfrak{M}$, $R_0$ and $\mu_0$.}{0.30}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+Magnetic lines inside the Sun run perpendicular to the radius vector in a layer of thickness $H(\varphi) = H_0 \cos^2 \varphi$, where $H_0 = \xi R_0$, $\xi=0.05 \ll 1$ and only at the very exit from the surface they are rounded. Consider that the field $B$ inside the Sun is uniform over this thin layer in which the magnetic lines are localized. The magnitude of the flux $\Phi_0$ of the magnetic field through the northern hemisphere of the Sun is $8.0\cdot10^{13}~\text{Вб}$. The radius of the Sun is $R_0=6.96\cdot 10^8~\text{м}$.
+
+\problembox{B2}{Obtain the magnitude of the magnetic field $B_e$ at the equator inside the Sun near its surface. Express your answer using $\mathfrak{M}$, $\mu_0$, $R_0$, $\xi$.}{0.60}
+
+\problembox{B3}{Find the numerical value of $B_e$.}{0.10}
+
+\problembox{B4}{Obtain the magnitude of the magnetic field $B_\varphi(\varphi)$ inside the Sun at its surface as a function of latitude $\varphi$. Express your answer using $\varphi$, $B_e$.}{0.60}
+
+\section*{Part C. Twisting magnetic lines (3.2 points)}
+
+Small magnetic fields (of the order of $B_e$) can be considered frozen into the plasma in the sense that the magnetic lines are distorted by the relative motion of the plasma. This means that if a magnetic field line passes through points $A$ and $B$ at the initial moment of time $t=0$, then at any other moment of time it will pass through them. Due to the fact that different points on the surface of the Sun have different angular speeds, the magnetic lines inside the surface of the Sun will be distorted. In this case, the external field will remain the same. We denote the moment of time described in part A as $t=0$.
+
+\problembox{C1}{Precisely calculate 30 pairs of points $(\varphi, \lambda)$ through which the magnetic line piercing points $\varphi=\pm 50^\circ$, $\lambda=0$ will pass at time $t=150~\text{дней}$.}{1.70}
+
+\problembox{C2}{Using this data, plot on your answer sheet what this line will look like for an earthly observer.}{1.00}
+
+A meridian is a line for which $\lambda=\text{const}$. This line is also obtained at the intersection of a sphere and a plane passing through the axis of rotation of the sphere.
+
+\problembox{C3}{Find the angle $\psi (\varphi,t)$ that the magnetic lines make with the meridian. Express your answer using $\varphi$, $t$, $a$, $b$.}{0.30}
+
+\problembox{C4}{Let the magnetic lines inside the Sun near its surface make an angle $\psi$ with the meridian. Find the magnitude of the magnetic field $B$ at this point. Express your answer using $\psi$, $\varphi$, $B_e$.}{0.20}
+
+\section*{Part D. Formation of sunspots (2.9 points)}
+
+Sunspots on the surface of the Sun form when the magnetic field inside the Sun exceeds $B_\text{крит}$. At each subsequent point, you can use a Maunder diagram, on which the proportion of the Sun's surface (the darker, the larger the proportion) covered by sunspots is indicated in color, and the axes are $t$ and $\sin \varphi$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{PE_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{D1}{Using the $\sin \psi \approx 1 $ approximation, find $B_\text{крит}$.}{2.70}
+
+With a strong increase in the field $B$ inside the Sun, the model described earlier in part C stops working. The magnetic lines begin to twist around themselves and the dipole magnetic field is suppressed. Because of this, sunspots begin to disappear, because... the field strength decreases. As a result, the system returns to the initial state to the extent that the direction of the vector $\mathfrak{M}$ changes to the opposite. Thus our system is periodic.
+
+\problembox{D2}{Determine the period of solar activity $T_0$, i.e. the time after which the Sun's magnetic field returns to its original state.}{0.20}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/506}
+
+\end{document}

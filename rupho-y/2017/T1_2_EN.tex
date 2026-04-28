@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Steam in a test tube}}
+\author{\normalsize Y17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A thin test tube is partially filled with water and placed vertically in a large volume chamber in which the air is maintained at zero relative humidity and a constant pressure equal to external atmospheric pressure. Due to diffusion in the test tube, a linear change in the vapor concentration with height is established: near the surface of the water, the vapor turns out to be saturated, and at the upper open end of the test tube its concentration is $2$ times less. The top of the test tube is closed with a lid. After equilibrium was established, it turned out that the density of moist air inside the test tube differs from the density of dry air away from the test tube by $\Delta{\rho}=5.4~\text{г}/\text{м}^3$. Molar mass of dry air $\mu_\text{в}=29~\text{г}/\text{mol}$, vapor $\mu_\text{п}=18~\text{г}/\text{mol}$. Neglect the change in the liquid level in the test tube during the experiment.
+
+\problembox{A1}{Find the saturated vapor pressure at the experimental temperature equal to $T=27^{\circ}\text{C}$.}{3.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3036}
+
+\end{document}

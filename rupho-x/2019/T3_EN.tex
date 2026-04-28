@@ -1,0 +1,107 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Electric arc}}
+\author{\normalsize X19 (2019) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+Electrical discharge has captured the imagination of mankind since ancient times, the most impressive being lightning. Many types of electrical discharges are studied at the micro or macro level. In this problem we will consider an electrical arc discharge. An electric arc is an autonomous (self-sustaining) discharge in a gas, characterized by: a very high current density; low voltage drop across the arc; dependence of the arc cross-sectional area on current; nonlinearity of the current-voltage characteristic of the arc The discharge is a quasi-neutral plasma “cord” of radius $R$, in which charged particles produced by gas ionization (mainly electrons) move. Large pressures associated with the magnetic field created by currents in the cord limit its radius. Also, high temperatures of the order of $10000~\text{К}$ are reached in the cord. The graph shows the approximate dependence of the potential on the coordinate along the cord. Complex edge effects lead to near-electrode voltage drops that accumulate over very short distances
+
+The discharge is a quasi-neutral plasma “cord” of radius $R$, in which charged particles produced by gas ionization (mainly electrons) move. Large pressures associated with the magnetic field created by currents in the cord limit its radius. Also, high temperatures of the order of $10000~\text{К}$ are reached in the cord. The graph shows the approximate dependence of the potential on the coordinate along the cord. Complex edge effects lead to near-electrode voltage drops that accumulate over very short distances
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig1.jpg}
+    \caption{Figure 1.}
+\end{figure}
+
+\section*{Part A}
+
+First, we will consider the simplest model that allows us to explain the nonlinearity of the arc current-voltage characteristic. Let the current density $j$ be constant over the cross section of the cord; the temperature $T$ and the concentration $n$ of electrons on the axis of the string do not depend on the applied voltage. We take edge effects into account by subtracting a certain constant value $U_0$ from the total applied voltage. Cord length $d$.
+
+\problembox{A1}{Write down the conditions of mechanical equilibrium for the plasma column and find the dependence of pressure on the radial coordinate $p(r)$.}{1.00}
+
+\problembox{A2}{Assuming that the pressure at the boundary of the cord is negligible, obtain the dependence of the cord radius on the voltage using the relation $j=\lambda E$, where $E$ is the field strength, $\lambda$ is the conductivity of the medium (consider it constant). The relationship above is Ohm's law written in differential form}{0.50}
+
+In 1902, Hertha Ayrton proposed the following equation for the current-voltage characteristic of an arc: $U=a+b/I$, where $U$ is the potential difference between the electrodes, $I$ is the current strength, $a$ and $b$ are positive coefficients that are functions of the arc length.
+
+\problembox{A3}{Show that the results of points A1 and A2 imply a similar type of relationship. Find the values of $a$ and $b$ through the given arc parameters and physical constants.}{0.50}
+
+\section*{Part B}
+
+Now let's consider the behavior of an arc discharge as an element of an electrical circuit. An arc occurs between two electrodes when they come together and the gas in the space between them becomes ionized. If the electrodes are connected, the arc will disappear. If the electrodes are moved apart again, the arc will appear again. The arc will disappear when the distance between the electrodes exceeds a certain critical value. However, it should be noted that if you simply continuously increase the voltage between the contacts (between which the distance is less than critical), then an arc discharge may occur, but, generally speaking, it may be unstable and disappear with small fluctuations of the current in the circuit. In this part of the problem, the length of the arc gap is kept constant. Next, consider that the arc gap is connected to a generator with emf $\mathcal{E}$ and internal resistance $r$. Stabilization of the discharge mode can be performed using a resistor with resistance $R$. It can be connected either in series or in parallel with the arc gap.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig2.jpg}
+    \caption{Figure 2.}
+\end{figure}
+
+\problembox{B1}{Plot current-voltage characteristics for the entire circuit (except for the source) for each case. Indicate on the graph the points at which a discharge may occur.}{1.00}
+
+In the case of parallel connection, due to the ambiguity of the current-voltage characteristics, it is difficult to analyze the stability of the discharge. Therefore, further we will consider a serial connection.
+
+\problembox{B2}{Using diagrams, graphs, and formulas, analyze the possibilities of obtaining a stable discharge. Indicate all the points where a stable and unstable discharge occurs.}{2.00}
+
+\problembox{B3}{Find the current values in the discharge (the so-called operating points) through $\mathcal{E}$, $R$, $r$, $a$, $b$.}{0.50}
+
+\problembox{B4}{Find the condition for the stability of the discharge current. Express your answer in terms of $R$, $r$ and $b$.}{1.50}
+
+\problembox{B5}{Find the maximum value of resistance $R$ for which a stationary discharge can be obtained for a given source $\left(\mathcal{E}{,}r\right)$.}{0.50}
+
+\problembox{B6}{Draw on one graph the dependence of the released power on the current strength $P=f(I)$ for each element of the circuit and for the entire circuit as a whole. Mark on the graph the points at which arcing is possible.}{1.00}
+
+\section*{Part C}
+
+Now let's study the dependence of the current-voltage characteristic on the length of the arc gap. It should be noted that the model used in part A does not take into account many factors and in the experiment we may have deviations from the predicted dependencies; Therefore, let us turn to experimental data. The graphs show the dependence of the voltage $U$ on the arc on the current $I$ for different values of the arc length $d$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.72\textwidth]{T3_EN_assets/fig3.jpg}
+    \caption{Figure 3.}
+\end{figure}
+
+\problembox{C1}{Determine the type of dependence of the coefficients $a$ and $b$ on the length of the arc and the numerical values of the characteristic parameters.}{1.00}
+
+\problembox{C2}{The following experiment is carried out with the arc studied at point C1. After obtaining a stable discharge, the length of the arc gap begins to increase, while the EMF in the circuit changes so as to maintain the current through the arc constant and equal to $I=5~\text{А}$. The total ohmic resistance of the circuit (without arc) is $R=2~\text{Ohm}$. Determine: at what arc length the discharge will become non-stationary; What will be the emf of the source?}{0.50}
+
+The following experiment is carried out with the arc studied at point C1. After obtaining a stable discharge, the length of the arc gap begins to increase, while the EMF in the circuit changes so as to maintain the current through the arc constant and equal to $I=5~\text{А}$. The total ohmic resistance of the circuit (without arc) is $R=2~\text{Ohm}$. Define:
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/320}
+
+\end{document}

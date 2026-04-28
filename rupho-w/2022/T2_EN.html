@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Transient processes in a complex circuit</title>
+<script>window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']] } };</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body { font-family: "Times New Roman", Times, serif; margin: 0 auto; max-width: 44rem; padding: 0 0 1rem; line-height: 1.38; color: #000; }
+h1 { text-align: center; font-size: 1.45rem; }
+.camp { text-align: center; font-size: 0.95rem; margin-top: -0.5rem; }
+h2.part { font-size: 1.08rem; margin: 1.2rem 0 0.4rem; }
+p { margin: 0.45rem 0; text-align: justify; }
+.problem-box { display: flex; flex-direction: row; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid #000; padding: 0.45rem 0.55rem; margin: 0.35rem 0; break-inside: avoid; }
+.pb-id { flex: 0 0 auto; min-width: 2em; font-weight: 700; }
+.pb-text { flex: 1 1 auto; min-width: 0; text-align: justify; }
+.pb-pts { flex: 0 0 auto; font-weight: 700; white-space: nowrap; }
+.figure { text-align: center; margin: 0.85rem 0; }
+.figure img { max-width: 88%; height: auto; }
+.caption { font-size: 0.95rem; font-style: italic; margin-top: 0.35rem; }
+.source { margin-top: 1.2rem; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<h1>Transient processes in a complex circuit</h1>
+<p class="camp">W22 (2022) — English translation</p>
+<p>The electrical circuit shown in the figure consists of three capacitors $C_1=C_2=C_3=C$, two identical resistors $R_1=R_2=R$, a constant voltage source $\mathcal{E}$ with zero internal resistance and a switch $K$. While the key was open, the capacitors were not charged. Let us denote by $t$ the time after closing the key, the charges of the capacitors by $q_1$, $q_2$ and $q_3$ and the current strength in them ($I=dq/dt$) $I_1$, $I_2$ and $I_3$ in accordance with their numbers.</p>
+<div class="figure"><img src="T2_EN_assets/fig1.jpg" alt="" /><div class="caption">Fig. 1.</div></div>
+<div class="problem-box"><span class="pb-id">A1</span><div class="pb-text">Find the charges of capacitors $q_{1_0}$, $q_{2_0}$ and $q_{3_0}$ at $t\rightarrow0$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">A2</span><div class="pb-text">Find the charges of capacitors $q_{1_{\infty}}$, $q_{2_{\infty}}$ and $q_{3_{\infty}}$ at $t\rightarrow\infty$.</div><span class="pb-pts">0.60</span></div>
+<div class="problem-box"><span class="pb-id">A3</span><div class="pb-text">Find the amount of heat $Q_0$ released in the system during time $t\rightarrow0$.</div><span class="pb-pts">0.40</span></div>
+<div class="problem-box"><span class="pb-id">A4</span><div class="pb-text">Find the amount of heat $Q_{\infty}$ released in the system during time $t\rightarrow\infty$.</div><span class="pb-pts">0.40</span></div>
+<p>Let's move on to finding the time dependence of the charge of the first capacitor $q_1(t)$.</p>
+<div class="problem-box"><span class="pb-id">A5</span><div class="pb-text">From Kirchhoff's first law written for node $A$, express $I_2$ in terms of $I_1$, $q_1$, $R$ and $C$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A6</span><div class="pb-text">From Kirchhoff's second law written for contour $ABCD$, express $q_2$ in terms of $I_1$, $q_1$, $R$ and $C$. Also find $I_2$ by differentiating $q_2$ with respect to time. Express your answer using $\cfrac{dI_1}{dt}$, $I_1$, $R$ and $C$.</div><span class="pb-pts">0.50</span></div>
+<div class="problem-box"><span class="pb-id">A7</span><div class="pb-text">Equating the expressions for $I_2$ obtained in paragraphs A5 and A6, show that the differential equation describing the dependence $q_1(t)$ has the following form $$\alpha\frac{d^2q_1}{dt^2}+\beta\frac{dq_1}{dt}+q_1=0. $$ Выразите также $\alpha$ и $\beta$ через $R$ и $C$.</div><span class="pb-pts">0.40</span></div>
+<p>Further, consider it known that the solution to this differential equation must be sought in the form $$q_1(t)=Ae^{\lambda{t}}, $$ где $\lambda$ зависит только от $R$ и $C$, а $A$ – from the initial conditions.</p>
+<div class="problem-box"><span class="pb-id">A8</span><div class="pb-text">Find $\lambda_1$ and $\lambda_2$ that satisfy the equation obtained in A7. Express your answers using $R$ and $C$. For $\lambda_1$, select the higher of the values.</div><span class="pb-pts">0.50</span></div>
+<p>In fact, the dependence $q_1(t)$ is represented as the sum of the found solutions $$q_1(t)=A_1e^{\lambda_1{t}}+A_2e^{\lambda_2{t}} $$</p>
+<div class="problem-box"><span class="pb-id">A9</span><div class="pb-text">From the initial conditions, find $A_1$ and $A_2$. Express your answers using $C$ and $\mathcal{E}$.</div><span class="pb-pts">0.80</span></div>
+<div class="problem-box"><span class="pb-id">A10</span><div class="pb-text">Find the amounts of heat $Q_{R_1}$ and $Q_{R_2}$ released in the resistors during time $t\rightarrow\infty$. Express your answers using $C$ and $\mathcal{E}$.</div><span class="pb-pts">1.30</span></div>
+<p>$\textit{Примечание}$ : $\int e^{ax}dx=\frac{e^{ax}}{a}+C$</p>
+<p class="source"><em>Source:</em> <a href="https://pho.rs/p/274">https://pho.rs/p/274</a></p>
+</body>
+</html>

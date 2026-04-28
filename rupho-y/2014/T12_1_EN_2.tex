@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+\title{\textbf{Heat tag}}
+\author{\normalsize Y14 (2014) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+A thermal tag (false thermal target) is used to counter enemy missiles with thermal homing heads. To create a thermal mark, the radiation of a solid-state laser on a yttrium aluminum garnet crystal (YAG laser) with a radiation wavelength $1.06~\text{um}$ in Q-switching mode is split into two beams of approximately equal intensity. Then the intersection of these rays is created at a certain point at a significant height (we will assume that this point is located directly above the laser installation). The output diameters of the laser beams are about $10~\text{cm}$. The beams are not focused. The laser power ensures that the electric field strength at the interference maxima in the volume of beam intersection is slightly higher than the breakdown strength for air ($30~\text{kV}/\text{cm}$).
+
+\problembox{A1}{Calculate the laser power at the height of the mark position $1~\text{}$.}{1.50}
+
+\problembox{A2}{Estimate the size of the mark.}{1.50}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/3992}
+
+\end{document}

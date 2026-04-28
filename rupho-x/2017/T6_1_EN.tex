@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+% Shared preamble for RuPhO English problem statements (match T1 2026 style).
+% Use: \input{latex/rupho_en_preamble.tex} after \documentclass.
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+
+\setlist[itemize]{leftmargin=1.2cm}
+\setlist[enumerate]{leftmargin=1.2cm}
+
+% One outer box per subproblem: [id | statement | points] (no inner rules)
+\newcommand{\problembox}[3]{%
+  \par\addvspace{0.42em}%
+  \noindent
+  \setlength{\fboxsep}{7.5pt}%
+  \setlength{\fboxrule}{0.95pt}%
+  \fbox{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries}p{2.1em} @{\hspace{0.9em}} >{\raggedright\arraybackslash}X @{\hspace{0.9em}} >{\raggedleft\arraybackslash\bfseries}p{2.4em}@{}}
+    #1 & #2 & #3
+    \end{tabularx}
+    \end{minipage}%
+  }%
+  \par\addvspace{0.32em}%
+}
+
+
+\title{\textbf{Light at the end of the tunnel...}}
+\author{\normalsize X17 (2017) --- English translation}
+\date{}
+\begin{document}
+\maketitle
+
+In an isothermal atmosphere, the air is in equilibrium. Molar mass of air $\mu=29~\text{g}/\text{mol}$, atmospheric temperature $T=300~\text{K}$. Consider the free fall acceleration $g$ known and constant. Also assume that the atmospheric pressure $p_0$ at the Earth's surface is known.
+
+\problembox{A1}{Derive a formula that allows you to determine the air pressure at any height $h$ relative to the level of the Earth's surface. Express your answer in terms of $p_0$, $\mu$, $g$, $R$, $T$ and $h$.}{0.50}
+
+\problembox{A2}{Determine the height $H$ at which the pressure changes $e$ times. Express your answer using $R$, $T$, $\mu$ and $g$.}{0.50}
+
+The density distribution in the earth's crust is such that the acceleration due to gravity $g=9{.}8~\text{m}/\text{s}^2$ is constant. The radius of the Earth is $r_0=6370~\text{km}$. The refractive index of light in air is $n=1+\Delta{n}$, where $\Delta n\ll{1}$. At the surface of the Earth $n_0=1{.}000292$. Over a wide pressure range $\Delta{n}\sim{p}$.
+
+\problembox{A3}{At what depth $h$ should a tunnel be dug along the Earth's surface so that light circulates in it in a closed orbit? Consider that $h\ll{r_0}$. Express your answer in terms of $R$, $T$, $\mu$, $g$, $r_0$ and $n_0$. Calculate the resulting value $h$.}{4.00}
+
+\vspace{1em}
+\noindent\textit{Source:} \url{https://pho.rs/p/308}
+
+\end{document}
