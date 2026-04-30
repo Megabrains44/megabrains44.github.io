@@ -159,7 +159,7 @@ window.ruphoData = {
         "key": "T8_EN_2",
         "label": "T8",
         "problem": "rupho-x/2018/T8_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2018/T8_S_EN.pdf"
       }
     ],
     "2019": [
@@ -241,13 +241,13 @@ window.ruphoData = {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-x/2020/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2020/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-x/2020/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2020/T2_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
@@ -265,7 +265,7 @@ window.ruphoData = {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-x/2020/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2020/T6_S_EN.pdf"
       },
       {
         "key": "T7_EN_2",
@@ -315,13 +315,13 @@ window.ruphoData = {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-x/2021/T4_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2021/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-x/2021/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2021/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
@@ -365,25 +365,31 @@ window.ruphoData = {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-x/2022/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2022/T2_S_EN.pdf"
       },
       {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-x/2022/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2022/T3_S_EN.pdf"
+      },
+      {
+        "key": "T4_EN_2",
+        "label": "T4",
+        "problem": null,
+        "solution": "rupho-x/2022/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-x/2022/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2022/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-x/2022/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2022/T6_S_EN.pdf"
       }
     ],
     "2023": [
@@ -391,7 +397,7 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-x/2023/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
@@ -403,49 +409,49 @@ window.ruphoData = {
         "key": "E3_EN_2",
         "label": "E3",
         "problem": "rupho-x/2023/E3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/E3_S_EN.pdf"
       },
       {
         "key": "PE_EN_2",
         "label": "PE",
         "problem": "rupho-x/2023/PE_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/PE_S_EN.pdf"
       },
       {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-x/2023/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-x/2023/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/T2_S_EN.pdf"
       },
       {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-x/2023/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-x/2023/T4_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-x/2023/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-x/2023/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2023/T6_S_EN.pdf"
       }
     ],
     "2024": [
@@ -453,7 +459,7 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-x/2024/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2024/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
@@ -471,7 +477,7 @@ window.ruphoData = {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-x/2024/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2024/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
@@ -483,25 +489,25 @@ window.ruphoData = {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-x/2024/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2024/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-x/2024/T4_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2024/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-x/2024/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2024/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-x/2024/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2024/T6_S_EN.pdf"
       }
     ],
     "2025": [
@@ -571,37 +577,37 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-x/2026/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
         "label": "E2",
         "problem": "rupho-x/2026/E2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/E2_S_EN.pdf"
       },
       {
         "key": "E3_EN_2",
         "label": "E3",
         "problem": "rupho-x/2026/E3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/E3_S_EN.pdf"
       },
       {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-x/2026/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-x/2026/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/T2_S_EN.pdf"
       },
       {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-x/2026/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
@@ -619,7 +625,7 @@ window.ruphoData = {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-x/2026/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-x/2026/T6_S_EN.pdf"
       }
     ]
   },
@@ -903,7 +909,7 @@ window.ruphoData = {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-y/2018/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2018/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
@@ -964,6 +970,12 @@ window.ruphoData = {
         "solution": null
       },
       {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": null,
+        "solution": "rupho-y/2020/PE_S_EN.pdf"
+      },
+      {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-y/2020/T1_EN_2.pdf",
@@ -979,13 +991,19 @@ window.ruphoData = {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-y/2020/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2020/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-y/2020/T4_EN_2.pdf",
         "solution": null
+      },
+      {
+        "key": "T5_EN_2",
+        "label": "T5",
+        "problem": null,
+        "solution": "rupho-y/2020/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
@@ -1067,7 +1085,7 @@ window.ruphoData = {
         "key": "PE1_EN_2",
         "label": "PE1",
         "problem": "rupho-y/2022/PE1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2022/PE1_S_EN.pdf"
       },
       {
         "key": "PE2_EN_2",
@@ -1085,13 +1103,13 @@ window.ruphoData = {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-y/2022/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2022/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-y/2022/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2022/T2_S_EN.pdf"
       },
       {
         "key": "T3_EN_2",
@@ -1103,13 +1121,13 @@ window.ruphoData = {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-y/2022/T4_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2022/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-y/2022/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2022/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
@@ -1123,7 +1141,7 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-y/2023/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
@@ -1153,37 +1171,37 @@ window.ruphoData = {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-y/2023/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-y/2023/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/T2_S_EN.pdf"
       },
       {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-y/2023/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-y/2023/T4_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-y/2023/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-y/2023/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2023/T6_S_EN.pdf"
       }
     ],
     "2024": [
@@ -1239,7 +1257,7 @@ window.ruphoData = {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-y/2024/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2024/T6_S_EN.pdf"
       }
     ],
     "2025": [
@@ -1247,13 +1265,13 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-y/2025/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2025/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
         "label": "E2",
         "problem": "rupho-y/2025/E2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2025/E2_S_EN.pdf"
       },
       {
         "key": "E3_EN_2",
@@ -1277,7 +1295,7 @@ window.ruphoData = {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-y/2025/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2025/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
@@ -1295,7 +1313,7 @@ window.ruphoData = {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-y/2025/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2025/T6_S_EN.pdf"
       }
     ],
     "2026": [
@@ -1303,55 +1321,55 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-y/2026/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
         "label": "E2",
         "problem": "rupho-y/2026/E2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/E2_S_EN.pdf"
       },
       {
         "key": "E3_EN_2",
         "label": "E3",
         "problem": "rupho-y/2026/E3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/E3_S_EN.pdf"
       },
       {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-y/2026/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-y/2026/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/T2_S_EN.pdf"
       },
       {
         "key": "T3_EN_2",
         "label": "T3",
         "problem": "rupho-y/2026/T3_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/T3_S_EN.pdf"
       },
       {
         "key": "T4_EN_2",
         "label": "T4",
         "problem": "rupho-y/2026/T4_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/T4_S_EN.pdf"
       },
       {
         "key": "T5_EN_2",
         "label": "T5",
         "problem": "rupho-y/2026/T5_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/T5_S_EN.pdf"
       },
       {
         "key": "T6_EN_2",
         "label": "T6",
         "problem": "rupho-y/2026/T6_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-y/2026/T6_S_EN.pdf"
       }
     ]
   },
@@ -1361,13 +1379,13 @@ window.ruphoData = {
         "key": "E1_EN_2",
         "label": "E1",
         "problem": "rupho-w/2021/E1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2021/E1_S_EN.pdf"
       },
       {
         "key": "E2_EN_2",
         "label": "E2",
         "problem": "rupho-w/2021/E2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2021/E2_S_EN.pdf"
       },
       {
         "key": "PE_EN_2",
@@ -1420,6 +1438,12 @@ window.ruphoData = {
     ],
     "2022": [
       {
+        "key": "PE_EN_2",
+        "label": "PE",
+        "problem": "rupho-w/2022/PE_EN_2.pdf",
+        "solution": "rupho-w/2022/PE_S_EN.pdf"
+      },
+      {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-w/2022/T1_EN_2.pdf",
@@ -1437,13 +1461,13 @@ window.ruphoData = {
         "key": "PE_EN_2",
         "label": "PE",
         "problem": "rupho-w/2023/PE_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2023/PE_S_EN.pdf"
       },
       {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-w/2023/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2023/T1_S_EN.pdf"
       }
     ],
     "2024": [
@@ -1451,19 +1475,19 @@ window.ruphoData = {
         "key": "PE_EN_2",
         "label": "PE",
         "problem": "rupho-w/2024/PE_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2024/PE_S_EN.pdf"
       },
       {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-w/2024/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2024/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-w/2024/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2024/T2_S_EN.pdf"
       }
     ],
     "2025": [
@@ -1478,26 +1502,38 @@ window.ruphoData = {
         "label": "T1",
         "problem": "rupho-w/2025/T1_EN_2.pdf",
         "solution": null
+      },
+      {
+        "key": "T2_EN_2",
+        "label": "T2",
+        "problem": "rupho-w/2025/T2_EN_2.pdf",
+        "solution": null
       }
     ],
     "2026": [
       {
+        "key": "PE+_EN_2",
+        "label": "PE+",
+        "problem": "rupho-w/2026/PE+_EN_2.pdf",
+        "solution": "rupho-w/2026/PE+_S_EN.pdf"
+      },
+      {
         "key": "PE_EN_2",
         "label": "PE",
         "problem": "rupho-w/2026/PE_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2026/PE_S_EN.pdf"
       },
       {
         "key": "T1_EN_2",
         "label": "T1",
         "problem": "rupho-w/2026/T1_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2026/T1_S_EN.pdf"
       },
       {
         "key": "T2_EN_2",
         "label": "T2",
         "problem": "rupho-w/2026/T2_EN_2.pdf",
-        "solution": null
+        "solution": "rupho-w/2026/T2_S_EN.pdf"
       }
     ]
   }

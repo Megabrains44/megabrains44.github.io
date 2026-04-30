@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 01:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1075,35 +1075,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ] [2] [3]
 [4]
-Overfull \hbox (7.86967pt too wide) in paragraph at lines 105--106
-\TU/DejaVuSerif(0)/m/n/10 For/At пренебрежении затухающей экспонентой поrayаетс
-я логарифмическая спираль.
- []
-
 File: T2_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <T2_S_EN_assets/fig1.jpg>
 File: T2_S_EN_assets/fig2.jpg Graphic file (type bmp)
 <T2_S_EN_assets/fig2.jpg>
-[5]
-Overfull \hbox (19.78424pt too wide) in paragraph at lines 122--122
-\TU/DejaVuSerif(0)/m/n/10 вращалась в постоянной угловой velocityю, на каждый е
-ё учасcurrent должна действовать
- []
-
-[6] [7]
+ [5] [6] [7]
 (/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-w/2026/T2_S_EN
 .aux)
 Package rerunfilecheck Info: File `T2_S_EN.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32096 strings out of 478190
- 686324 string characters out of 5854827
- 1084674 words of memory out of 5000000
- 52157 multiletter control sequences out of 15000+600000
+ 32095 strings out of 478190
+ 686305 string characters out of 5854827
+ 1085673 words of memory out of 5000000
+ 52156 multiletter control sequences out of 15000+600000
  477300 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,10n,99p,1868b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,10n,99p,1848b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
 ho-w/2026/T2_S_EN.pdf (7 pages).

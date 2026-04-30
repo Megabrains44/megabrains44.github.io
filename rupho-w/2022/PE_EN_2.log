@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  30 APR 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,25 +509,39 @@ Package pdftex.def Info: PE_EN_assets/fig1.jpg  used on input line 50.
 
 [1
 
-{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-! Misplaced \crcr.
-\tbl_crcr:n ...l_count_missing_cells:n {#1}}\crcr 
-                                                  
-l.54 ...en above, we obtain the system \end{cases}
-                                                   \end{equation}
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
- 
+{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2 <./PE_EN_
+assets/fig1.jpg (PNG copy)>] [3] [4] [5] (PE_EN_2.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+Package rerunfilecheck Info: File `PE_EN_2.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 13931 strings out of 467871
- 222938 string characters out of 5418376
- 682430 words of memory out of 5000000
- 42619 multiletter control sequences out of 15000+600000
- 636648 words of font info for 92 fonts, out of 8000000 for 9000
+ 14000 strings out of 467871
+ 223977 string characters out of 5418376
+ 687430 words of memory out of 5000000
+ 42640 multiletter control sequences out of 15000+600000
+ 638367 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1040b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 75i,12n,79p,2015b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aadib/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/aadib/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/a
+adib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti
+10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmtt10.pfb>
+Output written on PE_EN_2.pdf (5 pages, 158320 bytes).
+PDF statistics:
+ 99 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 25094 words of extra memory for PDF output out of 29859 (max. 10000000)
+

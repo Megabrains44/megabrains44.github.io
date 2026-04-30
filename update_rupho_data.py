@@ -4,7 +4,7 @@ import os
 import re
 from pathlib import Path
 
-PDF_PATTERN = re.compile(r'^(?P<base>.+?)(?:_S)?_EN_2\.pdf$', flags=re.IGNORECASE)
+PDF_PATTERN = re.compile(r'^(?P<base>.+?)(?P<sol>_S)?_EN(?:_2)?\.pdf$', flags=re.IGNORECASE)
 
 
 def natural_sort_key(value: str):
@@ -18,8 +18,14 @@ def parse_pdf_filename(filename: str):
     if not match:
         return None
     base = match.group('base')
-    is_solution = normalized.lower().endswith('_s_en_2.pdf')
-    key = f'{base}_EN_2'
+    lower = normalized.lower()
+    is_solution = lower.endswith('_s_en.pdf') or lower.endswith('_s_en_2.pdf')
+    if is_solution:
+        key = f'{base}_EN_2'
+    elif lower.endswith('_en_2.pdf'):
+        key = f'{base}_EN_2'
+    else:
+        return None
     label = base
     return key, label, is_solution
 

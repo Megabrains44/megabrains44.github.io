@@ -54,14 +54,22 @@ The temperature at which a substance that does not crystallize or does not have 
 \[T_g(K)=140.3+35.272w_g-3.879w_g^2+ 23.467w_g^3.\tag{2}\]
 Using this expression and knowing the glass transition temperature, the value of the glycerol concentration can be determined.
 
-Consider the following numerical data known: Density of glycerol $\rho_g=1260~\mathrm{kg/m^3}$; Density of water $\rho_w=1000~\mathrm{kg/m^3}$; Molar mass of glycerol $\mu_g=92~\mathrm{g/mol}$; The molar mass of water is $\mu_w=18~\mathrm{g/mol}$. In all parts of the problem, you can consider the volume of the mixture to be equal to the sum of the volumes of the components that make up this mixture.
+Consider the following numerical data to be known:
+\begin{itemize}
+    \item Density of glycerol $\rho_g = 1260~\mathrm{kg/m^3}$;
+    \item Density of water $\rho_w = 1000~\mathrm{kg/m^3}$;
+    \item Molar mass of glycerol $\mu_g = 92~\mathrm{g/mol}$;
+    \item Molar mass of water $\mu_w = 18~\mathrm{g/mol}$.
+\end{itemize}
+In all parts of the problem you may take the volume of the mixture to be equal to the sum of the volumes of the components that make up the mixture.
 
 \section*{Part A. Dependence of viscosity on concentration (6.5 points)}
 
-In the general case, it is not possible to solve the problem of the viscosity of a mixture of substances, however, for a mixture of water and glycerin, you can use the empirical formula:
-\[ \text{[Empirical formula missing in original source]} \]
-
-The table in the answer sheets shows the experimental dependence of viscosity on the glass transition temperature of a mixture of glycerol and water. The measurements were carried out at a temperature of $T=25~^\circ \mathrm C$.
+In the general case, it is not possible to solve the problem of the viscosity of a mixture of substances; however, for a mixture of water and glycerol one can use the empirical formula
+\[\eta = \xi\cdot\frac{\exp(-k n_w)}{1 + a\cdot\exp(b n_w)}.\]
+If the molar concentration of water in the mixture is sufficiently small, we may assume that $a\cdot\exp(b n_w) \ll 1$. Therefore, to simplify the analysis of the above dependence, we propose to use the approximation valid only for small molar concentrations of water:
+\[\eta = \xi\cdot\exp(-k n_w).\]
+The table in the answer sheets shows the experimental dependence of the viscosity of a mixture of glycerol and water on the glass transition temperature. The measurements were carried out at a temperature of $T = 25~^\circ\mathrm{C}$.
 
 \problembox{A1}{Express the molar concentration of water $n_w$ in solution in terms of the mass concentration of glycerol $w_g$, $\mu_w$ and $\mu_g$.}{0.50}
 

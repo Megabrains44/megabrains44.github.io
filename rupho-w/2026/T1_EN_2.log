@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  30 APR 2026 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,15 +503,8 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 [1
 
-{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd)
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 59.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 59.
-
-[2] (T1_EN_2.aux)
+{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+(T1_EN_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -520,10 +513,10 @@ Package rerunfilecheck Info: File `T1_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13975 strings out of 467871
- 223628 string characters out of 5418376
+ 13954 strings out of 467871
+ 223222 string characters out of 5418376
  688419 words of memory out of 5000000
- 42635 multiletter control sequences out of 15000+600000
+ 42617 multiletter control sequences out of 15000+600000
  637786 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,1006b,457s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -539,7 +532,7 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
 aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb>
-Output written on T1_EN_2.pdf (2 pages, 126988 bytes).
+Output written on T1_EN_2.pdf (2 pages, 125569 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)

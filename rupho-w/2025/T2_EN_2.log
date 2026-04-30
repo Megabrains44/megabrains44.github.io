@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  30 APR 2026 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -501,23 +501,46 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-! Missing { inserted.
-<to be read again> 
-                   $
-l.41 ...ween the gas and the environment. Let $A_$
-                                                   be the work done by the g...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+<T2_EN_assets/fig1.jpg, id=3, 404.51125pt x 400.49625pt>
+File: T2_EN_assets/fig1.jpg Graphic file (type jpg)
+<use T2_EN_assets/fig1.jpg>
+Package pdftex.def Info: T2_EN_assets/fig1.jpg  used on input line 45.
+(pdftex.def)             Requested size: 326.13744pt x 322.90297pt.
 
- 
+[1
+
+{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./T2_EN_asse
+ts/fig1.jpg>] [2] (T2_EN_2.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+Package rerunfilecheck Info: File `T2_EN_2.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 13875 strings out of 467871
- 222049 string characters out of 5418376
- 670402 words of memory out of 5000000
- 42591 multiletter control sequences out of 15000+600000
- 635144 words of font info for 78 fonts, out of 8000000 for 9000
+ 13958 strings out of 467871
+ 223491 string characters out of 5418376
+ 685411 words of memory out of 5000000
+ 42632 multiletter control sequences out of 15000+600000
+ 637240 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,1190b,274s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 75i,15n,79p,1190b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aadib/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
+aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
+t10.pfb>
+Output written on T2_EN_2.pdf (2 pages, 141757 bytes).
+PDF statistics:
+ 70 PDF objects out of 1000 (max. 8388607)
+ 4 named destinations out of 1000 (max. 500000)
+ 20998 words of extra memory for PDF output out of 24883 (max. 10000000)
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  30 APR 2026 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,21 +516,13 @@ Package pdftex.def Info: PE_EN_assets/fig2.jpg  used on input line 55.
 
 {C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./PE_EN_asse
 ts/fig1.jpg>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-7.
-
-(C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
 <PE_EN_assets/fig3.jpg, id=19, 639.89063pt x 256.45813pt>
 File: PE_EN_assets/fig3.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig3.jpg>
 Package pdftex.def Info: PE_EN_assets/fig3.jpg  used on input line 71.
 (pdftex.def)             Requested size: 326.13744pt x 130.70973pt.
-
-[2 <./PE_EN_assets/fig2.jpg> <./PE_EN_assets/fig3.jpg>] [3] (PE_EN_2.aux)
+ [2 <./PE_EN_assets/fig2.jpg>] [3 <./PE_EN_assets/fig3.jpg>]
+(PE_EN_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -539,13 +531,13 @@ Package rerunfilecheck Info: File `PE_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14014 strings out of 467871
- 224525 string characters out of 5418376
- 679403 words of memory out of 5000000
- 42668 multiletter control sequences out of 15000+600000
- 638163 words of font info for 106 fonts, out of 8000000 for 9000
+ 14001 strings out of 467871
+ 224227 string characters out of 5418376
+ 680403 words of memory out of 5000000
+ 42652 multiletter control sequences out of 15000+600000
+ 638316 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,1030b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,15n,79p,1006b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -555,7 +547,7 @@ TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aadib/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/aadib/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on PE_EN_2.pdf (3 pages, 196841 bytes).
+Output written on PE_EN_2.pdf (3 pages, 195784 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)

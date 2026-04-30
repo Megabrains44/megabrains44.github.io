@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  30 APR 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,64 +522,7 @@ File: T1_EN_assets/fig3.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig3.jpg>
 Package pdftex.def Info: T1_EN_assets/fig3.jpg  used on input line 95.
 (pdftex.def)             Requested size: 326.13744pt x 299.62373pt.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-05.
-(C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-[3 <./T1_EN_assets/fig3.jpg>]
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 105.
-
+ [3 <./T1_EN_assets/fig3.jpg>]
 [4] (T1_EN_2.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -589,29 +532,30 @@ Package rerunfilecheck Info: File `T1_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14036 strings out of 467871
- 224741 string characters out of 5418376
- 682415 words of memory out of 5000000
- 42672 multiletter control sequences out of 15000+600000
- 639469 words of font info for 115 fonts, out of 8000000 for 9000
+ 14001 strings out of 467871
+ 224187 string characters out of 5418376
+ 681415 words of memory out of 5000000
+ 42650 multiletter control sequences out of 15000+600000
+ 638316 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,1006b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aadib/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/aadib/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/a
-adib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
-/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmtt10.pfb>
-Output written on T1_EN_2.pdf (4 pages, 346164 bytes).
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aadib/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/aadib/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/a
+adib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmtt10.pfb>
+Output written on T1_EN_2.pdf (4 pages, 355411 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)
- 29200 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 25104 words of extra memory for PDF output out of 29859 (max. 10000000)
 
