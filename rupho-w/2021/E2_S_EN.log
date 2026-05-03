@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **E2_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-w/2021/E2_S_EN
-.tex
+(./E2_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-w/2021/E2_S_EN
-.aux)
+(./E2_S_EN.aux)
 \openout1 = `E2_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,16 +968,9 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-w/2021/E2_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-w/2021/E2_S_EN
-.out)
+(./E2_S_EN.out) (./E2_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `E2_S_EN.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \c@lstlisting=\count348
 
@@ -1052,6 +1042,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1080,19 +1071,78 @@ Missing character: There is no
  (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
 Missing character: There is no к ("43A) in font cmmi7!
 Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi10!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.48 ...has the form \textbackslash{}rho $  и  $r_
-                                                  k$ . 
-Here is how much of TeX's memory you used:
- 32035 strings out of 478190
- 684735 string characters out of 5854827
- 1060690 words of memory out of 5000000
- 52106 multiletter control sequences out of 15000+600000
- 477292 words of font info for 100 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 91i,7n,99p,1029b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
+File: E2_S_EN_assets/fig1.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig1.jpg>
+File: E2_S_EN_assets/fig2.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig2.jpg>
+[1
 
-No pages of output.
+]
+Missing character: There is no к ("43A) in font cmmi7!
+Missing character: There is no к ("43A) in font cmmi7!
+Missing character: There is no 
+ (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
+File: E2_S_EN_assets/fig3.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig3.jpg>
+[2]
+Missing character: There is no Δ ("394) in font cmmi10!
+Missing character: There is no Δ ("394) in font cmmi10!
+Missing character: There is no ρ ("3C1) in font cmmi10!
+Missing character: There is no ρ ("3C1) in font cmmi10!
+Missing character: There is no 
+ (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no σ ("3C3) in font cmmi10!
+Missing character: There is no ρ ("3C1) in font cmmi10!
+Missing character: There is no О ("41E) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no σ ("3C3) in font cmmi10!
+Missing character: There is no ρ ("3C1) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no σ ("3C3) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no в ("432) in font cmmi7!
+Missing character: There is no р ("440) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no в ("432) in font cmmi7!
+Missing character: There is no р ("440) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no в ("432) in font cmmi7!
+Missing character: There is no µ ("B5) in font cmmi10!
+Missing character: There is no σ ("3C3) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no В ("412) in font cmmi10!
+Missing character: There is no с ("441) in font cmmi10!
+[3] (./E2_S_EN.aux)
+Package rerunfilecheck Info: File `E2_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 32093 strings out of 478190
+ 685454 string characters out of 5854827
+ 1081692 words of memory out of 5000000
+ 52154 multiletter control sequences out of 15000+600000
+ 477308 words of font info for 102 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 91i,7n,99p,1029b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on E2_S_EN.pdf (3 pages).
