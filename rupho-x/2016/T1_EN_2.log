@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  5 MAY 2026 21:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -505,72 +505,72 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 File: T1_EN_assets/fig1.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig1.jpg>
 Package pdftex.def Info: T1_EN_assets/fig1.jpg  used on input line 47.
-(pdftex.def)             Requested size: 326.13744pt x 600.0843pt.
-
-[1
-
-{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<T1_EN_assets/fig2.jpg, id=11, 163.9215pt x 71.9415pt>
+(pdftex.def)             Requested size: 190.24568pt x 350.02905pt.
+<T1_EN_assets/fig2.jpg, id=4, 163.9215pt x 71.9415pt>
 File: T1_EN_assets/fig2.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig2.jpg>
 Package pdftex.def Info: T1_EN_assets/fig2.jpg  used on input line 57.
 (pdftex.def)             Requested size: 326.13744pt x 143.14714pt.
- [2 <./T1_EN_assets/fig1.jpg>]
-<T1_EN_assets/fig3.jpg, id=18, 1001.7425pt x 501.875pt>
+
+[1
+
+{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./T1_EN_asse
+ts/fig1.jpg>]
+<T1_EN_assets/fig3.jpg, id=14, 1001.7425pt x 501.875pt>
 File: T1_EN_assets/fig3.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig3.jpg>
 Package pdftex.def Info: T1_EN_assets/fig3.jpg  used on input line 67.
 (pdftex.def)             Requested size: 326.13744pt x 163.39844pt.
-<T1_EN_assets/fig4.jpg, id=19, 250.6455pt x 208.269pt>
+<T1_EN_assets/fig4.jpg, id=15, 250.6455pt x 208.269pt>
 File: T1_EN_assets/fig4.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig4.jpg>
 Package pdftex.def Info: T1_EN_assets/fig4.jpg  used on input line 77.
 (pdftex.def)             Requested size: 326.13744pt x 271.0166pt.
- [3 <./T1_EN_assets/fig2.jpg> <./T1_EN_assets/fig3.jpg>]
-<T1_EN_assets/fig5.jpg, id=28, 451.6875pt x 564.60938pt>
+ [2 <./T1_EN_assets/fig2.jpg> <./T1_EN_assets/fig3.jpg>]
+<T1_EN_assets/fig5.jpg, id=24, 451.6875pt x 564.60938pt>
 File: T1_EN_assets/fig5.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig5.jpg>
 Package pdftex.def Info: T1_EN_assets/fig5.jpg  used on input line 89.
 (pdftex.def)             Requested size: 326.13744pt x 407.69872pt.
 
-[4 <./T1_EN_assets/fig4.jpg>]
-<T1_EN_assets/fig6.jpg, id=39, 451.6875pt x 564.60938pt>
+[3 <./T1_EN_assets/fig4.jpg>]
+<T1_EN_assets/fig6.jpg, id=35, 451.6875pt x 564.60938pt>
 File: T1_EN_assets/fig6.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig6.jpg>
 Package pdftex.def Info: T1_EN_assets/fig6.jpg  used on input line 97.
 (pdftex.def)             Requested size: 326.13744pt x 407.69872pt.
- [5 <./T1_EN_assets/fig5.jpg>]
-<T1_EN_assets/fig7.jpg, id=46, 287.57437pt x 292.84406pt>
+ [4 <./T1_EN_assets/fig5.jpg>]
+<T1_EN_assets/fig7.jpg, id=42, 287.57437pt x 292.84406pt>
 File: T1_EN_assets/fig7.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig7.jpg>
 Package pdftex.def Info: T1_EN_assets/fig7.jpg  used on input line 105.
 (pdftex.def)             Requested size: 326.13744pt x 332.12534pt.
- [6 <./T1_EN_assets/fig6.jpg>]
-<T1_EN_assets/fig8.jpg, id=53, 451.6875pt x 281.55188pt>
+ [5 <./T1_EN_assets/fig6.jpg>]
+<T1_EN_assets/fig8.jpg, id=49, 451.6875pt x 281.55188pt>
 File: T1_EN_assets/fig8.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig8.jpg>
 Package pdftex.def Info: T1_EN_assets/fig8.jpg  used on input line 121.
 (pdftex.def)             Requested size: 326.13744pt x 203.30576pt.
- [7 <./T1_EN_assets/fig7.jpg>]
-<T1_EN_assets/fig9.jpg, id=61, 451.6875pt x 277.035pt>
+ [6 <./T1_EN_assets/fig7.jpg>]
+<T1_EN_assets/fig9.jpg, id=56, 451.6875pt x 277.035pt>
 File: T1_EN_assets/fig9.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig9.jpg>
 Package pdftex.def Info: T1_EN_assets/fig9.jpg  used on input line 133.
 (pdftex.def)             Requested size: 326.13744pt x 200.04416pt.
- [8 <./T1_EN_assets/fig8.jpg>]
-<T1_EN_assets/fig10_partd.png, id=68, 441.65pt x 347.2975pt>
+ [7 <./T1_EN_assets/fig8.jpg>]
+<T1_EN_assets/fig10_partd.png, id=64, 441.65pt x 347.2975pt>
 File: T1_EN_assets/fig10_partd.png Graphic file (type png)
 <use T1_EN_assets/fig10_partd.png>
 Package pdftex.def Info: T1_EN_assets/fig10_partd.png  used on input line 151.
 (pdftex.def)             Requested size: 326.13744pt x 256.47148pt.
- [9 <./T1_EN_assets/fig9.jpg>]
-<T1_EN_assets/fig10.png, id=75, 441.65pt x 347.2975pt>
+ [8 <./T1_EN_assets/fig9.jpg>]
+<T1_EN_assets/fig10.png, id=71, 441.65pt x 347.2975pt>
 File: T1_EN_assets/fig10.png Graphic file (type png)
 <use T1_EN_assets/fig10.png>
 Package pdftex.def Info: T1_EN_assets/fig10.png  used on input line 167.
 (pdftex.def)             Requested size: 326.13744pt x 256.47148pt.
- [10 <./T1_EN_assets/fig10_partd.png>] [11 <./T1_EN_assets/fig10.png>] (T1_EN_2
-.aux)
+ [9 <./T1_EN_assets/fig10_partd.png>] [10 <./T1_EN_assets/fig10.png>] (T1_EN_2.
+aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -579,8 +579,8 @@ Package rerunfilecheck Info: File `T1_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14079 strings out of 467871
- 225955 string characters out of 5418376
+ 14078 strings out of 467871
+ 225948 string characters out of 5418376
  677416 words of memory out of 5000000
  42702 multiletter control sequences out of 15000+600000
  638056 words of font info for 114 fonts, out of 8000000 for 9000
@@ -598,9 +598,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
 aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb>
-Output written on T1_EN_2.pdf (11 pages, 572240 bytes).
+Output written on T1_EN_2.pdf (10 pages, 571646 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
  21048 words of extra memory for PDF output out of 24883 (max. 10000000)
 
