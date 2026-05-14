@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T3_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T3_S_EN
-.tex
+(./T3_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T3_S_EN
-.aux)
+(./T3_S_EN.aux)
 \openout1 = `T3_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T3_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T3_S_EN
-.out)
+(./T3_S_EN.out) (./T3_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T3_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1071,97 +1066,47 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSans' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (0.28813pt too wide) in paragraph at lines 36--37
-\TU/DejaVuSerif(0)/m/n/10 внутри стекла будут собираться на расстоянии $[]\OML/
-cmm/m/it/10 R \OT1/cmr/m/n/10 = 15 []\OML/cmm/m/it/10 cm$ \TU/DejaVuSerif(0)/m/
-n/10 от изогнутой поверхности,
- []
-
 File: T3_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig1.jpg>
 File: T3_S_EN_assets/fig2.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig2.jpg>
 File: T3_S_EN_assets/fig3.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig3.jpg>
-[1
+ [1
 
 ] [2]
-Overfull \hbox (23.69528pt too wide) in paragraph at lines 68--68
-\TU/DejaVuSerif(0)/m/n/10 Distance $\OML/cmm/m/it/10 l$ \TU/DejaVuSerif(0)/m/n/
-10 вдоль оптической оси от точки преломления до точки пересечения с оптической
- []
-
 File: T3_S_EN_assets/fig4.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig4.jpg>
 File: T3_S_EN_assets/fig5.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig5.jpg>
-[3]
-Overfull \hbox (22.39981pt too wide) in paragraph at lines 90--91
-\TU/DejaVuSerif(0)/m/n/10 плоскости, то we get quantity пропорциональную интенс
-ивности. Поrayается качественно
- []
-
+ [3]
 [4] [5]
 Missing character: There is no ⟦ (U+27E6) in font DejaVu Serif/OT:script=latn;l
 anguage=dflt;mapping=tex-text;!
 Missing character: There is no ⟧ (U+27E7) in font DejaVu Serif/OT:script=latn;l
 anguage=dflt;mapping=tex-text;!
-[6]
-Overfull \hbox (0.99518pt too wide) in paragraph at lines 130--130
-\TU/DejaVuSerif(0)/m/it/10 Иными словами, for вычисления суммарной аберрации ну
-жно по всем поверхностям
- []
-
-[7]
+[6] [7]
 File: T3_S_EN_assets/fig6.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig6.jpg>
- [8]
 File: T3_S_EN_assets/fig7.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig7.jpg>
-
-Overfull \hbox (2.3923pt too wide) in paragraph at lines 168--168
-\TU/DejaVuSerif(0)/m/n/10 отчитываются от focusа в сторону линзы. Distance $\OM
-L/cmm/m/it/10 r$ \TU/DejaVuSerif(0)/m/n/10 от оси до точки rayа на расстоянии
- []
-
-
-Overfull \hbox (6.767pt too wide) in paragraph at lines 168--168
-\TU/DejaVuSerif(0)/m/n/10 не пересекают оптическую ось. Чем ближе к focusу, тем
- меньше смер кружка, который
- []
-
+ [8]
 File: T3_S_EN_assets/fig8.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig8.jpg>
-[9]
-Overfull \hbox (5.17351pt too wide) in paragraph at lines 179--180
-\TU/DejaVuSerif(0)/m/n/10 here $\OML/cmm/m/it/10 r$ \TU/DejaVuSerif(0)/m/n/10 –
- отнормировано на maximum radius пятна $[]$ в рассматриваемой плоскости,
- []
-
-
-Overfull \hbox (25.4523pt too wide) in paragraph at lines 179--180
-\OML/cmm/m/it/10 h$ \TU/DejaVuSerif(0)/m/n/10 – на radius пучка $\OML/cmm/m/it/
-10 H$\TU/DejaVuSerif(0)/m/n/10 . В общем сrayае одному radiusу в плоскости набл
-юдения соответсвует
- []
-
+ [9]
 File: T3_S_EN_assets/fig9.jpg Graphic file (type bmp)
 <T3_S_EN_assets/fig9.jpg>
-[10] [11]
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T3_S_EN
-.aux)
+ [10] (./T3_S_EN.aux)
 Package rerunfilecheck Info: File `T3_S_EN.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32162 strings out of 478190
- 687912 string characters out of 5854827
- 1075682 words of memory out of 5000000
- 52216 multiletter control sequences out of 15000+600000
+ 32157 strings out of 478190
+ 686862 string characters out of 5854827
+ 1077689 words of memory out of 5000000
+ 52213 multiletter control sequences out of 15000+600000
  477300 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1928b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,7n,99p,1835b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2022/T3_S_EN.pdf (11 pages).
+Output written on T3_S_EN.pdf (10 pages).

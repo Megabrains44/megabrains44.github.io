@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -91,7 +90,7 @@ Linearization: \[ (aH-a^2) = \pm \frac{F}{D} \left( wa - W_A (H-a) \right) + FH 
 
 Coordinates $X_1=wa-W_A(H-a)$, $Y_1=aH - a^2$,
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $F$ can be obtained from the graph in four ways. For the red line, from the free term equal to $FH$ it follows that $F=17.0~\text{cm}$, from the slope coefficient equal to $F/D$ it follows that $F=15.7~\text{cm}$. For the blue line, the free term equal to $FH$ implies that $F=17.3~\text{cm}$, and the slope coefficient equal to $-F/D$ implies that $F=17.2~\text{cm}$.
+\par\smallskip\noindent\textbf{Answer:} $F$ can be obtained from the graph in four ways. For the red line, from the free term equal to $FH$ it follows that $F=17.0~\text{cm}$, from the slope coefficient equal to $F/D$ it follows that $F=15.7~\text{cm}$. For the blue line, the free term equal to $FH$ implies that $F=17.3~\text{cm}$, and the slope coefficient equal to $-F/D$ implies that $F=17.2~\text{cm}$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig3.jpg}
@@ -128,14 +127,14 @@ The points lying in the middle between these curves are indicated in red - these
 \end{solcard}
 
 \begin{solcard}{C1}{On your answer sheets, place a cross next to the true statements.}{0.06}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $L_F$ Border blue at $ a < a_0$, red at $a > a0$ $L_F$ Border red at $ a < a_0$, blue at $a > a0$ $\times$ $L_f$ Border blue at $ a < a_0$, red at $a > a0$ $L_f$ Red border for $ a < a_0$, blue for $a > a0$ $\times$
+\par\smallskip\noindent\textbf{Answer:} $L_F$ Border blue at $ a < a_0$, red at $a > a0$ $L_F$ Border red at $ a < a_0$, blue at $a > a0$ $\times$ $L_f$ Border blue at $ a < a_0$, red at $a > a0$ $L_f$ Red border for $ a < a_0$, blue for $a > a0$ $\times$
 \end{solcard}
 
 \begin{solcard}{C2}{On your answer sheets, mark the cross next to the true statements about $n_\text{b}$ and $n_\text{r}$. Justify your choice.}{0.50}
 
 As can be seen from the experiment, at $a > a_0$ the image boundaries are blue, it follows that blue rays are focused closer ($b_b < b_r$), which implies \[ \frac{1}{b_b} > \frac{1}{b_r} \quad \Rightarrow \quad \frac{1}{F_b} > \frac{1}{F_r}, \] which implies the answer from the grinder formula: \[ \frac{1}{F} = (n-1) \left( \frac{1}{R_1} + \frac{1}{R_2} \right) \]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $L_F$ $n_b > n_r$ $\times$ $L_F$ $n_r > n_b$ $L_f$ $n_b > n_r$ $\times$ $L_f$ $n_r > n_b$
+\par\smallskip\noindent\textbf{Answer:} $L_F$ $n_b > n_r$ $\times$ $L_F$ $n_r > n_b$ $L_f$ $n_b > n_r$ $\times$ $L_f$ $n_r > n_b$
 \end{solcard}
 
 \begin{solcard}{D1}{With $7$ different $H$, measure the image size $p$ under close focus conditions.}{0.70}
@@ -152,7 +151,7 @@ The height of the focused image $h$ is expressed through the height of the spira
 
 Coordinate $X_2=\frac{H+\sqrt{H^2-4FH}}{H-\sqrt{H^2-4FH}}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} From the slope coefficient of the graph $H_A=0.37~\text{cm}$. Let's measure the ratio $\frac{H_A}{W_A}$ from the enlarged image: $\frac{H_A}{W_A} = \frac{3.1~\text{cm}}{1.0~\text{cm}}$, which means $W_A=0.12~\text{cm}$.
+\par\smallskip\noindent\textbf{Answer:} From the slope coefficient of the graph $H_A=0.37~\text{cm}$. Let's measure the ratio $\frac{H_A}{W_A}$ from the enlarged image: $\frac{H_A}{W_A} = \frac{3.1~\text{cm}}{1.0~\text{cm}}$, which means $W_A=0.12~\text{cm}$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig9.jpg}
@@ -164,10 +163,10 @@ Coordinate $X_2=\frac{H+\sqrt{H^2-4FH}}{H-\sqrt{H^2-4FH}}$.
 \end{solcard}
 
 \begin{solcard}{D3}{Count the number of $N_A$ spirals in the source spiral.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Let's look at the image on the screen enlarged with a lens, and we will also use the aperture to reduce blur due to aberrations. \[N_A = 18\]
+\par\smallskip\noindent\textbf{Answer:} Let's look at the image on the screen enlarged with a lens, and we will also use the aperture to reduce blur due to aberrations. \[N_A = 18\]
 \end{solcard}
 
-\begin{solcard}{E1}{For various fixed values ​​of $a$, select distances $l$ that correspond to a clear image. Measure the height of the clear image $h$. If several different values ​​of $l$ produce several clear images, then select the image with the larger $h$. The dependence of $h$ on $a$ has a characteristic point, describe it and measure its surroundings especially carefully. Take at least 15 measurements in total.}{0.85}
+\begin{solcard}{E1}{For various fixed values of $a$, select distances $l$ that correspond to a clear image. Measure the height of the clear image $h$. If several different values of $l$ produce several clear images, then select the image with the larger $h$. The dependence of $h$ on $a$ has a characteristic point, describe it and measure its surroundings especially carefully. Take at least 15 measurements in total.}{0.85}
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig11.jpg}
@@ -178,7 +177,7 @@ Coordinate $X_2=\frac{H+\sqrt{H^2-4FH}}{H-\sqrt{H^2-4FH}}$.
 
 Thin lens formulas: \[ \frac{1}{a} + \frac{1}{b} = \frac{1}{F} \quad \Rightarrow \quad  b =\frac{aF}{a-F},\] \[ \frac{1}{x} + \frac{1}{L_1-x} = \frac{1}{f}, \quad L_1=H-a-b \] We obtain the equation for $x$ from the second thin lens formula: \[x^2 - xL_1 - fL_1 =0,\quad \mathcal{D}=L_1^2-4fL_1,\quad x_{1,2} = L_1\frac{1\pm \sqrt{1- \frac{4f}{L_1}} }{2}.\] With a smaller $x$ the image is larger, so we choose the root with a minus. Now let's express the height $h$ of the image $A''$, let the height $A'$ – $h'$. From similar triangles: \[ \frac{H_A}{a} = \frac{h'}{b}, \quad \frac{h'}{x}=\frac{h}{L_1-x}.\] As a result, \[h = \frac{L_1-x}{x} \frac{b}{a} H_A = \frac{1+ \sqrt{1- \frac{4f}{L_1}}}{1- \sqrt{1-\frac{4f}{L_1}}}\frac{F}{a-F} H_A,\] where $L_1 = H-a-\frac{aF}{a-F}$. Thus the linearization of $h$ from $X_3$, where \[ X_3 =  \frac{1+ \sqrt{1- \frac{4f}{H-a-\frac{aF}{a-F}}}}{1- \sqrt{1-\frac{4f}{H-a-\frac{aF}{a-F}}}}\frac{F}{a-F}.\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The slope coefficient of the graph is $k=0.35~\text{cm}$, which fully corresponds to $H_A$ obtained in other points.
+\par\smallskip\noindent\textbf{Answer:} The slope coefficient of the graph is $k=0.35~\text{cm}$, which fully corresponds to $H_A$ obtained in other points.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig12.jpg}
@@ -193,7 +192,7 @@ Thin lens formulas: \[ \frac{1}{a} + \frac{1}{b} = \frac{1}{F} \quad \Rightarrow
 
 The magnification of the Kepler telescope can be estimated by comparing the visible image of the ruler with another known size. For example, stick two strips of masking tape onto the plastic frame of the lens. The photograph shows the process of such measurements.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} From distance $L_\Gamma=33~\text{cm}$ we see that the slot thickness $h_\Gamma=21~\text{mm}$ corresponds to $H_\Gamma=23~\text{mm}$ on the ruler. The distance between the ruler and the lens is $H=118~\text{cm}$. So the increase $\Gamma$ can be found like this: \[ \Gamma = \frac{h_\Gamma}{L_\Gamma} \cdot \frac{H+L_\Gamma}{H_\Gamma} = 4.2 \]
+\par\smallskip\noindent\textbf{Answer:} From distance $L_\Gamma=33~\text{cm}$ we see that the slot thickness $h_\Gamma=21~\text{mm}$ corresponds to $H_\Gamma=23~\text{mm}$ on the ruler. The distance between the ruler and the lens is $H=118~\text{cm}$. So the increase $\Gamma$ can be found like this: \[ \Gamma = \frac{h_\Gamma}{L_\Gamma} \cdot \frac{H+L_\Gamma}{H_\Gamma} = 4.2 \]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig14.jpg}

@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T3_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/T3_S_EN
-.tex
+(./T3_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/T3_S_EN
-.aux)
+(./T3_S_EN.aux)
 \openout1 = `T3_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/T3_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/T3_S_EN
-.out)
+(./T3_S_EN.out) (./T3_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T3_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1116,14 +1111,185 @@ File: T3_S_EN_assets/fig16.jpg Graphic file (type bmp)
                    ⟦
 l.169 ... \frac{h\left(n^2-1\right)}{2l^3n^3}R^3$⟦
                                                   9 ⟧R$. Введём обозначения:...
- 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+Missing character: There is no ⟦ (U+27E6) in font DejaVu Serif/OT:script=latn;l
+anguage=dflt;mapping=tex-text;!
+Missing character: There is no ⟧ (U+27E7) in font DejaVu Serif/OT:script=latn;l
+anguage=dflt;mapping=tex-text;!
+Missing character: There is no В ("412) in font cmmi10!
+Missing character: There is no в ("432) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no д ("434) in font cmmi10!
+Missing character: There is no ё ("451) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no б ("431) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no з ("437) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no ч ("447) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no я ("44F) in font cmmi10!
+! Display math should end with $$.
+<to be read again> 
+                   r
+l.169 ...\frac{h\left(n^2-1\right)}{2l^3n^3}.$$$$r
+                                                  =AR-BR^3$$$$r \approx A\le...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 ...\left(n^2-1\right)}{2l^3n^3}.$$$$r=AR-BR^
+                                                  3$$$$r \approx A\left(\alp...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   r
+l.169 ...n^2-1\right)}{2l^3n^3}.$$$$r=AR-BR^3$$$$r
+                                                   \approx A\left(\alpha r +...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 ...ght)}{2l^3n^3}.$$$$r=AR-BR^3$$$$r \approx
+                                                   A\left(\alpha r + \beta r...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no П ("41F) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no в ("432) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no я ("44F) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no к ("43A) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no э ("44D) in font cmmi10!
+Missing character: There is no ф ("444) in font cmmi10!
+Missing character: There is no ф ("444) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no ц ("446) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no ы ("44B) in font cmmi10!
+Missing character: There is no п ("43F) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no д ("434) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no к ("43A) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no в ("432) in font cmmi10!
+Missing character: There is no ы ("44B) in font cmmi10!
+Missing character: There is no х ("445) in font cmmi10!
+Missing character: There is no с ("441) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no п ("43F) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no я ("44F) in font cmmi10!
+Missing character: There is no х ("445) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no в ("432) in font cmmi10!
+Missing character: There is no ы ("44B) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no з ("437) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no с ("441) in font cmmi10!
+Missing character: There is no к ("43A) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no ы ("44B) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no к ("43A) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no э ("44D) in font cmmi10!
+Missing character: There is no ф ("444) in font cmmi10!
+Missing character: There is no ф ("444) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no ц ("446) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no ы ("44B) in font cmmi10!
+! Display math should end with $$.
+<to be read again> 
+                   \alpha 
+l.169 ...ta - B\alpha^3 = 0. \end{cases}$$$$\alpha
+                                                   = \frac{1}{A} = \frac{nl}...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 ...ta - B\alpha^3 = 0. \end{cases}$$$$\alpha
+                                                   = \frac{1}{A} = \frac{nl}...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \beta 
+l.169 ... \frac{nl}{nL-\left(n-1\right)h}$$$$\beta
+                                                   = \frac{B}{A^4} = \frac{h...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 ... \frac{nl}{nL-\left(n-1\right)h}$$$$\beta
+                                                   = \frac{B}{A^4} = \frac{h...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.170 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+File: T3_S_EN_assets/fig17.jpg Graphic file (type bmp)
+<T3_S_EN_assets/fig17.jpg>
+[12] [13] (./T3_S_EN.aux)
+Package rerunfilecheck Info: File `T3_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32204 strings out of 478190
- 689034 string characters out of 5854827
+ 32214 strings out of 478190
+ 688446 string characters out of 5854827
  1083688 words of memory out of 5000000
- 52253 multiletter control sequences out of 15000+600000
+ 52262 multiletter control sequences out of 15000+600000
  477300 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,15n,99p,2143b,1033s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2026/T3_S_EN.pdf (11 pages).
+ 91i,15n,99p,1571b,1033s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on T3_S_EN.pdf (13 pages).

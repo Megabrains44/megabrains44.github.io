@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 01:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1077,14 +1077,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: T1_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <T1_S_EN_assets/fig1.jpg>
  [3]
-[4]
-Overfull \hbox (2.69113pt too wide) in paragraph at lines 165--166
-\TU/DejaVuSerif(0)/m/n/10 В equation for currentа входит только $\OML/cmm/m/it/
-10 dV\OT1/cmr/m/n/10 /\OML/cmm/m/it/10 dt$\TU/DejaVuSerif(0)/m/n/10 , therefore
- постоянное term нnotго не влияет.
- []
-
-[5]
+[4] [5]
 File: T1_S_EN_assets/fig2.jpg Graphic file (type bmp)
 <T1_S_EN_assets/fig2.jpg>
  [6]
@@ -1097,13 +1090,13 @@ Package rerunfilecheck Info: File `T1_S_EN.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32115 strings out of 478190
- 686704 string characters out of 5854827
- 1081685 words of memory out of 5000000
- 52175 multiletter control sequences out of 15000+600000
- 477300 words of font info for 101 fonts, out of 8000000 for 9000
+ 32119 strings out of 478190
+ 686850 string characters out of 5854827
+ 1081684 words of memory out of 5000000
+ 52178 multiletter control sequences out of 15000+600000
+ 477308 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1290b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,7n,99p,1279b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
 ho-w/2023/T1_S_EN.pdf (8 pages).

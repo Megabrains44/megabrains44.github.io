@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,8 +30,8 @@
 \author{\normalsize Y23 (2023) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{Express the bridge balancing condition as a ratio only between the values ​​of its elements. At what frequency $f_\mathrm{bal}$ does balancing occur?}{2.00}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\frac{C_1}{C_2}=\frac{R_4}{R_3}-\frac{R_2}{R_1}\\f_\text{bal}=\frac1{2\pi}\frac1{\sqrt{R_1R_2C_1C_2}}\]
+\begin{solcard}{A1}{Express the bridge balancing condition as a ratio only between the values of its elements. At what frequency $f_\mathrm{bal}$ does balancing occur?}{2.00}
+\par\smallskip\noindent\textbf{Answer:} \[\frac{C_1}{C_2}=\frac{R_4}{R_3}-\frac{R_2}{R_1}\\f_\text{bal}=\frac1{2\pi}\frac1{\sqrt{R_1R_2C_1C_2}}\]
 \end{solcard}
 
 \begin{solcard}{A2}{Using the Wien bridge, find the capacitances of the capacitors given to you as accurately as possible. Estimate the error of the received answers. Note: Since the “ground” of the generator and the oscilloscope are common, when connecting devices directly to the circuit, one of the Wien bridge components will actually be excluded from the circuit (its two terminals will have the same potential). To solve this problem you need to use a transformer. One of its windings must be connected to the Wien bridge, and data must be taken from the second winding on an oscilloscope. Note: Only plug the transformer into a small breadboard, since its legs can damage the contacts of a large one!}{4.00}
@@ -43,20 +42,20 @@ Note: Since the “ground” of the generator and the oscilloscope are common, w
 Note: Only plug the transformer into a small breadboard, since its legs can damage the contacts of a large one!
 
 
-The resistor values ​​are $1.00\pm0.01~\mathrm{k\Omega}\times2$, $2.00\pm0.02~\mathrm{k\Omega}$ and $22.0\pm0.5~\mathrm{\Omega}$. To more accurately determine the capacities, it makes sense to increase the quotient $\frac{R_4}{R_3}$ and decrease $\frac{R_2}{R_1}$ $\implies$ $R_1=2~\mathrm{k\Omega}$, $R_2=22~\mathrm{\Omega}$, $R_3=1~\mathrm{k\Omega}$. Then the error of the term $\frac{R_2}{R_1}$ can actually be neglected. The Wien bridge, assembled in this way, allows you to measure the capacitance of capacitors $1-6$. To measure the capacitance of capacitor $7$, you can connect the remaining resistor $1~\mathrm{k\Omega}$ in series with the rheostat. The measurement results are shown in the table below. For more accurate measurement of small capacitances, you can use other bridge assemblies, for example, take $R_3=2~\mathrm{k\Omega}$.
+The resistor values are $1.00\pm0.01~\mathrm{k\Omega}\times2$, $2.00\pm0.02~\mathrm{k\Omega}$ and $22.0\pm0.5~\mathrm{\Omega}$. To more accurately determine the capacities, it makes sense to increase the quotient $\frac{R_4}{R_3}$ and decrease $\frac{R_2}{R_1}$ $\implies$ $R_1=2~\mathrm{k\Omega}$, $R_2=22~\mathrm{\Omega}$, $R_3=1~\mathrm{k\Omega}$. Then the error of the term $\frac{R_2}{R_1}$ can actually be neglected. The Wien bridge, assembled in this way, allows you to measure the capacitance of capacitors $1-6$. To measure the capacitance of capacitor $7$, you can connect the remaining resistor $1~\mathrm{k\Omega}$ in series with the rheostat. The measurement results are shown in the table below. For more accurate measurement of small capacitances, you can use other bridge assemblies, for example, take $R_3=2~\mathrm{k\Omega}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Capacitor No. 1 2 3 4 5 6 7 Capacitance $C$, nF 102 148 208 302 424 664 954 Error $\Delta C$, nF 3 4 6 11 14 19 26
+\par\smallskip\noindent\textbf{Answer:} Capacitor No. 1 2 3 4 5 6 7 Capacitance $C$, nF 102 148 208 302 424 664 954 Error $\Delta C$, nF 3 4 6 11 14 19 26
 \end{solcard}
 
 \begin{solcard}{B1}{Find the transfer function of the Wien bridge $H(f)$. At what frequency $f_0$ does this function have a singularity? To what value $H_\infty$ does the transfer function reach in the limit of high and low frequencies?}{2.00}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[H(f)=\frac13\frac{\left|1-\Omega^2\right|}{\sqrt{\left(1-\Omega^2\right)^2+9\Omega^2}},\quad\Omega=2\pi fR_1C_1\\f_0=\frac1{2\pi R_1C_1},\quad H_\infty=\frac13\]
+\par\smallskip\noindent\textbf{Answer:} \[H(f)=\frac13\frac{\left|1-\Omega^2\right|}{\sqrt{\left(1-\Omega^2\right)^2+9\Omega^2}},\quad\Omega=2\pi fR_1C_1\\f_0=\frac1{2\pi R_1C_1},\quad H_\infty=\frac13\]
 \end{solcard}
 
 \begin{solcard}{B2}{Build a frequency filter from existing equipment. By applying a sinusoidal signal to the input, find the minimum experimentally achievable value of the transfer function $H_{\text{exp}\,\text{min}}$.}{1.00}
 
 The only way to assemble the required bridge is to use $C_1=C_0$ and a rheostat as $R_3$ and $R_4$. It is worth noting that when minimizing the transfer function, the voltage on the oscilloscope will fluctuate at a frequency that is 2 times the input. Thus, the actual transfer function of a wine bridge is limited by nonlinear effects.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[H_{\text{exp}\,\text{min}}=0.02\ldots0.03\]
+\par\smallskip\noindent\textbf{Answer:} \[H_{\text{exp}\,\text{min}}=0.02\ldots0.03\]
 \end{solcard}
 
 \begin{solcard}{B3}{Propose a method to filter out the DC component and the carrier harmonic of the diode signal and find the relative amplitude $\dfrac{U_\text{high}}{U_\text{in}}$ of the higher harmonics. Estimate the error using the result of the previous paragraph. Hint: You can assume that the transfer function of the Wien bridge reaches a constant fairly quickly. Please note that the transformer transfer function is not necessarily equal to $1$!}{1.00}
@@ -64,9 +63,9 @@ The only way to assemble the required bridge is to use $C_1=C_0$ and a rheostat 
 Hint: You can assume that the transfer function of the Wien bridge reaches a constant fairly quickly. Please note that the transformer transfer function is not necessarily equal to $1$!
 
 
-By tuning the oscillator to frequency $f_0$, we can filter out the carrier harmonic.  The component constant disappears because a transformer is used to connect the oscilloscope. Let's measure the relative amplitude of the signal on an oscilloscope (the frequency of this signal should be equal to $2f_0$), $\dfrac{U_\text{out}}{U_\text{in}}\sim0.08$. Let's measure the transfer function of the transformer at frequency $f_0$ by connecting it directly to the source. We get $H_\text{trans}\approx0.5$. Transfer function of the Wien bridge according to condition $=1/3$. Then\[\frac{U_\text{high}}{U_\text{in}}=\frac3{H_\text{trans}}\frac{U_\text{out}}{U_\text{in}}\sim0.5,\quad\Delta\left(\frac{U_\text{high}}{U_\text{in}}\right)=\frac{3H_{\text{exp}\,\text{min}}}{H_\text{trans}}\sim0.1\]
+By tuning the oscillator to frequency $f_0$, we can filter out the carrier harmonic.  The component constant disappears because a transformer is used to connect the oscilloscope. Let's measure the relative amplitude of the signal on an oscilloscope (the frequency of this signal should is equal to to $2f_0$), $\dfrac{U_\text{out}}{U_\text{in}}\sim0.08$. Let's measure the transfer function of the transformer at frequency $f_0$ by connecting it directly to the source. We get $H_\text{trans}\approx0.5$. Transfer function of the Wien bridge according to condition $=1/3$. Then\[\frac{U_\text{high}}{U_\text{in}}=\frac3{H_\text{trans}}\frac{U_\text{out}}{U_\text{in}}\sim0.5,\quad\Delta\left(\frac{U_\text{high}}{U_\text{in}}\right)=\frac{3H_{\text{exp}\,\text{min}}}{H_\text{trans}}\sim0.1\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\frac{U_\text{high}}{U_\text{in}}=0.5\pm0.1\]
+\par\smallskip\noindent\textbf{Answer:} \[\frac{U_\text{high}}{U_\text{in}}=0.5\pm0.1\]
 \end{solcard}
 
 \end{document}

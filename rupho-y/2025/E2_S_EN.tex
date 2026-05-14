@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -38,17 +37,17 @@ The voltage drop across the resistor is $U_R(t)=\mathcal E(t)-(U_l(0,t)+U_r(0,t)
 
 Any equivalent response forms are valid, but the one written above is most convenient for analysis.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\dfrac{\mathcal E(t)}{2}-U_r(0,t)=\dfrac{R-Z}{R+Z}\left(\dfrac{\mathcal E(t)}{2}-U_l(0,t)\right)\]
+\par\smallskip\noindent\textbf{Answer:} \[\dfrac{\mathcal E(t)}{2}-U_r(0,t)=\dfrac{R-Z}{R+Z}\left(\dfrac{\mathcal E(t)}{2}-U_l(0,t)\right)\]
 \end{solcard}
 
 \begin{solcard}{A2}{Find the time dependence of voltage $U_\mathrm{OSC}(t)$ on an oscilloscope.}{1.10}
 
 Let us denote it by $U_n=U_0\left(1-\left(\dfrac{R-Z}{R+Z}\right)^n\right)$ for convenience. At the initial time $U_l(0,0)=0$, $U_r(0,0)=U_1/2$. A wave propagating to the right reaches the oscilloscope in time $L/v$ and is reflected from the edge of the two-wire line. After another time $L/v$, the wave traveling to the left returns to the resistor, and then $U_l(0,2L/v)=U_1/2\implies U_l(0,2L/v)=U_2/2$. Next, the process of re-reflection of the traveling waves is repeated, and after time $2nL/v$ the voltage $U_l(x=0)$ reaches $U_n/2$, and the voltage $U_r(x=0)=U_{n+1}/2$. From here we come to the final result:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[U_\mathrm{OSC}(t)=U_0\left[1-\left(\dfrac{R-Z}{R+Z}\right)^{\left\lfloor\frac{Vt}{2L}+\frac{1}{2}\right\rfloor}\right]\]
+\par\smallskip\noindent\textbf{Answer:} \[U_\mathrm{OSC}(t)=U_0\left[1-\left(\dfrac{R-Z}{R+Z}\right)^{\left\lfloor\frac{Vt}{2L}+\frac{1}{2}\right\rfloor}\right]\]
 \end{solcard}
 
-\begin{solcard}{A3}{By applying a rectangular signal from the generator, remove the dependence of voltage on time. Record the times $t_n$ when the $n$ voltage step occurred, and the values ​​of voltage $U_n$ immediately after.}{0.70}
+\begin{solcard}{A3}{By applying a rectangular signal from the generator, remove the dependence of voltage on time. Record the times $t_n$ when the $n$ voltage step occurred, and the values of voltage $U_n$ immediately after.}{0.70}
 
 The voltage step ladder appears on time scales of order $L/c\sim 10^{-8}\ldots10^{-7}~\mathrm{s}$, so it is visible only on time scales of order $\sim100~\mathrm{ns}$. Although the ladder becomes clearer with more cable sections, the number of unlubricated “steps” is still small, so measurements must be taken with a large number of cable sections. A typical view of the ladder is shown in the photo below:
 
@@ -94,7 +93,7 @@ $n$ 1 2 3 4 5 6 7 8 $(2n-1)m$ 5 15 25 35 45 55 65 75 $t_n, ~\mathrm{ns}$ 104 360
 
 \end{solcard}
 
-\begin{solcard}{A5}{Neglecting the length of the cables used to connect the generator, linearize the dependences $u(n,m)$ and $t(n,m)$. Plot the linearized dependence $u(n,m)$ and determine the resistance $R$ of the supplied resistor if the characteristic impedance of the cable is $50~ Ом$. Plot a linearized graph of $t(n,m)$ and determine the speed $v$ of wave propagation in the coaxial cable. Give the errors of the results.}{1.00}
+\begin{solcard}{A5}{Neglecting the length of the cables used to connect the generator, linearize the dependences $u(n,m)$ and $t(n,m)$. Plot the linearized dependence $u(n,m)$ and determine the resistance $R$ of the supplied resistor if the characteristic impedance of the cable is $50~ \mathrm{\Omega}$. Plot a linearized graph of $t(n,m)$ and determine the speed $v$ of wave propagation in the coaxial cable. Give the errors of the results.}{1.00}
 
 For $m$ connected cable sections we will have: \[t(n,m)=(2n-1)mL_0/v,\quad L_0=5~\mathrm{m}.\]Linearization -- $t((2n-1)m)$ with slope $L_0/v$. Since the voltage on the unlubricated part of the ladder is much less than the voltage $U_0$, we can write for it as a first approximation: \[U_n=U_0\left(1-\left(\dfrac{R-Z}{R+Z}\right)^n\right)\approx\dfrac{2nZ}{R}U_0.\]Therefore, a convenient linearization is $u(n)$, and its slope is equal to ${2Z}/{R}$.
 
@@ -104,7 +103,7 @@ The angular coefficient of dependence $u(n)$ is equal to $\dfrac{2Z}{R}=9.6\cdot
 
 The angular coefficient of dependence $t(m(2n-1))$ is equal to $\dfrac{L_0}{v}=25.4~\mathrm{ns}$, we estimate the error as $\varepsilon_v\sim 2{\Delta t}/(t_{\max}-t_{\min})\approx 9\,\%$, then:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[R=(10.4\pm0.9)~\mathrm{k\Omega}\]
+\par\smallskip\noindent\textbf{Answer:} \[R=(10.4\pm0.9)~\mathrm{k\Omega}\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig2.jpg}
@@ -153,12 +152,12 @@ $m=5$ cable sections:
 $f,~\mathrm{kHz}$ 3 6 8 10 12 14 16 $U_{C}, ~\mathrm{mV}$ 885 711 596 523 448 388 347 $m^2f^2,~10^9~\mathrm{Hz}^2$ 0.23 0.9 1.6 2.5 3.6 4.9 6.4 $(1~\mathrm{V}/U_C)^2$ 1.28 1.98 2.82 3.66 4.98 6.64 8.31
 
 
-The slope is $4\pi^2R^2L_0^2\mathcal C^2=1.15\cdot10^{-9}~\mathrm{Hz}^{-2}$, hence $\mathcal C=1.04\cdot10^{-10}~\mathrm{F}/м$. We estimate the error as $\sim10\,\%$, then:
+The slope is $4\pi^2R^2L_0^2\mathcal C^2=1.15\cdot10^{-9}~\mathrm{Hz}^{-2}$, hence $\mathcal C=1.04\cdot10^{-10}~\mathrm{F}/\mathrm{m}$. We estimate the error as $\sim10\,\%$, then:
 
 
-Since $Z=\sqrt{\dfrac{\mathcal L}{\mathcal C}}$, the cable inductance per unit length is $\mathcal L=Z^2\mathcal C=2.6\cdot10^{-7}~\mathrm{H}/м$.
+Since $Z=\sqrt{\dfrac{\mathcal L}{\mathcal C}}$, the cable inductance per unit length is $\mathcal L=Z^2\mathcal C=2.6\cdot10^{-7}~\mathrm{H}/\mathrm{m}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\mathcal C=\left(1.04\pm0.10\right)\cdot10^{-10}~\mathrm{F}/м\]
+\par\smallskip\noindent\textbf{Answer:} \[\mathcal C=\left(1.04\pm0.10\right)\cdot10^{-10}~\mathrm{F}/\mathrm{m}\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig4.jpg}
@@ -173,7 +172,7 @@ Since $Z=\sqrt{\dfrac{\mathcal L}{\mathcal C}}$, the cable inductance per unit l
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{C1}{Having supplied a rectangular signal from the generator, remove the dependence of voltage on time, namely, find the moments of time $t_n$ when the $n$ stepwise increase in voltage occurred, and the voltage values ​​$U_n$ immediately after that.}{1.00}
+\begin{solcard}{C1}{Having supplied a rectangular signal from the generator, remove the dependence of voltage on time, namely, find the moments of time $t_n$ when the $n$ stepwise increase in voltage occurred, and the voltage values $U_n$ immediately after that.}{1.00}
 
 $n$ 1 2 3 4 5 6 7 8 $2n-1$ 1 3 5 7 9 11 13 15 $t_n, ~\mathrm{ns}$ 24 134 232 338 436 548 648 750 $\Delta t_n,~\mathrm{ns}$ 110 98 106 98 112 100 102 $U,~\mathrm{mV}$ -488 -468 -447 -427 -408 -389 -371 -353 $\Delta U,~\mathrm{mV}$ 20 21 20 19 19 18 18 $u$ -0.488 -0.468 -0.447 -0.427 -0.408 -0.389 -0.371 -0.353 $\Delta u$ 0.02 0.021 0.02 0.019 0.019 0.018 0.018
 
@@ -186,7 +185,7 @@ The angular coefficient of dependence $u(n)$ is equal to $\dfrac{2Z}{R}=1.93\cdo
 
 The angular coefficient of dependence $t(2n-1)$ is equal to $\dfrac{L_0}{v}=51.8~\mathrm{ns}$, we estimate the error as $\varepsilon_v\sim 2{\Delta t}/(t_{\max}-t_{\min})\approx 9\,\%$, then:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[R=(100\pm20)~\mathrm{\Omega}\]
+\par\smallskip\noindent\textbf{Answer:} \[R=(100\pm20)~\mathrm{\Omega}\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig7.jpg}

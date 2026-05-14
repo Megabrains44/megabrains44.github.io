@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T6_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T6_S_EN
-.tex
+(./T6_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T6_S_EN
-.aux)
+(./T6_S_EN.aux)
 \openout1 = `T6_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T6_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T6_S_EN
-.out)
+(./T6_S_EN.out) (./T6_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T6_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1074,21 +1069,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 Missing character: There is no π ("3C0) in font cmmi10!
 Missing character: There is no π ("3C0) in font cmmi10!
-
-Overfull \hbox (10.87442pt too wide) in paragraph at lines 50--50
-\TU/DejaVuSerif(0)/m/n/10 Charge должен быть другого signа. It can be seen that
- coefficient в линейной зависимости
- []
-
 [1
 
-]
-Overfull \hbox (25.31747pt too wide) in paragraph at lines 64--64
-\TU/DejaVuSerif(0)/m/n/10 it can be seen that charge должен быть отрицательным.
- Angular frequency for/at колебаниях: 
- []
-
-[2]
+] [2]
 Missing character: There is no о ("43E) in font cmmi7!
 Missing character: There is no с ("441) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
@@ -1105,49 +1088,17 @@ Missing character: There is no ⟦ (U+27E6) in font DejaVu Serif/OT:script=latn;
 anguage=dflt;mapping=tex-text;!
 Missing character: There is no ⟧ (U+27E7) in font DejaVu Serif/OT:script=latn;l
 anguage=dflt;mapping=tex-text;!
-
-Overfull \hbox (1.70982pt too wide) in paragraph at lines 85--85
-\TU/DejaVuSerif(0)/m/n/10 Поrayается answer $\OML/cmm/m/it/10 z \OT1/cmr/m/n/10
- = 0$\TU/DejaVuSerif(0)/m/n/10 . Можно его подставить в $\OML/cmm/m/it/10 f\OT1
-/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 )[]10[]\OML/cmm/m/it/10 z < \OMS
-/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 45$\TU/DejaVuSerif(0)/m/n/10 , составим следующ
-ее
- []
-
-
-Overfull \hbox (11.8168pt too wide) in paragraph at lines 85--86
-\TU/DejaVuSerif(0)/m/n/10 Данное equation сходится очень медленно. Можно найти 
-его корень методом бинарного
- []
-
-
-Overfull \hbox (4.91364pt too wide) in paragraph at lines 85--86
-\TU/DejaVuSerif(0)/m/n/10 поиска: substituting некоторое число and проводя итер
-ации наблюдать, увеличивается
- []
-
-
-Overfull \hbox (134.4451pt too wide) in paragraph at lines 85--86
-\TU/DejaVuSerif(0)/m/n/10 or уменьшается quantity $\OML/cmm/m/it/10 z$\TU/DejaV
-uSerif(0)/m/n/10 . Правильный answer $\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = \OMS
-/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1632\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 601635794
-14519440461610908047948157856626649004333963591\OML/cmm/m/it/10 :::$ 
- []
-
-[3] [4]
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T6_S_EN
-.aux)
+[3] [4] (./T6_S_EN.aux)
 Package rerunfilecheck Info: File `T6_S_EN.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32055 strings out of 478190
- 685400 string characters out of 5854827
+ 32054 strings out of 478190
+ 684487 string characters out of 5854827
  1078693 words of memory out of 5000000
  52122 multiletter control sequences out of 15000+600000
  477300 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1283b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,7n,99p,1256b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2022/T6_S_EN.pdf (4 pages).
+Output written on T6_S_EN.pdf (4 pages).

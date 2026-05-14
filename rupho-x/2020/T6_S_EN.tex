@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -57,7 +56,7 @@ Since the relation $t \ll D$ is satisfied, the magnet can be considered flat and
 
 \begin{solcard}{B3}{Obtain the expression and numerical value of the interaction force $F_0$ between the door and the magnet pressed to it, and also calculate the pressure $P_0$ of the magnet on the door.}{0.50}
 
-B3) According to the condition, the volumetric energy density of the magnetic field is: $\frac{E}{V}=\frac {1}{2\mu_0} \cdot B^2$ When the magnet is separated from the door a short distance $y$: $\Delta E = \pi (D/2)^2\cdot y\cdot \frac{1}{2\mu_0} \cdot B^2_0 $ $F=\frac {\Delta E}{y} = \pi (D/2)^2 \cdot \frac {1}{2\mu_0}\cdot B^2_0= 2.2 H$ Knowing the force and area of ​​contact, it is easy to express the pressure: $P=\frac{F}{S}=\frac{B^2_0}{2\mu_0} =6.9\cdot 10^3~\text{Pa}$
+B3) According to the condition, the volumetric energy density of the magnetic field is: $\frac{E}{V}=\frac {1}{2\mu_0} \cdot B^2$ When the magnet is separated from the door a short distance $y$: $\Delta E = \pi (D/2)^2\cdot y\cdot \frac{1}{2\mu_0} \cdot B^2_0 $ $F=\frac {\Delta E}{y} = \pi (D/2)^2 \cdot \frac {1}{2\mu_0}\cdot B^2_0= 2.2 H$ Knowing the force and area of contact, it is easy to express the pressure: $P=\frac{F}{S}=\frac{B^2_0}{2\mu_0} =6.9\cdot 10^3~\text{Pa}$
 
 \end{solcard}
 
@@ -91,7 +90,7 @@ When moving to the other side of the assembly, some signs in the equation change
 
 \end{solcard}
 
-\begin{solcard}{C5}{Based on the field expression, find the average pressure $Р$ of such a magnet on the refrigerator door. Take the following parameters: thickness $t=0.5~\text{mm}$, volumetric density of the magnetic dipole $\rho = 2 \cdot 10^5 \frac {\text{T} \cdot \text{m}} {\text{H}}$, assembly step $\lambda=5~\text{mm}$.}{1.50}
+\begin{solcard}{C5}{Based on the field expression, find the average pressure $P$ of such a magnet on the refrigerator door. Take the following parameters: thickness $t=0.5~\text{mm}$, volumetric density of the magnetic dipole $\rho = 2 \cdot 10^5 \frac {\text{T} \cdot \text{m}} {\text{H}}$, assembly step $\lambda=5~\text{mm}$.}{1.50}
 
 The force and pressure are the same as in point B3: $y_0 \rightarrow 0 \Rightarrow \vec B = -\mu_0\sigma k \cdot[\hat{y_0}\cdot\cos(\beta_0+kx_0) -\hat{x}\cdot\sin(\beta_0+kx_0)] \Rightarrow$ $B^2=(\mu_0\sigma k)^2, P=\frac{1}{2\mu_0}\cdot B^2, \sigma=\rho t \Rightarrow$ $B=(1.257\cdot 10^{-6}~\text{H/m}) \cdot(2\cdot 10^5~ \text{T}\cdot\text{m}/\text{H}) \cdot(5\cdot10^{-4}~\text{m}) \cdot \frac{2\cdot 3.14}{5\cdot 10^{-3}\text{ m}} =0.16 \text{ T}$ $P=\frac{1}{2\mu_0}\cdot B^2=\frac{1} {2\cdot 1.257 \cdot 10^{-6} \text{ H/m}} \cdot (0.16\text{ T}^2)=10\text{ kPa}$
 

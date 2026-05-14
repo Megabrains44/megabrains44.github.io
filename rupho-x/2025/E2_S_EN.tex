@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -38,25 +37,25 @@
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{А2}{Position 5 cuvettes with $2.8~\mathrm{mL}$ water so that the laser beam passes through them and falls on their walls normally. By successively adding $0.1~\mathrm{mL}$ milk solution to each of the cuvettes, remove the dependence of the transmittance $\alpha$ on the number of cuvettes $N$ in which the milk solution is added. Sketch the optical design used for $N=3$.}{0.50}
+\begin{solcard}{A2}{Position 5 cuvettes with $2.8~\mathrm{mL}$ water so that the laser beam passes through them and falls on their walls normally. By successively adding $0.1~\mathrm{mL}$ milk solution to each of the cuvettes, remove the dependence of the transmittance $\alpha$ on the number of cuvettes $N$ in which the milk solution is added. Sketch the optical design used for $N=3$.}{0.50}
 
 Background radiation $I_\mathrm{back}=1.6~\mathrm{mA}$. The transmittance is then given by \[\alpha = \frac{I-I_\mathrm{back}}{I_0 - I_\mathrm{back}}\]
 
 
 When making measurements in this part, it is important to take into account reflections at the interfaces, i.e. to study the light intensity for a given $N$, place $N$ cuvettes with a milk solution and $5-N$ cuvettes with clean water.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $I,~\mathrm{\mu{}A}$ $N$ $\alpha$ 118.10 0 1.000 58.10 1 0.483 32.30 2 0.260 16.10 3 0.121 9.60 4 0.065 6.30 5 0.036
+\par\smallskip\noindent\textbf{Answer:} $I,~\mathrm{\mu A}$ $N$ $\alpha$ 118.10 0 1.000 58.10 1 0.483 32.30 2 0.260 16.10 3 0.121 9.60 4 0.065 6.30 5 0.036
 \end{solcard}
 
-\begin{solcard}{А3}{Position one cuvette with $2.8~\mathrm{mL}$ water so that the laser beam passes through its walls normally. Remove the dependence of the transmittance coefficient $\alpha$ on the volume $\Delta V$ of the added milk solution in the range $\Delta V \leq 1~\mathrm{mL}$.}{0.50}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\Delta V,~\mathrm{mL}$ $I,~\mathrm{\mu{}A}$ $\alpha$ 0 262 1.000 0.1 139.7 0.530 0.2 81.6 0.307 0.3 48.9 0.182 0.4 29.4 0.107 0.5 18.6 0.065 0.6 13.6 0.046 0.7 9.8 0.031 0.8 7.0 0.021 0.9 5.6 0.015
+\begin{solcard}{A3}{Position one cuvette with $2.8~\mathrm{mL}$ water so that the laser beam passes through its walls normally. Remove the dependence of the transmittance coefficient $\alpha$ on the volume $\Delta V$ of the added milk solution in the range $\Delta V \leq 1~\mathrm{mL}$.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} $\Delta V,~\mathrm{mL}$ $I,~\mathrm{\mu A}$ $\alpha$ 0 262 1.000 0.1 139.7 0.530 0.2 81.6 0.307 0.3 48.9 0.182 0.4 29.4 0.107 0.5 18.6 0.065 0.6 13.6 0.046 0.7 9.8 0.031 0.8 7.0 0.021 0.9 5.6 0.015
 \end{solcard}
 
-\begin{solcard}{А4}{Let a parallel beam of light fall on a layer of milk solution with a thickness of $L$ and a micelle concentration of $n$. Express the transmittance $\alpha$ in terms of $L$, $n$ and the effective scattering area $\delta S$ of the micelles.}{0.30}
+\begin{solcard}{A4}{Let a parallel beam of light fall on a layer of milk solution with a thickness of $L$ and a micelle concentration of $n$. Express the transmittance $\alpha$ in terms of $L$, $n$ and the effective scattering area $\delta S$ of the micelles.}{0.30}
 
 The volume layer $dV=S \cdot dL$ contains $dN=dV\cdot n$ micelles, each of which absorbs light falling on it. Then since the intensity of the absorbed light is proportional to the total absorption area in this layer: $$dI=-I\cdot \frac{dN\delta S}{S}=-I\cdot\delta S\cdot dL\cdot n$$ Integrating this equation, we obtain \[ I = I_0 e^{- L n \, \delta S}\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ \alpha = e^{- L n \, \delta S}\]
+\par\smallskip\noindent\textbf{Answer:} \[ \alpha = e^{- L n \, \delta S}\]
 \end{solcard}
 
 \begin{solcard}{A5}{Linearize the dependence of $\alpha$ on $N$ from A1 and plot it. Determine the parameters of the line.}{0.70}
@@ -85,18 +84,18 @@ The straight line passes through zero and has a slope coefficient $k_\textbf{A6}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{A7}{Assuming that the radius of the micelles is $r_0=60~\text{nm}$, find the number of $P$ casein molecules in each of them. The molar mass of a casein molecule is $23~kg/моль$ (protein is a high-molecular organic substance, therefore it has a gigantic molar mass by the standards of inorganic compounds).}{0.30}
+\begin{solcard}{A7}{Assuming that the radius of the micelles is $r_0=60~\text{nm}$, find the number of $P$ casein molecules in each of them. The molar mass of a casein molecule is $23~kg/\mathrm{mol}$ (protein is a high-molecular organic substance, therefore it has a gigantic molar mass by the standards of inorganic compounds).}{0.30}
 
-According to the condition, the effective scattering area of micelles is equal to: 6.5 \textbackslash{}cdot 10^{22}~\textbackslash{}text{m}^{-3}$ и $P=n_\textbackslash{}mathrm{Cas}/n_0$.
+According to the condition, the effective scattering area of micelles is equal to $6.5 \cdot 10^{22}~\text{m}^{-3}$ and $P=n_\mathrm{Cas}/n_0$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$P = 1.8 \cdot 10^3$$
+\par\smallskip\noindent\textbf{Answer:} $$P = 1.8 \cdot 10^3$$
 \end{solcard}
 
-\begin{solcard}{B1}{Remove the dependence of the steady-state transmittance $\alpha$ on the acid concentration in the solution $c$. Measure the concentration of $c$ in $г$ acid per $1~\mathrm{L}$ solution. At a concentration of $c_\text{крит}$, measure the value $\alpha$ and after $1~\mathrm{m}ин$ after adding a portion of acid and after $20~\mathrm{m}ин$.}{0.90}
+\begin{solcard}{B1}{Remove the dependence of the steady-state transmittance $\alpha$ on the acid concentration in the solution $c$. Measure the concentration of $c$ in $\text{g}$ of acid per $1~\mathrm{L}$ of solution. At a concentration of $c_\text{crit}$, measure the value $\alpha$ and after $1~\text{min}$ after adding a portion of acid and after $20~\text{min}$.}{0.90}
 
-The intensity of unscattered light $I_0=337~\mathrm{\mu{}A}$ At the last point, a dependence on time appears and after $20~\mathrm{m}ин$ the intensity value becomes equal to $I_{2,0.2+19}=56.3~\mathrm{\mu{}A}$.
+The intensity of unscattered light $I_0=337~\mathrm{\mu A}$ At the last point, a dependence on time appears and after $20~\text{min}$ the intensity value becomes equal to $I_{2,0.2+19}=56.3~\mathrm{\mu A}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\Delta V,~\mathrm{mL}$ $I, мкА$ $\alpha$ 0 100.2 0.297 0.1 106.2 0.315 0.2 113.1 0.336 0.3 120.2 0.357 0.4 126.6 0.376 0.5 133 0.395 0.6 137.1 0.407 0.7 145.8 0.433 0.8 150.5 0.447 0.9 151.1 0.448 1.0 151 0.448 0.1 140 0.415 0.2 105.8 0.314
+\par\smallskip\noindent\textbf{Answer:} $\Delta V,~\mathrm{mL}$ $I, \mathrm{\mu A}$ $\alpha$ 0 100.2 0.297 0.1 106.2 0.315 0.2 113.1 0.336 0.3 120.2 0.357 0.4 126.6 0.376 0.5 133 0.395 0.6 137.1 0.407 0.7 145.8 0.433 0.8 150.5 0.447 0.9 151.1 0.448 1.0 151 0.448 0.1 140 0.415 0.2 105.8 0.314
 \end{solcard}
 
 \begin{solcard}{B2}{Recalculate the previously obtained dependence $\alpha(c)$ into $\alpha(\mathrm{pH})$ and plot it.}{1.40}
@@ -111,7 +110,7 @@ Until the volume reaches $4.0~\mathrm{mL}$, the acid concentration is $c=c_0\fra
 
 \begin{solcard}{B3}{Determine the value of $\rm pI$.}{0.20}
 
-The value $\rm pI$ corresponds to $\rm pH$ for $c=c_\text{крит}$
+The value $\rm pI$ corresponds to $\rm pH$ for $c=c_\text{crit}$
 
 
 \[\rm pI = 3.0\]
@@ -120,7 +119,7 @@ The value $\rm pI$ corresponds to $\rm pH$ for $c=c_\text{крит}$
 
 \begin{solcard}{B4}{Estimate the rate of adhesion of micelles $dP/dt$ immediately after bringing the $\rm pH$ solution to $\rm pI$.}{0.40}
 
-Let on average $P$ micelles stick together into one. This means that the concentration of micelles decreased by $P$ times, and the micelle radius increased by $P^{1/3}$ times. This means $-\ln \alpha \propto nr^6$ will increase $P$ times. Then \[\frac{dP}{dt} = \frac{1}{19~\text{mин}}\frac{\ln \dfrac{I_{2,0.2}-I_\mathrm{back}}{I_0 - I_\mathrm{back}}}{\ln \dfrac{I_{2,0.2+19}-I_\mathrm{back}}{I_0 - I_\mathrm{back}}}=8.1 \cdot 10^{-2} ~1/мин\]
+Let on average $P$ micelles stick together into one. This means that the concentration of micelles decreased by $P$ times, and the micelle radius increased by $P^{1/3}$ times. This means $-\ln \alpha \propto nr^6$ will increase $P$ times. Then \[\frac{dP}{dt} = \frac{1}{19~\text{min}}\frac{\ln \dfrac{I_{2,0.2}-I_\mathrm{back}}{I_0 - I_\mathrm{back}}}{\ln \dfrac{I_{2,0.2+19}-I_\mathrm{back}}{I_0 - I_\mathrm{back}}}=8.1 \cdot 10^{-2} ~1/\text{min}\]
 
 \end{solcard}
 
@@ -132,12 +131,12 @@ In water there are $\rm pH=7$ and $\rm pI < 7$, so $q < 0$.
 
 \begin{solcard}{B6}{Plot a linearized graph of $r$ against $\mathrm{pH}$ and from the graph estimate the value of $k$.}{1.70}
 
-Until the volume reaches $4.0~\mathrm{mL}$, the acid concentration is $c=c_0\frac{\Delta V}{3.0~\mathrm{mL} + \Delta V}$, the micelles concentration is $n=n_0 \frac{0.2~\mathrm{mL}}{3.0~\mathrm{mL} + \Delta V}$. After reaching the volume $4.0~\mathrm{mL}$, the acid concentration is \[c = \frac{\frac{c_0}{4} \cdot 3.0~\mathrm{mL} + c_0 \Delta V}{3.0~\mathrm{mL} + \Delta V},\] and the micelle concentration is $n = n_0 \frac{3.0~\mathrm{mL}}{4.0~\mathrm{mL}} \frac{0.2~\mathrm{mL}}{3.0~\mathrm{mL} + \Delta V} $. If the radius of the micelles did not depend on $\rm pH$ or if they did not stick together, then \[-\ln \alpha_\text{th} = nL_0 \cdot \delta S.\]At the same time $\delta S \propto r^6$ and before the start of gluing, the concentration $n$ changes only due to dilution according to the formulas above, therefore \[r = 60~\mathrm{nm} \cdot \left( \frac{\ln \alpha}{-nL_0 \delta S} \right)^{1/6}\]The charge of one molecule of $\kappa$-casein is equal to $q$, which means the charge of the entire micelle is $Nq$. We will consider the micelle as a sphere with a uniform surface charge density $\sigma = Nq/(4\pi r^2)$. In this case, the electric field immediately above the micelle surface is equal to \[E_1 = \frac{1}{4 \pi \varepsilon_0} \frac{Nq}{r^2}\] and the field immediately below the micelle surface is zero. Let us consider a small area of ​​the micelle surface with an area of ​​$dS$. It has a surface charge density of $\sigma$, so it creates an electric field of $E_2=\frac{\sigma}{2 \varepsilon_0}$ on either side of itself. Let us denote the field of the entire rest of the sphere, except for section $dS$, as $E_\text{оsт}$.
+Until the volume reaches $4.0~\mathrm{mL}$, the acid concentration is $c=c_0\frac{\Delta V}{3.0~\mathrm{mL} + \Delta V}$, the micelles concentration is $n=n_0 \frac{0.2~\mathrm{mL}}{3.0~\mathrm{mL} + \Delta V}$. After reaching the volume $4.0~\mathrm{mL}$, the acid concentration is \[c = \frac{\frac{c_0}{4} \cdot 3.0~\mathrm{mL} + c_0 \Delta V}{3.0~\mathrm{mL} + \Delta V},\] and the micelle concentration is $n = n_0 \frac{3.0~\mathrm{mL}}{4.0~\mathrm{mL}} \frac{0.2~\mathrm{mL}}{3.0~\mathrm{mL} + \Delta V} $. If the radius of the micelles did not depend on $\rm pH$ or if they did not stick together, then \[-\ln \alpha_\text{th} = nL_0 \cdot \delta S.\]At the same time $\delta S \propto r^6$ and before the start of gluing, the concentration $n$ changes only due to dilution according to the formulas above, therefore \[r = 60~\mathrm{nm} \cdot \left( \frac{\ln \alpha}{-nL_0 \delta S} \right)^{1/6}\]The charge of one molecule of $\kappa$-casein is equal to $q$, which means the charge of the entire micelle is $Nq$. We will consider the micelle as a sphere with a uniform surface charge density $\sigma = Nq/(4\pi r^2)$. In this case, the electric field immediately above the micelle surface is equal to \[E_1 = \frac{1}{4 \pi \varepsilon_0} \frac{Nq}{r^2}\] and the field immediately below the micelle surface is zero. Let us consider a small area of the micelle surface with an area of $dS$. It has a surface charge density of $\sigma$, so it creates an electric field of $E_2=\frac{\sigma}{2 \varepsilon_0}$ on either side of itself. Let us denote the field of the entire rest of the sphere, except for section $dS$, as $E_\text{rest}$.
 
 
-The total electric field is the sum of $E_2$ and $E_\text{оsт}$, therefore \[\begin{cases} E_2 + E_\text{оsт}  = E_1\\ -E_2 + E_\text{оsт} = 0 \end{cases} \quad \Rightarrow \quad E_\text{оsт} = E_2 = \frac{E_1}{2} = \frac{1}{8 \pi \varepsilon_0}\frac{Nq}{r^2}.\] This means that each $\kappa$-casein molecule is in the field $E_\text{оsт}$ and therefore an electrostatic force \[F = \frac{Nq^2}{8 \pi \varepsilon_0 r^2},\] acts on its end, which is balanced by the elastic force $k(r-r_0)$. In this case, the absolute value of the radius $r$ of the micelle changes very little, which can be confirmed by direct calculation. Final linearization: \[r = r_0 + \frac{N e^2 (9.5 \cdot 10^{-4})^2}{8 \pi \varepsilon_0 k \cdot (60 нм)^2} \left( 10^\mathrm{pH} - 10^{\mathrm{pI}}\right)^2.\]Denote $X= \left( 10^\mathrm{pH} - 10^{\mathrm{pI}}\right)^2$ and remove the point $\rm pH < 3.1$ from the dependence because in them the radius begins to increase, which is associated with the process of gluing micelles
+The total electric field is the sum of $E_2$ and $E_\text{rest}$, therefore \[\begin{cases} E_2 + E_\text{rest}  = E_1\\ -E_2 + E_\text{rest} = 0 \end{cases} \quad \Rightarrow \quad E_\text{rest} = E_2 = \frac{E_1}{2} = \frac{1}{8 \pi \varepsilon_0}\frac{Nq}{r^2}.\] This means that each $\kappa$-casein molecule is in the field $E_\text{rest}$ and therefore an electrostatic force \[F = \frac{Nq^2}{8 \pi \varepsilon_0 r^2},\] acts on its end, which is balanced by the elastic force $k(r-r_0)$. In this case, the absolute value of the radius $r$ of the micelle changes very little, which can be confirmed by direct calculation. Final linearization: \[r = r_0 + \frac{N e^2 (9.5 \cdot 10^{-4})^2}{8 \pi \varepsilon_0 k \cdot (60 \mathrm{nm})^2} \left( 10^\mathrm{pH} - 10^{\mathrm{pI}}\right)^2.\]Denote $X= \left( 10^\mathrm{pH} - 10^{\mathrm{pI}}\right)^2$ and remove the point $\rm pH < 3.1$ from the dependence because in them the radius begins to increase, which is associated with the process of gluing micelles
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The resulting graph only allows us to estimate the value of $k$ in order of magnitude - this is due to the small step in concentration and the absence of additional methods for measuring the micelle radius. However, $k_\textbf{B6}=0.23 \cdot 10^{-6}~\text{nm}$ and therefore $k=0.9~\text{N}/\text{m}$.
+\par\smallskip\noindent\textbf{Answer:} The resulting graph only allows us to estimate the value of $k$ in order of magnitude - this is due to the small step in concentration and the absence of additional methods for measuring the micelle radius. However, $k_\textbf{B6}=0.23 \cdot 10^{-6}~\text{nm}$ and therefore $k=0.9~\text{N}/\text{m}$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig5.jpg}

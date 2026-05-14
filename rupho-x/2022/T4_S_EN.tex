@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,32 +30,32 @@
 \author{\normalsize X22 (2022) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{What is the speed of the satellites $v$ at the moment of launch? Express your answer in terms of $G$, $М_З$ and $R_З$.}{0.40}
+\begin{solcard}{A1}{What is the speed of the satellites $v$ at the moment of launch? Express your answer in terms of $G$, $M_\text{E}$ and $R_\text{E}$.}{0.40}
 
 Since when only one of the satellites is launched into orbit, its trajectory will be a parabola, then the speed $v$ is equal to the second escape velocity for the Earth, that is:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ v = \sqrt{\frac{2GM_З}{R_З}} \]
+\par\smallskip\noindent\textbf{Answer:} \[ v = \sqrt{\frac{2GM_\text{E}}{R_\text{E}}} \]
 \end{solcard}
 
-\begin{solcard}{A2}{At what distance from the center of the Earth $R_0$ is the point $P$ of intersection of the satellite trajectories? Express your answer using $R_\text{З}$.}{0.60}
+\begin{solcard}{A2}{At what distance from the center of the Earth $R_0$ is the point $P$ of intersection of the satellite trajectories? Express your answer using $R_\text{\text{E}}$.}{0.60}
 
-To move along the parabola $$r=\frac{p}{1+\cos\theta} $$ At the point старта спутников $$R_\text{З}=\frac{p}{2} $$ hence $$p=2R_{\text{З}} $$ where $p$ - фокальный parameter. Next,  since орбиты симметричны, parameter $\theta$ equals $\frac{\pi}{2}$ for both satellites, from where
+To move along the parabola $$r=\frac{p}{1+\cos\theta} $$ in point launch satellites $$R_\text{\text{E}}=\frac{p}{2} $$ from which $$p=2R_{\text{\text{E}}} $$ where $p$ - focal parameter. Further,  since orbit symmetric, parameter $\theta$ equal $\frac{\pi}{2}$ for both satellites, from where
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$R_0=2R_\text{З} $$
+\par\smallskip\noindent\textbf{Answer:} $$R_0=2R_\text{\text{E}} $$
 \end{solcard}
 
 \begin{solcard}{A3}{What is the angle $\varphi$ between the directions of satellite velocities at point $P$?}{0.80}
 
-For each of the satellites at point $P$ can be found from the law of conservation of energy $$v_P=\frac{v}{\sqrt{2}} $$ From angular momentum conservation $$vR_\text{З}={v_\perp}R_0=2Rv_\perp $$ Hence $$\frac{v_\perp}{v_P}=\frac{1}{\sqrt{2}} $$ Значит, vector скорости at the point $P$ составляет angle $\alpha=\frac{\pi}{4}$ с radius vectorом. Then from симметрии орбит $$\varphi=2\alpha=\frac{\pi}{2} $$ Also, the answer can be easily obtained from the optical property of a parabola.
+For each of the satellites at point $P$ can be found from the law of conservation of energy $$v_P=\frac{v}{\sqrt{2}} $$ From angular momentum conservation $$vR_\text{\text{E}}={v_\perp}R_0=2Rv_\perp $$ From which $$\frac{v_\perp}{v_P}=\frac{1}{\sqrt{2}} $$ Means, vector velocity in point $P$ constitute angle $\alpha=\frac{\pi}{4}$ with radius vector. Then from symmetry orbit $$\varphi=2\alpha=\frac{\pi}{2} $$ Also, the answer can be easily obtained from the optical property of a parabola.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\varphi=2\alpha=\frac{\pi}{2} $$
+\par\smallskip\noindent\textbf{Answer:} $$\varphi=2\alpha=\frac{\pi}{2} $$
 \end{solcard}
 
-\begin{solcard}{A4}{Find the time $t_0$ after which the satellites reach point $P$. Express your answer using $G$, $R_\text{З}$ and $M_\text{З}$.}{1.50}
+\begin{solcard}{A4}{Find the time $t_0$ after which the satellites reach point $P$. Express your answer using $G$, $R_\text{\text{E}}$ and $M_\text{\text{E}}$.}{1.50}
 
-The expression for the sectorial speed is as follows $$\frac{dS}{dt}=\frac{L}{2m}=\sqrt{\frac{G{M_\text{З}}R_\text{З}}{2}} $$ Hence $$t_0=\frac{S}{\sqrt{\frac{G{M_\text{З}}R_\text{З}}{2}}} $$ where $S$ - area, заметаемая radius-vectorом от точки старта до точки $P$. Направим ось $y$ по направлению на точку старта from центра Земли, а ось $x$ перпендикулярно ей. From the equation vaporаболы в полярных координатах $$p=r(1+\cos\theta)=r+y $$ hence $$r^2=y^2+x^2=p^2+y^2-2py $$ We get $$y(x)=\frac{p}{2}-\frac{x^2}{2p}=R-\frac{x^2}{4R} $$ Then $$S=\int\limits_0^{2R_{\text{З}}}ydx=\int\limits_0^{2R}\left(R-\frac{x^2}{4R}\right)dx=2R^2-\frac{8R^3}{12R^2}=\frac{4R^2}{3} $$ from here
+The expression for the sectorial speed is as follows $$\frac{dS}{dt}=\frac{L}{2m}=\sqrt{\frac{G{M_\text{\text{E}}}R_\text{\text{E}}}{2}} $$ From which $$t_0=\frac{S}{\sqrt{\frac{G{M_\text{\text{E}}}R_\text{\text{E}}}{2}}} $$ where $S$ - area, swept radius-vector from point launch to point $P$. Direct axis $y$ by direction on point launch from center Earth, and axis $x$ perpendicularly it. From the equation parabola in polar coordinate $$p=r(1+\cos\theta)=r+y $$ from which $$r^2=y^2+x^2=p^2+y^2-2py $$ Obtain $$y(x)=\frac{p}{2}-\frac{x^2}{2p}=R-\frac{x^2}{4R} $$ Then $$S=\int\limits_0^{2R_{\text{\text{E}}}}ydx=\int\limits_0^{2R}\left(R-\frac{x^2}{4R}\right)dx=2R^2-\frac{8R^3}{12R^2}=\frac{4R^2}{3} $$ from here
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$t_0=\frac{4\sqrt{2}}{3}\sqrt{\frac{R^3_\text{З}}{GM_\text{З}}} $$
+\par\smallskip\noindent\textbf{Answer:} $$t_0=\frac{4\sqrt{2}}{3}\sqrt{\frac{R^3_\text{\text{E}}}{GM_\text{\text{E}}}} $$
 \end{solcard}
 
 \begin{solcard}{B1}{Assuming that near the point $P$ the satellites moved along straight lines, the directions of which coincided with the directions of their velocities at this point, find the relative speed of the satellites $v_0$, as well as the minimum distance $b$ between them, neglecting their gravitational interaction. Express your answer using $v$ and $\tau$.}{0.70}
@@ -66,42 +65,42 @@ Let us denote by $v_P$ the speed of the satellites at point $P$. The speeds of t
 
 At the moment when the satellite $1$ passes the point $P$, the satellite $2$ is at a distance $l=v_P\tau$ from it, and the angle between the relative velocity vector and the relative radius vector of the particle $1$ is equal to $\frac{3\pi}{4}$. Thus $b=\frac{l}{\sqrt{2}}$ and
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_0=v$$
+\par\smallskip\noindent\textbf{Answer:} $$v_0=v$$
 \end{solcard}
 
 \begin{solcard}{B2}{Find $u$. Express your answer using $v$.}{1.00}
 
-The absolute values ​​of the initial and final relative velocities of the satellite $1$ coincide. From the law of addition of velocities $$\vec{u}=\vec{v}_{2_P}+\vec{v}_\text{отн} $$ Let $\beta$ - angle между vectorами $\vec{u}$ and $\vec{v}_\text{rel}$. Then from теоремы синусов $$\frac{v_P}{\sin(\beta)}=\frac{v_0}{\sin\left(\frac{\pi}{4}\right)} $$ hence $$\beta=\frac{\pi}{6} $$ For $v_1$ we get $$u=v_P\cos\frac{\pi}{4}+v_0\cos\beta$$
+The absolute values of the initial and final relative velocities of the satellite $1$ coincide. From the law of addition of velocities $$\vec{u}=\vec{v}_{2_P}+\vec{v}_\text{rel} $$ Let $\beta$ - angle between vector $\vec{u}$ and $\vec{v}_\text{rel}$. Then from theorem sine $$\frac{v_P}{\sin(\beta)}=\frac{v_0}{\sin\left(\frac{\pi}{4}\right)} $$ from which $$\beta=\frac{\pi}{6} $$ For $v_1$ obtain $$u=v_P\cos\frac{\pi}{4}+v_0\cos\beta$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$u=v_P\cos\frac{\pi}{4}+v_0\cos\beta=v\cdot{\frac{1+\sqrt{3}}{2}} $$
+\par\smallskip\noindent\textbf{Answer:} $$u=v_P\cos\frac{\pi}{4}+v_0\cos\beta=v\cdot{\frac{1+\sqrt{3}}{2}} $$
 \end{solcard}
 
-\begin{solcard}{B3}{Find $\tau$. Express your answer in terms of $G$, $M_2$, $M_3$ and $R_\text{З}$.}{2.30}
+\begin{solcard}{B3}{Find $\tau$. Express your answer in terms of $G$, $M_2$, $M_3$ and $R_\text{\text{E}}$.}{2.30}
 
-For eccentricity we have $$e=\frac{1}{\cos\left(\frac{\beta}{2}\right)}=\frac{1}{\cos\left(\frac{\pi}{12}\right)} $$ Expression for эксцентриситета $$e=\sqrt{1+\frac{v^4b^2}{G^2M^2_2}} $$ Hence $$\frac{4}{2+\sqrt{3}}=1+\frac{v^4b^2}{G^2M^2_2} $$ Or $$2-\sqrt{3}=\frac{v^2b}{GM_2}=\frac{2bM_\text{З}}{R_\text{З}M_2} $$ From
+For eccentricity we have $$e=\frac{1}{\cos\left(\frac{\beta}{2}\right)}=\frac{1}{\cos\left(\frac{\pi}{12}\right)} $$ Expression for eccentricity $$e=\sqrt{1+\frac{v^4b^2}{G^2M^2_2}} $$ From which $$\frac{4}{2+\sqrt{3}}=1+\frac{v^4b^2}{G^2M^2_2} $$ Or $$2-\sqrt{3}=\frac{v^2b}{GM_2}=\frac{2bM_\text{\text{E}}}{R_\text{\text{E}}M_2} $$ From
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\tau=\left(2-\sqrt{3}\right)\sqrt{\frac{R^3_\text{З}}{2GM_\text{З}}}\cdot{\frac{M_2}{M_\text{З}}} $$
+\par\smallskip\noindent\textbf{Answer:} $$\tau=\left(2-\sqrt{3}\right)\sqrt{\frac{R^3_\text{\text{E}}}{2GM_\text{\text{E}}}}\cdot{\frac{M_2}{M_\text{\text{E}}}} $$
 \end{solcard}
 
 \begin{solcard}{C1}{Find the speed $v_\infty$ of satellite 1 at an infinite distance from the Earth. Express your answer using $v$.}{1.00}
 
-From the law of conservation of energy $$\frac{E}{M_1}=\frac{u^2}{2}-\frac{GM_\text{З}}{2R_\text{З}}=\frac{v^2_\infty}{2} $$ Taking into account поrayенные ранее соотношения $$v^2\cdot{\frac{(1+\sqrt{3})^2}{8}}-\frac{v^2}{4}=\frac{v^2_\infty}{2}=v^2\cdot{\frac{1+\sqrt{3}}{4}} $$ From
+From the law of conservation of energy $$\frac{E}{M_1}=\frac{u^2}{2}-\frac{GM_\text{\text{E}}}{2R_\text{\text{E}}}=\frac{v^2_\infty}{2} $$ Account for obtain earlier relation $$v^2\cdot{\frac{(1+\sqrt{3})^2}{8}}-\frac{v^2}{4}=\frac{v^2_\infty}{2}=v^2\cdot{\frac{1+\sqrt{3}}{4}} $$ From
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_\infty=v\sqrt{\frac{1+\sqrt{3}}{2}} $$
+\par\smallskip\noindent\textbf{Answer:} $$v_\infty=v\sqrt{\frac{1+\sqrt{3}}{2}} $$
 \end{solcard}
 
 \begin{solcard}{C2}{Find the angle $\varphi_\infty$ between vectors $\vec{u}$ and $\vec{v}_\infty$.}{1.50}
 
-The expression for the orbital eccentricity is as follows: $$e=\sqrt{1+\left(\frac{{v_\infty}\cdot{u}\cdot{2R}}{GM_\text{З}}\right)^2}=\sqrt{1+\left((1+\sqrt{3})^{\frac{3}{2}}\cdot{\sqrt{2}}\right)^2} $$ From
+The expression for the orbital eccentricity is as follows: $$e=\sqrt{1+\left(\frac{{v_\infty}\cdot{u}\cdot{2R}}{GM_\text{\text{E}}}\right)^2}=\sqrt{1+\left((1+\sqrt{3})^{\frac{3}{2}}\cdot{\sqrt{2}}\right)^2} $$ From
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\varphi_\infty=\frac{\pi}{2}-\arccos\left(\frac{1}{\sqrt{1+2(1+\sqrt{3})^3}}\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$\varphi_\infty=\frac{\pi}{2}-\arccos\left(\frac{1}{\sqrt{1+2(1+\sqrt{3})^3}}\right) $$
 \end{solcard}
 
-\begin{solcard}{С3}{Is it really possible to put a satellite into orbit this way? Justify your answer.}{0.20}
+\begin{solcard}{C3}{Is it really possible to put a satellite into orbit this way? Justify your answer.}{0.20}
 
-Gravity is the “weakest” of the four fundamental interactions. The main manifestation of gravity that we encounter in everyday life is the Earth’s gravitational field; Although any objects with mass interact with each other in this way, this interaction can almost always be neglected. Let us give quantitative estimates of the question of whether two artificial Earth satellites can so significantly influence each other’s trajectories. The mass of the heaviest $\textit{способных передвигаться}$ structures built by mankind can reach several hundred thousand tons (for example, aircraft carriers). Let's assume that the mass is $M_2 \sim 10^9 $kg. Then, to perform the maneuver specified in the problem, the impact parameter $b$ in order of magnitude can be estimated as $$ b \sim \frac{M_2}{M_3} R_3 $$ Using $M_3 = 6 \cdot 10^{24} $kg, $R_3 = 6.4 \cdot 10^6$ м, we get: $$ b \sim 10^{-9} \text{m}, $$ which is comparable to interatomic distances. As one would expect, in reality the gravitational attraction of the satellite is negligible.
+Gravity is the “weakest” of the four fundamental interactions. The main manifestation of gravity that we encounter in everyday life is the Earth’s gravitational field; Although any objects with mass interact with each other in this way, this interaction can almost always be neglected. Let us give quantitative estimates of the question of whether two artificial Earth satellites can so significantly influence each other’s trajectories. The mass of the heaviest $\textit{capable move}$ structures built by mankind can reach several hundred thousand tons (for example, aircraft carriers). Let's assume that the mass is $M_2 \sim 10^9 $kg. Then, to perform the maneuver specified in the problem, the impact parameter $b$ in order of magnitude can be estimated as $$ b \sim \frac{M_2}{M_3} R_3 $$ Use $M_3 = 6 \cdot 10^{24} $kg, $R_3 = 6.4 \cdot 10^6$ \text{m}, obtain: $$ b \sim 10^{-9} \text{m}, $$ which is comparable to interatomic distances. As one would expect, in reality the gravitational attraction of the satellite is negligible.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} No
+\par\smallskip\noindent\textbf{Answer:} No
 \end{solcard}
 
 \end{document}

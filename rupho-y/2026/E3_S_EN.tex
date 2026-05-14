@@ -2,6 +2,7 @@
 \usepackage[margin=0.85in,top=1in,bottom=1in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
+\graphicspath{{./}{E3_S_EN_assets/}}
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{microtype}
@@ -9,14 +10,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -43,8 +43,8 @@ Starting from the second, the breakdown of the MCH leads to a penalty of 1 point
 \begin{solcard}{A0}{Write down the number of the mechanical black box issued to you.}{0.10}
 \end{solcard}
 
-\begin{solcard}{A1}{Measure and record the values ​​of the mass $(M + m)$ and length $L$ of the MCH.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$(M+m) = 199,2 ~ \text{g}$$$$L = 45,0 ~ \text{cm}$$
+\begin{solcard}{A1}{Measure and record the values of the mass $(M + m)$ and length $L$ of the MCH.}{0.10}
+\par\smallskip\noindent\textbf{Answer:} $$(M+m) = 199,2 ~ \text{g}$$$$L = 45,0 ~ \text{cm}$$
 \end{solcard}
 
 \begin{solcard}{A2}{Using drawings, describe the measurement method that allows you to obtain the product $m \cdot x_0$ of the mass of the bob and its equilibrium coordinate.}{0.90}
@@ -54,15 +54,15 @@ We will find the coordinate of the center of mass by placing the MCN on the edge
 
 Note. An alternative way to eliminate friction is to tap or roll the box on the table to bring the weight into equilibrium.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ m\cdot {x_0} = (M+m) x_{cm}$$ We will find the coordinate of the center of mass by placing the MCN on the edge of the table so that the MCN almost turns over. Let's take 2 measurements. In the first case, we smoothly transfer the MCH from a vertical position with a weight from below to a horizontal one, in the second, from a vertical position with a weight on top. This is necessary to average the static friction force. Note. An alternative way to eliminate friction is to tap or roll the box on the table to bring the weight into equilibrium.
+\par\smallskip\noindent\textbf{Answer:} $$ m\cdot {x_0} = (M+m) x_{cm}$$ We will find the coordinate of the center of mass by placing the MCN on the edge of the table so that the MCN almost turns over. Let's take 2 measurements. In the first case, we smoothly transfer the MCH from a vertical position with a weight from below to a horizontal one, in the second, from a vertical position with a weight on top. This is necessary to average the static friction force. Note. An alternative way to eliminate friction is to tap or roll the box on the table to bring the weight into equilibrium.
 \end{solcard}
 
 \begin{solcard}{A3}{Experimentally determine the value of $m \cdot x_0$ and estimate its error.}{0.60}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x_{cm1} = 2,\!1 ~ \text{cm}$$$$x_{cm2} = 1,\!9 ~ \text{cm}$$$$x_{cm} = \frac{x_{cm1} + x_{cm2}}{2} = 2,\!0 ~ \text{cm}$$$$m \cdot x_0 = (400 \pm 20) ~ \text{g}\cdot \text{cm}$$
+\par\smallskip\noindent\textbf{Answer:} $$x_{cm1} = 2,\!1 ~ \text{cm}$$$$x_{cm2} = 1,\!9 ~ \text{cm}$$$$x_{cm} = \frac{x_{cm1} + x_{cm2}}{2} = 2,\!0 ~ \text{cm}$$$$m \cdot x_0 = (400 \pm 20) ~ \text{g}\cdot \text{cm}$$
 \end{solcard}
 
 \begin{solcard}{B0}{Measure and record the exact masses of the anchors and pancake given to you.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$m_0(100~\text{g}) = 100.75~\mathrm{g}$$$$m_{\text{б}} = 99.89~\mathrm{g}$$$$m_0(\text{бLинчик}) = 40.78~\mathrm{g}$$
+\par\smallskip\noindent\textbf{Answer:} $$m_0(100~\text{g}) = 100.75~\mathrm{g}$$$$m_{\text{ball}} = 99.89~\mathrm{g}$$$$m_0(\text{disk}) = 40.78~\mathrm{g}$$
 \end{solcard}
 
 \begin{solcard}{B1}{Sketch the characteristic appearance of the signal on an oscilloscope when the armature passes through the photogate. Specify between which points you will measure the time of passage of the anchor.}{0.60}
@@ -72,7 +72,7 @@ Typical appearance of an oscilloscope signal.
 
 Typical view of the oscilloscope signal (approximate).
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} We will measure the time between the midpoints of the inclined sections (the cursors are positioned at the measurement points). Because the weight is large enough, it will gradually cover the space between the LED and the photodiode, and at the moment when the intensity drops by 2 times, the weight will cover half of the space, i.e. the lower (upper) edge of the weight will be located just between the LED and the photodiode.
+\par\smallskip\noindent\textbf{Answer:} We will measure the time between the midpoints of the inclined sections (the cursors are positioned at the measurement points). Because the weight is large enough, it will gradually cover the space between the LED and the photodiode, and at the moment when the intensity drops by 2 times, the weight will cover half of the space, i.e. the lower (upper) edge of the weight will be located just between the LED and the photodiode.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E3_S_EN_assets/fig1.jpg}
@@ -83,7 +83,7 @@ Typical view of the oscilloscope signal (approximate).
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{B2}{Measure the speed of the armature $v$ for various values ​​of its downward displacement $h$ in the range $[5; 90] ~ \text{cm}$ in steps of $5 ~ \text{cm}$. For each $h$, measure the speed at least 3 times. Attention! After each change in the position of the photogates, make sure that the anchor does not touch them when moving!}{2.00}
+\begin{solcard}{B2}{Measure the speed of the armature $v$ for various values of its downward displacement $h$ in the range $[5; 90] ~ \text{cm}$ in steps of $5 ~ \text{cm}$. For each $h$, measure the speed at least 3 times. Attention! After each change in the position of the photogates, make sure that the anchor does not touch them when moving!}{2.00}
 
 Attention! After each change in the position of the photogates, make sure that the anchor does not touch them when moving!
 
@@ -96,19 +96,19 @@ $$d = 3.9~cm$$
 \end{solcard}
 
 \begin{solcard}{B3}{Show that $v^2 = \gamma_1 h$ is in the slow rotation range and $v^2 = \gamma_2 h + b$ is in the fast rotation range.}{0.60}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The frictional force is equivalent to an increase in the moment of inertia of all rotating parts by $\frac{1}{\alpha}$ times. Then we can write the ZSE: $$\frac{I\omega^2}{2\alpha} + \frac{m_0 v^2}{2} + const= m_0gh$$since $v = \omega R$ $$v^2 + const = \gamma h $$In the case of медленного вращения $v(h\! =\! 0) = 0$, therefore $const = 0$. Then можем записать for медленного and быстрого вращения соответственно: $$v^2 = \gamma_1h$$$$v^2 = \gamma_2 h+ b $$
+\par\smallskip\noindent\textbf{Answer:} The frictional force is equivalent to an increase in the moment of inertia of all rotating parts by $\frac{1}{\alpha}$ times. Then we can write the ZSE: $$\frac{I\omega^2}{2\alpha} + \frac{m_0 v^2}{2} + const= m_0gh$$thus. to. $v = \omega R$ $$v^2 + const = \gamma h $$In the case of slow rotation $v(h\! =\! 0) = 0$, means $const = 0$. Then can write for slow and fast rotation correspondingly: $$v^2 = \gamma_1h$$$$v^2 = \gamma_2 h+ b $$
 \end{solcard}
 
 \begin{solcard}{B4}{Express the coefficients $\gamma_1$ and $\gamma_2$ in terms of $m$, $m_{0}$, $x_0$, $L$, $\delta$, $g$, $\alpha,$, $R$, $I_B$ and $I_1$.}{0.80}
 
-$$ m_0\ddot{h} = m_0g - T \\ I\dot{\omega} = \alpha TR$$Excluding $T$ and substituting $\dot{h} = \omega R$ we get: $$\ddot{h} = \frac{\alpha m_0 g R^2}{I + \alpha m_0R^2}$$We use следующее equality $\gamma = \frac{d{v^2}}{d{h}} = 2\ddot{h}$: $$\gamma = \frac{2\alpha m_0 g R^2}{I + \alpha m_0R^2}$$Then substituting expression for momentа инерции we get: $$\gamma = \frac{2\alpha m_0 g R^2}{\alpha m_0R^2 + I_B + I_1 + mx^2}$$For медленного сrayая $x = x_0$, for быстрого $x = \frac{L}{2}-\delta$:
+$$ m_0\ddot{h} = m_0g - T \\ I\dot{\omega} = \alpha TR$$Eliminating $T$ and substituting $\dot{h} = \omega R$ obtain: $$\ddot{h} = \frac{\alpha m_0 g R^2}{I + \alpha m_0R^2}$$Use following equality $\gamma = \frac{d{v^2}}{d{h}} = 2\ddot{h}$: $$\gamma = \frac{2\alpha m_0 g R^2}{I + \alpha m_0R^2}$$Then substitute expression for moment inertia obtain: $$\gamma = \frac{2\alpha m_0 g R^2}{\alpha m_0R^2 + I_B + I_1 + mx^2}$$For slow case $x = x_0$, for fast $x = \frac{L}{2}-\delta$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\gamma_1 = \frac{2\alpha m_0 g R^2}{\alpha m_0R^2 + I_B + I_1 + mx_0^2}$$$$\gamma_2 = \frac{2\alpha m_0 g R^2}{\alpha m_0R^2 + I_B + I_1 + m(\frac{L}{2} - \delta)^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$\gamma_1 = \frac{2\alpha m_0 g R^2}{\alpha m_0R^2 + I_B + I_1 + mx_0^2}$$$$\gamma_2 = \frac{2\alpha m_0 g R^2}{\alpha m_0R^2 + I_B + I_1 + m(\frac{L}{2} - \delta)^2}$$
 \end{solcard}
 
 \begin{solcard}{B5}{Construct a linearized graph of the relationship obtained in step B2. Indicate the ranges of slow and fast rotation on your answer sheets.}{1.20}
 
-Characteristic appearance of the graph: Slow rotation at $v < 0.17~\frac{\mathrm{m}}{\mathrm{s}}$ Fast rotation at $v>0.20~\frac{\mathrm{m}}{\mathrm{s}}$ In the section of the dependence where fast rotation is observed, oscillations with a characteristic period along $h$ approximately $15~cm$ are visible. Note. Oscillations at the end of the graph arise from vibrations of the table, the characteristic period of which coincides with the perimeter of the cylindrical stand.
+Characteristic appearance of the graph: Slow rotation at $v < 0.17~\frac{\text{m}}{\text{s}}$ Fast rotation at $v>0.20~\frac{\text{m}}{\text{s}}$ In the section of the dependence where fast rotation is observed, oscillations with a characteristic period along $h$ approximately $15~cm$ are visible. Note. Oscillations at the end of the graph arise from vibrations of the table, the characteristic period of which coincides with the perimeter of the cylindrical stand.
 
 
 Note. Oscillations at the end of the graph arise from vibrations of the table, the characteristic period of which coincides with the perimeter of the cylindrical stand.
@@ -159,24 +159,24 @@ Almost the entire dependence is in the range of fast rotation.
 
 \begin{solcard}{B10}{Using the results from B4, B7, B9, obtain an expression for the mass $m$ of the weight. Express your answer through $m_{01}$ - the mass of the light anchor, $m_{02}$ - the mass of the heavy anchor, $L$, $\delta$, $R$, $\alpha$, $m \cdot x_0$, $g$, $\gamma_1$, $\gamma_2$.}{0.80}
 
-$$x_0 = \frac{(mx_0)}{m}$$Перепишем уравнения в следующем виде: \textbackslash{}begin{cases} I_B +I_1 + m(\textbackslash{}frac{L}{2}-\textbackslash{}delta)^2 + \textbackslash{}alpha m_{02}R^2 = 2\textbackslash{}alpha R^2g\textbackslash{}frac{ m_{02}}{\textbackslash{}gamma_2} \textbackslash{}\textbackslash{} I_B +I_1 + mx_0^2 + \textbackslash{}alpha m_{01}R^2 = 2\textbackslash{}alpha R^2g\textbackslash{}frac{ m_{01}}{\textbackslash{}gamma_1} \textbackslash{}end{cases} Subtracting данные уравнения: $$m\left(\left(\frac{L}{2} - \delta\right)^2 - \frac{(mx_0)^2}{m^2}\right) = 2\alpha R^2 \left(\frac{m_{02}g}{\gamma_2} - \frac{m_{01}g}{\gamma_1} +\frac{m_{01} - m_{02}}2\right)$$Solving the quadratic equation we get the answer:
+$$x_0 = \frac{(mx_0)}{m}.$$ Rewrite the equations in the following form: $$\begin{cases} I_B + I_1 + m\left(\frac{L}{2}-\delta\right)^2 + \alpha m_{02}R^2 = 2\alpha R^2 g \frac{m_{02}}{\gamma_2}, \\ I_B + I_1 + m x_0^2 + \alpha m_{01}R^2 = 2\alpha R^2 g \frac{m_{01}}{\gamma_1}. \end{cases}$$ Subtracting gives the equation: $$m\left(\left(\frac{L}{2} - \delta\right)^2 - \frac{(mx_0)^2}{m^2}\right) = 2\alpha R^2 \left(\frac{m_{02}g}{\gamma_2} - \frac{m_{01}g}{\gamma_1} +\frac{m_{01} - m_{02}}2\right)$$Solving the quadratic equation we get the answer:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$m = \cfrac{\alpha R^2 \left(\frac{m_{02}g}{\gamma_2} - \frac{m_{01}g}{\gamma_1} +\frac{m_{01} - m_{02}}2\right) + \sqrt{\alpha^2 R^4 \left(\frac{m_{02}g}{\gamma_2} - \frac{m_{01}g}{\gamma_1} +\frac{m_{01} - m_{02}}2\right)^2+ \left(\frac{L}{2} - \delta\right)^2 (mx_0)^2}}{\left(\frac{L}{2} - \delta\right)^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$m = \cfrac{\alpha R^2 \left(\frac{m_{02}g}{\gamma_2} - \frac{m_{01}g}{\gamma_1} +\frac{m_{01} - m_{02}}2\right) + \sqrt{\alpha^2 R^4 \left(\frac{m_{02}g}{\gamma_2} - \frac{m_{01}g}{\gamma_1} +\frac{m_{01} - m_{02}}2\right)^2+ \left(\frac{L}{2} - \delta\right)^2 (mx_0)^2}}{\left(\frac{L}{2} - \delta\right)^2}$$
 \end{solcard}
 
-\begin{solcard}{B11}{Calculate the values ​​of $m$ and $x_0$ and estimate their errors.}{1.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$m = (80 \pm 30)~\mathrm{g}$$$$x_0 = (5 \pm 2)~cm$$
+\begin{solcard}{B11}{Calculate the values of $m$ and $x_0$ and estimate their errors.}{1.20}
+\par\smallskip\noindent\textbf{Answer:} $$m = (80 \pm 30)~\mathrm{g}$$$$x_0 = (5 \pm 2)~cm$$
 \end{solcard}
 
 \begin{solcard}{C0}{Measure and record the distance $D$.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$D = (3.7 \pm 0.1)~cm$$
+\par\smallskip\noindent\textbf{Answer:} $$D = (3.7 \pm 0.1)~cm$$
 \end{solcard}
 
 \begin{solcard}{C1}{Write down an expression for the effective stiffness $k$ of such a spring system in terms of $k_1$ and $k_2$.}{0.50}
 
-Let's consider the forces acting on the weight from the springs (axis $x$ is directed towards $k_1$): $$F = k_1\left(\frac{L}{2}-x\right) - k_2\left(\frac{L}{2}+x\right)$$$$F = \frac{L}{2}\left(k_1-k_2\right) - x(k_1+k_2)$$It can be seen that for/at смещении на грузик действует force $\Delta F = (k_1 + k_2)\Delta x = k\Delta x$
+Let's consider the forces acting on the weight from the springs (axis $x$ is directed towards $k_1$): $$F = k_1\left(\frac{L}{2}-x\right) - k_2\left(\frac{L}{2}+x\right)$$$$F = \frac{L}{2}\left(k_1-k_2\right) - x(k_1+k_2)$$It can be seen, that for a displacement, on the weight there acts a force $\Delta F = (k_1 + k_2)\Delta x = k\Delta x$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$k = k_1 + k_2$$
+\par\smallskip\noindent\textbf{Answer:} $$k = k_1 + k_2$$
 \end{solcard}
 
 \begin{solcard}{C2}{Measure the periods $T_1$ of oscillation of the MCH as a pendulum in the first position (in the figure on the left) and $T_2$ in the second position (in the figure on the right). Attention! Take measurements with the greatest possible accuracy, because... this is important to obtain an accurate result.}{1.20}
@@ -195,30 +195,30 @@ Then the periods are:
 
 $$T_2 = (1.220 \pm 0.001)~\mathrm{s}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T_1 = (1.261 \pm 0.001)~\mathrm{s}$$ $$T_2 = (1.220 \pm 0.001)~\mathrm{s}$$
+\par\smallskip\noindent\textbf{Answer:} $$T_1 = (1.261 \pm 0.001)~\mathrm{s}$$ $$T_2 = (1.220 \pm 0.001)~\mathrm{s}$$
 \end{solcard}
 
 \begin{solcard}{C3}{Express the periods of oscillation $T_1$ and $T_2$ in terms of $M$, $m$, $L$, $D$, $x_0$, $\Delta x$, $g$, $I_0$ and $I_1$.}{0.80}
 
 Let us write down the moments of forces acting on the pendulum: $$I\ddot{\varphi} = -\varphi\left(Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D\pm x_0+\Delta x\right)\right)$$The sign is chosen in accordance with the orientation of the MCH. Then the periods of oscillation:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T_1 = 2\pi \sqrt{\frac{I_0+I_1+m\left(\frac{L}{2}+D+x_0+\Delta x\right)^2}{Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D+ x_0+\Delta x\right)}}$$$$T_2 = 2\pi \sqrt{\frac{I_0+I_1+m\left(\frac{L}{2}+D-x_0+\Delta x\right)^2}{Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D- x_0+\Delta x\right)}}$$
+\par\smallskip\noindent\textbf{Answer:} $$T_1 = 2\pi \sqrt{\frac{I_0+I_1+m\left(\frac{L}{2}+D+x_0+\Delta x\right)^2}{Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D+ x_0+\Delta x\right)}}$$$$T_2 = 2\pi \sqrt{\frac{I_0+I_1+m\left(\frac{L}{2}+D-x_0+\Delta x\right)^2}{Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D- x_0+\Delta x\right)}}$$
 \end{solcard}
 
 \begin{solcard}{C4}{Excluding the moment of inertia $I_0$ from the expressions obtained in the previous paragraph, obtain an expression for $\Delta x$. Calculate the numerical value of $\Delta x$ and estimate the error.}{1.40}
 
-Let's rewrite the equations in the following form: \textbackslash{}begin{cases} I_0+I_1+m\textbackslash{}left(\textbackslash{}frac{L}{2}+D+x_0+\textbackslash{}Delta x\textbackslash{}right)^2 = \textbackslash{}frac{T_1^2}{4\textbackslash{}pi^2} \textbackslash{}left(Mg\textbackslash{}left(\textbackslash{}frac{L}{2}+D\textbackslash{}right)+mg\textbackslash{}left(\textbackslash{}frac{L}{2}+D+ x_0+\textbackslash{}Delta x\textbackslash{}right)\textbackslash{}right) \textbackslash{}\textbackslash{} I_0+I_1+m\textbackslash{}left(\textbackslash{}frac{L}{2}+D-x_0+\textbackslash{}Delta x\textbackslash{}right)^2 = \textbackslash{}frac{T_2^2}{4\textbackslash{}pi^2} \textbackslash{}left(Mg\textbackslash{}left(\textbackslash{}frac{L}{2}+D\textbackslash{}right)+mg\textbackslash{}left(\textbackslash{}frac{L}{2}+D- x_0+\textbackslash{}Delta x\textbackslash{}right)\textbackslash{}right) \textbackslash{}end{cases} Subtract these equations and express $\Delta x$:
+Let's rewrite the equations in the following form: $$\begin{cases} I_0+I_1+m\left(\frac{L}{2}+D+x_0+\Delta x\right)^2 = \frac{T_1^2}{4\pi^2} \left(Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D+ x_0+\Delta x\right)\right) \\ I_0+I_1+m\left(\frac{L}{2}+D-x_0+\Delta x\right)^2 = \frac{T_2^2}{4\pi^2} \left(Mg\left(\frac{L}{2}+D\right)+mg\left(\frac{L}{2}+D- x_0+\Delta x\right)\right) \end{cases}$$ Subtract these equations and express $\Delta x$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Delta x= \cfrac{\frac{T_1^2-T_2^2}{4\pi^2}(M+m)(\frac{L}{2}+D)g + \frac{T_1^2+T_2^2}{4\pi^2}mgx_0-2mx_0(L+2D)}{4mx_0 - \frac{T_1^2-T_2^2}{4\pi^2}mg} $$For/At расчете необходимо учесть, что mass $M$ изменилась from-за for/atкреплении гаек с петлей на $2M_g = 94.22~ g$ $$\Delta x = (3.2 \pm 1.9)~cm$$
+\par\smallskip\noindent\textbf{Answer:} $$ \Delta x= \cfrac{\frac{T_1^2-T_2^2}{4\pi^2}(M+m)(\frac{L}{2}+D)g + \frac{T_1^2+T_2^2}{4\pi^2}mgx_0-2mx_0(L+2D)}{4mx_0 - \frac{T_1^2-T_2^2}{4\pi^2}mg} $$For calculation we must take into account that the mass $M$ has changed because of the attachment of the nuts with the loop on $2M_g = 94.22~ g$ $$\Delta x = (3.2 \pm 1.9)~cm$$
 \end{solcard}
 
 \begin{solcard}{C5}{Write an expression for the effective spring stiffness $k$ in terms of $m$, $g$, $\Delta x$. Calculate the numerical value of $k$ and estimate the error.}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$k = \frac{mg}{\Delta x}$$$$k = (24\pm18)~\frac{\mathrm{N}}{\mathrm{m}}$$
+\par\smallskip\noindent\textbf{Answer:} $$k = \frac{mg}{\Delta x}$$$$k = (24\pm18)~\frac{\text{N}}{\text{m}}$$
 \end{solcard}
 
-\begin{solcard}{C6}{Using the results from Parts B and C, calculate the values ​​of $k_1$, $k_2$ and estimate their errors.}{0.80}
+\begin{solcard}{C6}{Using the results from Parts B and C, calculate the values of $k_1$, $k_2$ and estimate their errors.}{0.80}
 
-From C1: $$F(x=x_0)= 0 = \frac{L}{2}(2k_1 - k) - kx_0$$ Expressing $k_1$: $$k_1 = k\left(\frac{1}{2}+\frac{x_0}{L}\right) = k\left(\frac{1}{2}+\frac{x_0}{L}\right) $$ $$k_2 = k\left(\dfrac{1}{2} - \dfrac{x_0}{L}\right)$$
+From C1: $$F(x=x_0)= 0 = \frac{L}{2}(2k_1 - k) - kx_0$$ Express $k_1$: $$k_1 = k\left(\frac{1}{2}+\frac{x_0}{L}\right) = k\left(\frac{1}{2}+\frac{x_0}{L}\right) $$ $$k_2 = k\left(\dfrac{1}{2} - \dfrac{x_0}{L}\right)$$
 
 
 $$F(x=x_0)= 0 = \frac{L}{2}(2k_1 - k) - kx_0$$
@@ -233,9 +233,9 @@ $$k_1 = k\left(\frac{1}{2}+\frac{x_0}{L}\right) = k\left(\frac{1}{2}+\frac{x_0}{
 $$k_2 = k\left(\dfrac{1}{2} - \dfrac{x_0}{L}\right)$$
 
 
-$$k_1 = (7 \pm 4)~\frac{\mathrm{N}}{\mathrm{m}}$$
+$$k_1 = (7 \pm 4)~\frac{\text{N}}{\text{m}}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$k_1 = (17 \pm 13)~\frac{\mathrm{N}}{\mathrm{m}}$$ $$k_1 = (7 \pm 4)~\frac{\mathrm{N}}{\mathrm{m}}$$
+\par\smallskip\noindent\textbf{Answer:} $$k_1 = (17 \pm 13)~\frac{\text{N}}{\text{m}}$$ $$k_1 = (7 \pm 4)~\frac{\text{N}}{\text{m}}$$
 \end{solcard}
 
 \end{document}

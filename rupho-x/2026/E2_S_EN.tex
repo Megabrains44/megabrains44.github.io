@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,22 +30,22 @@
 \author{\normalsize X26 (2026) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{For 5 different values ​​of $a$, obtain 5 corresponding values ​​of $h$ at which the LED image $S′$ is focused on the screen. For each measurement, calculate the focal length value $f$. Average the resulting values ​​$f$ and write down the average value $f_\text{avg}$ on your answer sheet.}{0.60}
+\begin{solcard}{A1}{For 5 different values of $a$, obtain 5 corresponding values of $h$ at which the LED image $S'$ is focused on the screen. For each measurement, calculate the focal length value $f$. Average the resulting values $f$ and write down the average value $f_\text{avg}$ on your answer sheet.}{0.60}
 
 $a,~\mathrm{mm}$ $b,~\mathrm{mm}$ $f,~\mathrm{mm}$ 210 828 167.5 225 694 169.9 235 620 170.4 252 528 170.5 280 429 169.4
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$f_\text{avg} = (170\pm2)~\mathrm{mm}$$
+\par\smallskip\noindent\textbf{Answer:} $$f_\text{avg} = (170\pm2)~\mathrm{mm}$$
 \end{solcard}
 
 \begin{solcard}{B0}{Measure and write down the distance $a_0$ on your answer sheets.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$a_0 = (207\pm2)~\mathrm{mm}$$
+\par\smallskip\noindent\textbf{Answer:} $$a_0 = (207\pm2)~\mathrm{mm}$$
 \end{solcard}
 
 \begin{solcard}{B1}{By changing the position of the $d$ aperture, observe the changes in the image on the screen. Mark ($\checkmark$) all correct statements on your answer sheets.}{0.40}
 
 As the aperture approaches the source, the brightness of the image increases; as the aperture moves away from the source, its brightness decreases.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} The size of the image and its shape remain unchanged. As the aperture approaches the source, the brightness of the image increases; as the aperture moves away from the source, its brightness decreases.
+\par\smallskip\noindent\textbf{Answer:} The size of the image and its shape remain unchanged. As the aperture approaches the source, the brightness of the image increases; as the aperture moves away from the source, its brightness decreases.
 \end{solcard}
 
 \begin{solcard}{B2}{For 8 different distances $d$ between the source and aperture $D_2$, measure the dimensions $m_1',~m_2'$ of both diagonals of the cross image on the screen. Vary $d$ as much as possible. Calculate for each $d$ the average image size $m'$.}{0.60}
@@ -57,10 +56,10 @@ $d,~\mathrm{mm}$ $m1',~\mathrm{mm}$ $m2',~\mathrm{mm}$ $1/d,~\mathrm{m}^{-1}$ $m
 
 \begin{solcard}{B3}{Obtain the theoretical dependence $m^\prime(d)$ via $m,~d,~f,~a_0$. Plot a linearized graph and obtain the size $m$ of the cross.}{1.50}
 
-Let us highlight with a dotted line a plane at a distance $b$ from the source, which is focused by the lens onto the screen. It is obvious that from this plane only rays limited by the dotted line will reach the screen. Then we can consider an image of size $m'$ on the screen as an image of a segment of length $l$ in the indicated plane. $$l = \frac{m}{d}\cdot b$$Then смер изображения на экране: $$m' = l \cdot \frac{h-a_0-f}{a_0+f-b}$$Formula тонкой линзы: $$\frac{1}{f} = \frac{1}{a_0+f-b} + \frac{1}{h-a_0-f}$$Hence: $$a_0+f-b = f\cdot \frac{h-a_0-f}{h-a_0-2f}$$Excluding $b$ we get: $$m'=-\frac{m}{fd}(h-a_0-2f)\cdot( f\cdot \frac{h-a_0-f}{h-a_0-2f}-a_0-f)$$$⟦1 3⟧$Substituting $h-a_0$ from the formula тонкой линзы: $$h-a_0 = \dfrac{a_0f}{a_0-f}$$$$m' = \frac{m}{d}\cdot\left(\frac{a_0}{a_0-f}(2f - a_0) - f\right) = \frac{m}{d}\cdot\left(\frac{a_0f}{a_0-f}-(a_0+f)\right)$$Линеаризация: $$m'(1/d)$$Dots which lie on the plateau - aperture by the lens; we will not plot them on the graph, because they are not needed to calculate the slope factor.
+Let us highlight with a dotted line a plane at a distance $b$ from the source, which is focused by the lens onto the screen. It is obvious that from this plane only rays limited by the dotted line will reach the screen. Then we can consider an image of size $m'$ on the screen as an image of a segment of length $l$ in the indicated plane. $$l = \frac{m}{d}\cdot b$$Then size image on screen: $$m' = l \cdot \frac{h-a_0-f}{a_0+f-b}$$Formula thin lens: $$\frac{1}{f} = \frac{1}{a_0+f-b} + \frac{1}{h-a_0-f}$$From which: $$a_0+f-b = f\cdot \frac{h-a_0-f}{h-a_0-2f}$$Eliminating $b$ we obtain: $$m'=-\frac{m}{fd}(h-a_0-2f)\cdot( f\cdot \frac{h-a_0-f}{h-a_0-2f}-a_0-f)$$ Substitute $h-a_0$ from the thin lens formula: $$h-a_0 = \dfrac{a_0f}{a_0-f}$$$$m' = \frac{m}{d}\cdot\left(\frac{a_0}{a_0-f}(2f - a_0) - f\right) = \frac{m}{d}\cdot\left(\frac{a_0f}{a_0-f}-(a_0+f)\right)$$Linearization: $$m'(1/d)$$Dots which lie on the plateau - aperture by the lens; we will not plot them on the graph, because they are not needed to calculate the slope factor.
 
 
-From the resulting graph we learn the slope coefficient of the line: $$k_1 = (1.21\pm0.06) \cdot 10^{-2}~\text{m}^2$$ Let us express $m$ ч: $$m=\frac{k_1}{\frac{a_0f}{a_0-f}-(a_0+f)}$$ In total: $$m = 21~\mathrm{mm}$$ $$\Delta m = 3~\mathrm{mm}$$
+From the resulting graph we learn the slope coefficient of the line: $$k_1 = (1.21\pm0.06) \cdot 10^{-2}~\text{m}^2$$ Express $m$: $$m=\frac{k_1}{\frac{a_0f}{a_0-f}-(a_0+f)}$$ That is: $$m = 21~\mathrm{mm}$$ $$\Delta m = 3~\mathrm{mm}$$
 
 
 $$k_1 = (1.21\pm0.06) \cdot 10^{-2}~\text{m}^2$$
@@ -80,7 +79,7 @@ $$m = 21~\mathrm{mm}$$
 
 $$\Delta m = 3~\mathrm{mm}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$m = (21\pm3)~\mathrm{mm}$$
+\par\smallskip\noindent\textbf{Answer:} $$m = (21\pm3)~\mathrm{mm}$$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig1.jpg}
@@ -127,9 +126,7 @@ $d_1,~\mathrm{mm}$ $v_1,~\mathrm{mm}$ $1/d_1,~\mathrm{m}^{-1}$ 22 63 45.4$±$4.1
 It is clear from the figure that for small $d_2$ the image will look like the distribution of light intensity in the section $D_1$, and will not change when $d_2$ changes, up to a certain value ($d_2 = d_2'$).
 
 
-Starting from $d_2'$, some of the rays passing through the diaphragm $D_1$ will not pass through the diaphragm $D_2$. This moment occurs when the angular dimensions of the diaphragms are the same. Then: $$d_2' = \frac{p_2}{p_1} \cdot d_1.$$ Теперь let us find $l_2$. Similarly partу B3 можем рассмотреть отрезок $l$ в плоскости $D_1$ ограниченный крайнии rayами проходящими via/through диафрагму $D_2$ (or $D_1$, if $d_2$$d_2' = \frac{p_2}{p_1} \cdot d_1.$$Now let's find $l_2$. Similar to point B3, we can consider the segment $l$ in the plane $D_1$ limited by the extreme rays passing through the diaphragm $D_2$ (or $D_1$, if $d_2$$l_2 = \frac{h-a}{a-d_1} \cdot l,$$Where:$$ l = \begin{cases} p_1,& при ~d_2 < d_2'\\ \frac{d_1}{d_2} \cdot p_2,& при~ d_2 > d_2'\\ \end{cases}$$\textbackslash{}textbf{Answer:} $$d_2' =  \frac{p_2}{p_1} \cdot d_1,$$ $$ l_2 = \begin{cases} \frac{h-a}{a-d_1} \cdot p_1, & \text{при }\ d_2 < d_2' \\ \frac{h-a}{a-d_1} \cdot \frac{d_1}{d_2} \cdot p_2, & \text{при }\ d_2 > d_2'. \end{cases} $$
-
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$d_2' =  \frac{p_2}{p_1} \cdot d_1,$$ $$ l_2 = \begin{cases} \frac{h-a}{a-d_1} \cdot p_1, & \text{при }\ d_2 < d_2' \\ \frac{h-a}{a-d_1} \cdot \frac{d_1}{d_2} \cdot p_2, & \text{при }\ d_2 > d_2'. \end{cases} $$
+Starting from $d_2'$, some of the rays passing through the diaphragm $D_1$ will not pass through the diaphragm $D_2$. This moment occurs when the angular dimensions of the diaphragms are the same. Then: $$d_2' = \frac{p_2}{p_1} \cdot d_1.$$ Now let's find $l_2$. Similarly to point B3, we can consider the segment $l$ in the plane $D_1$ bounded by the extreme rays passing through the diaphragm $D_2$ (or $D_1$, if $d_2 > d_2'$): $$l_2 = \frac{h-a}{a-d_1} \cdot l,$$Where:$$ l = \begin{cases} p_1,& \text{for}~d_2 < d_2'\\ \frac{d_1}{d_2} \cdot p_2,& \text{for}~d_2 > d_2'\\ \end{cases}$$\textbf{Answer:} $$d_2' =  \frac{p_2}{p_1} \cdot d_1,$$ $$ l_2 = \begin{cases} \frac{h-a}{a-d_1} \cdot p_1, & \text{for }\ d_2 < d_2' \\ \frac{h-a}{a-d_1} \cdot \frac{d_1}{d_2} \cdot p_2, & \text{for }\ d_2 > d_2'. \end{cases} $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig4.jpg}
@@ -144,17 +141,17 @@ Starting from $d_2'$, some of the rays passing through the diaphragm $D_1$ will 
 
 Having written equations similar to C4, we get the answer:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$d_1' = \frac{p_1}{p_2} \cdot d_2$$$$ l_1 = \begin{cases} \frac{h-a}{a-d_2} \cdot p_2, & \text{при }\ d_1 < d_1' \\ \frac{h-a}{a-d_2} \cdot \frac{d_2}{d_1} \cdot p_1, & \text{при }\ d_1 > d_1'. \end{cases} $$
+\par\smallskip\noindent\textbf{Answer:} $$d_1' = \frac{p_1}{p_2} \cdot d_2$$$$ l_1 = \begin{cases} \frac{h-a}{a-d_2} \cdot p_2, & \text{for }\ d_1 < d_1' \\ \frac{h-a}{a-d_2} \cdot \frac{d_2}{d_1} \cdot p_1, & \text{for }\ d_1 > d_1'. \end{cases} $$
 \end{solcard}
 
 \begin{solcard}{C6}{Obtain expressions for $v_1(d_1)$ and $v_2(d_2)$. Express your answers using $h,~a,~d_1,~d_2,~m,~n,~c$.}{0.60}
 
-Using the result of the previous paragraph for point $С2$ we can match $$ \begin{cases} p_1 = c\\ p_2 = n\sqrt{2}\\ l_2 = v_2\\ a = a_1 \end{cases}$$ then we get:
+Using the result of the previous paragraph for point C2 we can match $$ \begin{cases} p_1 = c\\ p_2 = n\sqrt{2}\\ l_2 = v_2\\ a = a_1 \end{cases}$$ then we get:
 
 
 For C3: $$\begin{cases} p_1 = c\sqrt{2}\\ p_2 = m\\ l_1 = v_1\\ a = a_2 \end{cases}$$ Total we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$d_2' =  \frac{n\sqrt{2}}{c} \cdot d_1,$$ $$ v_2 = \begin{cases} \frac{h-a_1}{a_1-d_1} \cdot c, & \text{при }\ d_2 < d_2' \\ \frac{h-a_1}{a_1-d_1} \cdot \frac{d_1}{d_2} \cdot n\sqrt{2}, & \text{при }\ d_2 > d_2'. \end{cases} $$
+\par\smallskip\noindent\textbf{Answer:} $$d_2' =  \frac{n\sqrt{2}}{c} \cdot d_1,$$ $$ v_2 = \begin{cases} \frac{h-a_1}{a_1-d_1} \cdot c, & \text{for }\ d_2 < d_2' \\ \frac{h-a_1}{a_1-d_1} \cdot \frac{d_1}{d_2} \cdot n\sqrt{2}, & \text{for }\ d_2 > d_2'. \end{cases} $$
 \end{solcard}
 
 \begin{solcard}{C7}{Plot a linearized graph of the relationship taken in step C2 and obtain the sizes of $c$ and $n$ apertures. An error estimate for the final response $c$ and $n$ is not required.}{0.70}
@@ -164,21 +161,21 @@ Linearization - $v_2(1/d_2)$.
 
 From the graph we find the slope coefficient, the size of the image on the plateau, and the break point: $$k_2 = 2.78 \cdot 10^{-3}~\mathrm{m}^2\\v_{2}' = 20~\mathrm{mm}\\d_{2}' = 156~\mathrm{mm}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} From the straight line slope coefficient: $$n = \frac{k_2(a_1-d_1)}{\sqrt2~ d_1 (h-a_1)} = 5.7~\mathrm{mm}$$From значения плато: $$c = \frac{v_2'(a_1 - d_1)}{h-a_1} = 4.9~\mathrm{mm}$$From точки излома and значения плато: $$n = \frac{c~d_2'}{\sqrt{2}~d_1} = 6.4~\mathrm{mm}$$ Прямые измерения $n = 6.3~mm,~c=5.3~mm$.
+\par\smallskip\noindent\textbf{Answer:} From the straight line slope coefficient: $$n = \frac{k_2(a_1-d_1)}{\sqrt2~ d_1 (h-a_1)} = 5.7~\mathrm{mm}$$From the plateau value: $$c = \frac{v_2'(a_1 - d_1)}{h-a_1} = 4.9~\mathrm{mm}$$From point of the kink and value the plateau: $$n = \frac{c~d_2'}{\sqrt{2}~d_1} = 6.4~\mathrm{mm}$$ Straight measurement $n = 6.3~mm,~c=5.3~mm$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig6.jpg}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{С8}{Plot a linearized graph of the relationship taken in step C3 and obtain the sizes of $c$ and $m$ apertures. An error estimate for the final response $c$ and $m$ is not required.}{0.70}
+\begin{solcard}{C8}{Plot a linearized graph of the relationship taken in step C3 and obtain the sizes of $c$ and $m$ apertures. An error estimate for the final response $c$ and $m$ is not required.}{0.70}
 
 Linearization - $v_1(1/d_1)$
 
 
 From the graph we find the slope coefficient, the size of the image on the plateau, and the break point: $$k_3 = 4.99 \cdot 10^{-3}~\mathrm{m}^2\\v_{1}' = 63~\mathrm{mm}\\d_{1}' =69~\mathrm{mm}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} From the straight line slope coefficient: $$c = \frac{k_3(a_2-d_2)}{\sqrt2~ d_2 (h-a_2)} = 5.7~\mathrm{mm}$$From значения плато: $$m = \frac{v_1'(a_2 - d_2)}{h-a_2} = 17.4~\mathrm{mm}$$From точки излома and значения плато: $$m = \frac{\sqrt2~c~d_2}{d_1'} = 19.9~\mathrm{mm}$$ Прямые измерения $m = 17.3~mm,~c=5.3~mm$.
+\par\smallskip\noindent\textbf{Answer:} From the straight line slope coefficient: $$c = \frac{k_3(a_2-d_2)}{\sqrt2~ d_2 (h-a_2)} = 5.7~\mathrm{mm}$$From the plateau value: $$m = \frac{v_1'(a_2 - d_2)}{h-a_2} = 17.4~\mathrm{mm}$$From point of the kink and value the plateau: $$m = \frac{\sqrt2~c~d_2}{d_1'} = 19.9~\mathrm{mm}$$ Straight measurement $m = 17.3~mm,~c=5.3~mm$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E2_S_EN_assets/fig7.jpg}

@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -53,14 +52,14 @@ Attention! In case of violation of the order of assembly of the installation and
 
 Let us fix the equilibrium distance between the axes of the solenoids in the absence of current:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x_{0}=5.1~cm$$
+\par\smallskip\noindent\textbf{Answer:} $$x_{0}=5.1~cm$$
 \end{solcard}
 
 \begin{solcard}{A1}{Obtain a formula relating the repulsive force $F$ of solenoids from each other with the distance $x$ between them. Express this force in terms of the magnetic charges $q_m$ on the ends of the solenoids, the lengths of the solenoids $l$, $x$ and $\mu_0$.}{0.30}
 
-Let us consider a solenoid that has deviated by a small angle $\alpha$ from the equilibrium position (see Figure 2). Let's write Newton's II law for this solenoid in projection onto the $y$ axis: $$2F_{k} \cos \alpha=m g \sin \alpha.$$Coefficient $2$ появляется from-за того, что solenoid имеет два полюса (магнитных chargeа), каждый from которых взаимодействует с соседним полюсом другого solenoidа. Taking into account that for малого угла $\alpha$ справедливы формулы $\sin \alpha \approx \alpha \approx \dfrac{x-x_{0}}{2L}$ and $\cos \alpha \approx 1$, transforming II Newton's law:$$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\dfrac{\mu_0q_m^2}{4\pi}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$Во всех partах задачи использовались высота подвеса $h=1.37~m$ and density намотки $n=\dfrac{N}{l}=\dfrac{300}{20.9~cm}=1435~m^{-1}$.
+Let us consider a solenoid that has deviated by a small angle $\alpha$ from the equilibrium position (see Figure 2). Let's write Newton's II law for this solenoid in projection onto the $y$ axis: $$2F_{k} \cos \alpha=m g \sin \alpha.$$Coefficient $2$ appears from-over that, that solenoid have two pole (magnetic charge), each of which interacts with the neighboring pole of the other solenoid. Taking into account that for small angle $\alpha$ the formulas hold $\sin \alpha \approx \alpha \approx \dfrac{x-x_{0}}{2L}$ and $\cos \alpha \approx 1$, transform Newton's second law:$$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\dfrac{\mu_0q_m^2}{4\pi}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$Throughout the problem we have used the suspension height $h=1.37~m$ and the winding density $n=\dfrac{N}{l}=\dfrac{300}{20.9~cm}=1435~m^{-1}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$F = 2F_k=2\frac{m g}{2} \frac{x-x_{0}}{2L}=\dfrac{\mu_0q_m^2}{2\pi}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$
+\par\smallskip\noindent\textbf{Answer:} $$F = 2F_k=2\frac{m g}{2} \frac{x-x_{0}}{2L}=\dfrac{\mu_0q_m^2}{2\pi}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig1.jpg}
@@ -69,12 +68,12 @@ Let us consider a solenoid that has deviated by a small angle $\alpha$ from the 
 
 \begin{solcard}{A2}{Express the magnetic field induction $B$ in the center of the solenoids cores through the distance $x$ between them, the mass of the solenoids $m$, the length of the suspension $L$, as well as other necessary quantities.}{0.20}
 
-In A4 of the introduction it was said that the magnetic charge of the solenoid is equal to the flux of the magnetic field induction vector $B$ through the end of the solenoid. This flow is equal to: $$\Phi_{B}=B \cdot S$$ where $B$ – value индукции магнитного поля на торце solenoidа, $S$ – area сечения solenoidа. А therefore: $$\mu_0q_{m}=B \cdot S$$ Substituting формулу for магнитного chargeа $q_{m}$ в формулу for силы Кулона, we get: $$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\frac{B^2S^2}{4 \pi \mu_0}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$ Let us express hence индукцию магнитного поля внутри solenoidа $B$ via/through distance $x$ between solenoids:
+In A4 of the introduction it was said that the magnetic charge of the solenoid is equal to the flux of the magnetic field induction vector $B$ through the end of the solenoid. This flow is equal to: $$\Phi_{B}=B \cdot S$$ where $B$ – is the value of the magnetic-field induction at the end of the solenoid, $S$ – area cross-section solenoid. and means: $$\mu_0q_{m}=B \cdot S$$ Substitute formula for magnetic charge $q_{m}$ in the formula for Coulomb's force, obtain: $$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\frac{B^2S^2}{4 \pi \mu_0}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$ From here express the magnetic-field induction inside the solenoid $B$ through distance $x$ between solenoids:
 
 
-This means: $$\mu_0q_{m}=B \cdot S$$ Substituting формулу for магнитного chargeа $q_{m}$ в формулу for силы Кулона, we get: $$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\frac{B^2S^2}{4 \pi \mu_0}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$ Let us express hence индукцию магнитного поля внутри solenoidа $B$ via/through distance $x$ between the solenoids:
+This means: $$\mu_0q_{m}=B \cdot S$$ Substitute formula for magnetic charge $q_{m}$ in the formula for Coulomb's force, obtain: $$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\frac{B^2S^2}{4 \pi \mu_0}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$ From here express the magnetic-field induction inside the solenoid $B$ through distance $x$ between the solenoids:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$B=\dfrac{ 1}{S} \sqrt{\dfrac{\pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}$$
+\par\smallskip\noindent\textbf{Answer:} $$B=\dfrac{ 1}{S} \sqrt{\dfrac{\pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}$$
 \end{solcard}
 
 \begin{solcard}{A3}{Measure the dependence of the distance $x$ between the axes of the solenoids on the strength of the current $I$ flowing through each of the solenoids, changing the current in the range from $-5~\mathrm{A}$ to $+5~\mathrm{A}$ with a step of $0.2~\mathrm{A}$, and for currents less than $0.6~\mathrm{A}$ in absolute value - with a step of $0.15~\mathrm{A}$. Since the magnetic permeability of the solenoid core depends on temperature, try to keep the solenoids' temperature within $10~{}^\circ\mathrm C$ of room temperature in your measurements.}{5.00}
@@ -84,12 +83,12 @@ Since the magnetic permeability of the solenoid core depends on temperature, try
 
 Let us remove the dependence of the distance between the solenoids $x$ on the strength of the current $I$ flowing through them, in the current range from $-5~\mathrm{A}$ to $+5~\mathrm{A}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $I$, А $x$, cm $I$, A $x$, cm $I$, A $x$, cm $I$, А $x$, cm -5 9 -2.2 8.1 0.3 5.3 3 8.5 -4.8 9 -2 7.9 0.45 5.6 3.2 8.6 -4.6 9 -1.8 7.6 0.6 5.9 3.4 8.7 -4.4 8.9 -1.6 7.5 0.8 6.2 3.6 8.7 -4.2 8.9 -1.4 7.2 1 6.6 3.8 8.7 -4 8.8 -1.2 7 1.2 6.8 4 8.8 -3.8 8.7 -1 6.6 1.4 7.2 4.2 8.9 -3.6 8.7 -0.8 6.4 1.6 7.5 4.4 8.9 -3.4 8.6 -0.6 6 1.8 7.6 4.6 8.9 -3.2 8.6 -0.45 5.8 2 7.8 4.8 8.9 -3 8.5 -0.3 5.6 2.2 8 5 8.9 -2.8 8.4 -0.15 5.3 2.4 8.2 -2.6 8.3 0 5.1 2.6 8.2 -2.4 8.2 0.15 5.1 2.8 8.4
+\par\smallskip\noindent\textbf{Answer:} $I$, and $x$, cm $I$, A $x$, cm $I$, A $x$, cm $I$, and $x$, cm -5 9 -2.2 8.1 0.3 5.3 3 8.5 -4.8 9 -2 7.9 0.45 5.6 3.2 8.6 -4.6 9 -1.8 7.6 0.6 5.9 3.4 8.7 -4.4 8.9 -1.6 7.5 0.8 6.2 3.6 8.7 -4.2 8.9 -1.4 7.2 1 6.6 3.8 8.7 -4 8.8 -1.2 7 1.2 6.8 4 8.8 -3.8 8.7 -1 6.6 1.4 7.2 4.2 8.9 -3.6 8.7 -0.8 6.4 1.6 7.5 4.4 8.9 -3.4 8.6 -0.6 6 1.8 7.6 4.6 8.9 -3.2 8.6 -0.45 5.8 2 7.8 4.8 8.9 -3 8.5 -0.3 5.6 2.2 8 5 8.9 -2.8 8.4 -0.15 5.3 2.4 8.2 -2.6 8.3 0 5.1 2.6 8.2 -2.4 8.2 0.15 5.1 2.8 8.4
 \end{solcard}
 
-\begin{solcard}{A4}{From the dependence obtained in A3, calculate the values ​​of the magnetic field induction $B$ inside the solenoid and the magnetic field strength $H=n I$ inside the solenoid, where $n$ is the number of turns per unit length of the solenoid, $I$ is the current through the solenoid. Plot $B(H)$ for currents $I$ from $-5~\mathrm{A}$ to $+5~\mathrm{A}$, neglecting hysteresis.}{1.20}
+\begin{solcard}{A4}{From the dependence obtained in A3, calculate the values of the magnetic field induction $B$ inside the solenoid and the magnetic field strength $H=n I$ inside the solenoid, where $n$ is the number of turns per unit length of the solenoid, $I$ is the current through the solenoid. Plot $B(H)$ for currents $I$ from $-5~\mathrm{A}$ to $+5~\mathrm{A}$, neglecting hysteresis.}{1.20}
 
-Let's calculate the values ​​of $H$ and $B$. Let's construct a hysteresis loop for the given values ​​of $H$ and $B$ (red loop in Figure 3).
+Let's calculate the values of $H$ and $B$. Let's construct a hysteresis loop for the given values of $H$ and $B$ (red loop in Figure 3).
 
 
 $H$, A/m $B$, Tl $H$, A/m $B$, Tl $H$, A/m $B$, Tl $H$, A/m $B$, Tl -7175 -0.37563 -3157 -0.29406 430.5 0.050919 4305 0.329651 -6888 -0.37563 -2870 -0.27663 645.75 0.082839 4592 0.338711 -6601 -0.37563 -2583 -0.25091 861 0.109779 4879 0.347838 -6314 -0.3663 -2296 -0.24244 1148 0.135063 5166 0.347838 -6027 -0.3663 -2009 -0.21731 1435 0.167933 5453 0.347838 -5740 -0.35703 -1722 -0.20076 1722 0.184312 5740 0.357033 -5453 -0.34784 -1435 -0.16793 2009 0.217314 6027 0.366298 -5166 -0.34784 -1148 -0.15155 2296 0.242443 6314 0.366298 -4879 -0.33871 -861 -0.11832 2583 0.250912 6601 0.366298 -4592 -0.33871 -645.75 -0.10107 2870 0.268003 6888 0.366298 -4305 -0.32965 -430.5 -0.08284 3157 0.285315 7175 0.366298 -4018 -0.32066 -215.25 -0.05092 3444 0.302862 -3731 -0.31173 0 -0.01476 3731 0.302862 -3444 -0.30286 215.25 0.01476 4018 0.320657
@@ -102,9 +101,9 @@ $H$, A/m $B$, Tl $H$, A/m $B$, Tl $H$, A/m $B$, Tl $H$, A/m $B$, Tl -7175 -0.375
 
 \begin{solcard}{A5}{From the experimental data, estimate the residual magnetization $B_{r}$ for the hysteresis loop from A4.}{0.30}
 
-from the graph from point $А4$ we find:
+from the graph from point A4 we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$B_{r}=(15\pm5)~\mathrm{mT}$$
+\par\smallskip\noindent\textbf{Answer:} $$B_{r}=(15\pm5)~\mathrm{mT}$$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig3.jpg}
@@ -115,14 +114,14 @@ from the graph from point $А4$ we find:
 
 The solenoids return to their original equilibrium position when current flows through them $I\approx 150~\mathrm{mA}$. Let us express the coercive force:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$H_{c}=(85\pm20))~{\mathrm{A}}/{\mathrm{m}}$$
+\par\smallskip\noindent\textbf{Answer:} $$H_{c}=(85\pm20))~\text{A}/\text{m}$$
 \end{solcard}
 
 \begin{solcard}{A7}{At what maximum absolute value of the current flowing through the solenoids, the dependence $B(H)$, neglecting hysteresis, is still described by direct proportionality?}{0.20}
 
-The dependence $B(H)$ becomes nonlinear at $H>1000~\mathrm{A}/м$, which corresponds to:
+The dependence $B(H)$ becomes nonlinear at $H>1000~\mathrm{A}/\mathrm{m}$, which corresponds to:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $I_{cr}=0.8~\mathrm{A}$
+\par\smallskip\noindent\textbf{Answer:} $I_{cr}=0.8~\mathrm{A}$
 \end{solcard}
 
 \begin{solcard}{A8}{Calculate the magnetic permeability $\mu=\dfrac{1}{\mu_0}\dfrac{\mathrm dB}{\mathrm dH}$ of the solenoid core in the linear section. To improve measurement accuracy, use linearization, which does not require knowledge of the value $x_0$.}{1.50}
@@ -130,7 +129,7 @@ The dependence $B(H)$ becomes nonlinear at $H>1000~\mathrm{A}/м$, which corresp
 To improve measurement accuracy, use linearization, which does not require knowledge of the value $x_0$.
 
 
-The value of the magnetic susceptibility of the iron core can be calculated using the formula: $$\mu=\frac{1}{\mu_{0}} \frac{\text{d} B}{\text{d} H}$$Максимальную магнитную восfor/atandмчивость $\mu_{\max }$ железный сердечник будет иметь then, когда ratio $\dfrac{\text{d} B}{\text{d} H}$ максимально, that is вблfromand нуля. Максимальный current не должен превышать значения $I_{cr}$, найденного в partе A7 . Condition equalsвесия: $$B=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}=\mu\mu_0 nI$$ Hence the dependence \[\xi(x)=I^2\cdot\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)  \] is linear. Let's recalculate the points and plot the resulting relationship:
+The value of the magnetic susceptibility of the iron core can be calculated using the formula: $$\mu=\frac{1}{\mu_{0}} \frac{\text{d} B}{\text{d} H}$$The maximum magnetic susceptibility $\mu_{\max}$ of the iron core is had then, when ratio $\dfrac{\text{d} B}{\text{d} H}$ maximally, that is near zero. Maximum current not must exceed value $I_{cr}$, find in part A7 . Condition equilibrium: $$B=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}=\mu\mu_0 nI$$ Hence the dependence \[\xi(x)=I^2\cdot\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)  \] is linear. Let's recalculate the points and plot the resulting relationship:
 
 
 Equilibrium condition:
@@ -142,18 +141,18 @@ $$B=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-
 Hence the dependence
 
 
-\[\xi(x)=I^2\cdot\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)  \]
+\[\xi(x)=I^2\cdot\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)  \]
 
 
 linear. Let's recalculate the points and plot the resulting relationship:
 
 
-$I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/м^2$ 0 5.1 0 0.15 5.1 8.51 0.3 5.3 31.47 0.45 5.6 63.23 0.6 5.9 100.94 0.8 6.2 161.93
+$I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/\text{m}^2$ 0 5.1 0 0.15 5.1 8.51 0.3 5.3 31.47 0.45 5.6 63.23 0.6 5.9 100.94 0.8 6.2 161.93
 
 
-Let's calculate the slope of the resulting graph: \[k=\dfrac{\partial \xi}{\partial x}=\dfrac{\pi m g}{\mu_0 LS^2n^2\mu^2} = (14300\pm600) ~\frac{\text{A}^2}{м^3},\]from: \[\mu=\sqrt{\dfrac{\pi m g}{\mu_0 LS^2n^2 k}}=94\pm4\]
+Let's calculate the slope of the resulting graph: \[k=\dfrac{\partial \xi}{\partial x}=\dfrac{\pi m g}{\mu_0 LS^2n^2\mu^2} = (14300\pm600) ~\frac{\text{A}^2}{\text{m}^3},\]from: \[\mu=\sqrt{\dfrac{\pi m g}{\mu_0 LS^2n^2 k}}=94\pm4\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\mu = 94\pm4\]
+\par\smallskip\noindent\textbf{Answer:} \[\mu = 94\pm4\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig4.jpg}
@@ -167,31 +166,31 @@ Same as part A: $$B(nI)=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x_0-x)}{\le
 
 $$B(nI)=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x_0-x)}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}\approx \dfrac{ x}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x_0-x)}{L}}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$B(nI)=\dfrac{ x}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x_0-x)}{L}}$$
+\par\smallskip\noindent\textbf{Answer:} $$B(nI)=\dfrac{ x}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x_0-x)}{L}}$$
 \end{solcard}
 
 \begin{solcard}{B2}{At what minimum current $I_\mathrm{high}$ does a sharp “sticking together” of solenoids occur with a smooth increase in current? The answer may include the function $H(B)$ and any necessary quantities.}{1.00}
 
 Abrupt sticking of solenoids occurs at the moment when their equilibrium becomes unstable. Equilibrium condition: \[\dfrac{B^2(nI)S^2L}{x^2}= \pi \mu_{0} m g (x_0-x)\]Differentiate with respect to $x$: \[-2\dfrac{B^2(nI)S^2L}{x^3}=- \pi \mu_{0} m g \]Solving jointly, we obtain: \[x=2x_0/3\]\[B^2(nI)S^2L=\dfrac{4\pi}{27}\mu_{0} m g x_0^3\] $$F_{k}=\frac{m g}{2} \frac{x-x_{0}}{2L}=\dfrac{\mu_0 q_m^2}{4\pi}\left(\frac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[B(nI_{\operatorname{high}})=\sqrt{\dfrac{4\pi}{27S^2L}\mu_{0} m g x_0^3}\]
+\par\smallskip\noindent\textbf{Answer:} \[B(nI_{\operatorname{high}})=\sqrt{\dfrac{4\pi}{27S^2L}\mu_{0} m g x_0^3}\]
 \end{solcard}
 
 \begin{solcard}{B3}{At what current $I_\mathrm{low}$ do the solenoids come apart again? The answer may include the function $H(B)$ and any necessary quantities.}{0.30}
 
 After adhesion, the solenoids are in equilibrium due to the reaction force generated when they press against each other. Unsticking occurs at moment $N=0$: $$B(nI_{\operatorname{low}})=\dfrac{ x_1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x_0-x_1)}{L}},$$where $x_1=2.5~ cm$ – the distance between the axes of the solenoids when they are pressed closely to each other.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$B(nI_{\operatorname{low}})=\dfrac{ x_1}{S} \sqrt{\dfrac{\pi \mu_{0} m g (x_0-x_1)}{L}}$$
+\par\smallskip\noindent\textbf{Answer:} $$B(nI_{\operatorname{low}})=\dfrac{ x_1}{S} \sqrt{\dfrac{\pi \mu_{0} m g (x_0-x_1)}{L}}$$
 \end{solcard}
 
-\begin{solcard}{B4}{Measure the relationship $I_\mathrm{low,high}(x_0)$ for three different values ​​of $x_0$. Plot these dependencies on the same graph with the theoretical dependencies calculated from the curve obtained in the previous part. Do any of these dependencies diverge from the theoretical ones? If yes, please explain why.}{1.90}
+\begin{solcard}{B4}{Measure the relationship $I_\mathrm{low,high}(x_0)$ for three different values of $x_0$. Plot these dependencies on the same graph with the theoretical dependencies calculated from the curve obtained in the previous part. Do any of these dependencies diverge from the theoretical ones? If yes, please explain why.}{1.90}
 
-Let's measure the dependences $I_{\operatorname{low},\operatorname{high}}(x_0)$, calculate the corresponding theoretical values ​​and construct the corresponding graphs:
+Let's measure the dependences $I_{\operatorname{low},\operatorname{high}}(x_0)$, calculate the corresponding theoretical values and construct the corresponding graphs:
 
 
 $x_0$, cm $I_{high_{exp}}$ $I_{low_{exp}}$ $B_{high}$ $B_{low}$ $I_{high_{th}}$ $I_{low_{th}}$ 4.40 254 239 0.0720 0.0699 421 411 5.1 378 311 0.0898 0.0818 511 470 5.5 396 321 0.1006 0.0878 565 501
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Both dependences diverge from the theoretical ones because the wires create additional torque.
+\par\smallskip\noindent\textbf{Answer:} Both dependences diverge from the theoretical ones because the wires create additional torque.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{E1_S_EN_assets/fig5.jpg}
@@ -202,12 +201,12 @@ $x_0$, cm $I_{high_{exp}}$ $I_{low_{exp}}$ $B_{high}$ $B_{low}$ $I_{high_{th}}$ 
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{C1}{Get at least four different values ​​of $\mu(T)$. To measure, use repulsion as in Part A. If you are reassembling the unit, you cannot use the value obtained in Part A at room temperature. This is due to the fact that differences in the values ​​of $\mu$ arising due to non-ideal assembly of the installation can be comparable to the measured effect. When processing experimental data, use the linearization from A8. Attention! The issued cores have low thermal conductivity. You can consider the core temperature to be equal to the thermocouple temperature by maintaining the corresponding constant thermocouple temperature for at least 10 minutes.}{4.50}
+\begin{solcard}{C1}{Get at least four different values of $\mu(T)$. To measure, use repulsion as in Part A. If you are reassembling the unit, you cannot use the value obtained in Part A at room temperature. This is due to the fact that differences in the values of $\mu$ arising due to non-ideal assembly of the installation can be comparable to the measured effect. When processing experimental data, use the linearization from A8. Attention! The issued cores have low thermal conductivity. You can consider the core temperature to is equal to to the thermocouple temperature by maintaining the corresponding constant thermocouple temperature for at least 10 minutes.}{4.50}
 
-Attention! The issued cores have low thermal conductivity. You can consider the core temperature to be equal to the thermocouple temperature by maintaining the corresponding constant thermocouple temperature for at least 10 minutes.
+Attention! The issued cores have low thermal conductivity. You can consider the core temperature to is equal to to the thermocouple temperature by maintaining the corresponding constant thermocouple temperature for at least 10 minutes.
 
 
-The issued cores heat up quite slowly. Let's set a constant current value through the coils. After 10 minutes, turn the current to zero and remove the dependence of the distance between the axes of the solenoids on the current through them. Hysteresis can be ignored because it is small and in linearization will affect the constant shift. The maximum current must not exceed the value $I_{cr}$ found in point A8. There should not be a large number of points in the dependencies because the cores will cool down. The equilibrium condition is the same as in Part A: $$B=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}=\mu\mu_0 nI$$ Hence зависимость ⟦0⟧ линейна. Снимем зависимости $I(x)$ at four different temperatures. The core cools down quite slowly, so as the temperature for the experiment, we will record the temperature corresponding to the ohmmeter readings at the moment the measurements begin.
+The issued cores heat up quite slowly. Let's set a constant current value through the coils. After 10 minutes, turn the current to zero and remove the dependence of the distance between the axes of the solenoids on the current through them. Hysteresis can be ignored because it is small and in linearization will affect the constant shift. The maximum current must not exceed the value $I_{cr}$ found in point A8. There should not be a large number of points in the dependencies because the cores will cool down. The equilibrium condition is the same as in Part A: $$B=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)L}}=\mu\mu_0 nI$$ Hence the dependence is linear. We measure the dependence $I(x)$ at four different temperatures. The core cools down quite slowly, so as the temperature for the experiment, we will record the temperature corresponding to the ohmmeter readings at the moment the measurements begin.
 
 
 The equilibrium condition is the same as in part A:
@@ -219,7 +218,7 @@ $$B=\dfrac{ 1}{S} \sqrt{\dfrac{ \pi \mu_{0} m g (x-x_{0})}{\left(\dfrac{1}{x^2}-
 Hence the dependence
 
 
-\[\xi(x)=I^2\cdot\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)  \]
+\[\xi(x)=I^2\cdot\left(\dfrac{1}{x^2}-\dfrac{x}{(x^2+l^2)^{\frac{3}{2}}}\right)  \]
 
 
 linear.
@@ -228,34 +227,34 @@ linear.
 Let us remove the dependences $I(x)$ at four different temperatures. The core cools down quite slowly, so as the temperature for the experiment, we will record the temperature corresponding to the ohmmeter readings at the moment the measurements begin.
 
 
-$R=111~\mathrm{\Omega}$, $T=299~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/м^2$ 0 6.1 0 0.15 6.2 5.69 0.3 6.4 21.3 0.45 6.5 46.4 0.6 6.7 77.5 0.75 6.9 113.8 0.9 7.3 145.5
+$R=111~\mathrm{\Omega}$, $T=299~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/\text{m}^2$ 0 6.1 0 0.15 6.2 5.69 0.3 6.4 21.3 0.45 6.5 46.4 0.6 6.7 77.5 0.75 6.9 113.8 0.9 7.3 145.5
 
 
 $R=111~\mathrm{\Omega}$, $T=299~\mathrm{K}$
 
 
-$R=122~\mathrm{\Omega}$, $T=328~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/м^2$ 0 6.2 0.0 0.15 6.3 5.5 0.3 6.4 21.3 0.45 6.5 46.4 0.6 6.7 77.5 0.75 7 110.4 0.9 7.2 149.8
+$R=122~\mathrm{\Omega}$, $T=328~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/\text{m}^2$ 0 6.2 0.0 0.15 6.3 5.5 0.3 6.4 21.3 0.45 6.5 46.4 0.6 6.7 77.5 0.75 7 110.4 0.9 7.2 149.8
 
 
 $R=122~\mathrm{\Omega}$, $T=328~\mathrm{K}$
 
 
-$R=131~\mathrm{\Omega}$, $T=352~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/м^2$ 0 6.2 0.0 0.15 6.4 5.3 0.3 6.5 20.6 0.45 6.6 45.0 0.6 6.7 77.5 0.75 7 110.4 0.9 7.2 149.8
+$R=131~\mathrm{\Omega}$, $T=352~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/\text{m}^2$ 0 6.2 0.0 0.15 6.4 5.3 0.3 6.5 20.6 0.45 6.6 45.0 0.6 6.7 77.5 0.75 7 110.4 0.9 7.2 149.8
 
 
 $R=131~\mathrm{\Omega}$, $T=352~\mathrm{K}$
 
 
-$R=143~\mathrm{\Omega}$, $T=383~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/м^2$ 0 6.2 0.0 0.15 6.3 5.5 0.3 6.4 21.3 0.45 6.5 46.4 0.6 6.7 77.5 0.75 6.9 113.8 0.9 7.1 154.3
+$R=143~\mathrm{\Omega}$, $T=383~\mathrm{K}$ $I,~\mathrm{A}$ $x,~cm$ $\xi,~\mathrm{A}^2/\text{m}^2$ 0 6.2 0.0 0.15 6.3 5.5 0.3 6.4 21.3 0.45 6.5 46.4 0.6 6.7 77.5 0.75 6.9 113.8 0.9 7.1 154.3
 
 
 $R=143~\mathrm{\Omega}$, $T=383~\mathrm{K}$
 
 
-We obtain the angular coefficients using least squares. The obtained values ​​are related to the parameters of the cores as follows: \[k=\dfrac{\partial \xi}{\partial x}=\dfrac{\pi m g}{\mu_0 LS^2n^2\mu^2},\]from: \[\mu=\sqrt{\dfrac{\pi m g}{\mu_0 LS^2n^2 k}}\]Calculate the values ​​$\mu(T)$ and construct a linearized graph:
+We obtain the angular coefficients using least squares. The obtained values are related to the parameters of the cores as follows: \[k=\dfrac{\partial \xi}{\partial x}=\dfrac{\pi m g}{\mu_0 LS^2n^2\mu^2},\]from: \[\mu=\sqrt{\dfrac{\pi m g}{\mu_0 LS^2n^2 k}}\]Calculate the values $\mu(T)$ and construct a linearized graph:
 
 
-$T,~\mathrm{K}$ $k, ~\mathrm{A}^2/м^3$ $\mu$ $T^{\frac{3}{2}},~\mathrm{K}^{\frac{3}{2}}$ 299 13200 97.92 5177 328 15130 91.46 5944 352 16080 88.72 6598 383 17650 84.68 7504
+$T,~\mathrm{K}$ $k, ~\mathrm{A}^2/\text{m}^3$ $\mu$ $T^{\frac{3}{2}},~\mathrm{K}^{\frac{3}{2}}$ 299 13200 97.92 5177 328 15130 91.46 5944 352 16080 88.72 6598 383 17650 84.68 7504
 
 \begin{figure}[H]
   \centering
@@ -267,7 +266,7 @@ $T,~\mathrm{K}$ $k, ~\mathrm{A}^2/м^3$ $\mu$ $T^{\frac{3}{2}},~\mathrm{K}^{\fra
 
 Angular coefficient of the plotted graph: \[k=-\mu(0)T_c^{-\frac{3}{2}}=-5.54\cdot 10^{-3}~\mathrm{K}^{-\frac{3}{2}},\]Free term: \[\mu(0)=126\]From here: \[T_c=800~\mathrm{K}\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\mu(0)=126\]\[T_c=800~\mathrm{K}\]
+\par\smallskip\noindent\textbf{Answer:} \[\mu(0)=126\]\[T_c=800~\mathrm{K}\]
 \end{solcard}
 
 \end{document}

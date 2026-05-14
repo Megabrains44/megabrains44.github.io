@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,81 +32,81 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Initially, the charge on the capacitor is zero. Let at time $t  = 0$ a constant voltage $V = V_0$ be applied to the input of the circuit. Find the dependence of the voltage on the capacitor on time $U(t)$ at $t > 0$.}{0.30}
 
-Instantaneous value of the current through the capacitor $$ I = \frac{V_0 - U}{R}. $$ Ток equals производной chargeа capacitorа $I = \cfrac{dq}{dt}$, а charge можно выtimesandть via/through voltage. $q = CU$, hence $I = C\cfrac{dU}{dt}$, therefore equation на voltage $$ \frac{dU}{dt} = \frac{1}{RC} \left( V_0 -U\right), $$ and its solution
+Instantaneous value of the current through the capacitor $$ I = \frac{V_0 - U}{R}. $$ Current equal derivative charge capacitor $I = \cfrac{dq}{dt}$, and charge one can express through voltage. $q = CU$, from which $I = C\cfrac{dU}{dt}$, therefore equation on voltage $$ \frac{dU}{dt} = \frac{1}{RC} \left( V_0 -U\right), $$ and its solution
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U = V_0 \left( 1 - e^{-t/RC}\right). $$
+\par\smallskip\noindent\textbf{Answer:} $$ U = V_0 \left( 1 - e^{-t/RC}\right). $$
 \end{solcard}
 
 \begin{solcard}{A2}{Find the dependence of the current through the resistor on time $I(t)$ ($t > 0$).}{0.20}
 
 $I = C\cfrac{dU}{dt}$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I = \cfrac{V_0}{R} e^{-t/RC}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ I = \cfrac{V_0}{R} e^{-t/RC}. $$
 \end{solcard}
 
 \begin{solcard}{A3}{Find the heat $Q_0$ that will be released on the resistor during the entire process.}{0.20}
 
 During the entire time, charge $q= CV_0$ passes through the circuit, on which work $A=V_0 q = CV_0^2$ is performed. The final energy of the capacitor is $W = CV_0^2/2$, and the heat is $Q = A - W$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q = CV_0^2 - \frac{C V_0^2}{2} = \frac{C V_0^2}{2}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ Q = CV_0^2 - \frac{C V_0^2}{2} = \frac{C V_0^2}{2}. $$
 \end{solcard}
 
-\begin{solcard}{A4}{Let now the initial voltage on the capacitor at $t = 0$ be equal to $U_1$, and as before, a constant voltage $V = V_0$ is applied to the input. Find the dependence of the voltage on the capacitor on time $U(t)$ and the current through the resistor $I(t)$.}{0.60}
+\begin{solcard}{A4}{Let now the initial voltage on the capacitor at $t = 0$ is equal to to $U_1$, and as before, a constant voltage $V = V_0$ is applied to the input. Find the dependence of the voltage on the capacitor on time $U(t)$ and the current through the resistor $I(t)$.}{0.60}
 
 The voltage equation is the same as in the first paragraph, and its solution, taking into account the initial conditions
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U = V_0 - (V_0 - U_1) e^{-t/RC}, \quad I = \frac{V_0 - U_1}{R}e^{-t/RC}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ U = V_0 - (V_0 - U_1) e^{-t/RC}, \quad I = \frac{V_0 - U_1}{R}e^{-t/RC}. $$
 \end{solcard}
 
-\begin{solcard}{A5}{Find the amount of heat $Q_1$ that will be released during the entire process from point \textbackslash{}textbf{A4}. Construct (qualitatively) a graph of $Q_1$ versus $U_1$.}{0.70}
+\begin{solcard}{A5}{Find the amount of heat $Q_1$ that will be released during the entire process from point \textbf{A4}. Construct (qualitatively) a graph of $Q_1$ versus $U_1$.}{0.70}
 
 During charging, a charge $q = C (V_0 - U_1)$ flows through the circuit, a change in the energy of the capacitor $\Delta W = \cfrac{C V_0^2}{2}-\cfrac{C U_1^2}{2}$, the work of the source $A = V_0 q$, so the released heat is $$ Q = A - \Delta W = C V_0^2 - C V_0 U_1 -  \cfrac{C V_0^2}{2} + \cfrac{C U_1^2}{2} = \frac{C (V_0 - U_1)^2}{2} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q= \frac{C (V_0 - U_1)^2}{2}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ Q= \frac{C (V_0 - U_1)^2}{2}. $$
 \end{solcard}
 
 \begin{solcard}{B1}{Let a long time pass. Find an expression for the current through resistor $I(t)$.}{0.30}
 
 The charge of the capacitor after a long time is $q = CU \approx C V = C \alpha t$, and the current is $I = dq/dt$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I = C \alpha. $$
+\par\smallskip\noindent\textbf{Answer:} $$ I = C \alpha. $$
 \end{solcard}
 
 \begin{solcard}{B2}{Find the amount of heat $Q$ that will be released on the resistor over a sufficiently long time $t$.}{0.20}
 
 Power after process establishment $P = I^2 R \approx C^2 \alpha^2 R$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q = C^2 \alpha^2 Rt. $$
+\par\smallskip\noindent\textbf{Answer:} $$ Q = C^2 \alpha^2 Rt. $$
 \end{solcard}
 
 \begin{solcard}{B3}{Find the current through resistor $I$. Express it in terms of the instantaneous voltage across the capacitor $U$, the input voltage $V$ and the circuit parameters.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I = \frac{V - U}{R}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ I = \frac{V - U}{R}. $$
 \end{solcard}
 
 \begin{solcard}{B4}{Express the rate of change of voltage across capacitor $dU/dt$ in terms of the current through resistor $I$ and the circuit parameters.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{dU}{dt} = \frac{1}{C} I. $$
+\par\smallskip\noindent\textbf{Answer:} $$ \frac{dU}{dt} = \frac{1}{C} I. $$
 \end{solcard}
 
-\begin{solcard}{B5}{Having differentiated the equation from \textbackslash{}textbf{B3}, obtain a differential equation for the current through the resistor, that is, express $dI/dt$ in terms of $I$, the circuit parameters and the constant $\alpha$.}{0.40}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{dI}{dt} = \frac{1}{R}\left(\frac{dV}{dt} - \frac{dU}{dt} \right) =  \frac{1}{R} \left( \alpha - \frac{I}{C}\right) $$
+\begin{solcard}{B5}{Having differentiated the equation from \textbf{B3}, obtain a differential equation for the current through the resistor, that is, express $dI/dt$ in terms of $I$, the circuit parameters and the constant $\alpha$.}{0.40}
+\par\smallskip\noindent\textbf{Answer:} $$ \frac{dI}{dt} = \frac{1}{R}\left(\frac{dV}{dt} - \frac{dU}{dt} \right) =  \frac{1}{R} \left( \alpha - \frac{I}{C}\right) $$
 \end{solcard}
 
 \begin{solcard}{B6}{What is the current through the resistor at the initial time $I(0)$?}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I = 0. $$
+\par\smallskip\noindent\textbf{Answer:} $$ I = 0. $$
 \end{solcard}
 
 \begin{solcard}{B7}{Using the analogy of charging a capacitor, find the current through the resistor as a function of time $I(t)$.}{0.50}
 
 From the equation it is clear that the current increases, as does the voltage across the capacitor when charging it, with the maximum current value $C \alpha$, and the characteristic time of current change $\tau = RC$, as when charging the capacitor.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I = C \alpha \left( 1 - e^{-t/RC}\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$ I = C \alpha \left( 1 - e^{-t/RC}\right) $$
 \end{solcard}
 
 \begin{solcard}{B8}{Find the dependence of the voltage on the capacitor on time $U(t)$. Construct a (qualitative) graph of voltage versus time.}{0.70}
 
-The charge on the capacitor can be found by integrating the current (with the initial charge being zero): $$ q = \int_0^t I(t) dt = C \alpha \left( t- RC \left( 1 - e^{-t/RC}\right)\right)= C \alpha \left(t - RC + RCe^{-t/RC}  \right), $$ а voltage $U = q/C$
+The charge on the capacitor can be found by integrating the current (with the initial charge being zero): $$ q = \int_0^t I(t) dt = C \alpha \left( t- RC \left( 1 - e^{-t/RC}\right)\right)= C \alpha \left(t - RC + RCe^{-t/RC}  \right), $$ and voltage $U = q/C$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U = \alpha t - \alpha RC \left(1 - e^{-t/RC} \right). $$
+\par\smallskip\noindent\textbf{Answer:} $$ U = \alpha t - \alpha RC \left(1 - e^{-t/RC} \right). $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T1_S_EN_assets/fig1.jpg}
@@ -118,77 +117,77 @@ The charge on the capacitor can be found by integrating the current (with the in
 
 The resistor releases power $P = I^2(t) R$, integrating it, we find the released heat $$ Q = \int_0 ^t I^2(t) R dt = C^2 \alpha^2 R \int_0 ^t  \left(1 - e^{-t/RC} \right)^2 dt $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q = C^2 \alpha^2 R \left(t - 2 RC\left (1- e^{-t/RC}\right) + \frac{RC}{2} \left(1 - e^{-2t/RC} \right)\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$ Q = C^2 \alpha^2 R \left(t - 2 RC\left (1- e^{-t/RC}\right) + \frac{RC}{2} \left(1 - e^{-2t/RC} \right)\right) $$
 \end{solcard}
 
 \begin{solcard}{B10}{Find the voltage across the capacitor as a function of time at $t > T$.}{0.30}
 
 This task is similar to the task from point A4. Here, as the initial voltage, you need to use the voltage at time $T$. You also need to use the $V_0 = \alpha T$ ratio. Then $V_0 - U_1 = \alpha RC \left(1 - e^{-T/RC} \right)$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U = V_0 - \alpha RC \left(1 - e^{-T/RC} \right) e^{- \frac{t-T}{RC}}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ U = V_0 - \alpha RC \left(1 - e^{-T/RC} \right) e^{- \frac{t-T}{RC}}. $$
 \end{solcard}
 
 \begin{solcard}{B11}{Find the amount of heat $Q_2$ that is released on the resistor at $t > T$.}{0.30}
 
 This amount of heat can be calculated using the result from A5. $$ Q_2 = \frac{C (V_0 - U_1)^2}{2}= \frac{1}{2}\alpha^2 R^2 C^3  \left(1 - e^{-T/RC} \right)^2. $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q _2= \frac{1}{2}\alpha^2 R^2 C^3  \left(1 - e^{-T/RC} \right)^2. $$
+\par\smallskip\noindent\textbf{Answer:} $$ Q _2= \frac{1}{2}\alpha^2 R^2 C^3  \left(1 - e^{-T/RC} \right)^2. $$
 \end{solcard}
 
 \begin{solcard}{B12}{Find the amount of heat $Q_T$ that was released on the resistor during the entire charging time of the capacitor.}{0.40}
 
 We add up the answers from B9 and B11, present similar terms, and replace $\alpha = V_0/T$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ Q_T = \frac{RC}{T} CV_0^2 -  CV_0^2 \frac{R^2 C^2}{T^2}  \left(1 - e^{-T/RC} \right). $$
+\par\smallskip\noindent\textbf{Answer:} $$ Q_T = \frac{RC}{T} CV_0^2 -  CV_0^2 \frac{R^2 C^2}{T^2}  \left(1 - e^{-T/RC} \right). $$
 \end{solcard}
 
-\begin{solcard}{B13}{Find the ratio $k = Q_T/Q_0$. Here $Q_0$ is the heat that is generated at the resistor when voltage $V_0$ is instantly applied to the input of the circuit (see paragraph \textbackslash{}textbf{A3}), $Q_T$ is defined in the previous paragraph. Write down an approximate expression for $k$ at $T \gg RC$.}{0.60}
+\begin{solcard}{B13}{Find the ratio $k = Q_T/Q_0$. Here $Q_0$ is the heat that is generated at the resistor when voltage $V_0$ is instantly applied to the input of the circuit (see paragraph \textbf{A3}), $Q_T$ is defined in the previous paragraph. Write down an approximate expression for $k$ at $T \gg RC$.}{0.60}
 
-$Q_0 = CV_0^2/2$, taking into account this $$ k = \frac{2RC}{T} - \frac{2 R^2 C^2} {T^2} \left(1 - e^{-T/RC} \right). $$ На больших временах второе term много меньше первого, $$ k \approx  \frac{2RC}{T}. $$ Note also, что for/at маленьких временах $$ e^{-T/RC} \approx 1 - \frac{T}{RC} + \frac{T^2}{2 R^2 C^2} -\frac{T^3}{6 R^3 C^3}, $$ therefore $$ k \approx 1 - \frac{T}{3RC}. $$
+$Q_0 = CV_0^2/2$, taking into account this $$ k = \frac{2RC}{T} - \frac{2 R^2 C^2} {T^2} \left(1 - e^{-T/RC} \right). $$ On larger time второе term много меньше first, $$ k \approx  \frac{2RC}{T}. $$ Note also, that for маленьких time $$ e^{-T/RC} \approx 1 - \frac{T}{RC} + \frac{T^2}{2 R^2 C^2} -\frac{T^3}{6 R^3 C^3}, $$ therefore $$ k \approx 1 - \frac{T}{3RC}. $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ k = \frac{2RC}{T} - \frac{2 R^2 C^2} {T^2} \left(1 - e^{-T/RC} \right) \approx  \frac{2RC}{T}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ k = \frac{2RC}{T} - \frac{2 R^2 C^2} {T^2} \left(1 - e^{-T/RC} \right) \approx  \frac{2RC}{T}. $$
 \end{solcard}
 
 \begin{solcard}{С1}{Let a sufficiently long time pass and the vibrations become established. How should $U_1$ and $U_2$ be connected?}{0.20}
 
-In steady state, opposite values ​​of the external voltage correspond to opposite voltage values ​​on the capacitor.
+In steady state, opposite values of the external voltage correspond to opposite voltage values on the capacitor.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U_2= - U_1. $$
+\par\smallskip\noindent\textbf{Answer:} $$ U_2= - U_1. $$
 \end{solcard}
 
 \begin{solcard}{С2}{What is the current through resistor $I_1$ when the input voltage is $V_0$?}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I_1 = \frac{V_0 - U_1}{R}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ I_1 = \frac{V_0 - U_1}{R}. $$
 \end{solcard}
 
-\begin{solcard}{С3}{By analogy with point \textbackslash{}textbf{B4}, write an equation that is satisfied by the current through the resistor in the section where the input voltage decays linearly.}{0.40}
+\begin{solcard}{С3}{By analogy with point \textbf{B4}, write an equation that is satisfied by the current through the resistor in the section where the input voltage decays linearly.}{0.40}
 
-The input voltage in the section under consideration is $$ V = V_0 - \frac{4 V_0}{T} t. $$ В equation for currentа входит только $dV/dt$, therefore постоянное term нnotго не влияет. Then the equation совпаgives с equationм from partа B5 s $\alpha = - 4V_0/T$.
+The input voltage in the section under consideration is $$ V = V_0 - \frac{4 V_0}{T} t. $$ in equation for current входит only $dV/dt$, therefore constant term on it not влияет. Then equation coincide with equation from part B5 s $\alpha = - 4V_0/T$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{dI}{dt} = \frac{1}{R} \left(- \frac{4 V_0}{T} - \frac{I}{C} \right) $$
+\par\smallskip\noindent\textbf{Answer:} $$ \frac{dI}{dt} = \frac{1}{R} \left(- \frac{4 V_0}{T} - \frac{I}{C} \right) $$
 \end{solcard}
 
 \begin{solcard}{C4}{Taking into account the previous two points, find the dependence of the current on time in the section where the input voltage decays linearly. For ease of notation, consider that this section begins at time $t = 0$.}{0.50}
 
-After a long time, the current will be equal to $I_2 = - 4 C V_0/T$, and the general solution of the equation has the form $$ I = I_2 + (I_1 - I_2 )e ^{-t/RC} $$
+After a long time, the current will is equal to to $I_2 = - 4 C V_0/T$, and the general solution of the equation has the form $$ I = I_2 + (I_1 - I_2 )e ^{-t/RC} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ I = - \frac{4 CV_0 }{T} + \left( \frac{V_0- U_1}{R} + \frac{4 CV_0 }{T} \right) e^{- t/RC} $$
+\par\smallskip\noindent\textbf{Answer:} $$ I = - \frac{4 CV_0 }{T} + \left( \frac{V_0- U_1}{R} + \frac{4 CV_0 }{T} \right) e^{- t/RC} $$
 \end{solcard}
 
 \begin{solcard}{C5}{Using the found expression for the current, express the voltage on the capacitor at the end of the linear section $U_2$ in terms of the voltage at the beginning $U_1$ and the parameters of the problem.}{0.60}
 
-Change in charge on the capacitor during voltage decrease $$ \Delta q = \int_0 ^{T/2} I(t) dt = - 2 C V_0 + RC \left( \frac{V_0- U_1}{R} + \frac{4 CV_0 }{T} \right) \left(1 - e ^{-T/2RC} \right), $$ then изменение напряжения $$ \Delta U = \frac{\Delta q}{C} = U_2 - U_1= -V_0 - U_1 + \frac{4RC}{T} V_0 - \left(V_0 - U_1 + \frac{4 RC}{T} \right) e^{-T/2RC}. $$
+Change in charge on the capacitor during voltage decrease $$ \Delta q = \int_0 ^{T/2} I(t) dt = - 2 C V_0 + RC \left( \frac{V_0- U_1}{R} + \frac{4 CV_0 }{T} \right) \left(1 - e ^{-T/2RC} \right), $$ then change voltage $$ \Delta U = \frac{\Delta q}{C} = U_2 - U_1= -V_0 - U_1 + \frac{4RC}{T} V_0 - \left(V_0 - U_1 + \frac{4 RC}{T} \right) e^{-T/2RC}. $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U_2 = - V_0+ \frac{4RC}{T} V_0 - \left(V_0 - U_1 + \frac{4 RC}{T} \right) e^{-T/2RC}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ U_2 = - V_0+ \frac{4RC}{T} V_0 - \left(V_0 - U_1 + \frac{4 RC}{T} \right) e^{-T/2RC}. $$
 \end{solcard}
 
 \begin{solcard}{С6}{Find the maximum voltage across capacitor $U_1$ at steady state. Write approximate expressions for $U_1$ for $T \ll RC$ and $T \gg RC$.}{1.00}
 
-Solving the equation $U_2 = - U_1$ for $U_1$ we find (for convenience of writing, we use the so-called hyperbolic function $\tanh x$; if desired, the answer can be written simply in terms of exponentials.) For large values ​​of the argument $\tanh x \approx 1$ and $U_1 \approx V_0 \left(1 - 4RC/T \right) \approx V_0$, for small values ​​of the argument $\tanh x \approx x - x^3/3$, $U_1 \approx \cfrac{T^2}{48 R^2 C^2}V_0$. If the answer to the behavior of a function cannot be obtained analytically, this can also be done numerically by calculating values ​​for small values ​​of time $T/RC$. So we can verify that at small times $U_1 \sim T^2$.
+Solving the equation $U_2 = - U_1$ for $U_1$ we find (for convenience of writing, we use the so-called hyperbolic function $\tanh x$; if desired, the answer can be written simply in terms of exponentials.) For large values of the argument $\tanh x \approx 1$ and $U_1 \approx V_0 \left(1 - 4RC/T \right) \approx V_0$, for small values of the argument $\tanh x \approx x - x^3/3$, $U_1 \approx \cfrac{T^2}{48 R^2 C^2}V_0$. If the answer to the behavior of a function cannot be obtained analytically, this can also be done numerically by calculating values for small values of time $T/RC$. So we can verify that at small times $U_1 \sim T^2$.
 
 
-Note that the value $U_1$ is not actually the maximum voltage value across the capacitor, since the capacitor continues to charge some time after the input voltage has begun to decrease. The maximum voltage value is reached when the current through the capacitor becomes 0, after which the sign of the current changes and the capacitor begins to discharge. This time $t_1$ can be found from the condition $$ I(t_1) = 0 = - \frac{4 CV_0 }{T} + \left( I_1 + \frac{4 CV_0 }{T} \right) e^{- t_1/RC}, $$ therefore $$ e^{-t_1/RC} = \frac{4 CV_0/T}{I_1 + 4 CV_0/T}, \quad I_1 = \frac{V_0 - U_1}{R} = \frac{4 C V_0}{T} \tanh \frac{T}{4 RC}. $$ Over time $t_1$ в capacitor затечет дополнительный charge $$ \Delta q_1 = \int _0 ^{t_1} I(t) dt= - 4 C V_0 \frac{t_1}{T} + + RC \left( I_1 + \frac{4 CV_0 }{T} \right) \left(1 - e ^{-t_1/RC} \right). $$ Substituting во второе сложение expression for экспоненты and напряжения $U_1$ we get $$ \Delta q_1 = - 4 C V_0 \frac{t_1}{T} + RCI_1. $$ Then максимальное voltage $$ U_{\text{max}} = U_1 + \frac{\Delta q_1}{C} =  V_0 - 4 V_0 \frac{t_1}{T} = V_0 \left(1 - \frac{4RC}{T} \ln\left(1 + \tanh \frac{T}{4 RC} \right) \right). $$ Это voltage больше $U_1$, for small in time values it depends linearly on time.
+Note that the value $U_1$ is not actually the maximum voltage value across the capacitor, since the capacitor continues to charge some time after the input voltage has begun to decrease. The maximum voltage value is reached when the current through the capacitor becomes 0, after which the sign of the current changes and the capacitor begins to discharge. This time $t_1$ can be found from the condition $$ I(t_1) = 0 = - \frac{4 CV_0 }{T} + \left( I_1 + \frac{4 CV_0 }{T} \right) e^{- t_1/RC}, $$ therefore $$ e^{-t_1/RC} = \frac{4 CV_0/T}{I_1 + 4 CV_0/T}, \quad I_1 = \frac{V_0 - U_1}{R} = \frac{4 C V_0}{T} \tanh \frac{T}{4 RC}. $$ Over time $t_1$ in capacitor затечет additional charge $$ \Delta q_1 = \int _0 ^{t_1} I(t) dt= - 4 C V_0 \frac{t_1}{T} + + RC \left( I_1 + \frac{4 CV_0 }{T} \right) \left(1 - e ^{-t_1/RC} \right). $$ Substitute in второе сложение expression for exponential and voltage $U_1$ obtain $$ \Delta q_1 = - 4 C V_0 \frac{t_1}{T} + RCI_1. $$ Then maximum voltage $$ U_{\text{max}} = U_1 + \frac{\Delta q_1}{C} =  V_0 - 4 V_0 \frac{t_1}{T} = V_0 \left(1 - \frac{4RC}{T} \ln\left(1 + \tanh \frac{T}{4 RC} \right) \right). $$ This voltage larger $U_1$, for small in time values it depends linearly on time.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ U_1 = V_0 \left(1 - \frac{4RC}{T} \tanh \frac{T}{4RC} \right), \quad \tanh x = \frac{e^x - e^{-x}}{e^x + e^{-x}} . $$
+\par\smallskip\noindent\textbf{Answer:} $$ U_1 = V_0 \left(1 - \frac{4RC}{T} \tanh \frac{T}{4RC} \right), \quad \tanh x = \frac{e^x - e^{-x}}{e^x + e^{-x}} . $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T1_S_EN_assets/fig2.jpg}

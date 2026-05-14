@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,9 +32,9 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Find the distance $x_1$ from the end of the dumbbell $m_1$ to the attachment point.}{0.60}
 
-With a fixed orientation of the rotation axis relative to the dumbbell, the Huygens-Steiner theorem can be used to minimize the moment of inertia: for the rotation axis passing through an arbitrary point $\mathrm{P}$, the moment of inertia $J_{\mathrm{P}}$ is related to the moment of inertia $J_{\mathrm{O}}$, where $\mathrm{O}$ is the center of mass of the system, as $$J_{\mathrm{P}} = J_{\mathrm{O}} + M\cdot\mathrm{OP}^2.$$ Thus, in the case of минимального $J_{\mathrm{P}}$ true $\mathrm{P} = \mathrm{O}$. For вычисления расстояния от края $m_2$ we use the definition of the center of mass:
+With a fixed orientation of the rotation axis relative to the dumbbell, the Huygens-Steiner theorem can be used to minimize the moment of inertia: for the rotation axis passing through an arbitrary point $\mathrm{P}$, the moment of inertia $J_{\mathrm{P}}$ is related to the moment of inertia $J_{\mathrm{O}}$, where $\mathrm{O}$ is the center of mass of the system, as $$J_{\mathrm{P}} = J_{\mathrm{O}} + M\cdot\mathrm{OP}^2.$$ Thus, in the case of minimum $J_{\mathrm{P}}$ correct $\mathrm{P} = \mathrm{O}$. For calculation distance from edge $m_2$ we use the definition of the center of mass:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$x_2 = \frac{m_1}{m_1 + m_2}l.$$
+\par\smallskip\noindent\textbf{Answer:} $$x_2 = \frac{m_1}{m_1 + m_2}l.$$
 \end{solcard}
 
 \begin{solcard}{A2}{Find the moment of inertia $J$.}{0.20}
@@ -45,142 +44,142 @@ Let's find the distance $x_1$ from the heavy end of the dumbbell to its center o
 
 Next, for convenience, we introduce the reduced mass $\mu = \frac{m_1m_2}{m_1 + m_2}.$ Then $$J_{\mathrm{O}} = \mu l^2.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$J_{\mathrm{O}} = m_1x_1^2 + m_2x_2^2 = \frac{m_1m_2}{m_1 + m_2}l^2.$$
+\par\smallskip\noindent\textbf{Answer:} $$J_{\mathrm{O}} = m_1x_1^2 + m_2x_2^2 = \frac{m_1m_2}{m_1 + m_2}l^2.$$
 \end{solcard}
 
 \begin{solcard}{A3}{Calculate the angular acceleration $\varepsilon$ of the dumbbell at time $t = 0$.}{0.30}
 
-In the case of a fixed axis of rotation, we can write the equation of rotational motion in the form $$J\vec{\varepsilon} = \sum \limits_{i}\vec{M}_{i}.$$ In the case of плоского движения направления momentа сил and углового ускорения очевидны, так что next перепишем equation в скалярном виде. Согласно условию, внешний вынуждающий moment постоянен and equals $M_{\text{outer}} = F\cdot x_1,$ а for/at нулевой угловой скорости friction force отсутствует. Substituting expression for $x_1,$ we have
+In the case of a fixed axis of rotation, we can write the equation of rotational motion in the form $$J\vec{\varepsilon} = \sum \limits_{i}\vec{M}_{i}.$$ In the case of flat motion direction the moment of force and angular acceleration are obvious, so further we rewrite the equation in scalar form. According to the condition, the external driving moment constant and equal $M_{\text{outer}} = F\cdot x_1,$ and for zero angular velocity friction force be absent. Substitute expression for $x_1,$ we have
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\varepsilon = \frac{m_2}{m_1 + m_2}\frac{Fl}{\mu l^2} = \frac{F}{m_1 l}.$$
+\par\smallskip\noindent\textbf{Answer:} $$\varepsilon = \frac{m_2}{m_1 + m_2}\frac{Fl}{\mu l^2} = \frac{F}{m_1 l}.$$
 \end{solcard}
 
 \begin{solcard}{A4}{Calculate the steady-state angular velocity $\omega_{\text{lim}}$ of the dumbbell rotation after a long time.}{0.60}
 
-The frictional moment $M_{\text{fric}}$ arises due to the linear velocities $v_1,~v_2$ of the two point ends of the rod: $$v_1 = \omega x_1;~~v_2 = \omega x_2~\Rightarrow~f_1 = -\gamma\omega x_1;~~f_2 = -\gamma \omega x_2.$$Очеit can be seen that moment направлен против вынуждающего постоянного momentа. Let us write его: $$M_{\text{fric}} = f_1x_1 + f_2x_2 = -\gamma(x_1^2 + x_2^2)\omega.$$
+The frictional moment $M_{\text{fric}}$ arises due to the linear velocities $v_1,~v_2$ of the two point ends of the rod: $$v_1 = \omega x_1;~~v_2 = \omega x_2~\Rightarrow~f_1 = -\gamma\omega x_1;~~f_2 = -\gamma \omega x_2.$$Obviously, this moment is directed against the driving constant moment. Write it: $$M_{\text{fric}} = f_1x_1 + f_2x_2 = -\gamma(x_1^2 + x_2^2)\omega.$$
 
 
-Now we can write down the equation of rotational motion at an arbitrary moment of time: $$\mu l^2 \varepsilon = \mu l^2 \frac{\mathrm{d}\omega}{\mathrm{d}t} = Fx_1 - \gamma(x_1^2 + x_2^2)\omega~\Leftrightarrow~\mu l^2 \frac{\mathrm{d}\omega}{\mathrm{d}t} + \gamma(x_1^2 + x_2^2)\omega = Fx_1.$$Solution этого уравнения givesся следующей формулой: $$\omega(t) = \frac{Fx_1}{\gamma(x_1^2 + x_2^2)}\left(1 - e^{-\frac{\gamma(x_1^2 + x_2^2)}{\mu l^2}t}\right) = \frac{F}{\gamma}\frac{m_2(m_1 + m_2)}{(m_1^2 + m_2^2)l}\left(1 - e^{-\frac{\gamma (m_1^2 + m_2^2)}{(m_1 + m_2)m_1m_2}t}\right).$$Next let us find $\omega_{\text{lim}}$ как limit $\omega(t)$ for/at $t \rightarrow \infty$, or from дифференциального уравнения с conditionм $\dot{\omega} = 0.$
+Now we can write down the equation of rotational motion at an arbitrary moment of time: $$\mu l^2 \varepsilon = \mu l^2 \frac{\mathrm{d}\omega}{\mathrm{d}t} = Fx_1 - \gamma(x_1^2 + x_2^2)\omega~\Leftrightarrow~\mu l^2 \frac{\mathrm{d}\omega}{\mathrm{d}t} + \gamma(x_1^2 + x_2^2)\omega = Fx_1.$$The solution to this equation is given by the following formula: $$\omega(t) = \frac{Fx_1}{\gamma(x_1^2 + x_2^2)}\left(1 - e^{-\frac{\gamma(x_1^2 + x_2^2)}{\mu l^2}t}\right) = \frac{F}{\gamma}\frac{m_2(m_1 + m_2)}{(m_1^2 + m_2^2)l}\left(1 - e^{-\frac{\gamma (m_1^2 + m_2^2)}{(m_1 + m_2)m_1m_2}t}\right).$$Further find $\omega_{\text{lim}}$ as limit $\omega(t)$ for $t \rightarrow \infty$, or from differential equation with condition $\dot{\omega} = 0.$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\omega_{\text{lim}} = \lim_{t\rightarrow \infty} \omega(t) = \frac{m_2(m_1 + m_2)}{m_1^2 + m_2^2}\frac{F}{\gamma l}.$$
+\par\smallskip\noindent\textbf{Answer:} $$\omega_{\text{lim}} = \lim_{t\rightarrow \infty} \omega(t) = \frac{m_2(m_1 + m_2)}{m_1^2 + m_2^2}\frac{F}{\gamma l}.$$
 \end{solcard}
 
 \begin{solcard}{A5}{Find the moment of time $\tau$ at which the angular velocity is $\omega_{\text{lim}}/2$.}{0.50}
 
 According to the explicit formula $\omega(t),$ obtained by solving the previous paragraph, we have the answer for the characteristic time $\tau$ (the time during which the exponent will significantly change its value).
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\tau =  \dfrac{(m_1+m_2) \cdot m_1 m_2}{\gamma (m_1^2+m_2^2)}\mathrm{ln}(2).$$
+\par\smallskip\noindent\textbf{Answer:} $$\tau =  \dfrac{(m_1+m_2) \cdot m_1 m_2}{\gamma (m_1^2+m_2^2)}\mathrm{ln}(2).$$
 \end{solcard}
 
 \begin{solcard}{B1}{Calculate the angular acceleration $\varepsilon$ of the dumbbell at time $t = 0$.}{0.20}
 
-The equation of rotational motion of a system with mass $m$ for an axis moving translationally looks like $$J\vec{\varepsilon} = \vec{M}_{\text{outer}}  + m\left[\vec{v}_c, \vec{v_{\mathrm{P}}}\right],$$where $\vec{v}_{\text{P}}$ — (поступательная) velocity оси, а $\vec{v}_c$ — velocity of center of mass. Thus, for движущейся оси, совпадающей с центром масс, equation движения так же for/atнимает вид $$J\vec{\varepsilon} = \vec{M}_{\text{outer}},$$ and the answer for the angular acceleration of the previous part of the problem remains valid.
+The equation of rotational motion of a system with mass $m$ for an axis moving translationally looks like $$J\vec{\varepsilon} = \vec{M}_{\text{outer}}  + m\left[\vec{v}_c, \vec{v_{\mathrm{P}}}\right],$$where $\vec{v}_{\text{P}}$ -- (translational) velocity of the axis, and $\vec{v}_c$ — velocity of the center of mass. Thus, for move axis, coincide with center mass, equation of motion thus same take form $$J\vec{\varepsilon} = \vec{M}_{\text{outer}},$$ and the answer for the angular acceleration of the previous part of the problem remains valid.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\varepsilon = \frac{F}{m_1 l}.$$
+\par\smallskip\noindent\textbf{Answer:} $$\varepsilon = \frac{F}{m_1 l}.$$
 \end{solcard}
 
 \begin{solcard}{B2}{How long will it take $T_n$ for the $n$th revolution of the dumbbell?}{0.20}
 
-In this part of the problem there is no friction, so the external moment is always equal to the driving moment, so it is constant. The dumbbell rotates uniformly accelerated from a position with zero initial angular velocity. The dependence $\omega(t)$ is given by the equality $$\omega(t) = \varepsilon t,$$ а angle поворота от начального положения, естественно, $$\varphi = \frac{\varepsilon t^2}{2}.$$
+In this part of the problem there is no friction, so the external moment is always equal to the driving moment, so it is constant. The dumbbell rotates uniformly accelerated from a position with zero initial angular velocity. The dependence $\omega(t)$ is given by the equality $$\omega(t) = \varepsilon t,$$ and rotation angle from the initial position, naturally, $$\varphi = \frac{\varepsilon t^2}{2}.$$
 
 
-The dumbbell will make $n$ full revolutions in time $t_n$ such that $$2\pi n = \frac{\varepsilon t_n^2}{2}~\Rightarrow~t_n = 2\sqrt{\frac{\pi n}{\varepsilon}}.$$Ясно then, что time $n$-ого оборота может быть поrayено equalityм $$T_n = t_n - t_{n-1}.$$
+The dumbbell will make $n$ full revolutions in time $t_n$ such that $$2\pi n = \frac{\varepsilon t_n^2}{2}~\Rightarrow~t_n = 2\sqrt{\frac{\pi n}{\varepsilon}}.$$It is then clear that the time of the $n$-th revolution can be obtained from the equality $$T_n = t_n - t_{n-1}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T_n = 2\sqrt{\frac{\pi m_1 l}{F}}\left(\sqrt{n} - \sqrt{n-1}\right) = 2\sqrt{\frac{\pi m_1 l}{F}} \frac{1}{\sqrt{n} + \sqrt{n-1}} \approx \sqrt{\frac{\pi}{n}\frac{m_1l}F{}}.$$
+\par\smallskip\noindent\textbf{Answer:} $$T_n = 2\sqrt{\frac{\pi m_1 l}{F}}\left(\sqrt{n} - \sqrt{n-1}\right) = 2\sqrt{\frac{\pi m_1 l}{F}} \frac{1}{\sqrt{n} + \sqrt{n-1}} \approx \sqrt{\frac{\pi}{n}\frac{m_1l}F{}}.$$
 \end{solcard}
 
 \begin{solcard}{B3}{After a long time, the speed of the dumbbell's center of mass becomes almost constant. Find the vector $\vec{u}$ of the steady-state velocity of the center of mass. In response, write down the $x$- and $y$-components of the speed $\vec{u}$.}{1.00}
 
 It is clear that $$u_x = \int\limits_0^{\infty}\dot{v}_x\mathrm{d}t = \frac{F}{m} \int\limits_0^{\infty}-\sin\left(\frac{\varepsilon t^2}{2}\right)\mathrm{d}t = -\frac{F}{m}\sqrt{\frac{2}{\varepsilon}} \int\limits_0^{\infty}\sin\left(\xi^2\right)\mathrm{d}\xi = -\frac{F}{m}\sqrt{\frac{2}{\varepsilon}}\sqrt{\frac{\pi}{8}}.$$That is $$u_x = -\frac{F}{2m}\sqrt{\frac{\pi}{\varepsilon}}.$$Similarly, $$u_y = \frac{F}{2m}\sqrt{\frac{\pi}{\varepsilon}}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \textbackslash{}begin{equation} \textbackslash{}vec{u} = \textbackslash{}frac{\textbackslash{}sqrt{\textbackslash{}pi m_1Fl}}{2(m_1 + m_2)} \textbackslash{}begin{pmatrix} -1\textbackslash{}\textbackslash{} 1 \textbackslash{}end{pmatrix}. \textbackslash{}end{equation}
+\par\smallskip\noindent\textbf{Answer:} \begin{equation} \vec{u} = \frac{\sqrt{\pi m_1Fl}}{2(m_1 + m_2)} \begin{pmatrix} -1\\ 1 \end{pmatrix}. \end{equation}
 \end{solcard}
 
 \begin{solcard}{C1}{Determine the final displacement vector $\vec{s}$ of the center of mass of the dumbbell after it stops. The answer must be presented in the form of components in the coordinate system shown in this figure.}{1.50}
 
-Let's start counting the angle of deviation $\varphi$ from the vertical in the direction of the minimum disturbance of the dumbbell. Let us write the theorem about the motion of the center of mass in coordinate form: \textbackslash{}begin{equation} \textbackslash{}begin{cases} m\textbackslash{}dot{v}_x = -2\textbackslash{}gamma \textbackslash{}dot{x} + 2\textbackslash{}gamma\textbackslash{}Delta\textbackslash{}cos(\textbackslash{}varphi)\textbackslash{}omega;\textbackslash{}\textbackslash{} m\textbackslash{}dot{v}_y = -2\textbackslash{}gamma \textbackslash{}dot{y} - 2\textbackslash{}gamma\textbackslash{}Delta\textbackslash{}sin(\textbackslash{}varphi)\textbackslash{}omega. \textbackslash{}end{cases} \textbackslash{}end{equation} Now note that in this system we can get rid of the time derivative and relate changes in velocities, coordinates and rotation angle: \textbackslash{}begin{equation} \textbackslash{}begin{cases} \textbackslash{}frac{m}{\textbackslash{}gamma}\textbackslash{}mathrm{d}v_x = -2\textbackslash{}mathrm{d}x + 2\textbackslash{}Delta\textbackslash{}cos(\textbackslash{}varphi)\textbackslash{}mathrm{d}\textbackslash{}varphi;\textbackslash{}\textbackslash{} \textbackslash{}frac{m}{\textbackslash{}gamma}\textbackslash{}mathrm{d}v_y = -2\textbackslash{}mathrm{d}y - 2\textbackslash{}Delta\textbackslash{}sin(\textbackslash{}varphi)\textbackslash{}mathrm{d}\textbackslash{}varphi. \textbackslash{}end{cases} ~\textbackslash{}Rightarrow~ \textbackslash{}begin{cases} \textbackslash{}frac{m}{\textbackslash{}gamma}\textbackslash{}left(v_x - v_{x_0}\textbackslash{}right) = -2\textbackslash{}left(x - x_0\textbackslash{}right) + 2\textbackslash{}Delta\textbackslash{}left(\textbackslash{}sin(\textbackslash{}varphi) - \textbackslash{}sin(\textbackslash{}varphi_0)\textbackslash{}right);\textbackslash{}\textbackslash{} \textbackslash{}frac{m}{\textbackslash{}gamma}\textbackslash{}left(v_y - v_{y_0}\textbackslash{}right) = -2(y - y_0) + 2\textbackslash{}Delta\textbackslash{}left(\textbackslash{}cos(\textbackslash{}varphi) - \textbackslash{}cos(\textbackslash{}varphi_0)\textbackslash{}right). \textbackslash{}end{cases} \textbackslash{}end{equation}
+Let's start counting the angle of deviation $\varphi$ from the vertical in the direction of the minimum disturbance of the dumbbell. Let us write the theorem about the motion of the center of mass in coordinate form: \begin{equation} \begin{cases} m\dot{v}_x = -2\gamma \dot{x} + 2\gamma\Delta\cos(\varphi)\omega;\\ m\dot{v}_y = -2\gamma \dot{y} - 2\gamma\Delta\sin(\varphi)\omega. \end{cases} \end{equation} Now note that in this system we can get rid of the time derivative and relate changes in velocities, coordinates and rotation angle: \begin{equation} \begin{cases} \frac{m}{\gamma}\mathrm{d}v_x = -2\mathrm{d}x + 2\Delta\cos(\varphi)\mathrm{d}\varphi;\\ \frac{m}{\gamma}\mathrm{d}v_y = -2\mathrm{d}y - 2\Delta\sin(\varphi)\mathrm{d}\varphi. \end{cases} ~\Rightarrow~ \begin{cases} \frac{m}{\gamma}\left(v_x - v_{x_0}\right) = -2\left(x - x_0\right) + 2\Delta\left(\sin(\varphi) - \sin(\varphi_0)\right);\\ \frac{m}{\gamma}\left(v_y - v_{y_0}\right) = -2(y - y_0) + 2\Delta\left(\cos(\varphi) - \cos(\varphi_0)\right). \end{cases} \end{equation}
 
 
-Let's take into account the initial conditions for our movement: \textbackslash{}begin{equation} \textbackslash{}begin{cases} v_{x_0} = 0;\textbackslash{}\textbackslash{} v_{y_0} = 0;\textbackslash{}\textbackslash{} x_0 = 0;\textbackslash{}\textbackslash{} y_0 = 0;\textbackslash{}\textbackslash{} \textbackslash{}varphi_0 = 0; \textbackslash{}end{cases} \textbackslash{}end{equation} and <<final conditions>>: \textbackslash{}begin{equation} \textbackslash{}begin{cases} \textbackslash{}varphi = \textbackslash{}pi;\textbackslash{}\textbackslash{} v_x = 0;\textbackslash{}\textbackslash{} v_y = 0. \textbackslash{}end{cases} \textbackslash{}end{equation} Substituting them into the system, we have \textbackslash{}begin{equation} \textbackslash{}begin{cases} 0 = -2x + 0;\textbackslash{}\textbackslash{} 0 = -2y + 2\textbackslash{}Delta\textbackslash{}left(-1 -1\textbackslash{}right). \textbackslash{}end{cases} \textbackslash{}end{equation} From here
+Let's take into account the initial conditions for our movement: \begin{equation} \begin{cases} v_{x_0} = 0;\\ v_{y_0} = 0;\\ x_0 = 0;\\ y_0 = 0;\\ \varphi_0 = 0; \end{cases} \end{equation} and <<final conditions>>: \begin{equation} \begin{cases} \varphi = \pi;\\ v_x = 0;\\ v_y = 0. \end{cases} \end{equation} Substituting them into the system, we have \begin{equation} \begin{cases} 0 = -2x + 0;\\ 0 = -2y + 2\Delta\left(-1 -1\right). \end{cases} \end{equation} From here
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \vec{s} = \begin{pmatrix} 0\\ -2\Delta \end{pmatrix} $$
+\par\smallskip\noindent\textbf{Answer:} $$ \vec{s} = \begin{pmatrix} 0\\ -2\Delta \end{pmatrix} $$
 \end{solcard}
 
 \begin{solcard}{C2}{Determine how much heat was released during the entire movement of the dumbbell.}{0.30}
 
 Let's use the law of conservation of energy and connect the work of potential forces (gravity and Archimedes' force) and dissipated energy $Q$: $$(m_1 + m_2)g\cdot 2\Delta + F_a \cdot 0 = Q.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$Q = (m_1 - m_2)gl.$$
+\par\smallskip\noindent\textbf{Answer:} $$Q = (m_1 - m_2)gl.$$
 \end{solcard}
 
 \begin{solcard}{D1}{At an arbitrary moment in time, write down the total moment $\vec{M}_{\text{out}}$ of the external forces relative to the center of mass of the dumbbell. Express it in terms of the center of mass velocity $\vec{v}$, angular velocity $\vec{\omega}$, $\vec{\Delta},$ $\vec{g}$ and system parameters.}{0.60}
 
-Let's write down the total moment of force $\vec{M}_{out}$ for the dumbbell relative to its center of mass: $$\vec{M}_{out} = -\gamma \cdot [(\vec{r_1}+\vec{r_2}) \times \vec{v}] + [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot [\vec{r_1} \times [\vec{\omega} \times \vec{r_1}]] - \gamma \cdot \left[ \vec{r_2} \times [\vec{\omega} \times \vec{r_2}] \right] $$We get answer, преобсовав vectorные произведения taking into account $\vec{r_1}+\vec{r_2} = 2 \vec{\Delta}$: $$\vec{M}_{\text{out}} = -2 \gamma \cdot [\vec{\Delta} \times \vec{v}] + [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot \vec{\omega} \cdot \left( r_1^2+r_2^2 \right) .$$
+Let's write down the total moment of force $\vec{M}_{out}$ for the dumbbell relative to its center of mass: $$\vec{M}_{out} = -\gamma \cdot [(\vec{r_1}+\vec{r_2}) \times \vec{v}] + [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot [\vec{r_1} \times [\vec{\omega} \times \vec{r_1}]] - \gamma \cdot \left[ \vec{r_2} \times [\vec{\omega} \times \vec{r_2}] \right] $$Obtain answer, transform vector product taking into account $\vec{r_1}+\vec{r_2} = 2 \vec{\Delta}$: $$\vec{M}_{\text{out}} = -2 \gamma \cdot [\vec{\Delta} \times \vec{v}] + [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot \vec{\omega} \cdot \left( r_1^2+r_2^2 \right) .$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\vec{M}_{\text{out}} = -2 \gamma \cdot [\vec{\Delta} \times \vec{v}] + [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot \vec{\omega} \cdot \left( r_1^2+r_2^2 \right) .$$
+\par\smallskip\noindent\textbf{Answer:} $$\vec{M}_{\text{out}} = -2 \gamma \cdot [\vec{\Delta} \times \vec{v}] + [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot \vec{\omega} \cdot \left( r_1^2+r_2^2 \right) .$$
 \end{solcard}
 
 \begin{solcard}{D2}{Show that under the conditions of small damping and $\varphi_0 \ll 1$ in the equation of rotational motion we can neglect the moment caused by the translational motion of the center of mass.}{0.20}
 
-Let us write the theorem on the motion of the center of mass for a dumbbell: $$(m_1+m_2) \cdot \dot{\vec{v}} = - 2 \gamma \vec{v} - 2 \gamma \cdot [\vec{\omega} \times \vec{\Delta}].$$Let us integrate его по времени: $$(m_1+m_2) \vec{v} = -2 \gamma \vec{S} - 2 \gamma \cdot \int\limits_0^t [\vec{\omega} \times \vec{\Delta}] dt$$Первое term в теореме о движении центра масс всегда направлено против $\vec{v}$, therefore let us estimate value $v$ from above: $$v < \dfrac{2 \gamma}{m_1+m_2} \cdot \Delta \varphi,$$Hence в силу малости затухания, первое term в записанном выше полном momentе сил, оказывается порядка $\gamma^2,$ а третье — порядка $\gamma$ $\Rightarrow$ moment caused by the translational movement of the center mass, can be neglected.
+Let us write the theorem on the motion of the center of mass for a dumbbell: $$(m_1+m_2) \cdot \dot{\vec{v}} = - 2 \gamma \vec{v} - 2 \gamma \cdot [\vec{\omega} \times \vec{\Delta}].$$Integrate it by time: $$(m_1+m_2) \vec{v} = -2 \gamma \vec{S} - 2 \gamma \cdot \int\limits_0^t [\vec{\omega} \times \vec{\Delta}] dt$$First term in the center-of-mass theorem always direct against $\vec{v}$, therefore we estimate the value of $v$ from above: $$v < \dfrac{2 \gamma}{m_1+m_2} \cdot \Delta \varphi,$$From which in force smallness of the damping, the first term in the total moment of force written above turns out to be of order $\gamma^2,$ and third — order $\gamma$ $\Rightarrow$ moment caused by the translational movement of the center mass, can be neglected.
 
 \end{solcard}
 
-\begin{solcard}{D3}{Write down the equation of rotational motion. Taking into account the smallness of the damping and the condition $\varphi_0 \ll 1$, you obtain the equation of damped oscillations of the angle formed by the dumbbell with the vertical: $$\ddot{\varphi} + A\dot{\varphi} + B\varphi = 0.$$Determine coefficientы $A$ and $B$.}{0.50}
+\begin{solcard}{D3}{Write down the equation of rotational motion. Taking into account the smallness of the damping and the condition $\varphi_0 \ll 1$, you obtain the equation of damped oscillations of the angle formed by the dumbbell with the vertical: $$\ddot{\varphi} + A\dot{\varphi} + B\varphi = 0.$$Determine coefficient $A$ and $B$.}{0.50}
 
-From the results of points $D1$ and $D2$ we write the equation of rotational motion for the dumbbell relative to its center of mass: $$I \vec{\varepsilon} =  [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot \vec{\omega} \cdot (r_1^2+r_2^2)$$Substituting в данное equation геометрические parameterы from части $A$, $\varepsilon = \ddot{\varphi}$, $\omega = \dot{\varphi}$ and спроецируем его на ось, перпендикулярную плоскости рисунка: $$\ddot{\varphi} + \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2} \dot{\varphi} + \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2} \varphi = 0$$. We get итоговый answer: $$A = \dfrac{\gamma \left( m_1^2+m_2^2 \right) }{(m_1+m_2) \cdot m_1 m_2}$$$$B = \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2}.$$
+From the results of points $D1$ and $D2$ we write the equation of rotational motion for the dumbbell relative to its center of mass: $$I \vec{\varepsilon} =  [\vec{\Delta} \times \vec{F_a}] - \gamma \cdot \vec{\omega} \cdot (r_1^2+r_2^2)$$Substituting into the given equation the geometric parameters from part A, $\varepsilon = \ddot{\varphi}$, $\omega = \dot{\varphi}$ and project it onto the axis perpendicular to the plane of the figure: $$\ddot{\varphi} + \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2} \dot{\varphi} + \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2} \varphi = 0$$. We obtain the desired answer: $$A = \dfrac{\gamma \left( m_1^2+m_2^2 \right) }{(m_1+m_2) \cdot m_1 m_2}$$$$B = \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$A = \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2}$$$$B = \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2}.$$
+\par\smallskip\noindent\textbf{Answer:} $$A = \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2}$$$$B = \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2}.$$
 \end{solcard}
 
 \begin{solcard}{D4}{Determine the period $T$ of the dumbbell oscillations.}{0.20}
 
 In the previous paragraph we obtained the equation of damped oscillations, for which the period is calculated using the formula: $$T = \dfrac{2\pi}{\sqrt{B - A^2/4}} = \dfrac{2 \pi}{\sqrt{ \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2} - \dfrac{1}{4}\cdot \left( \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2} \right) ^2}}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T = \dfrac{2 \pi}{\sqrt{ \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2} - \dfrac{1}{4}\cdot \left( \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2} \right) ^2}}$$
+\par\smallskip\noindent\textbf{Answer:} $$T = \dfrac{2 \pi}{\sqrt{ \dfrac{\Delta (m_1+m_2)^2 g}{m_1 m_2 l^2} - \dfrac{1}{4}\cdot \left( \dfrac{\gamma (m_1^2+m_2^2)}{(m_1+m_2) \cdot m_1 m_2} \right) ^2}}$$
 \end{solcard}
 
 \begin{solcard}{D5}{Estimate the characteristic time $\tau$ of damping of the dumbbell oscillations.}{0.20}
 
 Characteristic decay time of oscillations of order $\tau = \dfrac{1}{A}$: $$\tau =  \dfrac{(m_1+m_2) \cdot m_1 m_2}{\gamma \left( m_1^2+m_2^2 \right) }.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\tau =  \dfrac{(m_1+m_2) \cdot m_1 m_2}{\gamma (m_1^2+m_2^2)}.$$
+\par\smallskip\noindent\textbf{Answer:} $$\tau =  \dfrac{(m_1+m_2) \cdot m_1 m_2}{\gamma (m_1^2+m_2^2)}.$$
 \end{solcard}
 
 \begin{solcard}{D6}{Determine the quality factor $\mathrm{Q}$ of such an oscillatory system.}{0.20}
 
 We find the quality factor $Q$ of this system using the well-known relation: $$Q = \dfrac{\sqrt{B}}{A} = \sqrt{\dfrac{\Delta g}{m_1 m_2 l^2}}\dfrac{(m_1+m_2)^2 m_1 m_2}{\gamma \cdot \left( m_1^2+m_2^2 \right) }$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$Q = \sqrt{\dfrac{\Delta g}{m_1 m_2 l^2}}\dfrac{(m_1+m_2)^2 m_1 m_2}{\gamma \cdot \left( m_1^2+m_2^2 \right) }$$
+\par\smallskip\noindent\textbf{Answer:} $$Q = \sqrt{\dfrac{\Delta g}{m_1 m_2 l^2}}\dfrac{(m_1+m_2)^2 m_1 m_2}{\gamma \cdot \left( m_1^2+m_2^2 \right) }$$
 \end{solcard}
 
 \begin{solcard}{E1}{Calculate the moment of inertia $I$ of the dumbbell rod about its axis.}{0.10}
 
-As is known, the moment of inertia of a homogeneous solid cylinder relative to its axis of symmetry is equal to \textbackslash{}begin{equation} I = mR^2/2. \textbackslash{}end{equation}
+As is known, the moment of inertia of a homogeneous solid cylinder relative to its axis of symmetry is equal to \begin{equation} I = mR^2/2. \end{equation}
 
 \end{solcard}
 
 \begin{solcard}{E2}{Write down the law of change in the angular momentum of a dumbbell relative to its attachment point.}{0.20}
 
-The derivative of the angular momentum of a rigid body with respect to time is expressed in terms of the total moment of external forces: \textbackslash{}begin{equation} \textbackslash{}dot{\textbackslash{}vec{L}} = \textbackslash{}vec{M}_{\textbackslash{}text{out}}. \textbackslash{}end{equation}
+The derivative of the angular momentum of a rigid body with respect to time is expressed in terms of the total moment of external forces: \begin{equation} \dot{\vec{L}} = \vec{M}_{\text{out}}. \end{equation}
 
 \end{solcard}
 
 \begin{solcard}{E3}{Calculate the angular velocity $\vec{\Omega}$ of the regular precession of the dumbbell.}{0.50}
 
-$$\vec{L} = I\vec{\omega};$$ and в данном сrayае $$\dot{\vec{L}} = I\dot{\vec{\omega}}.$$ Note that torqueы тяжести equals $\vec{M}_{\text{out}} = \frac{m}{2}\left[\vec{l},\vec{g}\right]$ and всегда направлен перпендикулярно $\vec{\omega}$ в горизонтальной плоскотси. Thus он вызывает вращение vectorа $\vec{\omega}$ around the vertical.
+$$\vec{L} = I\vec{\omega};$$ and in given case $$\dot{\vec{L}} = I\dot{\vec{\omega}}.$$ Note that the torque of gravity equals $\vec{M}_{\text{out}} = \frac{m}{2}\left[\vec{l},\vec{g}\right]$ and always direct perpendicular to $\vec{\omega}$ in the horizontal plane. Thus it causes rotation of the vector $\vec{\omega}$ around the vertical.
 
 
 Change in angular momentum over time interval $\Delta t$: $$|\Delta \vec{L}| = L\sin(\theta)\Delta \varphi = M_{\text{out}}\Delta t.$$ Hence we get $$\Omega = \frac{M_{\text{out}}}{L \sin(\theta)} = \frac{mgl}{2L}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\Omega = \frac{gl}{\omega R^2} = \frac{mgl}{2I\omega}.$$
+\par\smallskip\noindent\textbf{Answer:} $$\Omega = \frac{gl}{\omega R^2} = \frac{mgl}{2I\omega}.$$
 \end{solcard}
 
 \begin{solcard}{F1}{Calculate the dependence of the dumbbell angular momentum modulus on time.}{0.30}
 
 Note that the change in the modulus of the angular momentum of the dumbbell is affected only by the moment $\vec{M}_{\text{fric}}$, since all other moments of external forces are always directed perpendicular to $\vec{L}$. $$\dot{L} = - \alpha \omega = - \frac{\alpha}{I}L~\Rightarrow~L = L_0e^{-\frac{\alpha}{I}t}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$L = L_0e^{-\frac{\alpha}{I}t}.$$
+\par\smallskip\noindent\textbf{Answer:} $$L = L_0e^{-\frac{\alpha}{I}t}.$$
 \end{solcard}
 
 \begin{solcard}{F2}{Derive a differential equation describing the change in the angle of the dumbbell with the vertical over time.}{0.60}
@@ -188,20 +187,20 @@ Note that the change in the modulus of the angular momentum of the dumbbell is a
 Note that the moment caused by the force of viscous friction at the end $m_2$ is directed perpendicular to the dumbbell downwards and causes its axis to lower. That is, it causes an increase in the angle $\theta$.
 
 
-Let's calculate this moment: $$M_2 = l\cdot \gamma \Omega l \sin(\theta).$$ Свяжем поворот momentа momentumа гантели с momentом $M_2$: $$L \Delta \theta = M_2 \Delta t= \gamma \Omega l^2 \sin(\theta) \Delta t.$$ Остаётся подставить сюда expression for $\Omega$: $$\dot{\theta} = \frac{\gamma l^2}{L}\frac{mgl}{2L} = \frac{\gamma mgl^3}{2L^2}.$$
+Let's calculate this moment: $$M_2 = l\cdot \gamma \Omega l \sin(\theta).$$ Relate the rotation of the angular momentum of the dumbbell with the moment $M_2$: $$L \Delta \theta = M_2 \Delta t= \gamma \Omega l^2 \sin(\theta) \Delta t.$$ It remains to substitute here the expression for $\Omega$: $$\dot{\theta} = \frac{\gamma l^2}{L}\frac{mgl}{2L} = \frac{\gamma mgl^3}{2L^2}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\frac{\dot{\theta}}{\sin(\theta)} = \frac{\gamma mgl^3}{2L_0^2}e^{\frac{2\alpha}{I}t}.$$
+\par\smallskip\noindent\textbf{Answer:} $$\frac{\dot{\theta}}{\sin(\theta)} = \frac{\gamma mgl^3}{2L_0^2}e^{\frac{2\alpha}{I}t}.$$
 \end{solcard}
 
 \begin{solcard}{F3}{Let the starting angle be $\theta_0$. What is the rate of change of the angle at the initial moment?}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{\theta} = \frac{\gamma mgl^2\sin(\theta_0)}{2L_0^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$\dot{\theta} = \frac{\gamma mgl^2\sin(\theta_0)}{2L_0^2}$$
 \end{solcard}
 
 \begin{solcard}{F4}{With the initial condition from the previous paragraph, you obtain an explicit dependence $\theta(t)$.}{0.80}
 
 The indefinite integral on the left is $\ln|\mathrm{tg\left(\theta/2\right)}| + C$, and on the right $\frac{\gamma mgl^2I}{2\alpha L_0^2}\left(e^{\frac{2\alpha}{I}t - 1}\right) + C$. Integration limits: $\theta_0 \rightarrow \theta,~0\rightarrow t$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\theta = 2\mathrm{arctg}\left(\mathrm{tg}\left(\frac{\theta_0}{2}\right)e^{\frac{\gamma mgl^3I}{4\alpha L_0^2}\left(e^{\frac{2\alpha}{I}t} - 1\right) } \right)$$
+\par\smallskip\noindent\textbf{Answer:} $$\theta = 2\mathrm{arctg}\left(\mathrm{tg}\left(\frac{\theta_0}{2}\right)e^{\frac{\gamma mgl^3I}{4\alpha L_0^2}\left(e^{\frac{2\alpha}{I}t} - 1\right) } \right)$$
 \end{solcard}
 
 \end{document}

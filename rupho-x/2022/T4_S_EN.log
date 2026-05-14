@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T4_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T4_S_EN
-.tex
+(./T4_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T4_S_EN
-.aux)
+(./T4_S_EN.aux)
 \openout1 = `T4_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T4_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T4_S_EN
-.out)
+(./T4_S_EN.out) (./T4_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T4_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1079,20 +1074,17 @@ Missing character: There is no З ("417) in font cmmi7!
 Missing character: There is no З ("417) in font cmmi7!
 [1
 
-] [2] [3] [4]
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T4_S_EN
-.aux)
+] [2] [3] [4] (./T4_S_EN.aux)
 Package rerunfilecheck Info: File `T4_S_EN.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32068 strings out of 478190
- 685801 string characters out of 5854827
+ 32067 strings out of 478190
+ 684888 string characters out of 5854827
  1077673 words of memory out of 5000000
  52133 multiletter control sequences out of 15000+600000
  477316 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,8n,99p,1092b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,8n,99p,1090b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2022/T4_S_EN.pdf (4 pages).
+Output written on T4_S_EN.pdf (4 pages).

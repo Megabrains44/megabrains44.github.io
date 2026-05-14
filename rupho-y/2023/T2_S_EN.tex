@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,42 +30,42 @@
 \author{\normalsize Y23 (2023) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{Let the dependence of electron energy on momentum have the form $$\varepsilon(p) = \varepsilon_0 (3 - \cos(ap_x) - \cos( ap_y) - \cos (ap_z)).$$ Find его acceleration at the moment времени, когда momentum equals $p_x = \dfrac{\pi}{2 a}$, $p_y = \dfrac{\pi}{3 a}$, $p_z = 0$, а компоненты действующей на electron силы $F_x$, $F_y$, $F_z$.}{0.70}
+\begin{solcard}{A1}{Let the dependence of electron energy on momentum have the form $$\varepsilon(p) = \varepsilon_0 (3 - \cos(ap_x) - \cos( ap_y) - \cos (ap_z)).$$ Find it acceleration in moment time, when momentum equal $p_x = \dfrac{\pi}{2 a}$, $p_y = \dfrac{\pi}{3 a}$, $p_z = 0$, and component act on electron force $F_x$, $F_y$, $F_z$.}{0.70}
 
-Let's express the speed of the electron in terms of its momentum: $$ v_x = \frac{\partial \varepsilon}{\partial p_x} = \varepsilon_0 a \sin (a p_x), $$similarly for остальных двух компонент $$ v_y = \varepsilon_0 a \sin(a p_y), \; v_z = \varepsilon_0 a \sin(a p_z). $$From the equation движения $\dfrac{d}{dt}\vec{p} = \vec{F}$. Let us express acceleration via/through производную momentumа: $$ a_x  = \dot{v}_x = \varepsilon_0 a^2 \cos (a p _x) \dot{p}_x = \varepsilon_0 a^2 \cos(a p_x) F_x. $$The formulas for the remaining components are similar.  For impulse values ​​from the condition
+Let's express the speed of the electron in terms of its momentum: $$ v_x = \frac{\partial \varepsilon}{\partial p_x} = \varepsilon_0 a \sin (a p_x), $$similarly for remaining two component $$ v_y = \varepsilon_0 a \sin(a p_y), \; v_z = \varepsilon_0 a \sin(a p_z). $$From the equation motion $\dfrac{d}{dt}\vec{p} = \vec{F}$. Express acceleration through derivative momentum: $$ a_x  = \dot{v}_x = \varepsilon_0 a^2 \cos (a p _x) \dot{p}_x = \varepsilon_0 a^2 \cos(a p_x) F_x. $$The formulas for the remaining components are similar.  For impulse values from the condition
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ a_x = 0, \; a_y = \frac{1}{2} \varepsilon_0 a^2 F_y, \; a_z = \varepsilon_0 a^2 F_z. $$
+\par\smallskip\noindent\textbf{Answer:} $$ a_x = 0, \; a_y = \frac{1}{2} \varepsilon_0 a^2 F_y, \; a_z = \varepsilon_0 a^2 F_z. $$
 \end{solcard}
 
-\begin{solcard}{A2}{Let an electron with $\varepsilon(\vec{p})$ from A1 move in a constant electric field of magnitude $E$ directed along the $x$ axis.  The initial coordinates and projections of the momentum are equal to zero. Electron charge $-q$. Find his law of motion $x(t)$.}{0.80}
+\begin{solcard}{A2}{Let an electron with $\varepsilon(\vec{p})$ from A1 move in a constant electric field of magnitude $E$ directed along the $x$ axis.  The initial coordinates and projections of the momentum are equal to zero. Electron charge $-q$. Find his law of motion $x(t)$.}{0.80}
 
-The electron is acted upon by the force $F_x = - q E$, so the momentum $$ p_x = - q E t, $$а соответствующая velocity $$ v_x = -a \varepsilon_0 \sin(aqE t). $$Остальные проекции скорости equal нулю. Integrating, let us find зависимость координаты $x$ as a function of time
+The electron is acted upon by the force $F_x = - q E$, so the momentum $$ p_x = - q E t, $$and correspond velocity $$ v_x = -a \varepsilon_0 \sin(aqE t). $$Remaining projection velocity equal zero. Integrate, find dependence coordinate $x$ as a function of time
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ x(t) = -\frac{\varepsilon_0}{q E}(1 - \cos(a q Et )) $$
+\par\smallskip\noindent\textbf{Answer:} $$ x(t) = -\frac{\varepsilon_0}{q E}(1 - \cos(a q Et )) $$
 \end{solcard}
 
 \begin{solcard}{A3}{The concentration of free electrons in a certain substance is $n$, the dependence is $\varepsilon(p)$ as in A1. At the initial moment of time, a constant electric field $E$ is turned on, directed along the axis $x$. Find the dependence of the current density $j$ on time.}{0.50}
 
 Current density is expressed in terms of electron speed and concentration $$ j_x = - n q v_x = n q a \varepsilon_0 \sin (a q E t). $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ j_x = n q a \varepsilon_0 \sin (a q E t). $$
+\par\smallskip\noindent\textbf{Answer:} $$ j_x = n q a \varepsilon_0 \sin (a q E t). $$
 \end{solcard}
 
 \begin{solcard}{B1}{Let the dependence of energy on momentum $\varepsilon(\vec{p})$ be arbitrary. Prove that the energy $\varepsilon$ and the projection of momentum onto the direction of the magnetic field are conserved.}{0.50}
 
-The equation of motion is $$ \dot{\vec{p}} = - q \vec{v} \times \vec{B}. $$Производная энергии по времени $$ \frac{d \varepsilon} {dt} = \frac{\partial \varepsilon}{\partial p_x} \dot{p}_x + \frac{\partial \varepsilon}{\partial p_y} \dot{p}_y  +\frac{\partial \varepsilon}{\partial p_z} \dot{p}_z = v_x \dot{p}_x + v_y \dot{p}_y + v_z \dot {p}_z = \vec{v} \dot{\vec{p}}. $$Substituting expression for производной momentumа, we get $$ \dot{\varepsilon} = \vec{v} \cdot\left(- q \vec{v}  \times \vec{B}\right) = 0. $$Умножив equation движения скалярно на magnetic field we get $$ \frac{d}{dt} (\vec{B}{\vec{p}}) = \vec{B} \dot{\vec{p}} = - q \vec{B} (\vec{v} \times \vec{B}) = 0, $$that is, the projection of the impulse onto the magnetic field is constant.
+The equation of motion is $$ \dot{\vec{p}} = - q \vec{v} \times \vec{B}. $$Derivative energy by time $$ \frac{d \varepsilon} {dt} = \frac{\partial \varepsilon}{\partial p_x} \dot{p}_x + \frac{\partial \varepsilon}{\partial p_y} \dot{p}_y  +\frac{\partial \varepsilon}{\partial p_z} \dot{p}_z = v_x \dot{p}_x + v_y \dot{p}_y + v_z \dot {p}_z = \vec{v} \dot{\vec{p}}. $$Substitute expression for derivative momentum, obtain $$ \dot{\varepsilon} = \vec{v} \cdot\left(- q \vec{v}  \times \vec{B}\right) = 0. $$Taking the scalar product of the equation of motion with the magnetic field, we obtain $$ \frac{d}{dt} (\vec{B}{\vec{p}}) = \vec{B} \dot{\vec{p}} = - q \vec{B} (\vec{v} \times \vec{B}) = 0, $$that is, the projection of the impulse onto the magnetic field is constant.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \dot{\varepsilon} = \vec{v} \cdot\left(- q \vec{v}  \times \vec{B}\right) = 0. $$
+\par\smallskip\noindent\textbf{Answer:} $$ \dot{\varepsilon} = \vec{v} \cdot\left(- q \vec{v}  \times \vec{B}\right) = 0. $$
 \end{solcard}
 
-\begin{solcard}{B2}{Let the dependence of energy on momentum have the form $$\varepsilon = \frac{p_x^2}{2 m_x} + \frac{p_y^2}{2 m_y} .$$ Energy electronа equals $\varepsilon$. Find частоту движения $\omega$. Fromобtimesandте траекторию движения частицы на плоскости $xy$, indicate the characteristic dimensions and direction of movement. Place the origin of coordinates at the center of symmetry of the trajectory.}{1.10}
+\begin{solcard}{B2}{Let the dependence of energy on momentum have the form $$\varepsilon = \frac{p_x^2}{2 m_x} + \frac{p_y^2}{2 m_y} .$$ Energy electron equal $\varepsilon$. Find frequency motion $\omega$. Depict trajectory motion particle on plane $xy$, indicate the characteristic dimensions and direction of movement. Place the origin of coordinates at the center of symmetry of the trajectory.}{1.10}
 
-Let's write the equations of motion: \textbackslash{}begin{align*} m_x\textbackslash{}dot{v}_x \&= - q v_y B;\textbackslash{}\textbackslash{} m_y \textbackslash{}dot{v}_y \&= q v_x B. \textbackslash{}end{align*} Let's exclude $v_y$ from the first equation by differentiating it and expressing $\dot{v}_y$ from the second equation. We will receive $$ m_x \ddot{v}_x = - q \dot{v}_y B = - \frac{q^2 B^2}{m_y} v_x, $$that is $$ \ddot{v}_x = - \frac{q^2 B^2}{m_x m_y} v_x. $$Это equation гармонических колебаний  с частотой $$ \omega = \frac{qB}{\sqrt{m_x m_y}}. $$
+Let's write the equations of motion: \begin{align*} m_x\dot{v}_x \&= - q v_y B;\\ m_y \dot{v}_y \&= q v_x B. \end{align*} Let's exclude $v_y$ from the first equation by differentiating it and expressing $\dot{v}_y$ from the second equation. We will receive $$ m_x \ddot{v}_x = - q \dot{v}_y B = - \frac{q^2 B^2}{m_y} v_x, $$that is $$ \ddot{v}_x = - \frac{q^2 B^2}{m_x m_y} v_x. $$This is the equation of harmonic oscillations with frequency $$ \omega = \frac{qB}{\sqrt{m_x m_y}}. $$
 
 
-The dependence of speed on time has the form $$ v_x = A \cos (\omega t + \varphi), $$where амплитуду $A$ можно найти, зная энергию electronа: $$ A = \sqrt{\frac{2\varepsilon}{m_x}}. $$Вторую компоненту скорости можно найти from the equation движения $$ v_y = - \frac{m_x}{q B} \dot{v}_x = \sqrt{\frac{2\varepsilon}{m_x}} \frac{\omega}{qB} \sin(\omega t + \varphi) = \sqrt{\frac{2 \varepsilon}{m_y}} \sin (\omega t + \varphi). $$Integrating, we get траекторию частицы \textbackslash{}begin{align*} x(t) \&= \textbackslash{}sqrt{\textbackslash{}frac{2 \textbackslash{}varepsilon}{m_x}} \textbackslash{}frac{1}{\textbackslash{}omega} \textbackslash{}sin(\textbackslash{}omega t + \textbackslash{}varphi) = \textbackslash{}frac{\textbackslash{}sqrt{2 m_y \textbackslash{}varepsilon}}{q B} \textbackslash{}sin (\textbackslash{}omega t + \textbackslash{}varphi);\textbackslash{}\textbackslash{} y(t ) \&= - \textbackslash{}frac{\textbackslash{}sqrt{2 m_x \textbackslash{}varepsilon}}{qB} \textbackslash{}cos (\textbackslash{}omega t + \textbackslash{}varphi). \textbackslash{}end{align*} Thus, траектория представляет собой эллипс с полуосями $$ A_x = \frac{\sqrt{2 m_y \varepsilon}}{q B},\; A_y = \frac{\sqrt{2 m_x \varepsilon}}{qB}. $$The movement occurs counterclockwise.
+The dependence of speed on time has the form $$ v_x = A \cos (\omega t + \varphi), $$where amplitude $A$ one can find, know energy electron: $$ A = \sqrt{\frac{2\varepsilon}{m_x}}. $$Second component velocity one can find from the equation motion $$ v_y = - \frac{m_x}{q B} \dot{v}_x = \sqrt{\frac{2\varepsilon}{m_x}} \frac{\omega}{qB} \sin(\omega t + \varphi) = \sqrt{\frac{2 \varepsilon}{m_y}} \sin (\omega t + \varphi). $$Integrate, obtain trajectory particle \begin{align*} x(t) \&= \sqrt{\frac{2 \varepsilon}{m_x}} \frac{1}{\omega} \sin(\omega t + \varphi) = \frac{\sqrt{2 m_y \varepsilon}}{q B} \sin (\omega t + \varphi);\\ y(t ) \&= - \frac{\sqrt{2 m_x \varepsilon}}{qB} \cos (\omega t + \varphi). \end{align*} Thus, trajectory is ellipse with semi-axis $$ A_x = \frac{\sqrt{2 m_y \varepsilon}}{q B},\; A_y = \frac{\sqrt{2 m_x \varepsilon}}{qB}. $$The movement occurs counterclockwise.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \omega = \frac{qB}{\sqrt{m_x m_y}}, \; A_x = \frac{\sqrt{2 m_y \varepsilon}}{q B},\; A_y = \frac{\sqrt{2 m_x \varepsilon}}{qB}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ \omega = \frac{qB}{\sqrt{m_x m_y}}, \; A_x = \frac{\sqrt{2 m_y \varepsilon}}{q B},\; A_y = \frac{\sqrt{2 m_x \varepsilon}}{qB}. $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T2_S_EN_assets/fig1.jpg}
@@ -75,7 +74,7 @@ The dependence of speed on time has the form $$ v_x = A \cos (\omega t + \varphi
 
 \begin{solcard}{B3}{Find the hodograph of the electron's momentum vector (the trajectory along which the end of the momentum vector moves if it is plotted from one point). Draw it on the plane $p_x$, $p_y$. Please indicate typical dimensions.}{0.60}
 
-Taking into account the electric field, the equations of motion are \textbackslash{}begin{align*} m_x\textbackslash{}dot{v}_x \&= -qE- q v_y B;\textbackslash{}\textbackslash{} m_y \textbackslash{}dot{v}_y \&= q v_x B. \textbackslash{}end{align*} Let us introduce a new variable $u_y$ using the relation $$ v_y = - \frac{E}{B} + u_y, $$then уравнения движения for/atмут такой же вид, как and в предыдущей части: \textbackslash{}begin{align*} m_x\textbackslash{}dot{v}_x \&= - q u_y B;\textbackslash{}\textbackslash{} m_y \textbackslash{}dot{u}_y \&=  q v_x B. \textbackslash{}end{align*} Начальные условия $$ v_x (0)  = 0 ,\; v_y(0) = 0, \; u_y(0) = \frac{E}{B}. $$Taking into account этого solution $$ v_x = -\sqrt{\frac{m_y}{m_x}}\frac{E}{B} \sin \omega t;\; v_y =- \frac{E}{B}(1- \cos \omega t). $$Then momentumы $$ p_x =- \sqrt{m_x m_y} \frac{E}{B} \sin \omega t, \; p_y = -m_y \frac{E}{B}(1 - \cos \omega t ). $$
+Taking into account the electric field, the equations of motion are \begin{align*} m_x\dot{v}_x \&= -qE- q v_y B;\\ m_y \dot{v}_y \&= q v_x B. \end{align*} Let us introduce a new variable $u_y$ using the relation $$ v_y = - \frac{E}{B} + u_y, $$then equations of motion assume such same form, as and in previous part: \begin{align*} m_x\dot{v}_x \&= - q u_y B;\\ m_y \dot{u}_y \&=  q v_x B. \end{align*} Initial condition $$ v_x (0)  = 0 ,\; v_y(0) = 0, \; u_y(0) = \frac{E}{B}. $$Taking into account this solution $$ v_x = -\sqrt{\frac{m_y}{m_x}}\frac{E}{B} \sin \omega t;\; v_y =- \frac{E}{B}(1- \cos \omega t). $$Then momentum $$ p_x =- \sqrt{m_x m_y} \frac{E}{B} \sin \omega t, \; p_y = -m_y \frac{E}{B}(1 - \cos \omega t ). $$
 
 \begin{figure}[H]
   \centering
@@ -87,12 +86,12 @@ Taking into account the electric field, the equations of motion are \textbacksla
 
 Integrating the speeds from the previous point, we get
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \textbackslash{}begin{align*} x(t) \&= -\textbackslash{}frac{m_y E}{qB^2}  (1 - \textbackslash{}cos \textbackslash{}omega t)\textbackslash{}\textbackslash{} y(t) \&=  - \textbackslash{}frac{E}{B} t + \textbackslash{}frac{\textbackslash{}sqrt{m_x m_y} E}{q B^2} \textbackslash{}sin \textbackslash{}omega t, \textbackslash{}; \textbackslash{}omega = \textbackslash{}frac{qB}{\textbackslash{}sqrt{m_x m_y}}. \textbackslash{}end{align*}
+\par\smallskip\noindent\textbf{Answer:} \begin{align*} x(t) \&= -\frac{m_y E}{qB^2}  (1 - \cos \omega t)\\ y(t) \&=  - \frac{E}{B} t + \frac{\sqrt{m_x m_y} E}{q B^2} \sin \omega t, \; \omega = \frac{qB}{\sqrt{m_x m_y}}. \end{align*}
 \end{solcard}
 
 \begin{solcard}{B5}{If the energy is greater than the minimum value, the trajectories on the plane become open, and the particle can travel indefinitely in some direction. Find this minimum energy $\varepsilon_{min}$. At energy $\varepsilon > \varepsilon_{min}$, draw the trajectory and indicate the characteristic geometric dimensions.}{1.40}
 
-Let us write down the equations of motion $$ \dot{\vec{p}} = - q \vec{v} \times \vec{B} = - q \dot{\vec{r}}\times \vec{B}. $$Integrating, we get $$ \Delta \vec{p} = - q \Delta \vec{r}  \times \vec{B}. $$Multiplying это equality vectorно на $\vec{B}$. $$ \Delta \vec{p} \times \vec{B} = - q(\Delta \vec{r} \times \vec{B}) \times \vec{B} = q B^2  \Delta \vec{r}. $$Thus, vector перемещения можно выtimesandть via/through change in momentum $$ \Delta \vec{r} = \frac{1}{qB^2} \Delta \vec{p} \times \vec{B}. $$ Consider сначала  в momentumном пространстве. From постоянства энергии it follows, что годограф momentumа  – surface $$ \frac{p^2_y}{2m_y} + \varepsilon_0 (1 - \cos ap_x) = \varepsilon = const. $$Equation этой поверхности можно представить в виде $$ p_y = \pm \sqrt{2 m_y (\varepsilon - \varepsilon _0 + \varepsilon _0  \cos a p_x)}. $$В том сrayае, if $\varepsilon \le 2 \varepsilon_0$, годограф представляет собой замкнутую кривую. Then траектория also будет замкнутой кривой. If however $\varepsilon > 2 \varepsilon_0$, годограф momentumа – незамкнутая кривая, направленная вдоль оси $x$. Then траектория движения частицы - кривая, направленная вдоль $y$, for/atчем зависимость $x(y)$ – periodandческая.  Let us find period этой функции and ширину полосы вдоль оси $x$, которую она занимает. $$ \Delta y  = \frac{1}{qB} \frac{2\pi}{a}, \; \Delta x = \frac{1}{qB} \Delta p_y = \frac{\sqrt{2 m_y}}{qB} (\sqrt{\varepsilon} - \sqrt{\varepsilon - 2 \varepsilon _0}). $$
+Let us write down the equations of motion $$ \dot{\vec{p}} = - q \vec{v} \times \vec{B} = - q \dot{\vec{r}}\times \vec{B}. $$Integrate, obtain $$ \Delta \vec{p} = - q \Delta \vec{r}  \times \vec{B}. $$Multiply this equality vector on $\vec{B}$. $$ \Delta \vec{p} \times \vec{B} = - q(\Delta \vec{r} \times \vec{B}) \times \vec{B} = q B^2  \Delta \vec{r}. $$Thus, vector displacement one can express through change momentum $$ \Delta \vec{r} = \frac{1}{qB^2} \Delta \vec{p} \times \vec{B}. $$ Let us first consider it in momentum space. From energy conservation it follows that the momentum hodograph is the surface $$ \frac{p^2_y}{2m_y} + \varepsilon_0 (1 - \cos ap_x) = \varepsilon = const. $$Equation this surface one can represent in form $$ p_y = \pm \sqrt{2 m_y (\varepsilon - \varepsilon _0 + \varepsilon _0  \cos a p_x)}. $$in that case, if $\varepsilon \le 2 \varepsilon_0$, hodograph is a closed curve. Then the trajectory is also a closed curve. If however $\varepsilon > 2 \varepsilon_0$, hodograph the momentum is an unclosed curve directed along the $x$ axis. Then the trajectory motion particle - curve, direct along $y$, moreover dependence $x(y)$ – periodic.  Find the period of this function and the width of the strip along the $x$ axis that it occupies. $$ \Delta y  = \frac{1}{qB} \frac{2\pi}{a}, \; \Delta x = \frac{1}{qB} \Delta p_y = \frac{\sqrt{2 m_y}}{qB} (\sqrt{\varepsilon} - \sqrt{\varepsilon - 2 \varepsilon _0}). $$
 
 \begin{figure}[H]
   \centering
@@ -102,43 +101,43 @@ Let us write down the equations of motion $$ \dot{\vec{p}} = - q \vec{v} \times 
 
 \begin{solcard}{C1}{First, we neglect the variance and consider the case $\alpha = 0$. At what angles $\theta_1$, $\theta_2$ is decay possible?}{0.50}
 
-Let's write down the laws of conservation of energy and momentum: $$ u p = u q_1 + u q_2,\; \vec{p} = \vec{q}_1 + \vec{q}_2. $$Since length vectorа $\vec{p}$ is equal to the sum of the lengths of the remaining two vectors, all three vectors must be directed in the same direction.
+Let's write down the laws of conservation of energy and momentum: $$ u p = u q_1 + u q_2,\; \vec{p} = \vec{q}_1 + \vec{q}_2. $$Since length vector $\vec{p}$ is equal to the sum of the lengths of the remaining two vectors, all three vectors must be directed in the same direction.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\theta_1 = \theta_2 = 0$
+\par\smallskip\noindent\textbf{Answer:} $\theta_1 = \theta_2 = 0$
 \end{solcard}
 
 \begin{solcard}{C2}{Express the modulus of the second phonon $q_2$ in terms of $p$, $q_1$, $\theta_1$. Obtain the expression in the limit of small $\theta_1$ up to second order in $\theta_1$.}{0.50}
 
-From the law of conservation of momentum $$ \vec{q}_2 = \vec{p} - \vec{q}_1. $$Hence $$ q_2^2 = p^2 + q_1^2 - 2 p q_1 \cos \theta_1 = p^2 + q_1^2 - 2 p q_1 (1 - \theta_1^2/2) =  (p - q_1)^2+ p q_1 \theta_1^2. $$Fromвлечем корень and expanding в ряд до требуемого порядка $$ q_2 = \sqrt{  (p - q_1)^2+ p q_1 \theta_1^2} \approx p - q_1 + \frac{p q_1}{2(p - q_1)} \theta_1^2 $$
+From the law of conservation of momentum $$ \vec{q}_2 = \vec{p} - \vec{q}_1. $$Hence $$ q_2^2 = p^2 + q_1^2 - 2 p q_1 \cos \theta_1 = p^2 + q_1^2 - 2 p q_1 (1 - \theta_1^2/2) =  (p - q_1)^2+ p q_1 \theta_1^2. $$We extract the root and expand in a series to the required order $$ q_2 = \sqrt{  (p - q_1)^2+ p q_1 \theta_1^2} \approx p - q_1 + \frac{p q_1}{2(p - q_1)} \theta_1^2 $$
 
 \end{solcard}
 
-\begin{solcard}{С3}{The angle dependence of the emitted phonon momentum at small angles has the form $$q_1(\theta_1) = A + B \theta_1.$$ Determine постоянные $A$, $B$. Express их via/through $p$, $u$, $\alpha$.}{1.20}
+\begin{solcard}{C3}{The angle dependence of the emitted phonon momentum at small angles has the form $$q_1(\theta_1) = A + B \theta_1.$$ Determine constant $A$, $B$. Express they through $p$, $u$, $\alpha$.}{1.20}
 
-Let us write the law of conservation of energy $$ u p + \alpha p^3 = u q_1 + \alpha q_1^3 + u q_2 + \alpha q_2^3. $$Substituting expression for $q_2$: $$ u p + \alpha p^3 = u q_1 + \alpha q_1^3 + u \left(p - q_1 +  \frac{p q_1}{2(p - q_1)} \theta_1^2\right) + \alpha \left( p - q_1 + \frac{p q_1}{2(p - q_1)} \theta_1^2\right)^3. $$Раскроем скобки and оставим вклады порядка $\theta_1^2$: $$ \alpha p^3  = \alpha q^3 + \frac{u p q_1}{2 (p - q_1)} \theta_1^2 +\alpha (p - q_1)^3 + \frac{3 \alpha}{2} p q_1 (p - q_1)\theta_1^2. $$Перенесем terms, не зависящие от угла, налево: $$ \alpha (p^3 - q_1^3 - (p-q_1)^3) = \frac{u p q_1 \theta_1^2}{2(p - q_1)} \left( 1 + \frac{3 \alpha}{u } (p - q_1)^2\right).$$Вторым terms в скобках в правой части можно пренебречь в силу условия $\alpha p^3 \ll u p$, в левой части раскроем скобки and we get $$ 3 \alpha (p - q_1) p q_1 = \frac{u p q_1 \theta_1^2}{2(p - q_1)}. $$Hence $$ (p-q_1 )^2 = \frac{u }{6 \alpha} \theta_1^2, \; q_1 = p - \sqrt{\frac{u}{6 \alpha}} \theta_1. $$
+Let us write the law of conservation of energy $$ u p + \alpha p^3 = u q_1 + \alpha q_1^3 + u q_2 + \alpha q_2^3. $$Substitute expression for $q_2$: $$ u p + \alpha p^3 = u q_1 + \alpha q_1^3 + u \left(p - q_1 +  \frac{p q_1}{2(p - q_1)} \theta_1^2\right) + \alpha \left( p - q_1 + \frac{p q_1}{2(p - q_1)} \theta_1^2\right)^3. $$Let us expand the brackets and keep contributions of order $\theta_1^2$: $$ \alpha p^3  = \alpha q^3 + \frac{u p q_1}{2 (p - q_1)} \theta_1^2 +\alpha (p - q_1)^3 + \frac{3 \alpha}{2} p q_1 (p - q_1)\theta_1^2. $$Move the term that does not depend on the angle to the left: $$ \alpha (p^3 - q_1^3 - (p-q_1)^3) = \frac{u p q_1 \theta_1^2}{2(p - q_1)} \left( 1 + \frac{3 \alpha}{u } (p - q_1)^2\right).$$Second term in bracket in right part one can neglect in force condition $\alpha p^3 \ll u p$, on the left side we expand the bracket and obtain $$ 3 \alpha (p - q_1) p q_1 = \frac{u p q_1 \theta_1^2}{2(p - q_1)}. $$Hence $$ (p-q_1 )^2 = \frac{u }{6 \alpha} \theta_1^2, \; q_1 = p - \sqrt{\frac{u}{6 \alpha}} \theta_1. $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ A = p, \; B = - \sqrt{\frac{u}{6 \alpha}}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ A = p, \; B = - \sqrt{\frac{u}{6 \alpha}}. $$
 \end{solcard}
 
 \begin{solcard}{C4}{At what sign of the constant $\alpha$ is decay possible?}{0.30}
 
 The equation in the previous paragraph has a solution if $\alpha > 0$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\alpha > 0$
+\par\smallskip\noindent\textbf{Answer:} $\alpha > 0$
 \end{solcard}
 
 \begin{solcard}{C5}{Find the maximum angle $\theta_{max}$ at which a phonon can be emitted. Under what condition on $p$ can the phonon momentum be considered small?}{0.50}
 
-The maximum angle is achieved at the minimum momentum of the emitted phonon $q_1 \to 0$. Then from the expression for $q_1$ we find $$ \theta_{\max} = \sqrt{\frac{6 \alpha}{u}} p. $$Вся problem решалась в for/atближении малых углов. Это approximation workет for/at условии $\theta_{max} \ll 1$, that is $$ p \ll \sqrt{\frac{u}{\alpha}}. $$
+The maximum angle is achieved at the minimum momentum of the emitted phonon $q_1 \to 0$. Then from the expression for $q_1$ we find $$ \theta_{\max} = \sqrt{\frac{6 \alpha}{u}} p. $$The whole problem was solved in the small-angle approximation. This approximation works under the condition $\theta_{max} \ll 1$, that is $$ p \ll \sqrt{\frac{u}{\alpha}}. $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \theta_{\max} = \sqrt{\frac{6 \alpha}{u}} p. $$
+\par\smallskip\noindent\textbf{Answer:} $$ \theta_{\max} = \sqrt{\frac{6 \alpha}{u}} p. $$
 \end{solcard}
 
 \begin{solcard}{C6}{Express the angle $\theta_2$ at which the second phonon is emitted in terms of $\theta_1$, $p$, $u$, $\alpha$. Consider the angles small, take into account the first-order contributions from $\theta_1$, $\theta_2$.}{1.00}
 
-From the results $\mathrm{C3}$ it follows that the phonon momenta are expressed in terms of emission angles as $$ q_1 = p - \sqrt{\frac{u}{6 \alpha}} \theta_1, \; q_2 = p - \sqrt{\frac{u}{6 \alpha}} \theta_2. $$ Let us write проекцию закона сохранения momentumа на ось, перпендикулярную направлению движения исходного фонона: \textbackslash{}begin{align*} q_1 \textbackslash{}theta_1 \&= q_2 \textbackslash{}theta_2, \textbackslash{}\textbackslash{} p \textbackslash{}theta_1 -  \textbackslash{}sqrt{\textbackslash{}frac{u}{6 \textbackslash{}alpha}} \textbackslash{}theta_1^2  \&=  p \textbackslash{}theta_2 -  \textbackslash{}sqrt{\textbackslash{}frac{u}{6 \textbackslash{}alpha}} \textbackslash{}theta_2^2. \textbackslash{}end{align*} Перегруппируем terms: $$ p(\theta_1 - \theta_2) = \sqrt{\frac{u}{6 \alpha}} (\theta_1^2 -\theta_2^2), \; p = \sqrt{\frac{u}{6 \alpha}} (\theta_1 + \theta_2). $$
+From the results $\mathrm{C3}$ it follows that the phonon momenta are expressed in terms of emission angles as $$ q_1 = p - \sqrt{\frac{u}{6 \alpha}} \theta_1, \; q_2 = p - \sqrt{\frac{u}{6 \alpha}} \theta_2. $$ Write projection law conservation momentum on the axis perpendicular to the direction of motion of the original phonon: \begin{align*} q_1 \theta_1 \&= q_2 \theta_2, \\ p \theta_1 -  \sqrt{\frac{u}{6 \alpha}} \theta_1^2  \&=  p \theta_2 -  \sqrt{\frac{u}{6 \alpha}} \theta_2^2. \end{align*} Let us regroup the terms: $$ p(\theta_1 - \theta_2) = \sqrt{\frac{u}{6 \alpha}} (\theta_1^2 -\theta_2^2), \; p = \sqrt{\frac{u}{6 \alpha}} (\theta_1 + \theta_2). $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \theta_2 = \sqrt{\frac{6 \alpha}{u}} p - \theta_1 $$
+\par\smallskip\noindent\textbf{Answer:} $$ \theta_2 = \sqrt{\frac{6 \alpha}{u}} p - \theta_1 $$
 \end{solcard}
 
 \end{document}

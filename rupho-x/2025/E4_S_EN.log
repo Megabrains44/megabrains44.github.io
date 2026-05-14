@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **E4_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/E4_S_EN
-.tex
+(./E4_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/E4_S_EN
-.aux)
+(./E4_S_EN.aux)
 \openout1 = `E4_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/E4_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/E4_S_EN
-.out)
+(./E4_S_EN.out) (./E4_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `E4_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1082,58 +1077,88 @@ File: E4_S_EN_assets/fig2.jpg Graphic file (type bmp)
 File: E4_S_EN_assets/fig3.jpg Graphic file (type bmp)
 <E4_S_EN_assets/fig3.jpg>
  [3]
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
-Missing character: There is no к ("43A) in font cmmi7!
-Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no н ("43D) in font cmmi7!
 File: E4_S_EN_assets/fig4.jpg Graphic file (type bmp)
 <E4_S_EN_assets/fig4.jpg>
+
 [4]
+File: E4_S_EN_assets/fig5.jpg Graphic file (type bmp)
+<E4_S_EN_assets/fig5.jpg>
+ [5]
+File: E4_S_EN_assets/fig6.jpg Graphic file (type bmp)
+<E4_S_EN_assets/fig6.jpg>
+ [6]
+Missing character: There is no н ("43D) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no в ("432) in font cmmi7!
+File: E4_S_EN_assets/fig7.jpg Graphic file (type bmp)
+<E4_S_EN_assets/fig7.jpg>
+[7]
+Missing character: There is no ⟦ (U+27E6) in font DejaVu Serif/OT:script=latn;l
+anguage=dflt;mapping=tex-text;!
+Missing character: There is no ⟧ (U+27E7) in font DejaVu Serif/OT:script=latn;l
+anguage=dflt;mapping=tex-text;!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no л ("43B) in font cmmi7!
+Missing character: There is no ь ("44C) in font cmmi7!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no л ("43B) in font cmmi7!
+Missing character: There is no ь ("44C) in font cmmi7!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no л ("43B) in font cmmi7!
+Missing character: There is no ь ("44C) in font cmmi7!
+Missing character: There is no в ("432) in font cmmi7!
+Missing character: There is no о ("43E) in font cmmi7!
+Missing character: There is no з ("437) in font cmmi7!
+Missing character: There is no д ("434) in font cmmi7!
+Missing character: There is no у ("443) in font cmmi7!
+Missing character: There is no х ("445) in font cmmi7!
+Missing character: There is no с ("441) in font cmmi7!
+Missing character: There is no т ("442) in font cmmi7!
+Missing character: There is no а ("430) in font cmmi7!
+Missing character: There is no л ("43B) in font cmmi7!
+Missing character: There is no ь ("44C) in font cmmi7!
+[8] [9]
+File: E4_S_EN_assets/fig8.jpg Graphic file (type bmp)
+<E4_S_EN_assets/fig8.jpg>
+ [10] [11]
 ! Missing { inserted.
 <to be read again> 
                    \mathop 
-l.115 ...eta$, and the intercept is $\Delta E_\max
-                                                  $. 
+l.261 ...te $E_{\max}$ using the formula \[ E_\max
+                                                   = W_1 (1-\beta) + W_2\]
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.261 ...formula \[ E_\max = W_1 (1-\beta) + W_2\]
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[12] (./E4_S_EN.aux)
+Package rerunfilecheck Info: File `E4_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32109 strings out of 478190
- 686665 string characters out of 5854827
- 1076677 words of memory out of 5000000
- 52168 multiletter control sequences out of 15000+600000
+ 32170 strings out of 478190
+ 687139 string characters out of 5854827
+ 1077677 words of memory out of 5000000
+ 52225 multiletter control sequences out of 15000+600000
  477316 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1029b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,8n,99p,1154b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2025/E4_S_EN.pdf (4 pages).
+Output written on E4_S_EN.pdf (12 pages).

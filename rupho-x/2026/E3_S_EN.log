@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **E3_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E3_S_EN
-.tex
+(./E3_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E3_S_EN
-.aux)
+(./E3_S_EN.aux)
 \openout1 = `E3_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E3_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E3_S_EN
-.out)
+(./E3_S_EN.out) (./E3_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `E3_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1074,82 +1069,51 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 ]
-Missing character: There is no м ("43C) in font cmmi10!
-Missing character: There is no В ("412) in font cmmi10!
-Missing character: There is no р ("440) in font cmmi10!
-Missing character: There is no а ("430) in font cmmi10!
-Missing character: There is no д ("434) in font cmmi10!
 Missing character: There is no 
  (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no м ("43C) in font cmmi10!
-Missing character: There is no В ("412) in font cmmi10!
-Missing character: There is no р ("440) in font cmmi10!
-Missing character: There is no а ("430) in font cmmi10!
-Missing character: There is no д ("434) in font cmmi10!
 Missing character: There is no 
  (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
 File: E3_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <E3_S_EN_assets/fig1.jpg>
 [2]
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
 [3]
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
 [4]
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
 
 Overfull \hbox (3.49548pt too wide) in paragraph at lines 113--114
-\TU/DejaVuSerif(0)/m/n/10 1.999755 15 1.999832 1.999755 10 1.999837 1.999755 27
- 1.999822 1.999755 33 1.999816
+\TU/DejaVuSerif(0)/m/n/10 15 1.999832 1.999755 10 1.999837 1.999755 27 1.999822
+ 1.999755 33 1.999816 1.999755
  []
 
 
-Overfull \hbox (3.17548pt too wide) in paragraph at lines 113--114
-\TU/DejaVuSerif(0)/m/n/10 1.999755 47 1.999807 1.999755 56 1.999804 1.999755 68
- 1.999798 1.999755 82 1.999794
+Overfull \hbox (3.49548pt too wide) in paragraph at lines 113--114
+\TU/DejaVuSerif(0)/m/n/10 47 1.999807 1.999755 56 1.999804 1.999755 68 1.999798
+ 1.999755 82 1.999794 1.999755 
  []
 
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
@@ -1158,9 +1122,6 @@ Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
 Missing character: There is no и ("438) in font cmmi7!
-Missing character: There is no р ("440) in font cmmi7!
-Missing character: There is no е ("435) in font cmmi7!
-Missing character: There is no з ("437) in font cmmi7!
 Missing character: There is no а ("430) in font cmmi7!
 Missing character: There is no н ("43D) in font cmmi7!
 Missing character: There is no т ("442) in font cmmi7!
@@ -1184,15 +1145,452 @@ Missing character: There is no Ф ("424) in font cmmi10!
 <inserted text> 
                 $
 l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
-                                                  $. 
+                                                  $.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 ...a = 164.4~\dfrac{\text{\Omega}}{\text{H}}
+                                                  $.
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (11.20514pt too wide) in paragraph at lines 144--144
+\TU/DejaVuSerif(0)/m/n/10 Solve given equation for means numerical method (meth
+od итераций, table in калькуляторе
+ []
+
+Missing character: There is no О ("41E) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no Г ("413) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no 
+ (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 
+ (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
+[6] [7] (./E3_S_EN.aux)
+Package rerunfilecheck Info: File `E3_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
  32099 strings out of 478190
- 686390 string characters out of 5854827
+ 685552 string characters out of 5854827
  1084684 words of memory out of 5000000
  52160 multiletter control sequences out of 15000+600000
  477316 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,9n,99p,1905b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,19n,99p,2632b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2026/E3_S_EN.pdf (5 pages).
+Output written on E3_S_EN.pdf (7 pages).

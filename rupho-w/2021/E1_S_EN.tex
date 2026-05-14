@@ -9,10 +9,9 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
@@ -33,19 +32,38 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Determine experimentally the rolling friction coefficient $k$ of a cylinder rolling on a wooden block. Describe the measurement method and sketch the installation diagram.}{11.00}
 
-Let's balance the ruler on the edge of the block, thereby determining the position of the center of mass of the ruler: $x_r=248~\mathrm{mm}$.  Using the ruler as a lever, we determine the mass ratio $M/m$ of the cylinder and the ruler $$M/m=3.44±0.22.$$ Fix/attach ruler as rod on base cylinder use adhesive mass. Side ruler with scale direct in side cylinder: so convenient determine position ruler relatively cylinder. On edge table fix/attach sheet with draw line under different angle to vertical. Launch oscillation system cylinder and rod. Quantity amplitude record by coincidence with line on sheet. Line on sheet not necessarily draw as ray from one center: one can select position so, so that line coincide with inclined ruler for correspond position cylinder. Energy system for oscillation, expressed through angular amplitude $\varphi$: $$W=mgd(1-cos⁡\varphi )≈mgd \varphi^2/2.$$ For rotation cylinder with rod on angle $d\alpha$ torque reaction support perform work: $$\delta A=-M⋅d\alpha=-k(m+M)g⋅d\alpha.$$ Remaining force work not perform.  Notice, that even when system be located in position equilibrium, but motion still not end, system still equal be characterized angular amplitude $\varphi$. Change energy system for rotation on small angle $d \alpha$: $$dW=mgd⋅\varphi d\varphi=-k(m+M)g⋅d\alpha.$$ Decrease energy over 1/4 period (here sign «$\Delta$» mean decrease, and not change): $$mgd⋅\varphi⋅\Delta\varphi_{T/4} = k(m+M)g⋅\varphi.$$ Over $N$ period quantity decrease amplitude be in $4N$ times larger. Express coefficient of friction rolling $$k=\frac{m}{m+M} \frac{d⋅\Delta\varphi_N}{4N}.$$
+Let's balance the ruler on the edge of the block, thereby determining the position of the center of mass of the ruler: $x_r=248~\mathrm{mm}$. Using the ruler as a lever, we determine the mass ratio $M/m$ of the cylinder and the ruler: $$M/m=3.44 \pm 0.22.$$ 
 
+Attach the ruler as a rod to the base of the cylinder using an adhesive mass. Direct the side of the ruler with the scale towards the cylinder: this makes it convenient to determine the ruler's position relative to the cylinder. Attach a sheet of paper to the edge of the table and draw lines at different angles to the vertical. Set the cylinder and rod system into oscillation. Record the amplitude values by aligning them with the lines on the sheet. The lines on the sheet do not necessarily need to be drawn as rays from a single center: one can select positions so that the lines coincide with the inclined ruler for the corresponding positions of the cylinder. 
 
-$x_{up}$, mm $d$, mm $\varphi_0$, ° $\varphi$, ° $N$ $k$, mm $\Delta k$, mm 0 186.5 30 10 18 0.23 0.019 20 166.5 30 10 16 0.231 0.02 40 146.5 30 10 14 0.233 0.022 40 146.5 40 10 21 0.233 0.016 40 146.5 40 20 13 0.25 0.025
+The energy of the oscillating system, expressed in terms of the angular amplitude $\varphi$: $$W=mgd(1-\cos\varphi ) \approx mgd \frac{\varphi^2}{2}.$$ 
+For a rotation of the cylinder with the rod by an angle $d\alpha$, the torque of the reaction force performs work: $$\delta A=-M \cdot d\alpha=-k(m+M)g \cdot d\alpha.$$ 
+The remaining forces do not perform work. Note that even when the system passes through the equilibrium position and the motion has not yet ended, the system is still characterized by the angular amplitude $\varphi$. The change in the system's energy for a rotation by a small angle $d\alpha$ is: $$dW=mgd \cdot \varphi d\varphi=-k(m+M)g \cdot d\alpha.$$ 
+The decrease in energy over 1/4 of a period (here the symbol $\Delta$ means decrease, not change) is: $$mgd \cdot \varphi \cdot \Delta\varphi_{T/4} = k(m+M)g \cdot \varphi.$$ 
+Over $N$ periods, the decrease in amplitude will be $4N$ times larger. Expressing the coefficient of rolling friction: $$k=\frac{m}{m+M} \frac{d \cdot \Delta\varphi_N}{4N}.$$
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$x_{up}$, mm & $d$, mm & $\varphi_0$, $^\circ$ & $\varphi$, $^\circ$ & $N$ & $k$, mm & $\Delta k$, mm \\
+\hline
+0 & 186.5 & 30 & 10 & 18 & 0.23 & 0.019 \\
+20 & 166.5 & 30 & 10 & 16 & 0.231 & 0.020 \\
+40 & 146.5 & 30 & 10 & 14 & 0.233 & 0.022 \\
+40 & 146.5 & 40 & 10 & 21 & 0.233 & 0.016 \\
+40 & 146.5 & 40 & 20 & 13 & 0.25 & 0.025 \\
+\hline
+\end{tabular}
+\end{table}
 
-As a result, the rolling friction coefficient is $$k=(0,24 \pm 0,02)~\mathrm{mm}.$$
+As a result, the rolling friction coefficient is $$k=(0.24 \pm 0.02)~\mathrm{mm}.$$
 
 \end{solcard}
 
-\begin{solcard}{A2}{Determine experimentally the sliding friction coefficient $\mu$ of a cardboard cylinder on a tree. Give the measurement method and installation diagram.}{4.00}
+\begin{solcard}{A2}{Determine experimentally the sliding friction coefficient $\mu$ of a cardboard cylinder on a wooden block. Give the measurement method and installation diagram.}{4.00}
 
-Using adhesive paste, attach the ruler as a rod to the base of the cylinder. Let's place this system on a block. Let's start tilting the block (Fig. 1). At a certain angle of inclination $\beta$ of the block to the horizon, the system will begin to slide. Friction coefficient $$ \mu = \mathrm{tg}~ ⁡\beta=\mathrm{tg}~⁡ (17° \pm 1°)= 0,31 \pm 0,02 .$$
+Using adhesive paste, attach the ruler as a rod to the base of the cylinder. Let's place this system on a wooden block. Let's start tilting the block (Fig. 1). At a certain angle of inclination $\beta$ of the block to the horizontal, the system will begin to slide. The friction coefficient is $$ \mu = \tan \beta = \tan(17^\circ \pm 1^\circ)= 0.31 \pm 0.02 .$$
 
 \begin{figure}[H]
   \centering

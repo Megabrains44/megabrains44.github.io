@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -35,7 +34,7 @@
 
 Let's build a graph $\omega(\sin^2 \varphi)$. We draw an approximating line along the initial section, from which we find the parameters $a$ and $b$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $a = (2.99 \pm 0.2) \cdot 10^{-6}~1/\text{s}$
+\par\smallskip\noindent\textbf{Answer:} $a = (2.99 \pm 0.2) \cdot 10^{-6}~1/\text{s}$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig1.jpg}
@@ -46,14 +45,14 @@ Let's build a graph $\omega(\sin^2 \varphi)$. We draw an approximating line alon
 
 From the graph we find the angle $\varphi_{\text{max}}$ after which the points significantly deviate from the straight line.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\varphi_{\text{max}} = 50^{\circ}$
+\par\smallskip\noindent\textbf{Answer:} $\varphi_{\text{max}} = 50^{\circ}$
 \end{solcard}
 
 \begin{solcard}{B1}{Obtain all components of the magnetic field on the surface of the Sun $B_{0,r}(\phi)$, $B_{0,\phi}(\phi)$, $B_{0,\lambda} (\phi)$. Express your answers using $\varphi$, $\mathfrak{M}$, $R_0$ and $\mu_0$.}{0.30}
 
 Let us write the field of the magnetic dipole at latitude $\varphi$: \[ \vec{B}(\varphi) = \frac{\mu_0}{4\pi} \frac{\mathfrak{M}}{R_0^3} (3\vec{n} \sin \varphi - \vec{z} ) \] Projecting this onto the axes corresponding to $r$, $\varphi$ and $\lambda$ we obtain:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[B_{0,r} (\varphi) = \dfrac{\mu_0}{4\pi} \dfrac{\mathfrak{M}}{R_0^3} 2 \sin \varphi\]
+\par\smallskip\noindent\textbf{Answer:} \[B_{0,r} (\varphi) = \dfrac{\mu_0}{4\pi} \dfrac{\mathfrak{M}}{R_0^3} 2 \sin \varphi\]
 \end{solcard}
 
 \begin{solcard}{B2}{Obtain the magnitude of the magnetic field $B_e$ at the equator inside the Sun near its surface. Express your answer using $\mathfrak{M}$, $\mu_0$, $R_0$, $\xi$.}{0.60}
@@ -63,7 +62,7 @@ Let's choose a surface stretched over magnetic lines. Then the magnetic field fl
 
 Thus $2\pi R_0 H_0 B_e = \Phi_0$ means $B_e = \dfrac{\Phi_0}{2\pi \xi R_0^2}=53~\text{mT}$. On the other hand, we can calculate the flux $\Phi_0$ by integrating the dipole field: \[ \Phi_0 = \int\limits_0^{\pi/2} B_{0,r} 2 \pi R_0^2 \cos \varphi d\varphi = \frac{\mu_0 \mathfrak{M}}{R_0} \int\limits_0^{\pi/2} \sin \varphi \cos \varphi d\varphi = \frac{\mu_0 \mathfrak{M}}{2R_0}. \] Substitute this into the previous formula and get the following:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ B_e = \frac{\mu_0 \mathfrak{M}}{4\pi\xi R_0^3}. \]
+\par\smallskip\noindent\textbf{Answer:} \[ B_e = \frac{\mu_0 \mathfrak{M}}{4\pi\xi R_0^3}. \]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig2.jpg}
@@ -71,7 +70,7 @@ Thus $2\pi R_0 H_0 B_e = \Phi_0$ means $B_e = \dfrac{\Phi_0}{2\pi \xi R_0^2}=53~
 \end{solcard}
 
 \begin{solcard}{B3}{Find the numerical value of $B_e$.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[B_e = \dfrac{\Phi_0}{2\pi \xi R_0^2}=53~\text{mT}\]
+\par\smallskip\noindent\textbf{Answer:} \[B_e = \dfrac{\Phi_0}{2\pi \xi R_0^2}=53~\text{mT}\]
 \end{solcard}
 
 \begin{solcard}{B4}{Obtain the magnitude of the magnetic field $B_\varphi(\varphi)$ inside the Sun at its surface as a function of latitude $\varphi$. Express your answer using $\varphi$, $B_e$.}{0.60}
@@ -81,14 +80,14 @@ Now we will also select a surface stretched over magnetic lines. Only now it wil
 
 Then to calculate $B_\varphi$ you need to find the flux $\Phi(\varphi)$ of the magnetic field of the dipole through the part of latitude from $0$ to $\varphi$. This is the integral already familiar to us: \[\Phi(\varphi) (\varphi)= \int\limits_0^{\varphi} B_{0,r} 2 \pi R_0^2 \cos \varphi d\varphi = \frac{\mu_0 \mathfrak{M}}{2R_0} \sin^2 \varphi. \] The flux through the surface is equal to 0: \[ \Phi(\varphi) + 2\pi R_0 \cos \varphi \, H_0 \cos^2 \varphi\, B_\varphi(\varphi) = \Phi_0, \] then: \[ 2\pi\xi R_0^2 \cos^3 \varphi \,B_\varphi (\varphi) = \Phi_0 \cos^2 \varphi. \] So
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ B_\varphi = \frac{B_e}{\cos \varphi}.\]
+\par\smallskip\noindent\textbf{Answer:} \[ B_\varphi = \frac{B_e}{\cos \varphi}.\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig3.jpg}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{C1}{Precisely calculate 30 pairs of points $(\varphi, \lambda)$ through which the magnetic line piercing points $\varphi=\pm 50^\circ$, $\lambda=0$ will pass at time $t=150~\text{дней}$.}{1.70}
+\begin{solcard}{C1}{Precisely calculate 30 pairs of points $(\varphi, \lambda)$ through which the magnetic line piercing points $\varphi=\pm 50^\circ$, $\lambda=0$ will pass at time $t=150~\text{days}$.}{1.70}
 
 Let the magnetic line pass through the points $(\pm\varphi_0,\lambda_0)$, where $\varphi_0=50^\circ$, $\lambda_0=0^\circ$. Then its equation in angular coordinates is given as follows: \[ \lambda = \omega(\varphi)t = (a - b\sin^2 \varphi)t \]
 
@@ -108,25 +107,25 @@ Points with angular coordinates in the plane have the following coordinates: \[ 
 
 From the picture it is clear that \[ \tan \psi = \frac{d \lambda}{d \varphi} \cos \varphi = 2bt \sin \varphi \cos^2 \varphi, \] is from
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ \psi = \arctan \left( 2bt \sin \varphi \, \cos^2 \varphi \right). \]
+\par\smallskip\noindent\textbf{Answer:} \[ \psi = \arctan \left( 2bt \sin \varphi \, \cos^2 \varphi \right). \]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig5.jpg}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{С4}{Let the magnetic lines inside the Sun near its surface make an angle $\psi$ with the meridian. Find the magnitude of the magnetic field $B$ at this point. Express your answer using $\psi$, $\varphi$, $B_e$.}{0.20}
+\begin{solcard}{C4}{Let the magnetic lines inside the Sun near its surface make an angle $\psi$ with the meridian. Find the magnitude of the magnetic field $B$ at this point. Express your answer using $\psi$, $\varphi$, $B_e$.}{0.20}
 
 The magnetic field flux through the surfaces discussed in Part B should not change, so $B_\varphi=\text{const}$. Then \[ B = \frac{B_\varphi}{\cos \psi} \] and therefore
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\frac{B_e}{\cos \varphi \, \cos \psi} \]
+\par\smallskip\noindent\textbf{Answer:} \[\frac{B_e}{\cos \varphi \, \cos \psi} \]
 \end{solcard}
 
-\begin{solcard}{D1}{Using the $\sin \psi \approx 1 $ approximation, find $B_\text{крит}$.}{2.70}
+\begin{solcard}{D1}{Using the $\sin \psi \approx 1 $ approximation, find $B_\text{crit}$.}{2.70}
 
-In the approximation $\sin \psi \approx 1$ it is true that $\tan \psi = 1/\cos \psi$, therefore: \[ B = \frac{B_e \tan \psi}{\cos \varphi} = 2B_e bt \sin \varphi, \] means the type of curve, $\varphi(t)$, on which spots appear on the Sun is described by the following expression: \[ B_\text{крит} = 2B_e bt \sin \varphi, \] i.e. its linearization is as follows: \[ t = \frac{A}{\sin 2\varphi} , \] where $A = \frac{B_{\text{крит}}}{B_eb}$ and $t$ are counted from the beginning of the 11-year solar cycle (one “butterfly” on the Maunder diagram). By constructing the envelope on the Maunder diagram, we obtain the dependence $t(\sin 2\varphi)$ for critical points (appearance of spots). From it we find $A$, and then $B_{крит}$.
+In the approximation $\sin \psi \approx 1$ it is true that $\tan \psi = 1/\cos \psi$, therefore: \[ B = \frac{B_e \tan \psi}{\cos \varphi} = 2B_e bt \sin \varphi, \] means the type of curve, $\varphi(t)$, on which spots appear on the Sun is described by the following expression: \[ B_\text{crit} = 2B_e bt \sin \varphi, \] i.e. its linearization is as follows: \[ t = \frac{A}{\sin 2\varphi} , \] where $A = \frac{B_{\text{crit}}}{B_eb}$ and $t$ are counted from the beginning of the 11-year solar cycle (one “butterfly” on the Maunder diagram). By constructing the envelope on the Maunder diagram, we obtain the dependence $t(\sin 2\varphi)$ for critical points (appearance of spots). From it we find $A$, and then $B_{crit}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ B_{крит} = (15 \pm 5) \, мТл \]
+\par\smallskip\noindent\textbf{Answer:} \[ B_{crit} = (15 \pm 5) \, \mathrm{mT} \]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig6.jpg}
@@ -135,9 +134,9 @@ In the approximation $\sin \psi \approx 1$ it is true that $\tan \psi = 1/\cos \
 
 \begin{solcard}{D2}{Determine the period of solar activity $T_0$, i.e. the time after which the Sun's magnetic field returns to its original state.}{0.20}
 
-We find the period as the time between two points with the same “phase” divided by the number of cycles: $T = 11~\text{Lет}$. Next, this number must be increased by 2 times, since after one cycle the field changes direction.
+We find the period as the time between two points with the same “phase” divided by the number of cycles: $T = 11~\text{year}$. Next, this number must be increased by 2 times, since after one cycle the field changes direction.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[ T_0 = 22 \, года \]
+\par\smallskip\noindent\textbf{Answer:} \[ T_0 = 22 \, year \]
 \end{solcard}
 
 \end{document}

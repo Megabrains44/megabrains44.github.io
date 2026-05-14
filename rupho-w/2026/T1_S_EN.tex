@@ -9,10 +9,9 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
@@ -31,88 +30,88 @@
 \author{\normalsize W26 (2026) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{Determine the dependence of the internal energy of such a gas on temperature. Consider that at $T = 0$ the internal energy is zero.}{0.50}
+\begin{solcard}{A1}{Determine the dependence of the internal energy of such a gas on temperature. Assume that at $T = 0$, the internal energy is zero.}{0.50}
 
-Let us write down a small increment of the internal energy of the gas: \[\mathrm dU=C_V\mathrm dT=(C_0+aT)\mathrm dT\]Integrating, we obtain:
+Let us write down the infinitesimal increment of the internal energy of the gas: \[\mathrm dU=C_V\mathrm dT=(C_0+aT)\mathrm dT\]Integrating, we obtain:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$U=C_0T+\dfrac{aT^2}{2}$$
+\par\smallskip\noindent\textbf{Answer:} $$U=C_0T+\dfrac{aT^2}{2}$$
 \end{solcard}
 
-\begin{solcard}{A2}{What is the heat capacity of gas $C_P$ at constant pressure at a given temperature $T$?}{0.30}
+\begin{solcard}{A2}{What is the heat capacity of the gas $C_P$ at constant pressure at a given temperature $T$?}{0.30}
 
-According to Mayer's equation: $$C_P =C_V+R\cdot 1~\mathrm{mol}$$here and below we опускаем factor $1~mol$ in all expressions. From here we get:
+According to Mayer's relation: $$C_P =C_V+R\cdot 1~\mathrm{mol}$$Here and below, we omit the $1~\mathrm{mol}$ factor in all expressions. From this, we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[C_P=C_0+aT+R\]
+\par\smallskip\noindent\textbf{Answer:} \[C_P=C_0+aT+R\]
 \end{solcard}
 
-\begin{solcard}{A3}{Let an isochoric process occur with a gas, in which the pressure increases from $p_1$ to $p_2$, the volume is equal to $V$. Find the amount of heat supplied $Q_V$.}{0.40}
+\begin{solcard}{A3}{Consider an isochoric process where the pressure of a gas increases from $p_1$ to $p_2$ at a constant volume $V$. Find the amount of heat supplied, $Q_V$.}{0.40}
 
-Let's write down $I$ the beginning of thermodynamics: \[ \mathrm dQ=\mathrm dU+\mathrm dA\]The process is isochoric, so the gas does not do any work, and \[Q_V=\Delta U=C_0\Delta T+\dfrac{a(T_2^2-T_1^2)}{2}\]The equation of state of an ideal gas: \[pV=RT,\] from where we can find the temperature values ​​at the beginning and at the end of the process: \[T_1=\dfrac{p_1V}{R}\]\[T_2=\dfrac{p_2V}{R}\]We express the answer through the data in the quantity condition:
+According to the First Law of Thermodynamics: \[ \mathrm dQ=\mathrm dU+\mathrm dA\]Since the process is isochoric, the gas does no work, and \[Q_V=\Delta U=C_0\Delta T+\dfrac{a(T_2^2-T_1^2)}{2}\]Using the ideal gas equation of state: \[pV=RT,\] we can find the initial and final temperatures of the process: \[T_1=\dfrac{p_1V}{R}\]\[T_2=\dfrac{p_2V}{R}\]Expressing the answer in terms of the given quantities:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[Q_V=\dfrac{C_0(p_2-p_1)V}{R}+\dfrac{a(p_2^2-p_1^2)V^2}{2R^2}\]
+\par\smallskip\noindent\textbf{Answer:} \[Q_V=\dfrac{C_0(p_2-p_1)V}{R}+\dfrac{a(p_2^2-p_1^2)V^2}{2R^2}\]
 \end{solcard}
 
-\begin{solcard}{A4}{Let an isobaric process be carried out with a gas, the initial volume is $V_1$, the final volume is $V_2$, and the pressure is $p$. Find the amount of heat supplied $Q_P$.}{0.40}
+\begin{solcard}{A4}{Consider an isobaric process where the volume of a gas increases from $V_1$ to $V_2$ at a constant pressure $p$. Find the amount of heat supplied, $Q_P$.}{0.40}
 
-Let's express the small increment of heat: \[\mathrm dQ=C_P\mathrm dT=(C_0+aT+R)\mathrm dT\]By integrating, we get an answer similar to the previous point: \[Q_P=(C_0+R)\Delta T+\dfrac{a(T_2^2-T_1^2)}{2}\]Through the equation of state we get the temperatures at the beginning and end of the process: \[T_1=\dfrac{pV_1}{R}\]\[T_2=\dfrac{pV_2}{R}\]Let's express the answer through the data in the quantity condition:
+Let us write the infinitesimal increment of heat: \[\mathrm dQ=C_P\mathrm dT=(C_0+aT+R)\mathrm dT\]By integrating, we obtain a result similar to the previous section: \[Q_P=(C_0+R)\Delta T+\dfrac{a(T_2^2-T_1^2)}{2}\]Using the equation of state, we find the initial and final temperatures of the process: \[T_1=\dfrac{pV_1}{R}\]\[T_2=\dfrac{pV_2}{R}\]Expressing the answer in terms of the given quantities:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$Q_P=\dfrac{(C_0+R)(V_2-V_1)p}{R}+\dfrac{a(V_2^2-V_1^2)p^2}{2R^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$Q_P=\dfrac{(C_0+R)(V_2-V_1)p}{R}+\dfrac{a(V_2^2-V_1^2)p^2}{2R^2}$$
 \end{solcard}
 
-\begin{solcard}{A5}{Consider a cycle $123$, consisting of a process $1-2$, in which the pressure is directly proportional to the volume, an isochore $2-3$ and an isobar $3-1$. Moreover, it is known that $V_2 = 2 V_1$, and the heat capacities at constant volumes at points 1 and 2 are related by the relation $C_{V2} = 1.5 C_{V1}$. Determine the efficiency of this cycle. Find the numerical value.  Meaning $C_0 = 3R/2$.}{1.50}
+\begin{solcard}{A5}{Consider a cycle $123$, consisting of a process $1-2$, in which the pressure is directly proportional to the volume, an isochore $2-3$, and an isobar $3-1$. It is given that $V_2 = 2 V_1$, and the heat capacities at constant volume at states 1 and 2 are related by $C_{V2} = 1.5 C_{V1}$. Determine the efficiency of this cycle. Find the numerical value. Assume $C_0 = 3R/2$.}{1.50}
 
-Equation of state: \[pV=RT\]In process $1-2$, $p=\alpha V$ is satisfied, which means $T \propto V^2$, therefore $T_2=4T_1$, $~p_2=2p_1$, $~\alpha V_1^2=RT_1$. Let's write the relationship from the condition: \[C_0+aT_2=C_0+4aT_1=1.5(C_0+aT_1),\]from which it follows: \[C_0=5aT_1\]Heat is supplied only in section $1-2$ (the temperature monotonically increases), and is removed only in section $3-1$ (temperature decreases monotonically). Let's find the supplied heat: \[\mathrm dQ=C_V\mathrm dT+p\mathrm dV=(C_0+aT)\mathrm dT+\alpha V\mathrm dV\]After integration we get: \[Q_+=C_0\cdot (4T_1-T_1)+a\cdot \dfrac{16T_1^2-T_1^2}{2}+\alpha\cdot\dfrac{4V_1^2-V_1^2}{2}=\dfrac{9}{2}C_0T_1+\dfrac{3}{2}RT_1=\dfrac{33}{4}RT_1\]Now we find the work of the gas: in the section $1-2$ $A_{12}=\dfrac{3}{2}RT_1$, section $2-3$ is isochore, therefore $A_{23}=0$, in the last section at a pressure $p_1$ the volume changes from $2V_1$ to $V_1$, therefore $A_{31}=-p_1V_1=-RT_1$. The total gas work is $A=\dfrac{RT_1}{2}$, the efficiency is found as \[\eta=\dfrac{A}{Q_+}=\dfrac{2}{33}\]
+Equation of state: \[pV=RT\]In process $1-2$, $p=\alpha V$, which implies $T \propto V^2$. Therefore, $T_2=4T_1$, $p_2=2p_1$, and $\alpha V_1^2=RT_1$. Using the given condition for the heat capacities: \[C_0+aT_2=C_0+4aT_1=1.5(C_0+aT_1),\]from which it follows: \[C_0=5aT_1\]Heat is supplied only during process $1-2$ (where the temperature monotonically increases), and is rejected only during process $3-1$ (where the temperature monotonically decreases). Let's find the supplied heat: \[\mathrm dQ=C_V\mathrm dT+p\mathrm dV=(C_0+aT)\mathrm dT+\alpha V\mathrm dV\]After integration, we get: \[Q_+=C_0\cdot (4T_1-T_1)+a\cdot \dfrac{16T_1^2-T_1^2}{2}+\alpha\cdot\dfrac{4V_1^2-V_1^2}{2}=\dfrac{9}{2}C_0T_1+\dfrac{3}{2}RT_1=\dfrac{33}{4}RT_1\]Now we find the work done by the gas: for process $1-2$, $A_{12}=\dfrac{3}{2}RT_1$; process $2-3$ is isochoric, so $A_{23}=0$; for the final process at pressure $p_1$, the volume changes from $2V_1$ to $V_1$, so $A_{31}=-p_1V_1=-RT_1$. The total work done by the gas is $A=\dfrac{RT_1}{2}$, and the efficiency is calculated as: \[\eta=\dfrac{A}{Q_+}=\dfrac{2}{33}\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[\eta=\dfrac{2}{33}\]
+\par\smallskip\noindent\textbf{Answer:} \[\eta=\dfrac{2}{33}\]
 \end{solcard}
 
-\begin{solcard}{A6}{Let us consider an adiabatic process performed with a gas. Derive the relationship between infinitesimal increments of volume $\mathrm dV$ and temperature $\mathrm dT$. Express your answer using $C_0$, $a$, $T$, $V$, $R$.}{0.50}
+\begin{solcard}{A6}{Consider an adiabatic process performed with a gas. Derive the relationship between infinitesimal increments of volume $\mathrm dV$ and temperature $\mathrm dT$. Express your answer using $C_0$, $a$, $T$, $V$, and $R$.}{0.50}
 
-Let us equate to zero the small increment of heat: \[\mathrm dQ=C_V\mathrm dT+p\mathrm dV=0\]From the equation of state: \[p=\dfrac{RT}{V}\]From here we have: \[(C_0+aT)\mathrm dT+\dfrac{RT}{V}\mathrm dV=0\]
+For an adiabatic process, the infinitesimal heat transfer is zero: \[\mathrm dQ=C_V\mathrm dT+p\mathrm dV=0\]Using the equation of state: \[p=\dfrac{RT}{V}\]Substituting this into the equation, we have: \[(C_0+aT)\mathrm dT+\dfrac{RT}{V}\mathrm dV=0\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[(C_0+aT)\mathrm dT+\dfrac{RT}{V}\mathrm dV=0\]
+\par\smallskip\noindent\textbf{Answer:} \[(C_0+aT)\mathrm dT+\dfrac{RT}{V}\mathrm dV=0\]
 \end{solcard}
 
-\begin{solcard}{A7}{From the relation in the previous paragraph, obtain an adiabatic equation connecting $T$ and $V$ of the form $$ f(T, V) = \mathrm{const}, $$in function $f$ can also входить $C_0$, $a$, $R$.}{0.90}
+\begin{solcard}{A7}{From the relation in the previous section, obtain an adiabatic equation connecting $T$ and $V$ of the form $$ f(T, V) = \mathrm{const}, $$where the function $f$ may also include the parameters $C_0$, $a$, and $R$.}{0.90}
 
-Dividing the expression from the previous paragraph by $T$, we get: \[(\dfrac{C_0}{T}+a)\mathrm dT+\dfrac{R}{V}\mathrm dV=0\]Integrating, we get: \[f(T, V)=C_0\operatorname{ln}\dfrac{T}{T_0}+R\operatorname{ln}\dfrac{V}{V_0}+aT=\operatorname{const}\]Here $T_0$, $V_0$ are arbitrary constants to ensure a dimensionless value under the logarithm. Omitting this formality, let’s present the answer through the data in the quantity condition:
+Dividing the expression from the previous section by $T$, we get: \[\left(\dfrac{C_0}{T}+a\right)\mathrm dT+\dfrac{R}{V}\mathrm dV=0\]Integrating, we get: \[f(T, V)=C_0\ln\dfrac{T}{T_0}+R\ln\dfrac{V}{V_0}+aT=\mathrm{const}\]Here, $T_0$ and $V_0$ are arbitrary constants that ensure dimensionless arguments for the logarithms. Omitting this formality, we can present the final equation as:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[f(T, V)=C_0\operatorname{ln}T+R\operatorname{ln}V+aT=\operatorname{const}\]
+\par\smallskip\noindent\textbf{Answer:} \[f(T, V)=C_0\ln T+R\ln V+aT=\mathrm{const}\]
 \end{solcard}
 
-\begin{solcard}{A8}{Consider the Carnot cycle $1234$, consisting of isotherms $12$ and $34$ and adiabats $23$ and $41$. Express the volumes $V_3$, $V_4$ in terms of $V_1$, $V_2$, temperatures on isotherms $T_+ = T_1 = T_2$, $T_- = T_3 = T_4$ and gas parameters $C_0$, $a$, $R$.}{0.40}
+\begin{solcard}{A8}{Consider the Carnot cycle $1234$, consisting of isotherms $12$ and $34$ and adiabats $23$ and $41$. Express the volumes $V_3$ and $V_4$ in terms of $V_1$, $V_2$, the temperatures of the isotherms $T_+ = T_1 = T_2$ and $T_- = T_3 = T_4$, and the gas parameters $C_0$, $a$, and $R$.}{0.40}
 
-Let's write the expression from the previous paragraph for the adiabatic $2-3$: \[C_0\operatorname{ln}T_++R\operatorname{ln}V_2+aT_+=C_0\operatorname{ln}T_-+R\operatorname{ln}V_3+aT_-,\]which transforms into: \[R\operatorname{ln}\dfrac{V_3}{V_2}=C_0\operatorname{ln}\dfrac{T_+}{T_-}+a(T_+-T_-),\]from which it follows: \[V_3=V_2\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]Similarly, we write for the adiabatic $4-1$: \[C_0\operatorname{ln}T_-+R\operatorname{ln}V_4+aT_-=C_0\operatorname{ln}T_++R\operatorname{ln}V_1+aT_+,\]which transforms into: \[V_4=V_1\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]
+Applying the equation from the previous section to the adiabat $2-3$: \[C_0\ln T_++R\ln V_2+aT_+=C_0\ln T_-+R\ln V_3+aT_-,\]which transforms into: \[R\ln\dfrac{V_3}{V_2}=C_0\ln\dfrac{T_+}{T_-}+a(T_+-T_-),\]from which it follows: \[V_3=V_2\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]Similarly, we write for the adiabat $4-1$: \[C_0\ln T_-+R\ln V_4+aT_-=C_0\ln T_++R\ln V_1+aT_+,\]which transforms into: \[V_4=V_1\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[V_3=V_2\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]\[V_4=V_1\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]
+\par\smallskip\noindent\textbf{Answer:} \[V_3=V_2\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]\[V_4=V_1\left(\dfrac{T_+}{T_-}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_+-T_-)}{R}\right]\]
 \end{solcard}
 
-\begin{solcard}{A9}{By direct calculation (without using a general formula), show that the efficiency of the Carnot cycle is the same as for an ideal gas with constant heat capacity.}{0.80}
+\begin{solcard}{A9}{By direct calculation (without using the general formula), show that the efficiency of this Carnot cycle is the same as that for an ideal gas with constant heat capacity.}{0.80}
 
-Heat can be supplied and removed only on isotherms (at $1-2$ it is supplied, at $3-4$ it is removed). \[\mathrm dQ=\mathrm dU+\mathrm dA=\mathrm dA=p\mathrm dV\]($\mathrm dU=C_V\mathrm dT=0$ since the process is isothermal) \[pV=RT,\]then \[\mathrm dQ_+=RT_+\dfrac{\mathrm dV}{V},\]\[Q_+=RT_+\operatorname {ln}\dfrac{V_2}{V_1},\]similarly: \[Q_-=RT_-\operatorname {ln}\dfrac{V_4}{V_3}\]From the previous paragraph: \[\dfrac{V_3}{V_4}=\dfrac{V_2}{V_1}\]Let us express the efficiency: \[\eta_1=1+\dfrac{Q_-}{Q_+}=1-\dfrac{T_-}{T_+}\]Efficiency of the Carnot cycle: \[\eta_c=1-\dfrac{T_-}{T_+},\]from which it follows that the expressions for the efficiency coincide.
+Heat is supplied and rejected only during the isothermal processes (supplied during $1-2$, rejected during $3-4$). \[\mathrm dQ=\mathrm dU+\mathrm dA=\mathrm dA=p\mathrm dV\](Since the process is isothermal, $\mathrm dU=C_V\mathrm dT=0$). Using \[pV=RT,\]we get \[\mathrm dQ_+=RT_+\dfrac{\mathrm dV}{V},\]\[Q_+=RT_+\ln\dfrac{V_2}{V_1}.\]Similarly: \[Q_-=RT_-\ln\dfrac{V_4}{V_3}\]From the previous section, we know: \[\dfrac{V_3}{V_4}=\dfrac{V_2}{V_1}\]Let us express the efficiency: \[\eta_1=1-\dfrac{|Q_-|}{Q_+}=1-\dfrac{T_-}{T_+}\]The standard efficiency of a Carnot cycle is: \[\eta_c=1-\dfrac{T_-}{T_+},\]which confirms that the expressions for the efficiency coincide.
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} The efficiency of the cycle coincides with the efficiency of the Carnot cycle.
+\par\smallskip\noindent\textbf{Answer:} The efficiency of the cycle coincides with the efficiency of the standard Carnot cycle.
 \end{solcard}
 
-\begin{solcard}{B1}{Find the amount of heat that needs to be supplied to the gas during isochoric heating $Q_V$. Express your answer in terms of $T_1$, $R$.}{1.00}
+\begin{solcard}{B1}{Find the amount of heat that needs to be supplied to the gas during isochoric heating $Q_V$. Express your answer in terms of $T_1$ and $R$.}{1.00}
 
-On linear section $C_V=C_0+aT$. We obtain a system of linear equations: \[\begin{cases}C_0+aT_1=3R/2\\ C_0+2aT_1=5R/2\end{cases}\] From this system it follows: \[aT_1=R\]\[C_0=R/2\] Let us find $Q_V$: \[Q_V=\int\limits_{T_1/2}^{3T_1}{C_V\mathrm dT}=\dfrac{3R}{2}\left(T_1-\dfrac{T_1}{2}\right)+\dfrac{5R}{2}\left(3T_1-2T_1\right)+\int\limits_{T_1}^{2T_1}{(\frac{R}{2}+\frac{RT}{T_1})\mathrm dT}\]\[Q_V=\frac{3RT_1}{4}+\frac{5RT_1}{2}+2RT_1=\dfrac{21}{4}RT_1\]
+On the linear segment, $C_V=C_0+aT$. We obtain a system of linear equations: \[\begin{cases}C_0+aT_1=3R/2\\ C_0+2aT_1=5R/2\end{cases}\] From this system, it follows: \[aT_1=R\]\[C_0=R/2\] Let us find $Q_V$: \[Q_V=\int\limits_{T_1/2}^{3T_1}{C_V\mathrm dT}=\dfrac{3R}{2}\left(T_1-\dfrac{T_1}{2}\right)+\dfrac{5R}{2}\left(3T_1-2T_1\right)+\int\limits_{T_1}^{2T_1}{\left(\frac{R}{2}+\frac{RT}{T_1}\right)\mathrm dT}\]\[Q_V=\frac{3RT_1}{4}+\frac{5RT_1}{2}+2RT_1=\dfrac{21}{4}RT_1\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[Q_V=\dfrac{21}{4}RT_1\]
+\par\smallskip\noindent\textbf{Answer:} \[Q_V=\dfrac{21}{4}RT_1\]
 \end{solcard}
 
-\begin{solcard}{B2}{Find the amount of heat that must be supplied to the gas during isobaric heating $Q_P$. Express your answer in terms of $T_1$, $R$.}{0.50}
+\begin{solcard}{B2}{Find the amount of heat that must be supplied to the gas during isobaric heating $Q_P$. Express your answer in terms of $T_1$ and $R$.}{0.50}
 
 \[C_P=C_V+R,\]therefore: \[Q_P=Q_V+R\Delta T=\frac{21}{4}RT_1+\frac{5}{2}RT_1=\frac{31}{4}RT_1\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[Q_P=\dfrac{31}{4}RT_1\]
+\par\smallskip\noindent\textbf{Answer:} \[Q_P=\dfrac{31}{4}RT_1\]
 \end{solcard}
 
-\begin{solcard}{B3}{Let the initial volume of gas be $V_0$. What will the final volume is equal to to if the temperature was increased adiabatically? Find the work done in this process. Express your answers using $T_1$, $R$, $V_0$.}{1.80}
+\begin{solcard}{B3}{Let the initial volume of the gas be $V_0$. What will the final volume be if the temperature is increased adiabatically? Find the work done in this process. Express your answers using $T_1$, $R$, and $V_0$.}{1.80}
 
-If in an adiabatic process with a heat capacity linearly dependent on temperature $C_V=C_0+aT$, the temperature varies from $T_{1x}$ to $T_{2x}$, and the volume from $V_1$ to $V_2$, respectively, then the volumes at the beginning and at the end are related as follows: \[V_2=V_1\left(\dfrac{T_{1x}}{T_{2x}}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_{1x}-T_{2x})}{R}\right]\]The process can be divided into three linear processes with the parameters: \[C_0=3R/2, ~a=0, ~T_{1x}=T_1/2, ~T_{2x}=T_1\]\[C_0=R/2, ~aT_1=R, ~T_{1x}=T_1, ~T_{2x}=2T_1\]\[C_0=5R/2, ~a=0, ~T_{1x}=2T_1, ~T_{2x}=3T_1\]Then at the end of process 1: \[V_1=\dfrac{V_0}{2\sqrt{2}}\]At the end of process 2: \[V_2=\dfrac{V_1}{e\sqrt{2}}=\dfrac{V_0}{4e}\]At the end of process 3: \[V_3=V=\dfrac{4\sqrt{2}V_2}{9\sqrt{3}}=\dfrac{V_0\sqrt{2}}{9e\sqrt{3}}\]Let’s find the work done by the gas in an adiabatic process: \[A=-\Delta U=-Q_V=-\frac{21}{4}RT_1\]
+For an adiabatic process where the heat capacity depends linearly on temperature as $C_V=C_0+aT$, if the temperature changes from $T_{1x}$ to $T_{2x}$ and the volume from $V_1$ to $V_2$, the initial and final volumes are related as follows: \[V_2=V_1\left(\dfrac{T_{1x}}{T_{2x}}\right)^\frac{C_0}{R}\exp\left[\dfrac{a(T_{1x}-T_{2x})}{R}\right]\]This process can be divided into three segments with the following parameters: \[C_0=3R/2, ~a=0, ~T_{1x}=T_1/2, ~T_{2x}=T_1\]\[C_0=R/2, ~aT_1=R, ~T_{1x}=T_1, ~T_{2x}=2T_1\]\[C_0=5R/2, ~a=0, ~T_{1x}=2T_1, ~T_{2x}=3T_1\]Then at the end of segment 1: \[V_1=\dfrac{V_0}{2\sqrt{2}}\]At the end of segment 2: \[V_2=\dfrac{V_1}{e\sqrt{2}}=\dfrac{V_0}{4e}\]At the end of segment 3: \[V_3=V=\dfrac{4\sqrt{2}V_2}{9\sqrt{3}}=\dfrac{V_0\sqrt{2}}{9e\sqrt{3}}\]Let's find the work done by the gas in this adiabatic process: \[A=-\Delta U=-Q_V=-\frac{21}{4}RT_1\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[V=\dfrac{V_0\sqrt{2}}{9e\sqrt{3}}\]\[A=-\frac{21}{4}RT_1\]
+\par\smallskip\noindent\textbf{Answer:} \[V=\dfrac{V_0\sqrt{2}}{9e\sqrt{3}}\]\[A=-\frac{21}{4}RT_1\]
 \end{solcard}
 
 \end{document}

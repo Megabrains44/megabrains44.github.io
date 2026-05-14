@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,120 +32,120 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Express $\dot{v}_x$ in terms of $F_x$ and $m$.}{0.10}
 
-From the theorem on the motion of the center of mass $$F_x=m\dot{v}_x $$ hence $$\dot{v}_x=\frac{F_x}{m} $$
+From the theorem on the motion of the center of mass $$F_x=m\dot{v}_x $$ from which $$\dot{v}_x=\frac{F_x}{m} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{v}_x=\frac{F_x}{m} $$
+\par\smallskip\noindent\textbf{Answer:} $$\dot{v}_x=\frac{F_x}{m} $$
 \end{solcard}
 
 \begin{solcard}{A2}{Express $\dot{\omega}$ in terms of $F_x$, $N$, $L$, $\varphi$ and $m$.}{0.40}
 
-From the equation of dynamics of rotational motion relative to the center of mass $$I_{O}\dot{\omega}=\frac{mL^2\dot{\omega}}{3}=NL\sin\varphi-F_xL\cos\varphi $$ hence $$\dot{\omega}=\frac{3}{mL}\left(N\sin\varphi-F_x\cos\varphi\right) $$
+From the equation of dynamics of rotational motion relative to the center of mass $$I_{O}\dot{\omega}=\frac{mL^2\dot{\omega}}{3}=NL\sin\varphi-F_xL\cos\varphi $$ from which $$\dot{\omega}=\frac{3}{mL}\left(N\sin\varphi-F_x\cos\varphi\right) $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{\omega}=\frac{3}{mL}\left(N\sin\varphi-F_x\cos\varphi\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$\dot{\omega}=\frac{3}{mL}\left(N\sin\varphi-F_x\cos\varphi\right) $$
 \end{solcard}
 
 \begin{solcard}{A3}{Express $v_{Ax}$ in terms of $\omega$, $v_x$, $\varphi$ and $L$.}{0.10}
 
-From the theorem on the addition of velocities $$\vec{v}_A=\vec{v}_O+\vec{v}_{\text{отн}} $$ hence $$v_{A_x}=v_x-\omega L\cos\varphi $$
+From the theorem on the addition of velocities $$\vec{v}_A=\vec{v}_O+\vec{v}_{\text{rel}} $$ from which $$v_{A_x}=v_x-\omega L\cos\varphi $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{A_x}=v_x-\omega L\cos\varphi $$
+\par\smallskip\noindent\textbf{Answer:} $$v_{A_x}=v_x-\omega L\cos\varphi $$
 \end{solcard}
 
-\begin{solcard}{A4}{Prove that $v_{Ax}\leq{0}$ for any values ​​of $\mu$ and $\varphi$.}{0.40}
+\begin{solcard}{A4}{Prove that $v_{Ax}\leq{0}$ for any values of $\mu$ and $\varphi$.}{0.40}
 
-If $v_{A_x}>0$, then $F_x=-\mu N$ Then $$\omega L=-\frac{3v_x}{\mu}\left(\sin\varphi+\mu\cos\varphi\right) $$ or $$v_{A_x}=v_x\left(1+\frac{3\cos\varphi}{\mu}\left(\sin\varphi+\mu\cos\varphi\right)\right) $$ Но at the same time $v_x<0$, therefore $v_{A_x}<0$, which leads to a contradiction.
+If $v_{A_x}>0$, then $F_x=-\mu N$ Then $$\omega L=-\frac{3v_x}{\mu}\left(\sin\varphi+\mu\cos\varphi\right) $$ or same $$v_{A_x}=v_x\left(1+\frac{3\cos\varphi}{\mu}\left(\sin\varphi+\mu\cos\varphi\right)\right) $$ But at the same time $v_x<0$, therefore $v_{A_x}<0$, which leads to a contradiction.
 
 \end{solcard}
 
 \begin{solcard}{A5}{Express $v_{A_x}$ in terms of $v_x$, $\varphi$ and $\mu$.}{0.10}
 
-In this case $F_x=\mu N$. Then $$\omega L=\frac{3v_x}{\mu}\left(\sin\varphi-\mu\cos\varphi\right) $$ or $$v_{A_x}=v_x\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right) $$
+In this case $F_x=\mu N$. Then $$\omega L=\frac{3v_x}{\mu}\left(\sin\varphi-\mu\cos\varphi\right) $$ or same $$v_{A_x}=v_x\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right) $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{A_x}=v_x\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$v_{A_x}=v_x\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right) $$
 \end{solcard}
 
-\begin{solcard}{A6}{At what minimum possible value $\mu_0$ is slippage impossible for any values ​​of angle $\varphi$?}{0.60}
+\begin{solcard}{A6}{At what minimum possible value $\mu_0$ is slippage impossible for any values of angle $\varphi$?}{0.60}
 
-Considering that $$\sin2\varphi=2\sin\varphi\cos\varphi $$ $$\cos^2\varphi=\frac{1+\cos2\varphi}{2} $$ после несложных преобсований $$v_{A_x}=-\frac{v_x}{2\mu}\left(3\sin2\varphi-3\mu\cos2\varphi-5\mu\right) $$ Вводя переменную $\varphi_0=\arctan\mu$ $$v_{A_x}=-\frac{v_x}{2\mu}\left(3\sqrt{1+\mu^2}\sin(2\varphi-\varphi_0)-5\mu\right) $$ Condition $v_{A_x}<0$ реализуется then когда expression в скобках положительно. Since $\si n(2\varphi-\varphi_0)\leq{1}$ $$\frac{5\mu}{3\sqrt{1+\mu^2}}\leq{1} $$ or $$\mu_0=\frac{3}{4} $$ $$\textbf{второй способ} $$ For/At наличии проскальзывания $F_x=\mu N$. Then можем выtimesandть $\mu$ via/through $\varphi$ как $$\mu=\frac{3\cos{\varphi}\sin{\varphi}}{1+3\cos^2{\varphi}} $$ Let us find производную $$\frac{d\mu}{d\varphi}=\frac{3}{1+3\cos^2{\varphi}}\left((\cos^2{\varphi}-\sin^2{\varphi})(1+3\cos^2{\varphi})+6\sin^2{\varphi}\cos^2{\varphi}\right) $$ hence let us find точку экстремума $$\varphi=\arctan{(2)} $$ and соответствующее максимальное value $$\mu_0=\frac{3}{4} $$
+Considering that $$\sin2\varphi=2\sin\varphi\cos\varphi $$ $$\cos^2\varphi=\frac{1+\cos2\varphi}{2} $$ after simple transformation $$v_{A_x}=-\frac{v_x}{2\mu}\left(3\sin2\varphi-3\mu\cos2\varphi-5\mu\right) $$ Introducing variable $\varphi_0=\arctan\mu$ $$v_{A_x}=-\frac{v_x}{2\mu}\left(3\sqrt{1+\mu^2}\sin(2\varphi-\varphi_0)-5\mu\right) $$ Condition $v_{A_x}<0$ is realized then when expression in bracket positive. Since $\sin(2\varphi-\varphi_0)\leq{1}$ $$\frac{5\mu}{3\sqrt{1+\mu^2}}\leq{1} $$ or same $$\mu_0=\frac{3}{4} $$ $$\textbf{second method} $$ For presence slipping $F_x=\mu N$. Then can express $\mu$ through $\varphi$ as $$\mu=\frac{3\cos{\varphi}\sin{\varphi}}{1+3\cos^2{\varphi}} $$ Find derivative $$\frac{d\mu}{d\varphi}=\frac{3}{1+3\cos^2{\varphi}}\left((\cos^2{\varphi}-\sin^2{\varphi})(1+3\cos^2{\varphi})+6\sin^2{\varphi}\cos^2{\varphi}\right) $$ from which find point of the extremum $$\varphi=\arctan{(2)} $$ and correspond maximum value $$\mu_0=\frac{3}{4} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\mu_0=\frac{3}{4} $$
+\par\smallskip\noindent\textbf{Answer:} $$\mu_0=\frac{3}{4} $$
 \end{solcard}
 
-\begin{solcard}{A7}{For $\mu<\mu_0$, find all values ​​of the angle $\varphi$ at which slippage is possible. Express the boundaries of the range of angles using $\mu$.}{0.80}
+\begin{solcard}{A7}{For $\mu<\mu_0$, find all values of the angle $\varphi$ at which slippage is possible. Express the boundaries of the range of angles using $\mu$.}{0.80}
 
-The condition for the positive value in parentheses is $$\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}\leq{2\varphi-\varphi_0}\leq{\pi-\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}} $$ hence $$\frac{\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}+\arctan\mu}{2}\leq{\varphi}\leq{\frac{\pi-\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}+\arctan\mu}{2}} $$ $$\textbf{второй способ} $$ Решим equation $$\mu=\frac{3\cos{\varphi}\sin{\varphi}}{1+3\cos^2{\varphi}} $$ as a result преобсования которого we get два корня $$\varphi_1=\arctan{\frac{3-\sqrt{9-16\mu^2}}{2\mu}},\ \varphi_2=\arctan{\frac{3+\sqrt{9-16\mu^2}}{2\mu}} $$ hence $$\arctan{\frac{3-\sqrt{9-16\mu^2}}{2\mu}} \leq \varphi \leq \arctan{\frac{3+\sqrt{9-16\mu^2}}{2\mu}} $$ which is identical to the answer obtained by the first method.
+The condition for the positive value in parentheses is $$\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}\leq{2\varphi-\varphi_0}\leq{\pi-\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}} $$ from which $$\frac{\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}+\arctan\mu}{2}\leq{\varphi}\leq{\frac{\pi-\arcsin\frac{5\mu}{3\sqrt{1+\mu^2}}+\arctan\mu}{2}} $$ $$\textbf{second method} $$ Solve equation $$\mu=\frac{3\cos{\varphi}\sin{\varphi}}{1+3\cos^2{\varphi}} $$ as a result transformation which obtain two root $$\varphi_1=\arctan{\frac{3-\sqrt{9-16\mu^2}}{2\mu}},\ \varphi_2=\arctan{\frac{3+\sqrt{9-16\mu^2}}{2\mu}} $$ from which $$\arctan{\frac{3-\sqrt{9-16\mu^2}}{2\mu}} \leq \varphi \leq \arctan{\frac{3+\sqrt{9-16\mu^2}}{2\mu}} $$ which is identical to the answer obtained by the first method.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\arctan{\frac{3-\sqrt{9-16\mu^2}}{2\mu}} \leq \varphi \leq \arctan{\frac{3+\sqrt{9-16\mu^2}}{2\mu}} $$
+\par\smallskip\noindent\textbf{Answer:} $$\arctan{\frac{3-\sqrt{9-16\mu^2}}{2\mu}} \leq \varphi \leq \arctan{\frac{3+\sqrt{9-16\mu^2}}{2\mu}} $$
 \end{solcard}
 
 \begin{solcard}{B1}{Express $v_x$ in terms of $\omega$, $L$ and $\varphi$.}{0.20}
 
 In this case, the speed of point $A$ is directed vertically, so $$v_x=\omega L\cos\varphi $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_x=\omega L\cos\varphi $$
+\par\smallskip\noindent\textbf{Answer:} $$v_x=\omega L\cos\varphi $$
 \end{solcard}
 
 \begin{solcard}{B2}{Express $v_y$ in terms of $v_0$, $\omega$, $L$ and $\varphi$.}{0.60}
 
-The angular momentum of the rod relative to point $A$ upon impact is conserved. The expression for it is $$\vec{L}_A=\vec{L}_O+m[\vec{AO}\times\vec{v}_O]=\frac{mL^2\vec{\omega}}{3}+m[\vec{AO}\times\vec{v}_O] $$ Thus $$mLv_0\sin\varphi=mLv_y\sin\varphi+mLv_x\cos\varphi+\frac{mL^2\omega}{3} $$ Taking into account relation $v_x$ and $\omega$, найденную в предыдущем partе $$v_y=v_0-\frac{\omega L(1+3\cos^2\varphi)}{3\sin\varphi} $$
+The angular momentum of the rod relative to point $A$ upon impact is conserved. The expression for it is $$\vec{L}_A=\vec{L}_O+m[\vec{AO}\times\vec{v}_O]=\frac{mL^2\vec{\omega}}{3}+m[\vec{AO}\times\vec{v}_O] $$ Thus $$mLv_0\sin\varphi=mLv_y\sin\varphi+mLv_x\cos\varphi+\frac{mL^2\omega}{3} $$ Account for relation $v_x$ and $\omega$, find in previous part $$v_y=v_0-\frac{\omega L(1+3\cos^2\varphi)}{3\sin\varphi} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_y=v_0-\frac{\omega L(1+3\cos^2\varphi)}{3\sin\varphi} $$
+\par\smallskip\noindent\textbf{Answer:} $$v_y=v_0-\frac{\omega L(1+3\cos^2\varphi)}{3\sin\varphi} $$
 \end{solcard}
 
 \begin{solcard}{B3}{Find the maximum energy $W$ spent on surface deformation. Express your answer in terms of $m$, $v_0$ and $\varphi$.}{0.80}
 
-For $v_{Ay}$ we have $$v_{Ay}=v_y-\omega L\sin\varphi=v_0-\frac{4\omega L}{3\sin\varphi} $$ For энергии деформации поверхности $E_N$ we have $$E_N=\int Nv_{Ay}dt $$ Но from теоремы о движении центра масс and partа $B2$ we have $$N=-m\dot{v}_y=\frac{m\dot{\omega}L(1+3\cos^2\varphi)}{3\sin\varphi} $$ Then $$E_N(\omega)=\int\limits_0^{\omega}\frac{m(1+3\cos^2\varphi)}{3\sin\varphi}\left(v_0-\frac{4\omega L}{3\sin\varphi}\right)L\dot{\omega}dt=\frac{m(1+3\cos^2\varphi)}{3\sin\varphi}\left(v_0 \omega L-\frac{2\omega^2L^2}{3\sin\varphi}\right) $$ Максимальное value $W$ достигается for/at $v_{A_y}=0$, т.е в этот moment $⟦13 $
+For $v_{Ay}$ we have $$v_{Ay}=v_y-\omega L\sin\varphi=v_0-\frac{4\omega L}{3\sin\varphi} $$ For energy deformation surface $E_N$ have $$E_N=\int Nv_{Ay}dt $$ But from theorem o motion of the center of mass and part $B2$ have $$N=-m\dot{v}_y=\frac{m\dot{\omega}L(1+3\cos^2\varphi)}{3\sin\varphi} $$ Then $$E_N(\omega)=\int\limits_0^{\omega}\frac{m(1+3\cos^2\varphi)}{3\sin\varphi}\left(v_0-\frac{4\omega L}{3\sin\varphi}\right)L\dot{\omega}dt=\frac{m(1+3\cos^2\varphi)}{3\sin\varphi}\left(v_0 \omega L-\frac{2\omega^2L^2}{3\sin\varphi}\right) $$ Maximum value $W$ be achieved for $v_{A_y}=0$, thus in this moment $13 $
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$W=\frac{mv^2_0(1+3\cos^2\varphi)}{8} $$
+\par\smallskip\noindent\textbf{Answer:} $$W=\frac{mv^2_0(1+3\cos^2\varphi)}{8} $$
 \end{solcard}
 
-\begin{solcard}{B4}{Find $\omega_{\text{к}}$ after the hit. Express your answer in terms of $v_0$, $L$, $\varphi$ and $k$.}{1.20}
+\begin{solcard}{B4}{Find $\omega_{\text{to}}$ after the hit. Express your answer in terms of $v_0$, $L$, $\varphi$ and $k$.}{1.20}
 
-At the end of the strike $$E_N=E_{\text{деф}}=W(1-k)=\frac{mv^2_0(1+3\cos^2\varphi)(1-k)}{8} $$ hence $$\frac{m(1+3\cos^2\varphi)}{3\sin\varphi}\left(v_0 \omega L-\frac{2\omega^2L^2}{3\sin\varphi}\right)=\frac{mv^2_0(1+3\cos^2\varphi)(1-k)}{8} $$ or $$\omega^2L^2-\frac{3v_0\omega L\sin\varphi}{2}+\frac{9v^2_0\sin^2\varphi(1-k)}{16} $$ Решая квадратное equation $$\omega=\frac{3v_0\sin\varphi(1\pm{\sqrt{k}})}{4L} $$ Необходимо выбрать больший from корней. Thus $$\omega_{\text{к}}=\frac{3v_0\sin\varphi(1+\sqrt{k})}{4L} $$
+At the end of the strike $$E_N=E_{\text{def}}=W(1-k)=\frac{mv^2_0(1+3\cos^2\varphi)(1-k)}{8} $$ from which $$\frac{m(1+3\cos^2\varphi)}{3\sin\varphi}\left(v_0 \omega L-\frac{2\omega^2L^2}{3\sin\varphi}\right)=\frac{mv^2_0(1+3\cos^2\varphi)(1-k)}{8} $$ or $$\omega^2L^2-\frac{3v_0\omega L\sin\varphi}{2}+\frac{9v^2_0\sin^2\varphi(1-k)}{16} $$ Solve square equation $$\omega=\frac{3v_0\sin\varphi(1\pm{\sqrt{k}})}{4L} $$ Necessarily choose larger from root. Thus $$\omega_{\text{to}}=\frac{3v_0\sin\varphi(1+\sqrt{k})}{4L} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\omega_{\text{к}}=\frac{3v_0\sin\varphi(1+\sqrt{k})}{4L} $$
+\par\smallskip\noindent\textbf{Answer:} $$\omega_{\text{to}}=\frac{3v_0\sin\varphi(1+\sqrt{k})}{4L} $$
 \end{solcard}
 
-\begin{solcard}{B5}{Find the velocity of point $A$ of rod $v_{A\text{к}}$ immediately after the impact. Express your answer using $v_0$, $\varphi$ and $k$.}{0.30}
+\begin{solcard}{B5}{Find the velocity of point $A$ of rod $v_{A\text{to}}$ immediately after the impact. Express your answer using $v_0$, $\varphi$ and $k$.}{0.30}
 
-$$v_{Ay}=v_0-\frac{4\omega_{\text{к}}L}{3\sin\varphi}=-v_0\sqrt{k} $$ or $$v_{A\text{к}}=v_0\sqrt{k} $$
+$$v_{Ay}=v_0-\frac{4\omega_{\text{to}}L}{3\sin\varphi}=-v_0\sqrt{k} $$ or $$v_{A\text{to}}=v_0\sqrt{k} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{A\text{к}}=v_0\sqrt{k} $$
+\par\smallskip\noindent\textbf{Answer:} $$v_{A\text{to}}=v_0\sqrt{k} $$
 \end{solcard}
 
 \begin{solcard}{B6}{At what distance $L_{AC}$ from point $A$ is point $C$ of the rod, the speed of which is minimal immediately after the impact? Express your answer using $L$, $\varphi$ and $k$.}{0.40}
 
-Let's find a point that does not have a velocity component, directed perpendicular to the rod, its speed will be minimal $$L_{AC}=\frac{v_{A\text{к}}\sin\varphi}{\omega_{\text{к}}}=L\frac{4\sqrt{k}}{3(1+\sqrt{k})} $$
+Let's find a point that does not have a velocity component, directed perpendicular to the rod, its speed will be minimal $$L_{AC}=\frac{v_{A\text{to}}\sin\varphi}{\omega_{\text{to}}}=L\frac{4\sqrt{k}}{3(1+\sqrt{k})} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$L_{AC}=L\frac{4\sqrt{k}}{3(1+\sqrt{k})} $$
+\par\smallskip\noindent\textbf{Answer:} $$L_{AC}=L\frac{4\sqrt{k}}{3(1+\sqrt{k})} $$
 \end{solcard}
 
 \begin{solcard}{C1}{Express $\omega$ and $v_y$ in terms of $v_x$, $v_0$, $L$, $\mu$ and $\varphi$.}{0.40}
 
-$\omega$ was found earlier $$\omega=\frac{3v_x}{\mu L}\left(\sin\varphi-\mu\cos\varphi\right) $$ From теоремы о движении центра масс $$m\dot{v}_y=-N $$ hence $$v_y=v_0-\frac{v_x}{\mu} $$
+$\omega$ was found earlier $$\omega=\frac{3v_x}{\mu L}\left(\sin\varphi-\mu\cos\varphi\right) $$ From theorem o motion of the center of mass $$m\dot{v}_y=-N $$ from which $$v_y=v_0-\frac{v_x}{\mu} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\omega=\frac{3v_x}{\mu L}\left(\sin\varphi-\mu\cos\varphi\right),\\v_y=v_0-\frac{v_x}{\mu} $$
+\par\smallskip\noindent\textbf{Answer:} $$\omega=\frac{3v_x}{\mu L}\left(\sin\varphi-\mu\cos\varphi\right),\\v_y=v_0-\frac{v_x}{\mu} $$
 \end{solcard}
 
 \begin{solcard}{C2}{Find the maximum energy $W$ spent on surface deformation. Express your answer in terms of $m$, $v_0$, $\mu$ and $\varphi$.}{1.20}
 
-For $v_{Ay}$ we have $$v_{Ay}=v_y-\omega L\sin\varphi=v_0-\frac{v_x}{\mu}-\frac{3v_x\sin\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right) $$ and also $$N=\frac{m\dot{v}_x}{\mu} $$ hence $$E_N=\int Nv_{Ay}dt=\int\limits_0^{v_x}\frac{m}{\mu^2}(\mu v_0-v_x(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))dv_x $$ or $$E_N=\frac{m}{\mu^2}\left(\mu v_0v_x-\frac{v^2_x(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)}{2}\right) $$ Максимальное value $W$ достигается for/at $v_{A_y}=0$, т.е в этот moment $$v_x=\frac{\mu v_0}{1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)} $$ hence $$W=\frac{mv^2_0}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
+For $v_{Ay}$ we have $$v_{Ay}=v_y-\omega L\sin\varphi=v_0-\frac{v_x}{\mu}-\frac{3v_x\sin\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right) $$ and also $$N=\frac{m\dot{v}_x}{\mu} $$ from which $$E_N=\int Nv_{Ay}dt=\int\limits_0^{v_x}\frac{m}{\mu^2}(\mu v_0-v_x(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))dv_x $$ or $$E_N=\frac{m}{\mu^2}\left(\mu v_0v_x-\frac{v^2_x(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)}{2}\right) $$ Maximum value $W$ be achieved for $v_{A_y}=0$, thus in this moment $$v_x=\frac{\mu v_0}{1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)} $$ from which $$W=\frac{mv^2_0}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$W=\frac{mv^2_0}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
+\par\smallskip\noindent\textbf{Answer:} $$W=\frac{mv^2_0}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
 \end{solcard}
 
-\begin{solcard}{C3}{Find $v_{x\text{к}}$ after the hit. Express your answer in terms of $v_0$, $\mu$, $\varphi$ and $k$.}{1.40}
+\begin{solcard}{C3}{Find $v_{x\text{to}}$ after the hit. Express your answer in terms of $v_0$, $\mu$, $\varphi$ and $k$.}{1.40}
 
-At the end of the strike $$E_N=E_{\text{деф}}=W(1-k)=\frac{mv^2_0(1-k)}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$ hence $$\frac{m}{\mu^2}\left(\mu v_0v_x-\frac{v^2_x(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)}{2}\right)=\frac{mv^2_0(1-k)}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$ or $$v^2_x-\frac{2\mu v_0v_x}{1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)}+\frac{\mu^2v^2_0(1-k)}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))^2}=0 $$ Решая квадратное equation $$v_x=\frac{\mu v_0(1\pm{\sqrt{k}})}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$ Необходимо выбрать больший from корней. Thus $$v_{x\text{к}}=\frac{\mu v_0(1+\sqrt{k})}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
+At the end of the strike $$E_N=E_{\text{def}}=W(1-k)=\frac{mv^2_0(1-k)}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$ from which $$\frac{m}{\mu^2}\left(\mu v_0v_x-\frac{v^2_x(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)}{2}\right)=\frac{mv^2_0(1-k)}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$ or $$v^2_x-\frac{2\mu v_0v_x}{1+3\sin\varphi(\sin\varphi-\mu\cos\varphi)}+\frac{\mu^2v^2_0(1-k)}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))^2}=0 $$ Solve square equation $$v_x=\frac{\mu v_0(1\pm{\sqrt{k}})}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$ Necessarily choose larger from root. Thus $$v_{x\text{to}}=\frac{\mu v_0(1+\sqrt{k})}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$v_{x\text{к}}=\frac{\mu v_0(1+\sqrt{k})}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
+\par\smallskip\noindent\textbf{Answer:} $$v_{x\text{to}}=\frac{\mu v_0(1+\sqrt{k})}{(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))} $$
 \end{solcard}
 
-\begin{solcard}{C4}{Find the work done by the friction force $A_{\text{тр}}$ during the impact. Express your answer in terms of $m$, $v_0$, $\mu$, $\varphi$ and $k$.}{1.00}
+\begin{solcard}{C4}{Find the work done by the friction force $A_\text{fr}$ during the impact. Express your answer in terms of $m$, $v_0$, $\mu$, $\varphi$ and $k$.}{1.00}
 
-For the work of the friction force we have $$A_{\text{тр}}=\int F_x v_{Ax}dt=\int\limits_0^{v_x} mv_x\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right)dv_x $$ or $$A_{\text{тр}}=\frac{mv^2_x}{2}\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right) $$ Substituting найденное value $v_x$ $$A_{\text{тр}}=\frac{\mu mv^2_0(1+\sqrt{k})^2(\mu-3\cos\varphi(\sin\varphi-\mu\cos\varphi))}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))^2} $$
+For the work of the friction force we have $$A_\text{fr}=\int F_x v_{Ax}dt=\int\limits_0^{v_x} mv_x\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right)dv_x $$ or $$A_\text{fr}=\frac{mv^2_x}{2}\left(1-\frac{3\cos\varphi}{\mu}\left(\sin\varphi-\mu\cos\varphi\right)\right) $$ Substitute find value $v_x$ $$A_\text{fr}=\frac{\mu mv^2_0(1+\sqrt{k})^2(\mu-3\cos\varphi(\sin\varphi-\mu\cos\varphi))}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))^2} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$A_{\text{тр}}=\frac{\mu mv^2_0(1+\sqrt{k})^2(\mu-3\cos\varphi(\sin\varphi-\mu\cos\varphi))}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))^2} $$
+\par\smallskip\noindent\textbf{Answer:} $$A_\text{fr}=\frac{\mu mv^2_0(1+\sqrt{k})^2(\mu-3\cos\varphi(\sin\varphi-\mu\cos\varphi))}{2(1+3\sin\varphi(\sin\varphi-\mu\cos\varphi))^2} $$
 \end{solcard}
 
 \end{document}

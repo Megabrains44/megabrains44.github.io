@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,7 +30,7 @@
 \author{\normalsize Y20 (2020) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{What could be the minimum distance $d_\min$ between electrons so that the movement described above is possible?}{1.00}
+\begin{solcard}{A1}{What could be the minimum distance $d_{\min}$ between electrons so that the movement described above is possible?}{1.00}
 
 Let's write Newton's second law in projection onto a line passing through the electrons. Since the distance does not change, the acceleration is $\frac{v^2}{r}$. We end up with the equation: $$ \frac{2mv^2}{d}=vBe-\frac{e^2}{4\pi\varepsilon_0 d^2} $$
 
@@ -43,7 +42,7 @@ From the discriminant it is clear that solutions for speed exist only for $d\geq
 
 \end{solcard}
 
-\begin{solcard}{A2}{Find the speed $v_m$ that must be imparted to the electrons so that when they move between them, the distance $d_\min$ found in A1 is maintained.}{0.50}
+\begin{solcard}{A2}{Find the speed $v_m$ that must be imparted to the electrons so that when they move between them, the distance $d_{\min}$ found in A1 is maintained.}{0.50}
 
 Since the discriminant is zero: $$v_m = -\frac{b}{2a}= \frac{Be}{2m}d_{\text{min}}=\frac{e}{2}\sqrt[3]{\frac{B}{4\pi\varepsilon_0m^2}}$$
 

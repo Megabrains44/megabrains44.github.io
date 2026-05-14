@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  9 MAY 2026 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,24 +373,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (PE_EN_2.aux)
 \openout1 = `PE_EN_2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -452,13 +452,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 38.
-Package microtype Info: Applying patch `item' on input line 38.
-Package microtype Info: Applying patch `toc' on input line 38.
-Package microtype Info: Applying patch `eqnum' on input line 38.
-Package microtype Info: Applying patch `footnote' on input line 38.
-Package microtype Info: Applying patch `verbatim' on input line 38.
-LaTeX Info: Redefining \microtypesetup on input line 38.
+LaTeX Info: Redefining \microtypecontext on input line 40.
+Package microtype Info: Applying patch `item' on input line 40.
+Package microtype Info: Applying patch `toc' on input line 40.
+Package microtype Info: Applying patch `eqnum' on input line 40.
+Package microtype Info: Applying patch `footnote' on input line 40.
+Package microtype Info: Applying patch `verbatim' on input line 40.
+LaTeX Info: Redefining \microtypesetup on input line 40.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -477,13 +477,13 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 40.
 
 (PE_EN_2.out) (PE_EN_2.out)
 \@outlinefile=\write3
 \openout3 = `PE_EN_2.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 
 (C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -492,7 +492,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -504,7 +504,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <PE_EN_assets/fig1.jpg, id=3, 358.33875pt x 369.63094pt>
 File: PE_EN_assets/fig1.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig1.jpg>
-Package pdftex.def Info: PE_EN_assets/fig1.jpg  used on input line 49.
+Package pdftex.def Info: PE_EN_assets/fig1.jpg  used on input line 52.
 (pdftex.def)             Requested size: 326.13744pt x 336.43799pt.
 
 [1
@@ -514,49 +514,49 @@ ts/fig1.jpg>]
 <PE_EN_assets/fig2.jpg, id=17, 453.19313pt x 249.93375pt>
 File: PE_EN_assets/fig2.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig2.jpg>
-Package pdftex.def Info: PE_EN_assets/fig2.jpg  used on input line 57.
+Package pdftex.def Info: PE_EN_assets/fig2.jpg  used on input line 60.
 (pdftex.def)             Requested size: 326.13744pt x 179.86444pt.
 <PE_EN_assets/fig3.jpg, id=18, 319.1925pt x 288.3272pt>
 File: PE_EN_assets/fig3.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig3.jpg>
-Package pdftex.def Info: PE_EN_assets/fig3.jpg  used on input line 67.
+Package pdftex.def Info: PE_EN_assets/fig3.jpg  used on input line 70.
 (pdftex.def)             Requested size: 326.13744pt x 294.60017pt.
  [2 <./PE_EN_assets/fig2.jpg>] [3 <./PE_EN_assets/fig3.jpg>]
-<PE_EN_assets/fig4.jpg, id=37, 1008.01593pt x 1026.83624pt>
+<PE_EN_assets/fig4.jpg, id=39, 1008.01593pt x 1026.83624pt>
 File: PE_EN_assets/fig4.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig4.jpg>
-Package pdftex.def Info: PE_EN_assets/fig4.jpg  used on input line 97.
+Package pdftex.def Info: PE_EN_assets/fig4.jpg  used on input line 106.
 (pdftex.def)             Requested size: 326.13744pt x 332.22934pt.
 
 [4]
-<PE_EN_assets/fig5.jpg, id=45, 356.0803pt x 418.56375pt>
+<PE_EN_assets/fig5.jpg, id=48, 356.0803pt x 418.56375pt>
 File: PE_EN_assets/fig5.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig5.jpg>
-Package pdftex.def Info: PE_EN_assets/fig5.jpg  used on input line 109.
+Package pdftex.def Info: PE_EN_assets/fig5.jpg  used on input line 118.
 (pdftex.def)             Requested size: 326.13744pt x 383.38443pt.
  [5 <./PE_EN_assets/fig4.jpg>]
-<PE_EN_assets/fig6.jpg, id=53, 550.30594pt x 322.20375pt>
+<PE_EN_assets/fig6.jpg, id=56, 550.30594pt x 322.20375pt>
 File: PE_EN_assets/fig6.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig6.jpg>
-Package pdftex.def Info: PE_EN_assets/fig6.jpg  used on input line 121.
+Package pdftex.def Info: PE_EN_assets/fig6.jpg  used on input line 135.
 (pdftex.def)             Requested size: 326.13744pt x 190.95894pt.
  [6 <./PE_EN_assets/fig5.jpg>]
-<PE_EN_assets/fig7.jpg, id=61, 625.58719pt x 683.55376pt>
+<PE_EN_assets/fig7.jpg, id=65, 625.58719pt x 683.55376pt>
 File: PE_EN_assets/fig7.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig7.jpg>
-Package pdftex.def Info: PE_EN_assets/fig7.jpg  used on input line 131.
+Package pdftex.def Info: PE_EN_assets/fig7.jpg  used on input line 145.
 (pdftex.def)             Requested size: 326.13744pt x 356.36786pt.
  [7 <./PE_EN_assets/fig6.jpg>]
-<PE_EN_assets/fig8.jpg, id=69, 622.57594pt x 685.8122pt>
+<PE_EN_assets/fig8.jpg, id=73, 622.57594pt x 685.8122pt>
 File: PE_EN_assets/fig8.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig8.jpg>
-Package pdftex.def Info: PE_EN_assets/fig8.jpg  used on input line 137.
+Package pdftex.def Info: PE_EN_assets/fig8.jpg  used on input line 151.
 (pdftex.def)             Requested size: 326.13744pt x 359.26149pt.
  [8 <./PE_EN_assets/fig7.jpg>]
-<PE_EN_assets/fig9.jpg, id=77, 627.09282pt x 685.05937pt>
+<PE_EN_assets/fig9.jpg, id=81, 627.09282pt x 685.05937pt>
 File: PE_EN_assets/fig9.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig9.jpg>
-Package pdftex.def Info: PE_EN_assets/fig9.jpg  used on input line 143.
+Package pdftex.def Info: PE_EN_assets/fig9.jpg  used on input line 157.
 (pdftex.def)             Requested size: 326.13744pt x 356.29564pt.
  [9 <./PE_EN_assets/fig8.jpg>]
 [10 <./PE_EN_assets/fig9.jpg>] (PE_EN_2.aux)
@@ -568,29 +568,30 @@ Package rerunfilecheck Info: File `PE_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14082 strings out of 467871
- 225714 string characters out of 5418376
- 678401 words of memory out of 5000000
- 42692 multiletter control sequences out of 15000+600000
- 638877 words of font info for 120 fonts, out of 8000000 for 9000
+ 14099 strings out of 467871
+ 226039 string characters out of 5418376
+ 679401 words of memory out of 5000000
+ 42703 multiletter control sequences out of 15000+600000
+ 639270 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,79p,1006b,479s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aadib/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aadib/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
-/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmtt10.pfb>
-Output written on PE_EN_2.pdf (10 pages, 1131001 bytes).
+ <C:\Users\aadib\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1095.pk><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/aadib/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aadib/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aadib/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aa
+dib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmti10.pfb><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmtt10.pfb>
+Output written on PE_EN_2.pdf (10 pages, 1132189 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 25134 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 27182 words of extra memory for PDF output out of 29859 (max. 10000000)
 

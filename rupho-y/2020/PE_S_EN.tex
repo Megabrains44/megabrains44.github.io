@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,10 +30,10 @@
 \author{\normalsize Y20 (2020) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{Obtain the values ​​of $I_{AB}$, $U_{CD}$, $I_{DA}$ and $U_{BC}$ for 15 different connections to the plate.}{??}
+\begin{solcard}{A1}{Obtain the values of $I_{AB}$, $U_{CD}$, $I_{DA}$ and $U_{BC}$ for 15 different connections to the plate.}{??}
 \end{solcard}
 
-\begin{solcard}{A2}{Compute $R_{\text{AB,CD}}$, $R_{\text{BC,DA}}$ and $y$ for each of the connections. Round all values ​​to the nearest 4 significant figures.}{0.90}
+\begin{solcard}{A2}{Compute $R_{\text{AB,CD}}$, $R_{\text{BC,DA}}$ and $y$ for each of the connections. Round all values to the nearest 4 significant figures.}{0.90}
 \end{solcard}
 
 \begin{solcard}{A3}{The formula $\cfrac{y-1}{y+1}=\cfrac{1}{x} \text{arch}\left(\cfrac{\text{e}^x}{2}\right)$ can be converted to the form $\text{e}^x=\text{e}^{\alpha x} + \text{e}^{\beta x}$. Find $\alpha$ and $\beta$. Express your answer using $y$.}{0.10}
@@ -60,7 +59,7 @@ $\rho=(2.3\cdot 10^3\pm5)~\text{\Omega}$
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{B2}{Plot the dependence $\ln n~(\frac{1}{T})$. Approximate three sections of this graph with straight lines and determine the values ​​of $T_i$ and $T_s$. Estimate the error of the obtained values.}{1.60}
+\begin{solcard}{B2}{Plot the dependence $\ln n~(\frac{1}{T})$. Approximate three sections of this graph with straight lines and determine the values of $T_i$ and $T_s$. Estimate the error of the obtained values.}{1.60}
 \end{solcard}
 
 \begin{solcard}{B3}{Find $E_d$.}{1.20}

@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T2_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2020/T2_S_EN
-.tex
+(./T2_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2020/T2_S_EN
-.aux)
+(./T2_S_EN.aux)
 \openout1 = `T2_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2020/T2_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2020/T2_S_EN
-.out)
+(./T2_S_EN.out) (./T2_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T2_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1071,50 +1066,560 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSans' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.59 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Display math should end with $$.
+<to be read again> 
+                   T
+l.60  $$ After integration have $T
+                                  V^{n-1}=const$$$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.60  $$ After integration have $TV^
+                                    {n-1}=const$$$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.62 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Display math should end with $$.
+<to be read again> 
+                   n
+l.63  $$ where $n
+                 =\frac{C_P - C}{C_V - C}$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63  $$ where $n=\frac{C_P - C}{C_V - C}
+                                         $
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63  $$ where $n=\frac{C_P - C}{C_V - C}
+                                         $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63  $$ where $n=\frac{C_P - C}{C_V - C}
+                                         $
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.63  $$ where $n=\frac{C_P - C}{C_V - C}
+                                         $
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.65 \end{solcard}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[1
 
 ]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.71 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.71 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Display math should end with $$.
+<to be read again> 
+                   a
+l.72  $$ But since $a
+                     =-\frac{\alpha C_P}{\mu}+\frac{k}{\rho_0S_0v_0}=const$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72  $$ But since $a=-\frac{\alpha C_P}{\mu}
+                                             +\frac{k}{\rho_0S_0v_0}=const$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72  $$ But since $a=-\frac{\alpha C_P}{\mu}
+                                             +\frac{k}{\rho_0S_0v_0}=const$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72  $$ But since $a=-\frac{\alpha C_P}{\mu}
+                                             +\frac{k}{\rho_0S_0v_0}=const$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.72  $$ But since $a=-\frac{\alpha C_P}{\mu}
+                                             +\frac{k}{\rho_0S_0v_0}=const$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 Missing character: There is no ⟦ (U+27E6) in font DejaVu Serif/OT:script=latn;l
 anguage=dflt;mapping=tex-text;!
 Missing character: There is no ⟧ (U+27E7) in font DejaVu Serif/OT:script=latn;l
 anguage=dflt;mapping=tex-text;!
-Missing character: There is no П ("41F) in font cmmi10!
-Missing character: There is no о ("43E) in font cmmi10!
-Missing character: There is no с ("441) in font cmmi10!
-Missing character: There is no л ("43B) in font cmmi10!
-Missing character: There is no е ("435) in font cmmi10!
-Missing character: There is no и ("438) in font cmmi10!
-Missing character: There is no н ("43D) in font cmmi10!
-Missing character: There is no т ("442) in font cmmi10!
-Missing character: There is no е ("435) in font cmmi10!
-Missing character: There is no г ("433) in font cmmi10!
-Missing character: There is no р ("440) in font cmmi10!
-Missing character: There is no и ("438) in font cmmi10!
-Missing character: There is no р ("440) in font cmmi10!
-Missing character: There is no о ("43E) in font cmmi10!
-Missing character: There is no в ("432) in font cmmi10!
-Missing character: There is no а ("430) in font cmmi10!
-Missing character: There is no н ("43D) in font cmmi10!
-Missing character: There is no и ("438) in font cmmi10!
-Missing character: There is no я ("44F) in font cmmi10!
-Missing character: There is no и ("438) in font cmmi10!
-Missing character: There is no м ("43C) in font cmmi10!
-Missing character: There is no е ("435) in font cmmi10!
-Missing character: There is no е ("435) in font cmmi10!
-Missing character: There is no м ("43C) in font cmmi10!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.64 ... $$ После интегрирования имеем $$ $$ $$TP^
-                                                  {\textbackslash{}frac{1}{\...
- 
+l.76 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.76 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+Missing character: There is no Д ("414) in font cmmi10!
+Missing character: There is no л ("43B) in font cmmi10!
+Missing character: There is no я ("44F) in font cmmi10!
+Missing character: There is no д ("434) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no л ("43B) in font cmmi10!
+Missing character: There is no ь ("44C) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no й ("439) in font cmmi10!
+Missing character: There is no ш ("448) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no г ("433) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no ш ("448) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no я ("44F) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no ч ("447) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 C=\frac{\mu k}{\alpha \rho_0S_0v_0}
+                                        $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 C=\frac{\mu k}{\alpha \rho_0S_0v_0}
+                                        $$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 C=\frac{\mu k}{\alpha \rho_0S_0v_0}
+                                        $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.78 C=\frac{\mu k}{\alpha \rho_0S_0v_0}
+                                        $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.79 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.80 \end{solcard}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.80 \end{solcard}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.86 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.86 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Display math should end with $$.
+<to be read again> 
+                   n
+l.87  $$ Find $n
+                $  from $A6$, obtain$$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (31.83476pt too wide) in paragraph at lines 97--97
+\TU/DejaVuSerif(0)/m/it/10 of the quadrilateral. Answers can be expressed in te
+rms of $\OML/cmm/m/it/10 v[]; S[]; T[]; ^^Z[]; ^^V; C[]; ^^K; A; ^^L; B; L[]; L
+[]; L[]; L[]$
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...namics and point ${A6}$\frac{\delta Q}{dm}
+                                                  ={\frac{C}{\mu}}(T - T_0)$$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...namics and point ${A6}$\frac{\delta Q}{dm}
+                                                  ={\frac{C}{\mu}}(T - T_0)$$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...namics and point ${A6}$\frac{\delta Q}{dm}
+                                                  ={\frac{C}{\mu}}(T - T_0)$$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.99 ...namics and point ${A6}$\frac{\delta Q}{dm}
+                                                  ={\frac{C}{\mu}}(T - T_0)$$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (315.34097pt too wide) in paragraph at lines 99--101
+[]\TU/DejaVuSerif(0)/m/n/10 From the first law of thermodynamics and point $[]$
+$\OML/cmm/m/it/10 ^^NQ$$[]$$Substituteinlastequationexpressionforheatcapacity; 
+obtainin$\TU/DejaVuSerif(0)/m/n/10 A6$\OML/cmm/m/it/10 anddifferencetemperature
+; have$ 
+ []
+
+! Display math should end with $$.
+<to be read again> 
+                   ,
+l.102  $$Q_1=\frac{\alpha dm}{\rho_0S_0v_0}L_1$,
+                                                $Q_2=\frac{\beta dm}{\rho_0S...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.104 \end{solcard}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.118 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Display math should end with $$.
+<to be read again> 
+                   a
+l.119  $$ For $a
+                b$ and $cd$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.120 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no ⟦ (U+27E6) in font DejaVu Serif/OT:script=latn;l
+anguage=dflt;mapping=tex-text;!
+Missing character: There is no ⟧ (U+27E7) in font DejaVu Serif/OT:script=latn;l
+anguage=dflt;mapping=tex-text;!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.125 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.125 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.138 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.138 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 a_
+        {bc}=\left(-\frac{\alpha C_P}{\mu}+\frac{k}{\rho_0S_0v_0}\right)\fra...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.149 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.152 v_
+        c^2=v_0^2+2(a_{ab}L_1+a_{bc}L_2)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.156 v_
+        d^2=v_0^2+2a_{bc}L_4$$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.157 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[3] [4] (./T2_S_EN.aux)
+Package rerunfilecheck Info: File `T2_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32049 strings out of 478190
- 685140 string characters out of 5854827
- 1080682 words of memory out of 5000000
- 52118 multiletter control sequences out of 15000+600000
+ 32062 strings out of 478190
+ 684589 string characters out of 5854827
+ 1079673 words of memory out of 5000000
+ 52130 multiletter control sequences out of 15000+600000
  477300 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1029b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2020/T2_S_EN.pdf (1 page).
+ 91i,7n,99p,1029b,930s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on T2_S_EN.pdf (4 pages).

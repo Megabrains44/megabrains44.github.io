@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -35,21 +34,21 @@
 
 Let $\vec{e}_1$ be a unit vector drawn towards the smaller body from the center of the larger one. Acceleration of bodies due to gravity: $$\vec{a}_m=-\cfrac{GM}{L^2}\vec{e}_1\quad \vec{a}_M=\cfrac{Gm}{L^2}\vec{e}_1; \quad {\vec{a}_M-\vec{a}_m=\cfrac{G(M+m)}{L^3}\vec{e}_1}. $$ On the other hand: $$\vec{a}_M-\vec{a}_m=\omega^2L\vec{e}_1, $$ from where finally:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\omega=\sqrt{\cfrac{G(M+m)}{L^3}} $$
+\par\smallskip\noindent\textbf{Answer:} $$\omega=\sqrt{\cfrac{G(M+m)}{L^3}} $$
 \end{solcard}
 
-\begin{solcard}{A2}{Obtain an exact expression for the potential difference of the gravitational field of a small body $\Delta{\varphi}_\text{gр}=\varphi_{\text{gр}P}-\varphi_{\text{gр}O}$ at points $P$ and $O$. Express your answer using $G$, $m$, $L$, $\theta$ and $r(\theta)$.}{0.20}
+\begin{solcard}{A2}{Obtain an exact expression for the potential difference of the gravitational field of a small body $\Delta{\varphi}_\text{gr}=\varphi_{\text{gr}P}-\varphi_{\text{gr}O}$ at points $P$ and $O$. Express your answer using $G$, $m$, $L$, $\theta$ and $r(\theta)$.}{0.20}
 
-The field potential of a small body at a point whose distance from it is $L_m$ is equal to: $$\varphi_\text{gр}=-\cfrac{Gm}{L_m} $$ Let us find distance от малого тела до точки $A$ по теореме косинусов: $$L^2_m=L^2+r^2(\theta)-2Lr(\theta)\cos\theta $$ Finally we have:
+The field potential of a small body at a point whose distance from it is $L_m$ is equal to: $$\varphi_\text{gr}=-\cfrac{Gm}{L_m} $$ Find distance from small body to point $A$ by theorem cosine: $$L^2_m=L^2+r^2(\theta)-2Lr(\theta)\cos\theta $$ Finally we have:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\Delta \varphi_{\text{gр}}=Gm\left(\cfrac{1}{L}-\cfrac{1}{\sqrt{L^2+r^2-2rL\cos\theta}}\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$\Delta \varphi_{\text{gr}}=Gm\left(\cfrac{1}{L}-\cfrac{1}{\sqrt{L^2+r^2-2rL\cos\theta}}\right) $$
 \end{solcard}
 
-\begin{solcard}{A3}{Obtain an exact expression for the potential difference of inertial forces $\Delta{\varphi}_\text{ин}=\varphi_{\text{ин}P}-\varphi_{\text{ин}O}$ at points $P$ and $O$. Express your answer using $G$, $m$, $M$, $L$, $\theta$ and $r(\theta)$.}{0.50}
+\begin{solcard}{A3}{Obtain an exact expression for the potential difference of inertial forces $\Delta{\varphi}_\text{i}=\varphi_{\text{i}P}-\varphi_{\text{i}O}$ at points $P$ and $O$. Express your answer using $G$, $m$, $M$, $L$, $\theta$ and $r(\theta)$.}{0.50}
 
-Since the fluid is stationary, and the larger body rotates with a constant angular velocity, the fields of inertial forces $-\Delta{m}\vec{a}_0$ and $\Delta{m}\omega^2\vec{r}_\perp$, acting on a particle of mass $\Delta{m}$, contribute to the potential difference. For the potential difference between points $A$ and $O$ we have: $$\varphi_{\text{ин}A}-\varphi_{\text{ин}O}=-\int\limits_{O}^{A}(\omega^2\vec{r}_\perp-\vec{a}_0)\cdot d\vec{r} $$ Taking into account that $\vec{a}_0=Gm\vec{e}_1/L^2$, а $\vec{r}_\perp=\vec{r}$: $$\varphi_{\text{ин}A}-\varphi_{\text{ин}O}=-\int\limits_{O}^{A}(\omega^2\vec{r}-\cfrac{Gm}{L^2}\vec{e}_1)\cdot d\vec{r}=\cfrac{Gmr\cos\theta}{L^2}-\cfrac{\omega^2r^2}{2} $$ Finally:
+Since the fluid is stationary, and the larger body rotates with a constant angular velocity, the fields of inertial forces $-\Delta{m}\vec{a}_0$ and $\Delta{m}\omega^2\vec{r}_\perp$, acting on a particle of mass $\Delta{m}$, contribute to the potential difference. For the potential difference between points $A$ and $O$ we have: $$\varphi_{\text{i}A}-\varphi_{\text{i}O}=-\int\limits_{O}^{A}(\omega^2\vec{r}_\perp-\vec{a}_0)\cdot d\vec{r} $$ Taking into account that $\vec{a}_0=Gm\vec{e}_1/L^2$, and $\vec{r}_\perp=\vec{r}$: $$\varphi_{\text{i}A}-\varphi_{\text{i}O}=-\int\limits_{O}^{A}(\omega^2\vec{r}-\cfrac{Gm}{L^2}\vec{e}_1)\cdot d\vec{r}=\cfrac{Gmr\cos\theta}{L^2}-\cfrac{\omega^2r^2}{2} $$ Finally:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\Delta\varphi_{\text{ин}}=\cfrac{Gmr\cos\theta}{L^2}-\cfrac{G(M+m)r^2}{2L^3} $$
+\par\smallskip\noindent\textbf{Answer:} $$\Delta\varphi_\text{i}=\cfrac{Gmr\cos\theta}{L^2}-\cfrac{G(M+m)r^2}{2L^3} $$
 \end{solcard}
 
 \begin{solcard}{A4}{Get addicted $h(\theta)$. Express your answer in terms of $m$, $M$, $R$, $L$ and $\theta$. Keep your answer as simple as possible. Qualitatively depict the shape of the surface in the section under consideration. In the same figure, depict the unperturbed shape of the surface. Note: Use the following approximation: $$\cfrac{1}{\sqrt{1+a^2-2a\cos\theta}}\approx{1+a\cos\theta+\cfrac{a^2(3\cos^2\theta-1)}{2}} $$}{1.30}
@@ -57,96 +56,96 @@ Since the fluid is stationary, and the larger body rotates with a constant angul
 Note: Use the following approximation: $$\cfrac{1}{\sqrt{1+a^2-2a\cos\theta}}\approx{1+a\cos\theta+\cfrac{a^2(3\cos^2\theta-1)}{2}} $$
 
 
-The surface of the larger body at equilibrium is equipotential. Since the surface disturbances are small, we will assume that the potential of the gravitational field of the larger body on the surface is equal to: $$\varphi_M=-\cfrac{GM}{r(\theta)} $$ Since surface эквandpotentialьна: $$\varphi_A=Gm\left(\cfrac{1}{L}-\cfrac{1}{\sqrt{L^2+r^2-2rL\cos\theta}}\right)+\cfrac{Gmr\cos\theta}{L^2}-\cfrac{G(M+m)r^2}{2L^3}-\cfrac{GM}{r(\theta)}+C_1=C_2 $$ where $C_1$ and $C_2$ - некоторые постоянные величины. Раскладывая expression под корнем: $$\cfrac{1}{\sqrt{L^2+r^2-2rL\cos\theta}}\approx{\cfrac{1}{L}\left(1+a\cos\theta+\cfrac{a^2(3\cos^2\theta-1)}{2}\right)};\quad a=\cfrac{r}{L}. $$ Thus, we have: $$-\cfrac{GM}{r}-\cfrac{G(M+3m\cos^2\theta)r^2}{2L^3}=const $$ Note that terms, пропорциональные $\cos \theta$ полностью сократились. From-за этого and потребовалось раскладывать potential малого тела до второго порядка. Next substituting $r=R+h$ and expanding до первого порядка potential большого тела. В potentialе малого тела можно ссу считать $r = R$, since он сам является малой величиной from-за условия $R \ll L$. We get $$-\cfrac{GM}{R}+\cfrac{GMh}{R^2}-\cfrac{G(M+3m\cos^2\theta)R^2}{2L^3}=const. $$ Оставим только переменные terms: $$h\cfrac{GM}{R^2}-\cfrac{3GmR^2\cos^2\theta}{2L^3}=const $$ Since $h(\pi/2)=0$, the last constant is zero. Then we have:
+The surface of the larger body at equilibrium is equipotential. Since the surface disturbances are small, we will assume that the potential of the gravitational field of the larger body on the surface is equal to: $$\varphi_M=-\cfrac{GM}{r(\theta)} $$ Since surface is equipotential: $$\varphi_A=Gm\left(\cfrac{1}{L}-\cfrac{1}{\sqrt{L^2+r^2-2rL\cos\theta}}\right)+\cfrac{Gmr\cos\theta}{L^2}-\cfrac{G(M+m)r^2}{2L^3}-\cfrac{GM}{r(\theta)}+C_1=C_2 $$ where $C_1$ and $C_2$ - some constant quantity. Expand expression under root: $$\cfrac{1}{\sqrt{L^2+r^2-2rL\cos\theta}}\approx{\cfrac{1}{L}\left(1+a\cos\theta+\cfrac{a^2(3\cos^2\theta-1)}{2}\right)};\quad a=\cfrac{r}{L}. $$ Thus, have: $$-\cfrac{GM}{r}-\cfrac{G(M+3m\cos^2\theta)r^2}{2L^3}=const $$ Note, that term, proportional $\cos \theta$ completely cancelled. Frodue to this and it was required expand potential small body to second order. Further substitute $r=R+h$ and expand to first order potential larger body. in potential small body one can immediately consider/count $r = R$, since it itself be small quantity frodue to condition $R \ll L$. Obtain $$-\cfrac{GM}{R}+\cfrac{GMh}{R^2}-\cfrac{G(M+3m\cos^2\theta)R^2}{2L^3}=const. $$ Keep only variable term: $$h\cfrac{GM}{R^2}-\cfrac{3GmR^2\cos^2\theta}{2L^3}=const $$ Since $h(\pi/2)=0$, the last constant is zero. Then we have:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$h(\theta)=\cfrac{3mR^4\cos^2\theta}{2Md^3} $$
+\par\smallskip\noindent\textbf{Answer:} $$h(\theta)=\cfrac{3mR^4\cos^2\theta}{2Md^3} $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T3_S_EN_assets/fig1.jpg}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{B1}{Show that the tangential component of the force $F_\tau(t,\, \theta)$ acting on a particle of mass $\Delta{m}$ located on the surface of a larger body at an angle $\theta$ can be represented as: $$F_\tau(t,\,\theta)=\Delta{m}\alpha\sin(2\omega_1t-2\theta) $$ Find $\alpha$. Answer выtimesandте via/through $G$, $m$, $L$ and $r(\theta)$. For/Atмечание: воспользуйтесь resultами, поrayенными for/at решении partа $\mathrm{A4}$.}{0.50}
+\begin{solcard}{B1}{Show that the tangential component of the force $F_\tau(t,\, \theta)$ acting on a particle of mass $\Delta{m}$ located on the surface of a larger body at an angle $\theta$ can be represented as: $$F_\tau(t,\,\theta)=\Delta{m}\alpha\sin(2\omega_1t-2\theta) $$ Find $\alpha$. Answer express through $G$, $m$, $L$ and $r(\theta)$. Note: use result, obtain for solution part $\mathrm{A4}$.}{0.50}
 
 Note: Use the results obtained when solving item $\mathrm{A4}$.
 
 
-In point $\mathrm{A4}$ we obtained an approximate expression for the potential of inertial forces and the gravitational field of a smaller body: $$\varphi_\text{внеш}=-\cfrac{G(M+3m\cos^2\theta)r^2}{2L^3} $$ Then for компоненты силы $F_\tau$ we get: $$F_\tau=-\cfrac{\Delta{m}}{r}\cfrac{\partial{\varphi_\text{внеш}}}{\partial{\theta}}=-\cfrac{3Gm\Delta{m}r\sin2\theta}{2L^3} $$ Отметим, что эта компонента силы возникает from-зnotоднородности гравитационного поля меньшего тела. Since $\omega\neq{\Omega}$, в произвольный moment времени $t$ parameter $\theta$ equals: $$\theta=\theta_0-\omega_1 t, \quad \omega_1 = \omega - \Omega. $$ Also учтем, что с нужной нам точностью $r \approx R$. Then finally we have: $$F_\tau(t{,}\theta_0)=\cfrac{3Gm\Delta{m}R}{2L^3}\sin\left(2\omega_1 t-2\theta_0\right) $$
+In point $\mathrm{A4}$ we obtained an approximate expression for the potential of inertial forces and the gravitational field of a smaller body: $$\varphi_\text{ext}=-\cfrac{G(M+3m\cos^2\theta)r^2}{2L^3} $$ Then for component force $F_\tau$ obtain: $$F_\tau=-\cfrac{\Delta{m}}{r}\cfrac{\partial{\varphi_\text{ext}}}{\partial{\theta}}=-\cfrac{3Gm\Delta{m}r\sin2\theta}{2L^3} $$ Note, that this component force arise frodue to inhomogeneity gravitational field small body. Since $\omega\neq{\Omega}$, in arbitrary moment time $t$ parameter $\theta$ equal: $$\theta=\theta_0-\omega_1 t, \quad \omega_1 = \omega - \Omega. $$ Also account for, that with required we accuracy $r \approx R$. Then finally have: $$F_\tau(t{,}\theta_0)=\cfrac{3Gm\Delta{m}R}{2L^3}\sin\left(2\omega_1 t-2\theta_0\right) $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \alpha = \frac{3 GmR}{2 L^3}. $$
+\par\smallskip\noindent\textbf{Answer:} $$ \alpha = \frac{3 GmR}{2 L^3}. $$
 \end{solcard}
 
-\begin{solcard}{B2}{Show that the dependence $\theta(t{,}\theta_0)$ has the following form: $$\theta(t)=\theta_0+A\sin(2\omega_1t-2\theta_0-\varphi_0) $$ Find $A$ and $\varphi_0$.  Answerы выtimesandте via/through $G$, $m$, $L$, $\gamma$,  $\omega_0$, $\omega$, $\Omega$ and $\theta_0$.}{0.80}
+\begin{solcard}{B2}{Show that the dependence $\theta(t{,}\theta_0)$ has the following form: $$\theta(t)=\theta_0+A\sin(2\omega_1t-2\theta_0-\varphi_0) $$ Find $A$ and $\varphi_0$.  Answer express through $G$, $m$, $L$, $\gamma$,  $\omega_0$, $\omega$, $\Omega$ and $\theta_0$.}{0.80}
 
-Let's substitute $F_\tau(t{,}\theta)$ into the equation of motion: $$\Delta{m}r^2\left(\ddot{\theta}+2\gamma\dot{\theta}+\omega^2_0(\theta-\theta_0)\right)=rF_\tau(t{,}\theta)=\Delta{m}r^2\cdot\cfrac{3Gm}{2L^3}\sin\left(2\omega_1 t-2\theta\right) $$ Since $\omega^2_0\gg{Gm/L^3}$ - можно считать, что $F_\tau(t{,}\theta)\approx{F_\tau(t{,}\theta_0)}$. Then: $$\ddot{\theta}+2\gamma\dot{\theta}+\omega^2_0(\theta-\theta_0)=\cfrac{3Gm}{2L^3}\sin\left(2\omega_1 t-2\theta_0\right) $$ Solution уравнения будем искать в виде $\theta(t) =\theta_0 + Re\left(\hat{A}e^{2i(\omega-\Omega)t}\right)$: $$\left(\omega^2_0-4\omega_1^2+4i\omega_1\gamma\right)\hat{A}=\cfrac{3Gm}{2L^3}e^{-i(2\theta_0+\pi/2)} $$ Let us represent $\hat{A}$ в exponent/indexной форме $\hat{A}=Ae^{-i\varphi_0}$, where:
+Let's substitute $F_\tau(t{,}\theta)$ into the equation of motion: $$\Delta{m}r^2\left(\ddot{\theta}+2\gamma\dot{\theta}+\omega^2_0(\theta-\theta_0)\right)=rF_\tau(t{,}\theta)=\Delta{m}r^2\cdot\cfrac{3Gm}{2L^3}\sin\left(2\omega_1 t-2\theta\right) $$ Since $\omega^2_0\gg{Gm/L^3}$ - one can consider/count, that $F_\tau(t{,}\theta)\approx{F_\tau(t{,}\theta_0)}$. Then: $$\ddot{\theta}+2\gamma\dot{\theta}+\omega^2_0(\theta-\theta_0)=\cfrac{3Gm}{2L^3}\sin\left(2\omega_1 t-2\theta_0\right) $$ Solution equation be seek in form $\theta(t) =\theta_0 + Re\left(\hat{A}e^{2i(\omega-\Omega)t}\right)$: $$\left(\omega^2_0-4\omega_1^2+4i\omega_1\gamma\right)\hat{A}=\cfrac{3Gm}{2L^3}e^{-i(2\theta_0+\pi/2)} $$ We can represent $\hat{A}$ in trigonometric form $\hat{A}=Ae^{-i\varphi_0}$, where:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$A=\cfrac{3Gm}{2L^3\sqrt{(\omega^2_0-4\omega_1^2)^2+16\gamma^2\omega_1^2)}};\qquad \varphi_0=\arctan\cfrac{4\omega_1\gamma}{\omega^2_0-4\omega_1^2}. $$
+\par\smallskip\noindent\textbf{Answer:} $$A=\cfrac{3Gm}{2L^3\sqrt{(\omega^2_0-4\omega_1^2)^2+16\gamma^2\omega_1^2)}};\qquad \varphi_0=\arctan\cfrac{4\omega_1\gamma}{\omega^2_0-4\omega_1^2}. $$
 \end{solcard}
 
 \begin{solcard}{B3}{Obtain an expression for the rate of growth of height $\dot{h'}(t{,}\,\theta_0)$ at time $t$ at angle $\theta_0$. Express your answer using $h_0$ and $\frac{d\dot{\theta}}{d\theta _0}$}{0.40}
 
-The volume of liquid flowing through one of the faces $hdz$ during time $dt$ is equal to the product of the flow velocity $\dot{\theta} R$ by the area $hdz$ and the considered time $dt$: $$ dV_1 = \dot{\theta} R h dz dt \approx \dot{\theta} R h_0 dz dt. $$ Here мы учитываем, что высота поверхности воды меняется мало, and это практически не влияет на поcurrent воды. Скорости течения, отвечающие углам $\theta_0$ and $\theta_0 + d \theta_0$ несколько отличаются, therefore сность втекающего and вытекающего volumeов воды $$ dV = \dot{\theta}(\theta_0) R h_0 dz dt -\dot{\theta}(\theta_0+ d\theta_0) R h_0 dz dt = -Rh_0 \frac{\partial \dot{\theta}}{\partial \theta_0}d\theta_0 dz dt. $$ From-за этого меняется высота поверхности жидкости: $$ dV = Rd\theta_0 dz dh = R d\theta_0 dz \dot{h} dt = -Rh_0 \frac{\partial \dot{\theta}}{\partial \theta_0}d\theta_0 dz. $$ Hence $\dot{h} = - h_0\dfrac{\partial \dot{\theta}}{\partial \theta_0}$, а since $h_0 = const$
+The volume of liquid flowing through one of the faces $hdz$ during time $dt$ is equal to the product of the flow velocity $\dot{\theta} R$ by the area $hdz$ and the considered time $dt$: $$ dV_1 = \dot{\theta} R h dz dt \approx \dot{\theta} R h_0 dz dt. $$ Here we account for, that height surface water change small, and this practically not affects on flux/flow water. Velocity flow, correspond angle $\theta_0$ and $\theta_0 + d \theta_0$ somewhat differ, therefore difference inflowing and follow from volume water $$ dV = \dot{\theta}(\theta_0) R h_0 dz dt -\dot{\theta}(\theta_0+ d\theta_0) R h_0 dz dt = -Rh_0 \frac{\partial \dot{\theta}}{\partial \theta_0}d\theta_0 dz dt. $$ Frodue to this change height surface liquid: $$ dV = Rd\theta_0 dz dh = R d\theta_0 dz \dot{h} dt = -Rh_0 \frac{\partial \dot{\theta}}{\partial \theta_0}d\theta_0 dz. $$ Hence $\dot{h} = - h_0\dfrac{\partial \dot{\theta}}{\partial \theta_0}$, and since $h_0 = const$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{h'}(t{,}\theta)=-h_0\cfrac{\partial\dot{\theta}(t{,}\theta)}{\partial{\theta}_0}. $$
+\par\smallskip\noindent\textbf{Answer:} $$\dot{h'}(t{,}\theta)=-h_0\cfrac{\partial\dot{\theta}(t{,}\theta)}{\partial{\theta}_0}. $$
 \end{solcard}
 
-\begin{solcard}{B4}{Assuming that the amplitude of oscillations $h'$ is the same for all values ​​of $\theta_0$, you obtain the dependence $h(t)$. Express your answer using $h_0$, $A$, $\omega_1$, $\varphi_1$ and $t$.}{0.30}
+\begin{solcard}{B4}{Assuming that the amplitude of oscillations $h'$ is the same for all values of $\theta_0$, you obtain the dependence $h(t)$. Express your answer using $h_0$, $A$, $\omega_1$, $\varphi_1$ and $t$.}{0.30}
 
-From the results of point $\mathrm{B2}$ we get: $$\theta=\theta_0 + A\sin(2\omega_1t-\varphi_1), \quad {\dot\theta=2\omega_1A\cos(2\omega_1t-\varphi_1)}.$$ Then we find $${\cfrac{\partial\dot\theta(t,\theta_0)}{\partial\theta_0}=4\omega_1A\sin(2\omega_1t-\varphi_1)}, $$ hence: $$\dot{h'}=-4h_0\omega_1A\sin(2\omega_1t-\varphi_1) $$ Integrating, we find:
+From the results of point $\mathrm{B2}$ we get: $$\theta=\theta_0 + A\sin(2\omega_1t-\varphi_1), \quad {\dot\theta=2\omega_1A\cos(2\omega_1t-\varphi_1)}.$$ Then find $${\cfrac{\partial\dot\theta(t,\theta_0)}{\partial\theta_0}=4\omega_1A\sin(2\omega_1t-\varphi_1)}, $$ from which: $$\dot{h'}=-4h_0\omega_1A\sin(2\omega_1t-\varphi_1) $$ Integrating, we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$h(t)=h_0(1+2A\cos(2\omega_1t-\varphi_1)) $$
+\par\smallskip\noindent\textbf{Answer:} $$h(t)=h_0(1+2A\cos(2\omega_1t-\varphi_1)) $$
 \end{solcard}
 
-\begin{solcard}{B5}{For the moment of time $t$, determine the values ​​of the angles $\theta_0$ corresponding to the maximum value $h(t{,}\,\theta_0)$. Express your answers using $\omega_1$, $t$ and $\varphi_0$.}{0.40}
+\begin{solcard}{B5}{For the moment of time $t$, determine the values of the angles $\theta_0$ corresponding to the maximum value $h(t{,}\,\theta_0)$. Express your answers using $\omega_1$, $t$ and $\varphi_0$.}{0.40}
 
-At the maximum points, the cosine is equal to one, therefore: $$2\omega_1t-\varphi_1=0{;}\,2\pi. $$ Substituting $\varphi_1$, we find:
+At the maximum points, the cosine is equal to one, therefore: $$2\omega_1t-\varphi_1=0{;}\,2\pi. $$ Substitute $\varphi_1$, we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\theta_{1{,}2}=\omega_1t-\cfrac{\varphi_0}{2}{;}\,\pi+\omega_1t-\cfrac{\varphi_0}{2}. $$
+\par\smallskip\noindent\textbf{Answer:} $$\theta_{1{,}2}=\omega_1t-\cfrac{\varphi_0}{2}{;}\,\pi+\omega_1t-\cfrac{\varphi_0}{2}. $$
 \end{solcard}
 
 \begin{solcard}{B6}{Find the moment of force $M_z$ acting from the small body on the surface of the large body relative to the axis $z$. Express your answer using $G$, $m$, $\rho$, $R$, $h_0$, $L$, $A$ and $\varphi_0$.}{1.40}
 
-The force arm corresponding to the angle $\beta$ is equal to $R\sin\beta$. Then for the moment element $dM_z$ we have: $$dM_z=R\sin\beta dF_\tau(t{,}\theta{,}\beta) $$ For $dF_\tau$ also we have: $$dF_\tau=\cfrac{3GmR\sin\beta}{2L^3} \Delta m \sin(2\omega_1t-2\theta). $$ Mass рассматриваемого volumeа $$ \Delta m = \rho dV = \rho h(t,\, \theta,\, \beta) dS = \rho h(t,\, \theta,\, \beta) R^2 \sin \beta d\beta d\theta. $$ Then we get: $$dF_\tau=\cfrac{3GmR\sin\beta}{2L^3}  \sin(2\omega_1t-2\theta) \rho h(t,\, \theta,\, \beta) R^2 \sin \beta d\beta d\theta. $$ For $h(t{, }\theta{,}\beta)$ we have: $$h(t,\,\theta,\,\beta)=h_0(1+2A\cos(2\omega_1t-\varphi_1)) $$ since $A$ не зависит от расстояния до оси $z$. Let us represent expression for $M_z⟦ 17⟧$M_z=\textbackslash{}cfrac{3Gm\textbackslash{}rho R^4h_0}{2L^3}\textbackslash{}int\textbackslash{}limits_0^{\textbackslash{}pi}\textbackslash{}sin^3\textbackslash{}beta d\textbackslash{}beta\textbackslash{}int\textbackslash{}limits_0^{2\textbackslash{}pi}(1+2A\textbackslash{}cos(2\textbackslash{}omega_1t-\textbackslash{}varphi_1))\textbackslash{}sin(2\textbackslash{}omega_1t-2\textbackslash{}theta)d\textbackslash{}theta $$ Для интеграла по $\beta$ имеем: $$\textbackslash{}int\textbackslash{}limits_0^{\textbackslash{}pi}\textbackslash{}sin^3\textbackslash{}beta d\textbackslash{}beta=\textbackslash{}int\textbackslash{}limits_{-1}^{1}(1-\textbackslash{}cos^2\textbackslash{}beta)d\textbackslash{}cos\textbackslash{}beta=\textbackslash{}cos\textbackslash{}beta-\textbackslash{}cfrac{\textbackslash{}cos^3\textbackslash{}beta}{3}\textbackslash{}bigg|_{-1}^{1}=\textbackslash{}cfrac{4}{3} $$ Поэтому: $$M_z=\textbackslash{}cfrac{2Gm\textbackslash{}rho R^4h_0}{L^3}\textbackslash{}int\textbackslash{}limits_0^{2\textbackslash{}pi}(1+2A\textbackslash{}cos(2\textbackslash{}omega_1t-\textbackslash{}varphi_1))\textbackslash{}sin(2\textbackslash{}omega_1t-2\textbackslash{}theta)d\textbackslash{}theta $$ Второй интеграл берётся за период, поэтому для функции $\sin(2 \omega_1t-2\theta)$ он равен нулю. Перейдём к последнему интегралу: $$\textbackslash{}int\textbackslash{}limits_0^{2\textbackslash{}pi}\textbackslash{}cos(2\textbackslash{}omega_1t-\textbackslash{}varphi_1)\textbackslash{}sin(2\textbackslash{}omega_1t-2\textbackslash{}theta)d\textbackslash{}theta=\textbackslash{}int\textbackslash{}limits_0^{2\textbackslash{}pi}\textbackslash{}cos(2\textbackslash{}omega_1t-2\textbackslash{}theta-\textbackslash{}varphi_0)\textbackslash{}sin(2\textbackslash{}omega_1t-2\textbackslash{}theta)d\textbackslash{}theta $$ Воспользуемся тригонометрической формулой: $$\textbackslash{}sin\textbackslash{}alpha\textbackslash{}cos\textbackslash{}beta=\textbackslash{}cfrac{\textbackslash{}sin(\textbackslash{}alpha+\textbackslash{}beta)+\textbackslash{}sin(\textbackslash{}alpha-\textbackslash{}beta)}{2} $$ Получим: $$M_z=\textbackslash{}cfrac{2Gm\textbackslash{}rho R^4h_0A}{L^3}\textbackslash{}int\textbackslash{}limits_0^{2\textbackslash{}pi}[\textbackslash{}sin(4\textbackslash{}omega_1t-4\textbackslash{}theta-\textbackslash{}varphi_0)+\textbackslash{}sin\textbackslash{}varphi_0]d\textbackslash{}theta $$ Final:
+The force arm corresponding to the angle $\beta$ is equal to $R\sin\beta$. Then for the moment element $dM_z$ we have: $$dM_z=R\sin\beta dF_\tau(t{,}\theta{,}\beta) $$ For $dF_\tau$ also have: $$dF_\tau=\cfrac{3GmR\sin\beta}{2L^3} \Delta m \sin(2\omega_1t-2\theta). $$ Mass consider volume $$ \Delta m = \rho dV = \rho h(t,\, \theta,\, \beta) dS = \rho h(t,\, \theta,\, \beta) R^2 \sin \beta d\beta d\theta. $$ Then obtain: $$dF_\tau=\cfrac{3GmR\sin\beta}{2L^3}  \sin(2\omega_1t-2\theta) \rho h(t,\, \theta,\, \beta) R^2 \sin \beta d\beta d\theta. $$ For $h(t{, }\theta{,}\beta)$ have: $$h(t,\,\theta,\,\beta)=h_0(1+2A\cos(2\omega_1t-\varphi_1)) $$ since $A$ not depend from distance to axis $z$. We can represent expression for $M_z$: $$M_z=\cfrac{3Gm\rho R^4h_0}{2L^3}\int\limits_0^{\pi}\sin^3\beta d\beta\int\limits_0^{2\pi}(1+2A\cos(2\omega_1t-\varphi_1))\sin(2\omega_1t-2\theta)d\theta $$ For the integral by $\beta$ we have: $$\int\limits_0^{\pi}\sin^3\beta d\beta=\int\limits_{-1}^{1}(1-\cos^2\beta)d\cos\beta=\cos\beta-\cfrac{\cos^3\beta}{3}\bigg|_{-1}^{1}=\cfrac{4}{3} $$ Therefore: $$M_z=\cfrac{2Gm\rho R^4h_0}{L^3}\int\limits_0^{2\pi}(1+2A\cos(2\omega_1t-\varphi_1))\sin(2\omega_1t-2\theta)d\theta $$ The second integral is taken over period, therefore for the function $\sin(2 \omega_1t-2\theta)$ it equals zero. Let us pass to the last integral: $$\int\limits_0^{2\pi}\cos(2\omega_1t-\varphi_1)\sin(2\omega_1t-2\theta)d\theta=\int\limits_0^{2\pi}\cos(2\omega_1t-2\theta-\varphi_0)\sin(2\omega_1t-2\theta)d\theta $$ We will use trigonometric formula: $$\sin\alpha\cos\beta=\cfrac{\sin(\alpha+\beta)+\sin(\alpha-\beta)}{2} $$ We obtain: $$M_z=\cfrac{2Gm\rho R^4h_0A}{L^3}\int\limits_0^{2\pi}[\sin(4\omega_1t-4\theta-\varphi_0)+\sin\varphi_0]d\theta $$ Final:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$M_z=\cfrac{4\pi Gm\rho R^4h_0A\sin\varphi_0}{L^3} $$
+\par\smallskip\noindent\textbf{Answer:} $$M_z=\cfrac{4\pi Gm\rho R^4h_0A\sin\varphi_0}{L^3} $$
 \end{solcard}
 
-\begin{solcard}{C1}{Find the orbital angular velocity $\omega_\text{sинх}$ and the distance $L_\text{sинх}$ between the Earth and the Moon during synchronous rotation. Express the answers in terms of $m$, $M$, $R$, $G$, $L_0$, $\Omega_0$ and find their numerical values. Note: with synchronous rotation, the angular momentum of the Earth associated with rotation around its axis can be neglected.}{0.80}
+\begin{solcard}{C1}{Find the orbital angular velocity $\omega_\text{sync}$ and the distance $L_\text{sync}$ between the Earth and the Moon during synchronous rotation. Express the answers in terms of $m$, $M$, $R$, $G$, $L_0$, $\Omega_0$ and find their numerical values. Note: with synchronous rotation, the angular momentum of the Earth associated with rotation around its axis can be neglected.}{0.80}
 
 Note: with synchronous rotation, the angular momentum of the Earth associated with rotation around its axis can be neglected.
 
 
-Let us use the law of conservation of angular momentum, which we denote as $K$: $$K=I\Omega_0+\cfrac{mML^2_0\omega_0}{M+m}=const $$ where $I=2MR^2/5$ - moment of inertia Земного ball/sphereа относительно diameterа. В установившемся режиме $\Omega=\omega=\omega_\text{sync}$, therefore: $$K=\omega_\text{sинх}\left(I+\cfrac{mML^2_\text{sинх}}{m+M}\right) $$ Since for/at синхронном вращении Землю можно считать материальной точкой: $$K\approx{\cfrac{mML^2_\text{sинх}\omega_\text{sинх}}{m+M}} $$ Using соratio $$\omega^2=\cfrac{G(M+m)}{L^3} $$ we get: $$K\approx\cfrac{G^{2/3}Mm}{(m+M)^{1/3}\omega^{1/3}_\text{sинх}} $$ from where finally:
+Let us use the law of conservation of angular momentum, which we denote as $K$: $$K=I\Omega_0+\cfrac{mML^2_0\omega_0}{M+m}=const $$ where $I=2MR^2/5$ - moment of inertia Earth's sphere about the diameter. In the established regime $\Omega=\omega=\omega_\text{sync}$, therefore: $$K=\omega_\text{sync}\left(I+\cfrac{mML^2_\text{sync}}{m+M}\right) $$ Since for synchronous rotation Earth can be considered as a material point: $$K\approx{\cfrac{mML^2_\text{sync}\omega_\text{sync}}{m+M}} $$ Use relation $$\omega^2=\cfrac{G(M+m)}{L^3} $$ obtain: $$K\approx\cfrac{G^{2/3}Mm}{(m+M)^{1/3}\omega^{1/3}_\text{sync}} $$ from where finally:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\omega_\text{sинх}\approx\cfrac{G^2m^3M^3}{(M+m)\left(\cfrac{2MR^2\Omega_0}{5}+\cfrac{mM}{m+M}\sqrt{G(M+m)L_0}\right)^3}\approx{1{,}376\cdot{10^{-6}}~\text{s}^{-1}} $$ $$L_\text{sинх}=\cfrac{(m+M)\left(\cfrac{2MR^2\Omega_0}{5}+\cfrac{mM}{m+M}\sqrt{G(M+m)L_0}\right)^2}{Gm^2M^2}\approx 5{,}971\cdot{10^8}~\text{m} $$
+\par\smallskip\noindent\textbf{Answer:} $$\omega_\text{sync}\approx\cfrac{G^2m^3M^3}{(M+m)\left(\cfrac{2MR^2\Omega_0}{5}+\cfrac{mM}{m+M}\sqrt{G(M+m)L_0}\right)^3}\approx{1{,}376\cdot{10^{-6}}~\text{s}^{-1}} L_\text{sync}=\cfrac{(m+M)\left(\cfrac{2MR^2\Omega_0}{5}+\cfrac{mM}{m+M}\sqrt{G(M+m)L_0}\right)^2}{Gm^2M^2}\approx 5{,}971\cdot{10^8}~\text{m} $$
 \end{solcard}
 
-\begin{solcard}{C2}{The distance between the Earth and the Moon is increasing at a rate of $\dot{L}_{0}=1~\text{cm}/\text{gод}$. Find the value of the average angular acceleration of the Earth $\dot{\Omega}_0$. Express the answer in terms of $m$, $M$, $R$, $G$, $L_0$, $\Omega_0$, $\dot{L}_0$ and find its numerical value.}{0.70}
+\begin{solcard}{C2}{The distance between the Earth and the Moon is increasing at a rate of $\dot{L}_{0}=1~\text{cm}/\text{year}$. Find the value of the average angular acceleration of the Earth $\dot{\Omega}_0$. Express the answer in terms of $m$, $M$, $R$, $G$, $L_0$, $\Omega_0$, $\dot{L}_0$ and find its numerical value.}{0.70}
 
-The angular momentum of the system $K$ using the connection $\omega$ and $L$ is reduced to the form: $$K=I\Omega+\cfrac{mML^2}{m+M}\sqrt{\cfrac{G(m+M)}{L^3}} $$ Differentiating, we find: $$I\dot{\Omega}+\cfrac{mM}{2(m+M))}\sqrt{\cfrac{G(m+M)}{L}}\dot{L}=0 $$ from where:
+The angular momentum of the system $K$ using the connection $\omega$ and $L$ is reduced to the form: $$K=I\Omega+\cfrac{mML^2}{m+M}\sqrt{\cfrac{G(m+M)}{L^3}} $$ Differentiate, find: $$I\dot{\Omega}+\cfrac{mM}{2(m+M))}\sqrt{\cfrac{G(m+M)}{L}}\dot{L}=0 $$ from where:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{\Omega}_0=-\cfrac{5m\dot{L}_0}{4(m+M)R^2}\sqrt{\cfrac{G(m+M)}{L_0}}\approx-1{,}22\cdot{10^{-22}}~\text{s}^{-1} $$
+\par\smallskip\noindent\textbf{Answer:} $$\dot{\Omega}_0=-\cfrac{5m\dot{L}_0}{4(m+M)R^2}\sqrt{\cfrac{G(m+M)}{L_0}}\approx-1{,}22\cdot{10^{-22}}~\text{s}^{-1} $$
 \end{solcard}
 
-\begin{solcard}{C3}{Find the numerical values ​​of $\omega_0$ and $\gamma$.}{0.80}
+\begin{solcard}{C3}{Find the numerical values of $\omega_0$ and $\gamma$.}{0.80}
 
-At point $\mathrm{B5}$ it was found that the position of the tide lags behind the Moon by an angle $\varphi_0/2$ in the direction of rotation of the Moon relative to the Earth. Then we have: $$2\beta=\arctan\cfrac{-4\omega_1\gamma}{\omega^2_0-4\omega^2_1}=-\varphi_0 $$ Also for сницы высот for/atлива and отлива we have: $$\Delta{h}=h_\text{пр}-h_\text{от}=4Ah_0 $$ or, после подстановки выражения for $A$: $$\Delta{h}=\cfrac{6Gmh_0}{L^3_0\sqrt{(\omega^2_0-4\omega^2_1)^2+16\omega^2_1\gamma^2}}=\cfrac{6Gmh_0\cos 2\beta}{L^3_0(\omega^2_0-4\omega^2_1)} $$ We find:
+At point $\mathrm{B5}$ it was found that the position of the tide lags behind the Moon by an angle $\varphi_0/2$ in the direction of rotation of the Moon relative to the Earth. Then we have: $$2\beta=\arctan\cfrac{-4\omega_1\gamma}{\omega^2_0-4\omega^2_1}=-\varphi_0 $$ Also for difference height of the tide and ebb we have: $$\Delta{h}=h_\text{high}-h_\text{low}=4Ah_0 $$ or, after substitution expression for $A$: $$\Delta{h}=\cfrac{6Gmh_0}{L^3_0\sqrt{(\omega^2_0-4\omega^2_1)^2+16\omega^2_1\gamma^2}}=\cfrac{6Gmh_0\cos 2\beta}{L^3_0(\omega^2_0-4\omega^2_1)} $$ We find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\omega_0=\sqrt{4\omega^2_1+\cfrac{6Gmh_0\cos 2\beta}{L^3_0\Delta{h}}}\approx 1{,}664\cdot{10^{-4}}~\text{s}^{-1}\qquad \gamma=\cfrac{3Gmh_0\sin 2\beta}{2(-\omega_1)L^3_0\Delta{h}}\approx 3{,}025\cdot{10^{-6}}~\text{s}^{-1} $$
+\par\smallskip\noindent\textbf{Answer:} $$\omega_0=\sqrt{4\omega^2_1+\cfrac{6Gmh_0\cos 2\beta}{L^3_0\Delta{h}}}\approx 1{,}664\cdot{10^{-4}}~\text{s}^{-1}\qquad \gamma=\cfrac{3Gmh_0\sin 2\beta}{2(-\omega_1)L^3_0\Delta{h}}\approx 3{,}025\cdot{10^{-6}}~\text{s}^{-1} $$
 \end{solcard}
 
-\begin{solcard}{C4}{Within the framework of the described model, find the angular acceleration of the Earth $\dot{\Omega}_{0\text{(mод)}}$, which is obtained from the results of point $\mathrm{B6}$. Compare it with the value $\dot{\Omega}_0$ obtained in point $\mathrm{C2}$ and draw a conclusion about the applicability of the model under consideration (consider the model applicable if $\Omega_0$ and $\Omega_{0\text{(mод)}}$ differ by no more than 10 times).}{0.50}
+\begin{solcard}{C4}{Within the framework of the described model, find the angular acceleration of the Earth $\dot{\Omega}_{0\text{(mod)}}$, which is obtained from the results of point $\mathrm{B6}$. Compare it with the value $\dot{\Omega}_0$ obtained in point $\mathrm{C2}$ and draw a conclusion about the applicability of the model under consideration (consider the model applicable if $\Omega_0$ and $\Omega_{0\text{(mod)}}$ differ by no more than 10 times).}{0.50}
 
-From the equation of the dynamics of rotational motion relative to the center of mass we obtain: $$I\dot{\Omega}=M_z=\cfrac{4\pi Gm\rho R^4h_0A\sin\varphi_0}{L^3} $$ Next note that $h_0A=\Delta{h}/4$, а $\varphi_0=-2\theta$. Then we have:
+From the equation of the dynamics of rotational motion relative to the center of mass we obtain: $$I\dot{\Omega}=M_z=\cfrac{4\pi Gm\rho R^4h_0A\sin\varphi_0}{L^3} $$ Further, note that $h_0 A = \Delta h/4$, and $\varphi_0 = -2\theta$. Then we have:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\dot{\Omega}_{0\text{(mод)}}=-\cfrac{5\pi Gm\rho{R}^2\Delta{h}\sin 2\theta}{2ML^3_0}=-1{,}16\cdot{10^{-22}}~\text{s}^{-1} $$ The model under consideration gives a value of the required order and is applicable.
+\par\smallskip\noindent\textbf{Answer:} $$\dot{\Omega}_{0\text{(mod)}}=-\cfrac{5\pi Gm\rho{R}^2\Delta{h}\sin 2\theta}{2ML^3_0}=-1{,}16\cdot{10^{-22}}~\text{s}^{-1} $$ The model under consideration gives a value of the required order and is applicable.
 \end{solcard}
 
 \begin{solcard}{C5}{Estimate the numerical value of $\tau_2$. Express your answer in years.}{0.70}
 
-After switching to the synchronous rotation mode, we can assume that: $$\omega=const\quad L=const\quad \omega^2_0\gg\omega^2_1 $$ Therefore: $$I\dot{\Omega}=M_z=\cfrac{4\pi Gm\rho R^4h_0A\sin\varphi_0}{L^3}\approx\cfrac{4\pi Gm\rho{R}^4h_0}{L^3_\text{sинх}}\cdot{\cfrac{3Gm}{2L^3_\text{sинх}\omega^2_0}}\cdot\cfrac{4(\omega_\text{sинх}-\Omega)\gamma}{\omega^2_0} $$ hence: $$d\tau_2=-\cfrac{d\Omega}{\Omega-\omega_\text{sинх}}\cdot{\cfrac{ML^6_\text{sинх}\omega^4_0}{120\pi G^2m^2\rho{R}^2h_0\gamma}} $$ from where:
+After switching to the synchronous rotation mode, we can assume that: $$\omega=const\quad L=const\quad \omega^2_0\gg\omega^2_1 $$ Therefore: $$I\dot{\Omega}=M_z=\cfrac{4\pi Gm\rho R^4h_0A\sin\varphi_0}{L^3}\approx\cfrac{4\pi Gm\rho{R}^4h_0}{L^3_\text{sync}}\cdot{\cfrac{3Gm}{2L^3_\text{sync}\omega^2_0}}\cdot\cfrac{4(\omega_\text{sync}-\Omega)\gamma}{\omega^2_0} $$ from which: $$d\tau_2=-\cfrac{d\Omega}{\Omega-\omega_\text{sync}}\cdot{\cfrac{ML^6_\text{sync}\omega^4_0}{120\pi G^2m^2\rho{R}^2h_0\gamma}} $$ from where:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\tau_2\approx\cfrac{ML^6_\text{sинх}\omega^4_0}{120\pi G^2m^2\rho{R}^2h_0\gamma}\approx 3{,}14\cdot{10^{12}}~\text{Lет} $$
+\par\smallskip\noindent\textbf{Answer:} $$\tau_2\approx\cfrac{ML^6_\text{sync}\omega^4_0}{120\pi G^2m^2\rho{R}^2h_0\gamma}\approx 3{,}14\cdot{10^{12}}~\text{year} $$
 \end{solcard}
 
 \end{document}

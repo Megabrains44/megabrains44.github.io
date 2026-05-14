@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,66 +30,66 @@
 \author{\normalsize Y22 (2022) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{Find the air temperature $T_\text{в}$ at a height $h$ above the Earth's surface. Express your answer in terms of $T_0$, $g$, $\mu_\text{в}$, $R$ and the adiabatic exponent $\gamma_\text{в}$.}{1.00}
+\begin{solcard}{A1}{Find the air temperature $T_\text{in}$ at a height $h$ above the Earth's surface. Express your answer in terms of $T_0$, $g$, $\mu_\text{in}$, $R$ and the adiabatic exponent $\gamma_\text{in}$.}{1.00}
 
-Let's consider moving a portion of air to a height $h$: $$P_1dV_1-P_2dV_2=\frac{C_Vdm}{\mu_\text{в}}(T-T_0)+dmgh $$ from where:
+Let's consider moving a portion of air to a height $h$: $$P_1dV_1-P_2dV_2=\frac{C_Vdm}{\mu_\text{in}}(T-T_0)+dmgh $$ from where:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T=T_0-\frac{\mu_\text{в}gh}{C_P}=T_0-\frac{(\gamma_\text{в}-1)\mu_\text{в}gh}{\gamma_\text{в}R} $$
+\par\smallskip\noindent\textbf{Answer:} $$T=T_0-\frac{\mu_\text{in}gh}{C_P}=T_0-\frac{(\gamma_\text{in}-1)\mu_\text{in}gh}{\gamma_\text{in}R} $$
 \end{solcard}
 
-\begin{solcard}{A2}{Find the dependence of water vapor pressure on temperature $p_\text{п}(T)$. Express your answer in terms of $\varphi_0$, $p_{\text{п}0}$, $T_0$, $\mu_\text{п}$, $\mu_\text{в}$, $\gamma_\text{в}$ and $T$.}{1.00}
+\begin{solcard}{A2}{Find the dependence of water vapor pressure on temperature $p_\text{v}(T)$. Express your answer in terms of $\varphi_0$, $p_{\text{v}0}$, $T_0$, $\mu_\text{v}$, $\mu_\text{in}$, $\gamma_\text{in}$ and $T$.}{1.00}
 
-From the condition of steam equilibrium we obtain: $$dP_\text{п}=-\rho_\text{п}gdh $$ hence: $$\frac{dP_\text{п}}{P_\text{п}}=\frac{\mu_\text{п}\gamma_\text{в}}{\mu_\text{в}(\gamma_\text{в}-1)}\frac{dT}{T} $$ Integrating, we find:
+From the condition of steam equilibrium we obtain: $$dP_\text{v}=-\rho_\text{v}gdh $$ from which: $$\frac{dP_\text{v}}{P_\text{v}}=\frac{\mu_\text{v}\gamma_\text{in}}{\mu_\text{in}(\gamma_\text{in}-1)}\frac{dT}{T} $$ Integrating, we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$P_\text{п}=\varphi_0P_{\text{п}0}\left(\frac{T}{T_0}\right)^{\frac{\mu_\text{п}\gamma_\text{в}}{\mu_\text{в}(\gamma_\text{в}-1)}} $$
+\par\smallskip\noindent\textbf{Answer:} $$P_\text{v}=\varphi_0P_{\text{v}0}\left(\frac{T}{T_0}\right)^{\frac{\mu_\text{v}\gamma_\text{in}}{\mu_\text{in}(\gamma_\text{in}-1)}} $$
 \end{solcard}
 
-\begin{solcard}{A3}{Using the graph of $p_\text{н.п}(T)$, find for $\varphi_0=65\text{%}$ and $T_0=287~\text{K}$ the height $h$ above the Earth's surface at which the vapor becomes saturated.}{0.50}
+\begin{solcard}{A3}{Using the graph of $p_\text{s.v.p.}(T)$, find for $\varphi_0=65\text{\%}$ and $T_0=287~\text{K}$ the height $h$ above the Earth's surface at which the vapor becomes saturated.}{0.50}
 
-Solving the equations graphically, we find: $$T_\text{наs}\approx{6{,}6^\circ C} $$Then:
+Solving the equations graphically, we find: $$T_\text{sat}\approx{6{,}6^\circ C} $$Then:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$h=\displaystyle\frac{\gamma_\text{в}R(T_0-T_\text{наs})}{(\gamma_\text{в}-1)\mu_\text{в}g}\approx{757~\text{m}} $$
+\par\smallskip\noindent\textbf{Answer:} $$h=\displaystyle\frac{\gamma_\text{in}R(T_0-T_\text{sat})}{(\gamma_\text{in}-1)\mu_\text{in}g}\approx{757~\text{m}} $$
 \end{solcard}
 
-\begin{solcard}{B1}{The specific heat of vaporization depends on temperature $T$ as follows: $$\lambda(T)=\lambda_n+k(T-T_n) $$ Find $k$. Answer выtimesandте via/through $c$, $R$, $\mu_\text{n}$ and adiabatic index $\gamma_\text{n}$. $\textit{Note:}$ if вы не можете решить этот part, то в дальнейшем считайте, что $\lambda=\lambda_n=const$. This does not lead to loss of points.}{1.00}
+\begin{solcard}{B1}{The specific heat of vaporization depends on temperature $T$ as follows: $$\lambda(T)=\lambda_n+k(T-T_n) $$ Find $k$. Answer express through $c$, $R$, $\mu_\text{n}$ and exponent/index adiabat $\gamma_\text{n}$. $\textit{Note:}$ if you cannot solve this part, then in what follows consider/count, that $\lambda=\lambda_n=const$. This does not lead to loss of points.}{1.00}
 
-The amount of heat required to evaporate mass $m$ is equal to: $$Q=U_\text{п}-U_\text{ж}+A $$ Since densityю воды можно пренебречь: $$A=pV=\displaystyle\frac{mRT}{\mu} $$ Since liquid слабо сжимаема, heat, необходимое for её нагревания в любом процессе, с хорошей точностью пропорционально изменению её внутренней энергии: $$U_\text{ж}(T_2)-U_\text{ж}(T_1)=cm(T_2-T_1) $$ then $$U_\text{ж}(T)=cmT+mC $$ where $C$ - некоторая постоянная quantity Then: $$Q=mC+m\left(\displaystyle\frac{\gamma_\text{п}R}{\mu_\text{п}(\gamma_\text{п}-1)}-c\right)T=\lambda(T)m $$ Оlimitяя $C$ from начальных условий, we find: $$\lambda(T)=\lambda_n+\left(c-\frac{\gamma_\text{п}R}{(\gamma_\text{п}-1)\mu_\text{п}}\right)(T_n-T) $$ We get the answer:
+The amount of heat required to evaporate mass $m$ is equal to: $$Q=U_\text{v}-U_\text{liq}+A $$ Since density water one can neglect: $$A=pV=\displaystyle\frac{mRT}{\mu} $$ Since liquid is weakly compressible, the heat needed for its heating in any process is, to good accuracy, proportional to the change in its internal energy: $$U_\text{liq}(T_2)-U_\text{liq}(T_1)=cm(T_2-T_1) $$ then $$U_\text{liq}(T)=cmT+mC $$ where $C$ - some constant quantity Then: $$Q=mC+m\left(\displaystyle\frac{\gamma_\text{v}R}{\mu_\text{v}(\gamma_\text{v}-1)}-c\right)T=\lambda(T)m $$ Determine $C$ from initial condition, find: $$\lambda(T)=\lambda_n+\left(c-\frac{\gamma_\text{v}R}{(\gamma_\text{v}-1)\mu_\text{v}}\right)(T_n-T) $$ We get the answer:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$k=\frac{\gamma_\text{п}R}{(\gamma_\text{п}-1)\mu_\text{п}}-c $$
+\par\smallskip\noindent\textbf{Answer:} $$k=\frac{\gamma_\text{v}R}{(\gamma_\text{v}-1)\mu_\text{v}}-c $$
 \end{solcard}
 
-\begin{solcard}{B2}{Show that when the released air mass moves, the amount of heat received by the system enclosed in its volume can be represented as follows: $$\delta{Q}=m_\text{в}\left(\frac{\gamma_\text{в}R}{\mu_\text{в}(\gamma_\text{в}-1)}dT+gdz+\lambda d\alpha\right) $$}{0.50}
+\begin{solcard}{B2}{Show that when the released air mass moves, the amount of heat received by the system enclosed in its volume can be represented as follows: $$\delta{Q}=m_\text{in}\left(\frac{\gamma_\text{in}R}{\mu_\text{in}(\gamma_\text{in}-1)}dT+gdz+\lambda d\alpha\right) $$}{0.50}
 
-For the amount of heat supplied to the system we have: $$\delta{Q}=\frac{C_Vm_\text{в}}{\mu_\text{в}}+P_\text{в}dV_\text{в}+\lambda(T)dm_\text{п} $$ or $$\delta{Q}=\frac{C_Pm_\text{в}}{\mu_\text{в}}dT-V_\text{в}dP_\text{в}+\lambda(T)dm_\text{п} $$ From the condition equalsвесия воздуха: $$dP_\text{в}=-\rho_\text{в}gdh $$ hence: $$\delta{Q}=m_\text{в}\left(\frac{\gamma_\text{в}R}{\mu_\text{в}(\gamma_\text{в}-1)}dT+gdz+\lambda(T)d\alpha\right) $$
+For the amount of heat supplied to the system we have: $$\delta{Q}=\frac{C_Vm_\text{in}}{\mu_\text{in}}+P_\text{in}dV_\text{in}+\lambda(T)dm_\text{v} $$ or same $$\delta{Q}=\frac{C_Pm_\text{in}}{\mu_\text{in}}dT-V_\text{in}dP_\text{in}+\lambda(T)dm_\text{v} $$ From the condition equilibrium air: $$dP_\text{in}=-\rho_\text{in}gdh $$ from which: $$\delta{Q}=m_\text{in}\left(\frac{\gamma_\text{in}R}{\mu_\text{in}(\gamma_\text{in}-1)}dT+gdz+\lambda(T)d\alpha\right) $$
 
 \end{solcard}
 
-\begin{solcard}{B3}{Find $\cfrac{d\alpha}{dz}$. Express your answer using $\mu_\text{п}$, $\mu_\text{в}$, $P_\text{в}$, $P_\text{н.п}$, $\cfrac{dP_\text{н.п}}{dT}$, $\cfrac{dT}{dz}$ and $\cfrac{dP_\text{в}}{dz}$}{0.50}
+\begin{solcard}{B3}{Find $\cfrac{d\alpha}{dz}$. Express your answer using $\mu_\text{v}$, $\mu_\text{in}$, $P_\text{in}$, $P_\text{s.v.p.}$, $\cfrac{dP_\text{s.v.p.}}{dT}$, $\cfrac{dT}{dz}$ and $\cfrac{dP_\text{in}}{dz}$}{0.50}
 
-For $\alpha$, taking into account the equation of state, we have: $$\alpha=\frac{m_\text{п}}{m_\text{в}}=\frac{\mu_\text{п}}{\mu_\text{в}}\frac{P_\text{п}}{P_\text{в}} $$ Differentiating: $$\frac{d\alpha}{dz}=\frac{\mu_\text{п}}{\mu_\text{в}}\left(\frac{1}{P_\text{в}}\frac{dP_\text{п}}{dz}-\frac{P_\text{п}}{P^2_\text{в}}\frac{dP_\text{в}}{dz}\right) $$ Consider производную давления vaporа по высоте как производную сложной функции: $$\frac{dP_\text{п}}{dz}=\frac{dP_\text{п}}{dT}\frac{dT}{dz} $$ from where:
+For $\alpha$, taking into account the equation of state, we have: $$\alpha=\frac{m_\text{v}}{m_\text{in}}=\frac{\mu_\text{v}}{\mu_\text{in}}\frac{P_\text{v}}{P_\text{in}} $$ Differentiate: $$\frac{d\alpha}{dz}=\frac{\mu_\text{v}}{\mu_\text{in}}\left(\frac{1}{P_\text{in}}\frac{dP_\text{v}}{dz}-\frac{P_\text{v}}{P^2_\text{in}}\frac{dP_\text{in}}{dz}\right) $$ Consider derivative pressure pair by height as derivative complex function: $$\frac{dP_\text{v}}{dz}=\frac{dP_\text{v}}{dT}\frac{dT}{dz} $$ from where:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\frac{d\alpha}{dz}=\frac{\mu_\text{п}}{\mu_\text{в}}\left(\frac{1}{P_\text{в}}\frac{dP_\text{п}}{dT}\frac{dT}{dz}-\frac{P_\text{п}}{P^2_\text{в}}\frac{dP_\text{в}}{dz}\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$\frac{d\alpha}{dz}=\frac{\mu_\text{v}}{\mu_\text{in}}\left(\frac{1}{P_\text{in}}\frac{dP_\text{v}}{dT}\frac{dT}{dz}-\frac{P_\text{v}}{P^2_\text{in}}\frac{dP_\text{in}}{dz}\right) $$
 \end{solcard}
 
-\begin{solcard}{B4}{Find the temperature gradient $\cfrac{dT}{dz}$. Express your answer in terms of $\alpha$, $g$, $R$, $\gamma_\text{в}$, $T$, $\mu_\text{в}$, $\mu_\text{п}$ and $\lambda(T)$.}{1.00}
+\begin{solcard}{B4}{Find the temperature gradient $\cfrac{dT}{dz}$. Express your answer in terms of $\alpha$, $g$, $R$, $\gamma_\text{in}$, $T$, $\mu_\text{in}$, $\mu_\text{v}$ and $\lambda(T)$.}{1.00}
 
-Equating $\delta{Q}$ to zero, we find: $$\frac{dT}{dz}=-\cfrac{g-\lambda \cfrac{\mu_\text{п}}{\mu_\text{в}}\cfrac{P_\text{п}}{P^2_\text{в}}\cfrac{dP_\text{в}}{dz}}{\cfrac{\gamma_\text{в}R}{\mu_\text{в}(\gamma_\text{в}-1)}+\lambda \cfrac{\mu_\text{п}}{\mu_\text{в}}\cfrac{1}{P_\text{в}}\cfrac{dP_\text{п}}{dT}} $$ The quantity $\frac{dP_\text{п}}{dT}$ let us find from the equation Клапейрона - Клаузиуса: $$\frac{dP_\text{п}}{dT}=\frac{\mu_\text{п}\lambda(T)P_\text{п}}{RT^2} $$ After substitution we get:
+Equating $\delta{Q}$ to zero, we find: $$\frac{dT}{dz}=-\cfrac{g-\lambda \cfrac{\mu_\text{v}}{\mu_\text{in}}\cfrac{P_\text{v}}{P^2_\text{in}}\cfrac{dP_\text{in}}{dz}}{\cfrac{\gamma_\text{in}R}{\mu_\text{in}(\gamma_\text{in}-1)}+\lambda \cfrac{\mu_\text{v}}{\mu_\text{in}}\cfrac{1}{P_\text{in}}\cfrac{dP_\text{v}}{dT}} $$ Quantity $\frac{dP_\text{v}}{dT}$ is found from the Clapeyron-Clausius equation: $$\frac{dP_\text{v}}{dT}=\frac{\mu_\text{v}\lambda(T)P_\text{v}}{RT^2} $$ After substitution we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\frac{dT}{dz}=-\frac{(\gamma_\text{в}-1)\mu_\text{в}g}{\gamma_\text{в} R}\frac{\left(1+\cfrac{\lambda(T)\mu_\text{в}\alpha}{RT}\right)}{\left(1+\cfrac{\lambda(T)\mu_\text{п}\alpha}{RT}\cfrac{(\gamma_\text{в}-1)\lambda(T)\mu_\text{в}}{\gamma_\text{в}RT}\right)} $$
+\par\smallskip\noindent\textbf{Answer:} $$\frac{dT}{dz}=-\frac{(\gamma_\text{in}-1)\mu_\text{in}g}{\gamma_\text{in} R}\frac{\left(1+\cfrac{\lambda(T)\mu_\text{in}\alpha}{RT}\right)}{\left(1+\cfrac{\lambda(T)\mu_\text{v}\alpha}{RT}\cfrac{(\gamma_\text{in}-1)\lambda(T)\mu_\text{in}}{\gamma_\text{in}RT}\right)} $$
 \end{solcard}
 
 \begin{solcard}{B5}{Find the temperature $T_0$ on the Earth's surface.}{1.80}
 
-Let's look at the break point on the graph. At this point $\alpha=\alpha_1$. The reason for the break is the beginning of the condensation process, and therefore for the temperature gradient to the left of the break point the formula from part $A1$ is applicable, and to the right - the formula from part $B4$. Then the value of $\alpha_1$ can be found from the ratio of the angular coefficients at the break point: $$k=-\displaystyle \left( \frac{dT}{dz} \right)_{T\to T_{1}-0 } \displaystyle\frac{\gamma_\text{в}R}{(\gamma_\text{в}-1)\mu_\text{в}g} $$ hence: $$\alpha_1=\displaystyle\frac{1-k}{\displaystyle\frac{\lambda(T_1)\mu_\text{п}}{RT_1}\left(k\displaystyle\frac{(\gamma_\text{в}-1)\mu_\text{в}g}{\gamma_\text{в} R}\displaystyle\frac{\lambda(T_1)}{gT_1}-\displaystyle\frac{\mu_\text{в}}{\mu_\text{п}}\right)}\approx{1{,}01}\cdot{10^{-2}} $$ Next: $$\alpha_1=\displaystyle\frac{\mu_\text{п}p_\text{н.п}(T_1)}{\mu_\text{в}p_\text{в}} $$ From the equation адиабаты for сухого воздуха we have: $$p_\text{в}=p_0\left(\displaystyle\frac{T_1}{T_0}\right)^{\frac{\gamma_\text{в}}{\gamma_\text{в}-1}} $$ Then we get:
+Let's look at the break point on the graph. At this point $\alpha=\alpha_1$. The reason for the break is the beginning of the condensation process, and therefore for the temperature gradient to the left of the break point the formula from part $A1$ is applicable, and to the right - the formula from part $B4$. Then the value of $\alpha_1$ can be found from the ratio of the angular coefficients at the break point: $$k=-\displaystyle \left( \frac{dT}{dz} \right)_{T\to T_{1}-0 } \displaystyle\frac{\gamma_\text{in}R}{(\gamma_\text{in}-1)\mu_\text{in}g} $$ from which: $$\alpha_1=\displaystyle\frac{1-k}{\displaystyle\frac{\lambda(T_1)\mu_\text{v}}{RT_1}\left(k\displaystyle\frac{(\gamma_\text{in}-1)\mu_\text{in}g}{\gamma_\text{in} R}\displaystyle\frac{\lambda(T_1)}{gT_1}-\displaystyle\frac{\mu_\text{in}}{\mu_\text{v}}\right)}\approx{1{,}01}\cdot{10^{-2}} $$ Further: $$\alpha_1=\displaystyle\frac{\mu_\text{v}p_\text{s.v.p.}(T_1)}{\mu_\text{in}p_\text{in}} $$ From the adiabat equation for dry air we have: $$p_\text{in}=p_0\left(\displaystyle\frac{T_1}{T_0}\right)^{\frac{\gamma_\text{in}}{\gamma_\text{in}-1}} $$ Then we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$T_0=T_1\left(\displaystyle\frac{\alpha_1\mu_\text{в}p_0}{\mu_\text{п}p_\text{н.п}(T_1)}\right)^{\frac{\gamma_\text{в}-1}{\gamma_\text{в}}}\approx{309{,}2~\text{K}} $$
+\par\smallskip\noindent\textbf{Answer:} $$T_0=T_1\left(\displaystyle\frac{\alpha_1\mu_\text{in}p_0}{\mu_\text{v}p_\text{s.v.p.}(T_1)}\right)^{\frac{\gamma_\text{in}-1}{\gamma_\text{in}}}\approx{309{,}2~\text{K}} $$
 \end{solcard}
 
 \begin{solcard}{B6}{Estimate at what altitude $h_2$ snow begins to fall.}{0.70}
 
-From the slope of the first section of the graph, we find the height $h_1$, corresponding to the break in the graph: $$h_1=\displaystyle\frac{\gamma_\text{в}R(T_0-T_1)}{(\gamma_\text{в}-1)\mu_\text{в}g}\approx{2680~\text{m}} $$ Проведя прямую, соответствующую температуре $T_\text{pl}=273~\text{K}$, we find:
+From the slope of the first section of the graph, we find the height $h_1$, corresponding to the break in the graph: $$h_1=\displaystyle\frac{\gamma_\text{in}R(T_0-T_1)}{(\gamma_\text{in}-1)\mu_\text{in}g}\approx{2680~\text{m}} $$ Conduct straight, correspond temperature $T_\text{pl}=273~\text{K}$, we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$h_2\approx{4{,}69~\text{km}} $$
+\par\smallskip\noindent\textbf{Answer:} $$h_2\approx{4{,}69~\text{km}} $$
 \end{solcard}
 
 \end{document}

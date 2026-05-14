@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -35,14 +34,14 @@
 
 Consider the displacement of the knife by $\mathrm dr$ in the cutting direction. The cut does not stretch, so its relative displacement along the wedge is also equal to $\mathrm dr$. Let's write down the law of conservation of energy for the sawed-off knife system: \[F_C\mathrm dr=Rw\mathrm dr+\mu N\mathrm dr\]From here we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F_C=\mu N+Rw\]
+\par\smallskip\noindent\textbf{Answer:} \[F_C=\mu N+Rw\]
 \end{solcard}
 
 \begin{solcard}{A2}{Define $F_C$. Express your answer using $R$, $\mu$, $\theta$, $w$.}{0.80}
 
 Let's write down Newton's second law for a wedge in projection onto the horizontal axis: \[F_C=\mu N\cos\theta+N\sin\theta\]Combining this expression with the result of the previous paragraph, we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F_C=\dfrac{Rw}{1-\dfrac{\mu}{\mu\cos\theta+\sin\theta}}\]
+\par\smallskip\noindent\textbf{Answer:} \[F_C=\dfrac{Rw}{1-\dfrac{\mu}{\mu\cos\theta+\sin\theta}}\]
 \end{solcard}
 
 \begin{solcard}{A3}{Construct a qualitative plot of $F_C(\theta)$ against $\mu=0.3$ in the range $\theta\in[0;\pi/2]$. Specify special points and their coordinates. Express $F_C$ in units of $wR$.}{1.00}
@@ -65,35 +64,35 @@ Simplifying the answer from A2, we get:
 
 In the absence of friction, the total force acting on the wedge is directed at an angle $\theta$ to the vertical, therefore:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F_C=Rw\]
+\par\smallskip\noindent\textbf{Answer:} \[F_C=Rw\]
 \end{solcard}
 
 \begin{solcard}{B1}{Determine the total horizontal force $F$ acting on the knife, neglecting friction. Express your answer using $R$, $\theta$, $w$, $\psi$.}{0.20}
 
 There is no need to apply force to move parallel to the cutting line, therefore:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F=Rw\]
+\par\smallskip\noindent\textbf{Answer:} \[F=Rw\]
 \end{solcard}
 
 \begin{solcard}{B2}{Determine the total horizontal force $F$ acting on the knife from the side of the chips. Express your answer in terms of $R$, $w$, $\psi$, $\theta$, $\mu$.}{1.50}
 
 Let us introduce the projections $F_{\parallel}$ and $F_{\perp}$. According to the Coulomb-Amonton law, the friction force acting on the chips is equal to $\mu N$ in absolute value and is directed against the speed of movement of the chips relative to the wedge. Let's write down Newton's second law: \[F_{\perp}=N(\sin\theta+\mu\cos\theta\cos\psi)\]In the projection onto the perpendicular horizontal axis, the equilibrium condition is as follows: \[F_{\parallel}=\mu N\sin\psi\]Let's write down the ESE, for this we equate the power of the force $F$ to the power of energy loss in the system due to friction: \[\mu N v+Rwv\cos\psi=F_{\perp} v\cos\psi+F_{\parallel} v\sin\psi\]Express $N$, combining the results: \[N=\dfrac{Rw}{(\sin\theta+\mu\cos\theta\cos\psi)-\mu\cos\psi}\]Express $F$ like $F=\sqrt{F_{\parallel}^2+F_{\perp}^2}$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F=\dfrac{Rw}{(\sin\theta+\mu\cos\theta\cos\psi)-\mu\cos\psi}\sqrt{\mu^2\sin^2\psi+(\sin\theta+\mu\cos\theta\cos\psi)^2}\]
+\par\smallskip\noindent\textbf{Answer:} \[F=\dfrac{Rw}{(\sin\theta+\mu\cos\theta\cos\psi)-\mu\cos\psi}\sqrt{\mu^2\sin^2\psi+(\sin\theta+\mu\cos\theta\cos\psi)^2}\]
 \end{solcard}
 
 \begin{solcard}{C1}{From geometry, determine $t_c$. Express your answer in terms of $t$, angles $\varphi$ and $\alpha$.}{0.30}
 
 The chip length remains constant, hence: \[\dfrac{t}{\sin\varphi}=\dfrac{t_c}{\cos(\varphi-\alpha)}\]Let us express $t_c$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[t_c=t\dfrac{\cos(\varphi-\alpha)}{\sin\varphi}\]
+\par\smallskip\noindent\textbf{Answer:} \[t_c=t\dfrac{\cos(\varphi-\alpha)}{\sin\varphi}\]
 \end{solcard}
 
 \begin{solcard}{C2}{Find at what angle $\varphi$ the chip thickness $t_c$ is equal to $t$.}{0.30}
 
 Let's equate the sines of the angles: \[\sin\varphi=\cos(\varphi-\alpha)=\sin(\pi/2-\varphi+\alpha)\]From here:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varphi=\pi/4+\alpha/2\]
+\par\smallskip\noindent\textbf{Answer:} \[\varphi=\pi/4+\alpha/2\]
 \end{solcard}
 
 \begin{solcard}{C3}{Define $\gamma$. Express your answer using $\varphi$, $\alpha$.}{1.00}
@@ -112,7 +111,7 @@ Second solution
 
 From the metal incompressibility equation: \[v_1 t=v_2 t_c\] Let us express the answer: \[\gamma=\dfrac{\sqrt{1+\left(\dfrac{\sin\varphi}{\cos(\varphi-\alpha)}\right)^2-2\dfrac{\sin\varphi}{\cos(\varphi-\alpha)}\sin\alpha}}{\sin\varphi}=\dfrac{\sqrt{\cos^2\varphi\cos^2\alpha+\sin^2\varphi\sin^2\alpha+2\sin\varphi\sin\alpha\cos\varphi\cos\alpha+\sin^2\varphi-2\sin\varphi\sin\alpha\cos\varphi\cos\alpha-2\sin^2\varphi\sin^2\alpha}}{\sin\varphi\cos(\varphi-\alpha)}\]By simple transformations, the answer is simplified to: \[\gamma=\dfrac{\cos\alpha}{\cos(\varphi-\alpha)\sin\varphi}\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\gamma=\dfrac{|\vec v_2-\vec v_1|}{|\vec v_1|}=\dfrac{\cos\alpha}{\cos(\varphi-\alpha)\sin\varphi}\]
+\par\smallskip\noindent\textbf{Answer:} \[\gamma=\dfrac{|\vec v_2-\vec v_1|}{|\vec v_1|}=\dfrac{\cos\alpha}{\cos(\varphi-\alpha)\sin\varphi}\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T1_S_EN_assets/fig2.jpg}
@@ -123,14 +122,14 @@ From the metal incompressibility equation: \[v_1 t=v_2 t_c\] Let us express the 
 
 Let us associate the friction force acting on the cut with $F_C$, for this we write down the equality of the horizontal forces acting on the wedge: \[F_C=N(\mu\sin\alpha+\cos\alpha)\]We express the friction sieve $F_t$: \[F_t=\mu N=\dfrac{\mu F_C}{\mu\sin\alpha+\cos\alpha}=\dfrac{F_C\sin\beta}{\cos(\beta-\alpha)}\]We write the law of conservation of energy: \[F_C\mathrm dr=Rw\mathrm dr+F_t\mathrm dr\dfrac{|v_2|}{|v_1|}+k\gamma wt\mathrm dr\]From the theorem of sines: \[\dfrac{v_2}{v_1}=\dfrac{\sin\varphi}{\cos(\varphi-\alpha)}\]Combining the results, we obtain:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F_C=\dfrac{w(k\gamma t+R)}{1-\dfrac{\sin\beta\sin\varphi}{\cos(\varphi-\alpha)\cos(\beta-\alpha)}}\]
+\par\smallskip\noindent\textbf{Answer:} \[F_C=\dfrac{w(k\gamma t+R)}{1-\dfrac{\sin\beta\sin\varphi}{\cos(\varphi-\alpha)\cos(\beta-\alpha)}}\]
 \end{solcard}
 
 \begin{solcard}{C5}{Write down the expression $F_C$ for metals. Express your answer as $w$, $k$, $t$, $\varphi$, $\alpha$ and $\beta$.}{0.10}
 
 Let's substitute the value $\gamma$ and neglect $R$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F_C=\dfrac{wkt\cos\alpha\cos(\beta-\alpha)}{\sin\varphi(\cos(\varphi-\alpha)\cos(\beta-\alpha)-\sin\beta\sin\varphi)}\]
+\par\smallskip\noindent\textbf{Answer:} \[F_C=\dfrac{wkt\cos\alpha\cos(\beta-\alpha)}{\sin\varphi(\cos(\varphi-\alpha)\cos(\beta-\alpha)-\sin\beta\sin\varphi)}\]
 \end{solcard}
 
 \begin{solcard}{C6}{Calculate the value of the angle $\varphi$ at which the force $F_C$ is minimal. Express your answer using $\beta$ and $\alpha$. Also determine the force $F_C$ according to Merchant's theory. Express your answer using $w$, $k$, $t$, $\beta$ and $\alpha$.}{1.00}
@@ -140,21 +139,21 @@ Let's find the maximum denominator. To do this, we equate the derivative of the 
 
 Let's substitute the value $\varphi$ and determine the minimum possible force:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varphi=\dfrac{\pi}{4}+\dfrac{\alpha-\beta}{2}\]
+\par\smallskip\noindent\textbf{Answer:} \[\varphi=\dfrac{\pi}{4}+\dfrac{\alpha-\beta}{2}\]
 \end{solcard}
 
 \begin{solcard}{D1}{Determine the force $F$ acting on the blade during slow cutting. Express your answer using $R$, $t$, $w$, $\mathrm d\Lambda/\mathrm da$.}{0.80}
 
 Let's write down the law of conservation of energy: \[F\mathrm da=Rw\mathrm da-\mathrm d\Lambda\]From here:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[F\mathrm =Rw\mathrm -\mathrm d\Lambda/\mathrm da\]
+\par\smallskip\noindent\textbf{Answer:} \[F\mathrm =Rw\mathrm -\mathrm d\Lambda/\mathrm da\]
 \end{solcard}
 
 \begin{solcard}{D2}{At what minimum initial deformation $\varepsilon$ can the cut propagate spontaneously, without expending external work? Express your answer in terms of $R$, $E$ and $t$.}{0.80}
 
-Spontaneous spread of the cut is possible at $F\le 0$. Then: \[Rw\mathrm -\mathrm d\Lambda/\mathrm da\le 0\]Surface energy density of the material: \[\mathrm d\Lambda/\mathrm dS=\dfrac{1}{2}E\varepsilon^2w\]Let us express the area of ​​the free triangular region: \[S=ta\]From here: \[\mathrm d\Lambda/\mathrm da=\dfrac{1}{2}E\varepsilon^2wt\]Then:
+Spontaneous spread of the cut is possible at $F\le 0$. Then: \[Rw\mathrm -\mathrm d\Lambda/\mathrm da\le 0\]Surface energy density of the material: \[\mathrm d\Lambda/\mathrm dS=\dfrac{1}{2}E\varepsilon^2w\]Let us express the area of the free triangular region: \[S=ta\]From here: \[\mathrm d\Lambda/\mathrm da=\dfrac{1}{2}E\varepsilon^2wt\]Then:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \[\varepsilon_{\min}=\sqrt{\dfrac{2R}{E t}}\]
+\par\smallskip\noindent\textbf{Answer:} \[\varepsilon_{\min}=\sqrt{\dfrac{2R}{E t}}\]
 \end{solcard}
 
 \end{document}

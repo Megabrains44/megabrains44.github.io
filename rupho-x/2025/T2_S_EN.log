@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T2_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/T2_S_EN
-.tex
+(./T2_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/T2_S_EN
-.aux)
+(./T2_S_EN.aux)
 \openout1 = `T2_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,16 +968,9 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/T2_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2025/T2_S_EN
-.out)
+(./T2_S_EN.out) (./T2_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T2_S_EN.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \c@lstlisting=\count348
 
@@ -1052,6 +1042,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1089,18 +1080,73 @@ Overfull \hbox (148.14204pt too wide) detected at line 52
 []
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ormulas obtained here are not used.}{0.50}
-                                                   
+
+Overfull \hbox (237.35956pt too wide) detected at line 65
+\OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/
+10 = [] [] \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = [] [][] \OML/cmm/m/it/10 I[] 
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [
+] [] \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/1
+0 = \OMS/cmsy/m/n/10 ^^@ [] [] \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = \OML/cmm/
+m/it/10 I[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@ [] []
+ []
+
+[1
+
+]
+Overfull \hbox (415.59982pt too wide) detected at line 80
+[]\OML/cmm/m/it/10 L \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 I[][]\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 ![][]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 I[][]\OT1/cmr/m/n/10 
+(\OML/cmm/m/it/10 ![][]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 I[][]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 ![][]\OT1/cmr/m/n/10 ) = []  = \OML/cmm/m/it/10 I[][][] \OT
+1/cmr/m/n/10 + \OML/cmm/m/it/10 I[][][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[][
+][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[]![][]e[] \OT1/cmr/m/n/10 + \OML/cmm/m
+/it/10 I[]![][]e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[]![][]e[] \OT1/cmr/m/n/
+10 = []  = \OML/cmm/m/it/10 I[][][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[][][] 
+\OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[][][] \OT1/cmr/m/n/10 + ([] \OMS/cmsy/m/n/
+10 ^^B \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]![][] \OT1/cmr/m/n/10 + \OML/cmm/m/
+it/10 I[]![][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[]![][]\OT1/cmr/m/n/10 )) = 
+[]  = \OML/cmm/m/it/10 I[][][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 I[][][] \OT1/
+cmr/m/n/10 + \OML/cmm/m/it/10 I[][][] \OT1/cmr/m/n/10 + ([] \OMS/cmsy/m/n/10 ^^
+B []\OT1/cmr/m/n/10 )
+ []
+
+File: T2_S_EN_assets/fig1.jpg Graphic file (type bmp)
+<T2_S_EN_assets/fig1.jpg>
+[2]
+Overfull \hbox (30.81883pt too wide) in paragraph at lines 98--98
+\TU/DejaVuSerif(0)/m/n/10 from which follow, that $[]$ perpendicular plane $\OM
+L/cmm/m/it/10 OZz$\TU/DejaVuSerif(0)/m/n/10 . From the equation moment in непод
+вижных
+ []
+
+[3] [4]
+Overfull \hbox (185.70288pt too wide) detected at line 145
+[] [] \OT1/cmr/m/n/10 = [] [] = [] [] \OMS/cmsy/m/n/10 ' []  ' [] [] [] \OT1/cm
+r/m/n/10 = [] [] [] = [] [] [] = [][]\OML/cmm/m/it/10 :
+ []
+
+
+Overfull \hbox (185.70288pt too wide) detected at line 163
+[] [] \OT1/cmr/m/n/10 = [] [] = [] [] \OMS/cmsy/m/n/10 ' []  ' [] [] [] \OT1/cm
+r/m/n/10 = [] [] [] = [] [] [] = [][]\OML/cmm/m/it/10 :
+ []
+
+[5] [6] [7
+
+] [8]
+File: T2_S_EN_assets/fig2.jpg Graphic file (type bmp)
+<T2_S_EN_assets/fig2.jpg>
+ [9] [10] (./T2_S_EN.aux)
+Package rerunfilecheck Info: File `T2_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32045 strings out of 478190
- 685009 string characters out of 5854827
- 1064719 words of memory out of 5000000
- 52115 multiletter control sequences out of 15000+600000
+ 32103 strings out of 478190
+ 685460 string characters out of 5854827
+ 1088682 words of memory out of 5000000
+ 52166 multiletter control sequences out of 15000+600000
  477300 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1099b,924s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,10n,99p,1281b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-No pages of output.
+Output written on T2_S_EN.pdf (10 pages).

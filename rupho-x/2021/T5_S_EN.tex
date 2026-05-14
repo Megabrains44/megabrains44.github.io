@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -31,143 +30,143 @@
 \author{\normalsize X21 (2021) — English translation}
 \date{}
 \begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{А1}{Find the acceleration of the lower end of the chain if it is known to be constant.}{0.80}
+\begin{solcard}{A1}{Find the acceleration of the lower end of the chain if it is known to be constant.}{0.80}
 
 After time $t$ after the start of movement, the hanging section of the chain has length $\cfrac{at^2}{2}$ and falls with speed $at$. Let's write Newton's second law in impulse form: $$F \cdot dt = dp \\ \cfrac{at^2}{2} \cdot \lambda \cdot g \cdot dt = d\left(\cfrac{at^2}{2} \cdot \lambda \cdot at\right) = \cfrac{a^2\lambda}{2} \cdot 3t^2 \cdot dt ,$$ and after reductions we get the answer:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $a=\cfrac{g}{3}$
+\par\smallskip\noindent\textbf{Answer:} $a=\cfrac{g}{3}$
 \end{solcard}
 
 \begin{solcard}{B1}{Assuming that the loss of mechanical energy of the links occurs only when they hit the floor, and all the previous time the mechanical energy is conserved, find the speed $v$ of the steady uniform motion of the chain.}{0.30}
 
 Let's write down the ESE for a certain segment of the chain: first it lies on the table, then falls near the floor: $dm \cdot g \cdot h = dm \cdot \cfrac {v^2}{2}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $v=\sqrt{2gh}$
+\par\smallskip\noindent\textbf{Answer:} $v=\sqrt{2gh}$
 \end{solcard}
 
 \begin{solcard}{B2}{What is the chain tension $T_f$ at points approaching the floor? What is the tension of the chain $T(h)$ at points $h$ above the floor? Is the tension the same at points on the left and right sections of the chain that are at the same height?}{0.50}
 
 The tension at points close to the floor is held only by the links located below, so it tends to zero as it approaches the floor: $T_f = 0$. Dependence $T(h)$ can be obtained by writing the equality of forces acting on the vertical segment of the chain of height $h$: $T(h)=\lambda gh$. The tension of the chain at the same height to the left and right of the block is the same (from the condition of equality of the moments of force acting on the part of the chain lying on the block).
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $T_f=0$ $T(h) = \lambda gh$ left and right the same
+\par\smallskip\noindent\textbf{Answer:} $T_f=0$ $T(h) = \lambda gh$ left and right the same
 \end{solcard}
 
 \begin{solcard}{B3}{Write down the law of momentum change and calculate the tension force $T_t$ at points of the chain close to the table level. Express your answer using $v$.}{0.50}
 
 Force $T_t$ accelerates the chain links coming off the table. Let's write down the law of momentum change: $T_t \cdot dt = (\lambda \cdot v dt) \cdot v$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $T_t = \lambda v^2$
+\par\smallskip\noindent\textbf{Answer:} $T_t = \lambda v^2$
 \end{solcard}
 
 \begin{solcard}{B4}{Based on the results of steps B2 and B3, express the desired speed $v$.}{0.20}
 
 The force $T_t$ is expressed in two ways: $T_t = \lambda v^2 = \lambda gh$, hence the answer follows ($\sqrt2$ times different from that obtained through the ZSE):
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $v=\sqrt{gh}$
+\par\smallskip\noindent\textbf{Answer:} $v=\sqrt{gh}$
 \end{solcard}
 
 \begin{solcard}{B5}{What mechanical energy per unit time $\cfrac{\Delta W_f}{\Delta t}$ turns into heat during inelastic impacts of fallen links on the floor?}{0.20}
 
 During time $dt$ the kinetic energy of the links that reached the floor during this time is converted into heat: $$\cfrac{\Delta W_f}{\Delta t} = \cfrac{\cfrac{(\lambda \cdot v \cdot dt) \cdot v^2}{2}}{dt}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{\Delta W_f}{\Delta t} = \cfrac {\lambda v^3}{2} = \cfrac {\lambda \cdot (gh)^{3/2}}{2}$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{\Delta W_f}{\Delta t} = \cfrac {\lambda v^3}{2} = \cfrac {\lambda \cdot (gh)^{3/2}}{2}$
 \end{solcard}
 
 \begin{solcard}{B6}{Calculate the loss of mechanical energy per unit of time $\cfrac{\Delta W_t}{\Delta t}$ during inelastic impacts of new links on those that have already taken off.}{0.50}
 
 In the reference system proposed by the authors, at time $dt$, a chain segment initially moving downward at a speed $v$ is added to the chain at rest; its length is $v \cdot dt$. Its kinetic energy is converted into heat: $$\cfrac{\Delta W_t}{\Delta t} = \cfrac{\cfrac{(\lambda \cdot v \cdot dt) \cdot v^2}{2}}{dt}.$$ Thus, the descriptions of energy loss on the table and on the floor are exactly the same.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{\Delta W_t}{\Delta t} = \cfrac {\lambda v^3}{2} = \cfrac {\lambda \cdot (gh)^{3/2}}{2}$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{\Delta W_t}{\Delta t} = \cfrac {\lambda v^3}{2} = \cfrac {\lambda \cdot (gh)^{3/2}}{2}$
 \end{solcard}
 
 \begin{solcard}{B7}{Find the ratio $\cfrac{\Delta W_t}{\Delta W_f}$ of energy loss on the table and on the floor.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{\Delta W_t}{\Delta W_f} = 1$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{\Delta W_t}{\Delta W_f} = 1$
 \end{solcard}
 
 \begin{solcard}{B8}{If we consider the same links BEFORE they are lifted off the table and AFTER they land on the floor, then we can calculate the change in their potential energy. Show that it coincides with the sum of the losses on the table and on the floor.}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{\Delta E_{пот}}{\Delta t} = \cfrac {(\lambda \cdot v \cdot dt) \cdot g \cdot h}{dt} = \lambda \cdot (gh)^{3/2} = \cfrac {\Delta W_f}{\Delta t} + \cfrac {\Delta W_t}{\Delta t}$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{\Delta E_{pot}}{\Delta t} = \cfrac {(\lambda \cdot v \cdot dt) \cdot g \cdot h}{dt} = \lambda \cdot (gh)^{3/2} = \cfrac {\Delta W_f}{\Delta t} + \cfrac {\Delta W_t}{\Delta t}$
 \end{solcard}
 
 \begin{solcard}{C1}{By analogy with points B2 and B3, write down expressions for the chain tension forces at different points: $T_t$ (above the table), $T_c$ (in the loop near the ceiling), $T_f$ (near the floor).}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $T_t = \lambda v^2 = \lambda gh_1$ $T_c = \lambda g (h_1 + h_2)$ $T_f = 0$
+\par\smallskip\noindent\textbf{Answer:} $T_t = \lambda v^2 = \lambda gh_1$ $T_c = \lambda g (h_1 + h_2)$ $T_f = 0$
 \end{solcard}
 
 \begin{solcard}{C2}{By combining the written expressions with the law of momentum change, solve the system of equations and obtain expressions for $v$ and for the expected height of the “fountain” $h_2$.}{0.40}
 
-The tension force at the top of the loop is the only force imparting horizontal impulse to the links from the left side of the arc. Therefore, it is calculated in the same way as the previously calculated force $T_t$:$$T_c = \lambda v^2.$$ We get следующую систему уравнений: $$ \begin{cases} T_t = \lambda v^2 = \lambda g h_1 \\ T_c = \lambda v^2 = \lambda g (h_1 + h_2) \end{cases} $$ Solving the system, we get answers that imply the impossibility of a “fountain” in the chosen model:
+The tension force at the top of the loop is the only force imparting horizontal impulse to the links from the left side of the arc. Therefore, it is calculated in the same way as the previously calculated force $T_t$:$$T_c = \lambda v^2.$$ Obtain following the system of equations: $$ \begin{cases} T_t = \lambda v^2 = \lambda g h_1 \\ T_c = \lambda v^2 = \lambda g (h_1 + h_2) \end{cases} $$ Solving the system, we get answers that imply the impossibility of a “fountain” in the chosen model:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $v = \sqrt{gh_1}$ $h_2 = 0$
+\par\smallskip\noindent\textbf{Answer:} $v = \sqrt{gh_1}$ $h_2 = 0$
 \end{solcard}
 
 \begin{solcard}{C3}{What are the coefficients $\alpha$ and $\beta$ in the simplified model discussed earlier in C1?}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\alpha = \beta = 0$
+\par\smallskip\noindent\textbf{Answer:} $\alpha = \beta = 0$
 \end{solcard}
 
-\begin{solcard}{C4}{Under the described new assumptions, repeat calculations similar to point C2 and obtain expressions for $\cfrac{h_2}{h_1}$ and for the ratio $\cfrac{E_\text{кин}}{E_\text{пот}}$ of the kinetic energy of the flying link to its initial potential energy (measured from the floor level).}{0.60}
+\begin{solcard}{C4}{Under the described new assumptions, repeat calculations similar to point C2 and obtain expressions for $\cfrac{h_2}{h_1}$ and for the ratio $\cfrac{E_\text{kin}}{E_\text{pot}}$ of the kinetic energy of the flying link to its initial potential energy (measured from the floor level).}{0.60}
 
-$$ \begin{cases} T_c = \lambda v^2 = \beta \lambda v^2 + \lambda g (h_1 + h_2) \\ T_t + R = \lambda v^2 = \left( \beta \lambda v^2 + \lambda g h_1 \right) + \alpha \lambda v^2 \end{cases} $$ Solving the system and taking into account that $E_\text{sweat} = dm \cdot g \cdot h_1$, we get the answers:
+$$ \begin{cases} T_c = \lambda v^2 = \beta \lambda v^2 + \lambda g (h_1 + h_2) \\ T_t + R = \lambda v^2 = \left( \beta \lambda v^2 + \lambda g h_1 \right) + \alpha \lambda v^2 \end{cases} $$ Solve system and account for, that $E_\text{sweat} = dm \cdot g \cdot h_1$, we get the answers:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{h_2}{h_1} = \cfrac{\alpha}{1-\alpha-\beta}$ $\cfrac{E_\text{кин}}{E_\text{пот}} = \cfrac{1}{2(1-\alpha-\beta)}$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{h_2}{h_1} = \cfrac{\alpha}{1-\alpha-\beta}$ $\cfrac{E_\text{kin}}{E_\text{pot}} = \cfrac{1}{2(1-\alpha-\beta)}$
 \end{solcard}
 
-\begin{solcard}{C5}{What condition must $\alpha$ and $\beta$ satisfy so that the law of conservation of energy is not violated? At what values ​​of $\alpha_0$ and $\beta_0$ is the maximum permissible height of the “fountain” achieved? What are the corresponding ratios $\left( \cfrac{h_2}{h_1} \right)_{max}$ and $\left( \cfrac{E_\text{кин}}{E_\text{пот}} \right) _{max}$ equal to?}{0.60}
+\begin{solcard}{C5}{What condition must $\alpha$ and $\beta$ satisfy so that the law of conservation of energy is not violated? At what values of $\alpha_0$ and $\beta_0$ is the maximum permissible height of the “fountain” achieved? What are the corresponding ratios $\left( \cfrac{h_2}{h_1} \right)_{max}$ and $\left( \cfrac{E_\text{kin}}{E_\text{pot}} \right) _{max}$ equal to?}{0.60}
 
-To fulfill the FSE, it is necessary that $\cfrac{E_\text{кин}}{E_\text{пот}} \leq 1$, which transforms into the condition $\alpha + \beta \leq \cfrac{1}{2}$. Within this constraint, the height ratio $\cfrac{h_2}{h_1} = \cfrac{\alpha}{1-\alpha-\beta}$ will be maximum at $\alpha = \cfrac{1}{2}$ and $\beta=0$.
+To fulfill the FSE, it is necessary that $\cfrac{E_\text{kin}}{E_\text{pot}} \leq 1$, which transforms into the condition $\alpha + \beta \leq \cfrac{1}{2}$. Within this constraint, the height ratio $\cfrac{h_2}{h_1} = \cfrac{\alpha}{1-\alpha-\beta}$ will be maximum at $\alpha = \cfrac{1}{2}$ and $\beta=0$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\left( \cfrac{h_2}{h_1} \right)_{max} = 1$ $\left( \cfrac{E_\text{кин}}{E_\text{пот}} \right) _{max} = 1$
+\par\smallskip\noindent\textbf{Answer:} $\left( \cfrac{h_2}{h_1} \right)_{max} = 1$ $\left( \cfrac{E_\text{kin}}{E_\text{pot}} \right) _{max} = 1$
 \end{solcard}
 
 \begin{solcard}{D1}{Using the graph, calculate the experimental coefficient $\left( \cfrac{h_2}{h_1} \right)_{exp}$.}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\left( \cfrac{h_2}{h_1} \right)_{exp} \approx 0.137$
+\par\smallskip\noindent\textbf{Answer:} $\left( \cfrac{h_2}{h_1} \right)_{exp} \approx 0.137$
 \end{solcard}
 
 \begin{solcard}{E1}{Calculate what force $R$ must act on the left end of the link to cause such a movement. Express your answer using $m$, $b$, $I$, $\lambda$.}{1.10}
 
-A system of equations describing the rotational and translational motion of the rod: $$ \begin{cases} T_t+R = m \cdot a_c \\ T_t \cdot b = \left( I + m \left(\cfrac{b}{2}\right)^2 \right) \cdot \cfrac {a_c}{b/2} \\ T_t + R = \lambda v^2 \end{cases} $$ Fromбавляясь от переменных $T_t$ and $a_c$, we get the answer:
+A system of equations describing the rotational and translational motion of the rod: $$ \begin{cases} T_t+R = m \cdot a_c \\ T_t \cdot b = \left( I + m \left(\cfrac{b}{2}\right)^2 \right) \cdot \cfrac {a_c}{b/2} \\ T_t + R = \lambda v^2 \end{cases} $$ Eliminating the variables $T_t$ and $a_c$, we get the answer:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $R = \lambda v^2 \cdot \left( \cfrac{1}{2} - \cfrac{2I}{mb^2} \right)$
+\par\smallskip\noindent\textbf{Answer:} $R = \lambda v^2 \cdot \left( \cfrac{1}{2} - \cfrac{2I}{mb^2} \right)$
 \end{solcard}
 
-\begin{solcard}{E2}{Assuming that the chain is “pins” connected to each other (i.e., the links are thin cylinders), calculate $\alpha_\text{шт.}$ - the numerical value of the coefficient introduced earlier by the relation $R=\alpha \lambda v^2$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_\text{шт.}$.}{0.30}
+\begin{solcard}{E2}{Assuming that the chain is “pins” connected to each other (i.e., the links are thin cylinders), calculate $\alpha_\text{rod}$ - the numerical value of the coefficient introduced earlier by the relation $R=\alpha \lambda v^2$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_\text{rod}$.}{0.30}
 
-From E1 the expression $\alpha = \cfrac{1}{2} - \cfrac{2I}{mb^2}$ follows. The moment of inertia of the “pin” relative to the axis described in the condition is equal to $I_\text{шт.} = \cfrac{mb^2}{12}$. Thus, we can calculate $\alpha_\text{шт.}$, and then use $\beta=0$ and the found $\alpha$ to calculate $\left(\cfrac{h_2}{h_1}\right)_\text{шт.} = \cfrac{\alpha_\text{шт.}}{1-\alpha_\text{шт.}-\beta}$.
+From E1 the expression $\alpha = \cfrac{1}{2} - \cfrac{2I}{mb^2}$ follows. The moment of inertia of the “pin” relative to the axis described in the condition is equal to $I_\text{rod} = \cfrac{mb^2}{12}$. Thus, we can calculate $\alpha_\text{rod}$, and then use $\beta=0$ and the found $\alpha$ to calculate $\left(\cfrac{h_2}{h_1}\right)_\text{rod} = \cfrac{\alpha_\text{rod}}{1-\alpha_\text{rod}-\beta}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\alpha_\text{шт.}=\cfrac{1}{3}$ $\left(\cfrac{h_2}{h_1}\right)_\text{шт.} = \cfrac{1}{2}$
+\par\smallskip\noindent\textbf{Answer:} $\alpha_\text{rod}=\cfrac{1}{3}$ $\left(\cfrac{h_2}{h_1}\right)_\text{rod} = \cfrac{1}{2}$
 \end{solcard}
 
-\begin{solcard}{E3}{Now considering the links to be thin hoops, calculate $\alpha_\text{revр.}$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_\text{revр.}$.}{0.30}
+\begin{solcard}{E3}{Now considering the links to be thin hoops, calculate $\alpha_\text{rev.}$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_\text{rev.}$.}{0.30}
 
-$I_\text{revр.} = \cfrac{mR^2}{2} = \cfrac{mb^2}{8}$
+$I_\text{rev.} = \cfrac{mR^2}{2} = \cfrac{mb^2}{8}$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\alpha_\text{revр.}=\cfrac{1}{4}$ $\left(\cfrac{h_2}{h_1}\right)_\text{revр.} = \cfrac{1}{3}$
+\par\smallskip\noindent\textbf{Answer:} $\alpha_\text{rev.}=\cfrac{1}{4}$ $\left(\cfrac{h_2}{h_1}\right)_\text{rev.} = \cfrac{1}{3}$
 \end{solcard}
 
 \begin{solcard}{E4}{Calculate $\alpha_3$. Take $\beta \approx 0$ and find $\left( \cfrac{h_2}{h_1} \right)_3$.}{0.30}
 
 $I_3 = \cfrac{mb^2}{6}$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\alpha_3=\cfrac{1}{6}$ $\left(\cfrac{h_2}{h_1}\right)_3 = \cfrac{1}{5}$
+\par\smallskip\noindent\textbf{Answer:} $\alpha_3=\cfrac{1}{6}$ $\left(\cfrac{h_2}{h_1}\right)_3 = \cfrac{1}{5}$
 \end{solcard}
 
 \begin{solcard}{F1}{By writing Newton's second law in projection onto the tangent to the chain and onto the perpendicular to it, you obtain a system of differential equations connecting the functions $T(s)$, $\theta(s)$ and containing the constants $\lambda$ and $g$. There is no need to solve the system.}{1.00}
 
-In the projection onto the tangent: $$(T+dT) = T \pm ds \cdot \lambda \cdot g \cdot \sin \theta$$ (sign «плюс» соответствует отсчету углов по часовой стрелке, «минус» - против часовой). В проекции на нормаль: $$T \cdot d\theta = ds \cdot \lambda \cdot g \cdot \cos \theta.$$ Transform into differential equations:
+In the projection onto the tangent: $$(T+dT) = T \pm ds \cdot \lambda \cdot g \cdot \sin \theta$$ (sign the ``plus'' sign corresponds to measuring the angle clockwise, ``minus -- counterclockwise). in projection on the normal: $$T \cdot d\theta = ds \cdot \lambda \cdot g \cdot \cos \theta.$$ Transform into differential equations:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \begin{cases} \cfrac{dT}{ds} = \pm~ \lambda \cdot g \cdot \sin \theta \\ T \cdot \cfrac{d \theta}{ds} = \lambda \cdot g \cdot \cos \theta \end{cases} $$
+\par\smallskip\noindent\textbf{Answer:} $$ \begin{cases} \cfrac{dT}{ds} = \pm~ \lambda \cdot g \cdot \sin \theta \\ T \cdot \cfrac{d \theta}{ds} = \lambda \cdot g \cdot \cos \theta \end{cases} $$
 \end{solcard}
 
 \begin{solcard}{F2}{Similar to point F1, write down a system of differential equations connecting the functions $T(s)$ and $\theta(s)$ for the “fountain” line. There is no need to solve the system.}{1.00}
 
-In the projection onto the tangent: $$(T+dT) = T \pm ds \cdot \lambda \cdot g \cdot \sin \theta$$ (sign «плюс», по-прежнему, соответствует отсчету углов по часовой стрелке). В проекции на нормаль сумма сил должна обеспечить centripetal acceleration движущегося отрезка $ds$ circuit: $$ds \cdot \lambda \cdot g \cdot \cos \theta + T \cdot (-d\theta) = \cfrac{v^2}{R} \cdot \lambda \cdot ds.$$ We get expression for radiusа траектории: $$(-d \theta) \cdot R = ds \\ \cfrac{1}{R} = \cfrac{(-d \theta)}{ds}.$$ We combine the written expressions and transform them into differential equations:
+In the projection onto the tangent: $$(T+dT) = T \pm ds \cdot \lambda \cdot g \cdot \sin \theta$$ (sign ``plus'', as before, correspond measuring angle by clockwise). in projection on the normal sum force must provide centripetal acceleration move segment $ds$ chain: $$ds \cdot \lambda \cdot g \cdot \cos \theta + T \cdot (-d\theta) = \cfrac{v^2}{R} \cdot \lambda \cdot ds.$$ Obtain expression for radius trajectory: $$(-d \theta) \cdot R = ds \\ \cfrac{1}{R} = \cfrac{(-d \theta)}{ds}.$$ We combine the written expressions and transform them into differential equations:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \begin{cases} \cfrac{dT}{ds} = \pm~ \lambda \cdot g \cdot \sin \theta \\ \left( T - \lambda v^2 \right) \cdot \cfrac{d \theta}{ds} = \lambda \cdot g \cdot \cos \theta \end{cases} $$
+\par\smallskip\noindent\textbf{Answer:} $$ \begin{cases} \cfrac{dT}{ds} = \pm~ \lambda \cdot g \cdot \sin \theta \\ \left( T - \lambda v^2 \right) \cdot \cfrac{d \theta}{ds} = \lambda \cdot g \cdot \cos \theta \end{cases} $$
 \end{solcard}
 
 \begin{solcard}{F3}{Let $T (s)$ be the tension in the fountain line, i.e. a function that satisfies the equations from point F2. The function $(T(s)-\tau)$ satisfies the system of equations for the chain line from point F1 for some value of the constant $\tau$. Express $\tau$.}{0.50}
 
-Let's slightly transform the system of equations from point F2: $$ \begin{cases} \cfrac{dT}{ds} = \cfrac{d \left( T - \lambda v^2 \right)}{ds} = \pm~ \lambda \cdot g \cdot \sin \theta \\ \left( T - \lambda v^2 \right) \cdot \cfrac{d \theta}{ds} = \lambda \cdot g \cdot \cos \theta \end{cases} $$ Видим, что solutionм этой системы уравнений будут такие функции $T(s)$, что функции $\left( T(s) - \lambda v^2 \right)$ удовлетворят уравнениям for цепной линии. Thus, искомая постоянная (не зависящая от выбора направления отсчета $\theta$):
+Let's slightly transform the system of equations from point F2: $$ \begin{cases} \cfrac{dT}{ds} = \cfrac{d \left( T - \lambda v^2 \right)}{ds} = \pm~ \lambda \cdot g \cdot \sin \theta \\ \left( T - \lambda v^2 \right) \cdot \cfrac{d \theta}{ds} = \lambda \cdot g \cdot \cos \theta \end{cases} $$ See, that solution this system equation be such function $T(s)$, that function $\left( T(s) - \lambda v^2 \right)$ satisfies the equation for the catenary. Thus, sought constant (not depend on the choice of direction of measurement $\theta$):
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\tau = \lambda v^2$
+\par\smallskip\noindent\textbf{Answer:} $\tau = \lambda v^2$
 \end{solcard}
 
 \end{document}

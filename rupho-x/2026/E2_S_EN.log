@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **E2_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E2_S_EN
-.tex
+(./E2_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E2_S_EN
-.aux)
+(./E2_S_EN.aux)
 \openout1 = `E2_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E2_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2026/E2_S_EN
-.out)
+(./E2_S_EN.out) (./E2_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `E2_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1091,14 +1086,46 @@ File: E2_S_EN_assets/fig3.jpg Graphic file (type bmp)
                 $
 l.130 ...{p_2}{p_1} \cdot d_1.$$Now let's find $l_
                                                   2$. Similar to point B3, w...
- 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no п ("43F) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+Missing character: There is no п ("43F) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no и ("438) in font cmmi10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.131 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+File: E2_S_EN_assets/fig4.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig4.jpg>
+File: E2_S_EN_assets/fig5.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig5.jpg>
+[4]
+Missing character: There is no С ("421) in font cmmi10!
+[5]
+File: E2_S_EN_assets/fig6.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig6.jpg>
+ [6]
+File: E2_S_EN_assets/fig7.jpg Graphic file (type bmp)
+<E2_S_EN_assets/fig7.jpg>
+ [7] [8] (./E2_S_EN.aux)
+Package rerunfilecheck Info: File `E2_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32101 strings out of 478190
- 686492 string characters out of 5854827
- 1093678 words of memory out of 5000000
- 52161 multiletter control sequences out of 15000+600000
- 477316 words of font info for 103 fonts, out of 8000000 for 9000
+ 32148 strings out of 478190
+ 686858 string characters out of 5854827
+ 1093675 words of memory out of 5000000
+ 52202 multiletter control sequences out of 15000+600000
+ 477332 words of font info for 105 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,8n,99p,1088b,1031s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2026/E2_S_EN.pdf (3 pages).
+ 91i,11n,99p,1078b,1031s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on E2_S_EN.pdf (8 pages).

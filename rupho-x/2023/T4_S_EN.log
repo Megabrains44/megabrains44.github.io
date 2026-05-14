@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T4_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/T4_S_EN
-.tex
+(./T4_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/T4_S_EN
-.aux)
+(./T4_S_EN.aux)
 \openout1 = `T4_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/T4_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/T4_S_EN
-.out)
+(./T4_S_EN.out) (./T4_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T4_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1072,41 +1067,710 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (42.14456pt too wide) in paragraph at lines 43--43
-\TU/DejaVuSerif(0)/m/n/10 Here $\OML/cmm/m/it/10 u$ \TU/DejaVuSerif(0)/m/n/10 -
- velocity налетающего ball/sphereandка ссу после удара, по направлению совпадаю
-щая
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \[
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.44 \]
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{tcb@savebox} on input line 39 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \]
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Display math should end with $$.
+<to be read again> 
+                   u
+l.45  $$ Here $u
+                $ - velocity налетающего ball immediately after impact, by d...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+Missing character: There is no н ("43D) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no л ("43B) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no т ("442) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no ю ("44E) in font cmmi10!
+Missing character: There is no щ ("449) in font cmmi10!
+Missing character: There is no е ("435) in font cmmi10!
+Missing character: There is no г ("433) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no С ("421) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no к ("43A) in font cmmi10!
+Missing character: There is no р ("440) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no щ ("449) in font cmmi10!
+Missing character: There is no а ("430) in font cmmi10!
+Missing character: There is no я ("44F) in font cmmi10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.45 ..._i)}{ml}\right)^2 $$ Сокращая root $\omega
+                                                  _{i+1}=\omega_i$, obtain: ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (48.87566pt too wide) in paragraph at lines 45--45
+\TU/DejaVuSerif(0)/m/n/10.95 u$\OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/it/10.95 veloc
+ityballimmediatelyafterimpact; bydirectioncoincidewithvelocity$\TU/DejaVuSerif(
+0)/m/n/10.95 v$\OML/cmm/m/it/10.95 :Eliminatefromsystem$\TU/DejaVuSerif(0)/m/n/
+10.95 u$\OT1/cmr/m/n/10.95 :$$\OML/cmm/m/it/10.95 u \OT1/cmr/m/n/10.95 =
  []
+
+
+! LaTeX Error: \begin{solcard} on input line 39 ended by \end{tcb@savebox}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \end{solcard}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package xcolor Error: Undefined color `tcbcol@origin'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \end{solcard}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\tcb@set@normal@unbroken@beforeafter ...b@nobreak 
+                                                  \iftcb@ignorenobreak \else...
+l.47 \end{solcard}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra \else.
+\tcb@drawcolorbox ...l@unbroken@beforeafter \else 
+                                                  \edef \tcb@before@unbroken...
+l.47 \end{solcard}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \fi.
+\tcb@drawcolorbox ...oken =\tcb@float@env@end \fi 
+                                                  \setcounter {tcbbreakpart}...
+l.47 \end{solcard}
+                  
+I'm ignoring this; it doesn't match any \if.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `\fps@tcbfloat ') on input line 47.
+
+
+! LaTeX Error: Unknown float option `\fps@tcbfloat '.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \end{solcard}
+                  
+Option `\fps@tcbfloat ' ignored and `p' used.
+
+! Undefined control sequence.
+<argument> \the \dimexpr \tcb@width 
+                                    +\kvtcb@bbright \relax 
+l.47 \end{solcard}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \tcb@width 
+                      
+l.47 \end{solcard}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.47 \end{solcard}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.47 \end{solcard}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \tcb@width 
+                      -\kvtcb@right@rule 
+l.47 \end{solcard}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \tcb@footnote@cnt@i 
+l.47 \end{solcard}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: \begin{document} ended by \end{solcard}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \end{solcard}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.47 \end{solcard}
+                  
+Things are pretty mixed up, but I think the worst is over.
 
 [1
 
 ]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \[
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.79 \]
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{tcb@savebox} on input line 74 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \]
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.81 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 File: T4_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <T4_S_EN_assets/fig1.jpg>
 File: T4_S_EN_assets/fig2.jpg Graphic file (type bmp)
 <T4_S_EN_assets/fig2.jpg>
 File: T4_S_EN_assets/fig3.jpg Graphic file (type bmp)
 <T4_S_EN_assets/fig3.jpg>
- [2] [3] [4]
-Overfull \hbox (47.87184pt too wide) in paragraph at lines 112--113
-\TU/DejaVuSerif(0)/m/n/10 На рисунке обозначены плечи скоростей $\OML/cmm/m/it/
-10 v[]$ \TU/DejaVuSerif(0)/m/n/10 and $\OML/cmm/m/it/10 v[]$ \TU/DejaVuSerif(0)
-/m/n/10 относительно оси вращения, соответственно
- []
+
+! LaTeX Error: \begin{solcard} on input line 74 ended by \end{tcb@savebox}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \end{solcard}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package xcolor Error: Undefined color `tcbcol@origin'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \end{solcard}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\tcb@set@normal@unbroken@beforeafter ...b@nobreak 
+                                                  \iftcb@ignorenobreak \else...
+l.104 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra \else.
+\tcb@drawcolorbox ...l@unbroken@beforeafter \else 
+                                                  \edef \tcb@before@unbroken...
+l.104 \end{solcard}
+                   
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \fi.
+\tcb@drawcolorbox ...oken =\tcb@float@env@end \fi 
+                                                  \setcounter {tcbbreakpart}...
+l.104 \end{solcard}
+                   
+I'm ignoring this; it doesn't match any \if.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `\fps@tcbfloat ') on input line 104.
+
+
+! LaTeX Error: Unknown float option `\fps@tcbfloat '.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \end{solcard}
+                   
+Option `\fps@tcbfloat ' ignored and `p' used.
+
+! Undefined control sequence.
+<argument> \the \dimexpr \tcb@width 
+                                    +\kvtcb@bbright \relax 
+l.104 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \tcb@width 
+                      
+l.104 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.104 \end{solcard}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.104 \end{solcard}
+                   
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \tcb@width 
+                      -\kvtcb@right@rule 
+l.104 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \tcb@footnote@cnt@i 
+l.104 \end{solcard}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: \begin{document} ended by \end{solcard}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \end{solcard}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.104 \end{solcard}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 \[
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.112 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{tcb@savebox} on input line 105 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ! Display math should end with $$.
 <to be read again> 
-                   ⟦
-l.115 ...+mu_{\parallel}l\cos\alpha \end{cases} $⟦
-                                                   9⟧u_\parallel$: $$u^2_\te...
- 
+                   v
+l.113  $$ Since $v
+                  _\perp=u_\perp$, and $v_\parallel=v\cos\alpha$, rewrite sy...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.113  $$ Since $v_
+                   \perp=u_\perp$, and $v_\parallel=v\cos\alpha$, rewrite sy...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 \[
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.116 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{tcb@savebox} on input line 105 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: T4_S_EN_assets/fig4.jpg Graphic file (type bmp)
+<T4_S_EN_assets/fig4.jpg>
+! You can't use `\unskip' in vertical mode.
+\endtcb@savebox ->\par \unskip 
+                               \ifvoid \@mpfootins \else \vskip \skip \@mpfo...
+l.123 \end{solcard}
+                   
+Sorry...I usually can't take things from the current page.
+Try `I\vskip-\lastskip' instead.
+
+
+! LaTeX Error: \begin{document} ended by \end{tcb@savebox}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \end{solcard}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.123 \end{solcard}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+
+! Package xcolor Error: Undefined color `tcbcol@origin'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \end{solcard}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\tcb@set@normal@unbroken@beforeafter ...b@nobreak 
+                                                  \iftcb@ignorenobreak \else...
+l.123 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra \else.
+\tcb@drawcolorbox ...l@unbroken@beforeafter \else 
+                                                  \edef \tcb@before@unbroken...
+l.123 \end{solcard}
+                   
+I'm ignoring this; it doesn't match any \if.
+
+! Extra \fi.
+\tcb@drawcolorbox ...oken =\tcb@float@env@end \fi 
+                                                  \setcounter {tcbbreakpart}...
+l.123 \end{solcard}
+                   
+I'm ignoring this; it doesn't match any \if.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `\fps@tcbfloat ') on input line 123.
+
+
+! LaTeX Error: Unknown float option `\fps@tcbfloat '.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \end{solcard}
+                   
+Option `\fps@tcbfloat ' ignored and `p' used.
+
+! Undefined control sequence.
+<argument> \the \dimexpr \tcb@width 
+                                    +\kvtcb@bbright \relax 
+l.123 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \tcb@width 
+                      
+l.123 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.123 \end{solcard}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.123 \end{solcard}
+                   
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+<argument> \tcb@width 
+                      -\kvtcb@right@rule 
+l.123 \end{solcard}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \tcb@footnote@cnt@i 
+l.123 \end{solcard}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: \begin{document} ended by \end{solcard}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \end{solcard}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.123 \end{solcard}
+                   
+Things are pretty mixed up, but I think the worst is over.
+
+[2] [3] [4] [5] [6] [7] [8] (./T4_S_EN.aux)
+Package rerunfilecheck Info: File `T4_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32102 strings out of 478190
- 686503 string characters out of 5854827
- 1081691 words of memory out of 5000000
- 52162 multiletter control sequences out of 15000+600000
- 477316 words of font info for 103 fonts, out of 8000000 for 9000
+ 32143 strings out of 478190
+ 686685 string characters out of 5854827
+ 1082684 words of memory out of 5000000
+ 52199 multiletter control sequences out of 15000+600000
+ 478888 words of font info for 112 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,10n,99p,1667b,1032s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2023/T4_S_EN.pdf (4 pages).
+ 91i,10n,99p,1298b,1047s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on T4_S_EN.pdf (8 pages).

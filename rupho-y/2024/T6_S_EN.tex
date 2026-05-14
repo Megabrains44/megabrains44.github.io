@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,9 +32,9 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Let a plane electromagnetic wave propagate in a substance with a refractive index $n$ with an oscillation amplitude $E$ of the electric field strength. Express the amplitude of oscillations of the magnetic field strength $H$ in this wave in terms of $E$, $n$, as well as the magnetic and electric constants $\mu_0$ and $\varepsilon_0$, respectively.}{0.30}
 
-In a plane electromagnetic wave, the volumetric energy densities of the electric and magnetic fields are the same, therefore: $$w_M=\cfrac{\mu_0\mu H^2}{2}=w_E=\cfrac{\varepsilon_0\varepsilon E^2}{2}{.} $$For фазовой скорости распространения волны we have: $$v=\cfrac{c}{n}=\cfrac{1}{\sqrt{\mu_0\varepsilon_0\mu\varepsilon}}\Rightarrow n=\sqrt{\mu\varepsilon}{.} $$ Since $\mu=1$, for $H$ we have:
+In a plane electromagnetic wave, the volumetric energy densities of the electric and magnetic fields are the same, therefore: $$w_M=\cfrac{\mu_0\mu H^2}{2}=w_E=\cfrac{\varepsilon_0\varepsilon E^2}{2}{.} $$For the phase velocity of wave propagation we have: $$v=\cfrac{c}{n}=\cfrac{1}{\sqrt{\mu_0\varepsilon_0\mu\varepsilon}}\Rightarrow n=\sqrt{\mu\varepsilon}{.} $$ Since $\mu=1$, for $H$ we have:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$H=nE\sqrt{\cfrac{\varepsilon_0}{\mu_0}}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$H=nE\sqrt{\cfrac{\varepsilon_0}{\mu_0}}{.} $$
 \end{solcard}
 
 \begin{solcard}{A2}{What 4 boundary conditions for the electric and magnetic fields are satisfied at the interface? Write them down on the answer sheets in a form convenient for you.}{0.40}
@@ -51,25 +50,25 @@ From the circulation theorem for the electric field strength it follows:
 
 Since there are no external currents at the interface, from the circulation theorem for the magnetic field strength it follows:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$B_{n1}=B_{n2}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$B_{n1}=B_{n2}{.} $$
 \end{solcard}
 
 \begin{solcard}{A3}{All boundary conditions that are met at the interface between two media must be satisfied at each point at an arbitrary point in time. Based on this, prove the following equalities: $$\omega_r=\omega_t=\omega\qquad \theta_r=\theta\qquad n_2\sin\theta_t=n_1\sin\theta{.} $$}{0.40}
 
-Each of the fields in the medium $1$ is the sum of the fields in the incident and reflected wave, and the field in the medium $2$ is the field of the transmitted wave. Then each of the boundary conditions has the form: $$Ae^{i(\omega t-\vec{k}\vec{r})}+Be^{i(\omega_rt-\vec{k}_r\vec{r})}=Ce^{i(\omega_tt-\vec{k}_t\vec{r})}{.} $$Данные условия должны быть выполнены в любой moment времени, hence следуют соотношения: $$\omega_r=\omega_t=\omega{.} $$Also данные условия должны быть выполнены в любой точке границы сдела сред. Let $x$ – ось, направленна на рис.1. and рис.2. вправо. Then for выполнения граничных условий в любой точке границы сдела двух сред должны выполняться соотношения: $$k_{rx}=k_{tx}=k_x{.} $$Волновое число оlimitяется соratioм: $$k=\cfrac{\omega}{v}=\cfrac{\omega n}{c}{.} $$Hence we get: $$k_x=\cfrac{\omega n_1\sin\theta}{c}=k_{rx}=\cfrac{\omega n_1\sin\theta_r}{c}=k_{tx}=\cfrac{\omega n_2\sin\theta_t}{c}{.} $$Hence следуют соотношения: $$\theta=\theta_r\qquad n_1\sin\theta=n_2\sin\theta_t{.} $$
+Each of the fields in the medium $1$ is the sum of the fields in the incident and reflected wave, and the field in the medium $2$ is the field of the transmitted wave. Then each of the boundary conditions has the form: $$Ae^{i(\omega t-\vec{k}\vec{r})}+Be^{i(\omega_rt-\vec{k}_r\vec{r})}=Ce^{i(\omega_tt-\vec{k}_t\vec{r})}{.} $$The given condition must hold at any moment in time, from which follow relation: $$\omega_r=\omega_t=\omega{.} $$Also give condition must be satisfied in any point boundary between media. Let $x$ -- axis directed to the right on Fig.~1 and Fig.~2. Then for fulfillment boundary condition in any point boundary separation two media must hold relation: $$k_{rx}=k_{tx}=k_x{.} $$Wave number be determined relation: $$k=\cfrac{\omega}{v}=\cfrac{\omega n}{c}{.} $$Hence obtain: $$k_x=\cfrac{\omega n_1\sin\theta}{c}=k_{rx}=\cfrac{\omega n_1\sin\theta_r}{c}=k_{tx}=\cfrac{\omega n_2\sin\theta_t}{c}{.} $$Hence follow relation: $$\theta=\theta_r\qquad n_1\sin\theta=n_2\sin\theta_t{.} $$
 
 \end{solcard}
 
 \begin{solcard}{A4}{Derive an expression for the complex reflection and transmission coefficients $r_s$ and $t_s$, respectively, in the case of a $s$-polarized wave. Express your answers using $n_1$, $n_2$, $\theta$ and $\theta_t$. The expressions for $r_s$ and $t_s$ are called Fresnel's formulas for the $s$-polarized wave.}{0.50}
 
-Let us write the boundary condition for the tangential component of the electric field strength: $$E_{\tau 1}=E_0(1+r_s)=E_{\tau 2}=E_0t_s\Rightarrow 1+r_s=t_s{.} $$Let us write граничное condition for тангенциальной компоненты напряжённости магнитного поля: $$H_{\tau 1}=n_1\sqrt{\varepsilon_0/\mu_0}(1-r_s)\cos\theta=H_{\tau 2}=n_2\sqrt{\varepsilon_0/\mu_0}t_s\cos\theta_t\Rightarrow n_1(1-r_s)\cos\theta=n_2t_s\cos\theta_t{.} $$From here we find:
+Let us write the boundary condition for the tangential component of the electric field strength: $$E_{\tau 1}=E_0(1+r_s)=E_{\tau 2}=E_0t_s\Rightarrow 1+r_s=t_s{.} $$Write the boundary condition for the tangential component of the magnetic field intensity: $$H_{\tau 1}=n_1\sqrt{\varepsilon_0/\mu_0}(1-r_s)\cos\theta=H_{\tau 2}=n_2\sqrt{\varepsilon_0/\mu_0}t_s\cos\theta_t\Rightarrow n_1(1-r_s)\cos\theta=n_2t_s\cos\theta_t{.} $$From here we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$r_s=\cfrac{n_1\cos\theta-n_2\cos\theta_t}{n_1\cos\theta+n_2\cos\theta_t}\qquad t_s=\cfrac{2n_1\cos\theta}{n_1\cos\theta+n_2\cos\theta_t}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$r_s=\cfrac{n_1\cos\theta-n_2\cos\theta_t}{n_1\cos\theta+n_2\cos\theta_t}\qquad t_s=\cfrac{2n_1\cos\theta}{n_1\cos\theta+n_2\cos\theta_t}{.} $$
 \end{solcard}
 
 \begin{solcard}{A5}{Derive an expression for the coefficients $r_p$ and $t_p$ in the case of a $p$-polarized wave. Express your answers using $n_1$, $n_2$, $\theta$ and $\theta_t$. The expressions for $r_p$ and $t_p$ are called Fresnel's formulas for the $p$-polarized wave.}{0.50}
 
-Let us write the boundary condition for the tangential component of the electric field strength: $$E_{\tau 1}=E_0(1-r_p)\cos\theta=E_{\tau 2}=E_0t_p\cos\theta_t\Rightarrow (1-r_p)\cos\theta=t_p\cos\theta_t{.} $$Let us write граничное condition for тангенциальной компоненты напряжённости магнитного поля: $$H_{\tau 1}=n_1\sqrt{\varepsilon_0/\mu_0}(1+r_p)=H_{\tau 2}=n_2\sqrt{\varepsilon_0/\mu_0}t_p\Rightarrow n_1(1+r_p)=n_2t_p{.} $$From here we find:
+Let us write the boundary condition for the tangential component of the electric field strength: $$E_{\tau 1}=E_0(1-r_p)\cos\theta=E_{\tau 2}=E_0t_p\cos\theta_t\Rightarrow (1-r_p)\cos\theta=t_p\cos\theta_t{.} $$Write the boundary condition for the tangential component of the magnetic field intensity: $$H_{\tau 1}=n_1\sqrt{\varepsilon_0/\mu_0}(1+r_p)=H_{\tau 2}=n_2\sqrt{\varepsilon_0/\mu_0}t_p\Rightarrow n_1(1+r_p)=n_2t_p{.} $$From here we find:
 
 
 $$r_p=\cfrac{n_2\cos\theta-n_1\cos\theta_t}{n_2\cos\theta+n_1\cos\theta_t}\qquad t_p=\cfrac{2n_1\cos\theta}{n_2\cos\theta+n_1\cos\theta_p}{.} $$
@@ -78,69 +77,69 @@ $$r_p=\cfrac{n_2\cos\theta-n_1\cos\theta_t}{n_2\cos\theta+n_1\cos\theta_t}\qquad
 
 \begin{solcard}{A6}{Determine the value of $\cos\theta_t$. Express your answer in terms of $n_1$, $n_2$ and $\theta$.}{0.30}
 
-Let us introduce the axis $z$, directed vertically downwards. Then at an arbitrary point in space: $$E_t\sim \exp\left(i\left(\omega t-\vec{k}_t\vec{r}\right)\right)=\exp\left(i\left(\omega t-k_{tx}x-k_{tz}z\right)\right){.} $$Consider term $-ik_{tz}$: $$-ik_{tz}z=-ik_tz\cos\theta_t{.} $$At the same time for $\cos\theta_t$ we have: $$\cos\theta_t=\pm\sqrt{1-\cfrac{n^2_1\sin^2\theta}{n^2_2}}=\pm \cfrac{i\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}{.} $$Затуханию амплитуды волны соответствует sign $-$, therefore:
+Let us introduce the axis $z$, directed vertically downwards. Then at an arbitrary point in space: $$E_t\sim \exp\left(i\left(\omega t-\vec{k}_t\vec{r}\right)\right)=\exp\left(i\left(\omega t-k_{tx}x-k_{tz}z\right)\right){.} $$Consider term $-ik_{tz}$: $$-ik_{tz}z=-ik_tz\cos\theta_t{.} $$At the same time for $\cos\theta_t$ have: $$\cos\theta_t=\pm\sqrt{1-\cfrac{n^2_1\sin^2\theta}{n^2_2}}=\pm \cfrac{i\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}{.} $$Damping amplitude wave correspond sign $-$, therefore:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\cos\theta_t=- \cfrac{i\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$\cos\theta_t=- \cfrac{i\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}{.} $$
 \end{solcard}
 
-\begin{solcard}{A7}{The expressions for $r_s$ and $r_p$ can be represented as follows: $$r_s=A_se^{i\delta_p}\qquad r_p=A_pe^{i\delta_p}{.} $$Determine $A_s$, $A_p$, $\delta_s$ and $\delta_p$. Answerы выtimesandте via/through $n_1$, $n_2$ and $\theta$.}{0.40}
+\begin{solcard}{A7}{The expressions for $r_s$ and $r_p$ can be represented as follows: $$r_s=A_se^{i\delta_p}\qquad r_p=A_pe^{i\delta_p}{.} $$Determine $A_s$, $A_p$, $\delta_s$ and $\delta_p$. Answer express through $n_1$, $n_2$ and $\theta$.}{0.40}
 
-Taking into account the expression for $\cos\theta_t$ under full reflection, the expressions for $r_s$ and $r_p$ take the form: $$r_s=\cfrac{n_1\cos\theta+i\sqrt{n_1\sin^2\theta-n^2_2}}{n^2_1\cos\theta-i\sqrt{n^2_1\sin^2\theta-n^2_2}}\qquad r_p=\cfrac{n_2\cos\theta+\cfrac{in_1\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}}{n_2\cos\theta-\cfrac{in_1\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}}{.} $$Magnitudes $r_s$ and $r_p$ equal единице в силу equalsств модулей вещественных and мнимых частей числителей and знаменателей. Then их запись в exponent/indexной форме выглядит следующим обсом: $$r_s=\exp\left(2i\operatorname{arctg}\left(\cfrac{\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right)\right){.} $$$$r_p=\exp\left(2i\operatorname{arctg}\left(\cfrac{(n_1/n_2)^2\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right)\right){.} $$Thus:
+Taking into account the expression for $\cos\theta_t$ under full reflection, the expressions for $r_s$ and $r_p$ take the form: $$r_s=\cfrac{n_1\cos\theta+i\sqrt{n_1\sin^2\theta-n^2_2}}{n^2_1\cos\theta-i\sqrt{n^2_1\sin^2\theta-n^2_2}}\qquad r_p=\cfrac{n_2\cos\theta+\cfrac{in_1\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}}{n_2\cos\theta-\cfrac{in_1\sqrt{n^2_1\sin^2\theta-n^2_2}}{n_2}}{.} $$The moduli of $r_s$ and $r_p$ equal unity due to the equality of the moduli of the real and imaginary parts of the numerator and denominator. Then they representation in trigonometric form look like following manner: $$r_s=\exp\left(2i\operatorname{arctg}\left(\cfrac{\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right)\right){.} $$$$r_p=\exp\left(2i\operatorname{arctg}\left(\cfrac{(n_1/n_2)^2\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right)\right){.} $$Thus:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$A_s=1\qquad A_p=1{.} $$$$\delta_s=2\operatorname{arctg}\left(\cfrac{\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right)\qquad \delta_p=2\operatorname{arctg}\left(\cfrac{(n_1/n_2)^2\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right){.} $$
+\par\smallskip\noindent\textbf{Answer:} $$A_s=1\qquad A_p=1{.} $$$$\delta_s=2\operatorname{arctg}\left(\cfrac{\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right)\qquad \delta_p=2\operatorname{arctg}\left(\cfrac{(n_1/n_2)^2\sqrt{\sin^2\theta-(n_2/n_1)^2}}{\cos\theta}\right){.} $$
 \end{solcard}
 
 \begin{solcard}{A8}{Define $\delta$. Express your answer as one inverse trigonometric function in terms of $\theta$ and $n_{21}=n_2/n_1$.}{0.40}
 
-Let's use the expression for the tangent of the difference: $$\operatorname{tg}(\alpha-\beta)=\cfrac{\operatorname{tg}\alpha-\operatorname{tg}\beta}{1+\operatorname{tg}\alpha\operatorname{tg}\beta}{.} $$Hence: $$\operatorname{tg}(\delta/2)=\cfrac{\operatorname{tg}(\delta_p/2)-\operatorname{tg}(\delta_s/2)}{1+\operatorname{tg}(\delta_p/2)\operatorname{tg}(\delta_s/2)}=\cfrac{\sqrt{\sin^2\theta-n^2_{21}}(n^{-2}_{21}-1)}{\cos\theta\left(1+\cfrac{(\sin^2\theta-n^2_{21})n^{-2}_{21}}{\cos^2\theta}\right)}{.} $$Transforming поrayенное expression: $$\operatorname{tg}(\delta/2)=\cfrac{\cos\theta\sqrt{\sin^2\theta-n^2_{21}}(n^{-2}_{21}-1)}{\sin^2\theta(n^{-2}_{21}-1)}=\cfrac{\cos\theta\sqrt{\sin^2\theta-n^2_{21}}}{\sin^2\theta}{.} $$Thus:
+Let's use the expression for the tangent of the difference: $$\operatorname{tg}(\alpha-\beta)=\cfrac{\operatorname{tg}\alpha-\operatorname{tg}\beta}{1+\operatorname{tg}\alpha\operatorname{tg}\beta}{.} $$Hence: $$\operatorname{tg}(\delta/2)=\cfrac{\operatorname{tg}(\delta_p/2)-\operatorname{tg}(\delta_s/2)}{1+\operatorname{tg}(\delta_p/2)\operatorname{tg}(\delta_s/2)}=\cfrac{\sqrt{\sin^2\theta-n^2_{21}}(n^{-2}_{21}-1)}{\cos\theta\left(1+\cfrac{(\sin^2\theta-n^2_{21})n^{-2}_{21}}{\cos^2\theta}\right)}{.} $$Transform obtain expression: $$\operatorname{tg}(\delta/2)=\cfrac{\cos\theta\sqrt{\sin^2\theta-n^2_{21}}(n^{-2}_{21}-1)}{\sin^2\theta(n^{-2}_{21}-1)}=\cfrac{\cos\theta\sqrt{\sin^2\theta-n^2_{21}}}{\sin^2\theta}{.} $$Thus:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\delta=2\operatorname{arctg}\left(\cfrac{\cos\theta\sqrt{\sin^2\theta-n^2_{21}}}{\sin^2\theta}\right){.} $$
+\par\smallskip\noindent\textbf{Answer:} $$\delta=2\operatorname{arctg}\left(\cfrac{\cos\theta\sqrt{\sin^2\theta-n^2_{21}}}{\sin^2\theta}\right){.} $$
 \end{solcard}
 
-\begin{solcard}{B1}{At what values ​​of the acute angle $\alpha$ of the Fresnel rhombus will the electromagnetic wave experience total reflection from the faces of the Fresnel rhombus $BC$ and $AD$? Express your answer in terms of $n$ and calculate it in degrees accurate to four significant figures.}{0.10}
+\begin{solcard}{B1}{At what values of the acute angle $\alpha$ of the Fresnel rhombus will the electromagnetic wave experience total reflection from the faces of the Fresnel rhombus $BC$ and $AD$? Express your answer in terms of $n$ and calculate it in degrees accurate to four significant figures.}{0.10}
 
-The angle of incidence on the faces $BC$ and $AD$ will be equal to $\alpha$, therefore the condition must be satisfied: $$n\sin\alpha\leq 1{.} $$Thus:
+The angle of incidence on the faces $BC$ and $AD$ will is equal to to $\alpha$, therefore the condition must be satisfied: $$n\sin\alpha\leq 1{.} $$Thus:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\alpha\in[\arcsin(1/n){;}~\pi/2)=[41{.}47^{\circ}{;}~90^{\circ}){.} $$
+\par\smallskip\noindent\textbf{Answer:} $$\alpha\in[\arcsin(1/n){;}~\pi/2)=[41{.}47^{\circ}{;}~90^{\circ}){.} $$
 \end{solcard}
 
-\begin{solcard}{B2}{At what values ​​of the angle $\alpha=\alpha'$ can we obtain circular polarization from linear polarization using the Fresnel rhombus? Express your answers in terms of $n$ and calculate them in degrees to four significant figures.}{0.40}
+\begin{solcard}{B2}{At what values of the angle $\alpha=\alpha'$ can we obtain circular polarization from linear polarization using the Fresnel rhombus? Express your answers in terms of $n$ and calculate them in degrees to four significant figures.}{0.40}
 
-At each total reflection, a phase shift of $\pi/4$ occurs between the $p$-polarization and the $s$-polarization, therefore: $$\operatorname{tg}(\delta/2)=\operatorname{tg}(\pi/8)=\sqrt{\cfrac{1-\cos\delta}{1+\cos\delta}}=\sqrt{\cfrac{\sqrt{2}-1}{\sqrt{2}+1}}=\sqrt{2}-1{.} $$Thus: $$\sqrt{2}-1=\cfrac{\cos\alpha'\sqrt{\sin^2\alpha'-(1/n)^2}}{\sin^2\alpha'}{.} $$Hence: $$\sin^4\alpha'(4-2\sqrt{2})-\sin^2\alpha'(1+(1/n)^2)+(1/n)^2=0 $$Решая квадратное equation, we get: $$\alpha'=\arcsin\sqrt{\cfrac{1+(1/n)^2\pm\sqrt{(1+(1/n)^2)^2-4(1/n)^2(4-2\sqrt{2})}}{8-4\sqrt{2}}}\approx 48{.}62^{\circ}{,}~54{.}62^{\circ}{.} $$Отметим, что оба угла удовлетворяют условию, поrayенному в partе $\mathrm{B1}$ and are suitable.
+At each total reflection, a phase shift of $\pi/4$ occurs between the $p$-polarization and the $s$-polarization, therefore: $$\operatorname{tg}(\delta/2)=\operatorname{tg}(\pi/8)=\sqrt{\cfrac{1-\cos\delta}{1+\cos\delta}}=\sqrt{\cfrac{\sqrt{2}-1}{\sqrt{2}+1}}=\sqrt{2}-1{.} $$Thus: $$\sqrt{2}-1=\cfrac{\cos\alpha'\sqrt{\sin^2\alpha'-(1/n)^2}}{\sin^2\alpha'}{.} $$Hence: $$\sin^4\alpha'(4-2\sqrt{2})-\sin^2\alpha'(1+(1/n)^2)+(1/n)^2=0 $$Solve square equation, obtain: $$\alpha'=\arcsin\sqrt{\cfrac{1+(1/n)^2\pm\sqrt{(1+(1/n)^2)^2-4(1/n)^2(4-2\sqrt{2})}}{8-4\sqrt{2}}}\approx 48{.}62^{\circ}{,}~54{.}62^{\circ}{.} $$Note that both angles satisfy the condition obtained in part $\mathrm{B1}$ and are suitable.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\alpha'=\arcsin\sqrt{\cfrac{1+(1/n)^2\pm\sqrt{(1+(1/n)^2)^2-4(1/n)^2(4-2\sqrt{2})}}{8-4\sqrt{2}}}\approx 48{.}62^{\circ}{,}~54{.}62^{\circ}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$\alpha'=\arcsin\sqrt{\cfrac{1+(1/n)^2\pm\sqrt{(1+(1/n)^2)^2-4(1/n)^2(4-2\sqrt{2})}}{8-4\sqrt{2}}}\approx 48{.}62^{\circ}{,}~54{.}62^{\circ}{.} $$
 \end{solcard}
 
-\begin{solcard}{B3}{Let a beam of light fall on a Fresnel rhombus over the entire area of ​​face $AB$. Angle $\alpha=\alpha'$. At what values ​​of $BC/AB$ does the Fresnel rhombus reverse the entire beam of rays (all rays entering the Fresnel rhombus through face $AB$ experience two total reflections)? Calculate your answer to three significant figures.}{0.30}
+\begin{solcard}{B3}{Let a beam of light fall on a Fresnel rhombus over the entire area of face $AB$. Angle $\alpha=\alpha'$. At what values of $BC/AB$ does the Fresnel rhombus reverse the entire beam of rays (all rays entering the Fresnel rhombus through face $AB$ experience two total reflections)? Calculate your answer to three significant figures.}{0.30}
 
 Let's use the sweep method. The Fresnel rhombus reverses the entire beam of rays subject to: $$BC\cos\alpha+AB\cos 2\alpha-AB=0\Rightarrow \cfrac{BC}{AB}=\cfrac{2\sin^2\alpha}{\cos\alpha}{.} $$Thus:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\cfrac{BC}{AB}=\begin{cases} 1{.}70\quad при\quad \alpha'=48{.}62^{\circ}\\ 2{.}30\quad при\quad \alpha'=54{.}62^{\circ} \end{cases} $$
+\par\smallskip\noindent\textbf{Answer:} $$\cfrac{BC}{AB}=\begin{cases} 1{.}70\quad at\quad \alpha'=48{.}62^{\circ}\\ 2{.}30\quad at\quad \alpha'=54{.}62^{\circ} \end{cases} $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig1.jpg}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{B4}{At what values ​​of the angle $\alpha$ of the Mooney rhombus will the electromagnetic wave experience total reflection from the faces $BC$ and $CD$ of the Fresnel rhombus? Express your answer in terms of $n$ and calculate it in degrees accurate to four significant figures.}{0.10}
+\begin{solcard}{B4}{At what values of the angle $\alpha$ of the Mooney rhombus will the electromagnetic wave experience total reflection from the faces $BC$ and $CD$ of the Fresnel rhombus? Express your answer in terms of $n$ and calculate it in degrees accurate to four significant figures.}{0.10}
 
-The angle of incidence on the faces $BC$ and $CD$ will be equal to $\alpha$, therefore the condition must be satisfied: $$n\sin\alpha\leq 1{.} $$Thus:
+The angle of incidence on the faces $BC$ and $CD$ will is equal to to $\alpha$, therefore the condition must be satisfied: $$n\sin\alpha\leq 1{.} $$Thus:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\alpha\in[\arcsin(1/n){;}~\pi/2)=[41{.}47^{\circ}{;}~90^{\circ}){.} $$
+\par\smallskip\noindent\textbf{Answer:} $$\alpha\in[\arcsin(1/n){;}~\pi/2)=[41{.}47^{\circ}{;}~90^{\circ}){.} $$
 \end{solcard}
 
-\begin{solcard}{B5}{At what values ​​of the angle $\alpha=\alpha'$ can we obtain circular polarization from linear polarization using the Mooney rhombus? Express your answers in terms of $n$ and calculate them in degrees to four significant figures.}{0.30}
+\begin{solcard}{B5}{At what values of the angle $\alpha=\alpha'$ can we obtain circular polarization from linear polarization using the Mooney rhombus? Express your answers in terms of $n$ and calculate them in degrees to four significant figures.}{0.30}
 
 Since the number of reflections is two, the answer for this item is the same as the answer for item $\mathrm{B2}$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\alpha'=\arcsin\sqrt{\cfrac{1+(1/n)^2\pm\sqrt{(1+(1/n)^2)^2-4(1/n)^2(4-2\sqrt{2})}}{8-4\sqrt{2}}}\approx 48{.}62^{\circ}{,}~54{.}62^{\circ}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$\alpha'=\arcsin\sqrt{\cfrac{1+(1/n)^2\pm\sqrt{(1+(1/n)^2)^2-4(1/n)^2(4-2\sqrt{2})}}{8-4\sqrt{2}}}\approx 48{.}62^{\circ}{,}~54{.}62^{\circ}{.} $$
 \end{solcard}
 
-\begin{solcard}{B6}{Let the angle be $\alpha=\alpha'$. Determine the maximum possible value $\gamma$ of the ratio of the cross-sectional area of ​​the beam incident on face $AB$ to the area of ​​face $AB$, if the Mooney rhombus reverses the entire beam of rays (all rays entering the Mooney rhombus through face $AB$ experience two total reflections). Calculate your answer to three significant figures.}{0.30}
+\begin{solcard}{B6}{Let the angle be $\alpha=\alpha'$. Determine the maximum possible value $\gamma$ of the ratio of the cross-sectional area of the beam incident on face $AB$ to the area of face $AB$, if the Mooney rhombus reverses the entire beam of rays (all rays entering the Mooney rhombus through face $AB$ experience two total reflections). Calculate your answer to three significant figures.}{0.30}
 
-The rays experience two total reflections if they first hit the $BC$ face. Let $E$ be a point on face $AB$, after passing which the ray hits point $C$. Then the position of the point $E$ is determined by the relation: $$BE/BC=BE/AB=\cos\alpha{.} $$For/At фиксированном значении $\alpha$ максимальное ratio площади поперечного сечения пучка к площади грани $AB$ equals отношению $BE/AB=\cos\alpha$. We have:
+The rays experience two total reflections if they first hit the $BC$ face. Let $E$ be a point on face $AB$, after passing which the ray hits point $C$. Then the position of the point $E$ is determined by the relation: $$BE/BC=BE/AB=\cos\alpha{.} $$For record value $\alpha$ maximum ratio area transverse cross-section beam to area face $AB$ equal ratio $BE/AB=\cos\alpha$. We have:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\gamma_{max}=\begin{cases} 0{.}661\quad при\quad \alpha'=48{.}62^{\circ}\\ 0{.}579\quad при\quad \alpha'=54{.}62 \end{cases} $$
+\par\smallskip\noindent\textbf{Answer:} $$\gamma_{max}=\begin{cases} 0{.}661\quad at\quad \alpha'=48{.}62^{\circ}\\ 0{.}579\quad at\quad \alpha'=54{.}62 \end{cases} $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig2.jpg}
@@ -149,57 +148,57 @@ The rays experience two total reflections if they first hit the $BC$ face. Let $
 
 \begin{solcard}{C1}{Show the validity of the following relations: $$r'_1=-r_1\qquad 1-r^2_1=t_1t'_1{.} $$}{0.30}
 
-Let $\psi$ be the angle of refraction of the incident wave. Then $\psi$ is equal to the angle of incidence of the wave with wave vector $\vec{k'}$ on the interface between media with refractive indices $n_1$ and $n$, and the angle of refraction is equal to $\theta$. In the case of $s$-polarization we have: $$r_{1s}=\cfrac{n_1\cos\theta-n\cos\psi}{n_1\cos\theta+n\cos\psi}\qquad r'_{1s}=\cfrac{n\cos\psi-n_1\cos\theta}{n_1\cos\theta+n\cos\psi}{.} $$In the case of $p$-поляризации we have: $$r_{1p}=\cfrac{n\cos\theta-n_1\cos\psi}{n\cos\theta+n_1\cos\psi}\qquad r'_{1p}=\cfrac{n_1\cos\psi-n\cos\theta}{n\cos\theta+n_1\cos\psi}{.} $$Thus, в обоих сrayаях equality $r'_1=-r_1$ является выполненным. We determine $t'_1$ in the case of обеих поляризаций: $$t'_{1s}=\cfrac{2n\cos\psi}{n_1\cos\theta+n\cos\psi}\qquad t'_{1p}=\cfrac{2n\cos\psi}{n_1\cos\psi+n\cos\theta}{.} $$At the same time for $t_{1s }$ and $t_{1s}$ we have: $$t_{1s}=\cfrac{2n_1\cos\theta}{n_1\cos\theta+n\cos\psi}\qquad t_{1p}=\cfrac{2n_1\cos\theta}{n\cos\theta+n_1\cos\psi}{.} $$Hence: $$1-r^2_{1s}=\cfrac{4nn_1\cos\theta\cos\psi}{(n_1\cos\theta+n\cos\psi)^2}=\cfrac{2n_1\cos\theta}{n_1\cos\theta+n\cos\psi}\cdot\cfrac{2n\cos\psi}{n_1\cos\theta+n\cos\psi}=t_{1s}t'_{1s}{.} $$$$1-r^2_{1p}=\cfrac{4nn_1\cos\theta\cos\psi}{(n\cos\theta+n_1\cos\psi)^2}=\cfrac{2n_1\cos\theta}{n\cos\theta+n_1\cos\psi}\cdot\cfrac{2n\cos\psi}{n\cos\theta+n_1\cos\psi}=t_{1p}t'_{1p}{.} $$Thus, equality $1-r^2_1=t_1t'_1$ is completed.
+Let $\psi$ be the angle of refraction of the incident wave. Then $\psi$ is equal to the angle of incidence of the wave with wave vector $\vec{k'}$ on the interface between media with refractive indices $n_1$ and $n$, and the angle of refraction is equal to $\theta$. In the case of $s$-polarization we have: $$r_{1s}=\cfrac{n_1\cos\theta-n\cos\psi}{n_1\cos\theta+n\cos\psi}\qquad r'_{1s}=\cfrac{n\cos\psi-n_1\cos\theta}{n_1\cos\theta+n\cos\psi}{.} $$In the case of $p$-polarization have: $$r_{1p}=\cfrac{n\cos\theta-n_1\cos\psi}{n\cos\theta+n_1\cos\psi}\qquad r'_{1p}=\cfrac{n_1\cos\psi-n\cos\theta}{n\cos\theta+n_1\cos\psi}{.} $$ThuThus, in both cases the equality $r'_1=-r_1$ is satisfied. Let us determine $t'_1$ in the case of both polarization: $$t'_{1s}=\cfrac{2n\cos\psi}{n_1\cos\theta+n\cos\psi}\qquad t'_{1p}=\cfrac{2n\cos\psi}{n_1\cos\psi+n\cos\theta}{.} $$At the same time for $t_{1s }$ and $t_{1s}$ have: $$t_{1s}=\cfrac{2n_1\cos\theta}{n_1\cos\theta+n\cos\psi}\qquad t_{1p}=\cfrac{2n_1\cos\theta}{n\cos\theta+n_1\cos\psi}{.} $$Hence: $$1-r^2_{1s}=\cfrac{4nn_1\cos\theta\cos\psi}{(n_1\cos\theta+n\cos\psi)^2}=\cfrac{2n_1\cos\theta}{n_1\cos\theta+n\cos\psi}\cdot\cfrac{2n\cos\psi}{n_1\cos\theta+n\cos\psi}=t_{1s}t'_{1s}{.} $$$$1-r^2_{1p}=\cfrac{4nn_1\cos\theta\cos\psi}{(n\cos\theta+n_1\cos\psi)^2}=\cfrac{2n_1\cos\theta}{n\cos\theta+n_1\cos\psi}\cdot\cfrac{2n\cos\psi}{n\cos\theta+n_1\cos\psi}=t_{1p}t'_{1p}{.} $$Thus, equality $1-r^2_1=t_1t'_1$ is completed.
 
 \end{solcard}
 
 \begin{solcard}{C2}{Express $E_r$ and $E$ in terms of $E_1$, $E'$, $r_1$, $r'_1$, $t_1$ and $t'_1$.}{0.60}
 
-If there were no wave with electric field strength $E'$, then the complex amplitudes $E^{(1)}_r$ and $E^{(1)}$ would be as follows: $$E^{(1)}_r=r_1E_1\qquad E^{(1)}=t_1E_1{.} $$If бы wave с field strengthю электрического поля $E_1$ отсутствовала, то комплексные амплитуды $E^{(2)}_r$ and $E^{(2)}$ были бы следующими: $$E^{(2)}_r=r'_1E'\qquad E^{(2)}=t'_1E'{.} $$The resulting complex amplitudes of electric field strengths are found from the superposition principle:
+If there were no wave with electric field strength $E'$, then the complex amplitudes $E^{(1)}_r$ and $E^{(1)}$ would be as follows: $$E^{(1)}_r=r_1E_1\qquad E^{(1)}=t_1E_1{.} $$If a wave with electric-field intensity $E_1$ be absent, that complex amplitude $E^{(2)}_r$ and $E^{(2)}$ be be the following: $$E^{(2)}_r=r'_1E'\qquad E^{(2)}=t'_1E'{.} $$The resulting complex amplitudes of electric field strengths are found from the superposition principle:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$E_r=r_1E_1+t'_1E'\qquad E=t_1E_1+r'_1E'{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$E_r=r_1E_1+t'_1E'\qquad E=t_1E_1+r'_1E'{.} $$
 \end{solcard}
 
 \begin{solcard}{C3}{Reasoning similarly to C2, express $E'$ and $E_t$ in terms of $E$, $r_2$ and $t'_2$, $n_1$, $n_2$, $n$, $k$, $d$ and $\theta$. Note that the complex amplitudes of the electric fields at point $O'$ are out of phase with respect to the corresponding complex amplitudes at point $O$.}{0.60}
 
-Since point $O'$ is shifted relative to point $O$, the complex amplitudes $E_{O'}$, $E'_{O'}$ and $E_{O't}$ of the electric field strengths in waves with wave vectors $\vec{k'}$, $\vec{k}$ and $\vec{k}_t$ are shifted in phase relative to $E$, $E'$ and $E_t$. Considering a wave with wave vector $\vec{k}'$ as a reflected wave with wave vector $\vec{k}$, we obtain: $$r_2Ee^{-ikd\cos\psi}=E'e^{ikd\cos\psi}{.} $$Similarly рассматривая волну с волновым vectorом $\vec{k}_t$ как прошедшую волну с волновым vectorом $\vec{k}$, we get: $$t_2Ee^{-ikd\cos\psi}=E_te^{-ik_td\cos\varphi}{,} $$where $\varphi$ – angle преломления волны с волновым vectorом $\vec{k }$. Let us write выражения for $\cos\varphi$ and $\cos\psi$: $$\cos\psi=\cfrac{\sqrt{n^2-n^2_1\sin^2\theta}}{n}\qquad \cos\varphi=\cfrac{\sqrt{n^2_2-n^2_1\sin^2\theta}}{n_2}{.} $$Учтём also соratio: $$k_t=\cfrac{kn_2}{n}{.} $$Finally:
+Since point $O'$ is shifted relative to point $O$, the complex amplitudes $E_{O'}$, $E'_{O'}$ and $E_{O't}$ of the electric field strengths in waves with wave vectors $\vec{k'}$, $\vec{k}$ and $\vec{k}_t$ are shifted in phase relative to $E$, $E'$ and $E_t$. Considering a wave with wave vector $\vec{k}'$ as a reflected wave with wave vector $\vec{k}$, we obtain: $$r_2Ee^{-ikd\cos\psi}=E'e^{ikd\cos\psi}{.} $$Similarly consider wave with wave vector $\vec{k}_t$ as the transmitted wave with wave vector $\vec{k}$, obtain: $$t_2Ee^{-ikd\cos\psi}=E_te^{-ik_td\cos\varphi}{,} $$where $\varphi$ – refraction angle wave with wave vector $\vec{k }$. Write expression for $\cos\varphi$ and $\cos\psi$: $$\cos\psi=\cfrac{\sqrt{n^2-n^2_1\sin^2\theta}}{n}\qquad \cos\varphi=\cfrac{\sqrt{n^2_2-n^2_1\sin^2\theta}}{n_2}{.} $$Account for also relation: $$k_t=\cfrac{kn_2}{n}{.} $$Finally:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$E'=r_2E\exp\left(-\cfrac{2ikd\sqrt{n^2-n^2_1\sin^2\theta}}{n}\right) $$$$E_t=t_2E\exp\left(\cfrac{ikd\left(\sqrt{n^2_2-n^2_1\sin^2\theta}-\sqrt{n^2-n^2_1\sin^2\theta}\right)}{n}\right){.} $$
+\par\smallskip\noindent\textbf{Answer:} $$E'=r_2E\exp\left(-\cfrac{2ikd\sqrt{n^2-n^2_1\sin^2\theta}}{n}\right) $$$$E_t=t_2E\exp\left(\cfrac{ikd\left(\sqrt{n^2_2-n^2_1\sin^2\theta}-\sqrt{n^2-n^2_1\sin^2\theta}\right)}{n}\right){.} $$
 \end{solcard}
 
 \begin{solcard}{C4}{Using the results from steps C1-C3, determine the reflectance $r=E_r/E_1$. Express your answer in terms of $r_1$, $r_2$, $n_1$, $n$, $k$, $d$ and $\theta$.}{0.60}
 
-We will temporarily write the expression for $E'$ through $E$ in the following form: $$E'=r_2Ee^{-i\Delta}{.} $$Let us express $E$ via/through $E_1$: $$E=t_1E_1+r'_1E'=t_1E_1+Er'_1r_2e^{-i\Delta}\Rightarrow E=\cfrac{t_1E_1}{1-r'_1r_2e^{-i\Delta}}=\cfrac{t_1E_1}{1+r_1r_2e^{-i\Delta}}{.} $$Let us use expressionм for $E_r$: $$E_r=r_1E_1+t'_1E'=r_1E_1+\cfrac{E_1t_1t'_1r_2e^{-i\Delta}}{1+r_1r_2e^{-i\Delta}}=E_1\left(r_1+\cfrac{r_2(1-r^2_1)e^{-i\Delta}}{1+r_1r_2e^{-i\Delta}}\right){.} $$Thus: $$r=\cfrac{r_1+r_2e^{-i\Delta}}{1+r_1r_2e^{-i\Delta}} $$Substituting $\Delta$, we find:
+We will temporarily write the expression for $E'$ through $E$ in the following form: $$E'=r_2Ee^{-i\Delta}{.} $$Express $E$ through $E_1$: $$E=t_1E_1+r'_1E'=t_1E_1+Er'_1r_2e^{-i\Delta}\Rightarrow E=\cfrac{t_1E_1}{1-r'_1r_2e^{-i\Delta}}=\cfrac{t_1E_1}{1+r_1r_2e^{-i\Delta}}{.} $$Use expression for $E_r$: $$E_r=r_1E_1+t'_1E'=r_1E_1+\cfrac{E_1t_1t'_1r_2e^{-i\Delta}}{1+r_1r_2e^{-i\Delta}}=E_1\left(r_1+\cfrac{r_2(1-r^2_1)e^{-i\Delta}}{1+r_1r_2e^{-i\Delta}}\right){.} $$Thus: $$r=\cfrac{r_1+r_2e^{-i\Delta}}{1+r_1r_2e^{-i\Delta}} $$Substitute $\Delta$, we find:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$r=\cfrac{r_1+r_2\exp\left(-\cfrac{2ikd\sqrt{n^2-n^2_1\sin^2\theta}}{n}\right)}{1+r_1r_2\exp\left(-\cfrac{2ikd\sqrt{n^2-n^2_1\sin^2\theta}}{n}\right)}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$r=\cfrac{r_1+r_2\exp\left(-\cfrac{2ikd\sqrt{n^2-n^2_1\sin^2\theta}}{n}\right)}{1+r_1r_2\exp\left(-\cfrac{2ikd\sqrt{n^2-n^2_1\sin^2\theta}}{n}\right)}{.} $$
 \end{solcard}
 
 \begin{solcard}{C5}{At what value of the plate thickness $d$ is it possible for the reflection coefficient to vanish? Express your answer in terms of $\lambda_1$, $n_1$ and $n$.}{0.70}
 
-At normal incidence, the $s$-polarization and $p$-polarization are equivalent to each other, so we will consider only the $s$-polarized wave. The reflection coefficients $r_1$ and $r_2$ are real, so for the reflection coefficient to be zero, the quantity $e^{-i\Delta}$ must be real. This is possible with: $$2kd=\pi N\Rightarrow d=\cfrac{\lambda N}{4}{.} $$Свяжем величины $\lambda$ and $\lambda_1$: $$\lambda=vT=\cfrac{2\pi c}{\omega n}\Rightarrow \lambda_1n_1=\lambda n{.} $$
+At normal incidence, the $s$-polarization and $p$-polarization are equivalent to each other, so we will consider only the $s$-polarized wave. The reflection coefficients $r_1$ and $r_2$ are real, so for the reflection coefficient to be zero, the quantity $e^{-i\Delta}$ must be real. This is possible with: $$2kd=\pi N\Rightarrow d=\cfrac{\lambda N}{4}{.} $$Relate quantity $\lambda$ and $\lambda_1$: $$\lambda=vT=\cfrac{2\pi c}{\omega n}\Rightarrow \lambda_1n_1=\lambda n{.} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Thus: $$d=\cfrac{\lambda_1n_1N}{4n}{.} $$
+\par\smallskip\noindent\textbf{Answer:} Thus: $$d=\cfrac{\lambda_1n_1N}{4n}{.} $$
 \end{solcard}
 
-\begin{solcard}{C6}{At what values ​​of the refractive index of the plate $n$ is it possible for the reflection coefficient to vanish? Express your answer in terms of $n_1$ and $n_2$.}{0.80}
+\begin{solcard}{C6}{At what values of the refractive index of the plate $n$ is it possible for the reflection coefficient to vanish? Express your answer in terms of $n_1$ and $n_2$.}{0.80}
 
-Let us analyze the case of odd $N$: $$r_1-r_2=0\Rightarrow r_1=\cfrac{n_1-n}{n_1+n}=r_2=\cfrac{n-n_2}{n+n_2}{,} $$hence: $$n_1n+n_1n_2-n^2-n_2n=n_1n-n_1n_2+n^2-nn_2\Rightarrow n=\sqrt{n_1n_2} $$Проаналfromandруем сrayай чётных $N$: $$r_1+r_2=0\Rightarrow n_1n+n_1n_2-n^2-n_2n=-n_1n+n_1n_2-n^2+nn_2\Rightarrow n=0{.} $$Thus, возможен только сrayай нечётных $N$, and в действительности quantity $d$ может for/atнимать только следующие значения: $$d=\cfrac{\lambda(1+2m)}{4}\sqrt{\cfrac{n_1}{n_2}}{.} $$Finally:
+Let us analyze the case of odd $N$: $$r_1-r_2=0\Rightarrow r_1=\cfrac{n_1-n}{n_1+n}=r_2=\cfrac{n-n_2}{n+n_2}{,} $$from which: $$n_1n+n_1n_2-n^2-n_2n=n_1n-n_1n_2+n^2-nn_2\Rightarrow n=\sqrt{n_1n_2} $$Let us analyze the case of even $N$: $$r_1+r_2=0\Rightarrow n_1n+n_1n_2-n^2-n_2n=-n_1n+n_1n_2-n^2+nn_2\Rightarrow n=0{.} $$Thus, possible only case of odd $N$, and in fact quantity $d$ can take only following value: $$d=\cfrac{\lambda(1+2m)}{4}\sqrt{\cfrac{n_1}{n_2}}{.} $$Finally:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$n=\sqrt{n_1n_2} $$
+\par\smallskip\noindent\textbf{Answer:} $$n=\sqrt{n_1n_2} $$
 \end{solcard}
 
 \begin{solcard}{D1}{What is the refractive index $n'$ of the antireflection coating? Express your answer using $n$.}{0.20}
 
 Let's use the result of point $\mathrm{C6}$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$n'=\sqrt{n}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$n'=\sqrt{n}{.} $$
 \end{solcard}
 
 \begin{solcard}{D2}{What is the focal length of the lens $f$? Express your answer using $R$ and $n$}{0.50}
 
-Let us obtain an expression for the focal length of a biconvex lens with radii of curvature of the surface with radii of curvature $R_1$ and $R_2$, made of a substance with a refractive index $n$. Let's use the principle of tautochrony in the paraxial approximation: $$l_{опт}=nh+f=\cfrac{r^2}{2R_1}+n\left(h-\cfrac{r^2}{2R_1}-\cfrac{r^2}{2R_2}\right)+\cfrac{r^2}{2R_2}+f+\cfrac{r^2}{2f}{.} $$From независимости от $r$ we get: $$\cfrac{1}{f}=(n-1)\left(\cfrac{1}{R_1}+\cfrac{1}{R_2}\right){.} $$Since $R_1=R_2=R$:
+Let us obtain an expression for the focal length of a biconvex lens with radii of curvature of the surface with radii of curvature $R_1$ and $R_2$, made of a substance with a refractive index $n$. Let's use the principle of tautochrony in the paraxial approximation: $$l_\text{opt}=nh+f=\cfrac{r^2}{2R_1}+n\left(h-\cfrac{r^2}{2R_1}-\cfrac{r^2}{2R_2}\right)+\cfrac{r^2}{2R_2}+f+\cfrac{r^2}{2f}{.} $$From the independence of $r$ we obtain: $$\cfrac{1}{f}=(n-1)\left(\cfrac{1}{R_1}+\cfrac{1}{R_2}\right){.} $$Since $R_1=R_2=R$:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$f=\cfrac{R}{2(n-1)}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$f=\cfrac{R}{2(n-1)}{.} $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T6_S_EN_assets/fig3.jpg}
@@ -208,9 +207,9 @@ Let us obtain an expression for the focal length of a biconvex lens with radii o
 
 \begin{solcard}{D3}{Determine the force $F$ acting on the lens. Express your answer in terms of $I_0$, $r$, $R$, $n$ and $c$.}{1.00}
 
-The emergence of a force acting on the lens is due to the rotation of the wave front after passing through the lens. Let $p_{x0}$ and $p_x$ be the projections of the photon momentum onto the $x$ axis before and after passing through the lens. Then the momentum $\Delta{p}_x$ transferred by the photon to the lens is: $$\Delta{p}_x=p_{x0}-p_x{.} $$Let wave паgives на линзу на расстоянии $\rho$ от её оси. После прохождения линзы волновой фронт поворачивается на angle $\varphi\approx \rho/f$, therefore we have: $$\Delta{p}_x(\rho)=p_{x0}(1-\cos\varphi)\approx\cfrac{p_{x0}\rho^2}{2f^2}{.} $$Let $n$ – концентрация photonов в падающем на линзу пучке, а $E$ – energy одного photonа. Then force, действующая кольцо с внутренним and внешним radiusами $\rho$ and $\rho+d \rho$ составляет: $$dF_x=n_0c\cdot 2\pi \rho d\rho\cdot \Delta{p}_x(\rho)=\cfrac{\pi n_0p_{x0}c}{f^2}\cdot \rho^3d\rho=\cfrac{\pi n_0E}{f^2}\cdot \rho^3d\rho{.} $$At the same time $I_0=n_0cE$, therefore: $$F_x=\cfrac{\pi I_0}{f^2c}\int\limits_{0}^r\rho^3d\rho=\cfrac{\pi I_0r^4}{4f^2c}{.} $$Substituting $f$, we get:
+The emergence of a force acting on the lens is due to the rotation of the wave front after passing through the lens. Let $p_{x0}$ and $p_x$ be the projections of the photon momentum onto the $x$ axis before and after passing through the lens. Then the momentum $\Delta{p}_x$ transferred by the photon to the lens is: $$\Delta{p}_x=p_{x0}-p_x{.} $$Let a wave falls on the lens at a distance $\rho$ from its axis. After passing through the lens, the wave front rotate on angle $\varphi\approx \rho/f$, therefore have: $$\Delta{p}_x(\rho)=p_{x0}(1-\cos\varphi)\approx\cfrac{p_{x0}\rho^2}{2f^2}{.} $$Let $n$ – concentration photon in fall on lens beam, and $E$ – energy one photon. Then force, act ring with internal and external radius $\rho$ and $\rho+d \rho$ constitute: $$dF_x=n_0c\cdot 2\pi \rho d\rho\cdot \Delta{p}_x(\rho)=\cfrac{\pi n_0p_{x0}c}{f^2}\cdot \rho^3d\rho=\cfrac{\pi n_0E}{f^2}\cdot \rho^3d\rho{.} $$At the same time $I_0=n_0cE$, therefore: $$F_x=\cfrac{\pi I_0}{f^2c}\int\limits_{0}^r\rho^3d\rho=\cfrac{\pi I_0r^4}{4f^2c}{.} $$Substitute $f$, we get:
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$F=\cfrac{\pi r^4I_0(n-1)^2}{R^2c}{.} $$
+\par\smallskip\noindent\textbf{Answer:} $$F=\cfrac{\pi r^4I_0(n-1)^2}{R^2c}{.} $$
 \end{solcard}
 
 \end{document}

@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,7 +32,7 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Construct the exact path of rays in a plano-convex and plano-concave lens. The radii of curvature of surfaces is $R=5~cm$, the refractive index of glass is $n=1.5$. Indicate the point $F'$ of convergence (divergence) of the parallel paraxial beam.}{0.45}
 
-Note that the radius of the lens is 4 cm, the thickness of the lens is 2 cm, and the incident rays are drawn every centimeter from the optical axis of the lens. For a plano-convex (first) and plano-concave (third) lens, refraction occurs on only one surface. The focus position for the first and third lenses is noted using the thin lens formula: $$F = \frac{R}{n-1} = 10~cm.$$ Это distance отсчитывается от изогнутой поверхности. For выпукло-плоской (вторая) линзы refraction происходит ссу на двух поверхностях. Чтобы найти положение focusа, учтём, что такая lens является толстой. После первого преломления rayand внутри стекла будут собираться на расстоянии $\frac{n}{n-1}R=15~cm$ от изогнутой поверхности, that is на расстоянии 13 cm от плоской поверхности. For/At преломлении на плоской поверхности image окажется в $n$ times ближе, that is на расстоянии 8.67 cm. In total, we get focus на расстоянии 10.67 cm от изогнутой поверхности. Чтобы построить refraction rayей, we use транспортир, линейку and закон Снелиуса: $n_1 \sin \alpha = n_2 \sin \beta,$ where $\alpha$ – angle падения, $\beta$ – angle преломления, $n_1$ and $n_2$ are the refractive indices of the media on opposite sides of the boundary.
+Note that the radius of the lens is 4 cm, the thickness of the lens is 2 cm, and the incident rays are drawn every centimeter from the optical axis of the lens. For a plano-convex (first) and plano-concave (third) lens, refraction occurs on only one surface. The focus position for the first and third lenses is noted using the thin lens formula: $$F = \frac{R}{n-1} = 10~cm.$$ This distance is measured from bent surface. For convexly-flat (second) lens refraction occur immediately on two surface. So that find position focus, account for, that such lens be thick. After first refraction ray inside glass be gather on distance $\frac{n}{n-1}R=15~cm$ from bent surface, that is on distance 13 cm from flat surface. For refraction on flat surface image turn out in $n$ times near, that is on distance 8.67 cm. Andthat, obtain focus on distance 10.67 cm from bent surface. So that construct refraction ray, use protractor, ruler and law Snell's: $n_1 \sin \alpha = n_2 \sin \beta,$ where $\alpha$ – angle of incidence, $\beta$ – refraction angle, $n_1$ and $n_2$ are the refractive indices of the media on opposite sides of the boundary.
 
 \begin{figure}[H]
   \centering
@@ -53,21 +52,21 @@ Note that the radius of the lens is 4 cm, the thickness of the lens is 2 cm, and
 
 Based on the results of the constructions, we measure the maximum value of aberration. For convex-flat, the effect of aberrations is less. Below are the results, accurate to tenths of mm, obtained by calculations.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Plano-convex $\delta s'_{\max}= - 51.8~\mathrm{mm}$ Convex-flat $\delta s'_{\max}= - 11.5~\mathrm{mm}$ Plano-concave $\delta s'_{\max}= - 51.8~\mathrm{mm}$
+\par\smallskip\noindent\textbf{Answer:} Plano-convex $\delta s'_{\max}= - 51.8~\mathrm{mm}$ Convex-flat $\delta s'_{\max}= - 11.5~\mathrm{mm}$ Plano-concave $\delta s'_{\max}= - 51.8~\mathrm{mm}$
 \end{solcard}
 
 \begin{solcard}{B1}{What is the focal length $f'$ for a thin plano-convex lens?}{0.25}
 
-For a thin lens $$\frac{1}{f'} = (n-1) \left(\frac{1}{R_1}+\frac{1}{R_2} \right),$$ в нашем сrayае $R_1 = \infty$, $R_2 = R$. From here we get the answer.
+For a thin lens $$\frac{1}{f'} = (n-1) \left(\frac{1}{R_1}+\frac{1}{R_2} \right),$$ in our case $R_1 = \infty$, $R_2 = R$. From here we get the answer.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $f'=\cfrac{R}{n-1}$
+\par\smallskip\noindent\textbf{Answer:} $f'=\cfrac{R}{n-1}$
 \end{solcard}
 
 \begin{solcard}{B2}{For a given lens, find the dependence of the longitudinal spherical aberration $\delta s'$ on the half-width of the beam $h$. Express your answer using $R, n$ and $h$. Write an approximate expression for $\delta s'(h)$ by expanding the answer into a Taylor series of powers $h$ to $h^2$. Construct a schematic graph of the resulting relationship.}{1.50}
 
-According to geometry (Fig. B2) and Snell's law: $$n \sin \alpha = \sin (\alpha+\beta).$$ Let us express углы via/through отрезки and refractive index: $$\alpha = \arcsin \frac{h}{R}, \quad \alpha+\beta = \arcsin \frac{nh}{R}.$$ Distance $l$ вдоль оптической оси от точки преломления до точки пересечения с оптической осью: $$l = h \, \mathrm{ctg} \beta = h \, \mathrm{ctg} \left( \mathrm{arcsin} \left(\frac{n h}{R} \right)- \mathrm{arcsin} \left(\frac{h}{R} \right) \right).$$ Refraction происходит at the point, смещенной на $$\delta x = R-\sqrt{R^2-h^2}.$$ Let us express $\delta s'$: $$\delta s' = l -\delta x -f'.$$ Substituting $l$ and $\delta x$ найденные ранее, substituting $f'$ from B1, we get the answer.
+According to geometry (Fig. B2) and Snell's law: $$n \sin \alpha = \sin (\alpha+\beta).$$ Express angle through segment and refractive index: $$\alpha = \arcsin \frac{h}{R}, \quad \alpha+\beta = \arcsin \frac{nh}{R}.$$ Distance $l$ along optical axis from point refraction to point intersection with optical axis: $$l = h \, \mathrm{ctg} \beta = h \, \mathrm{ctg} \left( \mathrm{arcsin} \left(\frac{n h}{R} \right)- \mathrm{arcsin} \left(\frac{h}{R} \right) \right).$$ Refraction occur in point, shifted on $$\delta x = R-\sqrt{R^2-h^2}.$$ Express $\delta s'$: $$\delta s' = l -\delta x -f'.$$ Substitute $l$ and $\delta x$ find earlier, substitute $f'$ from B1, we get the answer.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Reply for $\delta s'$ $$\delta s'=\cfrac{\sqrt{R^2-n^2h^2}\sqrt{R^2-h^2}+nh^2}{n\sqrt{R^2-h^2}-\sqrt{R^2-n^2h^2}}-\cfrac{nR}{n-1}+\sqrt{R^2-h^2}$$ or $$\delta s'=\frac{n \sqrt{R^2-h^2 n^2}+\sqrt{R^2-h^2}}{n^2-1}-\cfrac{nR}{n-1}+\sqrt{R^2-h^2}$$ or $$h \mathrm{ctg} \left( \mathrm{arcsin} \left(\frac{n h}{R} \right)- \mathrm{arcsin} \left(\frac{h}{R} \right) \right)-\cfrac{nR}{n-1}+\sqrt{R^2-h^2}.$$
+\par\smallskip\noindent\textbf{Answer:} Reply for $\delta s'$ $$\delta s'=\cfrac{\sqrt{R^2-n^2h^2}\sqrt{R^2-h^2}+nh^2}{n\sqrt{R^2-h^2}-\sqrt{R^2-n^2h^2}}-\cfrac{nR}{n-1}+\sqrt{R^2-h^2}$$ or $$\delta s'=\frac{n \sqrt{R^2-h^2 n^2}+\sqrt{R^2-h^2}}{n^2-1}-\cfrac{nR}{n-1}+\sqrt{R^2-h^2}$$ or $$h \mathrm{ctg} \left( \mathrm{arcsin} \left(\frac{n h}{R} \right)- \mathrm{arcsin} \left(\frac{h}{R} \right) \right)-\cfrac{nR}{n-1}+\sqrt{R^2-h^2}.$$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T3_S_EN_assets/fig4.jpg}
@@ -80,76 +79,76 @@ According to geometry (Fig. B2) and Snell's law: $$n \sin \alpha = \sin (\alpha+
 
 \begin{solcard}{B3}{Find the value of transverse spherical aberration $\delta g'$. Express your answer in terms of $\delta s', f'$ and $h$.}{0.50}
 
-From the similarity of triangles (Fig. B2) we obtain $$\frac{h}{l}=\frac{\delta g'}{|\delta s '|}.$$ Считая аберрации малыми $(l=f')$, we express the answer.
+From the similarity of triangles (Fig. B2) we obtain $$\frac{h}{l}=\frac{\delta g'}{|\delta s '|}.$$ Note aberration small $(l=f')$, we express the answer.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} From similarity of triangles: $$\delta g'=|\delta s'|\,\cfrac{h}{f'}$$
+\par\smallskip\noindent\textbf{Answer:} From similarity of triangles: $$\delta g'=|\delta s'|\,\cfrac{h}{f'}$$
 \end{solcard}
 
-\begin{solcard}{B4}{Let us divide the scattering circle into rings of radii $0.2\delta g', 0.4\delta g', 0.6\delta g', 0.8\delta g'$. From what fraction (in \textbackslash{}\%) of the transverse area of ​​the incident beam are the rays collected into the central circle (radius $0.2\delta g'$)? From what fraction (in \textbackslash{}\%) of the transverse area of ​​the incident beam are the rays collected into subsequent rings (between $0.2\delta g'$ and $0.4\delta g'$ and so on, respectively)? What fraction of the area of ​​the scattering circle is occupied by each ring? Tabulate all calculations on your answer sheet. Construct a schematic graph of light intensity versus radial coordinate in the scattering circle.}{1.50}
+\begin{solcard}{B4}{Let us divide the scattering circle into rings of radii $0.2\delta g', 0.4\delta g', 0.6\delta g', 0.8\delta g'$. From what fraction (in \%) of the transverse area of the incident beam are the rays collected into the central circle (radius $0.2\delta g'$)? From what fraction (in \%) of the transverse area of the incident beam are the rays collected into subsequent rings (between $0.2\delta g'$ and $0.4\delta g'$ and so on, respectively)? What fraction of the area of the scattering circle is occupied by each ring? Tabulate all calculations on your answer sheet. Construct a schematic graph of light intensity versus radial coordinate in the scattering circle.}{1.50}
 
-We count the area fractions of each ring: $$0 \div 0.2\delta g' : \quad 0.2^2-0^2 = 0.04 = 4\%;$$ $$0.2\delta g' \div 0.4\delta g' : \quad 0.4^2-0.2^2 = 0.12 = 12\%;$$ $$0.4\delta g' \div 0.6\delta g' : \quad 0.6^2-0.4^2 = 0.20 = 20\%;$$ $$0.6\delta g' \div 0.8\delta g' : \quad 0.8^2-0.6^2 = 0.28 = 28\%;$$ $$0.8\delta g' \div 1.0\delta g' : \quad 1.0^2-0.8^2 = 0.36 = 36\%;$$ From partа B2 we get $|\delta s'| \sim h^2$. Taking into account part B3 we get, что $\delta g' \sim h^3.$ Считаем доли площади колец в падающем пучке: $$0 \div 0.2\delta g' : \quad 0.2^{2/3}-0^{2/3} = 0.34 = 34\%;$$ $$0.2\delta g' \div 0.4\delta g' : \quad 0.4^{2/3}-0.2^{2/3} = 0.20 = 20\%;$$ $$0.4\delta g' \div 0.6\delta g' : \quad 0.6^{2/3}-0.4^{2/3} = 0.17 = 17\%;$$ $$0.6\delta g' \div 0.8\delta g' : \quad 0.8^{2/3}-0.6^{2/3} = 0.15 = 15\%;$$ $$0.8\delta g' \div 1.0\delta g' : \quad 1.0^{2/3}-0.8^{2/3} = 0.14 = 14\%;$$ If сделить долю площади в падающем кольце на долю площади кольца в фокальной плоскости, то we get quantity пропорциональную интенсивности. Поrayается качественно график $I\sim r^{-4/3}$.
+We count the area fractions of each ring: $$0 \div 0.2\delta g' : \quad 0.2^2-0^2 = 0.04 = 4\%;$$ $$0.2\delta g' \div 0.4\delta g' : \quad 0.4^2-0.2^2 = 0.12 = 12\%;$$ $$0.4\delta g' \div 0.6\delta g' : \quad 0.6^2-0.4^2 = 0.20 = 20\%;$$ $$0.6\delta g' \div 0.8\delta g' : \quad 0.8^2-0.6^2 = 0.28 = 28\%;$$ $$0.8\delta g' \div 1.0\delta g' : \quad 1.0^2-0.8^2 = 0.36 = 36\%;$$ From part B2 obtain $|\delta s'| \sim h^2$. Account for part B3 obtain, that $\delta g' \sim h^3.$ Note fraction area ring in fall beam: $$0 \div 0.2\delta g' : \quad 0.2^{2/3}-0^{2/3} = 0.34 = 34\%;$$ $$0.2\delta g' \div 0.4\delta g' : \quad 0.4^{2/3}-0.2^{2/3} = 0.20 = 20\%;$$ $$0.4\delta g' \div 0.6\delta g' : \quad 0.6^{2/3}-0.4^{2/3} = 0.17 = 17\%;$$ $$0.6\delta g' \div 0.8\delta g' : \quad 0.8^{2/3}-0.6^{2/3} = 0.15 = 15\%;$$ $$0.8\delta g' \div 1.0\delta g' : \quad 1.0^{2/3}-0.8^{2/3} = 0.14 = 14\%;$$ If divide fraction area in fall ring on fraction area ring in focal plane, that obtain quantity proportional intensity. We obtain qualitatively graph $I\sim r^{-4/3}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Ring Beam fraction Fraction of circle area 0.0 – 0.2 34\% 4\% 0.2 – 0.4 20\% 12\% 0.4 – 0.6 17\% 20\% 0.6 – 0.8 15\% 28\% 0.8 – 1.0 14\% 36\%
+\par\smallskip\noindent\textbf{Answer:} Ring Beam fraction Fraction of circle area 0.0 – 0.2 34\% 4\% 0.2 – 0.4 20\% 12\% 0.4 – 0.6 17\% 20\% 0.6 – 0.8 15\% 28\% 0.8 – 1.0 14\% 36\%
 \end{solcard}
 
 \begin{solcard}{C1}{Using the sine theorem for triangles $MSC$ and $MS'C$, as well as Snell’s law of refraction, obtain an invariant of the form $n\cdot f(r, s, p)=n'\cdot f(r, s', p')=\mathrm{inv}$.}{0.30}
 
-Theorem of sines for the triangle $MSC$ (see Fig. 2 from the condition): $$\frac{\sin \theta}{p} = \frac{\sin \angle SMC}{r-s}.$$ Теорема синусов for треangleьника $MS'C$: $$\frac{\sin \theta}{p'} = \frac{\sin \angle S'MC}{r-s'}.$$ Закон преломления: $$n \sin \angle SMC = n' \sin \angle S'MC.$$ Let us express from теоремы синусов $\sin \angle SMC$ and $\sin \angle S'MC$, substitute it into the law of refraction, we get invariant
+Theorem of sines for the triangle $MSC$ (see Fig. 2 from the condition): $$\frac{\sin \theta}{p} = \frac{\sin \angle SMC}{r-s}.$$ Theorem sine for triangle $MS'C$: $$\frac{\sin \theta}{p'} = \frac{\sin \angle S'MC}{r-s'}.$$ Law refraction: $$n \sin \angle SMC = n' \sin \angle S'MC.$$ Express from theorem sine $\sin \angle SMC$ and $\sin \angle S'MC$, substitute it into the law of refraction, we get invariant
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{n(r-s)}{p}=\mathrm{inv}$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{n(r-s)}{p}=\mathrm{inv}$
 \end{solcard}
 
 \begin{solcard}{C2}{Using the cosine theorem in triangle $MSC$, go invariantly from magnitude $p$ to angle $\theta$. Assuming the angle $\theta$ to be small, expand the factors in the form of roots in a Taylor series up to the first term with a non-zero degree $\theta$. Divide the resulting approximate value by “$-r$” to obtain the reduced value of the invariant.}{0.10}
 
-Cosine theorem $$p^2 = r^2 + (r-s)^2 - 2 r (r-s) \cos \theta.$$ Using сложение косинуса and полный квадрат $$p^2 = (r - (r-s))^2 + 2 r(r-s) \cdot \frac{ \theta^2 }{ 2}.$$ Подставляем в инвариант, we get: $$\cfrac{n(r-s)}{\sqrt{s^2+r(r-s)\theta^2}}=\cfrac{n(r-s)}{s} \left( 1 - \frac{r(r-s)}{2s^2} \right).$$ Разделим на «$-r$”, we get the answer.
+Cosine theorem $$p^2 = r^2 + (r-s)^2 - 2 r (r-s) \cos \theta.$$ Use expansion cosine and total square $$p^2 = (r - (r-s))^2 + 2 r(r-s) \cdot \frac{ \theta^2 }{ 2}.$$ Substitute in invariant, obtain: $$\cfrac{n(r-s)}{\sqrt{s^2+r(r-s)\theta^2}}=\cfrac{n(r-s)}{s} \left( 1 - \frac{r(r-s)}{2s^2} \right).$$ Divide on «$-r$”, we get the answer.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\cfrac{n(r-s)}{\sqrt{s^2+r(r-s)\theta^2}}=\mathrm{inv}$ $n\left(\cfrac{1}{r}-\cfrac{1}{s}\right)\left(1-\cfrac{r(r-s)\theta^2}{2s^2}\right)=\mathrm{inv}$
+\par\smallskip\noindent\textbf{Answer:} $\cfrac{n(r-s)}{\sqrt{s^2+r(r-s)\theta^2}}=\mathrm{inv}$ $n\left(\cfrac{1}{r}-\cfrac{1}{s}\right)\left(1-\cfrac{r(r-s)\theta^2}{2s^2}\right)=\mathrm{inv}$
 \end{solcard}
 
 \begin{solcard}{C3}{Having written the invariant from point C2 for paraxial rays before and after refraction, show the invariance of the quantity $Q(s_0)$.}{0.10}
 
 Let us put $\theta = 0$ in the invariant of clause C2.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $n\left(\cfrac{1}{r}-\cfrac{1}{s_0}\right)=n'\left(\cfrac{1}{r}-\cfrac{1}{s_0'}\right)=Q(s)=\mathrm{inv}$
+\par\smallskip\noindent\textbf{Answer:} $n\left(\cfrac{1}{r}-\cfrac{1}{s_0}\right)=n'\left(\cfrac{1}{r}-\cfrac{1}{s_0'}\right)=Q(s)=\mathrm{inv}$
 \end{solcard}
 
 \begin{solcard}{C4}{The left-hand side of the invariant obtained in C2 is a function of $f$ of $s$ and $\theta$. Find the value of $f(s,\theta)-f(s_0,\theta)$. Consider $\delta s$ and $\theta$ to be small parameters.}{0.10}
 
-The invariant is a function of $s$ and $\theta$: $$f(s,\theta) = n\left(\cfrac{1}{r}-\cfrac{1}{s}\right)\left(1-\cfrac{r(r-s)\theta^2}{2s^2}\right).$$ We find value сницы, учитываем что $\theta$ одинаковый: $$f(s,\theta)-f(s_0,\theta) = \frac{\partial f}{\partial s}ds.$$ Since $\theta$ тоже малая quantity, то $$\frac{\partial f}{\partial s} = n \frac{1}{s^2}$$
+The invariant is a function of $s$ and $\theta$: $$f(s,\theta) = n\left(\cfrac{1}{r}-\cfrac{1}{s}\right)\left(1-\cfrac{r(r-s)\theta^2}{2s^2}\right).$$ Find value difference, account for that $\theta$ identical: $$f(s,\theta)-f(s_0,\theta) = \frac{\partial f}{\partial s}ds.$$ Since $\theta$ also small quantity, that $$\frac{\partial f}{\partial s} = n \frac{1}{s^2}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\frac{n \delta s}{s_0^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$\frac{n \delta s}{s_0^2}$$
 \end{solcard}
 
 \begin{solcard}{C5}{Using the results of the previous paragraphs, expressing the small angle $\theta$ in terms of the radius of curvature of the surface and the small height $h$, obtain the desired relationship: $$ \cfrac{n'\delta s'}{s'^2_0}-\cfrac{n\delta s}{s^2_0}=-\cfrac{h^2}{2} Q^2(s_0)\left(\cfrac{1}{n's'_0}-\cfrac{1}{ns_0}\right). $$}{0.20}
 
-Let's express the angle $\theta$ through $h$: $$\theta = \frac{h}{r}.$$ Let us represent expression via/through $Q(s)$: $$\cfrac{r(r-s)\theta^2}{2s^2}=\cfrac{(r-s)h^2}{2s^2 r}=n\left(\frac{1}{s}-\frac{1}{r} \right) \frac{h^2}{2ns}=Q(s) \frac{h^2}{2ns}.$$ Следующие величины инвариантны $$f(s, \theta) = f(s', \theta),$$ $$f(s_0, \theta) + \frac{n \delta s_0}{s_0^2} = f(s'_0, \theta) + \frac{n' \delta s'}{{s'}_0^2},$$ $⟦11 ⟧$ $$ Q(s_0) - \frac{h^2}{2ns_0}Q^2(s_0) + \frac{n \delta s}{s_0^2} = Q(s'_0) - \frac{h^2}{2n's'_0}Q^2(s'_0) + \frac{n' \delta s'}{{s'}_0^2}$$ Пользуемся тем, что $Q(s_0)=Q(s'_0)$, we get expression $$ \cfrac{n'\delta s'}{s'^2_0}-\cfrac{n\delta s}{s^2_0}=-\cfrac{h^2}{2} Q^2(s_0)\left(\cfrac{1}{n's'_0}-\cfrac{1}{ns_0}\right). $$
+Let's express the angle $\theta$ through $h$: $$\theta = \frac{h}{r}.$$ Representable expression through $Q(s)$: $$\cfrac{r(r-s)\theta^2}{2s^2}=\cfrac{(r-s)h^2}{2s^2 r}=n\left(\frac{1}{s}-\frac{1}{r} \right) \frac{h^2}{2ns}=Q(s) \frac{h^2}{2ns}.$$ Following quantity invariant $$f(s, \theta) = f(s', \theta),$$ $$f(s_0, \theta) + \frac{n \delta s_0}{s_0^2} = f(s'_0, \theta) + \frac{n' \delta s'}{{s'}_0^2},$$ $$ $$ $$ Q(s_0) - \frac{h^2}{2ns_0}Q^2(s_0) + \frac{n \delta s}{s_0^2} = Q(s'_0) - \frac{h^2}{2n's'_0}Q^2(s'_0) + \frac{n' \delta s'}{{s'}_0^2}$$ We use the more, that $Q(s_0)=Q(s'_0)$, obtain expression $$ \cfrac{n'\delta s'}{s'^2_0}-\cfrac{n\delta s}{s^2_0}=-\cfrac{h^2}{2} Q^2(s_0)\left(\cfrac{1}{n's'_0}-\cfrac{1}{ns_0}\right). $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} CTD
+\par\smallskip\noindent\textbf{Answer:} CTD
 \end{solcard}
 
-\begin{solcard}{C6}{Show that the aberrations of the object and the image after the $k$th refractive surface are related by the relation: $$ n_k'\, \delta s_k' \, \alpha_k'^2 - n_1\, \delta s_1\, \alpha_1^2=-\cfrac{1}{2}\sum_{i=1}^{k} h_i^4\, Q^2_i(s)\, \left(\cfrac{1}{n'_{i}s'_{i}}-\cfrac{1}{n_is_i}\right). $$ Иными словами, for вычисления суммарной аберрации нужно по всем поверхностям сложить правые части доказанного соотношения, умноженного на $h_i^2$.}{0.20}
+\begin{solcard}{C6}{Show that the aberrations of the object and the image after the $k$th refractive surface are related by the relation: $$ n_k'\, \delta s_k' \, \alpha_k'^2 - n_1\, \delta s_1\, \alpha_1^2=-\cfrac{1}{2}\sum_{i=1}^{k} h_i^4\, Q^2_i(s)\, \left(\cfrac{1}{n'_{i}s'_{i}}-\cfrac{1}{n_is_i}\right). $$ Other words, for calculation total aberration needed by all surface add right part prove relation, multiply on $h_i^2$.}{0.20}
 
-Let's move from $s_i$ to the angles on the left side of the formula from C5: $$\alpha_i = \frac{h_i}{s_i}, \quad \alpha '=\frac{h_i}{s_i'}.$$ For/At прохождении rayа между преломляющими поверхностями меняется distance от rayа до оптической оси, однако, сохраняется angle наклона: $$\alpha_i'=\alpha_{i+1},$$ $$n'_i = n_{i+1},$$ $$\delta s'_i = \delta s_{i+1}.$$ Складывая такие выражения $$ n_i'\, \delta s_i' \, \alpha_i'^2 - n_i\, \delta s_i\, \alpha_i^2=-\cfrac{h_i^4}{2} Q_i^2(s_i)\left(\cfrac{1}{n'_is'_i}-\cfrac{1}{n_i s_i}\right). $$ on the left side there are only two terms left: one corresponds to the entry of rays into the optical system, the other - entry from it. This makes it possible to calculate aberrations for complex systems.
+Let's move from $s_i$ to the angles on the left side of the formula from C5: $$\alpha_i = \frac{h_i}{s_i}, \quad \alpha '=\frac{h_i}{s_i'}.$$ For passage ray between refract surface change distance from ray to optical axis, however, be conserved angle inclination: $$\alpha_i'=\alpha_{i+1},$$ $$n'_i = n_{i+1},$$ $$\delta s'_i = \delta s_{i+1}.$$ Add such expression $$ n_i'\, \delta s_i' \, \alpha_i'^2 - n_i\, \delta s_i\, \alpha_i^2=-\cfrac{h_i^4}{2} Q_i^2(s_i)\left(\cfrac{1}{n'_is'_i}-\cfrac{1}{n_i s_i}\right). $$ on the left side there are only two terms left: one corresponds to the entry of rays into the optical system, the other - entry from it. This makes it possible to calculate aberrations for complex systems.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} CTD
+\par\smallskip\noindent\textbf{Answer:} CTD
 \end{solcard}
 
 \begin{solcard}{D1}{Find the spherical aberration $\delta s_2'$ of a thin converging lens for an incident parallel beam of light. Apply the result of step C6 for two refractive surfaces and the thin lens formula, leaving the dependence only on the radius of curvature of the first surface (where the original beam of light falls). Express your answer in terms of the refractive index $n$ and the reciprocals $\rho=1/r$ and $\varphi=1/f'$.}{2.00}
 
-We will use the sign convention as in part C. Then $$s_1 = \infty, \quad s'_2 = -f.$$ Положение изображения после первого преломления: $$s'_1=s_2 = r \frac{n}{n-1}.$$ Formula тонкой линзы позволяет найти radius кривизны $r_2$ второй поверхности for/at заданном focusе $f$ and radiusе первой поверхности $r$: $$\frac{1}{f} = (n-1)\left( -\frac{1}{r} + \frac{1}{r_2} \right).$$ Since lens тонкая, то $h_1= h_2=h$. Левая часть формулы C6: $$n_2'\, \delta s_2' \, \alpha_2'^2 - n_1\, \delta s_1\, \alpha_1^2 = \delta s_2' \, \left( \frac{h}{f} \right)^2.$$ $$Q_1=\frac{1}{r} = \rho.$$ $$ Q_2 =  \frac{1}{r_2} - \frac{1}{-f} = \frac{n}{n-1}\varphi + \rho.$$ Собираем всё вместе: $$\delta s_2' = -\frac{h^2}{2 \varphi^2} \left( Q_1^2\frac{n-1}{n^2}\rho + Q_2^2 \left(-\varphi -\frac{n-1}{n^2}\rho \right) \right)$$ we get the answer.
+We will use the sign convention as in part C. Then $$s_1 = \infty, \quad s'_2 = -f.$$ Position image after first refraction: $$s'_1=s_2 = r \frac{n}{n-1}.$$ Formula thin lens allows find radius curvature $r_2$ second surface for define focus $f$ and radius first surface $r$: $$\frac{1}{f} = (n-1)\left( -\frac{1}{r} + \frac{1}{r_2} \right).$$ Since lens thin, that $h_1= h_2=h$. Left part formula C6: $$n_2'\, \delta s_2' \, \alpha_2'^2 - n_1\, \delta s_1\, \alpha_1^2 = \delta s_2' \, \left( \frac{h}{f} \right)^2.$$ $$Q_1=\frac{1}{r} = \rho.$$ $$ Q_2 =  \frac{1}{r_2} - \frac{1}{-f} = \frac{n}{n-1}\varphi + \rho.$$ Assemble still together: $$\delta s_2' = -\frac{h^2}{2 \varphi^2} \left( Q_1^2\frac{n-1}{n^2}\rho + Q_2^2 \left(-\varphi -\frac{n-1}{n^2}\rho \right) \right)$$ we get the answer.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\delta s_2'=\cfrac{h^2}{2}\left[\cfrac{\rho^2}{\varphi}\cfrac{n+2}{n}+\rho\,\cfrac{2n+1}{n-1}+\varphi\,\cfrac{n^2}{(n-1)^2} \right]$
+\par\smallskip\noindent\textbf{Answer:} $\delta s_2'=\cfrac{h^2}{2}\left[\cfrac{\rho^2}{\varphi}\cfrac{n+2}{n}+\rho\,\cfrac{2n+1}{n-1}+\varphi\,\cfrac{n^2}{(n-1)^2} \right]$
 \end{solcard}
 
 \begin{solcard}{D2}{Find the value of $\rho^*$ at which the spherical aberration $\delta s_2'$ is minimal. Express your answer using $n$ and $\varphi$.}{0.50}
 
-The expression in square brackets in D1 is a parabola with respect to $\rho$, the upward branch. The minimum aberration (modulo) will correspond to the vertex. From this we get the value for $\rho^*$. Note that these arguments are correct only when the parabola does not intersect the horizontal axis. After all, if it crosses, then generally speaking you can get zero aberration. Let's assume it does. Then the discriminant must be non-negative: $$D=\frac{1-4 n}{(n-1)^2}\ge0,$$ $$n\le1/4.$$ Но for собирающей линзы $n>1$, therefore, in reality the parabola does not intersect the horizontal axis in our conditions.
+The expression in square brackets in D1 is a parabola with respect to $\rho$, the upward branch. The minimum aberration (modulo) will correspond to the vertex. From this we get the value for $\rho^*$. Note that these arguments are correct only when the parabola does not intersect the horizontal axis. After all, if it crosses, then generally speaking you can get zero aberration. Let's assume it does. Then the discriminant must be non-negative: $$D=\frac{1-4 n}{(n-1)^2}\ge0,$$ $$n\le1/4.$$ But for assemble lens $n>1$, therefore, in reality the parabola does not intersect the horizontal axis in our conditions.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $\rho^*=-\cfrac{\varphi}{2}\,\cfrac{2n+1}{n-1}\,\cfrac{n}{n+2}$
+\par\smallskip\noindent\textbf{Answer:} $\rho^*=-\cfrac{\varphi}{2}\,\cfrac{2n+1}{n-1}\,\cfrac{n}{n+2}$
 \end{solcard}
 
 \begin{solcard}{D3}{Calculate the radii of curvature of the lens surfaces. Draw (qualitatively) your calculated lens on the answer sheet.}{0.50}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $R_1=-5.83~cm, R_2=+35~cm$, i.e. the lens is doubly convex, and the smaller radius of curvature faces the direction of the incident light beam.
+\par\smallskip\noindent\textbf{Answer:} $R_1=-5.83~cm, R_2=+35~cm$, i.e. the lens is doubly convex, and the smaller radius of curvature faces the direction of the incident light beam.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T3_S_EN_assets/fig6.jpg}
@@ -165,9 +164,9 @@ The expression in square brackets in D1 is a parabola with respect to $\rho$, th
 
 \begin{solcard}{E1}{In what direction and at what distance should the observation plane be shifted from the focal plane so that the scattering circle is of minimum size?}{1.50}
 
-The fact from part B is used that the aberration is quadratic in the distance of the beam from the optical axis $h$: $$\delta s = \frac{h^2}{\varepsilon}, \quad \delta s' = \frac{H^2}{\varepsilon},$$ where $\varepsilon$ – некий coefficient (смерности длины). Here $H$ – radius линзы (максимально удалённый ray), $h$ – произвольный ray. Similarly, $\delta s'$ – максимальная аберрация, $\delta s$ – точка пересечения оптической оси rayем $h$. If что тут $\delta s$ and $\delta s'$ положительные, отчитываются от focusа в сторону линзы. Distance $r$ от оси до точки rayа на расстоянии $x$ от focusа, который до преломления идёт на расстоянии $h$ от оси можно найти from подобия (рис. E1): $$ \frac{r}{x-\delta s} = \frac{h}{f}. $$ Поrayается что $r$ есть function плоскости наблюдения $x$ and rayа $h$: $$r(x, h) =\frac{1}{f}\left (xh - \frac{h^3}{\varepsilon}\right).$$ We find, for/at каком $ h$ for/at некотором фиксированном $x$ будет максимум $$h_1 = \sqrt{\frac{\varepsilon}{3}}x^{1/2}.$$ Максимальный radius пучка в зависимости от плоскости наблюдения $$r_{\mathrm{max}}(x) = \frac{2 \varepsilon^{1/2} x^{3/2}}{3^{3/2}f}.$$ Это поrayается некоторая огибающая, которую мы we get, смотря на rayand, которые не пересекают оптическую ось. Чем ближе к focusу, тем меньше смер кружка, который дают эти rayand. Однако, ещё есть rayand, которые пересекают оптическую ось and for/at for/atближении к focusу увеличивают смер кружка. Зависимость расстояния от оси до точки rayа for крайнего противоположного rayа от координаты $$y(x) = \frac{H}{f}(\delta s' - x).$$ Минимальный кружок будет there, where эти эффекты equal $r_{\mathrm{max}}(x) = y(x)$: $$\frac{2 \varepsilon^{1/2} x^{3/2}}{3^{3/2}f} = \frac{H}{f}(\delta s' - x),$$ $$\frac{2  }{3^{3/2}} \left( \frac{x}{\delta s'} \right)^{3/2} = \left(1 - \frac{x}{\delta s'} \right).$$ Решая это equation, we get answer $$x = \frac{3}{4} \delta s'.$$
+The fact from part B is used that the aberration is quadratic in the distance of the beam from the optical axis $h$: $$\delta s = \frac{h^2}{\varepsilon}, \quad \delta s' = \frac{H^2}{\varepsilon},$$ where $\varepsilon$ – some coefficient (dimensions length). Here $H$ – radius lens (maximally distant ray), $h$ – arbitrary ray. Similarly, $\delta s'$ – maximum aberration, $\delta s$ – point intersection optical axis ray $h$. If that here $\delta s$ and $\delta s'$ positive, are measured from focus in side lens. Distance $r$ from axis to point ray on distance $x$ from focus, which to refraction goes on distance $h$ from axis one can find from similarity (fig. E1): $$ \frac{r}{x-\delta s} = \frac{h}{f}. $$ We obtain that $r$ is function plane observation $x$ and ray $h$: $$r(x, h) =\frac{1}{f}\left (xh - \frac{h^3}{\varepsilon}\right).$$ Find, for what $ h$ for some record $x$ be maximum $$h_1 = \sqrt{\frac{\varepsilon}{3}}x^{1/2}.$$ Maximum radius beam in dependence from plane observation $$r_{\mathrm{max}}(x) = \frac{2 \varepsilon^{1/2} x^{3/2}}{3^{3/2}f}.$$ This be obtained some envelope, which we obtain, looking on ray, which not intersect optical axis. The near to focus, the more less size mug, which give this ray. However, still is ray, which intersect optical axis and for approximation to focus increase size mug. Dependence distance from axis to point ray for extreme opposite ray from coordinate $$y(x) = \frac{H}{f}(\delta s' - x).$$ Minimum circle be there, where this effect equal $r_{\mathrm{max}}(x) = y(x)$: $$\frac{2 \varepsilon^{1/2} x^{3/2}}{3^{3/2}f} = \frac{H}{f}(\delta s' - x),$$ $$\frac{2  }{3^{3/2}} \left( \frac{x}{\delta s'} \right)^{3/2} = \left(1 - \frac{x}{\delta s'} \right).$$ Solve this equation, obtain answer $$x = \frac{3}{4} \delta s'.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} To the lens at a distance $\cfrac{3}{4}|\delta s'|$.
+\par\smallskip\noindent\textbf{Answer:} To the lens at a distance $\cfrac{3}{4}|\delta s'|$.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T3_S_EN_assets/fig8.jpg}
@@ -176,9 +175,9 @@ The fact from part B is used that the aberration is quadratic in the distance of
 
 \begin{solcard}{E2}{Draw a schematic graph of light intensity versus radial coordinate in the minimum scattering circle. To do this, follow steps similar to point B4.}{1.50}
 
-Let us first answer the question: how does the radius of the circle ($r$) in the E1 plane relate to the radius of the circle ($h$) in the beam incident on the lens? From the previous paragraph it turns out that they are connected as follows: $$r = h |3-4h^2|,$$ here $r$ – отнормировано на maximum radius пятна $ \left( \frac{1}{4} \frac{\delta s' H}{f} \right)$ в рассматриваемой плоскости, $h$ – на radius пучка $H$. В общем сrayае одному radiusу в плоскости наблюдения соответсвует целых три radiusа в падающем пучке. Доля площади кружка оказывается такой же, как and в прошлый times. Чтобы найти долю пучка, нужно сложить долю площади трех колец, that is величины вида $h_2^2-h_1^2$. For нахождения $h_1$ and $h_2$ of each ring you need to solve an equation of the third degree.
+Let us first answer the question: how does the radius of the circle ($r$) in the E1 plane relate to the radius of the circle ($h$) in the beam incident on the lens? From the previous paragraph it turns out that they are connected as follows: $$r = h |3-4h^2|,$$ here $r$ – is normalized on maximum radius spot $ \left( \frac{1}{4} \frac{\delta s' H}{f} \right)$ in consider plane, $h$ – on radius beam $H$. in general case one radius in plane observation corresponds integer three radius in fall beam. Fraction area mug turn out such same, as and in previous times. So that find fraction beam, needed add fraction area three ring, that is quantity form $h_2^2-h_1^2$. For finding $h_1$ and $h_2$ of each ring you need to solve an equation of the third degree.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} Ring Beam fraction Fraction of circle area Intensity 0.0 – 0.2 12\% 4\% 3.01 0.2 – 0.4 13\% 12\% 1.11 0.4 – 0.6 15\% 20\% 0.76 0.6 – 0.8 19\% 28\% 0.67 0.8 – 1.0 41\% 36\% 1.13
+\par\smallskip\noindent\textbf{Answer:} Ring Beam fraction Fraction of circle area Intensity 0.0 – 0.2 12\% 4\% 3.01 0.2 – 0.4 13\% 12\% 1.11 0.4 – 0.6 15\% 20\% 0.76 0.6 – 0.8 19\% 28\% 0.67 0.8 – 1.0 41\% 36\% 1.13
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T3_S_EN_assets/fig9.jpg}

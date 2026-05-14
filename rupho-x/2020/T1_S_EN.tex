@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,13 +32,13 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Determine at what ratio between $h$ and $\alpha$ after impact the ball will move without slipping.}{1.00}
 
-The horizontal impulse imparted to the ball is equal to $\cos\alpha\int F(t) dt=mv$, where $F$ is the impact force. On the other hand, the reported angular momentum about the center of mass is $$ \frac{2}{5} m R^{2} \omega=\left((h-R) \cos \alpha-\sqrt{R^{2}-(h-R)^{2}} \sin \alpha\right) \int F(t) dt $$ In the case of отсутствия проскальзывания $v=\omega R$, так что we have соratio $$ \frac{2}{5}=\frac{h-R}{R}-\sqrt{1-\frac{(h-R)^{2}}{R^{2}}} \operatorname{tg} \alpha $$
+The horizontal impulse imparted to the ball is equal to $\cos\alpha\int F(t) dt=mv$, where $F$ is the impact force. On the other hand, the reported angular momentum about the center of mass is $$ \frac{2}{5} m R^{2} \omega=\left((h-R) \cos \alpha-\sqrt{R^{2}-(h-R)^{2}} \sin \alpha\right) \int F(t) dt $$ In the case of no slipping $v = \omega R$, thus that have relation $$ \frac{2}{5}=\frac{h-R}{R}-\sqrt{1-\frac{(h-R)^{2}}{R^{2}}} \operatorname{tg} \alpha $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \frac{2}{5}=\frac{h-R}{R}-\sqrt{1-\frac{(h-R)^{2}}{R^{2}}} \operatorname{tg} \alpha $$
+\par\smallskip\noindent\textbf{Answer:} $$ \frac{2}{5}=\frac{h-R}{R}-\sqrt{1-\frac{(h-R)^{2}}{R^{2}}} \operatorname{tg} \alpha $$
 \end{solcard}
 
 \begin{solcard}{A2}{Draw a (qualitative) graph of $\alpha(h/R)$ showing the points corresponding to $\alpha=0$ and $h=R$.}{0.50}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \begin{array}{l} \alpha=0\implies h=\frac{7 R}{5} \\ h=R \implies \alpha=-\operatorname{arctg} \frac{2}{5} \end{array} $$
+\par\smallskip\noindent\textbf{Answer:} $$ \begin{array}{l} \alpha=0\implies h=\frac{7 R}{5} \\ h=R \implies \alpha=-\operatorname{arctg} \frac{2}{5} \end{array} $$
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T1_S_EN_assets/fig1.jpg}
@@ -48,37 +47,47 @@ The horizontal impulse imparted to the ball is equal to $\cos\alpha\int F(t) dt=
 
 \begin{solcard}{B1}{Find the speeds of the balls after expansion (modules and directions).}{1.00}
 
-The force acting between the balls is directed at their point of contact along the line connecting the centers at the moment of contact, that is, at an angle $\phi=\arcsin \frac{b}{2 R}$ to the direction of movement. It follows that the speed imparted to the second ball is also directed along this straight line. Then the ZSI together with the ZSE are given for the speeds of the balls: cue ball: $$\vec{v}_{c}=\left(\begin{array}{c}-v \sin \phi \cos \phi \\ v \sin ^{2} \phi\end{array}\right),$$ второй ball/sphere: $$\vec{v}_{o}=\left(\begin{array}{c}v \sin \phi \cos \phi \\ v \cos ^{2} \phi\end{array}\right).$$ I.e. $\left|\vec{v}_{c}\right|=v \sin \phi,\left|\vec{v}_{o}\right|=v \cos \phi$
+The force acting between the balls is directed at their point of contact along the line connecting the centers at the moment of contact, that is, at an angle $\phi=\arcsin \frac{b}{2 R}$ to the direction of movement. It follows that the speed imparted to the second ball is also directed along this straight line. Then the ZSI together with the ZSE are given for the speeds of the balls: cue ball: $$\vec{v}_{c}=\left(\begin{array}{c}\begin{array}{c}-v \sin \phi \cos \phi \\ v \sin ^{2} \phi\end{array}\end{array}\right),\quad\vec{v}_{o}=\left(\begin{array}{c}\begin{array}{c}v \sin \phi \cos \phi \\ v \cos ^{2} \phi\end{array}\end{array}\right).$$ thus, $\left|\vec{v}_{c}\right|=v \sin \phi,\left|\vec{v}_{o}\right|=v \cos \phi$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\left|\vec{v}_{c}\right|=v\,\frac{b}{2 R},\left|\vec{v}_{o}\right|=v\sqrt{1-\cfrac{b^2}{4R^2}}$$
+\par\smallskip\noindent\textbf{Answer:} $$\left|\vec{v}_{c}\right|=v\,\frac{b}{2 R},\left|\vec{v}_{o}\right|=v\sqrt{1-\cfrac{b^2}{4R^2}}$$
 \end{solcard}
 
 \begin{solcard}{B2}{What angle does the speed of the balls form after flying apart in such a model?}{0.50}
 
 The speed of the 2 ball is directed at an angle $\phi$ to the original direction of movement, and the cue ball is directed at an angle $\pi/2-\phi$. The total angle between the speeds of the balls is $\pi/2$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\pi/2$$
+\par\smallskip\noindent\textbf{Answer:} $$\pi/2$$
 \end{solcard}
 
 \begin{solcard}{B3}{Let's consider an auxiliary problem: a ball on a horizontal table at the initial moment has a translational velocity $\vec{v}=\begin{pmatrix} v_x \\ v_y \end{pmatrix}$ and an angular velocity $\vec\omega=\begin{pmatrix} \omega_x \\ \omega_y \end{pmatrix}$ (vectors $\vec v$ and $\vec\omega$ lie in the plane of the table). There is friction with the surface, which stops as soon as slippage disappears. What will be the steady speed of the ball (modulus and direction)?}{1.50}
 
-The angular momentum relative to the point of contact at the initial moment is equal to $$ \vec{L}=\vec{L}_{\text {оцм }}+\vec{L}_{\text {цм }}=\frac{2}{5} m R^{2}\left(\begin{array}{c} \omega_{x} \\ \omega_{y} \end{array}\right)+m R\left(\begin{array}{c} -v_{y} \\ v_{x} \end{array}\right) $$ После установления движения он equals $$ \vec{L}=\frac{7}{5} m R\left(\begin{array}{c} -u_{y} \\ u_{x} \end{array}\right) $$ Внешних momentов относительно точки касания не действует and она движется vaporаллельно центру масс, так что angular momentum относительно нее сохраняется. In total мы we find установившуюся velocity $$ \vec{u}=\left(\begin{array}{l} u_{x} \\ u_{y} \end{array}\right)=\left(\begin{array}{l} \cfrac{5}{7} v_{x}+\cfrac{2}{7} R \omega_{y} \\ \cfrac{5}{7} v_{y}-\cfrac{2}{7} R \omega_{x} \end{array}\right) $$
+The angular momentum relative to the point of contact at the initial moment is equal to $$ \vec{L}=\vec{L}_\text{rel}+\vec{L}_\text{cm}=\frac{2}{5} m R^{2}\left(\begin{array}{c} \omega_{x} \\ \omega_{y} \end{array}\right)+m R\left(\begin{array}{c} -v_{y} \\ v_{x} \end{array}\right) $$ After establishment motion it equal $$ \vec{L}=\frac{7}{5} m R\left(\begin{array}{c} -u_{y} \\ u_{x} \end{array}\right) $$ External moment about the contact point does not act and it move in parallel center mass, thus that angular momentum relatively it be conserved. That is, we find the established velocity $$ \vec{u}=\left(\[
+\begin{array}{l} u_{x} \\ u_{y} \end{array}
+\]\right)=\left(\[
+\begin{array}{l} \cfrac{5}{7} v_{x}+\cfrac{2}{7} R \omega_{y} \\ \cfrac{5}{7} v_{y}-\cfrac{2}{7} R \omega_{x} \end{array}
+\]\right) $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \vec{u}=\left(\begin{array}{l} \cfrac{5}{7} v_{x}+\cfrac{2}{7} R \omega_{y} \\ \cfrac{5}{7} v_{y}-\cfrac{2}{7} R \omega_{x} \end{array}\right) $$
+\par\smallskip\noindent\textbf{Answer:} $$ \vec{u}=\left(\[
+\begin{array}{l} \cfrac{5}{7} v_{x}+\cfrac{2}{7} R \omega_{y} \\ \cfrac{5}{7} v_{y}-\cfrac{2}{7} R \omega_{x} \end{array}
+\]\right) $$
 \end{solcard}
 
 \begin{solcard}{B4}{Let's go back to the collision of two balls; let the cue ball move without slipping before the impact.  At what angles to the initial velocity are the steady-state velocities of the balls now directed?}{0.50}
 
-The speeds of the balls immediately after impact are known: cue ball: $$ \vec{v}_{c}=\left(\begin{array}{c} -v \sin \phi \cos \phi \\ v \sin ^{2} \phi \end{array}\right), \vec{\omega}_{c}=\left(\begin{array}{c} -v / R \\ 0 \end{array}\right) $$ второй ball/sphere: $$ \vec{v}_{o}=\left(\begin{array}{c} v \sin \phi \cos \phi \\ v \cos ^{2} \phi \end{array}\right), \vec{\omega}_{o}=\overrightarrow{0} $$ Then установившиеся скорости: бandcurrent: $$ \vec{u}_{c}=\left(\begin{array}{l} -\cfrac{5}{7} v \sin \phi \cos \phi \\ \cfrac{5}{7} v \sin ^{2} \phi+\cfrac{2}{7} v \end{array}\right) $$ второй ball/sphere: $$ \vec{u}_{o}=\frac{5}{7}\left(\begin{array}{c} v \sin \phi \cos \phi \\ v \cos ^{2} \phi \end{array}\right) $$
+The speeds of the balls immediately after impact are known: cue ball: $$ \vec{v}_{c}=\left(\begin{array}{c} -v \sin \phi \cos \phi \\ v \sin ^{2} \phi \end{array}\right), \vec{\omega}_{c}=\left(\begin{array}{c} -v / R \\ 0 \end{array}\right) $$ second sphere: $$ \vec{v}_{o}=\left(\begin{array}{c} v \sin \phi \cos \phi \\ v \cos ^{2} \phi \end{array}\right), \vec{\omega}_{o}=\overrightarrow{0} $$ Then established velocity: cue ball: $$ \vec{u}_{c}=\left(\[
+\begin{array}{l} -\cfrac{5}{7} v \sin \phi \cos \phi \\ \cfrac{5}{7} v \sin ^{2} \phi+\cfrac{2}{7} v \end{array}
+\]\right) $$ second sphere: $$ \vec{u}_{o}=\frac{5}{7}\left(\begin{array}{c} v \sin \phi \cos \phi \\ v \cos ^{2} \phi \end{array}\right) $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} \textbackslash{}begin{array}{l} \textbackslash{}operatorname{tg}\textbackslash{}phi_c = \textbackslash{}cfrac{\textbackslash{}sin \textbackslash{}phi \textbackslash{}cos \textbackslash{}phi}{\textbackslash{}sin ^{2} \textbackslash{}phi+\textbackslash{}frac{2}{5}}, \textbackslash{}\textbackslash{} \textbackslash{}sin\textbackslash{}phi_o = \textbackslash{}sin\textbackslash{}phi, \textbackslash{}end{array} where $\sin\phi=b/2R$
+\par\smallskip\noindent\textbf{Answer:} \[
+\begin{array}{l} \operatorname{tg}\phi_c = \cfrac{\sin \phi \cos \phi}{\sin ^{2} \phi+\frac{2}{5}}, \\ \sin\phi_o = \sin\phi, \end{array}
+\] where $\sin\phi=b/2R$
 \end{solcard}
 
 \begin{solcard}{B5}{Determine the angle $\varphi$ between the steady-state velocities of the balls as a function of the impact parameter $\frac{b}{R}$.}{0.50}
 
-In terms of the impact parameter $x=b/R$ expansion angle $\varphi$ $$ \varphi=\arcsin \left(\frac{x}{2}\right)+\operatorname{arctg} \left(\frac{\frac{x}{2} \cdot \sqrt{1-\frac{x^{2}}{4}}}{\frac{2}{5}+\frac{x^{2}}{4}}\right) $$
+In terms of the impact parameter $x=b/R$ expansion angle $\varphi$ \varphi=\arcsin \left(\frac{x}{2}\right)+\operatorname{arctg} \left(\frac{\frac{x}{2} \cdot \sqrt{1-\frac{x^{2}}{4}}}{\frac{2}{5}+\frac{x^{2}}{4}}\right) $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \varphi=\arcsin \left(\frac{x}{2}\right)+\operatorname{arctg} \left(\frac{\frac{x}{2} \cdot \sqrt{1-\frac{x^{2}}{4}}}{\frac{2}{5}+\frac{x^{2}}{4}}\right), x=\frac{b}{R} $$
+\par\smallskip\noindent\textbf{Answer:} $$ \varphi=\arcsin \left(\frac{x}{2}\right)+\operatorname{arctg} \left(\frac{\frac{x}{2} \cdot \sqrt{1-\frac{x^{2}}{4}}}{\frac{2}{5}+\frac{x^{2}}{4}}\right), x=\frac{b}{R} $$
 \end{solcard}
 
 \begin{solcard}{B6}{Draw a qualitative graph of the dependence $\varphi(\frac{b}{R})$.}{0.50}
@@ -92,32 +101,32 @@ In terms of the impact parameter $x=b/R$ expansion angle $\varphi$ $$ \varphi=\a
 
 We find out the coefficient of sliding friction from the graph of the speed of ball 2 versus time (for ball 1, the friction force is generally not collinear with the speed), by approximating the section of the graph with sliding as a straight line. We get the acceleration of 2 balls $a=\mu g\approx(2.1\pm0.2)~m/s^2$; $\mu\approx0.21\pm0.02$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$\mu\approx0.023\pm0.002$$
+\par\smallskip\noindent\textbf{Answer:} $$\mu\approx0.023\pm0.002$$
 \end{solcard}
 
 \begin{solcard}{C2}{Estimate the relative energy losses when the balls collide.}{0.50}
 
 Immediately after the collision we have the speeds of the balls $v_c\approx0.90~m/s$, $v_o\approx0.42~m/s$. The difference between the energy before and after $\Delta E\approx 0.04~(m/s)^2  \cfrac{m}{2}$; the initial energy (rotational + translational) is $E_0=\cfrac{7}{5}\cfrac{m}{2}~(m/s)^2$, so the energy loss is quite small and amounts to $\approx5\%$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$5\%$$
+\par\smallskip\noindent\textbf{Answer:} $$5\%$$
 \end{solcard}
 
 \begin{solcard}{C3}{Determine the relative impact parameter $\frac{b}{R}$ for the collision using data for both balls. Estimate the error of the obtained value.}{1.00}
 
-For the velocities immediately after the collision (and after establishment) we have $$ v_{c}=v \sin \phi, v_{o}=v \cos \phi, u_{o}=\frac{5}{7} v \cos \phi, u_{c}=\frac{5}{7} v \sqrt{\frac{4}{25}+\frac{9}{5} \sin ^{2} \phi} $$ Using данные from графика (в m/s) $$ v=1.00, v_{c}=0.42, v_{o}=0.90, u_{o}=0.63, u_{c}=0.48 $$ we find соответственно 4 значения for $\sin\phi=b/2R$ and оцениваем погрешность $$ \sin \phi=0.44 ; 0.42 ; 0.47 ; 0.40 $$ In total $b/R=(0.86 \pm 0.08)$
+For the velocities immediately after the collision (and after establishment) we have $$ v_{c}=v \sin \phi, v_{o}=v \cos \phi, u_{o}=\frac{5}{7} v \cos \phi, u_{c}=\frac{5}{7} v \sqrt{\frac{4}{25}+\frac{9}{5} \sin ^{2} \phi} $$ Using data from the graph (in m/s) $$ v=1.00, v_{c}=0.42, v_{o}=0.90, u_{o}=0.63, u_{c}=0.48 $$ find correspondingly 4 value for $\sin\phi=b/2R$ and estimate error $$ \sin \phi=0.44 ; 0.42 ; 0.47 ; 0.40 $$ That is $b/R=(0.86 \pm 0.08)$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$b/R=(0.86 \pm 0.08)$$
+\par\smallskip\noindent\textbf{Answer:} $$b/R=(0.86 \pm 0.08)$$
 \end{solcard}
 
 \begin{solcard}{D1}{Consider the central impact ($b=0$) of two identical balls of mass $M$. The first ball hits the second with speed $V$. Considering the speed of the incident ball to be much lower than the speed of sound in the ball material, find the collision time $\tau$ and the maximum deformation $h_m$. Hint: Consider the value of the integral $$\int\limits_0^1\frac{dx}{\sqrt{1-x^{5/2}}}\approx 1.5.$$ known.}{1.50}
 
-In the problem of the collision of balls, since the speed of the balls is much less than the speed of sound, we can assume that at any moment the deformation pattern is established and the force depends on the deformation as in the static case. The dependence of potential energy on deformation can be easily obtained by integrating the force $$ U=\frac{2}{5} E R^{\frac{1}{2}} h^{\frac{5}{2}} $$ В системе центра масс ЗСЭ имеет вид ($\mu=M/2$ — for/atведённая mass) $$ \frac{M v^{2}}{2}+\frac{2}{5} E R^{\frac{1}{2}} h^{\frac{5}{2}}=\frac{M V^{2}}{2} $$ Where $v$ — relative velocity ball/sphereов, она же $\dot h$. Максимальная деформация $$ h_{m}=\left(\frac{5 \mu V^{2}}{4 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}} $$ Time деформации, i.e. time, в течение которого h меняется от 0 до h_m and обратно, можно найти как $$ \tau=2 \int_{0}^{h_{m}} \frac{d h}{v}=\left(x=\frac{h}{h_{m}}\right)=\frac{2}{h_{m}^{\frac{1}{4}}}\left(\frac{5 \mu}{4 E R^{\frac{1}{2}}}\right)^{\frac{1}{2}} \int_{0}^{1} \frac{d x}{\sqrt{1-x^{\frac{5}{2}}}} \approx 3 V^{-\frac{1}{5}}\left(\frac{5 M}{8 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}} $$
+In the problem of the collision of balls, since the speed of the balls is much less than the speed of sound, we can assume that at any moment the deformation pattern is established and the force depends on the deformation as in the static case. The dependence of potential energy on deformation can be easily obtained by integrating the force $$ U=\frac{2}{5} E R^{\frac{1}{2}} h^{\frac{5}{2}} $$ in system of the center of mass, energy conservation has the form ($\mu=M/2$ — lead to mass) $$ \frac{M v^{2}}{2}+\frac{2}{5} E R^{\frac{1}{2}} h^{\frac{5}{2}}=\frac{M V^{2}}{2} $$ Where $v$ — relative velocity of the balls, it equals $\dot h$. Maximum deformation $$ h_{m}=\left(\frac{5 \mu V^{2}}{4 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}} $$ Time deformation, thus, the time during which $h$ changes from 0 to $h_m$ and inversely, one can find as $$ \tau=2 \int_{0}^{h_{m}} \frac{d h}{v}=\left(x=\frac{h}{h_{m}}\right)=\frac{2}{h_{m}^{\frac{1}{4}}}\left(\frac{5 \mu}{4 E R^{\frac{1}{2}}}\right)^{\frac{1}{2}} \int_{0}^{1} \frac{d x}{\sqrt{1-x^{\frac{5}{2}}}} \approx 3 V^{-\frac{1}{5}}\left(\frac{5 M}{8 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}} $$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ h_{m}=\left(\frac{5 M V^{2}}{8 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}}, \tau=3 V^{-\frac{1}{5}}\left(\frac{5 M}{8 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}} $$
+\par\smallskip\noindent\textbf{Answer:} $$ h_{m}=\left(\frac{5 M V^{2}}{8 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}}, \tau=3 V^{-\frac{1}{5}}\left(\frac{5 M}{8 E R^{\frac{1}{2}}}\right)^{\frac{2}{5}} $$
 \end{solcard}
 
-\begin{solcard}{D2}{Estimate the Young's modulus of the ball material based on the experimental values: $\tau=310~\mathrm{\mu{}s}, V=7.0~m/s, M=280~\mathrm{g}, R=6.8~cm$.}{0.50}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ E=\left(\frac{\tau V^{\frac{1}{5}}}{3}\right)^{-\frac{5}{2}} \cdot \frac{5 m}{8 R^{\frac{1}{2}}} \approx 2.3~\mathrm{GPa} $$
+\begin{solcard}{D2}{Estimate the Young's modulus of the ball material based on the experimental values: $\tau=310~\mathrm{\mu s}, V=7.0~m/s, M=280~\mathrm{g}, R=6.8~cm$.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} $$ E=\left(\frac{\tau V^{\frac{1}{5}}}{3}\right)^{-\frac{5}{2}} \cdot \frac{5 m}{8 R^{\frac{1}{2}}} \approx 2.3~\mathrm{GPa} $$
 \end{solcard}
 
 \end{document}

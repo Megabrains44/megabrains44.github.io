@@ -1,0 +1,877 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./T6_S_EN_2.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./T6_S_EN_2.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(./T6_S_EN_2.out) (./T6_S_EN_2.out)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (7.69466pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) about 
+
+Overfull \hbox (5.97092pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) hinge 
+
+Overfull \hbox (19.29915pt too wide) detected at line 39
+\OML/cmm/m/it/10.95 I \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 M[];
+
+Overfull \hbox (8.71457pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) where 
+
+Overfull \hbox (1.28946pt too wide) in paragraph at lines 39--39
+[]\OML/cmm/m/it/10.95 ml[]$ 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (7.69466pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) about 
+
+Overfull \hbox (32.99074pt too wide) in paragraph at lines 39--39
+[] \OMS/cmsy/m/n/10.95 ' 
+
+Overfull \hbox (9.53069pt too wide) in paragraph at lines 39--39
+[]\OML/cmm/m/it/10.95 mgl'$ 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (2.4302pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) grav- 
+
+Overfull \hbox (3.17792pt too wide) in paragraph at lines 39--39
+[]|\OT1/cmr/bx/n/10.95 (-20) Let's 
+
+Overfull \hbox (5.97232pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) check 
+
+Overfull \hbox (9.0535pt too wide) in paragraph at lines 39--39
+\OML/cmm/m/it/10.95 Ae[] \OT1/cmr/m/n/10.95 (-20) + 
+
+Overfull \hbox (10.08517pt too wide) in paragraph at lines 39--39
+\OML/cmm/m/it/10.95 Be[]$ 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 39--39
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (83.80797pt too wide) in paragraph at lines 39--39
+[] [] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 39--39
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer: 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \vbox (274.15187pt too high) has occurred while \output is active
+[2]
+Overfull \hbox (4.83969pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) boy's 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (3.12155pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) must 
+
+Overfull \hbox (2.08742pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) char- 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (10.77002pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) length 
+
+Overfull \hbox (3.42516pt too wide) in paragraph at lines 40--40
+\OT1/cmr/bx/n/10.95 (-20) stick: 
+
+Overfull \hbox (2.19125pt too wide) in paragraph at lines 40--40
+\OML/cmm/m/it/10.95 ^^\[][]$\OT1/cmr/bx/n/10.95 (-20) .|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 40--40
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (71.0695pt too wide) detected at line 40
+\OML/cmm/m/it/10.95 l[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^\[][] \OT1/c
+mr/m/n/10.95 = 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 59 [][]
+
+Overfull \hbox (7.52246pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) bird's 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (3.12155pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) must 
+
+Overfull \hbox (2.08742pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) char- 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (7.52246pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) bird's 
+
+Overfull \hbox (2.84941pt too wide) in paragraph at lines 41--41
+\OT1/cmr/bx/n/10.95 (-20) time: 
+
+Overfull \hbox (4.35608pt too wide) in paragraph at lines 41--41
+[]$\OT1/cmr/bx/n/10.95 (-20) .|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 41--41
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (74.06319pt too wide) detected at line 41
+\OML/cmm/m/it/10.95 ^^\[] \OT1/cmr/m/n/10.95 = [] = 0\OML/cmm/m/it/10.95 :\OT1/
+cmr/m/n/10.95 065 [][]
+[3]
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (7.73877pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) which 
+
+Overfull \hbox (7.30783pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) clist's 
+
+Overfull \hbox (4.71156pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) crum 
+
+Overfull \hbox (11.78442pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) moved 
+
+Overfull \hbox (8.44603pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) pends 
+
+Overfull \hbox (7.24626pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) speed 
+
+Overfull \hbox (1.1983pt too wide) in paragraph at lines 42--42
+\OML/cmm/m/it/10.95 ^^\[] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (3.12155pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) must 
+
+Overfull \hbox (2.08742pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) char- 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (1.90958pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) Find 
+
+Overfull \hbox (7.24626pt too wide) in paragraph at lines 42--42
+\OT1/cmr/bx/n/10.95 (-20) speed 
+
+Overfull \hbox (1.7192pt too wide) in paragraph at lines 42--42
+\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (9.51286pt too wide) in paragraph at lines 42--42
+\OML/cmm/m/it/10.95 d[]$\OT1/cmr/bx/n/10.95 (-20) .|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 42--42
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (89.23318pt too wide) detected at line 42
+\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 d[] \OT1/cmr/m
+/n/10.95 = 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 7 [][]\OML/cmm/m/it/10.95 =
+[]
+[4]
+Overfull \vbox (213.88614pt too high) has occurred while \output is active
+[5]
+Overfull \hbox (10.03125pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) chang- 
+
+Overfull \hbox (26.82169pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) tightrope 
+
+Overfull \hbox (11.17848pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) walker 
+
+Overfull \hbox (9.22748pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) fected 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (2.4302pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) grav- 
+
+Overfull \hbox (0.60445pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) how- 
+
+Overfull \hbox (1.24025pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) ever, 
+
+Overfull \hbox (0.90457pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) does 
+
+Overfull \hbox (13.67677pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) change 
+
+Overfull \hbox (1.81123pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) men- 
+
+Overfull \hbox (21.87024pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) (changes 
+
+Overfull \hbox (7.24626pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) speed 
+
+Overfull \hbox (4.44011pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) short 
+
+Overfull \hbox (6.95593pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) time). 
+
+Overfull \hbox (4.42964pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) write 
+
+Overfull \hbox (5.44974pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) down 
+
+Overfull \hbox (1.81123pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) men- 
+
+Overfull \hbox (4.77391pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) point  
+
+Overfull \hbox (100.32677pt too wide) detected at line 43
+\OML/cmm/m/it/10.95 m\OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.
+95 4\OML/cmm/m/it/10.95 H\OT1/cmr/m/n/10.95 )[][] + \OML/cmm/m/it/10.95 mH[][] 
+\OT1/cmr/m/n/10.95 = 0
+
+Overfull \hbox (6.4809pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) count 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (26.82169pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) tightrope 
+
+Overfull \hbox (11.17848pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) walker 
+
+Overfull \hbox (4.71155pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) grate 
+
+Overfull \hbox (1.4774pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) pres- 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (20.04025pt too wide) in paragraph at lines 43--43
+\OT1/cmr/m/n/10.95 (-20) 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 (-20) 96(\OML
+/cmm/m/it/10.95 [] \OMS/cmsy/m/n/10.95 ^^@ 
+
+Overfull \hbox (4.32083pt too wide) in paragraph at lines 43--43
+\OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 (-20) ) = 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (3.29015pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) solve 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (6.55367pt too wide) in paragraph at lines 43--43
+\OT1/cmr/bx/n/10.95 (-20) tions.|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 43--43
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer: 
+
+Overfull \hbox (39.47339pt too wide) in paragraph at lines 43--43
+[]\OML/cmm/m/it/10.95 ;  [] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (9.81523pt too wide) in paragraph at lines 43--43
+[]$|  
+
+Overfull \vbox (1521.73259pt too high) has occurred while \output is active
+[6]
+Overfull \hbox (21.79486pt too wide) in paragraph at lines 44--44
+[]|\OT1/cmr/bx/n/10.95 (-20) Moment 
+
+Overfull \hbox (2.4302pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) grav- 
+
+Overfull \hbox (42.32256pt too wide) in paragraph at lines 44--44
+\OML/cmm/m/it/10.95 mg\OT1/cmr/m/n/10.95 (-20) (1\OML/cmm/m/it/10.95 :\OT1/cmr/
+m/n/10.95 (-20) 4\OML/cmm/m/it/10.95 H\OT1/cmr/m/n/10.95 (-20) )\OML/cmm/m/it/1
+0.95 [] \OT1/cmr/m/n/10.95 (-20) + 
+
+Overfull \hbox (5.26831pt too wide) in paragraph at lines 44--44
+\OML/cmm/m/it/10.95 mgH \OMS/cmsy/m/n/10.95 ^^A 
+
+Overfull \hbox (3.17792pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) Let's 
+
+Overfull \hbox (2.31201pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) from 
+
+Overfull \hbox (2.9514pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) para- 
+
+Overfull \hbox (7.96808pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) graph 
+
+Overfull \hbox (98.75862pt too wide) detected at line 44
+\OML/cmm/m/it/10.95 M \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 mgH\OT1/cmr/m/n/
+10.95 (2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 4\OML/cmm/m/it/10.95 [] \OMS/c
+msy/m/n/10.95 ^^@ []\OML/cmm/m/it/10.95 ^^L[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/
+10.95 :
+
+Overfull \hbox (26.82169pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) tightrope 
+
+Overfull \hbox (11.17848pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) walker 
+
+Overfull \hbox (0.59802pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) turn 
+
+Overfull \hbox (6.89648pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) needs 
+
+Overfull \hbox (4.10294pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) verse 
+
+Overfull \hbox (7.24626pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) speed 
+
+Overfull \hbox (13.64738pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) gained, 
+
+Overfull \hbox (5.05435pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) there 
+
+Overfull \hbox (3.12155pt too wide) in paragraph at lines 44--44
+\OT1/cmr/bx/n/10.95 (-20) must 
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 44--44
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (8.02347pt too wide) detected at line 44
+\OML/cmm/m/it/10.95 ^^L[] > \OT1/cmr/m/n/10.95 0
+
+Overfull \vbox (299.71112pt too high) has occurred while \output is active
+[7]
+Overfull \hbox (20.66681pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) straight- 
+
+Overfull \hbox (2.02881pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) ened 
+
+Overfull \hbox (26.82169pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) tightrope 
+
+Overfull \hbox (11.17848pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) walker 
+
+Overfull \hbox (15.5851pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) scribed 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (43.36824pt too wide) in paragraph at lines 45--45
+\OT1/cmr/m/n/10.95 (-20) 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 (-20) 96\OML/
+cmm/m/it/10.95 mH[][] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (28.46536pt too wide) in paragraph at lines 45--45
+\OT1/cmr/m/n/10.95 (-20) 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 (-20) 4\OML/c
+mm/m/it/10.95 mgH[]$\OT1/cmr/bx/n/10.95 (-20) . 
+
+Overfull \hbox (2.31201pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) form 
+
+Overfull \hbox (9.0535pt too wide) in paragraph at lines 45--45
+\OML/cmm/m/it/10.95 Ae[] \OT1/cmr/m/n/10.95 (-20) + 
+
+Overfull \hbox (11.07018pt too wide) in paragraph at lines 45--45
+\OML/cmm/m/it/10.95 Be[]$\OT1/cmr/bx/n/10.95 (-20) . 
+
+Overfull \hbox (26.82169pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) tightrope 
+
+Overfull \hbox (11.17848pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) walker 
+
+Overfull \hbox (0.59802pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) turn 
+
+Overfull \hbox (4.56253pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) start- 
+
+Overfull \hbox (10.40982pt too wide) in paragraph at lines 45--45
+\OT1/cmr/bx/n/10.95 (-20) There- 
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 45--45
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (80.11108pt too wide) detected at line 45
+[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@[] \OT1/cmr/m/n/10.95 = \OMS/cms
+y/m/n/10.95 ^^@[]
+
+Overfull \vbox (156.1295pt too high) has occurred while \output is active
+[8]
+Overfull \hbox (10.31741pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) shown 
+
+Overfull \hbox (9.52686pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) above, 
+
+Overfull \hbox (7.24626pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) speed 
+
+Overfull \hbox (26.82169pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) tightrope 
+
+Overfull \hbox (11.17848pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) walker 
+
+Overfull \hbox (2.93405pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) ately 
+
+Overfull \hbox (20.66681pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) straight- 
+
+Overfull \hbox (13.67677pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) change 
+
+Overfull \hbox (5.6378pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) form) 
+
+Overfull \hbox (7.24626pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) speed 
+
+Overfull \hbox (2.65057pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) right 
+
+Overfull \hbox (5.58893pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) bend- 
+
+Overfull \hbox (5.45674pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) equal 
+
+Overfull \hbox (3.29715pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) since 
+
+Overfull \hbox (7.9815pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) equiv- 
+
+Overfull \hbox (13.67677pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) change 
+
+Overfull \hbox (2.84941pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) time, 
+
+Overfull \hbox (15.5851pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) scribed 
+
+Overfull \hbox (2.9514pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) para- 
+
+Overfull \hbox (8.95308pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) graph. 
+
+Overfull \hbox (17.45451pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) Change 
+
+Overfull \hbox (1.81123pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) men- 
+
+Overfull \hbox (0.8318pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) bent 
+
+Overfull \hbox (173.77385pt too wide) detected at line 46
+\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 L \OT1/cmr/m/n/10.95 = 2\OML/cmm/m/it
+/10.95 :\OT1/cmr/m/n/10.95 96\OML/cmm/m/it/10.95 mH[] \OMS/cmsy/m/n/10.95 ^^A \
+OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 [] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/i
+t/10.95 []\OT1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10.95 ^^@[]
+
+Overfull \hbox (13.06554pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) Taking 
+
+Overfull \hbox (6.4809pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) count 
+
+Overfull \hbox (2.75131pt too wide) in paragraph at lines 46--46
+\OML/cmm/m/it/10.95 [] \OMS/cmsy/m/n/10.95 ^^\ 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (3.16899pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) force 
+
+Overfull \hbox (33.57211pt too wide) in paragraph at lines 46--46
+\OMS/cmsy/m/n/10.95 ^^@[]\OML/cmm/m/it/10.95 mgH^^L[]$\OT1/cmr/bx/n/10.95 (-20)
+ . 
+
+Overfull \hbox (13.67677pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) change 
+
+Overfull \hbox (1.81123pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) men- 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (1.17183pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) time 
+
+Overfull \hbox (5.25693pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) From 
+
+Overfull \hbox (0.90938pt too wide) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10.95 (-20) swer 
+
+Overfull \hbox (37.63742pt too wide) in paragraph at lines 46--46
+\OT1/cmr/m/n/10.95 (-20) 28\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 (-20) 18[][]
+$\OT1/cmr/bx/n/10.95 (-20) .|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 46--46
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (64.57823pt too wide) detected at line 46
+\OML/cmm/m/it/10.95 T[] \OT1/cmr/m/n/10.95 = 28\OML/cmm/m/it/10.95 :\OT1/cmr/m/
+n/10.95 18[][]
+
+Overfull \vbox (1210.51363pt too high) has occurred while \output is active
+[9]
+Overfull \hbox (8.71457pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) where 
+
+Overfull \hbox (10.53905pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) rected 
+
+Overfull \hbox (3.05147pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) ward 
+
+Overfull \hbox (3.16899pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) force 
+
+Overfull \hbox (10.53905pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) rected 
+
+Overfull \hbox (7.46031pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) down- 
+
+Overfull \hbox (4.03647pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) ward. 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (26.90549pt too wide) detected at line 47
+[] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 ':
+
+Overfull \hbox (5.28534pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) Since 
+
+Overfull \hbox (6.43893pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) place- 
+
+Overfull \hbox (9.11765pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) ments 
+
+Overfull \hbox (2.31201pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) from 
+
+Overfull \hbox (6.6887pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) small, 
+
+Overfull \hbox (4.66833pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) sume 
+
+Overfull \hbox (11.7871pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) formly 
+
+Overfull \hbox (1.99242pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) ated: 
+
+Overfull \hbox (4.85867pt too wide) in paragraph at lines 47--47
+[]\OML/cmm/m/it/10.95 '[]$\OT1/cmr/bx/n/10.95 (-20) . 
+
+Overfull \hbox (6.4809pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) count 
+
+Overfull \hbox (3.12573pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) tions 
+
+Overfull \hbox (15.94772pt too wide) in paragraph at lines 47--47
+[] [] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (15.94772pt too wide) in paragraph at lines 47--47
+\OML/cmm/m/it/10.95 ' [] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (7.5135pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) dence 
+
+Overfull \hbox (7.85652pt too wide) in paragraph at lines 47--47
+\OML/cmm/m/it/10.95 '\OT1/cmr/m/n/10.95 (-20) (\OML/cmm/m/it/10.95 t\OT1/cmr/m/
+n/10.95 (-20) ) = 
+
+Overfull \hbox (31.63036pt too wide) in paragraph at lines 47--47
+[] [][]$\OT1/cmr/bx/n/10.95 (-20) . 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (3.16899pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) force 
+
+Overfull \hbox (18.54445pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) changes 
+
+Overfull \hbox (6.93913pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) move- 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (15.5851pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) scribed 
+
+Overfull \hbox (1.17181pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) tude 
+
+Overfull \hbox (13.67677pt too wide) in paragraph at lines 47--47
+\OT1/cmr/bx/n/10.95 (-20) change 
+
+Overfull \hbox (3.58963pt too wide) in paragraph at lines 47--47
+\OT1/cmr/m/n/10.95 (-20) ^^A\OML/cmm/m/it/10.95 ' \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (9.1808pt too wide) in paragraph at lines 47--47
+[]\OML/cmm/m/it/10.95 '[]$\OT1/cmr/bx/n/10.95 (-20) .|  
+
+Overfull \vbox (1174.56969pt too high) has occurred while \output is active
+[10]
+Overfull \hbox (3.17792pt too wide) in paragraph at lines 52--52
+[]|\OT1/cmr/bx/n/10.95 (-20) Let's 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (9.52835pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) "head- 
+
+Overfull \hbox (411.61502pt too wide) detected at line 52
+\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 M\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10
+.95 = \OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 mla'\OMS/cmsy/m/n/10.95 i \OT1/c
+mr/m/n/10.95 = \OML/cmm/m/it/10.95 ml\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 a
+ \OMS/cmsy/m/n/10.95 ^^A []i \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ml\OMS/cm
+sy/m/n/10.95 h\OML/cmm/m/it/10.95 a\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ' \O
+MS/cmsy/m/n/10.95 ^^@ h\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 i\OT1/cmr/m/n/1
+0.95 )\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 ml\OMS/cms
+y/m/n/10.95 h\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 ih\OML/cmm/m/it/10.95 a\O
+MS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/it/1
+0.95 mla[]\OMS/cmsy/m/n/10.95 hj\OML/cmm/m/it/10.95 ' \OMS/cmsy/m/n/10.95 ^^@ h
+\OML/cmm/m/it/10.95 '\OMS/cmsy/m/n/10.95 iji \OT1/cmr/m/n/10.95 + 0
+
+Overfull \hbox (3.17792pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) Let's 
+
+Overfull \hbox (2.67519pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) mod- 
+
+Overfull \hbox (230.79721pt too wide) detected at line 52
+\OMS/cmsy/m/n/10.95 hj\OML/cmm/m/it/10.95 '\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10
+.95 t\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 '\OMS/cms
+y/m/n/10.95 ji \OT1/cmr/m/n/10.95 = [] [] ^^A\OML/cmm/m/it/10.95 ' [] dt \OT1/c
+mr/m/n/10.95 = []^^A\OML/cmm/m/it/10.95 ' \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/
+10.95 '[]
+
+Overfull \hbox (4.51671pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) Then 
+
+Overfull \hbox (1.4774pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) pres- 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (3.16899pt too wide) in paragraph at lines 52--52
+\OT1/cmr/bx/n/10.95 (-20) force 
+
+Overfull \hbox (8.72641pt too wide) in paragraph at lines 52--52
+\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 M\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10
+.95 (-20) = 
+
+Overfull \hbox (15.94595pt too wide) in paragraph at lines 52--52
+\OMS/cmsy/m/n/10.95 ^^@[]\OML/cmm/m/it/10.95 '[]$|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 52--52
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (54.83311pt too wide) detected at line 52
+\OMS/cmsy/m/n/10.95 h\OML/cmm/m/it/10.95 M\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10
+.95 = \OMS/cmsy/m/n/10.95 ^^@[]\OML/cmm/m/it/10.95 '[]
+[11 <./T6_S_EN_assets/fig1.jpg>]
+Overfull \vbox (91.16856pt too high) has occurred while \output is active
+[12]
+Overfull \hbox (17.87631pt too wide) in paragraph at lines 53--53
+[]|\OT1/cmr/bx/n/10.95 (-20) Gravity 
+
+Overfull \hbox (0.90457pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) does 
+
+Overfull \hbox (4.42975pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) value 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (10.59863pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) tained 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (2.4302pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) grav- 
+
+Overfull \hbox (5.45674pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) equal 
+
+Overfull \hbox (7.41818pt too wide) in paragraph at lines 53--53
+\OML/cmm/m/it/10.95 mgl'[]$ 
+
+Overfull \hbox (10.21246pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) added. 
+
+Overfull \hbox (4.51671pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) Then 
+
+Overfull \hbox (4.03938pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) equa- 
+
+Overfull \hbox (2.31201pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) form 
+
+Overfull \hbox (3.78876pt too wide) in paragraph at lines 53--53
+\OML/cmm/m/it/10.95 l[][] \OT1/cmr/m/n/10.95 (-20) = 
+
+Overfull \hbox (38.28146pt too wide) in paragraph at lines 53--53
+[] \OML/cmm/m/it/10.95 '[]$\OT1/cmr/bx/n/10.95 (-20) . 
+
+Overfull \hbox (4.83203pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) when 
+
+Overfull \hbox (2.65057pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) right 
+
+Overfull \hbox (10.67322pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) restor- 
+
+Overfull \hbox (3.90997pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) ment 
+
+Overfull \hbox (2.72336pt too wide) in paragraph at lines 53--53
+\OT1/cmr/bx/n/10.95 (-20) curs.|  
+
+Overfull \hbox (19.0372pt too wide) in paragraph at lines 53--53
+[]|\OT1/cmr/bx/n/10.95 (-20) Answer:  
+
+Overfull \hbox (16.62885pt too wide) detected at line 53
+\OML/cmm/m/it/10.95 v[] > \OT1/cmr/m/n/10.95 3\OML/cmm/m/it/10.95 gl
+
+Overfull \vbox (425.13707pt too high) has occurred while \output is active
+[13] [14] (_build_check_v3/T6_S_EN_2.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on _build_check_v3/T6_S_EN_2.pdf (14 pages, 181225 bytes).
+Transcript written on _build_check_v3/T6_S_EN_2.log.

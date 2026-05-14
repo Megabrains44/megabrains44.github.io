@@ -9,14 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
-%% Breakable problem card — prevents content cutoff across pages
+%% Breakable card — prevents content cutoff across pages
 \newtcolorbox{solcard}[3]{
   breakable, enhanced,
   colback=white, colframe=gray!50, arc=2pt,
@@ -33,50 +32,50 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{For an ellipse, you can define the eccentricity parameter $e=\sqrt{1-b^2/a^2}$, where $a$ and $b$ are the major and minor semi-axes of the ellipse, respectively. Find the eccentricity $e$ of the orbit of comet Churyumov-Gerasimenko.}{0.50}
 
-When passing perihelion and aphelion of the orbit, the radial velocity of the comet is $v_r=0$. From the graph: $q=1.24~\text{\mathrm{a.u.}}$, $Q=5.68~\text{\mathrm{a.u.}}$, from where $\frac{1+e}{1-e}=\frac{Q}{q}=4.58$. Total $e=\frac{Q-q}{Q+q}=0.64$.
+When passing perihelion and aphelion of the orbit, the radial velocity of the comet is $v_r=0$. From the graph: $q=1.24~\text{a.u.}$, $Q=5.68~\text{a.u.}$, from where $\frac{1+e}{1-e}=\frac{Q}{q}=4.58$. Total $e=\frac{Q-q}{Q+q}=0.64$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$e=\frac{Q-q}{Q+q}=0.64$$
+\par\smallskip\noindent\textbf{Answer:} $$e=\frac{Q-q}{Q+q}=0.64$$
 \end{solcard}
 
 \begin{solcard}{A2}{The total energy of a body that moves along an elliptical orbit does not depend on its eccentricity, but depends only on the length of the semi-major axis $a$. Find the speed $v$ of the comet as a function of the distance $r$. Express your answer in terms of $a$, $r$ and physical constants.}{1.00}
 
 It is convenient to consider a circular orbit with radius $a$. The body moves along it with the “first cosmic” speed $v=\sqrt{\frac{GM}{a}}$, which can be found from Newton’s II law $\frac{GM}{a^2} = \frac{v^2}{a}$. Then the total energy is \[E=  \frac{mv^2}{2}-\frac{GMm}{a}=-\frac{GMm}{2a},\], from which it is easy to express $v= \sqrt{GM \left( \frac{2}{r}-\frac{1}{a} \right) }$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ v=\sqrt{G M\left(\frac{2}{r}-\frac{1}{a}\right)} $$
+\par\smallskip\noindent\textbf{Answer:} $$ v=\sqrt{G M\left(\frac{2}{r}-\frac{1}{a}\right)} $$
 \end{solcard}
 
 \begin{solcard}{A3}{Find the radial velocity $v_r$ as a function of the distance $r$. Express your answer in terms of $a$, $r$, $e$ and physical constants.}{1.00}
 
 By the Pythagorean theorem $v_r^2=v^2-v_\tau^2$, where $v_\tau$ is the tangential speed of the comet. Coming from ZSMI $L=mv_\tau r$, therefore $v_r^2=v^2 - \frac{L^2}{m^2r^2}$. Let's find $L$ using the equality $v=v_\tau$ at perihelion and aphelion: \[ v^2=GM \left( \frac{2}{a(1-e)} -\frac{1}{a}\right)=\frac{L^2}{m^2 a^2(1-e)^2}.\] As a result we get $v_\tau^2 = \frac{L^2}{m^2 r^2} = GM \frac{a(1-e^2)}{r^2}$ and $v_{r}=\sqrt{G M\left(\frac{2}{r}-\frac{1}{a}-\frac{a\left(1-e^{2}\right)}{r^{2}}\right)}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ v_{r}=\sqrt{G M\left(\frac{2}{r}-\frac{1}{a}-\frac{a\left(1-e^{2}\right)}{r^{2}}\right)} $$
+\par\smallskip\noindent\textbf{Answer:} $$ v_{r}=\sqrt{G M\left(\frac{2}{r}-\frac{1}{a}-\frac{a\left(1-e^{2}\right)}{r^{2}}\right)} $$
 \end{solcard}
 
 \begin{solcard}{A4}{Using the graph, find the length of the semimajor axis $a$ of the comet's orbit.}{0.50}
 
-At point $r_0 = a(1-e^2)$ $\frac{dv_r}{dr}=0$ is satisfied. At the same time, the tangent to the graph is horizontal at $r_0=2.04~\text{\mathrm{a.u.}}$, whence $a=3.46~\text{\mathrm{a.u.}}$.
+At point $r_0 = a(1-e^2)\frac{dv_r}{dr}=0$ is satisfied. At the same time, the tangent to the graph is horizontal at $r_0=2.04~\text{a.u.}$, whence $a=3.46~\text{a.u.}$.
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$a=3.46~\text{\mathrm{a.u.}}$$
+\par\smallskip\noindent\textbf{Answer:} $$a=3.46~\text{a.u.}$$
 \end{solcard}
 
 \begin{solcard}{B1}{When will the comet next pass perihelion?}{0.40}
 
-According to Kepler's third law, the period of revolution of a comet around the Sun is $T=\left( \frac{a}{\text{\mathrm{a.u.}}} \right)^{3/2} ~\text{Lет}=2350~\text{sут}$. \[\text{13 авgуsта 2015 gода} + T = \text{sередина января 2022 gода}\]
+According to Kepler's third law, the period of revolution of a comet around the Sun is $T=\left( \frac{a}{\text{a.u.}} \right)^{3/2} ~\text{year}=2350~\text{сут}$. \[\text{13 августа 2015 year} + T = \text{middle января 2022 year}\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} mid-January 2022
+\par\smallskip\noindent\textbf{Answer:} mid-January 2022
 \end{solcard}
 
-\begin{solcard}{B2}{Estimate when we can expect the comet's next close approach to the Earth (the distance during a close approach does not exceed the minimum possible by more than $15\text{%}$). The orbital planes of the Earth and the comet coincide, as do the directions of angular velocities. Consider the Earth's orbit to be circular.}{2.50}
+\begin{solcard}{B2}{Estimate when we can expect the comet's next close approach to the Earth (the distance during a close approach does not exceed the minimum possible by more than $15\text{\%}$). The orbital planes of the Earth and the comet coincide, as do the directions of angular velocities. Consider the Earth's orbit to be circular.}{2.50}
 
 The position of the Earth relative to the pericenter of the comet's orbit is uniquely determined (see Fig.) by the polar angle $\lambda (t)$.
 
 
-Let's find the value $\lambda_c$ of this angle on February 10, 2015. In the triangle C (comet) - S (Sun) - F (second focus of the ellipse orbit), all three sides are known: \[ \begin{split} |SC|&=d_0-1 \text{\mathrm{a.u.}}=2.70 \text{\mathrm{a.u.}},\\ |SF|&=2ae=4.43 \text{\mathrm{a.u.}}, \\ |FC|&=2a-|SC|=4.22  \text{\mathrm{a.u.}} \end{split} \] Using the cosine theorem, we calculate $\lambda_c=68^\circ$. Then, at the time the comet passed perihelion in 2015: \[\lambda_{p,0} \simeq λ_0+\frac{\text{13 авgуsта}-\text{10 февраLя}}{365}\cdot 360^\circ = 68^\circ+180^\circ=-112^\circ.\]Since the period of revolution of the comet around the Sun is $6.44$ Earth years, $λ_{p,i}$ are separated from each other by an angle of $\Delta \lambda=0.44 \cdot 360^\circ=180^\circ-21.5^\circ$. After just three periods (see table) the moment will come when, at the moment of perihelion passage, the Earth will be between the Sun and the comet, almost on the same straight line: \[\text{13 авgуsта 2015 gода} + 3T = \text{ноябрь – декабрь 2034 gода}.\]
+Let's find the value $\lambda_c$ of this angle on February 10, 2015. In the triangle C (comet) - S (Sun) - F (second focus of the ellipse orbit), all three sides are known: \[ \begin{split} |SC|&=d_0-1 \text{a.u.}=2.70 \text{a.u.},\\ |SF|&=2ae=4.43 \text{a.u.}, \\ |FC|&=2a-|SC|=4.22  \text{a.u.} \end{split} \] Using the cosine theorem, we calculate $\lambda_c=68^\circ$. Then, at the time the comet passed perihelion in 2015: \[\lambda_{p,0} \simeq λ_0+\frac{\text{13 августа}-\text{10 февраля}}{365}\cdot 360^\circ = 68^\circ+180^\circ=-112^\circ.\]Since the period of revolution of the comet around the Sun is $6.44$ Earth years, $λ_{p,i}$ are separated from each other by an angle of $\Delta \lambda=0.44 \cdot 360^\circ=180^\circ-21.5^\circ$. After just three periods (see table) the moment will come when, at the moment of perihelion passage, the Earth will be between the Sun and the comet, almost on the same straight line: \[\text{13 августа 2015 year} + 3T = \text{ноябрь – декабрь 2034 year}.\]
 
 
-$i$ $\lambda_{p,i}$ 0 $–112^\circ$ 1 $46.5^\circ$ 2 $–155^\circ$ 3 $3.5^\circ$
+$i\lambda_{p,i}$ 0 $–112^\circ$ 1 $46.5^\circ$ 2 $–155^\circ$ 3 $3.5^\circ$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} November-December 2034
+\par\smallskip\noindent\textbf{Answer:} November-December 2034
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{T8_S_EN_assets/fig1.jpg}
@@ -84,24 +83,24 @@ $i$ $\lambda_{p,i}$ 0 $–112^\circ$ 1 $46.5^\circ$ 2 $–155^\circ$ 3 $3.5^\cir
 \end{solcard}
 
 \begin{solcard}{C1}{Record the comet's current perihelion distance $q$.}{0.10}
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$q=1.24~\mathrm{\mathrm{a.u.}}$$
+\par\smallskip\noindent\textbf{Answer:} $$q=1.24~\mathrm{\text{a.u.}}$$
 \end{solcard}
 
 \begin{solcard}{C2}{Find the change $\Delta{(v^2)}$ in the squared magnitude of the comet's velocity during its interaction with Jupiter. Express your answer using $q$, $q_l$, $v_{r_{max}}$, $e$. Also obtain the numerical value $\Delta{(v^2)}$.}{2.00}
 
-The orbital speed of a body depends only on its heliocentric distance r and the semi-major axis of the orbit a (point A2). At close approach to Jupiter $r=R$. Since the orbital eccentricity remains the same, the old and new orbit are similar: $\frac{a_l}{a}=\frac{q_l}{q}$, hence $a_l=7.53~\text{\mathrm{a.u.}}$. The expression for the desired quantity is not difficult to write: \[ \Delta v^2=GM \left( \frac{2}{R}-\frac{1}{a}-\frac{2}{R}+\frac{1}{a_l} \right)=GM \frac{a-a_l}{a \cdot a_l}.\]It remains to find the value of the Kepler constant $GM$. Let's look at the graph data again: $v_{r,\text{max}} =13.4~\text{km}/\text{s}$ is achieved (point A4) at $r=a(1-e^2 )$. In this case, the expression for $v_r^2$ takes the form \[v_{r,\text{max}}^2=GM \left(\frac{2}{a(1-e^2)}-\frac{1}{a}-\frac{a(1-e^2)}{(a^2 (1-e^2 )^2} \right)=GM \frac{e^2}{a(1-e^2)}\] As a result, we have \[\Delta v^2=\frac{1-e^2}{e^2} \cdot \frac{a-a_l}{a_l} \cdot v_{r,\text{max}}^2=-140 \left( \text{km}/\text{s}\right)^2.\]
+The orbital speed of a body depends only on its heliocentric distance r and the semi-major axis of the orbit a (point A2). At close approach to Jupiter $r=R$. Since the orbital eccentricity remains the same, the old and new orbit are similar: $\frac{a_l}{a}=\frac{q_l}{q}$, hence $a_l=7.53~\text{a.u.}$. The expression for the desired quantity is not difficult to write: \[ \Delta v^2=GM \left( \frac{2}{R}-\frac{1}{a}-\frac{2}{R}+\frac{1}{a_l} \right)=GM \frac{a-a_l}{a \cdot a_l}.\]It remains to find the value of the Kepler constant $GM$. Let's look at the graph data again: $v_{r,\text{max}} =13.4~\text{km}/\text{s}$ is achieved (point A4) at $r=a(1-e^2 )$. In this case, the expression for $v_r^2$ takes the form \[v_{r,\text{max}}^2=GM \left(\frac{2}{a(1-e^2)}-\frac{1}{a}-\frac{a(1-e^2)}{(a^2 (1-e^2 )^2} \right)=GM \frac{e^2}{a(1-e^2)}\] As a result, we have \[\Delta v^2=\frac{1-e^2}{e^2} \cdot \frac{a-a_l}{a_l} \cdot v_{r,\text{max}}^2=-140 \left( \text{km}/\text{s}\right)^2.\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Delta v^{2}=\frac{1-e^{2}}{e^{2}} \cdot \frac{a-a_{l}}{a_{l}} \cdot v_{r, \max }^{2}=-140~(км/с)^2 $$
+\par\smallskip\noindent\textbf{Answer:} $$ \Delta v^{2}=\frac{1-e^{2}}{e^{2}} \cdot \frac{a-a_{l}}{a_{l}} \cdot v_{r, \max }^{2}=-140~(\mathrm{km/s})^2 $$
 \end{solcard}
 
-\begin{solcard}{C3}{Find the angle $\Delta{ψ}$ through which the comet’s velocity vector has rotated as a result of the described interaction, if it is known that it does not exceed $30^{\circ}$. Consider that Jupiter is moving in a circular orbit of radius $R=5{,}20~\text{а.е}$.}{1.00}
+\begin{solcard}{C3}{Find the angle $\Delta{ψ}$ through which the comet’s velocity vector has rotated as a result of the described interaction, if it is known that it does not exceed $30^{\circ}$. Consider that Jupiter is moving in a circular orbit of radius $R=5{,}20~\text{a.u.}$.}{1.00}
 
-Let us calculate (up to sign) the velocities $v_r (R)$ and $v_\tau (R)$ when moving along the old and new orbits (point A3); to simplify the calculations, we put $GM = 1~\text{\mathrm{a.u.}}$. Using these data, we calculate the angle that the comet’s speed formed with the line of sight: \[ |\psi|=\arctan \frac{v_\tau}{v_r}\]
+Let us calculate (up to sign) the velocities $v_r (R)$ and $v_\tau (R)$ when moving along the old and new orbits (point A3); to simplify the calculations, we put $GM = 1~\text{a.u.}$. Using these data, we calculate the angle that the comet’s speed formed with the line of sight: \[ |\psi|=\arctan \frac{v_\tau}{v_r}\]
 
 
-$r=R=5.20~\text{а.е}$ $a,~\text{\mathrm{a.u.}}$ $e$ $v_r,~\text{у.е.}$ $v_\tau,~\text{у.е.}$ |\textbackslash{}psi| $7.53$ $0.64$ $0.296$ $0.405$ $54^\circ$ $3.46$ $0.142$ $0.275$ $63^\circ$
+$r=R=5.20~\text{a.u.}a,~\text{a.u.}ev_r,~\text{a.u.}v_\tau,~\text{a.u.}|\psi|7.530.640.2960.40554^\circ3.460.1420.27563^\circ$
 
-\par\smallskip\noindent\textbf{Answer:} \textbackslash{}textbf{Answer:} $$ \Delta \psi = 9^{\circ} $$
+\par\smallskip\noindent\textbf{Answer:} $$ \Delta \psi = 9^{\circ} $$
 \end{solcard}
 
 \end{document}

@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **E1_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/E1_S_EN
-.tex
+(./E1_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/E1_S_EN
-.aux)
+(./E1_S_EN.aux)
 \openout1 = `E1_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/E1_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2023/E1_S_EN
-.out)
+(./E1_S_EN.out) (./E1_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `E1_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1072,9 +1067,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Missing character: There is no м ("43C) in font cmmi10!
-Missing character: There is no м ("43C) in font cmmi10!
-
 Overfull \hbox (30.14787pt too wide) in paragraph at lines 38--38
 \TU/DejaVuSerif(0)/m/it/10 Make resistance measurements $\OML/cmm/m/it/10 R$ \T
 U/DejaVuSerif(0)/m/it/10 corresponding to the positions of the syringe $\OML/cm
@@ -1082,8 +1074,8 @@ m/m/it/10 V \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/i
 t/10 ; [] ; \OT1/cmr/m/n/10 20 [][]$\TU/DejaVuSerif(0)/m/it/10 . 
  []
 
-Missing character: There is no О ("41E) in font cmmi10!
-Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no 
+ (U+000A) in font DejaVu Serif/OT:script=latn;language=dflt;mapping=tex-text;!
 File: E1_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <E1_S_EN_assets/fig1.jpg>
 File: E1_S_EN_assets/fig2.jpg Graphic file (type bmp)
@@ -1091,19 +1083,74 @@ File: E1_S_EN_assets/fig2.jpg Graphic file (type bmp)
 [1
 
 ]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.58 ...0.19 $\alpha_1,~\frac{\text{\Omega}}{cm^3}
-                                                  $ 1.15 0.80 0.66 0.58 0.56...
- 
+Missing character: There is no у ("443) in font cmmi7!
+[2]
+Overfull \hbox (94.60582pt too wide) in paragraph at lines 76--76
+\TU/DejaVuSerif(0)/m/it/10 depend on time? Again, ignore any surface effects. W
+rite your answer using $\OML/cmm/m/it/10 n; S; L; e; !; m[]; m[]; k[]; k[]; U$
+ []
+
+LaTeX Font Info:    Trying to load font information for U+euf on input line 78.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
+Overfull \hbox (30.87537pt too wide) detected at line 80
+\OML/cmm/m/it/10 I \OT1/cmr/m/n/10 = [][] [] [] + [][] [] []
+ []
+
+
+Overfull \hbox (18.8739pt too wide) in paragraph at lines 83--83
+\TU/DejaVuSerif(0)/m/it/10 sisting of a solution $[][][][]$ and a vessel. Write
+ your answer using $\OML/cmm/m/it/10 n; S; L; e; m[]; m[]; !; k[]; k[]$
+ []
+
+[3]
+File: E1_S_EN_assets/fig3.jpg Graphic file (type bmp)
+<E1_S_EN_assets/fig3.jpg>
+
+Overfull \hbox (86.59416pt too wide) detected at line 107
+[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 + [][]
+ []
+
+[4]
+Missing character: There is no м ("43C) in font cmmi7!
+Missing character: There is no о ("43E) in font cmmi7!
+Missing character: There is no л ("43B) in font cmmi7!
+Missing character: There is no ь ("44C) in font cmmi7!
+File: E1_S_EN_assets/fig4.jpg Graphic file (type bmp)
+<E1_S_EN_assets/fig4.jpg>
+[5]
+File: E1_S_EN_assets/fig5.jpg Graphic file (type bmp)
+<E1_S_EN_assets/fig5.jpg>
+ [6]
+File: E1_S_EN_assets/fig6.jpg Graphic file (type bmp)
+<E1_S_EN_assets/fig6.jpg>
+ [7] [8] [9]
+File: E1_S_EN_assets/fig7.jpg Graphic file (type bmp)
+<E1_S_EN_assets/fig7.jpg>
+ [10]
+File: E1_S_EN_assets/fig8.jpg Graphic file (type bmp)
+<E1_S_EN_assets/fig8.jpg>
+ [11]
+Missing character: There is no м ("43C) in font cmmi7!
+Missing character: There is no к ("43A) in font cmmi7!
+Missing character: There is no Ф ("424) in font cmmi7!
+[12] (./E1_S_EN.aux)
+Package rerunfilecheck Info: File `E1_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 32089 strings out of 478190
- 686420 string characters out of 5854827
- 1072699 words of memory out of 5000000
- 52147 multiletter control sequences out of 15000+600000
- 477340 words of font info for 106 fonts, out of 8000000 for 9000
+ 32201 strings out of 478190
+ 687997 string characters out of 5854827
+ 1078692 words of memory out of 5000000
+ 52244 multiletter control sequences out of 15000+600000
+ 478048 words of font info for 109 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 91i,7n,99p,1029b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2023/E1_S_EN.pdf (1 page).
+ 91i,7n,99p,1975b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on E1_S_EN.pdf (12 pages).

@@ -9,10 +9,9 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
@@ -33,77 +32,73 @@
 \begin{document}\maketitle\vspace{-0.5em}
 \begin{solcard}{A1}{Find the trajectory of motion $\vec r (t)$ for this particle. Express the answer in vector form through $\vec{v}_0$, $\vec{g}$, $\varepsilon$ or express the dependences of the components of the vector $\vec{r}(t)$ in the Cartesian coordinate system through the components of the vectors $\vec{v}_0$, $\vec{g}$.}{1.30}
 
-Newton's second law: $$m\dot{\vec v} = -\varepsilon m\vec v + m\vec g.$$Разобьём velocity on two term: $$\vec v(t) = \vec u(t) + \frac{\vec g}{\varepsilon}.$$Equation on $\vec u$: $$\dot{\vec u} = -\varepsilon \vec u.$$$$\vec v(t) = \frac{\vec g}{\varepsilon}+\left(\vec v_0-\frac{\vec g}{\varepsilon}\right) e^{-\varepsilon t}$$
+Newton's second law: $$m\dot{\vec v} = -\varepsilon m\vec v + m\vec g.$$Let us split the velocity into two terms: $$\vec v(t) = \vec u(t) + \frac{\vec g}{\varepsilon}.$$The equation for $\vec u$ is: $$\dot{\vec u} = -\varepsilon \vec u.$$$$\vec v(t) = \frac{\vec g}{\varepsilon}+\left(\vec v_0-\frac{\vec g}{\varepsilon}\right) e^{-\varepsilon t}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$\vec r(t) = \frac{\vec g t}{\varepsilon}+\left(\vec v_0-\frac{\vec g}{\varepsilon}\right) \frac{1-e^{-\varepsilon t}}{\varepsilon}$$
+\par\smallskip\noindent\textbf{Answer:} $$\vec r(t) = \frac{\vec g t}{\varepsilon}+\left(\vec v_0-\frac{\vec g}{\varepsilon}\right) \frac{1-e^{-\varepsilon t}}{\varepsilon}$$
 \end{solcard}
 
 \begin{solcard}{A2}{How does the power of energy loss $P(t)$, which goes into heat, depend on time? Express your answer in terms of $\vec{v}_0$, $\vec{g}$, $\varepsilon$, $t$, $m$.}{0.70}
 
-Let us write the law of change in the energy of the particle+medium system: $$m\left(\vec v, \dot{\vec v}\right) = m\left(\vec v, \vec g\right) - P.$$$$P = -m\left(\vec v, \dot{\vec v}-\vec g\right) = \varepsilon m v^2$$$$\vec v(t) = \frac{\vec g}{\varepsilon}\left(1-e^{-\varepsilon t}\right)+\vec v_0 e^{-\varepsilon t}$$$$v^2 = \frac{g^2\left(1-e^{-\varepsilon t}\right)^2}{\varepsilon^2} + v_0^2 e^{-2\varepsilon t}+\frac{2 \left(\vec v_0, \vec g\right)}{\varepsilon}\left(1-e^{-\varepsilon t}\right) e^{-\varepsilon t}$$
+Let us write the law of energy change for the system of the particle and the medium: $$m\left(\vec v, \dot{\vec v}\right) = m\left(\vec v, \vec g\right) - P.$$$$P = -m\left(\vec v, \dot{\vec v}-\vec g\right) = \varepsilon m v^2$$$$\vec v(t) = \frac{\vec g}{\varepsilon}\left(1-e^{-\varepsilon t}\right)+\vec v_0 e^{-\varepsilon t}$$$$v^2 = \frac{g^2\left(1-e^{-\varepsilon t}\right)^2}{\varepsilon^2} + v_0^2 e^{-2\varepsilon t}+\frac{2 \left(\vec v_0, \vec g\right)}{\varepsilon}\left(1-e^{-\varepsilon t}\right) e^{-\varepsilon t}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$P = \varepsilon m \left(\frac{g^2\left(1-e^{-\varepsilon t}\right)^2}{\varepsilon^2} + v_0^2 e^{-2\varepsilon t}+\frac{2 \left(\vec v_0, \vec g\right)}{\varepsilon}\left(1-e^{-\varepsilon t}\right) e^{-\varepsilon t}\right)$$
+\par\smallskip\noindent\textbf{Answer:} $$P = \varepsilon m \left(\frac{g^2\left(1-e^{-\varepsilon t}\right)^2}{\varepsilon^2} + v_0^2 e^{-2\varepsilon t}+\frac{2 \left(\vec v_0, \vec g\right)}{\varepsilon}\left(1-e^{-\varepsilon t}\right) e^{-\varepsilon t}\right)$$
 \end{solcard}
 
 \begin{solcard}{A3}{Find the loss power $P$, which goes into heat, a long time after the power $t\gg1/\varepsilon$ is turned on. Express your answer using $F_0$, $\varepsilon$, $m$, $\omega$.}{2.00}
 
-During time $t\gg 1/\varepsilon$, motion is established, and from the isotropy of the system it is clear that motion will occur in a circle with an angular velocity $\omega$ and a constant modulus velocity $u$. In this case, the angle between speed and force is constant and equal to $\alpha$. Let's write down Newton's second law in projection onto the direction of velocity and the normal to it. $$\begin{cases}0 = F_0 \cos\alpha - \varepsilon m u\\ mu\omega = F_0 \sin \alpha \end{cases}$$$$\tan \alpha = \frac{\omega}{\varepsilon}$$$$u = \frac{F_0\cos\alpha}{\varepsilon m} = \frac{F_0}{\varepsilon m} \frac{\varepsilon}{\sqrt{\varepsilon^2+\omega^2}} = \frac{F_0}{m\sqrt{\varepsilon^2+\omega^2}}$$Law change energy for system: $$P = F_0 u \cos\alpha = \frac{F_0^2\varepsilon}{m\left(\varepsilon^2+\omega^2\right)}.$$
+After a long time $t\gg 1/\varepsilon$, steady motion is established, and from the isotropy of the system it is clear that the motion will occur in a circle with an angular velocity $\omega$ and a constant speed $u$. In this case, the angle between the velocity and force is constant and equal to $\alpha$. Let us write down Newton's second law in projection onto the direction of velocity and the normal to it. $$\begin{cases}0 = F_0 \cos\alpha - \varepsilon m u\\ mu\omega = F_0 \sin \alpha \end{cases}$$$$\tan \alpha = \frac{\omega}{\varepsilon}$$$$u = \frac{F_0\cos\alpha}{\varepsilon m} = \frac{F_0}{\varepsilon m} \frac{\varepsilon}{\sqrt{\varepsilon^2+\omega^2}} = \frac{F_0}{m\sqrt{\varepsilon^2+\omega^2}}$$The law of energy change for the system is: $$P = F_0 u \cos\alpha = \frac{F_0^2\varepsilon}{m\left(\varepsilon^2+\omega^2\right)}.$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$P =  \frac{F_0^2\varepsilon}{m\left(\varepsilon^2+\omega^2\right)}$$
+\par\smallskip\noindent\textbf{Answer:} $$P =  \frac{F_0^2\varepsilon}{m\left(\varepsilon^2+\omega^2\right)}$$
 \end{solcard}
 
 \begin{solcard}{B1}{Find the dependence $z(t)$. Express your answer in terms of $r_0$, $\varepsilon$, $g$.}{0.50}
 
-Projection of Newton's second law in projection onto the $z$ axis: $$m\ddot{z} = -mg - \varepsilon m\dot z.$$$$\ddot{z} = -g - \varepsilon \dot z$$We solve similarly to the previous part of the problem.
+The projection of Newton's second law onto the $z$ axis is: $$m\ddot{z} = -mg - \varepsilon m\dot z.$$$$\ddot{z} = -g - \varepsilon \dot z$$We solve this similarly to the previous part of the problem.
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$z(t) = -\frac{gt}{\varepsilon}+\frac{g\left(1-e^{-\varepsilon t}\right)}{\varepsilon^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$z(t) = -\frac{gt}{\varepsilon}+\frac{g\left(1-e^{-\varepsilon t}\right)}{\varepsilon^2}$$
 \end{solcard}
 
 \begin{solcard}{B2}{Express $\ddot{x}$ and $\ddot{y}$ in terms of $x$, $y$, $\dot x$, $\dot y$, $\varepsilon$ and $\omega$.}{1.00}
 
-Newton's second law: $$m\ddot{\vec r} = m\vec g + \varepsilon m\left(\left[\vec\omega, \vec r\right] - \dot{\vec r}\right).$$in projection on axis $x$ and $y$:
+Newton's second law: $$m\ddot{\vec r} = m\vec g + \varepsilon m\left(\left[\vec\omega, \vec r\right] - \dot{\vec r}\right).$$In projection onto the $x$ and $y$ axes:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$\begin{cases} \ddot{x}=\varepsilon\left(-\omega y - \dot x\right)\\ \ddot y =\varepsilon\left(\omega x - \dot y\right) \end{cases}$$
+\par\smallskip\noindent\textbf{Answer:} $$\begin{cases} \ddot{x}=\varepsilon\left(-\omega y - \dot x\right)\\ \ddot y =\varepsilon\left(\omega x - \dot y\right) \end{cases}$$
 \end{solcard}
 
-\begin{solcard}{B3}{Using the solution $(x_1, y_1)$, obtain a system of equations from which the possible values ​​of the constants $a$ and $\Omega$ can be determined.  The answer may also include $\varepsilon$, $\omega$.}{1.00}
+\begin{solcard}{B3}{Using the solution $(x_1, y_1)$, obtain a system of equations from which the possible values of the constants $a$ and $\Omega$ can be determined. The answer may also include $\varepsilon$, $\omega$.}{1.00}
 
-First method
+\textbf{First method}
 
+Note that it is enough to consider one of the solutions, since the other is obtained by rotating the system relative to the $z$ axis; therefore, by symmetry, the dependence coefficients will not change. Let us substitute the first solution option into the answer from the previous section. $$\left( \begin{array}{c} x \\ y \end{array} \right) = Ae^{at} \left( \begin{array}{c} \cos\left(\Omega t\right) \\ \sin\left(\Omega t\right) \end{array} \right)$$$$\left( \begin{array}{c} \dot x \\ \dot y \end{array} \right) = Ae^{at} \left( \begin{array}{c} a\cos\left(\Omega t\right) - \Omega\sin\left(\Omega t\right)\\ a\sin\left(\Omega t\right) + \Omega\cos\left(\Omega t\right) \end{array} \right)$$$$\left( \begin{array}{c} \ddot x \\ \ddot y \end{array} \right) = Ae^{at} \left( \begin{array}{c} \left(a^2-\Omega^2\right)\cos\left(\Omega t\right) - 2a\Omega\sin\left(\Omega t\right)\\ \left(a^2-\Omega^2\right)\sin\left(\Omega t\right) + 2a\Omega\cos\left(\Omega t\right) \end{array} \right)$$Substituting into the answer from the previous part: $$\left( \begin{array}{c} \left(a^2-\Omega^2\right)\cos\left(\Omega t\right) - 2a\Omega\sin\left(\Omega t\right)\\ \left(a^2-\Omega^2\right)\sin\left(\Omega t\right) + 2a\Omega\cos\left(\Omega t\right) \end{array} \right) = \left( \begin{array}{c} -\varepsilon\omega\sin\left(\Omega t\right) \\ \varepsilon\omega\cos\left(\Omega t\right) \end{array} \right) - \left( \begin{array}{c} a\varepsilon\cos\left(\Omega t\right) - \varepsilon\Omega\sin\left(\Omega t\right)\\ a\varepsilon \sin\left(\Omega t\right) + \varepsilon\Omega\cos\left(\Omega t\right) \end{array} \right)$$Equating the coefficients of the sine and cosine terms, we obtain a system of equations for $a$ and $\Omega$: $$\begin{cases} a^2-\Omega^2 = - a\varepsilon\\ 2a\Omega = \varepsilon \omega - \varepsilon \Omega \end{cases}$$
 
-Note that it is enough to consider one of the solutions, since the other is obtained by rotating the system relative to the $z$ axis, therefore, from symmetry, the dependence coefficients will not change. Let's substitute the first solution option into the answer from the previous paragraph. $$\left( \begin{array}{c} x \\ y \end{array} \right) = Ae^{at} \left( \begin{array}{c} \cos\left(\Omega t\right) \\ \sin\left(\Omega t\right) \end{array} \right)$$$$\left( \begin{array}{c} \dot x \\ \dot y \end{array} \right) = Ae^{at} \left( \begin{array}{c} a\cos\left(\Omega t\right) - \Omega\sin\left(\Omega t\right)\\ a\sin\left(\Omega t\right) + \Omega\cos\left(\Omega t\right) \end{array} \right)$$$$\left( \begin{array}{c} \ddot x \\ \ddot y \end{array} \right) = Ae^{at} \left( \begin{array}{c} \left(a^2-\Omega^2\right)\cos\left(\Omega t\right) - 2a\Omega\sin\left(\Omega t\right)\\ \left(a^2-\Omega^2\right)\sin\left(\Omega t\right) + 2a\Omega\cos\left(\Omega t\right) \end{array} \right)$$Substitute in answer прошлого part: $$\left( \begin{array}{c} \left(a^2-\Omega^2\right)\cos\left(\Omega t\right) - 2a\Omega\sin\left(\Omega t\right)\\ \left(a^2-\Omega^2\right)\sin\left(\Omega t\right) + 2a\Omega\cos\left(\Omega t\right) \end{array} \right) = \left( \begin{array}{c} -\varepsilon\omega\sin\left(\Omega t\right) \\ \varepsilon\omega\cos\left(\Omega t\right) \end{array} \right) - \left( \begin{array}{c} a\varepsilon\cos\left(\Omega t\right) - \varepsilon\Omega\sin\left(\Omega t\right)\\ a\varepsilon \sin\left(\Omega t\right) + \varepsilon\Omega\cos\left(\Omega t\right) \end{array} \right)$$Equate coefficient before sine and cosine obtain system equation on $a$ and $\Omega$: $$\begin{cases} a^2-\Omega^2 = - a\varepsilon\\ 2a\Omega = \varepsilon \omega - \varepsilon \Omega \end{cases}$$
+\textbf{Second method}
 
+Let us consider planar motion in polar coordinates $(r,\varphi)$. $$\dot{\vec r} =  \dot r \vec e_r + \dot \varphi r \vec e_\varphi$$$$\ddot {\vec r} = \left(\ddot r - \dot{\varphi}^2r\right)\vec e_r + \left(\ddot \varphi r + 2\dot r \dot \varphi\right) \vec e_\varphi$$Writing Newton's second law in projection onto $\vec e_r$ and $\vec e_\varphi$: $$\begin{cases} \ddot r - \dot{\varphi}^2r = -\varepsilon \dot r\\ \ddot \varphi r + 2\dot r \dot \varphi = \varepsilon\left(\omega r - \dot\varphi r\right) \end{cases}$$Substituting $r = Ae^{at}$ and $\varphi = \Omega t$: $$\begin{cases} a^2 - \Omega^2 = -\varepsilon a\\ 2a\Omega = \varepsilon\omega - \varepsilon\Omega \end{cases}$$We obtain the same system of equations as in the first method.
 
-Second method
-
-
-Let us consider plane motion in polar coordinates $(r,\varphi)$. $$\dot{\vec r} =  \dot r \vec e_r + \dot \varphi r \vec e_\varphi$$$$\ddot {\vec r} = \left(\ddot r - \dot{\varphi}^2r\right)\vec e_r + \left(\ddot \varphi r + 2\dot r \dot \varphi\right) \vec e_\varphi$$Write Newton's second law in projection on $\vec e_r$ and $\vec e_\varphi$: $$\begin{cases} \ddot r - \dot{\varphi}^2r = -\varepsilon \dot r\\ \ddot \varphi r + 2\dot r \dot \varphi = \varepsilon\left(\omega r - \dot\varphi r\right) \end{cases}$$Substitute $r = Ae^{at}$ and $\varphi = \Omega t$: $$\begin{cases} a^2 - \Omega^2 = -\varepsilon a\\ 2a\Omega = \varepsilon\omega - \varepsilon\Omega \end{cases}$$We obtained a similar system of equations the first method.
-
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$\begin{cases} a^2 - \Omega^2 = -\varepsilon a\\ 2a\Omega = \varepsilon\omega - \varepsilon\Omega \end{cases}$$
+\par\smallskip\noindent\textbf{Answer:} $$\begin{cases} a^2 - \Omega^2 = -\varepsilon a\\ 2a\Omega = \varepsilon\omega - \varepsilon\Omega \end{cases}$$
 \end{solcard}
 
-\begin{solcard}{B4}{Solve the resulting system of equations and find suitable pairs of values ​​$(a_1, \Omega_1)$ and $(a_2, \Omega_2)$ if $a_2>a_1$. Express your answer using $\varepsilon$, $\omega$.}{1.00}
+\begin{solcard}{B4}{Solve the resulting system of equations and find suitable pairs of values $(a_1, \Omega_1)$ and $(a_2, \Omega_2)$ if $a_2>a_1$. Express your answer using $\varepsilon$, $\omega$.}{1.00}
 
-To solve, we transform the equations: $$\begin{cases} \Omega^2 = \left(a+\frac{\varepsilon}{2}\right)^2 - \frac{\varepsilon^2}{4}\\ \Omega = \frac{\varepsilon\omega}{2\left(a+\frac{\varepsilon}{2}\right)} \end{cases}$$Denote $\gamma = \left(a+\frac{\varepsilon}{2}\right)^2$. $$\frac{\varepsilon^2\omega^2}{4\gamma} = \Omega^2=\gamma-\frac{\varepsilon^2}{4}$$$$\gamma^2-\frac{\varepsilon^2}{4}\gamma=\frac{\varepsilon^2\omega^2}{4} = \left(\gamma - \frac{\varepsilon^2}{8}\right)^2 - \frac{\varepsilon^4}{64}$$$$\gamma = \frac{\varepsilon^2}{8} \pm \sqrt{\frac{\varepsilon^2\omega^2}{4}+\frac{\varepsilon^4}{64}}$$Note, that $\gamma>0$, therefore подходит only root with sign $+$. $$a+\frac{\varepsilon}{2} = \pm \sqrt{\frac{\varepsilon^2}{8} + \sqrt{\frac{\varepsilon^2\omega^2}{4}+\frac{\varepsilon^4}{64}}}$$$$a = \varepsilon\left(-\frac{1}{2}\pm\sqrt{\frac{1}{8} + \sqrt{\frac{\omega^2}{4\varepsilon^2}+\frac{1}{64}}}\right)$$$$\Omega = \pm\frac{\omega}{\sqrt{\frac{1}{2} + \sqrt{\frac{4\omega^2}{\varepsilon^2}+\frac{1}{4}}}}$$
+To solve, we transform the equations: $$\begin{cases} \Omega^2 = \left(a+\frac{\varepsilon}{2}\right)^2 - \frac{\varepsilon^2}{4}\\ \Omega = \frac{\varepsilon\omega}{2\left(a+\frac{\varepsilon}{2}\right)} \end{cases}$$Let $\gamma = \left(a+\frac{\varepsilon}{2}\right)^2$. $$\frac{\varepsilon^2\omega^2}{4\gamma} = \Omega^2=\gamma-\frac{\varepsilon^2}{4}$$$$\gamma^2-\frac{\varepsilon^2}{4}\gamma=\frac{\varepsilon^2\omega^2}{4} = \left(\gamma - \frac{\varepsilon^2}{8}\right)^2 - \frac{\varepsilon^4}{64}$$$$\gamma = \frac{\varepsilon^2}{8} \pm \sqrt{\frac{\varepsilon^2\omega^2}{4}+\frac{\varepsilon^4}{64}}$$Note that $\gamma>0$, therefore only the root with the $+$ sign is suitable. $$a+\frac{\varepsilon}{2} = \pm \sqrt{\frac{\varepsilon^2}{8} + \sqrt{\frac{\varepsilon^2\omega^2}{4}+\frac{\varepsilon^4}{64}}}$$$$a = \varepsilon\left(-\frac{1}{2}\pm\sqrt{\frac{1}{8} + \sqrt{\frac{\omega^2}{4\varepsilon^2}+\frac{1}{64}}}\right)$$$$\Omega = \pm\frac{\omega}{\sqrt{\frac{1}{2} + \sqrt{\frac{4\omega^2}{\varepsilon^2}+\frac{1}{4}}}}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$a_1 = \varepsilon\left(-\frac{1}{2}-\sqrt{\frac{1}{8} + \sqrt{\frac{\omega^2}{4\varepsilon^2}+\frac{1}{64}}}\right)$$$$a_2 = \varepsilon\left(-\frac{1}{2}+\sqrt{\frac{1}{8} + \sqrt{\frac{\omega^2}{4\varepsilon^2}+\frac{1}{64}}}\right)$$$$\Omega_1 = -\frac{\omega}{\sqrt{\frac{1}{2} + \sqrt{\frac{4\omega^2}{\varepsilon^2}+\frac{1}{4}}}}$$$$\Omega_2 = \frac{\omega}{\sqrt{\frac{1}{2} + \sqrt{\frac{4\omega^2}{\varepsilon^2}+\frac{1}{4}}}}$$
+\par\smallskip\noindent\textbf{Answer:} $$a_1 = \varepsilon\left(-\frac{1}{2}-\sqrt{\frac{1}{8} + \sqrt{\frac{\omega^2}{4\varepsilon^2}+\frac{1}{64}}}\right)$$$$a_2 = \varepsilon\left(-\frac{1}{2}+\sqrt{\frac{1}{8} + \sqrt{\frac{\omega^2}{4\varepsilon^2}+\frac{1}{64}}}\right)$$$$\Omega_1 = -\frac{\omega}{\sqrt{\frac{1}{2} + \sqrt{\frac{4\omega^2}{\varepsilon^2}+\frac{1}{4}}}}$$$$\Omega_2 = \frac{\omega}{\sqrt{\frac{1}{2} + \sqrt{\frac{4\omega^2}{\varepsilon^2}+\frac{1}{4}}}}$$
 \end{solcard}
 
-\begin{solcard}{B5}{Find approximate values ​​of these quantities in the cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.}{0.50}
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} For $\varepsilon \ll \omega$: $$a_1 = -\sqrt{\frac{\omega\varepsilon}{2}}=\Omega_1$$$$a_2 = \sqrt{\frac{\omega\varepsilon}{2}}=\Omega_2$$For $\varepsilon \gg \omega$: $$a_1 = -\varepsilon$$$$a_2 = 0$$$$\Omega_1 = -\omega$$$$\Omega_2 = \omega$$
+\begin{solcard}{B5}{Find approximate values of these quantities in the cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.}{0.50}
+\par\smallskip\noindent\textbf{Answer:} For $\varepsilon \ll \omega$: $$a_1 = -\sqrt{\frac{\omega\varepsilon}{2}}=\Omega_1$$$$a_2 = \sqrt{\frac{\omega\varepsilon}{2}}=\Omega_2$$For $\varepsilon \gg \omega$: $$a_1 = -\varepsilon$$$$a_2 = 0$$$$\Omega_1 = -\omega$$$$\Omega_2 = \omega$$
 \end{solcard}
 
-\begin{solcard}{B6}{An arbitrary solution to the system of equations has the form $$\left(x(t), y(t)\right) = A\vec r_{11}+B\vec r_{12}+C\vec r_{21}+D\vec r_{22}.$$ Use initial condition, lead to in introduction to part,  express $A$, $B$, $C$ and $D$ through $r_0$, $a_1$, $a_2$, $\Omega_1$ and $\Omega_2$.}{1.50}
+\begin{solcard}{B6}{An arbitrary solution to the system of equations has the form $$\left(x(t), y(t)\right) = A\vec r_{11}+B\vec r_{12}+C\vec r_{21}+D\vec r_{22}.$$ Using the initial conditions given in the introduction to this part, express $A$, $B$, $C$, and $D$ in terms of $r_0$, $a_1$, $a_2$, $\Omega_1$, and $\Omega_2$.}{1.50}
 
 Initial conditions: $x(0) = 0$, $y(0) = r_0$, $\dot x(0) = 0$ and $\dot y(0) = 0$. $$\begin{cases} A+B = r_0\\ C+D = 0\\ a_1A+a_2B-\Omega_1C-\Omega_2D=0\\ a_1C+a_2D+\Omega_1A+\Omega_2B=0 \end{cases}$$$$D = -C$$$$\begin{cases} A+B = r_0\\ a_1A+a_2B=C\left(\Omega_1-\Omega_2\right)\\ \Omega_1A+\Omega_2B=C\left(a_2-a_1\right) \end{cases}$$$$\frac{a_1A+a_2B}{\Omega_1A+\Omega_2B}=\frac{\Omega_1-\Omega_2}{a_2-a_1}$$$$A\left(a_1\left(a_2-a_1\right)+\Omega_1\left(\Omega_2-\Omega_1\right)\right)=B\left(a_2\left(a_1-a_2\right)+\Omega_2\left(\Omega_1-\Omega_2\right)\right)$$$$r_0 = A\frac{a_2\left(a_1-a_2\right)+\Omega_2\left(\Omega_1-\Omega_2\right)+a_1\left(a_2-a_1\right)+\Omega_1\left(\Omega_2-\Omega_1\right)}{a_2\left(a_1-a_2\right)+\Omega_2\left(\Omega_1-\Omega_2\right)}$$$$r_0 = A\frac{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}{a_2\left(a_2-a_1\right)+\Omega_2\left(\Omega_2-\Omega_1\right)}$$$$A = r_0 \frac{a_2\left(a_2-a_1\right)+\Omega_2\left(\Omega_2-\Omega_1\right)}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$B = -r_0 \frac{a_1\left(a_2-a_1\right)+\Omega_1\left(\Omega_2-\Omega_1\right)}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$C = \frac{a_1A+a_2B}{\Omega_1-\Omega_2}=r_0\frac{a_2\Omega_1-a_1\Omega_2}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$D = r_0\frac{a_1\Omega_2-a_2\Omega_1}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$A = r_0 \frac{a_2\left(a_2-a_1\right)+\Omega_2\left(\Omega_2-\Omega_1\right)}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$B = -r_0 \frac{a_1\left(a_2-a_1\right)+\Omega_1\left(\Omega_2-\Omega_1\right)}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$C =r_0\frac{a_2\Omega_1-a_1\Omega_2}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$D = r_0\frac{a_1\Omega_2-a_2\Omega_1}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$
+\par\smallskip\noindent\textbf{Answer:} $$A = r_0 \frac{a_2\left(a_2-a_1\right)+\Omega_2\left(\Omega_2-\Omega_1\right)}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$B = -r_0 \frac{a_1\left(a_2-a_1\right)+\Omega_1\left(\Omega_2-\Omega_1\right)}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$C =r_0\frac{a_2\Omega_1-a_1\Omega_2}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$$$D = r_0\frac{a_1\Omega_2-a_2\Omega_1}{\left(a_2-a_1\right)^2+\left(\Omega_2-\Omega_1\right)^2}$$
 \end{solcard}
 
 \begin{solcard}{B7}{Draw qualitatively the trajectory of the particle in the $xy$ plane for cases $\varepsilon \ll \omega$ and $\varepsilon \gg \omega$.}{0.50}
 
-For $\varepsilon \ll \omega$ we get: $$x(t) = r_0\cos\Omega_2 t \cosh \Omega_2 t$$$$y(t) = r_0\sin \Omega_2 t \sinh \Omega_2 t$$For пренебрежении затухающей exponent be obtained логарифмическая спираль. Angle between radius-vector and velocity through larger time after beginning/origin motion equal $45^\circ$.
-
+For $\varepsilon \ll \omega$ we get: $$x(t) = r_0\cos\Omega_2 t \cosh \Omega_2 t$$$$y(t) = r_0\sin \Omega_2 t \sinh \Omega_2 t$$If we neglect the decaying exponential, we obtain a logarithmic spiral. The angle between the radius vector and the velocity a long time after the start of motion is equal to $45^\circ$.
 
 At $\varepsilon \gg \omega$ the particle moves along a circle of radius $r_0$ with a slowly increasing radius: $$x(t) \approx r_0 \cos \omega t$$$$y(t) \approx r_0 \sin \omega t$$
 
@@ -117,11 +112,11 @@ At $\varepsilon \gg \omega$ the particle moves along a circle of radius $r_0$ wi
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{B8}{Find the energy loss power $P$, which goes into heat, at the moment when the particle is at a point with coordinates $\vec r = (x,y,z)$ and moves with a speed $\vec v = (v_x,v_y,v_z)$.}{1.00}
+\begin{solcard}{B8}{Find the energy loss power $P$, which goes into heat, at the moment when the particle is at a point with coordinates $\vec r = (x,y,z)$ and moves with a velocity $\vec v = (v_x,v_y,v_z)$.}{1.00}
 
-Let us write down the law of change in the energy of the system: $$m\left(\vec v, \dot{\vec v}\right) = m\left(\vec g,\vec v\right) - P + W,$$where $W$ - power external force, act on среду. Find $W$. So that среда rotate in constant angular velocity, on each её section must act force with zero projection on direction velocity, therefore on region, in which be located particle, act force $-\vec F$ with side particle and external force $\vec F$. $$W = \left(\vec F, \left[\vec\omega, \vec r\right]\right)$$$$\left(\vec v, m\vec g + \vec F\right) = m\left(\vec g,\vec v\right) - P + \left(\vec F, \left[\vec\omega, \vec r\right]\right)$$$$P = \left(\vec F, \left[\vec\omega, \vec r\right]-\vec v\right) = \varepsilon m v_\text{rel}^2 = \varepsilon m \left(v_z^2+\left(v_x+\omega y\right)^2+\left(v_y-\omega x\right)^2\right)$$
+Let us write down the law of energy change for the system: $$m\left(\vec v, \dot{\vec v}\right) = m\left(\vec g,\vec v\right) - P + W,$$where $W$ is the power of the external force acting on the medium. Let us find $W$. For the medium to rotate with a constant angular velocity, a force with a zero projection onto the velocity direction must act on each of its sections. Therefore, on the region where the particle is located, a force $-\vec F$ acts from the particle, along with an external force $\vec F$. $$W = \left(\vec F, \left[\vec\omega, \vec r\right]\right)$$$$\left(\vec v, m\vec g + \vec F\right) = m\left(\vec g,\vec v\right) - P + \left(\vec F, \left[\vec\omega, \vec r\right]\right)$$$$P = \left(\vec F, \left[\vec\omega, \vec r\right]-\vec v\right) = \varepsilon m v_\text{rel}^2 = \varepsilon m \left(v_z^2+\left(v_x+\omega y\right)^2+\left(v_y-\omega x\right)^2\right)$$
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $$P = \left(\vec F, \left[\vec\omega, \vec r\right]-\vec v\right) = \varepsilon m v_\text{rel}^2 = \varepsilon m \left(v_z^2+\left(v_x+\omega y\right)^2+\left(v_y-\omega x\right)^2\right)$$
+\par\smallskip\noindent\textbf{Answer:} $$P = \left(\vec F, \left[\vec\omega, \vec r\right]-\vec v\right) = \varepsilon m v_\text{rel}^2 = \varepsilon m \left(v_z^2+\left(v_x+\omega y\right)^2+\left(v_y-\omega x\right)^2\right)$$
 \end{solcard}
 
 \end{document}

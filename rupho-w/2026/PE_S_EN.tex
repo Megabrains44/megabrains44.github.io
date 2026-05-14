@@ -9,10 +9,10 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[most,breakable]{tcolorbox}
 \tcbuselibrary{breakable,skins}
-\usepackage{fontspec}
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
-\setmonofont{DejaVu Sans Mono}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
 \captionsetup{font=small,labelfont=bf,skip=4pt}
 \setlist{leftmargin=1.5em,topsep=2pt}
 
@@ -30,75 +30,131 @@
 \title{\textbf{Mixture viscosity measurement --- Solution}}
 \author{\normalsize W26 (2026) — English translation}
 \date{}
-\begin{document}\maketitle\vspace{-0.5em}
-\begin{solcard}{A1}{Express the molar concentration of water $n_w$ in solution in terms of the mass concentration of glycerol $w_g$, $\mu_w$ and $\mu_g$.}{0.50}
+\begin{document}
+\maketitle\vspace{-0.5em}
 
-The amount of a substance in a mixture is defined as: \[\nu=\dfrac{m}{\mu},\]where $m$ is the mass of the substance, and $\mu$ is its molar mass. Let's write the formula for the molar concentration of water: \[n_w=1-n_g=1-\dfrac{\nu_g}{\nu_g+\nu_w},\]from here:
+\begin{solcard}{A1}{Express the mole fraction of water $n_w$ in solution in terms of the mass fraction of glycerol $w_g$, $\mu_w$ and $\mu_g$.}{0.50}
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[n_w=1-\frac{w_g\mu_w}{\mu_g-w_g(\mu_g-\mu_w)}\]
+The amount of a substance in a mixture is defined as: \[\nu=\dfrac{m}{\mu},\] where $m$ is the mass of the substance, and $\mu$ is its molar mass. Let us write the formula for the mole fraction of water: \[n_w=1-n_g=1-\dfrac{\nu_g}{\nu_g+\nu_w},\] from which we obtain:
+
+\par\smallskip\noindent\textbf{Answer:} \[n_w=1-\frac{w_g\mu_w}{\mu_g-w_g(\mu_g-\mu_w)}\]
 \end{solcard}
 
-\begin{solcard}{A2}{Using the equation $(2)$, convert the values ​​of $T_g$ to the values ​​of $w_g$.}{2.00}
+\begin{solcard}{A2}{Using the equation $(2)$, convert the values of $T_g$ to the values of $w_g$.}{2.00}
 
-Using the table method or the method of simple iterations with $a=0.9$, we get:
+Using the tabular method or the simple iteration method with $a=0.9$, we obtain:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $T_g,~\mathrm{K}$ $w_g$ $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ 195.2 1.000 0.906 194.8 0.996 0.839 194.6 0.994 0.767 193.9 0.987 0.655 193.1 0.979 0.558 191.8 0.965 0.479 190.8 0.954 0.373 188.6 0.930 0.202 183.4 0.869 0.0674 173.0 0.728 0.0278 170.0 0.682 0.0134 154.6 0.384 0.0026 149.3 0.252 0.0017 143.8 0.100 0.0012 140.3 0 0.0009
+\par\smallskip\noindent\textbf{Answer:} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+$T_g,~\mathrm{K}$ & $w_g$ & $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ \\
+\hline
+195.2 & 1.000 & 0.906 \\
+194.8 & 0.996 & 0.839 \\
+194.6 & 0.994 & 0.767 \\
+193.9 & 0.987 & 0.655 \\
+193.1 & 0.979 & 0.558 \\
+191.8 & 0.965 & 0.479 \\
+190.8 & 0.954 & 0.373 \\
+188.6 & 0.930 & 0.202 \\
+183.4 & 0.869 & 0.0674 \\
+173.0 & 0.728 & 0.0278 \\
+170.0 & 0.682 & 0.0134 \\
+154.6 & 0.384 & 0.0026 \\
+149.3 & 0.252 & 0.0017 \\
+143.8 & 0.100 & 0.0012 \\
+140.3 & 0 & 0.0009 \\
+\hline
+\end{tabular}
+\end{table}
 \end{solcard}
 
-\begin{solcard}{A3}{Propose a linearization that describes a system with a low molar concentration of water, which can be used to determine the parameters $\xi$ and $k$.}{0.30}
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} The dependence $\operatorname{ln}\dfrac{\eta}{1~\mathrm{Pa}\cdot \mathrm{s}}(n_w)$ is linear.
+\begin{solcard}{A3}{Propose a linearization that describes a system with a low mole fraction of water, which can be used to determine the parameters $\xi$ and $k$.}{0.30}
+\par\smallskip\noindent\textbf{Answer:} The dependence of $\ln\left(\dfrac{\eta}{1~\mathrm{Pa}\cdot \mathrm{s}}\right)$ on $n_w$ is linear.
 \end{solcard}
 
 \begin{solcard}{A4}{Plot the linearized relationship over the range $n_w \in [0, 0.2]$. Determine the parameters $\xi$ and $k$ using the resulting graph.}{1.20}
 
-Let's recalculate the points into the dependence $\operatorname{ln}\dfrac{\eta}{1~\mathrm{Pa}\cdot \mathrm{s}}(n_w)$.
+Let us recalculate the data to find the dependence of $\ln\left(\dfrac{\eta}{1~\mathrm{Pa}\cdot \mathrm{s}}\right)$ on $n_w$.
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$T_g,~\mathrm{K}$ & $w_g$ & $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ & $n_w$ & $\ln \eta$ \\
+\hline
+195.2 & 1.000 & 0.906 & 0 & -0.099 \\
+194.8 & 0.996 & 0.839 & 0.020 & -0.176 \\
+194.6 & 0.994 & 0.767 & 0.030 & -0.265 \\
+193.9 & 0.987 & 0.655 & 0.063 & -0.423 \\
+193.1 & 0.979 & 0.558 & 0.099 & -0.583 \\
+191.8 & 0.965 & 0.479 & 0.156 & -0.736 \\
+190.8 & 0.954 & 0.373 & 0.198 & -0.986 \\
+188.6 & 0.930 & 0.202 & 0.278 & -1.600 \\
+183.4 & 0.869 & 0.0674 & - & - \\
+173.0 & 0.728 & 0.0278 & - & - \\
+170.0 & 0.682 & 0.0134 & - & - \\
+154.6 & 0.384 & 0.0026 & - & - \\
+149.3 & 0.252 & 0.0017 & - & - \\
+143.8 & 0.100 & 0.0012 & - & - \\
+140.3 & 0 & 0.0009 & - & - \\
+\hline
+\end{tabular}
+\end{table}
 
-$T_g,~\mathrm{K}$ $w_g$ $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ $n_w$ $\operatorname{ln} \eta$ 195.2 1.000 0.906 0 -0.099 194.8 0.996 0.839 0.020 -0.176 194.6 0.994 0.767 0.030 -0.265 193.9 0.987 0.655 0.063 -0.423 193.1 0.979 0.558 0.099 -0.583 191.8 0.965 0.479 0.156 -0.736 190.8 0.954 0.373 0.198 -0.986 188.6 0.930 0.202 0.278 -1.600 183.4 0.869 0.0674 173.0 0.728 0.0278 170.0 0.682 0.0134 154.6 0.384 0.0026 149.3 0.252 0.0017 143.8 0.100 0.0012 140.3 0 0.0009
+Approximating the dependence with a straight line, we obtain: \[k=4.31,\] \[\ln\left(\dfrac{\xi}{1~\mathrm{Pa}\cdot \mathrm{s}}\right)=-0.12,\] from which it follows:
 
-
-$\operatorname{ln}\dfrac{\eta}{1~\mathrm{Pa}\cdot \mathrm{s}}(n_w)$
-
-
-Approximating the dependence of the straight line, we obtain: \[k=4.31,\] \[\operatorname{ln}\dfrac{\xi}{1~\mathrm{Pa}\cdot \mathrm{s}}=-0.12,\]from which it follows:
-
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[k=4.31\]\[\xi=0.887~\mathrm{Pa}\cdot \mathrm{s}\]
+\par\smallskip\noindent\textbf{Answer:} \[k=4.31\]\[\xi=0.887~\mathrm{Pa}\cdot \mathrm{s}\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig1.jpg}
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{A5}{Knowing the parameters $\xi$ and $k$, propose a linearization that allows you to determine the values ​​of the parameters $a$ and $b$.}{0.30}
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} The dependence $\operatorname{ln}|\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}-1|(n_w)$ is linear.
+\begin{solcard}{A5}{Knowing the parameters $\xi$ and $k$, propose a linearization that allows you to determine the values of the parameters $a$ and $b$.}{0.30}
+\par\smallskip\noindent\textbf{Answer:} The dependence of $\ln\left|\dfrac{\xi \exp(-kn_w)}{\eta}-1\right|$ on $n_w$ is linear.
 \end{solcard}
 
-\begin{solcard}{A6}{Plot the linearized relationship. From the graph, determine $a$ and $b$. Note: due to the inaccuracy of experimental data, some values ​​cannot be recalculated. There are no more than 5 such values.}{1.20}
+\begin{solcard}{A6}{Plot the linearized relationship. From the graph, determine $a$ and $b$. Note: due to the inaccuracy of experimental data, some values cannot be recalculated. There are no more than 5 such values.}{1.20}
 
-Note: due to the inaccuracy of experimental data, some values ​​cannot be recalculated. There are no more than 5 such values.
+\textit{Note: due to the inaccuracy of experimental data, some values cannot be recalculated. There are no more than 5 such values.}
 
+Let us continue recalculating the data points:
 
-Let's continue recalculating points:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$T_g,~\mathrm{K}$ & $w_g$ & $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ & $n_w$ & $\ln\left|\dfrac{\xi \exp(-kn_w)}{\eta}-1\right|$ \\
+\hline
+195.2 & 1.000 & 0.906 & 0 & -3.92 \\
+194.8 & 0.996 & 0.839 & 0.020 & -3.54 \\
+194.6 & 0.994 & 0.767 & 0.030 & -4.12 \\
+193.9 & 0.987 & 0.655 & 0.063 & -3.44 \\
+193.1 & 0.979 & 0.558 & 0.099 & -3.28 \\
+191.8 & 0.965 & 0.479 & 0.156 & -2.91 \\
+190.8 & 0.954 & 0.373 & 0.198 & -4.35 \\
+188.6 & 0.930 & 0.202 & 0.278 & -1.12 \\
+183.4 & 0.869 & 0.0674 & 0.435 & 0.02 \\
+173.0 & 0.728 & 0.0278 & 0.656 & -0.12 \\
+170.0 & 0.682 & 0.0134 & 0.704 & 0.78 \\
+154.6 & 0.384 & 0.0026 & 0.891 & 1.85 \\
+149.3 & 0.252 & 0.0017 & 0.938 & 2.10 \\
+143.8 & 0.100 & 0.0012 & 0.979 & 2.29 \\
+140.3 & 0 & 0.0009 & 1 & 2.50 \\
+\hline
+\end{tabular}
+\end{table}
 
+Let us plot the resulting points on the graph: $\ln\left|\dfrac{\xi \exp(-kn_w)}{\eta}-1\right|$ versus $n_w$.
 
-$T_g,~\mathrm{K}$ $w_g$ $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ $n_w$ $\operatorname{ln}|\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}-1|$ 195.2 1.000 0.906 0 -3.92 194.8 0.996 0.839 0.020 -3.54 194.6 0.994 0.767 0.030 -4.12 193.9 0.987 0.655 0.063 -3.44 193.1 0.979 0.558 0.099 -3.28 191.8 0.965 0.479 0.156 -2.91 190.8 0.954 0.373 0.198 -4.35 188.6 0.930 0.202 0.278 -1.12 183.4 0.869 0.0674 0.435 0.02 173.0 0.728 0.0278 0.656 -0.12 170.0 0.682 0.0134 0.704 0.78 154.6 0.384 0.0026 0.891 1.85 149.3 0.252 0.0017 0.938 2.10 143.8 0.100 0.0012 0.979 2.29 140.3 0 0.0009 1 2.50
+In the range $n_w \in [0, 0.2]$, the expression inside the logarithm changes sign and is close to zero, so the function behaves non-monotonically in this region. To perform a linear fit, we consider only points in the range $n_w \in [0.7, 1].$
 
+For $n_w>0.7$, $\dfrac{\xi \exp(-kn_w)}{\eta}>1$ holds true, so $a>0$. By drawing the approximating straight line, we find: \[b=5.66,\]\[\ln a=-3.21,\] from which we obtain:
 
-Let's plot the resulting points on the graph:
-
-
-$\operatorname{ln}|\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}-1|(n_w)$
-
-
-In the range $n_w \in [0, 0.2]$, the expression under the logarithm has a different sign and is near zero, so the function in this region behaves non-monotonic. To draw a straight line, we take into account only points in the range $n_w \in [0.7, 1].$
-
-
-$\operatorname{ln}|\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}-1|(n_w)$ in the range $n_w \in [0.7, 1]$ (not required from participants)
-
-
-For $n_w>0.7$, $\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}>1$ holds, so $a>0$. Having drawn the approximating straight line, we find: \[b=5.66,\]\[\operatorname {ln} a=-3.21,\]from here:
-
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[a=0.040\]\[b=5.66\]
+\par\smallskip\noindent\textbf{Answer:} \[a=0.040\]\[b=5.66\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig2.jpg}
@@ -109,21 +165,38 @@ For $n_w>0.7$, $\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}>1$ holds, so $a>0$. 
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{A7}{Draw a graph of the theoretical and experimental dependences $\eta(n_w)$ on one piece of graph paper.}{1.00}
+\begin{solcard}{A7}{Draw a graph of the theoretical and experimental dependencies $\eta(n_w)$ on one piece of graph paper.}{1.00}
 
-Let's calculate the theoretical values ​​of $\eta(n_w)$:
+Let us calculate the theoretical values for $\eta(n_w)$:
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$T_g,~\mathrm{K}$ & $w_g$ & $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ & $n_w$ & $\ln \eta$ & $\ln\left|\dfrac{\xi \exp(-kn_w)}{\eta}-1\right|$ & $\eta_{\text{th}},~\mathrm{Pa}\cdot\mathrm{s}$ \\
+\hline
+195.2 & 1.000 & 0.906 & 0 & -0.099 & -3.92 & 0.853 \\
+194.8 & 0.996 & 0.839 & 0.020 & -0.176 & -3.54 & 0.779 \\
+194.6 & 0.994 & 0.767 & 0.030 & -0.265 & -4.12 & 0.744 \\
+193.9 & 0.987 & 0.655 & 0.063 & -0.423 & -3.44 & 0.640 \\
+193.1 & 0.979 & 0.558 & 0.099 & -0.583 & -3.28 & 0.541 \\
+191.8 & 0.965 & 0.479 & 0.156 & -0.736 & -2.91 & 0.413 \\
+190.8 & 0.954 & 0.373 & 0.198 & -0.986 & -4.35 & 0.337 \\
+188.6 & 0.930 & 0.202 & 0.278 & -1.600 & -1.12 & 0.224 \\
+183.4 & 0.869 & 0.0674 & 0.435 & - & 0.02 & 0.0926 \\
+173.0 & 0.728 & 0.0278 & 0.656 & - & -0.12 & 0.0199 \\
+170.0 & 0.682 & 0.0134 & 0.704 & - & 0.78 & 0.0135 \\
+154.6 & 0.384 & 0.0026 & 0.891 & - & 1.85 & 0.0026 \\
+149.3 & 0.252 & 0.0017 & 0.938 & - & 2.10 & 0.0017 \\
+143.8 & 0.100 & 0.0012 & 0.979 & - & 2.29 & 0.0012 \\
+140.3 & 0 & 0.0009 & 1 & - & 2.50 & 0.0010 \\
+\hline
+\end{tabular}
+\end{table}
 
-$T_g,~\mathrm{K}$ $w_g$ $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ $n_w$ $\operatorname{ln} \eta$ $\operatorname{ln}|\dfrac{\xi \operatorname{exp}(-kn_w)}{\eta}-1|$ $\eta_{теор},~\mathrm{Pa}\cdot\mathrm{s}$ 195.2 1.000 0.906 0 -0.099 -3.92 0.853 194.8 0.996 0.839 0.020 -0.176 -3.54 0.779 194.6 0.994 0.767 0.030 -0.265 -4.12 0.744 193.9 0.987 0.655 0.063 -0.423 -3.44 0.640 193.1 0.979 0.558 0.099 -0.583 -3.28 0.541 191.8 0.965 0.479 0.156 -0.736 -2.91 0.413 190.8 0.954 0.373 0.198 -0.986 -4.35 0.337 188.6 0.930 0.202 0.278 -1.600 -1.12 0.224 183.4 0.869 0.0674 0.435 0.02 0.0926 173.0 0.728 0.0278 0.656 -0.12 0.0199 170.0 0.682 0.0134 0.704 0.78 0.0135 154.6 0.384 0.0026 0.891 1.85 0.0026 149.3 0.252 0.0017 0.938 2.10 0.0017 143.8 0.100 0.0012 0.979 2.29 0.0012 140.3 0 0.0009 1 2.50 0.0010
+Let us build a graph of the obtained dependencies: $\eta(n_w)$.
 
-
-Let's build a graph of the obtained dependencies:
-
-
-$\eta(n_w)$
-
-
-Having drawn smoothing curves, we conclude: the equation is applicable over the entire range ($n_w \in [0, 1]$).
+By drawing smoothing curves, we conclude: the equation is applicable over the entire range ($n_w \in [0, 1]$).
 
 \begin{figure}[H]
   \centering
@@ -133,34 +206,47 @@ Having drawn smoothing curves, we conclude: the equation is applicable over the 
 
 \begin{solcard}{B1}{Using the equation $(2)$, determine the glass transition temperature of the solution $T_g$.}{0.50}
 
-Let's express $w_g$: \[w_g=\dfrac{m_g}{m_g+m_w}=\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w},\] then:
+Let us express $w_g$: \[w_g=\dfrac{m_g}{m_g+m_w}=\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w},\] then we have:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $T_g=\left(140.3+35.272\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}-3.879\left(\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}\right)^2+23.467\left(\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}\right)^3\right)~\mathrm{K}\approx 162.8~\mathrm{K}$
+\par\smallskip\noindent\textbf{Answer:} 
+\[T_g=\left[140.3+35.272\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}-3.879\left(\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}\right)^2+23.467\left(\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}\right)^3\right]~\mathrm{K}\approx 162.8~\mathrm{K}\]
 \end{solcard}
 
-\begin{solcard}{B2}{Propose a linearization to determine the values ​​of the parameters $D$ and $T_0$. After plotting the linearized dependence, determine the values ​​of these parameters.}{2.00}
+\begin{solcard}{B2}{Propose a linearization to determine the values of the parameters $D$ and $T_0$. After plotting the linearized dependence, determine the values of these parameters.}{2.00}
 
-The dependence $\dfrac{1}{\operatorname {ln}\dfrac{\eta}{\eta_0}}(T)$ is linear with slope $k=\dfrac{1}{DT_0}$ and intercept term $b=-\dfrac{1}{D}$. Let’s recalculate the point using this formula and plot the linearized dependence:
+The dependence of $\dfrac{1}{\ln(\eta/\eta_0)}$ on $T$ is linear with a slope $k=\dfrac{1}{DT_0}$ and a y-intercept $b=-\dfrac{1}{D}$. Let us recalculate the data points using this formula and plot the linearized dependence:
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$T,~^\circ \mathrm{C}$ & $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ & $T,~\mathrm{K}$ & $\dfrac{1}{\ln(\eta/\eta_0)}$ \\
+\hline
+1 & 0.0201 & 274 & 0.556 \\
+4 & 0.0173 & 277 & 0.607 \\
+11 & 0.0128 & 284 & 0.743 \\
+15 & 0.0104 & 288 & 0.878 \\
+35 & 0.0046 & 308 & 3.10 \\
+44 & 0.0034 & 317 & 48.1 \\
+50 & 0.0031 & 323 & -14.0 \\
+56 & 0.0026 & 329 & -4.04 \\
+60 & 0.0022 & 333 & -2.41 \\
+67 & 0.0020 & 340 & -1.96 \\
+71 & 0.0017 & 344 & -1.487 \\
+76 & 0.00145 & 349 & -1.20 \\
+85 & 0.0013 & 358 & -1.06 \\
+90 & 0.0011 & 363 & -0.903 \\
+96 & 0.0010 & 369 & -0.831 \\
+100 & 0.0009 & 373 & -0.764 \\
+\hline
+\end{tabular}
+\end{table}
 
-$T,~^\circ C$ $\eta,~\mathrm{Pa}\cdot\mathrm{s}$ $T,~\mathrm{K}$ $\dfrac{1}{\operatorname {ln}\dfrac{\eta}{\eta_0}}$ 1 0.0201 274 0.556 4 0.0173 277 0.607 11 0.0128 284 0.743 15 0.0104 288 0.878 35 0.0046 308 3.10 44 0.0034 317 48.1 50 0.0031 323 -14.0 56 0.0026 329 -4.04 60 0.0022 333 -2.41 67 0.0020 340 -1.96 71 0.0017 344 -1.487 76 0.00145 349 -1.20 85 0.0013 358 -1.06 90 0.0011 363 -0.903 96 0.0010 369 -0.831 100 0.0009 373 -0.764
+From the proposed equation, it follows that it is only valid at sufficiently low temperatures. It is clear from the graph that the equation is applicable for the first 4 points of the graph (at $T<288~\mathrm{K}$).
 
+Having determined the parameters of the approximating straight line, we obtain a system of equations: \[\begin{cases}-\dfrac{1}{D}=-5.60\\ \dfrac{1}{DT_0}=0.022~\mathrm{K}^{-1},\end{cases}\] from which it follows:
 
-Let's plot the resulting relationship:
-
-
-$\dfrac{1}{\operatorname {ln}\dfrac{\eta}{\eta_0}}(T)$
-
-
-From the proposed equation it follows that it can only be fulfilled at sufficiently low temperatures. It is clear from the graph that the equation is applicable for the first 4 points of the graph (at $T<288~\mathrm{K}$). Let's demonstrate this clearly:
-
-
-$\dfrac{1}{\operatorname {ln}\dfrac{\eta}{\eta_0}}(T)$ at $T<288~K$ (not required from participants)
-
-
-Having determined the parameters of the approximating straight line, we obtain a system of equations: \[\begin{cases}-\dfrac{1}{D}=-5.60\\ \dfrac{1}{DT_0}=0.022 К^{-1},\end{cases}\] which follows:
-
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[T_0=255~\mathrm{K}\]\[D=0.18\]
+\par\smallskip\noindent\textbf{Answer:} \[T_0=255~\mathrm{K}\]\[D=0.18\]
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{PE_S_EN_assets/fig5.jpg}
@@ -171,22 +257,22 @@ Having determined the parameters of the approximating straight line, we obtain a
 \end{figure}
 \end{solcard}
 
-\begin{solcard}{С1}{Determine the viscosity of the mixture $\eta_n$ at the volume concentration of glycerol $c_g=0.5$ and temperature $T=25~^\circ \mathrm C$ using the dependence on the molar concentration of water.}{0.40}
+\begin{solcard}{C1}{Determine the viscosity of the mixture $\eta_n$ at the volume fraction of glycerol $c_g=0.5$ and temperature $T=25~^\circ \mathrm{C}$ using the dependence on the mole fraction of water.}{0.40}
 
-The equation obtained for $\eta_n(n_w)$ is applicable over the entire range. Therefore, it is enough to convert $c_g$ into $n_w$: \[n_w=1-\frac{w_g\mu_w}{\mu_g-w_g(\mu_g-\mu_w)}=1-\frac{\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}\mu_w}{\mu_g-\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}(\mu_g-\mu_w)}\approx 0.80\] and substitute it into the resulting equation. Thus we get:
+The equation obtained for $\eta_n(n_w)$ is applicable over the entire range. Therefore, it is enough to convert $c_g$ into $n_w$: \[n_w=1-\frac{w_g\mu_w}{\mu_g-w_g(\mu_g-\mu_w)}=1-\frac{\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}\mu_w}{\mu_g-\dfrac{\rho_gc_g}{(\rho_g-\rho_w)c_g+\rho_w}(\mu_g-\mu_w)}\approx 0.80\] and substitute it into the resulting equation. Thus, we obtain:
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} $\eta_n=6.0~мПа\cdot \mathrm{s}$
+\par\smallskip\noindent\textbf{Answer:} $\eta_n=6.0~\mathrm{mPa}\cdot \mathrm{s}$
 \end{solcard}
 
-\begin{solcard}{С2}{Determine the viscosity of the mixture $\eta_t$ under the same conditions using the temperature dependence.}{0.40}
+\begin{solcard}{C2}{Determine the viscosity of the mixture $\eta_t$ under the same conditions using the temperature dependence.}{0.40}
 
-The equation obtained for $\eta_t(T)$ is indispensable for $T=25^\circ C$. You can determine the viscosity at a given temperature, for example, graphically by plotting the curve $\eta_t(T)$, but the answer with good accuracy is given by a linear approximation: \[\eta_{25}\approx\dfrac{\eta_{15}+\eta_{35}}{2}=7.5~мПа\cdot \mathrm{s}.\]
+The equation obtained for $\eta_t(T)$ is not directly applicable for $T=25~^\circ\mathrm{C}$. You can determine the viscosity at a given temperature graphically by plotting the curve $\eta_t(T)$, but a result with good accuracy is given by a linear approximation: \[\eta_{25}\approx\dfrac{\eta_{15}+\eta_{35}}{2}=7.5~\mathrm{mPa}\cdot \mathrm{s}.\]
 
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} \[\eta_t=7.5~мПа\cdot \mathrm{s}\]
+\par\smallskip\noindent\textbf{Answer:} \[\eta_t=7.5~\mathrm{mPa}\cdot \mathrm{s}\]
 \end{solcard}
 
-\begin{solcard}{С3}{Compare your results. If there are discrepancies, suggest a possible reason for them.}{0.20}
-\par\smallskip\noindent\textbf{Answer:} \textbf{Answer:} The meanings of $\eta_t$ and $\eta_n$ are divergent. One of the main possible reasons for discrepancies in results is poorly measured temperature (for example, if the room temperature changed during the experiment), because the dependence of the viscosity of the mixture on temperature is very strong.
+\begin{solcard}{C3}{Compare your results. If there are discrepancies, suggest a possible reason for them.}{0.20}
+\par\smallskip\noindent\textbf{Answer:} The values of $\eta_t$ and $\eta_n$ differ slightly. One of the main possible reasons for discrepancies in the results is a poorly measured or fluctuating temperature (for example, if the room temperature changed during the experiment), because the dependence of the mixture's viscosity on temperature is very strong.
 \end{solcard}
 
 \end{document}

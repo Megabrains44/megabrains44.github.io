@@ -1,11 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  28 APR 2026 20:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.3.30)  29 APR 2026 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **T5_S_EN.tex
-
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T5_S_EN
-.tex
+(./T5_S_EN.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -873,8 +871,7 @@ Space].
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T5_S_EN
-.aux)
+(./T5_S_EN.aux)
 \openout1 = `T5_S_EN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -971,10 +968,7 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T5_S_EN
-.out)
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T5_S_EN
-.out)
+(./T5_S_EN.out) (./T5_S_EN.out)
 \@outlinefile=\write4
 \openout4 = `T5_S_EN.out'.
 
@@ -1048,7 +1042,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
  33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -1073,58 +1068,34 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no л ("43B) in font cmmi10!
+Missing character: There is no ь ("44C) in font cmmi10!
 Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no м ("43C) in font cmmi10!
+Missing character: There is no о ("43E) in font cmmi10!
+Missing character: There is no л ("43B) in font cmmi10!
+Missing character: There is no ь ("44C) in font cmmi10!
 Missing character: There is no м ("43C) in font cmmi10!
 [1
 
 ]
-Overfull \hbox (12.29045pt too wide) in paragraph at lines 64--64
-\TU/DejaVuSerif(0)/m/n/10 Volume части сферы можно найти как сумму volumeа ball
-/sphereового сектора, видимого
- []
-
 File: T5_S_EN_assets/fig1.jpg Graphic file (type bmp)
 <T5_S_EN_assets/fig1.jpg>
-[2]
-Overfull \hbox (1.6708pt too wide) in paragraph at lines 82--82
-\TU/DejaVuSerif(0)/m/n/10 сностью концентраций, так and молярный поcurrent с сн
-ость молярных концентраций,
- []
-
-[3]
-Overfull \hbox (4.29727pt too wide) in paragraph at lines 89--89
-\TU/DejaVuSerif(0)/m/n/10 also не зависит от концентрации. Then зависимости обр
-атных времен от концентрации
- []
-
+ [2] [3]
 File: T5_S_EN_assets/fig2.jpg Graphic file (type bmp)
 <T5_S_EN_assets/fig2.jpg>
-[4] [5]
-Overfull \hbox (13.35162pt too wide) in paragraph at lines 121--121
-\TU/DejaVuSerif(0)/m/n/10 Fromменение концентрации углекислого gasа в жидкости 
-for/at выходе одного пузырька 
- []
-
-
-Overfull \hbox (22.14883pt too wide) in paragraph at lines 121--122
-\TU/DejaVuSerif(0)/m/n/10 Численное value for/atведено for правильного coeffici
-entа диффузии. For for/atближенного
- []
-
-[6] [7]
-(/sessions/nice-practical-bohr/mnt/rupho-translate-project/rupho-x/2022/T5_S_EN
-.aux)
+ [4] [5] [6] [7] (./T5_S_EN.aux)
 Package rerunfilecheck Info: File `T5_S_EN.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32092 strings out of 478190
- 686335 string characters out of 5854827
+ 32093 strings out of 478190
+ 685466 string characters out of 5854827
  1081673 words of memory out of 5000000
- 52151 multiletter control sequences out of 15000+600000
- 477316 words of font info for 103 fonts, out of 8000000 for 9000
+ 52153 multiletter control sequences out of 15000+600000
+ 477324 words of font info for 104 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  91i,7n,99p,1051b,1030s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /sessions/nice-practical-bohr/mnt/rupho-translate-project/rup
-ho-x/2022/T5_S_EN.pdf (7 pages).
+Output written on T5_S_EN.pdf (7 pages).
