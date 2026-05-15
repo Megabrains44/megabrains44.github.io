@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  4 MAY 2026 10:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  14 MAY 2026 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,6 +1059,58 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 33.
+ [1
 
+{C:/Users/aadib/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/aadi
+b/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/aadib/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/aadib/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/aadib/AppDat
+a/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/aadib/AppDat
+a/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+<T3_S_EN_assets/fig1.jpg, id=61, 311.1625pt x 519.9425pt>
+File: T3_S_EN_assets/fig1.jpg Graphic file (type jpg)
+<use T3_S_EN_assets/fig1.jpg>
+Package pdftex.def Info: T3_S_EN_assets/fig1.jpg  used on input line 64.
+(pdftex.def)             Requested size: 325.52136pt x 543.9406pt.
+ [2] [3 <./T3_S_EN_assets/fig1.jpg (PNG copy)>] [4] [5]
+Overfull \hbox (200.39374pt too wide) detected at line 120
+\OML/lmm/m/it/10 ![] \OMS/lmsy/m/n/10 ^^Y [] ^^Y []\OML/lmm/m/it/10 L[] \OT1/lm
+r/m/n/10 = [] \OMS/lmsy/m/n/10 ^^Y \OT1/lmr/m/n/10 5[]971 \OMS/lmsy/m/n/10 ^^A 
+[] []
+ []
 
-! LaTeX Error: Unicode character м (U+043C)
+[6] [7] [8] [9] (T3_S_EN.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+Package rerunfilecheck Info: File `T3_S_EN.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 31341 strings out of 467871
+ 628223 string characters out of 5418376
+ 1091422 words of memory out of 5000000
+ 59585 multiletter control sequences out of 15000+600000
+ 704390 words of font info for 152 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 98i,8n,118p,1804b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
+b><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
+b><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
+b><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb
+><C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
+<C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C
+:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/
+Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/
+Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/U
+sers/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
+/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
+/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb>
+Output written on T3_S_EN.pdf (9 pages, 297954 bytes).
+PDF statistics:
+ 164 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 41122 words of extra memory for PDF output out of 42996 (max. 10000000)
+
