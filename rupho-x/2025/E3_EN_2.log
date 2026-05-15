@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  15 MAY 2026 08:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,7 +528,7 @@ Package rerunfilecheck Info: File `E3_EN_2.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  13900 strings out of 467871
- 222802 string characters out of 5418376
+ 222736 string characters out of 5418376
  674539 words of memory out of 5000000
  42547 multiletter control sequences out of 15000+600000
  638418 words of font info for 111 fonts, out of 8000000 for 9000

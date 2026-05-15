@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  26 APR 2026 10:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  15 MAY 2026 08:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -532,61 +532,26 @@ File: PE_EN_assets/fig5.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig5.jpg>
 Package pdftex.def Info: PE_EN_assets/fig5.jpg  used on input line 97.
 (pdftex.def)             Requested size: 326.13744pt x 200.56537pt.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-01.
-
-(C:\Users\aadib\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
-
-Overfull \hbox (4.90149pt too wide) in paragraph at lines 101--102
-[]\OT1/cmr/m/n/10.95 (-20) Then the de-flec-tion an-gle will be writ-ten as\OMS
-/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) [\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10
-.95 (-20) psi=2\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) left[\OMS/cmsy/m/n
-/10.95 n\OT1/cmr/m/n/10.95 (-20) arcsin n\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.9
-5 (-20) rho-\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) arcsin\OMS/cmsy/m/n/1
-0.95 n\OT1/cmr/m/n/10.95 (-20) rho\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20)
- right],\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) ]and
- []
-
-
-Overfull \hbox (67.79419pt too wide) in paragraph at lines 101--102
-\OT1/cmr/m/n/10.95 (-20) the in-ten-sity of the scat-tered ra-di-a-tion - as\OM
-S/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) [\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/1
-0.95 (-20) mathcal J(\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) psi)\OMS/cms
-y/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) equiv\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10
-.95 (-20) frac\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) rho~ \OMS/cmsy/m/n/
-10.95 n\OT1/cmr/m/n/10.95 (-20) mathrm d\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95
- (-20) rho\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) sin\OMS/cmsy/m/n/10.95 
-n\OT1/cmr/m/n/10.95 (-20) psi~\OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 (-20) mat
-hrm
- []
-
 <PE_EN_assets/fig6.jpg, id=34, 361.35pt x 228.855pt>
 File: PE_EN_assets/fig6.jpg Graphic file (type jpg)
 <use PE_EN_assets/fig6.jpg>
-Package pdftex.def Info: PE_EN_assets/fig6.jpg  used on input line 105.
+Package pdftex.def Info: PE_EN_assets/fig6.jpg  used on input line 113.
 (pdftex.def)             Requested size: 326.13744pt x 206.55424pt.
+
 [4 <./PE_EN_assets/fig4.jpg> <./PE_EN_assets/fig5.jpg>] [5 <./PE_EN_assets/fig6
 .jpg (PNG copy)>] [6] (PE_EN_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `PE_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14097 strings out of 467871
- 226033 string characters out of 5418376
- 694403 words of memory out of 5000000
- 42724 multiletter control sequences out of 15000+600000
+ 14077 strings out of 467871
+ 225605 string characters out of 5418376
+ 694459 words of memory out of 5000000
+ 42707 multiletter control sequences out of 15000+600000
  640599 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,1006b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -602,7 +567,7 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aa
 dib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:
 /Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
-Output written on PE_EN_2.pdf (6 pages, 1974443 bytes).
+Output written on PE_EN_2.pdf (6 pages, 1974619 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)

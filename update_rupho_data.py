@@ -63,9 +63,15 @@ def gather_section_files(root_path: Path, section: str):
             )
             relative_path = f'{section}/{year}/{entry.name}'
             if is_solution:
-                item['solution'] = relative_path
+                if item['solution'] is None:
+                    item['solution'] = relative_path
+                elif section == 'rupho-x' and year == '2025':
+                    existing_solution = item['solution']
+                    if existing_solution.lower().endswith('_s_en_2.pdf') and not relative_path.lower().endswith('_s_en_2.pdf'):
+                        item['solution'] = relative_path
             else:
-                item['problem'] = relative_path
+                if item['problem'] is None:
+                    item['problem'] = relative_path
 
         if items:
             section_data[year] = sorted(items.values(), key=lambda item: natural_sort_key(item['key']))
