@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  25 APR 2026 22:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.24)  16 MAY 2026 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -515,14 +515,15 @@ ts/fig1.jpg>]
 File: T1_EN_assets/fig2.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig2.jpg>
 Package pdftex.def Info: T1_EN_assets/fig2.jpg  used on input line 63.
-(pdftex.def)             Requested size: 326.13744pt x 662.34831pt.
- [2] [3 <./T1_EN_assets/fig2.jpg>]
-<T1_EN_assets/fig3.jpg, id=32, 1156.32pt x 650.43pt>
+(pdftex.def)             Requested size: 190.24568pt x 386.36334pt.
+ [2 <./T1_EN_assets/fig2.jpg>]
+<T1_EN_assets/fig3.jpg, id=28, 1156.32pt x 650.43pt>
 File: T1_EN_assets/fig3.jpg Graphic file (type jpg)
 <use T1_EN_assets/fig3.jpg>
 Package pdftex.def Info: T1_EN_assets/fig3.jpg  used on input line 87.
 (pdftex.def)             Requested size: 326.13744pt x 183.44907pt.
- [4 <./T1_EN_assets/fig3.jpg>] [5] (T1_EN_2.aux)
+ [3 <./T1_EN_assets/fig3.jpg>]
+[4] (T1_EN_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -531,9 +532,9 @@ Package rerunfilecheck Info: File `T1_EN_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14019 strings out of 467871
- 224365 string characters out of 5418376
- 682413 words of memory out of 5000000
+ 14018 strings out of 467871
+ 224293 string characters out of 5418376
+ 683413 words of memory out of 5000000
  42652 multiletter control sequences out of 15000+600000
  638673 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -550,9 +551,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
 /aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 <C:/Users/aadib/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 tt10.pfb>
-Output written on T1_EN_2.pdf (5 pages, 220308 bytes).
+Output written on T1_EN_2.pdf (4 pages, 219779 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 500000)
  25104 words of extra memory for PDF output out of 29859 (max. 10000000)
 
